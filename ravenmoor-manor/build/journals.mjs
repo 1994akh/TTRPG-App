@@ -54,6 +54,9 @@ export function checkText(c) {
  * @returns {object}
  */
 function textPage(journal, key, name, content, { sort=0, ownership={ default: -1 }, flags={}, showTitle=true }={}) {
+  // The runtime posts a read-aloud box to chat when the GM double-clicks it; the tooltip says so.
+  content = content.replaceAll("<blockquote class=\"ravenmoor-readaloud\">",
+    "<blockquote class=\"ravenmoor-readaloud\" data-tooltip=\"Double-click to read this aloud in chat\">");
   return {
     _id: IDS.page(journal, key),
     name,
@@ -291,13 +294,18 @@ function locationHTML(loc, cards, subPins, npcs) {
 function controlsHTML() {
   const rows = MACROS.map(m => `<tr><td>${m.slot ?? ""}</td><td><strong>${esc(m.name)}</strong></td><td>${esc(m.help)}</td></tr>`).join("");
   return "<div class=\"ravenmoor\">"
-    + "<p>Every set piece runs from a macro in the <strong>Ravenmoor</strong> macro folder. Each macro is one line that calls "
-    + "<code>game.modules.get(\"ravenmoor-manor\").api</code>, so the logic updates with the module. Drag the suggested ones "
-    + "to your hotbar; the rest are fine to run from the Macro Directory.</p>"
+    + "<p>The easiest way to run the night is the <strong>Ravenmoor Director</strong> (macro, or <kbd>Shift</kbd>+<kbd>R</kbd>): "
+    + "one window with every set piece below in running order, ticks for what has already happened, and the state of the night "
+    + "(candles, clues, edges, session time). Its <em>Set up my hotbar</em> button puts the suggested macros in the slots below.</p>"
+    + "<p>Every set piece is also a macro in the <strong>Ravenmoor</strong> macro folder. Each macro is one line that calls "
+    + "<code>game.modules.get(\"ravenmoor-manor\").api</code>, so the logic updates with the module.</p>"
+    + "<p><strong>Also handy:</strong> double-click any read-aloud box in these journals to post it to chat for the players. "
+    + "Snuffing a candle can be bound to a key in Configure Controls. <em>Reset the Night</em> puts the map, NPCs and handouts "
+    + "back to the start, for a test run or a replay.</p>"
     + "<table class=\"ravenmoor-table\"><thead><tr><th>Slot</th><th>Macro</th><th>What it does</th></tr></thead>"
     + `<tbody>${rows}</tbody></table>`
     + "<h2>Running order</h2><ol>"
-    + "<li><strong>Before the session:</strong> Treat Bag Setup (2 candy each), then Ravenmoor Settings to set the party size and, if you like, the session start time and sound cues.</li>"
+    + "<li><strong>Before the session:</strong> assign each player their character (User Configuration), then in the Director: Party arrives at the drive, Treat Bag (2 candy each), and Settings for the party size and, if you like, the session clock and sound cues.</li>"
     + "<li><strong>Act 1:</strong> Silas Retires (8:25), Lights Out (8:55), The Body (9:00). The Body lights the twelve candles and starts Act 2.</li>"
     + "<li><strong>Act 2:</strong> click a candle on the Twelve Candles panel after each scene. Reveal Handout whenever a card is found; the Clue Tracker ticks itself.</li>"
     + "<li><strong>Act 3:</strong> the twelfth candle runs Midnight and opens the Accusation. Then Showdown Setup, which builds the combat and the Midnight Bell lair turn.</li>"

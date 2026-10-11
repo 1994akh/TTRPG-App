@@ -202,6 +202,10 @@ export function onRenderChatMessage(message, html) {
       const roll = await new Roll(button.dataset.formula).evaluate();
       return roll.toMessage({ flavor: "Ravenmoor damage", speaker: { alias: "Ravenmoor Manor" } });
     }
+    if ( kind === "api" ) {
+      if ( !game.user.isGM ) return;
+      return game.modules.get(MODULE_ID).api[button.dataset.fn]?.();
+    }
     if ( kind === "take-lantern" ) {
       const { takeLantern } = await import("./showdown.mjs");
       return takeLantern(message);

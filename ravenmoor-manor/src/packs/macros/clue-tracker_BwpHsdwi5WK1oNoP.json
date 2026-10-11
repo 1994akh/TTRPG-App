@@ -6,14 +6,14 @@
   "scope": "global",
   "command": "game.modules.get(\"ravenmoor-manor\").api.clueTracker();",
   "folder": null,
-  "sort": 4000,
+  "sort": 5000,
   "ownership": {
     "default": 0
   },
   "flags": {
     "ravenmoor": {
       "fn": "clueTracker",
-      "slot": 4
+      "slot": 5
     }
   },
   "_stats": {

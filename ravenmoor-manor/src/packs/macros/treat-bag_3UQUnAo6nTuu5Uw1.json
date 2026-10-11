@@ -6,7 +6,7 @@
   "scope": "global",
   "command": "game.modules.get(\"ravenmoor-manor\").api.treatBagPanel();",
   "folder": null,
-  "sort": 12000,
+  "sort": 13000,
   "ownership": {
     "default": 0
   },

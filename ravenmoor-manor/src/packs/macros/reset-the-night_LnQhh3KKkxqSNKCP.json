@@ -1,0 +1,31 @@
+{
+  "_id": "LnQhh3KKkxqSNKCP",
+  "name": "Reset the Night",
+  "type": "script",
+  "img": "icons/sundries/lights/candle-unlit-grey.webp",
+  "scope": "global",
+  "command": "game.modules.get(\"ravenmoor-manor\").api.resetNight();",
+  "folder": null,
+  "sort": 22000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "fn": "resetNight",
+      "slot": null
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": null,
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!macros!LnQhh3KKkxqSNKCP"
+}

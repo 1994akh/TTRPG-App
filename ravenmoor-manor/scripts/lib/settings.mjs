@@ -27,6 +27,8 @@ export function registerSettings({ onCandles, onClues }) {
   world("quillUnmasked", Boolean, false);
   world("willBurned", Boolean, false);
   world("willBurnable", Boolean, false);
+  world("beats", Object, {});
+  world("welcomed", Boolean, false);
 
   game.settings.register(MODULE_ID, "partySize", {
     name: "RAVENMOOR.Settings.PartySize.Name", hint: "RAVENMOOR.Settings.PartySize.Hint",

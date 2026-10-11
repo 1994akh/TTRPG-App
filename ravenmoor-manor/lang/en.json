@@ -1,8 +1,14 @@
 {
   "RAVENMOOR": {
-    "Candles": { "Title": "Twelve Candles" },
-    "Treats": { "Title": "Treat Bag" },
-    "Tracker": { "Title": "Clue Tracker" },
+    "Candles": {
+      "Title": "Twelve Candles"
+    },
+    "Treats": {
+      "Title": "Treat Bag"
+    },
+    "Tracker": {
+      "Title": "Clue Tracker"
+    },
     "Settings": {
       "PartySize": {
         "Name": "Ravenmoor: party size",
@@ -12,10 +18,31 @@
         "Name": "Ravenmoor: running long",
         "Hint": "If the clock runs past 2:35 in real time, Quill surrenders at 50 hit points instead of 30."
       },
-      "SoundBell": { "Name": "Ravenmoor: bell sound" },
-      "SoundGust": { "Name": "Ravenmoor: gust sound" },
-      "SoundScream": { "Name": "Ravenmoor: scream sound" },
-      "Sound": { "Hint": "Optional audio file played for everyone at this cue. Leave empty for silence." }
+      "SoundBell": {
+        "Name": "Ravenmoor: bell sound"
+      },
+      "SoundGust": {
+        "Name": "Ravenmoor: gust sound"
+      },
+      "SoundScream": {
+        "Name": "Ravenmoor: scream sound"
+      },
+      "Sound": {
+        "Hint": "Optional audio file played for everyone at this cue. Leave empty for silence."
+      }
+    },
+    "Director": {
+      "Title": "Ravenmoor Director"
+    },
+    "Keys": {
+      "Director": {
+        "Name": "Open the Ravenmoor Director",
+        "Hint": "GM only. Every Ravenmoor set piece in running order."
+      },
+      "Snuff": {
+        "Name": "Snuff a Ravenmoor candle",
+        "Hint": "GM only. Snuffs the next of the Twelve Candles."
+      }
     }
   }
 }

@@ -3,7 +3,7 @@ import globals from "globals";
 /** Foundry VTT v14 and dnd5e globals the runtime uses. */
 const FOUNDRY = Object.fromEntries([
   "foundry", "game", "ui", "canvas", "CONFIG", "CONST", "Hooks", "Roll", "ChatMessage", "Actor", "Combat",
-  "fromUuid", "Scene", "dnd5e"
+  "fromUuid", "Scene", "JournalEntry", "dnd5e"
 ].map(name => [name, "readonly"]));
 
 export default [

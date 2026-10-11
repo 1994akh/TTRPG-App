@@ -4,6 +4,7 @@
 import { applyFrightened, postSaveRequest } from "./treats.mjs";
 import { moveItemTo, setClue } from "./handouts.mjs";
 import { placeFennick } from "./candles.mjs";
+import { partyTokens, placeParty } from "./session.mjs";
 import {
   actorFor, CONTENT, esc, feetBetween, getSetting, giveItem, isLeadGM, itemSource, itemsWithKey, LEVEL_ELEVATION, levelId, levelKey,
   lightsByLabel, mainScene, MODULE_ID, partyActors, pickPoint, playCue, postCard, readAloudHTML, requireGM, setSetting,
@@ -91,11 +92,6 @@ async function midnightBellActor() {
   return bell;
 }
 
-/** Party tokens on the main scene. */
-function partyTokens() {
-  const party = new Set(partyActors().map(a => a.id));
-  return mainScene()?.tokens.filter(t => t.actorLink && party.has(t.actorId)) ?? [];
-}
 
 /**
  * Move the party to the crypt, reveal the foes, apply the edges and build the combat.
@@ -129,23 +125,7 @@ export async function showdownSetup() {
 
   // 1. The party, just below the crypt stairs.
   const party = partyActors();
-  const existing = partyTokens();
-  const moves = existing.map((t, i) => ({
-    _id: t.id, level: below, elevation: LEVEL_ELEVATION.below,
-    x: start.x + PARTY_OFFSETS[i % PARTY_OFFSETS.length][0], y: start.y + PARTY_OFFSETS[i % PARTY_OFFSETS.length][1]
-  }));
-  if ( moves.length ) await scene.updateEmbeddedDocuments("Token", moves, { animate: false });
-  const missing = party.filter(a => !existing.some(t => t.actorId === a.id));
-  const created = [];
-  for ( const [j, a] of missing.entries() ) {
-    const i = existing.length + j;
-    const td = await a.getTokenDocument({
-      x: start.x + PARTY_OFFSETS[i % PARTY_OFFSETS.length][0], y: start.y + PARTY_OFFSETS[i % PARTY_OFFSETS.length][1],
-      level: below, elevation: LEVEL_ELEVATION.below
-    });
-    created.push(td.toObject());
-  }
-  if ( created.length ) await scene.createEmbeddedDocuments("Token", created);
+  await placeParty("below", start, PARTY_OFFSETS);
 
   // 2. The foes for this party size.
   const onBelow = (f, t) => t.level === below;

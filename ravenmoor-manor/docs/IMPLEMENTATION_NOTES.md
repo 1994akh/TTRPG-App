@@ -75,6 +75,17 @@ The two crypt scarecrows are placed as props: neutral, named "Scarecrow", with n
 - **Players and items**: item data for every module item is bundled in `scripts/lib/generated.mjs`, so players can receive candy or the lantern without access to the GM-only compendium.
 - Extra macros beyond the 14 features: Fright Save, Accusation (on its own), Midnight Bell (run a lair round by hand), Ravenmoor Settings (party size, running long, session clock, sounds, reset).
 
+## Quality-of-life additions (beyond the spec)
+
+- **Ravenmoor Director** (`scripts/lib/director.mjs`): a GM window listing every set piece in running order with a tick for each story beat, and a status block (act, candles and in-game time, cards found, Quill evidence and "ready to accuse", party, edges, session time, and in Act 3 the lair round, the Widow and the will). Ticks are read from the world where possible (Silas's token on the upper floor, the foxfire tile, the hidden stair enabled, the act, a showdown combat, Quill unmasked), so they are right however a beat was triggered; the others are ticked when run from the Director and can be toggled by hand. Opened by the Ravenmoor Director macro (hotbar slot 1), the welcome card, or <kbd>Shift</kbd>+<kbd>R</kbd>.
+- **Party arrives at the drive**: places each player's character at the ground-floor `partyStart` (the spec asks for this after import; it needs assigned characters, so it is a button rather than an import step).
+- **Set up my hotbar**: assigns the suggested macros to slots 1–10 (Director, Twelve Candles, Snuff a Candle, Reveal Handout, Clue Tracker, Lights Out, The Body, Midnight, Showdown Setup, Epilogue). Unmask Quill no longer has a suggested slot because it runs on its own.
+- **Reset the Night**: restores the scene, the 11 NPCs and the Handouts & Clues journal from the Adventure compendium with their original ids (so every link and map pin still works), removes Ravenmoor items and effects from the party, resets the night's settings and deletes Ravenmoor combats, then puts the party back at the drive. Each part can be unticked. Journals the GM wrote, the chat log and the characters' own items are untouched.
+- **Welcome card**: once per world, a GM-only chat card with the first steps and buttons for the Director and the hotbar, shown on the first load after import (and straight after importing).
+- **Read-aloud to chat**: every read-aloud box in the journals has a hover hint; a GM double-click posts it to chat as a styled card.
+- **Candle panel**: candles now go out left to right, so each candle's number is its snuff order and matches "candle 4/8/11". The GM sees markers and tooltips on the escalation candles and Midnight, and the real-time session timer when the session clock is running.
+- **Keybindings**: Open the Director (<kbd>Shift</kbd>+<kbd>R</kbd>) and Snuff a candle (unbound), GM only, rebindable in Configure Controls.
+
 ## Not verified in a running Foundry
 
 Everything above was built and statically checked (`npm run check`: ESLint with `no-undef`/`no-unused-vars` over the runtime and build code, then the acceptance checks), but this environment has no Foundry v14 server. Before running it at the table, test in a v14.368 + dnd5e 6.0.6 world:
@@ -84,3 +95,4 @@ Everything above was built and statically checked (`npm run check`: ESLint with 
 3. The crypt darkness region.
 4. A Midnight Bell combatant without a token in the dnd5e combat tracker.
 5. The Who edge's Advantage on initiative.
+6. Reset the Night (recreating the scene and NPCs from the compendium with their original ids) and the Shift+R keybinding.

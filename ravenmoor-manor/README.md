@@ -9,14 +9,16 @@ A Foundry VTT v14 adventure module for **dnd5e 6.x** (D&D 2024 rules): a three-h
 - **Eleven actors** with working 2024 stat blocks: Dr. Quill, the pumpkin-headed scarecrow, the skeleton minion, the five other suspects, Silas, Fennick and the Lantern Widow.
 - **Thirteen items**, from the stolen will to the Treat Bag candy and Elspeth's Lantern.
 - **Macros for every set piece**: the Twelve Candles clock, the Treat Bag and Scaredy-Cat bonus, Lights Out, The Body, revealing handouts, the secret door, Midnight and the Accusation, Showdown Setup with the Midnight Bell lair actions, Quill's unmasking, and the Epilogue.
+- **The Ravenmoor Director** (macro, or <kbd>Shift</kbd>+<kbd>R</kbd>): one GM window with every set piece in running order, ticks for what has happened, and the night at a glance (act, candles, clues found, edges, session time).
+- **GM conveniences**: place the party at the drive in one click, set up the hotbar in one click, double-click any journal read-aloud box to post it to chat, escalation markers and a session timer on the candle panel, and **Reset the Night** to put the map, NPCs and handouts back to the start for a test run or a replay.
 
 ## Install
 
 1. Build the zip (below), or use a released `ravenmoor-manor.zip`.
 2. Unzip it into your Foundry `Data/modules/` folder so you have `Data/modules/ravenmoor-manor/module.json`.
 3. In a dnd5e 6.0.6 world on Foundry v14, enable **Death at Ravenmoor Manor**.
-4. Open the **Death at Ravenmoor Manor** compendium (Adventure) and click **Import**. The scene activates and the Adventure journal opens.
-5. Read the DM Guide's **Module controls and hotbar** page and drag the suggested macros to your hotbar.
+4. Open the **Death at Ravenmoor Manor** compendium (Adventure) and click **Import**. The scene activates, the Adventure journal opens, and a GM-only welcome card appears in chat.
+5. Assign each player their character (User Configuration), then open the **Ravenmoor Director** from the welcome card (or <kbd>Shift</kbd>+<kbd>R</kbd>) and work down its *Before the session* list. Its *Set up my hotbar* button fills hotbar slots 1–10.
 
 ## Build from source
 

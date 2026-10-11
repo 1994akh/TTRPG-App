@@ -127,6 +127,14 @@ const api = fs.readFileSync(path.join(ROOT, "scripts/ravenmoor.mjs"), "utf8").ma
 const apiFns = new Set([...api.replace(/\/\/.*$/gm, "").matchAll(/([a-zA-Z]+)\s*(?:,|$)/g)].map(m => m[1]));
 const macroFns = adventure.macros.map(m => m.command.match(/api\.(\w+)\(/)[1]);
 ok(macroFns.every(f => apiFns.has(f)), `all ${macroFns.length} macros call an API function`);
+const slots = adventure.macros.map(m => m.flags.ravenmoor.slot).filter(Boolean).sort((a, b) => a - b);
+ok(slots.join() === "1,2,3,4,5,6,7,8,9,10" && adventure.macros.find(m => m.flags.ravenmoor.slot === 1).flags.ravenmoor.fn === "openDirector",
+  "suggested hotbar fills slots 1-10, with the Director in slot 1");
+const director = fs.readFileSync(path.join(ROOT, "scripts/lib/director.mjs"), "utf8");
+const directorFns = [...director.matchAll(/\{ fn: "(\w+)"/g)].map(m => m[1]);
+ok(directorFns.length > 20 && directorFns.every(f => apiFns.has(f)), `all ${directorFns.length} Director buttons call an API function`);
+const readAlouds = [...JSON.stringify(adventure.journal).matchAll(/<blockquote class=\\"ravenmoor-readaloud\\"([^>]*)>/g)];
+ok(readAlouds.length > 20 && readAlouds.every(m => m[1].includes("data-tooltip")), `${readAlouds.length} journal read-aloud boxes carry the double-click hint`);
 const scripts = [];
 const collect = dir => fs.readdirSync(dir).forEach(f => {
   const p = path.join(dir, f);

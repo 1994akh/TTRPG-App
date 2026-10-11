@@ -301,3 +301,52 @@ figure.ravenmoor-dmkey figcaption { text-align: center; font-style: italic; }
 .ravenmoor-treat-panel ul.ravenmoor-candy-list button { flex: 0 0 auto; width: auto; }
 .ravenmoor-tracker-app ul { list-style: none; padding-left: 0.25rem; margin: 0 0 0.5rem; }
 .ravenmoor-tracker-app h3 { margin: 0.5rem 0 0.2rem; }
+
+/* ------------------------------------------ */
+/*  Quality of life                           */
+/* ------------------------------------------ */
+
+blockquote.ravenmoor-readaloud[data-tooltip] { cursor: pointer; }
+blockquote.ravenmoor-readaloud[data-tooltip]:hover { box-shadow: 0 0 0 2px rgba(46, 94, 71, 0.5), 0 1px 4px rgba(0, 0, 0, 0.2); }
+
+/* Candle panel: GM markers on candles that trigger something, and the session timer. */
+.ravenmoor-candle.milestone .num {
+  color: #9fe0b8;
+  font-weight: 700;
+  border-bottom: 2px solid #2e5e47;
+}
+.ravenmoor-candle.snuffed.milestone .num { color: #6d8f7a; }
+.ravenmoor-candle-panel footer .session {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 0.85rem;
+  padding: 0 0.4rem;
+  border: 1px solid rgba(233, 220, 192, 0.3);
+  border-radius: 3px;
+}
+
+/* Director */
+.ravenmoor-director .window-content { padding: 0.5rem 0.75rem; overflow-y: auto; }
+.ravenmoor-director ul.ravenmoor-status {
+  list-style: none;
+  margin: 0 0 0.5rem;
+  padding: 0.4rem 0.6rem;
+  border-left: 4px solid #2e5e47;
+  background: rgba(46, 94, 71, 0.12);
+  font-family: "EB Garamond", Georgia, serif;
+}
+.ravenmoor-director ul.ravenmoor-status li { margin: 0.1rem 0; }
+.ravenmoor-director .ravenmoor-warning { color: #b33a3a; font-weight: 600; }
+.ravenmoor-director section h3 {
+  font-family: "IM Fell English", Georgia, serif;
+  margin: 0.6rem 0 0.25rem;
+  border-bottom: 1px solid rgba(90, 74, 60, 0.6);
+}
+.ravenmoor-director section ul { list-style: none; margin: 0; padding: 0; }
+.ravenmoor-director section li { display: flex; align-items: center; gap: 0.35rem; margin: 0.15rem 0; }
+.ravenmoor-director section li .tick { flex: 0 0 1.6rem; width: 1.6rem; text-align: center; }
+.ravenmoor-director section li button.tick { padding: 0; line-height: 1.6rem; background: none; border: none; box-shadow: none; }
+.ravenmoor-director section li button.tick.done { color: #2e9e64; }
+.ravenmoor-director section li button.run { flex: 1; text-align: left; line-height: 1.6; padding: 0.1rem 0.5rem; }
+.ravenmoor-director section li.done button.run { opacity: 0.7; }
+.ravenmoor-director section li button.run.danger { border-color: #b33a3a; color: #b33a3a; }
+.ravenmoor-director footer { margin-top: 0.6rem; }
