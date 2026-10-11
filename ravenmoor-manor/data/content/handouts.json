@@ -1,0 +1,926 @@
+{
+  "_format": "Player handouts (H1-H5) and clue cards (C1-C14). Text is verbatim from the printables and the campaign doc. 'mapPos' is in grid squares on that level's 48x36 canvas (multiply by 100 for pixels; padding is 0). 'checks' use dnd5e keys: skill keys (med, inv, prc, nat, arc, his, ins, per, ath, slt), tool keys (alchemist), and 'passive' for passive scores. Each card's 'conclusions' matches the evidence lists in 'conclusions' at the top (the campaign doc's clue checklist), so the Clue Tracker can tick automatically. A check never gates a starred card (house rule 3: a failure costs a candle, not the clue).",
+  "conclusions": {
+    "poison": {
+      "name": "It was poison, not fright",
+      "evidence": [
+        {
+          "id": "C1",
+          "label": "Frost on Silas's fingertips (study)"
+        },
+        {
+          "id": "C6",
+          "label": "Frosted tonic glass (scullery)"
+        },
+        {
+          "id": "H4",
+          "label": "Banshee's Breath recipe (Quill's room)"
+        },
+        {
+          "id": "spell:speak-with-dead",
+          "label": "Speak with dead on Silas"
+        }
+      ]
+    },
+    "ghost_person": {
+      "name": "The ghost was a person",
+      "evidence": [
+        {
+          "id": "C4",
+          "label": "Foxfire smears (gallery)"
+        },
+        {
+          "id": "C5",
+          "label": "Buckled boot print (servants' stair)"
+        },
+        {
+          "id": "T-pip",
+          "label": "Pip: \"Illusions don't leave smudges\""
+        },
+        {
+          "id": "T-crane",
+          "label": "Mrs. Crane: the ghost wore men's buckled boots"
+        },
+        {
+          "id": "C7",
+          "label": "The costume bundle (crypt)"
+        }
+      ]
+    },
+    "passage": {
+      "name": "The killer used the passage",
+      "evidence": [
+        {
+          "id": "C3",
+          "label": "The bookcase lever (study)"
+        },
+        {
+          "id": "C11",
+          "label": "The old floor plan (library)"
+        },
+        {
+          "id": "T-bramwell",
+          "label": "Bramwell's story"
+        },
+        {
+          "id": "T-morwenna",
+          "label": "Morwenna's green glow in the chapel"
+        },
+        {
+          "id": "T-edric",
+          "label": "Edric's dripping behind the cellar arch"
+        }
+      ]
+    },
+    "quill": {
+      "name": "The killer is Quill",
+      "readyToAccuseAt": 3,
+      "evidence": [
+        {
+          "id": "T-crane",
+          "label": "Mrs. Crane: his room was dark at 8:45"
+        },
+        {
+          "id": "T-quill-mint",
+          "label": "He smells of frost-mint"
+        },
+        {
+          "id": "H3",
+          "label": "Mortar-and-pestle seal on Edric's letter (with C10, the green wax)"
+        },
+        {
+          "id": "T-quill-nails",
+          "label": "Foxfire under his fingernails"
+        },
+        {
+          "id": "H5",
+          "label": "Silas's journal entry (library)"
+        },
+        {
+          "id": "C14",
+          "label": "The will in his medical bag"
+        }
+      ]
+    }
+  },
+  "unmask": {
+    "who": "Dr. Quill",
+    "how": "Poisoned tonic, plus the passage or the costume",
+    "why": "Edric's debts, the moonsilver or the stolen will"
+  },
+  "cards": [
+    {
+      "id": "H1",
+      "kind": "handout",
+      "title": "The Invitation",
+      "header": "Delivered by raven",
+      "salutation": "To the bearer, with the compliments of Lord Silas Ravenmoor:",
+      "body": [
+        "You are invited to the Ravenmoor Hallows' Masque on All Hallows' Eve. Costume is required. I offer two hundred gold pieces for your company, and for your discretion. I have reason to believe someone under my roof wishes me dead before midnight, when my new will is to be read. Come armed, come masked, and come before dark. Mind the pond."
+      ],
+      "signoff": "— S. R.",
+      "seal": "black wax, raven",
+      "annotation": null,
+      "foundIn": {
+        "label": "Setup",
+        "locationKey": null,
+        "level": null
+      },
+      "revealedBy": "Every player gets one before the session.",
+      "checks": [],
+      "star": false,
+      "pointsTo": "The hook",
+      "conclusions": [],
+      "givenTo": "all",
+      "showAt": "setup",
+      "mapPos": null
+    },
+    {
+      "id": "H2",
+      "kind": "handout",
+      "title": "The Household of Ravenmoor",
+      "header": "All Hallows' Eve",
+      "salutation": null,
+      "body": [],
+      "table": {
+        "columns": [
+          "Name",
+          "Who they are",
+          "Costume"
+        ],
+        "rows": [
+          [
+            "Lady Morwenna Ravenmoor",
+            "Silas's second wife",
+            "Black swan"
+          ],
+          [
+            "Edric Ravenmoor",
+            "Silas's eldest son",
+            "Headless horseman"
+          ],
+          [
+            "Penelope \"Pip\" Ravenmoor",
+            "Silas's granddaughter, a student illusionist",
+            "Witch"
+          ],
+          [
+            "Dr. Thaddeus Quill",
+            "Family physician",
+            "Plague doctor"
+          ],
+          [
+            "Bramwell Hatch",
+            "Groundskeeper and gravedigger",
+            "Scarecrow coat"
+          ],
+          [
+            "Mrs. Agatha Crane",
+            "Housekeeper",
+            "None"
+          ]
+        ]
+      },
+      "signoff": null,
+      "seal": null,
+      "annotation": null,
+      "foundIn": {
+        "label": "End of Act 1 (Scene 5)",
+        "locationKey": "study",
+        "level": "upper"
+      },
+      "revealedBy": "Every player gets one when the twelve candles are lit.",
+      "checks": [],
+      "star": false,
+      "pointsTo": "The six suspects",
+      "conclusions": [],
+      "givenTo": "all",
+      "showAt": "act1.scene5",
+      "mapPos": null
+    },
+    {
+      "id": "H3",
+      "kind": "handout",
+      "title": "Edric's Debt Letter",
+      "header": "Found in Edric's coat",
+      "salutation": "Master Ravenmoor,",
+      "body": [
+        "Your debts to the Gilded Lantern have been purchased in full by a new holder. The holder is patient. The holder expects payment, with interest, on the day you inherit. Do not trouble yourself to ask the holder's name."
+      ],
+      "signoff": null,
+      "seal": "green wax, stamped with a mortar and pestle",
+      "annotation": "The seal on the envelope: green wax, stamped with a mortar and pestle.",
+      "foundIn": {
+        "label": "Edric's coat",
+        "locationKey": null,
+        "level": null,
+        "actor": "edric"
+      },
+      "revealedBy": "Searching Edric, or he hands it over once accused.",
+      "checks": [],
+      "star": true,
+      "pointsTo": "Quill: the mortar-and-pestle seal matches his signet ring",
+      "conclusions": [
+        "quill"
+      ],
+      "unmask": [
+        "why"
+      ],
+      "givenTo": "finder",
+      "showAt": "found",
+      "item": "debt-letter",
+      "mapPos": null
+    },
+    {
+      "id": "H4",
+      "kind": "handout",
+      "title": "A Page from Quill's Notebook",
+      "header": "A page torn from a notebook",
+      "salutation": null,
+      "body": [
+        "Banshee's Breath.",
+        "Nightshade, frost-mint, powdered ghost orchid. Steep cold. Onset three quarters of an hour. The skin chills and the face sets as if in terror. Mint masks the bitterness. In a tonic, undetectable to the untrained."
+      ],
+      "signoff": null,
+      "seal": null,
+      "annotation": "Faint stains on the page smell of mint.",
+      "foundIn": {
+        "label": "Dr. Quill's guest room",
+        "locationKey": "quill_room",
+        "level": "upper"
+      },
+      "revealedBy": "Searching the room.",
+      "checks": [
+        {
+          "skill": "inv",
+          "dc": 13
+        }
+      ],
+      "star": true,
+      "pointsTo": "Poison: the Banshee's Breath recipe",
+      "conclusions": [
+        "poison"
+      ],
+      "unmask": [
+        "how"
+      ],
+      "givenTo": "finder",
+      "showAt": "found",
+      "mapPos": {
+        "level": "upper",
+        "x": 18.9,
+        "y": 6.9
+      }
+    },
+    {
+      "id": "H5",
+      "kind": "handout",
+      "title": "Silas's Journal, Last Entry",
+      "header": "Found in the library desk",
+      "salutation": null,
+      "body": [
+        "Q. asked again about the crypt today. Third time this month. Wanted to know how far the old passage runs. I've told no one but him about the silver, and I am beginning to regret it. Fennick comes on Hallows' Eve. After that, it won't matter what anyone wants."
+      ],
+      "signoff": "— S. R.",
+      "seal": null,
+      "annotation": null,
+      "foundIn": {
+        "label": "Library desk",
+        "locationKey": "library",
+        "level": "ground"
+      },
+      "revealedBy": "Searching the desk.",
+      "checks": [],
+      "star": true,
+      "pointsTo": "Quill: asking about the crypt and the silver",
+      "conclusions": [
+        "quill"
+      ],
+      "unmask": [
+        "why"
+      ],
+      "givenTo": "finder",
+      "showAt": "found",
+      "mapPos": {
+        "level": "ground",
+        "x": 13.4,
+        "y": 9.3
+      }
+    },
+    {
+      "id": "C1",
+      "kind": "clue",
+      "title": "Frost on the Fingertips",
+      "header": "The study",
+      "body": [
+        "Fine frost glitters on Lord Silas's fingertips, though the fire beside him still burns. His lips are tinged blue, and his skin is colder than the room. A faint smell of mint lingers at his mouth."
+      ],
+      "annotation": "Found on Lord Silas's body",
+      "foundIn": {
+        "label": "Study, the body",
+        "locationKey": "study",
+        "level": "upper"
+      },
+      "revealedBy": "Examining the body.",
+      "checks": [
+        {
+          "skill": "med",
+          "dc": 12
+        }
+      ],
+      "star": true,
+      "pointsTo": "Poison, not fright",
+      "conclusions": [
+        "poison"
+      ],
+      "unmask": [
+        "how"
+      ],
+      "givenTo": "finder",
+      "showAt": "act1.scene5",
+      "mapPos": {
+        "level": "upper",
+        "x": 35.65,
+        "y": 10.45
+      }
+    },
+    {
+      "id": "C2",
+      "kind": "clue",
+      "title": "One-Way Footprints",
+      "header": "The study",
+      "body": [
+        "Wet footprints cross the rug from the open window to the desk. None lead back. Outside, thick ivy blankets the sill and the wall below, every leaf still in place. Nothing has climbed in or out."
+      ],
+      "annotation": "Found by the study window",
+      "foundIn": {
+        "label": "Study, by the window",
+        "locationKey": "study",
+        "level": "upper"
+      },
+      "revealedBy": "Examining the window and rug.",
+      "checks": [
+        {
+          "skill": "inv",
+          "dc": 12
+        }
+      ],
+      "star": true,
+      "pointsTo": "The window was staged from inside (supports the locked-room logic; not on the doc's checklist)",
+      "conclusions": [],
+      "unmask": [
+        "how"
+      ],
+      "givenTo": "finder",
+      "showAt": "act1.scene5",
+      "tile": "evidence-footprints",
+      "mapPos": {
+        "level": "upper",
+        "x": 35.6,
+        "y": 6.9
+      }
+    },
+    {
+      "id": "C3",
+      "kind": "clue",
+      "title": "The Groaning Bookcase",
+      "header": "The study",
+      "body": [
+        "A pale arc is scuffed into the floorboards in front of one bookcase, as if it has swung outward many times. A cold draft breathes from its edge. One volume sits slightly proud of the rest: Hallowed Rites of the Ravenmoor Line."
+      ],
+      "annotation": "Found at the study bookshelves",
+      "foundIn": {
+        "label": "Study bookshelves",
+        "locationKey": "study",
+        "level": "upper"
+      },
+      "revealedBy": "Searching the bookshelves. Pulling the book swings the case open (reveals the secret door).",
+      "checks": [
+        {
+          "skill": "inv",
+          "dc": 14
+        },
+        {
+          "passive": "prc",
+          "dc": 15
+        }
+      ],
+      "star": true,
+      "pointsTo": "The secret passage",
+      "conclusions": [
+        "passage"
+      ],
+      "unmask": [
+        "how"
+      ],
+      "givenTo": "finder",
+      "showAt": "found",
+      "onReveal": "revealSecretDoor:study-bookcase",
+      "mapPos": {
+        "level": "upper",
+        "x": 36.2,
+        "y": 10.6
+      }
+    },
+    {
+      "id": "C4",
+      "kind": "clue",
+      "title": "Glowing Smears",
+      "header": "Minstrels' gallery",
+      "body": [
+        "Smudges of pale green light cling to the railing where the Widow stood. They glow faintly in the dark. On a fingertip they come away as a damp, earthy paste that smells of rotting wood."
+      ],
+      "annotation": "Found on the gallery railing",
+      "foundIn": {
+        "label": "Minstrels' gallery railing",
+        "locationKey": "gallery",
+        "level": "upper"
+      },
+      "revealedBy": "Searching the gallery. Nature DC 12 names it foxfire, a glowing fungus paste, not magic.",
+      "checks": [
+        {
+          "skill": "inv",
+          "dc": 12
+        },
+        {
+          "skill": "nat",
+          "dc": 12,
+          "bonus": "names it foxfire"
+        }
+      ],
+      "star": true,
+      "pointsTo": "The ghost was a person",
+      "conclusions": [
+        "ghost_person"
+      ],
+      "unmask": [
+        "how"
+      ],
+      "givenTo": "finder",
+      "showAt": "act1.scene4",
+      "tile": "evidence-foxfire",
+      "mapPos": {
+        "level": "upper",
+        "x": 24.5,
+        "y": 11.6
+      }
+    },
+    {
+      "id": "C5",
+      "kind": "clue",
+      "title": "A Buckled Boot Print",
+      "header": "Servants' stair",
+      "body": [
+        "Halfway down the stair, the muddy print of a heavy boot, the outline of a buckle pressed clearly into the mud. A man's size. Drops of pond water lead on down toward the chapel corridor."
+      ],
+      "annotation": "Found on the servants' stair",
+      "foundIn": {
+        "label": "Servants' stair",
+        "locationKey": "servants_stair",
+        "level": "ground"
+      },
+      "revealedBy": "Searching the stair.",
+      "checks": [],
+      "star": true,
+      "pointsTo": "The ghost wore men's boots",
+      "conclusions": [
+        "ghost_person"
+      ],
+      "unmask": [
+        "how"
+      ],
+      "givenTo": "finder",
+      "showAt": "act2",
+      "tile": "evidence-bootprint",
+      "mapPos": {
+        "level": "ground",
+        "x": 36.4,
+        "y": 21.6
+      }
+    },
+    {
+      "id": "C6",
+      "kind": "clue",
+      "title": "The Frosted Tonic Glass",
+      "header": "The scullery",
+      "body": [
+        "Lord Silas's tonic glass sits unwashed on Mrs. Crane's tray. A ring of white frost clings to the bottom, though the scullery is warm, and it smells sharply of mint."
+      ],
+      "annotation": "Found on the tonic tray in the scullery",
+      "foundIn": {
+        "label": "Scullery, tonic tray",
+        "locationKey": "scullery",
+        "level": "ground"
+      },
+      "revealedBy": "Examining the tray. Medicine or alchemist's supplies DC 13 identifies Banshee's Breath.",
+      "checks": [
+        {
+          "skill": "med",
+          "dc": 13
+        },
+        {
+          "tool": "alchemist",
+          "dc": 13
+        }
+      ],
+      "star": true,
+      "pointsTo": "Poison in the tonic",
+      "conclusions": [
+        "poison"
+      ],
+      "unmask": [
+        "how"
+      ],
+      "givenTo": "finder",
+      "showAt": "found",
+      "mapPos": {
+        "level": "ground",
+        "x": 35.5,
+        "y": 13.15
+      }
+    },
+    {
+      "id": "C7",
+      "kind": "clue",
+      "title": "The Costume Bundle",
+      "header": "The chapel crypt",
+      "body": [
+        "Stuffed into a dark niche: a pale grey gown, a lace veil, gloves crusted with glowing green paste, a green-glass lantern still warm to the touch, and a flask half full of murky pond water. The gown's hem is caked with mud."
+      ],
+      "annotation": "Found in a niche behind Elspeth's tomb",
+      "foundIn": {
+        "label": "Crypt, niche behind Elspeth's tomb",
+        "locationKey": "crypt",
+        "level": "below"
+      },
+      "revealedBy": "Searching the crypt.",
+      "checks": [
+        {
+          "skill": "inv",
+          "dc": 13
+        }
+      ],
+      "star": true,
+      "pointsTo": "The ghost was a person",
+      "conclusions": [
+        "ghost_person"
+      ],
+      "unmask": [
+        "how"
+      ],
+      "givenTo": "finder",
+      "showAt": "found",
+      "tile": "evidence-costume",
+      "item": "costume-bundle",
+      "mapPos": {
+        "level": "below",
+        "x": 38.3,
+        "y": 12.0
+      }
+    },
+    {
+      "id": "C8",
+      "kind": "clue",
+      "title": "Silver in the Stone",
+      "header": "The chapel crypt",
+      "body": [
+        "Where the flagstones have cracked, a vein of silver-blue metal glints in the lantern light. Fresh chisel marks score the stone around it. Someone has been chipping samples away."
+      ],
+      "annotation": "Found in the crypt floor",
+      "foundIn": {
+        "label": "Crypt floor",
+        "locationKey": "crypt",
+        "level": "below"
+      },
+      "revealedBy": "Searching the crypt. Arcana or Nature DC 14 names it moonsilver.",
+      "checks": [
+        {
+          "skill": "arc",
+          "dc": 14
+        },
+        {
+          "skill": "nat",
+          "dc": 14
+        }
+      ],
+      "star": true,
+      "pointsTo": "The motive: moonsilver",
+      "conclusions": [],
+      "unmask": [
+        "why"
+      ],
+      "givenTo": "finder",
+      "showAt": "found",
+      "item": "moonsilver-chip",
+      "mapPos": {
+        "level": "below",
+        "x": 43.4,
+        "y": 15.4
+      }
+    },
+    {
+      "id": "C9",
+      "kind": "clue",
+      "title": "Empty Scarecrow Posts",
+      "header": "The pumpkin patch",
+      "body": [
+        "Two of the scarecrow posts in the pumpkin patch stand empty, their ropes cut clean. Straw lies scattered in a trail across the wet grass, leading toward the chapel."
+      ],
+      "annotation": "Found in the pumpkin patch",
+      "foundIn": {
+        "label": "Pumpkin patch",
+        "locationKey": "pumpkin_patch",
+        "level": "ground"
+      },
+      "revealedBy": "Searching the patch, or Bramwell mentions it.",
+      "checks": [],
+      "star": false,
+      "pointsTo": "Foreshadows the showdown",
+      "conclusions": [],
+      "givenTo": "finder",
+      "showAt": "found",
+      "mapPos": {
+        "level": "ground",
+        "x": 39.3,
+        "y": 29.4
+      }
+    },
+    {
+      "id": "C10",
+      "kind": "clue",
+      "title": "A Stick of Green Wax",
+      "header": "Dr. Quill's room",
+      "body": [
+        "On the writing desk sits a half-used stick of green sealing wax. The bed is still made and the hearth is cold. No one has used this room tonight."
+      ],
+      "annotation": "Found in Dr. Quill's guest room",
+      "foundIn": {
+        "label": "Dr. Quill's guest room",
+        "locationKey": "quill_room",
+        "level": "upper"
+      },
+      "revealedBy": "Searching the desk.",
+      "checks": [],
+      "star": false,
+      "pointsTo": "Quill sealed Edric's letter (pairs with H3 on the checklist)",
+      "conclusions": [],
+      "unmask": [
+        "why"
+      ],
+      "givenTo": "finder",
+      "showAt": "found",
+      "mapPos": {
+        "level": "upper",
+        "x": 20.1,
+        "y": 6.9
+      },
+      "supports": "H3"
+    },
+    {
+      "id": "C11",
+      "kind": "clue",
+      "title": "The Old Floor Plan",
+      "header": "The library",
+      "body": [
+        "A yellowed floor plan of Ravenmoor, a century old. A dotted line climbs from the chapel crypt through the walls and ends behind the bookshelves of the master's study. Beside it, in faded ink: Old stair. Cellar arch bricked up."
+      ],
+      "annotation": "Found among the family records",
+      "foundIn": {
+        "label": "Library, family records",
+        "locationKey": "library",
+        "level": "ground"
+      },
+      "revealedBy": "Searching the family records.",
+      "checks": [
+        {
+          "skill": "his",
+          "dc": 13
+        },
+        {
+          "skill": "inv",
+          "dc": 13
+        }
+      ],
+      "star": false,
+      "pointsTo": "The secret passage",
+      "conclusions": [
+        "passage"
+      ],
+      "unmask": [
+        "how"
+      ],
+      "givenTo": "finder",
+      "showAt": "found",
+      "mapPos": {
+        "level": "ground",
+        "x": 11.0,
+        "y": 7.4
+      }
+    },
+    {
+      "id": "C12",
+      "kind": "clue",
+      "title": "A Letter Signed \"R.\"",
+      "header": "The stables",
+      "body": [
+        "My darling, the carriage will wait at dawn as we agreed. Bring only what you can carry, and leave Ravenmoor and its ghosts behind forever. Every hour until then is an age."
+      ],
+      "signoff": "— R.",
+      "annotation": "Found in Lady Morwenna's glove or her carriage",
+      "foundIn": {
+        "label": "Morwenna's glove or the stables",
+        "locationKey": "stables",
+        "level": "ground",
+        "actor": "morwenna"
+      },
+      "revealedBy": "Searching the carriage, or Morwenna confides.",
+      "checks": [],
+      "star": false,
+      "pointsTo": "Red herring: Morwenna's elopement",
+      "conclusions": [],
+      "redHerring": "morwenna",
+      "givenTo": "finder",
+      "showAt": "found",
+      "mapPos": {
+        "level": "ground",
+        "x": 6.8,
+        "y": 11.0
+      }
+    },
+    {
+      "id": "C13",
+      "kind": "clue",
+      "title": "Pip's Spell Notes",
+      "header": "Pip's room",
+      "body": [
+        "A notebook crammed with spell diagrams. Several pages sketch a veiled woman holding a lantern, with notes: Minor illusion. Light only, no sound. Gallery, after dinner. Make her glow softer. The latest entry is dated a week ago."
+      ],
+      "annotation": "Found on Pip's writing desk",
+      "foundIn": {
+        "label": "Pip's room",
+        "locationKey": "pip_room",
+        "level": "upper"
+      },
+      "revealedBy": "Searching the room.",
+      "checks": [],
+      "star": false,
+      "pointsTo": "Red herring: Pip's earlier fake ghosts",
+      "conclusions": [],
+      "redHerring": "pip",
+      "givenTo": "finder",
+      "showAt": "found",
+      "mapPos": {
+        "level": "upper",
+        "x": 24.4,
+        "y": 6.85
+      }
+    },
+    {
+      "id": "C14",
+      "kind": "clue",
+      "title": "The New Will",
+      "header": "Dr. Quill's bag",
+      "body": [
+        "I, Silas Ravenmoor, leave Ravenmoor Manor and its grounds to the village of Hollow Brook, as a home for orphaned children. Let the silver beneath the chapel pay for their keep. To my wife, my son, my granddaughter, Mrs. Crane and Mr. Hatch: a stipend each. To whoever unmasks my killer, should it come to that: my cane, and my thanks."
+      ],
+      "signoff": "— S. R.",
+      "seal": "black wax, raven",
+      "annotation": "Found in the false bottom of the bag",
+      "foundIn": {
+        "label": "False bottom of Quill's medical bag",
+        "locationKey": null,
+        "level": null,
+        "actor": "quill"
+      },
+      "revealedBy": "Investigation DC 15, or found automatically when Quill is searched after the accusation. Finding it before midnight starts the finale early.",
+      "checks": [
+        {
+          "skill": "inv",
+          "dc": 15
+        },
+        {
+          "skill": "slt",
+          "dc": 15,
+          "note": "lifting it from the bag"
+        }
+      ],
+      "star": false,
+      "pointsTo": "The proof, and the ending",
+      "conclusions": [
+        "quill"
+      ],
+      "unmask": [
+        "who",
+        "why"
+      ],
+      "givenTo": "finder",
+      "showAt": "found",
+      "item": "new-will",
+      "mapPos": null
+    }
+  ],
+  "testimony": [
+    {
+      "id": "T-morwenna",
+      "actor": "morwenna",
+      "star": true,
+      "unlock": "Persuasion DC 14, or the party finds C12 and promises discretion.",
+      "checks": [
+        {
+          "skill": "per",
+          "dc": 14
+        }
+      ],
+      "text": "From the stable yard at about 8:45, she saw a green glow moving past the chapel windows, ten minutes before the ghost appeared in the hall.",
+      "conclusions": [
+        "passage"
+      ]
+    },
+    {
+      "id": "T-edric",
+      "actor": "edric",
+      "star": true,
+      "unlock": "Asked about his alibi; he tells the truth.",
+      "checks": [],
+      "text": "At about 8:40 he heard footsteps and dripping water behind the cellar's old bricked-up arch, which backs onto the crypt. He goes pale when he learns that Quill's signet ring bears a mortar and pestle.",
+      "conclusions": [
+        "passage"
+      ]
+    },
+    {
+      "id": "T-pip",
+      "actor": "pip",
+      "star": true,
+      "unlock": "Once her secret is out or respected. Detect magic or Arcana DC 12 confirms no lingering illusion on the gallery.",
+      "checks": [
+        {
+          "skill": "arc",
+          "dc": 12
+        }
+      ],
+      "text": "\"My illusions are just light. They don't put out candles, and they don't leave smudges. That ghost was solid, and its lantern had green glass in it.\"",
+      "conclusions": [
+        "ghost_person"
+      ]
+    },
+    {
+      "id": "T-bramwell",
+      "actor": "bramwell",
+      "star": true,
+      "unlock": "Insight or Persuasion DC 13, or the party helps relight his lanterns or treats the legend with respect.",
+      "checks": [
+        {
+          "skill": "ins",
+          "dc": 13
+        },
+        {
+          "skill": "per",
+          "dc": 13
+        }
+      ],
+      "text": "A hidden passage runs from the chapel crypt up to the master's study, behind the bookshelves. Two of his scarecrows have gone missing from the pumpkin patch.",
+      "conclusions": [
+        "passage"
+      ]
+    },
+    {
+      "id": "T-crane",
+      "actor": "crane",
+      "star": true,
+      "unlock": "Asked kindly, or anyone speaks well of Elspeth.",
+      "checks": [],
+      "text": "The \"ghost\" wore men's buckled boots and smelled of mint. When she turned down the beds at 8:45, Dr. Quill's room was dark and empty. She prepares the tonic tray, but the doctor always adds his own drops. The tonic glass is still unwashed in the scullery.",
+      "conclusions": [
+        "ghost_person",
+        "quill"
+      ]
+    },
+    {
+      "id": "T-quill-mint",
+      "actor": "quill",
+      "star": true,
+      "unlock": "Always described plainly whenever the party is near him.",
+      "checks": [],
+      "text": "He smells of frost-mint, the same smell as the poison. His buckled boots are wet with pond mud. His signet ring bears a mortar and pestle.",
+      "conclusions": [
+        "quill"
+      ]
+    },
+    {
+      "id": "T-quill-nails",
+      "actor": "quill",
+      "star": true,
+      "unlock": "Perception DC 15 on a handshake or a close look.",
+      "checks": [
+        {
+          "skill": "prc",
+          "dc": 15
+        }
+      ],
+      "text": "Glowing foxfire paste is caught under his fingernails.",
+      "conclusions": [
+        "quill"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,641 @@
+{
+  "_id": "KQKJNTGmT2yOlb2U",
+  "name": "Lady Morwenna Ravenmoor",
+  "type": "npc",
+  "img": "modules/ravenmoor-manor/assets/tokens/morwenna.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 9,
+        "proficient": 0
+      },
+      "dex": {
+        "value": 14,
+        "proficient": 0
+      },
+      "con": {
+        "value": 11,
+        "proficient": 0
+      },
+      "int": {
+        "value": 13,
+        "proficient": 0
+      },
+      "wis": {
+        "value": 14,
+        "proficient": 0
+      },
+      "cha": {
+        "value": 16,
+        "proficient": 0
+      }
+    },
+    "skills": {
+      "dec": {
+        "value": 1
+      },
+      "ins": {
+        "value": 1
+      },
+      "per": {
+        "value": 1
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calc": "natural",
+        "flat": 12
+      },
+      "hp": {
+        "value": 13,
+        "max": 13,
+        "temp": null,
+        "tempmax": null,
+        "formula": "3d8"
+      },
+      "init": {
+        "ability": "",
+        "roll": {
+          "bonus": "",
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "movement": {
+        "walk": "30",
+        "fly": "",
+        "hover": false,
+        "units": null
+      },
+      "senses": {
+        "ranges": {},
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": ""
+    },
+    "details": {
+      "biography": {
+        "value": "<p><strong>Look.</strong> Silas's second wife, 40s. Sharp cheekbones, black-feathered swan mask and gown, a fan she snaps shut when annoyed. Stable mud on her hem.</p><p><strong>Wants.</strong> Out of a cold marriage; to leave at dawn with a lover who signs his letters 'R.'</p><p><strong>Secret.</strong> Her packed trunk is in a carriage in the stables and R.'s love letter (C12) is tucked in her glove. She spent 8:30-9:00 loading the carriage.</p><p><strong>Knows.</strong> At about 8:45, from the stable yard, she saw a green glow moving past the chapel windows. Shares it once her secret is safe (Persuasion DC 14, or the letter plus a promise of discretion).</p><p><strong>Plays as.</strong> Clipped and haughty; softens only when treated with respect.</p><p><strong>Lines.</strong></p><ul><li>“I was in my room. With a headache. Which you are now giving me.”</li><li>“If I tell you what I saw, my business stays my own. Agreed?”</li></ul>",
+        "public": ""
+      },
+      "alignment": "Lawful Neutral",
+      "type": {
+        "value": "humanoid",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 0.125,
+      "habitat": {
+        "value": [],
+        "custom": ""
+      },
+      "treasure": {
+        "value": []
+      }
+    },
+    "resources": {
+      "legact": {
+        "max": 0,
+        "spent": 0
+      },
+      "legres": {
+        "max": 0,
+        "spent": 0
+      },
+      "lair": {
+        "value": false,
+        "initiative": null,
+        "inside": false
+      }
+    },
+    "source": {
+      "custom": "Death at Ravenmoor Manor",
+      "rules": "2024",
+      "revision": 1,
+      "book": "",
+      "page": "",
+      "license": ""
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common",
+          "elvish"
+        ],
+        "custom": ""
+      },
+      "important": false
+    }
+  },
+  "prototypeToken": {
+    "name": "Lady Morwenna Ravenmoor",
+    "displayName": 30,
+    "displayBars": 20,
+    "actorLink": false,
+    "appendNumber": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/ravenmoor-manor/assets/tokens/morwenna.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "disposition": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {}
+  },
+  "items": [
+    {
+      "_id": "7UW8Kwuif9GEIix9",
+      "name": "Society Grace",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/svg/activity/utility.svg",
+      "system": {
+        "description": {
+          "value": "<p>Morwenna has Advantage on Charisma checks made to influence nobles and officials, including Master Fennick.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "society-grace",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "passive",
+          "automation": null
+        }
+      },
+      "sort": 1000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!KQKJNTGmT2yOlb2U.7UW8Kwuif9GEIix9"
+    },
+    {
+      "_id": "1fl2v6MxxpHKepnU",
+      "name": "Stiletto",
+      "type": "weapon",
+      "img": "systems/dnd5e/icons/svg/activity/attack.svg",
+      "system": {
+        "description": {
+          "value": "<p>Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Piercing damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "stiletto",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "eDxvDPthaWxpZ5Vi": {
+            "_id": "eDxvDPthaWxpZ5Vi",
+            "type": "attack",
+            "name": "",
+            "img": null,
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "value": "",
+              "special": "",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "flags": {},
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "4",
+              "critical": {
+                "threshold": null
+              },
+              "flat": true,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 1,
+                  "denomination": 4,
+                  "bonus": "2",
+                  "types": [
+                    "piercing"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "number": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "ft",
+          "reach": 5
+        },
+        "damage": {
+          "base": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "number": 1
+            }
+          }
+        },
+        "properties": [],
+        "equipped": true,
+        "proficient": null,
+        "quantity": 1,
+        "identified": true
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "action",
+          "automation": null
+        }
+      },
+      "sort": 2000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!KQKJNTGmT2yOlb2U.1fl2v6MxxpHKepnU"
+    },
+    {
+      "_id": "xgAPlimnXSaGXkgK",
+      "name": "Parry",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/svg/activity/utility.svg",
+      "system": {
+        "description": {
+          "value": "<p>Trigger: Morwenna is hit by a melee attack roll while holding her stiletto. Response: She adds 2 to her AC against that attack, possibly causing it to miss.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "parry",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "L5qTCSygBX4meW1m": {
+            "_id": "L5qTCSygBX4meW1m",
+            "type": "utility",
+            "name": "",
+            "img": null,
+            "sort": 100000,
+            "activation": {
+              "type": "reaction",
+              "value": null,
+              "condition": "Morwenna is hit by a melee attack roll while holding her stiletto.",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "value": "",
+              "special": "",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [
+              {
+                "_id": "NTHVXQXRxOJmeKzC"
+              }
+            ],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "flags": {},
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            }
+          }
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "effects": [
+        {
+          "_id": "NTHVXQXRxOJmeKzC",
+          "name": "Parry",
+          "img": "systems/dnd5e/icons/svg/checked-shield.svg",
+          "type": "base",
+          "system": {
+            "changes": [
+              {
+                "type": "add",
+                "phase": "initial",
+                "priority": null,
+                "key": "system.attributes.ac.bonus",
+                "value": "+2"
+              }
+            ]
+          },
+          "disabled": false,
+          "transfer": false,
+          "statuses": [],
+          "duration": {
+            "value": 1,
+            "units": "turns",
+            "expiry": "turnEnd"
+          },
+          "description": "",
+          "origin": null,
+          "tint": "#ffffff",
+          "sort": 0,
+          "flags": {},
+          "_stats": {
+            "coreVersion": "14.368",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1793404800000,
+            "modifiedTime": 1793404800000,
+            "lastModifiedBy": null,
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null
+          },
+          "_key": "!actors.items.effects!KQKJNTGmT2yOlb2U.xgAPlimnXSaGXkgK.NTHVXQXRxOJmeKzC"
+        }
+      ],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "reaction",
+          "automation": null
+        }
+      },
+      "sort": 3000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!KQKJNTGmT2yOlb2U.xgAPlimnXSaGXkgK"
+    }
+  ],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "key": "morwenna",
+      "role": "suspect",
+      "acSource": "swan-feather gown",
+      "tokenMasked": null,
+      "tokenUnmasked": null,
+      "lair": null,
+      "cornered": null
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!KQKJNTGmT2yOlb2U"
+}

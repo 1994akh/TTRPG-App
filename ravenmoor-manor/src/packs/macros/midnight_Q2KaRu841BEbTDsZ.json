@@ -1,0 +1,31 @@
+{
+  "_id": "Q2KaRu841BEbTDsZ",
+  "name": "Midnight",
+  "type": "script",
+  "img": "icons/tools/instruments/bell-brass.webp",
+  "scope": "global",
+  "command": "game.modules.get(\"ravenmoor-manor\").api.midnight();",
+  "folder": null,
+  "sort": 7000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "fn": "midnight",
+      "slot": 7
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": null,
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!macros!Q2KaRu841BEbTDsZ"
+}

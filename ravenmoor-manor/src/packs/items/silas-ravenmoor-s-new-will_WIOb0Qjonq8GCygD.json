@@ -1,0 +1,64 @@
+{
+  "_id": "WIOb0Qjonq8GCygD",
+  "name": "Silas Ravenmoor's New Will",
+  "type": "loot",
+  "img": "icons/sundries/scrolls/scroll-bound-sealed-black-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>A scroll sealed in black wax with the Ravenmoor raven. Fennick can confirm it as genuine on sight. Its text is clue card C14.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-new-will\"><p><strong>DM:</strong> Hidden in the false bottom of Quill's medical bag. Quill means to burn it in the crypt brazier from round 3 of the showdown. Whether it survives decides the ending.</p></section>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Death at Ravenmoor Manor",
+      "book": "",
+      "page": "",
+      "license": "",
+      "rules": "2024",
+      "revision": 1
+    },
+    "identifier": "new-will",
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "",
+    "identified": true,
+    "container": null,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "activities": {}
+  },
+  "effects": [],
+  "flags": {
+    "ravenmoor": {
+      "plot": true,
+      "burnable": true,
+      "key": "new-will",
+      "journalLink": "C14"
+    }
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!WIOb0Qjonq8GCygD"
+}

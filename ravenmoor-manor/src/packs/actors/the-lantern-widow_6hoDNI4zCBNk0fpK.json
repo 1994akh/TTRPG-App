@@ -1,0 +1,526 @@
+{
+  "_id": "6hoDNI4zCBNk0fpK",
+  "name": "The Lantern Widow",
+  "type": "npc",
+  "img": "modules/ravenmoor-manor/assets/tokens/lantern-widow.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 7,
+        "proficient": 0
+      },
+      "dex": {
+        "value": 13,
+        "proficient": 0
+      },
+      "con": {
+        "value": 10,
+        "proficient": 0
+      },
+      "int": {
+        "value": 10,
+        "proficient": 0
+      },
+      "wis": {
+        "value": 12,
+        "proficient": 0
+      },
+      "cha": {
+        "value": 17,
+        "proficient": 0
+      }
+    },
+    "skills": {},
+    "attributes": {
+      "ac": {
+        "calc": "natural",
+        "flat": 11
+      },
+      "hp": {
+        "value": 45,
+        "max": 45,
+        "temp": null,
+        "tempmax": null,
+        "formula": "10d8"
+      },
+      "init": {
+        "ability": "",
+        "roll": {
+          "bonus": "",
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "movement": {
+        "walk": "0",
+        "fly": "40",
+        "hover": true,
+        "units": null
+      },
+      "senses": {
+        "ranges": {
+          "darkvision": 60
+        },
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": ""
+    },
+    "details": {
+      "biography": {
+        "value": "<p><strong>Look.</strong> Elspeth Ravenmoor, Silas's first wife, drowned in the manor pond on All Hallows' Eve thirty years ago. Pale woman, grey gown, veil, lantern of green glass. Never speaks; only bows her head.</p><p><strong>Appears.</strong> Exactly twice: rising from her tomb in round 4 of the showdown (or when Quill drops below half HP), and standing on the pond at dawn in the epilogue. Afterward her lantern waits on her memorial stone; it works as a Lantern of Revealing.</p>",
+        "public": ""
+      },
+      "alignment": "Neutral Good",
+      "type": {
+        "value": "undead",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 0,
+      "habitat": {
+        "value": [],
+        "custom": ""
+      },
+      "treasure": {
+        "value": []
+      }
+    },
+    "resources": {
+      "legact": {
+        "max": 0,
+        "spent": 0
+      },
+      "legres": {
+        "max": 0,
+        "spent": 0
+      },
+      "lair": {
+        "value": false,
+        "initiative": null,
+        "inside": false
+      }
+    },
+    "source": {
+      "custom": "Death at Ravenmoor Manor",
+      "rules": "2024",
+      "revision": 1,
+      "book": "",
+      "page": "",
+      "license": ""
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [
+          "cold",
+          "necrotic",
+          "poison"
+        ],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [
+          "charmed",
+          "exhaustion",
+          "frightened",
+          "grappled",
+          "paralyzed",
+          "petrified",
+          "poisoned",
+          "prone",
+          "restrained"
+        ],
+        "custom": ""
+      },
+      "dr": {
+        "value": [
+          "acid",
+          "bludgeoning",
+          "fire",
+          "lightning",
+          "piercing",
+          "slashing",
+          "thunder"
+        ],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [],
+        "custom": "Understands Common but does not speak"
+      },
+      "important": false
+    }
+  },
+  "prototypeToken": {
+    "name": "The Lantern Widow",
+    "displayName": 30,
+    "displayBars": 20,
+    "actorLink": false,
+    "appendNumber": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/ravenmoor-manor/assets/tokens/lantern-widow.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "disposition": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {}
+  },
+  "items": [
+    {
+      "_id": "B7r0i6R0Obsrqkzi",
+      "name": "Incorporeal Movement",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/svg/activity/utility.svg",
+      "system": {
+        "description": {
+          "value": "<p>The Widow can move through other creatures and objects as if they were Difficult Terrain.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "incorporeal-movement",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "passive",
+          "automation": null
+        }
+      },
+      "sort": 1000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!6hoDNI4zCBNk0fpK.B7r0i6R0Obsrqkzi"
+    },
+    {
+      "_id": "asa68T4zgZGpCGA8",
+      "name": "Ethereal Retreat",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/svg/activity/utility.svg",
+      "system": {
+        "description": {
+          "value": "<p>If any creature attacks the Widow, she fades into the Ethereal Plane and does not return this night.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "ethereal-retreat",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "passive",
+          "automation": null
+        }
+      },
+      "sort": 2000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!6hoDNI4zCBNk0fpK.asa68T4zgZGpCGA8"
+    },
+    {
+      "_id": "bKazPMYt1xCSEz4f",
+      "name": "Widow's Due",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/svg/activity/save.svg",
+      "system": {
+        "description": {
+          "value": "<p>Wisdom Saving Throw: DC 15, one creature the Widow can see within 60 feet. Failure: The target has the Frightened condition until the end of the encounter. She uses this only on Dr. Quill.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "widow-s-due",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "KlDVvkf0LAg87YzS": {
+            "_id": "KlDVvkf0LAg87YzS",
+            "type": "save",
+            "name": "",
+            "img": null,
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "value": "",
+              "special": "",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [
+              {
+                "_id": "AUIpIG24u5hk7JAP",
+                "onSave": false
+              }
+            ],
+            "range": {
+              "value": "60",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "flags": {},
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "damage": {
+              "onSave": "none",
+              "parts": []
+            },
+            "save": {
+              "ability": [
+                "wis"
+              ],
+              "dc": {
+                "calculation": "",
+                "formula": "15"
+              },
+              "visible": true
+            }
+          }
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "effects": [
+        {
+          "_id": "AUIpIG24u5hk7JAP",
+          "name": "Widow's Due: Frightened",
+          "img": "systems/dnd5e/icons/svg/statuses/frightened.svg",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "statuses": [
+            "frightened"
+          ],
+          "duration": {
+            "value": null,
+            "units": "rounds",
+            "expiry": "combatEnd"
+          },
+          "description": "<p>until the end of the encounter.</p>",
+          "origin": null,
+          "tint": "#ffffff",
+          "sort": 0,
+          "flags": {},
+          "_stats": {
+            "coreVersion": "14.368",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1793404800000,
+            "modifiedTime": 1793404800000,
+            "lastModifiedBy": null,
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null
+          },
+          "_key": "!actors.items.effects!6hoDNI4zCBNk0fpK.bKazPMYt1xCSEz4f.AUIpIG24u5hk7JAP"
+        }
+      ],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "action",
+          "automation": null
+        }
+      },
+      "sort": 3000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!6hoDNI4zCBNk0fpK.bKazPMYt1xCSEz4f"
+    }
+  ],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "key": "widow",
+      "role": "spirit (not meant to be fought)",
+      "acSource": null,
+      "tokenMasked": null,
+      "tokenUnmasked": null,
+      "lair": null,
+      "cornered": null
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!6hoDNI4zCBNk0fpK"
+}

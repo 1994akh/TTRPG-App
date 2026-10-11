@@ -1,0 +1,462 @@
+{
+  "_id": "gG0jEVDlvEP34M9J",
+  "name": "Fennick Barrowdown",
+  "type": "npc",
+  "img": "modules/ravenmoor-manor/assets/tokens/fennick.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 8,
+        "proficient": 0
+      },
+      "dex": {
+        "value": 11,
+        "proficient": 0
+      },
+      "con": {
+        "value": 10,
+        "proficient": 0
+      },
+      "int": {
+        "value": 14,
+        "proficient": 0
+      },
+      "wis": {
+        "value": 12,
+        "proficient": 0
+      },
+      "cha": {
+        "value": 10,
+        "proficient": 0
+      }
+    },
+    "skills": {
+      "his": {
+        "value": 1
+      },
+      "ins": {
+        "value": 1
+      },
+      "inv": {
+        "value": 1
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calc": "natural",
+        "flat": 10
+      },
+      "hp": {
+        "value": 7,
+        "max": 7,
+        "temp": null,
+        "tempmax": null,
+        "formula": "2d6"
+      },
+      "init": {
+        "ability": "",
+        "roll": {
+          "bonus": "",
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "movement": {
+        "walk": "30",
+        "fly": "",
+        "hover": false,
+        "units": null
+      },
+      "senses": {
+        "ranges": {},
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": ""
+    },
+    "details": {
+      "biography": {
+        "value": "<p><strong>Look.</strong> The family solicitor, a damp and nervous halfling. Fogged spectacles, dripping cloak, a satchel (holding the old will) clutched to his chest. Arrives at midnight by the ferry path.</p><p><strong>Wants.</strong> To read the correct will, be paid, and go home to bed.</p><p><strong>Knows.</strong> The old will leaves everything to Edric. Silas told him a new will existed but not its contents. A genuine Ravenmoor will bears Silas's black raven seal, so he can confirm the recovered will on sight.</p><p><strong>Plays as.</strong> Fussy and easily startled, scrupulously honest. Reads whichever valid will is in front of him at midnight.</p><p><strong>Lines.</strong></p><ul><li>“Fennick Barrowdown, solicitor. I'm here to read Lord Ravenmoor's will. Which will, I'm told, is... in question?”</li></ul>",
+        "public": ""
+      },
+      "alignment": "Lawful Neutral",
+      "type": {
+        "value": "humanoid",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 0,
+      "habitat": {
+        "value": [],
+        "custom": ""
+      },
+      "treasure": {
+        "value": []
+      }
+    },
+    "resources": {
+      "legact": {
+        "max": 0,
+        "spent": 0
+      },
+      "legres": {
+        "max": 0,
+        "spent": 0
+      },
+      "lair": {
+        "value": false,
+        "initiative": null,
+        "inside": false
+      }
+    },
+    "source": {
+      "custom": "Death at Ravenmoor Manor",
+      "rules": "2024",
+      "revision": 1,
+      "book": "",
+      "page": "",
+      "license": ""
+    },
+    "traits": {
+      "size": "sm",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common",
+          "halfling"
+        ],
+        "custom": ""
+      },
+      "important": false
+    }
+  },
+  "prototypeToken": {
+    "name": "Fennick Barrowdown",
+    "displayName": 30,
+    "displayBars": 20,
+    "actorLink": false,
+    "appendNumber": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/ravenmoor-manor/assets/tokens/fennick.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 0.8,
+      "scaleY": 0.8,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "disposition": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {}
+  },
+  "items": [
+    {
+      "_id": "JikyHmvaKTwaY5AT",
+      "name": "Luck",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/svg/activity/utility.svg",
+      "system": {
+        "description": {
+          "value": "<p>When Fennick rolls a 1 on the d20 of a D20 Test, he can reroll the die and must use the new roll.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "luck",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "passive",
+          "automation": null
+        }
+      },
+      "sort": 1000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!gG0jEVDlvEP34M9J.JikyHmvaKTwaY5AT"
+    },
+    {
+      "_id": "UBHSdP63ysEPZxLY",
+      "name": "Satchel Swat",
+      "type": "weapon",
+      "img": "systems/dnd5e/icons/svg/activity/attack.svg",
+      "system": {
+        "description": {
+          "value": "<p>Melee Attack Roll: +1, reach 5 ft. Hit: 1 (1d4 - 1) Bludgeoning damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "satchel-swat",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "5zQO5JMS4Uu6KRvQ": {
+            "_id": "5zQO5JMS4Uu6KRvQ",
+            "type": "attack",
+            "name": "",
+            "img": null,
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "value": "",
+              "special": "",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "flags": {},
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "1",
+              "critical": {
+                "threshold": null
+              },
+              "flat": true,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 1,
+                  "denomination": 4,
+                  "bonus": "-1",
+                  "types": [
+                    "bludgeoning"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "number": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "ft",
+          "reach": 5
+        },
+        "damage": {
+          "base": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "number": 1
+            }
+          }
+        },
+        "properties": [],
+        "equipped": true,
+        "proficient": null,
+        "quantity": 1,
+        "identified": true
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "action",
+          "automation": null
+        }
+      },
+      "sort": 2000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!gG0jEVDlvEP34M9J.UBHSdP63ysEPZxLY"
+    }
+  ],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "key": "fennick",
+      "role": "npc",
+      "acSource": null,
+      "tokenMasked": null,
+      "tokenUnmasked": null,
+      "lair": null,
+      "cornered": null
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!gG0jEVDlvEP34M9J"
+}

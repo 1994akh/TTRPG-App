@@ -1,0 +1,268 @@
+{
+  "_format": "How to assemble the scenes. Coordinates in data/scenes/*.json are image pixels with scene padding 0. Elevations are in feet (grid distance 5 ft = 100 px). 'preferred' is a single v14 Scene with three native Levels; 'fallback' is three separate Scenes linked by teleport regions. Build the preferred layout if the v14 Level schema supports what is described; otherwise build the fallback. Either way, keep every flag in flags.ravenmoor so the macros can find walls, lights and tiles by label or group.",
+  "moduleId": "ravenmoor-manor",
+  "canvas": {
+    "width": 4800,
+    "height": 3600,
+    "gridSize": 100,
+    "gridType": "square",
+    "gridDistance": 5,
+    "gridUnits": "ft",
+    "padding": 0
+  },
+  "preferred": {
+    "scene": {
+      "name": "Ravenmoor Manor",
+      "navName": "Ravenmoor",
+      "initialLevel": "ground",
+      "initialView": {
+        "x": 2400,
+        "y": 2400,
+        "scale": 0.5
+      },
+      "tokenVision": true,
+      "fog": {
+        "exploration": true
+      },
+      "environment": {
+        "globalLight": false
+      },
+      "flags": {
+        "ravenmoor": {
+          "role": "main"
+        }
+      }
+    },
+    "levels": [
+      {
+        "key": "below",
+        "name": "Crypt & Cellar",
+        "elevation": {
+          "bottom": -20,
+          "top": 0
+        },
+        "background": "modules/ravenmoor-manor/assets/maps/ravenmoor-below.webp",
+        "darkness": 0.9,
+        "data": "data/scenes/below.json",
+        "sort": 0
+      },
+      {
+        "key": "ground",
+        "name": "Ground Floor & Grounds",
+        "elevation": {
+          "bottom": 0,
+          "top": 20
+        },
+        "background": "modules/ravenmoor-manor/assets/maps/ravenmoor-ground.webp",
+        "darkness": 0.75,
+        "data": "data/scenes/ground.json",
+        "sort": 1
+      },
+      {
+        "key": "upper",
+        "name": "Upper Floor",
+        "elevation": {
+          "bottom": 20,
+          "top": 40
+        },
+        "background": "modules/ravenmoor-manor/assets/maps/ravenmoor-upper.webp",
+        "backgroundNote": "Transparent outside the house and over the open Great Hall, so the ground level shows through below if the Level renderer composites lower levels.",
+        "darkness": 0.75,
+        "data": "data/scenes/upper.json",
+        "sort": 2
+      }
+    ],
+    "levelChanges": "Every entry in levelRegions becomes a Region on its level with a Change Level behavior targeting the 'connectsTo' level. Both hidden-stair regions (on the upper and below levels) start disabled and are enabled by the Reveal Secret Door macro."
+  },
+  "fallback": {
+    "scenes": [
+      {
+        "key": "ground",
+        "name": "Ravenmoor: Ground Floor & Grounds",
+        "background": "modules/ravenmoor-manor/assets/maps/ravenmoor-ground.webp",
+        "width": 4800,
+        "height": 3600,
+        "darkness": 0.75,
+        "data": "data/scenes/ground.json",
+        "navigation": true
+      },
+      {
+        "key": "upper",
+        "name": "Ravenmoor: Upper Floor",
+        "background": "modules/ravenmoor-manor/assets/maps/ravenmoor-upper-standalone.webp",
+        "backgroundNote": "Standalone version: opaque, with roofs painted over the ground-floor areas.",
+        "width": 4800,
+        "height": 3600,
+        "darkness": 0.75,
+        "data": "data/scenes/upper.json",
+        "navigation": true
+      },
+      {
+        "key": "below",
+        "name": "Ravenmoor: Crypt & Cellar",
+        "background": "modules/ravenmoor-manor/assets/maps/ravenmoor-below.webp",
+        "width": 4800,
+        "height": 3600,
+        "darkness": 0.9,
+        "data": "data/scenes/below.json",
+        "navigation": true
+      },
+      {
+        "key": "crypt",
+        "name": "Ravenmoor: The Showdown (crypt battle map)",
+        "optional": true,
+        "background": "modules/ravenmoor-manor/assets/maps/ravenmoor-crypt-battlemap.webp",
+        "width": 1800,
+        "height": 1600,
+        "darkness": 0.6,
+        "data": "data/scenes/below.json",
+        "crop": {
+          "x": 3000,
+          "y": 400,
+          "width": 1800,
+          "height": 1600
+        },
+        "cropNote": "Subtract crop.x / crop.y from every wall, light, note, tile, token and region coordinate, and drop anything that falls outside the crop.",
+        "navigation": false
+      }
+    ],
+    "levelChanges": "Every entry in levelRegions becomes a Region with a Teleport Token behavior to the matching region on the 'connectsTo' scene (the rectangles are identical on both sides because the canvases are aligned). Both hidden-stair regions start disabled."
+  },
+  "defaults": {
+    "tokens": {
+      "players": {
+        "sight": {
+          "enabled": true,
+          "range": 0
+        },
+        "displayName": "CONST.TOKEN_DISPLAY_MODES.HOVER",
+        "disposition": "CONST.TOKEN_DISPOSITIONS.FRIENDLY"
+      },
+      "npcs": {
+        "displayName": "CONST.TOKEN_DISPLAY_MODES.HOVER",
+        "disposition": "CONST.TOKEN_DISPOSITIONS.NEUTRAL",
+        "actorLink": false
+      },
+      "hostile": {
+        "displayName": "CONST.TOKEN_DISPLAY_MODES.HOVER",
+        "disposition": "CONST.TOKEN_DISPOSITIONS.HOSTILE",
+        "actorLink": false
+      },
+      "note": "Values are Foundry constant names; resolve them to numbers at build time. Do not give player tokens a light; the candles carry the mood. Darkvision comes from the character sheets.",
+      "placed": "Each placed token in data/scenes/*.json carries hidden: true/false. Hidden at start: Silas's body token (upper), Quill and the four skeletons (below). The two scarecrows stand visible in the crypt corner all night and look like ordinary scarecrows; the showdown setup makes them hostile."
+    },
+    "walls": "Use each wall's move/sight/light/sound/door/ds values as given. flags.ravenmoor.kind is one of ext, int, window, rail, brick, door, secret, open.",
+    "lights": "Use config as given (dim/bright are radii in feet). flags.ravenmoor.group 'hall_candles' marks every light the Widow blows out. A light with hidden: true starts off. Find single lights by label prefix (e.g. \"Hallows' brazier\", 'Warding lantern').",
+    "notes": "Every map pin is a GM tool: it links to a page in the GM-only Ravenmoor Locations journal, so players never see pins (Foundry hides a note from users who cannot view its page). A note with a locationKey links to that page. A note with locationKey null uses parentKey for its page and shows its own label as the note text. secret: true marks the pins that would give away the passage; give them a different icon so the GM never reveals them by accident.",
+    "tiles": "Evidence tiles start hidden; macros find them by flags.ravenmoor.label prefix (the text before the parenthesis, e.g. 'C4 foxfire smears').",
+    "clueNotes": "Optionally add one GM-only map note per card in data/content/handouts.json that has a mapPos, linked to that card's page in the Handouts & Clues journal, with an icon different from the location pins."
+  },
+  "stateTriggers": [
+    {
+      "id": "silasRetires",
+      "when": "Act 1, Scene 3 (8:25 PM)",
+      "does": [
+        "lock the 'East Corridor / Study' door (ds 2)",
+        "move Silas's token into the study chair"
+      ]
+    },
+    {
+      "id": "lightsOut",
+      "when": "Act 1, Scene 4 (8:55 PM)",
+      "does": [
+        "flash a green light on the minstrels' gallery (around grid 24, 11 on the upper level) for a few seconds: the Widow's lantern",
+        "hide every light in group hall_candles (the Great Hall candelabras and fire on the ground level, the gallery sconces on the upper level)",
+        "play a gust sound if one is configured",
+        "reveal tile 'C4 foxfire smears' on the upper level",
+        "post the DC 13 Wisdom save request with the Scaredy-Cat button"
+      ]
+    },
+    {
+      "id": "theBody",
+      "when": "Act 1, Scene 5 (9:00 PM)",
+      "does": [
+        "replace Silas's token with the body token (Dead status) in the study",
+        "reveal tiles 'C2 wet footprints' and 'Scattered lilies'",
+        "set the 'East Corridor / Study' door to open (it was broken in)",
+        "show Handout 2 to all players",
+        "start the Twelve Candles clock"
+      ]
+    },
+    {
+      "id": "act2Start",
+      "when": "Start of Act 2",
+      "does": [
+        "reveal tile 'C5 buckled boot print' on the ground level"
+      ]
+    },
+    {
+      "id": "revealSecret",
+      "when": "C3 found, or stuck ladder rung 3",
+      "does": [
+        "set the bookcase secret door (upper, label 'Bookcase (secret door)') to a normal door, open",
+        "set the tomb secret door (below, label \"Hidden door behind Elspeth's tomb\") to a normal door",
+        "enable both hidden-stair regions"
+      ]
+    },
+    {
+      "id": "candle4",
+      "when": "Candle 4 snuffed",
+      "does": [
+        "post a GM whisper: Escalation 1, only if Quill is out of sight"
+      ]
+    },
+    {
+      "id": "candle8",
+      "when": "Candle 8 snuffed",
+      "does": [
+        "post a GM whisper: Escalation 2 (lockbox key in Edric's coat)",
+        "move the Lockbox Key item into Edric's inventory if it is still on Quill"
+      ]
+    },
+    {
+      "id": "candle11",
+      "when": "Candle 11 snuffed",
+      "does": [
+        "post a GM whisper: Escalation 3 (Fennick's lights; Quill to the chapel)",
+        "add Fennick's token on the drive"
+      ]
+    },
+    {
+      "id": "midnight",
+      "when": "Candle 12 snuffed, or the DM rings the bell",
+      "does": [
+        "toll the bell (chat card plus optional sound)",
+        "reveal the green brazier light and tile 'Green brazier fire' on the below level",
+        "open the Accusation dialog (who/how/why)"
+      ]
+    },
+    {
+      "id": "showdown",
+      "when": "Combat starts on the below level",
+      "does": [
+        "insert a 'Midnight Bell' combatant at initiative 20 (loses ties), unless dnd5e handles lair initiative natively",
+        "run lair round N on its turn (see npcs.json quill.lair.rounds)",
+        "skip round 1 if the Why edge was granted"
+      ]
+    },
+    {
+      "id": "unmask",
+      "when": "Quill drops to 30 HP or fewer (50 if the DM toggles 'running long')",
+      "does": [
+        "swap Quill's token image to quill-unmasked.webp",
+        "mark Quill defeated/surrendered and end his turns",
+        "delete or mark defeated every skeleton; mark scarecrows defeated",
+        "post the unmasking line to chat"
+      ]
+    },
+    {
+      "id": "dawn",
+      "when": "Epilogue",
+      "does": [
+        "tint the six 'Warding lantern' lights green",
+        "show the Lantern Widow token on the pond for the epilogue",
+        "place Elspeth's Lantern as an item pile or give it to the party"
+      ]
+    }
+  ]
+}

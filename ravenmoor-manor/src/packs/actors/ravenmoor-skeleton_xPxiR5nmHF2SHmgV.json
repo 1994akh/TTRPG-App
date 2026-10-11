@@ -1,0 +1,641 @@
+{
+  "_id": "xPxiR5nmHF2SHmgV",
+  "name": "Ravenmoor Skeleton",
+  "type": "npc",
+  "img": "modules/ravenmoor-manor/assets/tokens/skeleton.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 10,
+        "proficient": 0
+      },
+      "dex": {
+        "value": 14,
+        "proficient": 0
+      },
+      "con": {
+        "value": 15,
+        "proficient": 0
+      },
+      "int": {
+        "value": 6,
+        "proficient": 0
+      },
+      "wis": {
+        "value": 8,
+        "proficient": 0
+      },
+      "cha": {
+        "value": 5,
+        "proficient": 0
+      }
+    },
+    "skills": {},
+    "attributes": {
+      "ac": {
+        "calc": "natural",
+        "flat": 13
+      },
+      "hp": {
+        "value": 1,
+        "max": 1,
+        "temp": null,
+        "tempmax": null,
+        "formula": ""
+      },
+      "init": {
+        "ability": "",
+        "roll": {
+          "bonus": "",
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "movement": {
+        "walk": "30",
+        "fly": "",
+        "hover": false,
+        "units": null
+      },
+      "senses": {
+        "ranges": {
+          "darkvision": 60
+        },
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": ""
+    },
+    "details": {
+      "biography": {
+        "value": "<p><strong>Look.</strong> Long-dead Ravenmoors in rotted finery and rusted family armor, raised by Quill's chalk circle. Run them all on one initiative count. They crumble the moment Quill surrenders.</p>",
+        "public": ""
+      },
+      "alignment": "Lawful Evil",
+      "type": {
+        "value": "undead",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 0.125,
+      "habitat": {
+        "value": [],
+        "custom": ""
+      },
+      "treasure": {
+        "value": []
+      }
+    },
+    "resources": {
+      "legact": {
+        "max": 0,
+        "spent": 0
+      },
+      "legres": {
+        "max": 0,
+        "spent": 0
+      },
+      "lair": {
+        "value": false,
+        "initiative": null,
+        "inside": false
+      }
+    },
+    "source": {
+      "custom": "Death at Ravenmoor Manor",
+      "rules": "2024",
+      "revision": 1,
+      "book": "",
+      "page": "",
+      "license": ""
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [
+          "poison"
+        ],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [
+          "exhaustion",
+          "poisoned"
+        ],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [],
+        "custom": "Understands Common but can't speak"
+      },
+      "important": false
+    }
+  },
+  "prototypeToken": {
+    "name": "Ravenmoor Skeleton",
+    "displayName": 30,
+    "displayBars": 20,
+    "actorLink": false,
+    "appendNumber": true,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/ravenmoor-manor/assets/tokens/skeleton.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {}
+  },
+  "items": [
+    {
+      "_id": "oD1hw6kw9zSXcKfQ",
+      "name": "Minion",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/svg/activity/utility.svg",
+      "system": {
+        "description": {
+          "value": "<p>The skeleton is destroyed by any damage. If it succeeds on a saving throw against an effect that deals half damage on a success, it takes no damage instead.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "minion",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "passive",
+          "automation": null
+        }
+      },
+      "sort": 1000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!xPxiR5nmHF2SHmgV.oD1hw6kw9zSXcKfQ"
+    },
+    {
+      "_id": "FH14A9r7fR90Pi0A",
+      "name": "Shortsword",
+      "type": "weapon",
+      "img": "systems/dnd5e/icons/svg/activity/attack.svg",
+      "system": {
+        "description": {
+          "value": "<p>Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "shortsword",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "LwOL3ax4nuuIWLYb": {
+            "_id": "LwOL3ax4nuuIWLYb",
+            "type": "attack",
+            "name": "",
+            "img": null,
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "value": "",
+              "special": "",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "flags": {},
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "4",
+              "critical": {
+                "threshold": null
+              },
+              "flat": true,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 1,
+                  "denomination": 6,
+                  "bonus": "2",
+                  "types": [
+                    "piercing"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "number": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "ft",
+          "reach": 5
+        },
+        "damage": {
+          "base": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "number": 1
+            }
+          }
+        },
+        "properties": [],
+        "equipped": true,
+        "proficient": null,
+        "quantity": 1,
+        "identified": true
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "action",
+          "automation": null
+        }
+      },
+      "sort": 2000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!xPxiR5nmHF2SHmgV.FH14A9r7fR90Pi0A"
+    },
+    {
+      "_id": "NUWPZiEZwEf3LkZZ",
+      "name": "Shortbow",
+      "type": "weapon",
+      "img": "systems/dnd5e/icons/svg/activity/attack.svg",
+      "system": {
+        "description": {
+          "value": "<p>Ranged Attack Roll: +4, range 80/320 ft. Hit: 5 (1d6 + 2) Piercing damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "shortbow",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "h3PjISy7QA8FjwNT": {
+            "_id": "h3PjISy7QA8FjwNT",
+            "type": "attack",
+            "name": "",
+            "img": null,
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "value": "",
+              "special": "",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "80",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "flags": {},
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "4",
+              "critical": {
+                "threshold": null
+              },
+              "flat": true,
+              "type": {
+                "value": "ranged",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 1,
+                  "denomination": 6,
+                  "bonus": "2",
+                  "types": [
+                    "piercing"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "number": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "range": {
+          "value": 80,
+          "long": 320,
+          "units": "ft",
+          "reach": null
+        },
+        "damage": {
+          "base": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "number": 1
+            }
+          }
+        },
+        "properties": [],
+        "equipped": true,
+        "proficient": null,
+        "quantity": 1,
+        "identified": true
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "action",
+          "automation": null
+        }
+      },
+      "sort": 3000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!xPxiR5nmHF2SHmgV.NUWPZiEZwEf3LkZZ"
+    }
+  ],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "key": "skeleton",
+      "role": "minion",
+      "acSource": "armor scraps",
+      "tokenMasked": null,
+      "tokenUnmasked": null,
+      "lair": null,
+      "cornered": null
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!xPxiR5nmHF2SHmgV"
+}

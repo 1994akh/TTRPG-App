@@ -1,0 +1,1975 @@
+{
+  "_id": "ZDkjX7Z2611aYmXT",
+  "name": "Dr. Thaddeus Quill",
+  "type": "npc",
+  "img": "modules/ravenmoor-manor/assets/tokens/quill-masked.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 10,
+        "proficient": 0
+      },
+      "dex": {
+        "value": 16,
+        "proficient": 1
+      },
+      "con": {
+        "value": 14,
+        "proficient": 0
+      },
+      "int": {
+        "value": 18,
+        "proficient": 1
+      },
+      "wis": {
+        "value": 13,
+        "proficient": 1
+      },
+      "cha": {
+        "value": 14,
+        "proficient": 0
+      }
+    },
+    "skills": {
+      "dec": {
+        "value": 1
+      },
+      "med": {
+        "value": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calc": "natural",
+        "flat": 15
+      },
+      "hp": {
+        "value": 162,
+        "max": 162,
+        "temp": null,
+        "tempmax": null,
+        "formula": "25d8 + 50"
+      },
+      "init": {
+        "ability": "",
+        "roll": {
+          "bonus": "",
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "movement": {
+        "walk": "30",
+        "fly": "",
+        "hover": false,
+        "units": null
+      },
+      "senses": {
+        "ranges": {},
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": ""
+    },
+    "details": {
+      "biography": {
+        "value": "<p><strong>Look.</strong> Family physician and amateur alchemist, 50s. Silver whiskers, half-moon spectacles, a voice like warm cocoa. Tonight: plague doctor costume, beaked mask stuffed with frost-mint and cloves, long oiled coat, tall buckled boots, mortar-and-pestle signet ring.</p><p><strong>Wants.</strong> The manor, for the vein of moonsilver beneath the crypt. He secretly owns all of Edric's debts.</p><p><strong>Tells.</strong> Smell of mint; foxfire paste under his fingernails (Perception DC 15); pond mud on his buckled boots; room dark at 8:45.</p><p><strong>Plays as.</strong> Warm, grandfatherly, always 'just trying to help.' Steers suspicion to the ghost, then Edric, then Morwenna. In a zone of truth he goes quiet rather than lie.</p><p><strong>Lines.</strong></p><ul><li>“Poor Silas. Fear is a terrible poison.”</li><li>“Edric owed a great deal of money. I only mention it because I care.”</li><li>“You lot were supposed to stay scared!”</li></ul><p><strong>Gear.</strong> Medical bag with a false bottom (holds the new will); Acid flasks; Scalpels; Snuffing powder; Plague doctor mask; Signet ring with a mortar and pestle.</p><h3>The Chapel Crypt (midnight bell)</h3><p>Quill fights in the chapel crypt beneath Ravenmoor Manor. On initiative count 20 (losing ties), as the midnight bell tolls, the crypt takes one lair action, in order.</p><ol><li><strong>Round 1, The dead rise.</strong> Two Ravenmoor skeletons burst from coffins. If the party earned the Why Unmasking Edge, Edric and Bramwell hold the lids shut and nothing happens.</li><li><strong>Round 2, Candles gutter.</strong> A ghostly wail fills the crypt. Wisdom Saving Throw: DC 13, each player character. Failure: the Frightened condition until the end of its next turn.</li><li><strong>Round 3, Green flame.</strong> The brazier flares. Dexterity Saving Throw: DC 13, each creature within 10 feet of the brazier. Failure: 7 (2d6) Fire damage. From now on, if Quill starts his turn next to the brazier holding the will, he can burn it as a Bonus Action.</li><li><strong>Round 4, The Widow's due.</strong> Elspeth's spirit rises from her tomb (also triggers early when Quill drops below half his Hit Points). Wisdom Saving Throw: DC 15, Quill only. Failure: he has the Frightened condition until the fight ends.</li></ol>",
+        "public": ""
+      },
+      "alignment": "Neutral Evil",
+      "type": {
+        "value": "humanoid",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 7,
+      "habitat": {
+        "value": [],
+        "custom": ""
+      },
+      "treasure": {
+        "value": []
+      }
+    },
+    "resources": {
+      "legact": {
+        "max": 0,
+        "spent": 0
+      },
+      "legres": {
+        "max": 0,
+        "spent": 0
+      },
+      "lair": {
+        "value": false,
+        "initiative": null,
+        "inside": false
+      }
+    },
+    "source": {
+      "custom": "Death at Ravenmoor Manor",
+      "rules": "2024",
+      "revision": 1,
+      "book": "",
+      "page": "",
+      "license": ""
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common",
+          "elvish"
+        ],
+        "custom": ""
+      },
+      "important": true
+    }
+  },
+  "prototypeToken": {
+    "name": "Dr. Thaddeus Quill",
+    "displayName": 30,
+    "displayBars": 20,
+    "actorLink": false,
+    "appendNumber": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/ravenmoor-manor/assets/tokens/quill-masked.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "disposition": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {}
+  },
+  "items": [
+    {
+      "_id": "SruZ4BfT2Cxc4Xen",
+      "name": "Plague Mask",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/svg/activity/utility.svg",
+      "system": {
+        "description": {
+          "value": "<p>Quill is immune to his own Banshee's Breath and has Advantage on saving throws against poison.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "plague-mask",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "passive",
+          "automation": null
+        }
+      },
+      "sort": 1000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ZDkjX7Z2611aYmXT.SruZ4BfT2Cxc4Xen"
+    },
+    {
+      "_id": "uoCQ2rUxSpSDkqet",
+      "name": "Cornered",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/svg/activity/utility.svg",
+      "system": {
+        "description": {
+          "value": "<p>When Quill is reduced to 30 Hit Points or fewer (50 if the session is running long), he tears off his mask and surrenders. His skeletons crumble and his scarecrows slump lifeless.</p><p class=\"ravenmoor-automation\"><em>Module:</em> Module hook: on HP &lt;= threshold, run the Unmask Quill macro.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "cornered",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "passive",
+          "automation": "Module hook: on HP <= threshold, run the Unmask Quill macro."
+        }
+      },
+      "sort": 2000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ZDkjX7Z2611aYmXT.uoCQ2rUxSpSDkqet"
+    },
+    {
+      "_id": "cOEgo8mF7YWN5luj",
+      "name": "Multiattack",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/svg/activity/utility.svg",
+      "system": {
+        "description": {
+          "value": "<p>Quill makes three attacks, using Scalpel or Acid Flask in any combination.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "multiattack",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "bRMuoD6fA8wAdiWm": {
+            "_id": "bRMuoD6fA8wAdiWm",
+            "type": "utility",
+            "name": "",
+            "img": null,
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "value": "",
+              "special": "",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "flags": {},
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            }
+          }
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "action",
+          "automation": null
+        }
+      },
+      "sort": 3000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ZDkjX7Z2611aYmXT.cOEgo8mF7YWN5luj"
+    },
+    {
+      "_id": "tp7V5yGrGvcgpLN0",
+      "name": "Scalpel",
+      "type": "weapon",
+      "img": "systems/dnd5e/icons/svg/activity/attack.svg",
+      "system": {
+        "description": {
+          "value": "<p>Melee Attack Roll: +6, reach 5 ft. Hit: 5 (1d4 + 3) Slashing damage plus 7 (2d6) Poison damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "scalpel",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "GMFyXMU19QaTI7aT": {
+            "_id": "GMFyXMU19QaTI7aT",
+            "type": "attack",
+            "name": "",
+            "img": null,
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "value": "",
+              "special": "",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "flags": {},
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "6",
+              "critical": {
+                "threshold": null
+              },
+              "flat": true,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 1,
+                  "denomination": 4,
+                  "bonus": "3",
+                  "types": [
+                    "slashing"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "number": 1
+                  }
+                },
+                {
+                  "number": 2,
+                  "denomination": 6,
+                  "bonus": "",
+                  "types": [
+                    "poison"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "number": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "ft",
+          "reach": 5
+        },
+        "damage": {
+          "base": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "number": 1
+            }
+          }
+        },
+        "properties": [],
+        "equipped": true,
+        "proficient": null,
+        "quantity": 1,
+        "identified": true
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "action",
+          "automation": null
+        }
+      },
+      "sort": 4000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ZDkjX7Z2611aYmXT.tp7V5yGrGvcgpLN0"
+    },
+    {
+      "_id": "7b86xXpoZL7RkWlE",
+      "name": "Acid Flask",
+      "type": "weapon",
+      "img": "systems/dnd5e/icons/svg/activity/attack.svg",
+      "system": {
+        "description": {
+          "value": "<p>Ranged Attack Roll: +6, range 30/60 ft. Hit: 10 (3d6) Acid damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "acid-flask",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "j0L027CW5c1pG5j5": {
+            "_id": "j0L027CW5c1pG5j5",
+            "type": "attack",
+            "name": "",
+            "img": null,
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "value": "",
+              "special": "",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "30",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "flags": {},
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "6",
+              "critical": {
+                "threshold": null
+              },
+              "flat": true,
+              "type": {
+                "value": "ranged",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 3,
+                  "denomination": 6,
+                  "bonus": "",
+                  "types": [
+                    "acid"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "number": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "range": {
+          "value": 30,
+          "long": 60,
+          "units": "ft",
+          "reach": null
+        },
+        "damage": {
+          "base": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "number": 1
+            }
+          }
+        },
+        "properties": [],
+        "equipped": true,
+        "proficient": null,
+        "quantity": 1,
+        "identified": true
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "action",
+          "automation": null
+        }
+      },
+      "sort": 5000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ZDkjX7Z2611aYmXT.7b86xXpoZL7RkWlE"
+    },
+    {
+      "_id": "QIqxrfKsgLqsyhaK",
+      "name": "Banshee's Breath",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/svg/activity/save.svg",
+      "system": {
+        "description": {
+          "value": "<p>Constitution Saving Throw: DC 15, each creature in a 15-foot Cone. Failure: 22 (5d8) Poison damage, and the target has the Frightened condition until the end of its next turn. Success: Half damage only.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "banshee-s-breath",
+        "uses": {
+          "max": "1",
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "recharge",
+              "formula": "5",
+              "type": "recoverAll"
+            }
+          ]
+        },
+        "activities": {
+          "3KcrRuAydbLgH4H4": {
+            "_id": "3KcrRuAydbLgH4H4",
+            "type": "save",
+            "name": "",
+            "img": null,
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "value": "",
+              "special": "",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [
+              {
+                "_id": "TJkwKafX0Gq1yWpq",
+                "onSave": false
+              }
+            ],
+            "range": {
+              "value": "",
+              "units": "self",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "cone",
+                "size": "15",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "flags": {},
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": [
+                {
+                  "number": 5,
+                  "denomination": 8,
+                  "bonus": "",
+                  "types": [
+                    "poison"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "number": 1
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": [
+                "con"
+              ],
+              "dc": {
+                "calculation": "",
+                "formula": "15"
+              },
+              "visible": true
+            }
+          }
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "effects": [
+        {
+          "_id": "TJkwKafX0Gq1yWpq",
+          "name": "Banshee's Breath: Frightened",
+          "img": "systems/dnd5e/icons/svg/statuses/frightened.svg",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "statuses": [
+            "frightened"
+          ],
+          "duration": {
+            "value": 1,
+            "units": "turns",
+            "expiry": "turnEnd"
+          },
+          "description": "<p>until the end of the target's next turn.</p>",
+          "origin": null,
+          "tint": "#ffffff",
+          "sort": 0,
+          "flags": {},
+          "_stats": {
+            "coreVersion": "14.368",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1793404800000,
+            "modifiedTime": 1793404800000,
+            "lastModifiedBy": null,
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null
+          },
+          "_key": "!actors.items.effects!ZDkjX7Z2611aYmXT.QIqxrfKsgLqsyhaK.TJkwKafX0Gq1yWpq"
+        }
+      ],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "action",
+          "automation": null
+        }
+      },
+      "sort": 6000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ZDkjX7Z2611aYmXT.QIqxrfKsgLqsyhaK"
+    },
+    {
+      "_id": "NTgtET38PoAU7obf",
+      "name": "Ring the Bone Bell",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/svg/activity/utility.svg",
+      "system": {
+        "description": {
+          "value": "<p>Up to two allies Quill can see move up to half their Speed, and one of them makes one attack.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "ring-the-bone-bell",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "wqKuljw7Vhwkvo5J": {
+            "_id": "wqKuljw7Vhwkvo5J",
+            "type": "utility",
+            "name": "",
+            "img": null,
+            "sort": 100000,
+            "activation": {
+              "type": "bonus",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "value": "",
+              "special": "",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "flags": {},
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            }
+          }
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "bonus",
+          "automation": null
+        }
+      },
+      "sort": 7000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ZDkjX7Z2611aYmXT.NTgtET38PoAU7obf"
+    },
+    {
+      "_id": "ZZ7m99248eEB9Urr",
+      "name": "Snuffing Powder",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/svg/activity/utility.svg",
+      "system": {
+        "description": {
+          "value": "<p>Quill flings alchemical powder at a point within 60 feet. Every nonmagical flame in a 20-foot-radius Sphere there goes out in a cold rush of air.</p><p class=\"ravenmoor-automation\"><em>Module:</em> Module: hide every AmbientLight flagged nonmagical within 20 ft of a chosen point.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "snuffing-powder",
+        "uses": {
+          "max": "2",
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ]
+        },
+        "activities": {
+          "MsjEkQalYQMoI4SO": {
+            "_id": "MsjEkQalYQMoI4SO",
+            "type": "utility",
+            "name": "",
+            "img": null,
+            "sort": 100000,
+            "activation": {
+              "type": "bonus",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "value": "",
+              "special": "",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "flags": {},
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            }
+          }
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "bonus",
+          "automation": "Module: hide every AmbientLight flagged nonmagical within 20 ft of a chosen point."
+        }
+      },
+      "sort": 8000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ZDkjX7Z2611aYmXT.ZZ7m99248eEB9Urr"
+    },
+    {
+      "_id": "rjH5kqvZoTGkoaYz",
+      "name": "Slippery Physician",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/svg/activity/utility.svg",
+      "system": {
+        "description": {
+          "value": "<p>Trigger: A melee attack roll hits Quill. Response: He adds 3 to his AC against that attack, possibly causing it to miss. If it misses, he moves up to 10 feet without provoking Opportunity Attacks.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "slippery-physician",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "jcegiE3M8a8w6ijP": {
+            "_id": "jcegiE3M8a8w6ijP",
+            "type": "utility",
+            "name": "",
+            "img": null,
+            "sort": 100000,
+            "activation": {
+              "type": "reaction",
+              "value": null,
+              "condition": "A melee attack roll hits Quill.",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "value": "",
+              "special": "",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [
+              {
+                "_id": "ebW59T8ok87KIORm"
+              }
+            ],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "flags": {},
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            }
+          }
+        },
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "effects": [
+        {
+          "_id": "ebW59T8ok87KIORm",
+          "name": "Slippery Physician",
+          "img": "systems/dnd5e/icons/svg/checked-shield.svg",
+          "type": "base",
+          "system": {
+            "changes": [
+              {
+                "type": "add",
+                "phase": "initial",
+                "priority": null,
+                "key": "system.attributes.ac.bonus",
+                "value": "+3"
+              }
+            ]
+          },
+          "disabled": false,
+          "transfer": false,
+          "statuses": [],
+          "duration": {
+            "value": 1,
+            "units": "turns",
+            "expiry": "turnEnd"
+          },
+          "description": "",
+          "origin": null,
+          "tint": "#ffffff",
+          "sort": 0,
+          "flags": {},
+          "_stats": {
+            "coreVersion": "14.368",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1793404800000,
+            "modifiedTime": 1793404800000,
+            "lastModifiedBy": null,
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null
+          },
+          "_key": "!actors.items.effects!ZDkjX7Z2611aYmXT.rjH5kqvZoTGkoaYz.ebW59T8ok87KIORm"
+        }
+      ],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "reaction",
+          "automation": null
+        }
+      },
+      "sort": 9000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ZDkjX7Z2611aYmXT.rjH5kqvZoTGkoaYz"
+    },
+    {
+      "_id": "TCdjcsPl71e0fbKX",
+      "name": "Dr. Quill's Medical Bag",
+      "type": "container",
+      "img": "icons/containers/bags/case-leather-tan.webp",
+      "system": {
+        "description": {
+          "value": "<p>A worn leather physician's bag: bandages, tinctures, scalpels and a smell of mint and cloves. Quill never lets it out of reach.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-medical-bag\"><p><strong>DM:</strong> False bottom: Investigation DC 15 finds it, or it is found automatically if Quill is searched after the accusation. Detect poison and disease finds a faint trace inside, where an empty vial rolls loose. If he is asked to open it: &quot;Patient records, sir!&quot; A forced search or Sleight of Hand DC 15 finds the will and starts the finale early.</p></section>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "book": "",
+          "page": "",
+          "license": "",
+          "rules": "2024",
+          "revision": 1
+        },
+        "identifier": "medical-bag",
+        "quantity": 1,
+        "weight": {
+          "value": 5,
+          "units": "lb"
+        },
+        "price": {
+          "value": 5,
+          "denomination": "gp"
+        },
+        "rarity": "",
+        "identified": true,
+        "container": null,
+        "capacity": {
+          "count": null,
+          "volume": {
+            "value": null,
+            "units": "cubicFoot"
+          },
+          "weight": {
+            "value": null,
+            "units": "lb"
+          }
+        },
+        "currency": {
+          "pp": 0,
+          "gp": 0,
+          "ep": 0,
+          "sp": 0,
+          "cp": 0
+        },
+        "activities": {}
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "plot": true,
+          "falseBottomDC": 15,
+          "key": "medical-bag",
+          "journalLink": null,
+          "sourceId": "94n4lqEhtAfeAxRN"
+        }
+      },
+      "folder": null,
+      "sort": 10000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ZDkjX7Z2611aYmXT.TCdjcsPl71e0fbKX"
+    },
+    {
+      "_id": "MGl50FQoRC1MeebE",
+      "name": "Silas Ravenmoor's New Will",
+      "type": "loot",
+      "img": "icons/sundries/scrolls/scroll-bound-sealed-black-red.webp",
+      "system": {
+        "description": {
+          "value": "<p>A scroll sealed in black wax with the Ravenmoor raven. Fennick can confirm it as genuine on sight. Its text is clue card C14.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-new-will\"><p><strong>DM:</strong> Hidden in the false bottom of Quill's medical bag. Quill means to burn it in the crypt brazier from round 3 of the showdown. Whether it survives decides the ending.</p></section>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "book": "",
+          "page": "",
+          "license": "",
+          "rules": "2024",
+          "revision": 1
+        },
+        "identifier": "new-will",
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "rarity": "",
+        "identified": true,
+        "container": "TCdjcsPl71e0fbKX",
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "activities": {}
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "plot": true,
+          "burnable": true,
+          "key": "new-will",
+          "journalLink": "C14",
+          "sourceId": "WIOb0Qjonq8GCygD"
+        }
+      },
+      "folder": null,
+      "sort": 11000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ZDkjX7Z2611aYmXT.MGl50FQoRC1MeebE"
+    },
+    {
+      "_id": "3UC7N91RKzAZ94vi",
+      "name": "Empty Vial (frost-rimmed)",
+      "type": "loot",
+      "img": "icons/consumables/potions/vial-cork-empty.webp",
+      "system": {
+        "description": {
+          "value": "<p>A small glass vial with a rime of white frost inside. It smells of mint.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-empty-vial\"><p><strong>DM:</strong> The vial that held the Banshee's Breath. Medicine or alchemist's supplies DC 13 matches it to the tonic glass (C6). There is no usable dose left.</p></section>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "book": "",
+          "page": "",
+          "license": "",
+          "rules": "2024",
+          "revision": 1
+        },
+        "identifier": "empty-vial",
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "rarity": "",
+        "identified": true,
+        "container": "TCdjcsPl71e0fbKX",
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "activities": {}
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "plot": true,
+          "key": "empty-vial",
+          "journalLink": null,
+          "sourceId": "Ot1Qz2iLK7bay8FT"
+        }
+      },
+      "folder": null,
+      "sort": 12000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ZDkjX7Z2611aYmXT.3UC7N91RKzAZ94vi"
+    },
+    {
+      "_id": "Rz3xDKaUF2s9Tbbv",
+      "name": "Pouch of Snuffing Powder",
+      "type": "consumable",
+      "img": "icons/commodities/gems/powder-raw-white.webp",
+      "system": {
+        "description": {
+          "value": "<p>Grey alchemical powder that smells of snow. As a Bonus Action, fling a pinch at a point within 60 feet: every nonmagical flame in a 20-foot-radius Sphere there goes out in a cold rush of air.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-snuffing-powder\"><p><strong>DM:</strong> Loot. In the fight Quill uses his own Snuffing Powder bonus action (2/Day) from his actor sheet; this pouch is what the party finds in his bag afterwards, so set its remaining uses to whatever he has left. The 8:55 pinch in the Great Hall is story, not a spent use.</p></section>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "book": "",
+          "page": "",
+          "license": "",
+          "rules": "2024",
+          "revision": 1
+        },
+        "identifier": "snuffing-powder",
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "rarity": "",
+        "identified": true,
+        "container": "TCdjcsPl71e0fbKX",
+        "type": {
+          "value": "trinket",
+          "subtype": ""
+        },
+        "uses": {
+          "max": "2",
+          "spent": 0,
+          "recovery": [],
+          "autoDestroy": true
+        },
+        "properties": [],
+        "activities": {
+          "HXJalF79Eel6CxRW": {
+            "_id": "HXJalF79Eel6CxRW",
+            "type": "utility",
+            "name": "Snuff the flames",
+            "img": null,
+            "sort": 100000,
+            "activation": {
+              "type": "bonus",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "value": "",
+              "special": "",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "60",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "sphere",
+                "size": "20",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "flags": {
+              "ravenmoor": {
+                "action": "snuffFlames"
+              }
+            },
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            }
+          }
+        }
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "plot": false,
+          "key": "snuffing-powder",
+          "journalLink": null,
+          "sourceId": "BKvYZJRWPDfHjmKQ"
+        }
+      },
+      "folder": null,
+      "sort": 13000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ZDkjX7Z2611aYmXT.Rz3xDKaUF2s9Tbbv"
+    },
+    {
+      "_id": "IFN8TJROVVT4GLYO",
+      "name": "Lockbox Key",
+      "type": "loot",
+      "img": "icons/sundries/misc/key-short-red.webp",
+      "system": {
+        "description": {
+          "value": "<p>An old iron key on a ribbon. It hung on Silas's watch chain at 7:00 and was gone by 9:00.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-lockbox-key\"><p><strong>DM:</strong> Quill took it at 8:35 and plants it in Edric's coat at candle 8. Insight DC 13 senses that Quill is performing.</p></section>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "book": "",
+          "page": "",
+          "license": "",
+          "rules": "2024",
+          "revision": 1
+        },
+        "identifier": "lockbox-key",
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "rarity": "",
+        "identified": true,
+        "container": null,
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "activities": {}
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "plot": true,
+          "key": "lockbox-key",
+          "journalLink": null,
+          "sourceId": "spzdhSkKjcjyrFJ7"
+        }
+      },
+      "folder": null,
+      "sort": 14000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!ZDkjX7Z2611aYmXT.IFN8TJROVVT4GLYO"
+    }
+  ],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "key": "quill",
+      "role": "antagonist",
+      "acSource": "oiled leather coat",
+      "tokenMasked": "modules/ravenmoor-manor/assets/tokens/quill-masked.webp",
+      "tokenUnmasked": "modules/ravenmoor-manor/assets/tokens/quill-unmasked.webp",
+      "lair": {
+        "name": "The Chapel Crypt (midnight bell)",
+        "initiative": 20,
+        "intro": "Quill fights in the chapel crypt beneath Ravenmoor Manor. On initiative count 20 (losing ties), as the midnight bell tolls, the crypt takes one lair action, in order.",
+        "rounds": [
+          {
+            "round": 1,
+            "name": "The dead rise",
+            "text": "Two Ravenmoor skeletons burst from coffins. If the party earned the Why Unmasking Edge, Edric and Bramwell hold the lids shut and nothing happens.",
+            "automation": "Spawn 2 skeletons at the coffin spots unless flag unmaskWhy is set."
+          },
+          {
+            "round": 2,
+            "name": "Candles gutter",
+            "text": "A ghostly wail fills the crypt. Wisdom Saving Throw: DC 13, each player character. Failure: the Frightened condition until the end of its next turn."
+          },
+          {
+            "round": 3,
+            "name": "Green flame",
+            "text": "The brazier flares. Dexterity Saving Throw: DC 13, each creature within 10 feet of the brazier. Failure: 7 (2d6) Fire damage. From now on, if Quill starts his turn next to the brazier holding the will, he can burn it as a Bonus Action.",
+            "automation": "Reveal brazier light + flame tile."
+          },
+          {
+            "round": 4,
+            "name": "The Widow's due",
+            "text": "Elspeth's spirit rises from her tomb (also triggers early when Quill drops below half his Hit Points). Wisdom Saving Throw: DC 15, Quill only. Failure: he has the Frightened condition until the fight ends.",
+            "automation": "Reveal the Lantern Widow token at Elspeth's tomb."
+          }
+        ]
+      },
+      "cornered": {
+        "threshold": 30,
+        "runningLong": 50
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!ZDkjX7Z2611aYmXT"
+}

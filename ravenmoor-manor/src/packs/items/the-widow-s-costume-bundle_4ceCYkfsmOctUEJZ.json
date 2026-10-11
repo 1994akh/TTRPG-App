@@ -1,0 +1,63 @@
+{
+  "_id": "4ceCYkfsmOctUEJZ",
+  "name": "The Widow's Costume Bundle",
+  "type": "loot",
+  "img": "icons/equipment/back/cloak-layered-white.webp",
+  "system": {
+    "description": {
+      "value": "<p>A pale grey gown with a mud-caked hem, a lace veil, gloves crusted with glowing green foxfire paste, a green-glass lantern still warm to the touch, and a flask half full of murky pond water.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-costume-bundle\"><p><strong>DM:</strong> Found in the niche behind Elspeth's tomb (Investigation DC 13). The gloves match the smears on the gallery railing (C4).</p></section>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Death at Ravenmoor Manor",
+      "book": "",
+      "page": "",
+      "license": "",
+      "rules": "2024",
+      "revision": 1
+    },
+    "identifier": "costume-bundle",
+    "quantity": 1,
+    "weight": {
+      "value": 6,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "",
+    "identified": true,
+    "container": null,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "activities": {}
+  },
+  "effects": [],
+  "flags": {
+    "ravenmoor": {
+      "plot": true,
+      "key": "costume-bundle",
+      "journalLink": "C7"
+    }
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!4ceCYkfsmOctUEJZ"
+}

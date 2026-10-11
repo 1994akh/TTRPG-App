@@ -1,0 +1,534 @@
+{
+  "_format": "One entry per map-note locationKey in data/scenes/*.json. Each becomes a page in the 'Ravenmoor Locations' journal, and the matching map note links to that page. 'source' says where the text comes from: 'doc' = the campaign doc (canonical), 'module' = written for this module to give every pinned room something to say; 'mixed' = doc text plus module-written supporting detail; keep 'doc' text verbatim, edit 'module' text freely. 'clues' reference ids in handouts.json. 'readAloud' is boxed text for the DM. Starred bullets (★) are core clues.",
+  "locations": [
+    {
+      "key": "drive",
+      "name": "Drive & Jack-o'-lanterns",
+      "level": "ground",
+      "note": 1,
+      "source": "doc",
+      "readAloud": "Fog rolls off the moor and pools around the iron gates of Ravenmoor Manor. Jack-o'-lanterns line the long drive, each carved with a raven in flight, their candlelight flickering orange through the mist. A stooped man in a patched coat raises a lantern as you approach. \"Guests, is it? Mind the pond,\" he grunts. \"She's restless tonight.\"",
+      "features": [
+        "Act 1, Scene 1 (6:30 PM). Bramwell Hatch meets the party with a lantern and leads them in.",
+        "At candle 11, the lights of Fennick's carriage appear here."
+      ],
+      "clues": [],
+      "npcs": [
+        "bramwell"
+      ],
+      "dmNotes": "The road beyond the gates is flooded; no one can leave or send for help until Fennick crosses at midnight."
+    },
+    {
+      "key": "foyer",
+      "name": "Foyer",
+      "level": "ground",
+      "note": 2,
+      "source": "module",
+      "readAloud": "A black-and-white marble floor, two suits of armor flanking the inner doors, and a fat carved pumpkin grinning from a table draped in red.",
+      "features": [
+        "Mrs. Crane takes the party's coats and asks them to wait upon Lord Silas in his study (doc, Scene 1).",
+        "At midnight Fennick arrives here, dripping, and is shown through to the Great Hall."
+      ],
+      "clues": [],
+      "npcs": [
+        "crane"
+      ],
+      "dmNotes": null
+    },
+    {
+      "key": "great_hall",
+      "name": "Great Hall",
+      "level": "ground",
+      "note": 3,
+      "source": "doc",
+      "readAloud": "The Great Hall glows with a hundred candles. Paper bats hang from the rafters, and a roast boar steams on a table crowded with gourds and apples. Masked guests turn to look at you as you enter. Above, a dark minstrels' gallery overlooks the hall.",
+      "readAloudAlt": {
+        "label": "Scene 4: The Lantern Widow (8:55 PM)",
+        "text": "A cold wind sweeps through the hall. One by one, the candles gutter. High on the minstrels' gallery, a green light blooms. A veiled woman in a pale gown stands there, a green lantern raised in one hand, glowing faintly from within. She lifts a single finger toward the family portraits. Then a gust howls across the hall and every candle dies at once."
+      },
+      "features": [
+        "Act 1, Scene 3 (7:30 PM): the Hallows' feast. Introduce each suspect in one line, in costume.",
+        "7:45: Quill takes a glass of tonic from Mrs. Crane's tray, turns his back to add \"his drops\" and hands it to Silas. Passive Perception 16+ notices the turned back.",
+        "Edric and Silas argue loudly over money; Edric storms off.",
+        "8:25: Silas retires to his study. 8:30: Quill leaves \"to fetch medicines from my room\"; Morwenna, Pip and Bramwell drift away.",
+        "Act 1, Scene 4 (8:55 PM): the Widow appears on the gallery and every candle dies (Lights Out macro). A scream from the servants' stair (Mrs. Crane). Everyone makes a DC 13 Wisdom save against fright; remind players of the Scaredy-Cat Bonus.",
+        "Candle 8: Quill gathers everyone here and accuses Edric with the planted lockbox key.",
+        "Midnight: the accusation (Act 3)."
+      ],
+      "clues": [],
+      "npcs": [
+        "silas",
+        "quill",
+        "morwenna",
+        "edric",
+        "pip",
+        "crane"
+      ],
+      "dmNotes": "The candelabras and the hall fire are in light group 'hall_candles'."
+    },
+    {
+      "key": "long_gallery",
+      "name": "Long Gallery",
+      "level": "ground",
+      "note": 4,
+      "source": "module",
+      "readAloud": "Two centuries of Ravenmoors stare down from gilt frames along a red runner. A suit of armor stands guard at each end, visor down, as if listening.",
+      "features": [
+        "The family portraits the Widow pointed toward hang here. Nothing is hidden behind them; the gesture was theater.",
+        "A fine place for a Scaredy-Cat moment: diving into a suit of armor."
+      ],
+      "clues": [],
+      "npcs": [],
+      "dmNotes": null
+    },
+    {
+      "key": "library",
+      "name": "Library",
+      "level": "ground",
+      "note": 5,
+      "source": "doc",
+      "readAloud": null,
+      "features": [
+        "Old floor plans that show the passage from crypt to study (History or Investigation DC 13).",
+        "★ Silas's journal (Handout 5): his last entry notes that Quill keeps asking about the crypt.",
+        "A portrait of Elspeth holding a lantern, its glass painted green.",
+        "Candle 4 escalation: a crash in the library. Pip is found dazed on the floor, her spell notes gone, the air smelling of mint."
+      ],
+      "clues": [
+        "H5",
+        "C11"
+      ],
+      "npcs": [],
+      "dmNotes": "Run the candle 4 escalation only while Quill is out of the party's sight."
+    },
+    {
+      "key": "stair_hall",
+      "name": "Stair Hall",
+      "level": "ground",
+      "note": 6,
+      "source": "module",
+      "readAloud": "A broad oak stair climbs into shadow. Every third step creaks, and the house seems to hold its breath between them.",
+      "features": [
+        "The main stair to the upper landing (level change region)."
+      ],
+      "clues": [],
+      "npcs": [],
+      "dmNotes": null
+    },
+    {
+      "key": "drawing_room",
+      "name": "Drawing Room",
+      "level": "ground",
+      "note": 7,
+      "source": "module",
+      "readAloud": "A low fire, two velvet sofas and a card table abandoned mid-game. It is the warmest room in the house and the only quiet one.",
+      "features": [
+        "A natural place to question a suspect privately. Use it to rotate the spotlight evenly through all six."
+      ],
+      "clues": [],
+      "npcs": [],
+      "dmNotes": null
+    },
+    {
+      "key": "office",
+      "name": "Housekeeper's Office",
+      "level": "ground",
+      "note": 8,
+      "source": "module",
+      "readAloud": "Ledgers in perfect rows, a board of labeled hooks for the household keys, and a single candle burned exactly halfway down.",
+      "features": [
+        "Every hook on the key board is filled. Mrs. Crane holds keys to every lock in the house except Silas's lockbox.",
+        "Supporting detail: a card in her neat hand reads \"Heart tonic: hawthorn, honey, water. The doctor adds his own drops.\""
+      ],
+      "clues": [],
+      "npcs": [
+        "crane"
+      ],
+      "dmNotes": "Supports Mrs. Crane's testimony; not a numbered clue."
+    },
+    {
+      "key": "kitchen",
+      "name": "Kitchen (cellar stairs)",
+      "level": "ground",
+      "note": 9,
+      "source": "module",
+      "readAloud": "Copper pots, a banked hearth and the bones of the roast boar. Stone steps in the corner lead down into cold dark.",
+      "features": [
+        "Stairs down to the wine cellar (level change region).",
+        "The hidden stair runs inside the thick east wall here. There is no opening on this floor."
+      ],
+      "clues": [],
+      "npcs": [],
+      "dmNotes": "Map note 17 (GM only) marks the hidden shaft inside the wall."
+    },
+    {
+      "key": "scullery",
+      "name": "Scullery",
+      "level": "ground",
+      "note": 10,
+      "source": "doc",
+      "readAloud": null,
+      "features": [
+        "★ Silas's unwashed tonic glass. The residue is frosted and smells of mint. Medicine or alchemist's supplies DC 13 identifies Banshee's Breath."
+      ],
+      "clues": [
+        "C6"
+      ],
+      "npcs": [],
+      "dmNotes": null
+    },
+    {
+      "key": "east_corridor",
+      "name": "East Corridor",
+      "level": "ground",
+      "note": 11,
+      "source": "module",
+      "readAloud": "A narrow servants' corridor linking the kitchens to the chapel. The runner is damp in places.",
+      "features": [
+        "Drips of pond water continue from the servants' stair toward the chapel door (follows C5)."
+      ],
+      "clues": [],
+      "npcs": [],
+      "dmNotes": null
+    },
+    {
+      "key": "servants_stair",
+      "name": "Servants' Stair",
+      "level": "ground",
+      "note": 12,
+      "source": "doc",
+      "readAloud": null,
+      "features": [
+        "★ A muddy print of a buckled boot on one step, and drips of pond water leading down toward the chapel corridor.",
+        "8:57: the ghost brushed past Mrs. Crane here; she screamed."
+      ],
+      "clues": [
+        "C5"
+      ],
+      "npcs": [],
+      "dmNotes": "Reveal the boot-print tile from the start of Act 2."
+    },
+    {
+      "key": "chapel",
+      "name": "Chapel (crypt stairs)",
+      "level": "ground",
+      "note": 13,
+      "source": "module",
+      "readAloud": "Rows of dark pews face a plain stone altar and three tall candles. Behind the altar, steps drop away into the family crypt, breathing cold.",
+      "features": [
+        "8:45: a green glow moved past these windows as Quill dressed below (seen by Morwenna from the stable yard).",
+        "Candle 11: Quill excuses himself \"to say a prayer for Silas in the chapel\". He is off to light the brazier.",
+        "Stairs down to the crypt (level change region)."
+      ],
+      "clues": [],
+      "npcs": [],
+      "dmNotes": "Stuck ladder rung 3: green light flickers in the chapel window."
+    },
+    {
+      "key": "stables",
+      "name": "Stables",
+      "level": "ground",
+      "note": 14,
+      "source": "doc",
+      "readAloud": null,
+      "features": [
+        "Red herring: Morwenna's carriage, packed trunk and a love letter from \"R.\""
+      ],
+      "clues": [
+        "C12"
+      ],
+      "npcs": [
+        "morwenna"
+      ],
+      "dmNotes": "Morwenna spent 8:30-9:00 here loading the carriage."
+    },
+    {
+      "key": "pond",
+      "name": "Pond & Elspeth's Memorial",
+      "level": "ground",
+      "note": 15,
+      "source": "doc",
+      "readAloud": null,
+      "readAloudAlt": {
+        "label": "Epilogue: the real ghost",
+        "text": "As you step out into the grey before dawn, Bramwell's warding lanterns around the pond flicker, one by one, from orange to green. On the still water stands a pale woman in a veil, holding a lantern of green glass. She bows her head to you, once. Then the fog closes, and she is gone."
+      },
+      "features": [
+        "Bramwell's warding lanterns and Elspeth's memorial stone.",
+        "Bramwell spent 8:30-9:00 here lighting the lanterns. Helping him relight them unlocks his testimony.",
+        "Epilogue: on the memorial stone, the party finds Elspeth's old green-glass lantern, dry and warm. It works as a lantern of revealing."
+      ],
+      "clues": [],
+      "npcs": [
+        "bramwell",
+        "widow"
+      ],
+      "dmNotes": "The six warding lanterns are lights labelled 'Warding lantern'; the epilogue macro tints them green."
+    },
+    {
+      "key": "pumpkin_patch",
+      "name": "Pumpkin Patch",
+      "level": "ground",
+      "note": 16,
+      "source": "doc",
+      "readAloud": null,
+      "features": [
+        "★ Two empty scarecrow posts, their straw scattered toward the chapel."
+      ],
+      "clues": [
+        "C9"
+      ],
+      "npcs": [],
+      "dmNotes": "One scarecrow still stands on its post. It is just a scarecrow."
+    },
+    {
+      "key": "landing",
+      "name": "Upper Landing",
+      "level": "upper",
+      "note": 1,
+      "source": "module",
+      "readAloud": "The main stair opens onto a long landing hung with a single faded tapestry. One candle burns at the top of the stairs.",
+      "features": [
+        "Doors to Silas's bedchamber and the minstrels' gallery."
+      ],
+      "clues": [],
+      "npcs": [],
+      "dmNotes": null
+    },
+    {
+      "key": "silas_room",
+      "name": "Silas's Bedchamber",
+      "level": "upper",
+      "note": 2,
+      "source": "module",
+      "readAloud": "A great curtained bed, a velvet robe thrown over a chair, and the smell of liniment. The bed has not been slept in.",
+      "features": [
+        "Silas did not come here after the feast; he went straight to his study at 8:25."
+      ],
+      "clues": [],
+      "npcs": [],
+      "dmNotes": null
+    },
+    {
+      "key": "quill_room",
+      "name": "Dr. Quill's Guest Room",
+      "level": "upper",
+      "note": 3,
+      "source": "doc",
+      "readAloud": null,
+      "features": [
+        "The bed is still unturned, and the fireplace has been cold all night.",
+        "★ An alchemy notebook (Handout 4) with a recipe for Banshee's Breath (Investigation DC 13).",
+        "A stick of green sealing wax that matches the seal on Edric's debt letter.",
+        "8:45: Mrs. Crane found this room dark and empty. At candle 4 Quill claims he was \"resting in his room\"; it is still dark."
+      ],
+      "clues": [
+        "H4",
+        "C10"
+      ],
+      "npcs": [],
+      "dmNotes": null
+    },
+    {
+      "key": "pip_room",
+      "name": "Pip's Room",
+      "level": "upper",
+      "note": 4,
+      "source": "mixed",
+      "readAloud": null,
+      "features": [
+        "Pip's spell notes include sketches of a veiled lady with a lantern (C13).",
+        "An ink-stained witch costume lies crumpled by the bed: she spent 8:30-9:00 changing out of it (true)."
+      ],
+      "clues": [
+        "C13"
+      ],
+      "npcs": [
+        "pip"
+      ],
+      "dmNotes": "The notes' latest entry is a week old. Tonight's ghost was not hers."
+    },
+    {
+      "key": "morwenna_room",
+      "name": "Lady Morwenna's Room",
+      "level": "upper",
+      "note": 5,
+      "source": "module",
+      "readAloud": "Black silk, a vanity swept almost bare, and a faint perfume of violets. The wardrobe stands half empty.",
+      "features": [
+        "Her claimed alibi is \"in my room with a headache\". The bed is untouched and her trunk is gone (it is in the carriage in the stables)."
+      ],
+      "clues": [],
+      "npcs": [
+        "morwenna"
+      ],
+      "dmNotes": "Points to her real secret, not to the murder."
+    },
+    {
+      "key": "gallery",
+      "name": "Minstrels' Gallery",
+      "level": "upper",
+      "note": 6,
+      "source": "doc",
+      "readAloud": null,
+      "features": [
+        "★ Glowing green smears on the railing. Nature DC 12 identifies foxfire, a glowing fungus paste, not magic.",
+        "Detect magic shows no magic at all: no illusion, no necromancy. Whatever snuffed the candles was not a spell.",
+        "8:55: the Lantern Widow appeared here. By the time anyone reaches the gallery, it is empty."
+      ],
+      "clues": [
+        "C4"
+      ],
+      "npcs": [],
+      "dmNotes": "Reveal the foxfire tile right after the ghost scene."
+    },
+    {
+      "key": "east_corridor_up",
+      "name": "East Corridor (upper)",
+      "level": "upper",
+      "note": 8,
+      "source": "module",
+      "readAloud": "A plain corridor in the old servants' wing, running past the linen closet to the study and Mrs. Crane's room.",
+      "features": [
+        "Connects the gallery to the study, Mrs. Crane's room, the linen closet and the head of the servants' stair.",
+        "From Scene 5 on, the study door hangs from one hinge where it was broken in."
+      ],
+      "clues": [],
+      "npcs": [],
+      "dmNotes": "If the party posted a guard on the study door in Act 1, it stood here; no one passed it."
+    },
+    {
+      "key": "study",
+      "name": "Study (the crime scene)",
+      "level": "upper",
+      "note": 9,
+      "source": "doc",
+      "readAloud": "Lord Silas Ravenmoor is a thin old man wrapped in a velvet robe, leaning on a raven-headed cane. Behind him, a fire crackles beneath tall bookshelves. On his desk sits a small iron lockbox and a vase of white lilies.",
+      "readAloudAlt": {
+        "label": "Scene 5: The body (9:00 PM)",
+        "text": "Silas sits rigid in his chair, eyes wide, mouth open in a silent scream. Frost glitters on his fingertips. The window hangs open to the night, and wet footprints trail across the rug from the sill to the desk. The lockbox stands open and empty, and its key is gone from Silas's watch chain. White lilies lie scattered across the floor."
+      },
+      "features": [
+        "Scene 2 (7:00 PM), what the party sees while Silas is alive: the window is latched from inside and thick ivy grows undisturbed across the outer sill; the lilies are already on the desk (Mrs. Crane put them there); the lockbox key hangs on Silas's watch chain; one bookcase stands slightly away from the wall (passive Perception 15 notices a cold draft).",
+        "★ Poison, not fright: frost on the fingertips and blue-tinged lips in a warm room point to a cold-acting poison (Medicine DC 12).",
+        "★ Staged window: the wet footprints run from the sill to the desk but never back, and the ivy outside is undisturbed. The window was opened from inside (Investigation DC 12).",
+        "★ The bookcase: a pale scuff arc on the floorboards and a cold draft. Pulling Hallowed Rites of the Ravenmoor Line swings the case open (Investigation DC 14, or passive Perception 15).",
+        "Missing key: the lockbox key is gone from Silas's watch chain. Whoever opened the box took it, and Quill plants it in Edric's coat at candle 8.",
+        "Red herring: the scattered lilies (Mrs. Crane's)."
+      ],
+      "clues": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "npcs": [
+        "silas"
+      ],
+      "dmNotes": "The study door is locked from inside in Scene 5. Swap Silas's token for the body token (Dead status) at Scene 5 and reveal the footprints and lilies tiles. Stuck ladder rung 3: the bookcase creaks open by itself in a cold draft (reveal the secret door)."
+    },
+    {
+      "key": "crane_room",
+      "name": "Mrs. Crane's Room",
+      "level": "upper",
+      "note": 10,
+      "source": "module",
+      "readAloud": "A narrow iron bed made with military corners. On the shelf, a pressed white lily lies beside a small portrait of a smiling young woman holding a lantern.",
+      "features": [
+        "The portrait is Elspeth. Supports Mrs. Crane's secret: the lilies are her yearly tribute."
+      ],
+      "clues": [],
+      "npcs": [
+        "crane"
+      ],
+      "dmNotes": null
+    },
+    {
+      "key": "servants_stair_up",
+      "name": "Servants' Stair (head)",
+      "level": "upper",
+      "note": 11,
+      "source": "module",
+      "readAloud": "The top of the steep servants' stair, worn hollow in the middle by forty years of Mrs. Crane.",
+      "features": [
+        "The route Quill took up to the gallery in costume and back down past Mrs. Crane at 8:57 (level change region)."
+      ],
+      "clues": [],
+      "npcs": [],
+      "dmNotes": "The boot print (C5) is halfway down, on the ground-floor map."
+    },
+    {
+      "key": "linen",
+      "name": "Linen Closet",
+      "level": "upper",
+      "note": 12,
+      "source": "module",
+      "readAloud": "Shelves of folded sheets that smell of lavender. Nothing here but linen, and perhaps a hiding player.",
+      "features": [],
+      "clues": [],
+      "npcs": [],
+      "dmNotes": null
+    },
+    {
+      "key": "cellar",
+      "name": "Wine Cellar",
+      "level": "below",
+      "note": 1,
+      "source": "doc",
+      "readAloud": null,
+      "features": [
+        "Edric's empty bottles and the old bricked-up arch. With an ear to the bricks, you can hear water dripping in the crypt beyond.",
+        "Edric spent 8:30-9:00 here alone, drinking (true). At about 8:40 he heard footsteps and dripping behind the arch."
+      ],
+      "clues": [],
+      "npcs": [
+        "edric"
+      ],
+      "dmNotes": "After the fight, Quill waits here under guard for the dawn constable."
+    },
+    {
+      "key": "passage",
+      "name": "Secret Passage",
+      "level": "below",
+      "note": 3,
+      "source": "doc",
+      "readAloud": null,
+      "features": [
+        "A narrow, damp stair spiraling down to the chapel crypt.",
+        "★ Fresh candle wax on the steps, green glowing smudges on the walls, and a dropped sprig of frost-mint."
+      ],
+      "clues": [],
+      "npcs": [],
+      "dmNotes": "Joins the study (hidden stair) to the crypt through the secret door behind Elspeth's tomb. The bricked-up arch to the cellar blocks movement but passes sound."
+    },
+    {
+      "key": "crypt",
+      "name": "Chapel Crypt",
+      "level": "below",
+      "note": 4,
+      "source": "doc",
+      "readAloud": null,
+      "readAloudAlt": {
+        "label": "The showdown (midnight)",
+        "text": "Green fire roars in the brazier. Dr. Quill stands inside a chalk circle, his beaked mask gleaming, the will held over the flames. \"Ravenmoor's dead belong to me tonight.\" Coffin lids grind open. In the corner, two scarecrows lift their carved pumpkin heads, candlelight blazing behind their grins."
+      },
+      "features": [
+        "★ The costume: in an empty wall niche behind Elspeth's tomb, a bundle holding a pale gown, a veil, gloves crusted with foxfire paste, a green-glass lantern and a flask of pond water (Investigation DC 13).",
+        "★ Moonsilver: a silver-blue glint in a crack in the crypt floor (Arcana or Nature DC 14). Someone has been chipping at it.",
+        "Two pumpkin-headed scarecrows stand oddly in the corner, and a chalk circle is half-hidden under a tarp. Quill has prepared for trouble; this foreshadows the finale.",
+        "The Hallows' brazier stands ready to be lit at midnight.",
+        "Showdown terrain: about 50 by 40 feet, dim light. Stone coffins give half cover. Two iron candelabras can be knocked over (an action) to set a 10-foot square ablaze for 2d6 fire damage to anything inside."
+      ],
+      "clues": [
+        "C7",
+        "C8"
+      ],
+      "npcs": [
+        "quill",
+        "scarecrow",
+        "skeleton",
+        "widow"
+      ],
+      "dmNotes": "Detect magic: the chalk circle and the two scarecrows glow with necromancy. Divine Sense: desecrated ground at the chalk circle. The Widow rises from Elspeth's tomb in round 4 (or when Quill drops below half HP). The map art shows the chalk circle; describe it half-hidden under a tarp until someone lifts it. The two scarecrow tokens stand in the south-east corner in plain sight all night (False Appearance); Quill and the skeletons stay hidden until the showdown."
+    }
+  ]
+}

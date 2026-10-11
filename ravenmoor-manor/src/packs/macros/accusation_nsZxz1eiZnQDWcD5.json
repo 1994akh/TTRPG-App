@@ -1,0 +1,31 @@
+{
+  "_id": "nsZxz1eiZnQDWcD5",
+  "name": "Accusation",
+  "type": "script",
+  "img": "icons/skills/social/diplomacy-writing-letter.webp",
+  "scope": "global",
+  "command": "game.modules.get(\"ravenmoor-manor\").api.accusation();",
+  "folder": null,
+  "sort": 16000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "fn": "accusation",
+      "slot": null
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": null,
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!macros!nsZxz1eiZnQDWcD5"
+}

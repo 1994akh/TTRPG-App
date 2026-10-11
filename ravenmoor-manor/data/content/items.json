@@ -1,0 +1,428 @@
+{
+  "_format": "Items for the 'Ravenmoor Items' compendium. 'type' is the dnd5e Item type. 'system' hints use dnd5e field names where they are stable (price, weight, rarity, uses); map the rest to the dnd5e 6.x data model at build time. 'activities' describe what to build as dnd5e Activities. 'sourceCompendium' means: try to clone this item by name from the dnd5e system compendiums first, and fall back to the description given here. Description text is player-facing unless the field is named dmNote. 'img' paths are suggestions from Foundry's core icon library: verify each exists in the installed Foundry (Data/icons is browsable in the File Picker) and fall back to icons/svg/item-bag.svg.",
+  "items": [
+    {
+      "key": "new-will",
+      "name": "Silas Ravenmoor's New Will",
+      "type": "loot",
+      "img": "icons/sundries/scrolls/scroll-bound-sealed-black.webp",
+      "system": {
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "quantity": 1
+      },
+      "description": "A scroll sealed in black wax with the Ravenmoor raven. Fennick can confirm it as genuine on sight. Its text is clue card C14.",
+      "journalLink": "C14",
+      "dmNote": "Hidden in the false bottom of Quill's medical bag. Quill means to burn it in the crypt brazier from round 3 of the showdown. Whether it survives decides the ending.",
+      "flags": {
+        "ravenmoor": {
+          "plot": true,
+          "burnable": true
+        }
+      }
+    },
+    {
+      "key": "debt-letter",
+      "name": "Edric's Debt Letter",
+      "type": "loot",
+      "img": "icons/sundries/documents/envelope-sealed-green.webp",
+      "system": {
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "quantity": 1
+      },
+      "description": "An envelope sealed in green wax, stamped with a mortar and pestle. Its text is Handout 3.",
+      "journalLink": "H3",
+      "dmNote": "Starts in Edric's inventory. The seal matches Quill's signet ring and the green wax in his room (C10).",
+      "flags": {
+        "ravenmoor": {
+          "plot": true
+        }
+      }
+    },
+    {
+      "key": "lockbox",
+      "name": "Silas's Iron Lockbox",
+      "type": "container",
+      "img": "icons/containers/chest/chest-reinforced-steel-black.webp",
+      "system": {
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 4,
+          "units": "lb"
+        },
+        "quantity": 1
+      },
+      "description": "A small iron lockbox from Silas's desk. Shown open in Scene 2 with the sealed will inside; found open and empty in Scene 5.",
+      "dmNote": "Scenery and a prop; it does not need to be picked up.",
+      "flags": {
+        "ravenmoor": {
+          "plot": true
+        }
+      }
+    },
+    {
+      "key": "lockbox-key",
+      "name": "Lockbox Key",
+      "type": "loot",
+      "img": "icons/sundries/misc/key-ornate-iron-black.webp",
+      "system": {
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "quantity": 1
+      },
+      "description": "An old iron key on a ribbon. It hung on Silas's watch chain at 7:00 and was gone by 9:00.",
+      "dmNote": "Quill took it at 8:35 and plants it in Edric's coat at candle 8. Insight DC 13 senses that Quill is performing.",
+      "flags": {
+        "ravenmoor": {
+          "plot": true
+        }
+      }
+    },
+    {
+      "key": "medical-bag",
+      "name": "Dr. Quill's Medical Bag",
+      "type": "container",
+      "img": "icons/containers/bags/case-leather-tan.webp",
+      "system": {
+        "price": {
+          "value": 5,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 5,
+          "units": "lb"
+        },
+        "quantity": 1
+      },
+      "description": "A worn leather physician's bag: bandages, tinctures, scalpels and a smell of mint and cloves. Quill never lets it out of reach.",
+      "contents": [
+        "new-will",
+        "empty-vial",
+        "snuffing-powder"
+      ],
+      "dmNote": "False bottom: Investigation DC 15 finds it, or it is found automatically if Quill is searched after the accusation. Detect poison and disease finds a faint trace inside, where an empty vial rolls loose. If he is asked to open it: \"Patient records, sir!\" A forced search or Sleight of Hand DC 15 finds the will and starts the finale early.",
+      "flags": {
+        "ravenmoor": {
+          "plot": true,
+          "falseBottomDC": 15
+        }
+      }
+    },
+    {
+      "key": "empty-vial",
+      "name": "Empty Vial (frost-rimmed)",
+      "type": "loot",
+      "img": "icons/consumables/potions/vial-cork-empty.webp",
+      "system": {
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "quantity": 1
+      },
+      "description": "A small glass vial with a rime of white frost inside. It smells of mint.",
+      "dmNote": "The vial that held the Banshee's Breath. Medicine or alchemist's supplies DC 13 matches it to the tonic glass (C6). There is no usable dose left.",
+      "flags": {
+        "ravenmoor": {
+          "plot": true
+        }
+      }
+    },
+    {
+      "key": "snuffing-powder",
+      "name": "Pouch of Snuffing Powder",
+      "type": "consumable",
+      "img": "icons/consumables/potions/bottle-round-corked-grey.webp",
+      "system": {
+        "type": {
+          "value": "trinket"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "quantity": 1,
+        "uses": {
+          "max": "2",
+          "spent": 0,
+          "recovery": [],
+          "autoDestroy": true
+        }
+      },
+      "description": "Grey alchemical powder that smells of snow. As a Bonus Action, fling a pinch at a point within 60 feet: every nonmagical flame in a 20-foot-radius Sphere there goes out in a cold rush of air.",
+      "activities": [
+        {
+          "type": "utility",
+          "activation": "bonus",
+          "range": 60,
+          "target": {
+            "template": "sphere",
+            "size": 20
+          },
+          "consumes": "itemUses:1",
+          "macro": "ravenmoor.snuffFlames"
+        }
+      ],
+      "dmNote": "Loot. In the fight Quill uses his own Snuffing Powder bonus action (2/Day) from his actor sheet; this pouch is what the party finds in his bag afterwards, so set its remaining uses to whatever he has left. The 8:55 pinch in the Great Hall is story, not a spent use.",
+      "flags": {
+        "ravenmoor": {
+          "plot": false
+        }
+      }
+    },
+    {
+      "key": "costume-bundle",
+      "name": "The Widow's Costume Bundle",
+      "type": "loot",
+      "img": "icons/equipment/back/cloak-hooded-grey.webp",
+      "system": {
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 6,
+          "units": "lb"
+        },
+        "quantity": 1
+      },
+      "description": "A pale grey gown with a mud-caked hem, a lace veil, gloves crusted with glowing green foxfire paste, a green-glass lantern still warm to the touch, and a flask half full of murky pond water.",
+      "journalLink": "C7",
+      "dmNote": "Found in the niche behind Elspeth's tomb (Investigation DC 13). The gloves match the smears on the gallery railing (C4).",
+      "flags": {
+        "ravenmoor": {
+          "plot": true
+        }
+      }
+    },
+    {
+      "key": "moonsilver-chip",
+      "name": "Chip of Moonsilver",
+      "type": "loot",
+      "img": "icons/commodities/stone/ore-chunk-blue.webp",
+      "system": {
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 0.1,
+          "units": "lb"
+        },
+        "quantity": 1
+      },
+      "description": "A sliver of silver-blue metal that seems to hold the lantern light a moment after it moves away.",
+      "journalLink": "C8",
+      "dmNote": "The motive. The campaign doc gives it no price; if a player pockets one, it is worth whatever the table finds fun, and the new will says the vein belongs to Hollow Brook.",
+      "flags": {
+        "ravenmoor": {
+          "plot": true
+        }
+      }
+    },
+    {
+      "key": "raven-cane",
+      "name": "Raven-Headed Cane",
+      "type": "weapon",
+      "baseItem": "club",
+      "img": "icons/weapons/staves/staff-simple-carved.webp",
+      "system": {
+        "type": {
+          "value": "simpleM",
+          "baseItem": "club"
+        },
+        "price": {
+          "value": 50,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 2,
+          "units": "lb"
+        },
+        "quantity": 1,
+        "properties": [
+          "lgt"
+        ],
+        "damage": {
+          "base": {
+            "number": 1,
+            "denomination": 4,
+            "types": [
+              "bludgeoning"
+            ]
+          }
+        },
+        "mastery": "slow"
+      },
+      "description": "Lord Silas's black walking stick, topped with a silver raven. \"To whoever unmasks my killer, should it come to that: my cane, and my thanks.\" A fine walking stick worth 50 gp.",
+      "dmNote": "Reward from the new will, if it survives. Uses the 2024 club statistics (Light; mastery Slow).",
+      "flags": {
+        "ravenmoor": {
+          "reward": true
+        }
+      }
+    },
+    {
+      "key": "elspeths-lantern",
+      "name": "Elspeth's Lantern (Lantern of Revealing)",
+      "type": "equipment",
+      "sourceCompendium": {
+        "name": "Lantern of Revealing",
+        "rename": "Elspeth's Lantern (Lantern of Revealing)"
+      },
+      "img": "icons/sundries/lights/lantern-iron-green.webp",
+      "system": {
+        "type": {
+          "value": "trinket"
+        },
+        "rarity": "uncommon",
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 2,
+          "units": "lb"
+        },
+        "quantity": 1
+      },
+      "description": "Elspeth's old lantern of green glass, found dry and warm on her memorial stone at dawn. Fallback rules text if no compendium copy is found: while lit, this hooded lantern burns for 6 hours on 1 pint of oil, shedding Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. Invisible creatures and objects are visible while in the lantern's Bright Light. You can take an action to lower the hood, reducing the light to Dim Light in a 5-foot radius.",
+      "light": {
+        "bright": 30,
+        "dim": 60,
+        "color": "#38ff8c",
+        "alpha": 0.3,
+        "animation": "ghost"
+      },
+      "dmNote": "Epilogue reward for every ending. Prefer the dnd5e compendium copy and only override name, image and light colour.",
+      "flags": {
+        "ravenmoor": {
+          "reward": true
+        }
+      }
+    },
+    {
+      "key": "counter-herb",
+      "name": "Sprig of Counter-Herb",
+      "type": "consumable",
+      "img": "icons/consumables/plants/leaf-herb-green.webp",
+      "system": {
+        "type": {
+          "value": "food"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "quantity": 1,
+        "uses": {
+          "max": "1",
+          "spent": 0,
+          "autoDestroy": false
+        }
+      },
+      "description": "A bitter sprig Pip presses into your hand before the fight. Chew it and you have Advantage on saving throws against Banshee's Breath until the fight ends.",
+      "effects": [
+        {
+          "name": "Counter-Herb",
+          "transfer": false,
+          "duration": "combat",
+          "changes": [],
+          "note": "dnd5e has no stock key for Advantage on saves against one named effect. Implement as a status with this description and have the module's chat-card hook roll Banshee's Breath saves with Advantage for actors that carry it."
+        }
+      ],
+      "dmNote": "The How Unmasking Edge. The 'Grant Unmasking Edges' macro hands one to every player character.",
+      "flags": {
+        "ravenmoor": {
+          "edge": "how"
+        }
+      }
+    },
+    {
+      "key": "treat-candy",
+      "name": "Treat Bag Candy",
+      "type": "consumable",
+      "img": "icons/consumables/candy/candy-wrapped-pink.webp",
+      "system": {
+        "type": {
+          "value": "food"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "quantity": 2,
+        "uses": {
+          "max": "1",
+          "spent": 0,
+          "autoDestroy": true
+        }
+      },
+      "description": "House rule 4. Eat one to reroll a d20, to add 1d4 to a roll after seeing it, or to ask the DM one yes-or-no question about the case.",
+      "activities": [
+        {
+          "type": "utility",
+          "name": "Reroll a d20",
+          "consumes": "itemQuantity:1",
+          "macro": "ravenmoor.treatReroll"
+        },
+        {
+          "type": "utility",
+          "name": "Add 1d4",
+          "roll": "1d4",
+          "consumes": "itemQuantity:1"
+        },
+        {
+          "type": "utility",
+          "name": "Ask a yes-or-no question",
+          "consumes": "itemQuantity:1",
+          "macro": "ravenmoor.treatQuestion"
+        }
+      ],
+      "dmNote": "Every player character starts with 2. The DM awards more for great roleplay, sharp deductions, excellent screams and the Scaredy-Cat Bonus.",
+      "flags": {
+        "ravenmoor": {
+          "treat": true
+        }
+      }
+    }
+  ]
+}

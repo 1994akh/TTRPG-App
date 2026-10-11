@@ -1,0 +1,172 @@
+{
+  "_id": "Dr35PKhQYZJbJTNE",
+  "name": "Elspeth's Lantern (Lantern of Revealing)",
+  "type": "equipment",
+  "img": "icons/sundries/lights/lantern-iron-lit-yellow.webp",
+  "system": {
+    "activities": {
+      "L8hUSl7lSC1PEqP4": {
+        "type": "utility",
+        "name": "Consume Oil",
+        "_id": "L8hUSl7lSC1PEqP4",
+        "sort": 0,
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "override": false,
+          "units": "self",
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": "radius",
+            "size": "30",
+            "count": ""
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": ""
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "roll": {
+          "prompt": false,
+          "visible": false,
+          "name": "",
+          "formula": ""
+        },
+        "img": "",
+        "appliedEffects": []
+      }
+    },
+    "uses": {
+      "spent": 0,
+      "recovery": [],
+      "max": "1"
+    },
+    "description": {
+      "value": "<p><em>Elspeth's old lantern of green glass, found dry and warm on her memorial stone at dawn.</em></p><p><em>Wondrous Item, Uncommon</em></p><p>While lit, this hooded lantern burns for 6 hours on 1 pint of oil, shedding Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. &amp;Reference[Invisible apply=false] creatures and objects are visible as long as they are in the lantern's Bright Light. You can take a Utilize action to lower the hood, reducing the lantern's light to Dim Light in a 5-foot radius.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-elspeths-lantern\"><p><strong>DM:</strong> Epilogue reward for every ending. Prefer the dnd5e compendium copy and only override name, image and light colour.</p></section>",
+      "chat": ""
+    },
+    "identifier": "elspeths-lantern",
+    "source": {
+      "revision": 1,
+      "rules": "2024",
+      "book": "",
+      "license": "CC-BY-4.0"
+    },
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 400,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "cover": null,
+    "crewed": false,
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "wondrous",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null
+  },
+  "effects": [],
+  "flags": {
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "ravenmoor": {
+      "reward": true,
+      "key": "elspeths-lantern",
+      "light": {
+        "bright": 30,
+        "dim": 60,
+        "color": "#38ff8c",
+        "alpha": 0.3,
+        "animation": "ghost"
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": "Compendium.dnd5e.equipment24.Item.dmgLanternOfReve",
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "sort": 19700000,
+  "ownership": {
+    "default": 0
+  },
+  "folder": null,
+  "_key": "!items!Dr35PKhQYZJbJTNE"
+}

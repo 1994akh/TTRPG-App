@@ -1,0 +1,461 @@
+{
+  "_id": "64tWZkvT3Aq5BPNj",
+  "name": "Bramwell Hatch",
+  "type": "npc",
+  "img": "modules/ravenmoor-manor/assets/tokens/bramwell.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 15,
+        "proficient": 0
+      },
+      "dex": {
+        "value": 10,
+        "proficient": 0
+      },
+      "con": {
+        "value": 14,
+        "proficient": 0
+      },
+      "int": {
+        "value": 9,
+        "proficient": 0
+      },
+      "wis": {
+        "value": 13,
+        "proficient": 0
+      },
+      "cha": {
+        "value": 8,
+        "proficient": 0
+      }
+    },
+    "skills": {
+      "ath": {
+        "value": 1
+      },
+      "prc": {
+        "value": 1
+      },
+      "sur": {
+        "value": 1
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calc": "natural",
+        "flat": 11
+      },
+      "hp": {
+        "value": 32,
+        "max": 32,
+        "temp": null,
+        "tempmax": null,
+        "formula": "5d8 + 10"
+      },
+      "init": {
+        "ability": "",
+        "roll": {
+          "bonus": "",
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "movement": {
+        "walk": "30",
+        "fly": "",
+        "hover": false,
+        "units": null
+      },
+      "senses": {
+        "ranges": {},
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": ""
+    },
+    "details": {
+      "biography": {
+        "value": "<p><strong>Look.</strong> Groundskeeper and gravedigger, 60s. Stooped, mud to the knees, smells of pond water and pipe smoke. Scarecrow-patched coat, lantern, a shovel he never puts down.</p><p><strong>Wants.</strong> Elspeth to rest in peace.</p><p><strong>Secret.</strong> Every Hallows' Eve he lights warding lanterns around the pond; he was there 8:30-9:00. Decades ago he helped brick up part of an old passage under the house.</p><p><strong>Knows.</strong> The passage runs from the chapel crypt up to the master's study, behind the bookshelves. Two scarecrows are missing (C9). Shares it if the party helps with his lanterns, respects the legend, or wins Insight/Persuasion DC 13.</p><p><strong>Plays as.</strong> Gruff and slow, spits between sentences, lowers his voice at any mention of the pond. With the Why Edge he and Edric hold the coffin lids shut.</p><p><strong>Lines.</strong></p><ul><li>“Mind the pond. She's restless tonight.”</li><li>“She walks every Hallows' Eve. Never hurt a soul. Not till now, they'll say. They'll be wrong.”</li></ul>",
+        "public": ""
+      },
+      "alignment": "Neutral Good",
+      "type": {
+        "value": "humanoid",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 0.5,
+      "habitat": {
+        "value": [],
+        "custom": ""
+      },
+      "treasure": {
+        "value": []
+      }
+    },
+    "resources": {
+      "legact": {
+        "max": 0,
+        "spent": 0
+      },
+      "legres": {
+        "max": 0,
+        "spent": 0
+      },
+      "lair": {
+        "value": false,
+        "initiative": null,
+        "inside": false
+      }
+    },
+    "source": {
+      "custom": "Death at Ravenmoor Manor",
+      "rules": "2024",
+      "revision": 1,
+      "book": "",
+      "page": "",
+      "license": ""
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common"
+        ],
+        "custom": ""
+      },
+      "important": false
+    }
+  },
+  "prototypeToken": {
+    "name": "Bramwell Hatch",
+    "displayName": 30,
+    "displayBars": 20,
+    "actorLink": false,
+    "appendNumber": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/ravenmoor-manor/assets/tokens/bramwell.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "disposition": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {}
+  },
+  "items": [
+    {
+      "_id": "AofX8m5XEVRUpwa2",
+      "name": "Graveside Knowledge",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/svg/activity/utility.svg",
+      "system": {
+        "description": {
+          "value": "<p>Bramwell has Advantage on ability checks to find hidden doors, passages and graves on the Ravenmoor grounds.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "graveside-knowledge",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "passive",
+          "automation": null
+        }
+      },
+      "sort": 1000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!64tWZkvT3Aq5BPNj.AofX8m5XEVRUpwa2"
+    },
+    {
+      "_id": "dO2Dr1uU9uuUbkxa",
+      "name": "Shovel",
+      "type": "weapon",
+      "img": "systems/dnd5e/icons/svg/activity/attack.svg",
+      "system": {
+        "description": {
+          "value": "<p>Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) Bludgeoning damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "shovel",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "IJKPhOnKkrib2HKQ": {
+            "_id": "IJKPhOnKkrib2HKQ",
+            "type": "attack",
+            "name": "",
+            "img": null,
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "value": "",
+              "special": "",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "flags": {},
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "4",
+              "critical": {
+                "threshold": null
+              },
+              "flat": true,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 1,
+                  "denomination": 8,
+                  "bonus": "2",
+                  "types": [
+                    "bludgeoning"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "number": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "ft",
+          "reach": 5
+        },
+        "damage": {
+          "base": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "number": 1
+            }
+          }
+        },
+        "properties": [],
+        "equipped": true,
+        "proficient": null,
+        "quantity": 1,
+        "identified": true
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "action",
+          "automation": null
+        }
+      },
+      "sort": 2000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!64tWZkvT3Aq5BPNj.dO2Dr1uU9uuUbkxa"
+    }
+  ],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "key": "bramwell",
+      "role": "suspect",
+      "acSource": "patched leather coat",
+      "tokenMasked": null,
+      "tokenUnmasked": null,
+      "lair": null,
+      "cornered": null
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!64tWZkvT3Aq5BPNj"
+}

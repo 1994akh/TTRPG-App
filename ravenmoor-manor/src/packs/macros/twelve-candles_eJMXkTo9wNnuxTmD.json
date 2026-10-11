@@ -1,0 +1,31 @@
+{
+  "_id": "eJMXkTo9wNnuxTmD",
+  "name": "Twelve Candles",
+  "type": "script",
+  "img": "icons/sundries/lights/candle-lit-yellow.webp",
+  "scope": "global",
+  "command": "game.modules.get(\"ravenmoor-manor\").api.toggleCandles();",
+  "folder": null,
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "fn": "toggleCandles",
+      "slot": 1
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": null,
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!macros!eJMXkTo9wNnuxTmD"
+}

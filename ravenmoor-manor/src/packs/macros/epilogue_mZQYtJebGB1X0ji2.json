@@ -1,0 +1,31 @@
+{
+  "_id": "mZQYtJebGB1X0ji2",
+  "name": "Epilogue",
+  "type": "script",
+  "img": "icons/sundries/lights/lantern-iron-lit-yellow.webp",
+  "scope": "global",
+  "command": "game.modules.get(\"ravenmoor-manor\").api.epilogue();",
+  "folder": null,
+  "sort": 10000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "fn": "epilogue",
+      "slot": 10
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": null,
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!macros!mZQYtJebGB1X0ji2"
+}

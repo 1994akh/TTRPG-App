@@ -1,0 +1,722 @@
+{
+  "_id": "qfcAVG1nR1fJKOuv",
+  "name": "Edric Ravenmoor",
+  "type": "npc",
+  "img": "modules/ravenmoor-manor/assets/tokens/edric.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 14,
+        "proficient": 0
+      },
+      "dex": {
+        "value": 12,
+        "proficient": 0
+      },
+      "con": {
+        "value": 12,
+        "proficient": 0
+      },
+      "int": {
+        "value": 10,
+        "proficient": 0
+      },
+      "wis": {
+        "value": 9,
+        "proficient": 0
+      },
+      "cha": {
+        "value": 13,
+        "proficient": 0
+      }
+    },
+    "skills": {
+      "ath": {
+        "value": 1
+      },
+      "dec": {
+        "value": 1
+      },
+      "per": {
+        "value": 1
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calc": "natural",
+        "flat": 12
+      },
+      "hp": {
+        "value": 27,
+        "max": 27,
+        "temp": null,
+        "tempmax": null,
+        "formula": "5d8 + 5"
+      },
+      "init": {
+        "ability": "",
+        "roll": {
+          "bonus": "",
+          "min": null,
+          "max": null,
+          "mode": 0
+        }
+      },
+      "movement": {
+        "walk": "30",
+        "fly": "",
+        "hover": false,
+        "units": null
+      },
+      "senses": {
+        "ranges": {},
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": ""
+    },
+    "details": {
+      "biography": {
+        "value": "<p><strong>Look.</strong> Eldest son, 30s. Flushed face, black cloak with the collar hitched over his head, grinning papier-mache pumpkin head under one arm. Usually holding a glass.</p><p><strong>Wants.</strong> His inheritance, to pay debts that terrify him. Underneath, his father's approval.</p><p><strong>Secret.</strong> Ruinous gambling debts. Letter H3 in his coat says a new creditor bought them all; sealed in green wax with a mortar-and-pestle stamp. He spent 8:30-9:00 alone in the wine cellar (true).</p><p><strong>Knows.</strong> Around 8:40 he heard footsteps and dripping behind the cellar's bricked-up arch. Goes pale when he learns Quill's signet ring bears a mortar and pestle. Quill frames him at candle 8.</p><p><strong>Plays as.</strong> Bluster, self-pity and bad jokes.</p><p><strong>Lines.</strong></p><ul><li>“I'd say I lost my head, but that's just the costume.”</li><li>“Father and I argued about money. We always argued about money. That's not murder, that's family.”</li></ul>",
+        "public": ""
+      },
+      "alignment": "Chaotic Neutral",
+      "type": {
+        "value": "humanoid",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 0.5,
+      "habitat": {
+        "value": [],
+        "custom": ""
+      },
+      "treasure": {
+        "value": []
+      }
+    },
+    "resources": {
+      "legact": {
+        "max": 0,
+        "spent": 0
+      },
+      "legres": {
+        "max": 0,
+        "spent": 0
+      },
+      "lair": {
+        "value": false,
+        "initiative": null,
+        "inside": false
+      }
+    },
+    "source": {
+      "custom": "Death at Ravenmoor Manor",
+      "rules": "2024",
+      "revision": 1,
+      "book": "",
+      "page": "",
+      "license": ""
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common"
+        ],
+        "custom": ""
+      },
+      "important": false
+    }
+  },
+  "prototypeToken": {
+    "name": "Edric Ravenmoor",
+    "displayName": 30,
+    "displayBars": 20,
+    "actorLink": false,
+    "appendNumber": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/ravenmoor-manor/assets/tokens/edric.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "disposition": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic"
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {}
+  },
+  "items": [
+    {
+      "_id": "nz5y9YaITK3zVkPQ",
+      "name": "Liquid Courage",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/svg/activity/utility.svg",
+      "system": {
+        "description": {
+          "value": "<p>While Edric has had a drink in the past hour, he has Advantage on saving throws to avoid or end the Frightened condition and Disadvantage on Wisdom (Perception) checks.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "liquid-courage",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "properties": [],
+        "requirements": ""
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "passive",
+          "automation": null
+        }
+      },
+      "sort": 1000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!qfcAVG1nR1fJKOuv.nz5y9YaITK3zVkPQ"
+    },
+    {
+      "_id": "BpOuRbDgjNeSh3eq",
+      "name": "Ceremonial Sabre",
+      "type": "weapon",
+      "img": "systems/dnd5e/icons/svg/activity/attack.svg",
+      "system": {
+        "description": {
+          "value": "<p>Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) Slashing damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "ceremonial-sabre",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "IickFHrbwZ28WW8q": {
+            "_id": "IickFHrbwZ28WW8q",
+            "type": "attack",
+            "name": "",
+            "img": null,
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "value": "",
+              "special": "",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "flags": {},
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "4",
+              "critical": {
+                "threshold": null
+              },
+              "flat": true,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 1,
+                  "denomination": 8,
+                  "bonus": "2",
+                  "types": [
+                    "slashing"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "scaling": {
+                    "number": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "ft",
+          "reach": 5
+        },
+        "damage": {
+          "base": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "number": 1
+            }
+          }
+        },
+        "properties": [],
+        "equipped": true,
+        "proficient": null,
+        "quantity": 1,
+        "identified": true
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "action",
+          "automation": null
+        }
+      },
+      "sort": 2000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!qfcAVG1nR1fJKOuv.BpOuRbDgjNeSh3eq"
+    },
+    {
+      "_id": "HJI6Bmc0j6D6KLka",
+      "name": "Hurl Head",
+      "type": "weapon",
+      "img": "systems/dnd5e/icons/svg/activity/attack.svg",
+      "system": {
+        "description": {
+          "value": "<p>Ranged Attack Roll: +3, range 20 ft. Hit: 1 Bludgeoning damage, and the target has Disadvantage on its next attack roll before the end of its next turn.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "rules": "2024",
+          "revision": 1,
+          "book": "",
+          "page": "",
+          "license": ""
+        },
+        "identifier": "hurl-head",
+        "uses": {
+          "max": "1",
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ]
+        },
+        "activities": {
+          "v3PWuo9vlGgZOBEH": {
+            "_id": "v3PWuo9vlGgZOBEH",
+            "type": "attack",
+            "name": "",
+            "img": null,
+            "sort": 100000,
+            "activation": {
+              "type": "bonus",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "value": "",
+              "special": "",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "value": "20",
+              "units": "ft",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "max": "",
+              "recovery": []
+            },
+            "flags": {},
+            "visibility": {
+              "level": {},
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "3",
+              "critical": {
+                "threshold": null
+              },
+              "flat": true,
+              "type": {
+                "value": "ranged",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": null,
+                  "denomination": null,
+                  "bonus": "",
+                  "types": [
+                    "bludgeoning"
+                  ],
+                  "custom": {
+                    "enabled": true,
+                    "formula": "1"
+                  },
+                  "scaling": {
+                    "number": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "range": {
+          "value": 20,
+          "long": null,
+          "units": "ft",
+          "reach": null
+        },
+        "damage": {
+          "base": {
+            "number": null,
+            "denomination": null,
+            "bonus": "",
+            "types": [],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "number": 1
+            }
+          }
+        },
+        "properties": [],
+        "equipped": true,
+        "proficient": null,
+        "quantity": 1,
+        "identified": true
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "statBlock": "bonus",
+          "automation": null
+        }
+      },
+      "sort": 3000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!qfcAVG1nR1fJKOuv.HJI6Bmc0j6D6KLka"
+    },
+    {
+      "_id": "dES3bjuP8fCA9yeq",
+      "name": "Edric's Debt Letter",
+      "type": "loot",
+      "img": "icons/sundries/documents/envelope-sealed-red-tan.webp",
+      "system": {
+        "description": {
+          "value": "<p>An envelope sealed in green wax, stamped with a mortar and pestle. Its text is Handout 3.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-debt-letter\"><p><strong>DM:</strong> Starts in Edric's inventory. The seal matches Quill's signet ring and the green wax in his room (C10).</p></section>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Death at Ravenmoor Manor",
+          "book": "",
+          "page": "",
+          "license": "",
+          "rules": "2024",
+          "revision": 1
+        },
+        "identifier": "debt-letter",
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "rarity": "",
+        "identified": true,
+        "container": null,
+        "type": {
+          "value": "",
+          "subtype": ""
+        },
+        "activities": {}
+      },
+      "effects": [],
+      "flags": {
+        "ravenmoor": {
+          "plot": true,
+          "key": "debt-letter",
+          "journalLink": "H3",
+          "sourceId": "wZcHT48qemmGFoV2"
+        }
+      },
+      "folder": null,
+      "sort": 4000,
+      "ownership": {
+        "default": 0
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!qfcAVG1nR1fJKOuv.dES3bjuP8fCA9yeq"
+    }
+  ],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "key": "edric",
+      "role": "suspect",
+      "acSource": "leather riding coat",
+      "tokenMasked": null,
+      "tokenUnmasked": null,
+      "lair": null,
+      "cornered": null
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!qfcAVG1nR1fJKOuv"
+}
