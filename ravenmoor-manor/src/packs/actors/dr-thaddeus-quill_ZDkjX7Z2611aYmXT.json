@@ -2,7 +2,7 @@
   "_id": "ZDkjX7Z2611aYmXT",
   "name": "Dr. Thaddeus Quill",
   "type": "npc",
-  "img": "modules/ravenmoor-manor/assets/tokens/quill-masked.webp",
+  "img": "modules/ravenmoor-manor/assets/portraits/quill-masked.webp",
   "system": {
     "abilities": {
       "str": {
@@ -74,7 +74,7 @@
     },
     "details": {
       "biography": {
-        "value": "<p><strong>Look.</strong> Family physician and amateur alchemist, 50s. Silver whiskers, half-moon spectacles, a voice like warm cocoa. Tonight: plague doctor costume, beaked mask stuffed with frost-mint and cloves, long oiled coat, tall buckled boots, mortar-and-pestle signet ring.</p><p><strong>Wants.</strong> The manor, for the vein of moonsilver beneath the crypt. He secretly owns all of Edric's debts.</p><p><strong>Tells.</strong> Smell of mint; foxfire paste under his fingernails (Perception DC 15); pond mud on his buckled boots; room dark at 8:45.</p><p><strong>Plays as.</strong> Warm, grandfatherly, always 'just trying to help.' Steers suspicion to the ghost, then Edric, then Morwenna. In a zone of truth he goes quiet rather than lie.</p><p><strong>Lines.</strong></p><ul><li>“Poor Silas. Fear is a terrible poison.”</li><li>“Edric owed a great deal of money. I only mention it because I care.”</li><li>“You lot were supposed to stay scared!”</li></ul><p><strong>Gear.</strong> Medical bag with a false bottom (holds the new will); Acid flasks; Scalpels; Snuffing powder; Plague doctor mask; Signet ring with a mortar and pestle.</p><h3>The Chapel Crypt (midnight bell)</h3><p>Quill fights in the chapel crypt beneath Ravenmoor Manor. On initiative count 20 (losing ties), as the midnight bell tolls, the crypt takes one lair action, in order.</p><ol><li><strong>Round 1, The dead rise.</strong> Two Ravenmoor skeletons burst from coffins. If the party earned the Why Unmasking Edge, Edric and Bramwell hold the lids shut and nothing happens.</li><li><strong>Round 2, Candles gutter.</strong> A ghostly wail fills the crypt. Wisdom Saving Throw: DC 13, each player character. Failure: the Frightened condition until the end of its next turn.</li><li><strong>Round 3, Green flame.</strong> The brazier flares. Dexterity Saving Throw: DC 13, each creature within 10 feet of the brazier. Failure: 7 (2d6) Fire damage. From now on, if Quill starts his turn next to the brazier holding the will, he can burn it as a Bonus Action.</li><li><strong>Round 4, The Widow's due.</strong> Elspeth's spirit rises from her tomb (also triggers early when Quill drops below half his Hit Points). Wisdom Saving Throw: DC 15, Quill only. Failure: he has the Frightened condition until the fight ends.</li></ol>",
+        "value": "<p><strong>Look.</strong> Family physician and amateur alchemist, 50s. Silver whiskers, half-moon spectacles, a voice like warm cocoa. Tonight: plague doctor costume, beaked mask stuffed with frost-mint and cloves, long oiled coat, tall buckled boots, mortar-and-pestle signet ring.</p><p><strong>Wants.</strong> The manor, for the vein of moonsilver beneath the crypt. He secretly owns all of Edric&#39;s debts.</p><p><strong>Tells.</strong> Smell of mint; foxfire paste under his fingernails (Perception DC 15); pond mud on his buckled boots; room dark at 8:45.</p><p><strong>Plays as.</strong> Warm, grandfatherly, always &#39;just trying to help.&#39; Steers suspicion to the ghost, then Edric, then Morwenna. In a zone of truth he goes quiet rather than lie.</p><p><strong>Lines.</strong></p><ul><li>“Poor Silas. Fear is a terrible poison.”</li><li>“Edric owed a great deal of money. I only mention it because I care.”</li><li>“You lot were supposed to stay scared!”</li></ul><p><strong>Gear.</strong> Medical bag with a false bottom (holds the new will); Acid flasks; Scalpels; Snuffing powder; Plague doctor mask; Signet ring with a mortar and pestle.</p><h3>The Chapel Crypt (midnight bell)</h3><p>Quill fights in the chapel crypt beneath Ravenmoor Manor. On initiative count 20 (losing ties), as the midnight bell tolls, the crypt takes one lair action, in order.</p><ol><li><strong>Round 1, The dead rise.</strong> Two Ravenmoor skeletons burst from coffins. If the party earned the Why Unmasking Edge, Edric and Bramwell hold the lids shut and nothing happens.</li><li><strong>Round 2, Candles gutter.</strong> A ghostly wail fills the crypt. Wisdom Saving Throw: DC 13, each player character. Failure: the Frightened condition until the end of its next turn.</li><li><strong>Round 3, Green flame.</strong> The brazier flares. Dexterity Saving Throw: DC 13, each creature within 10 feet of the brazier. Failure: 7 (2d6) Fire damage. From now on, if Quill starts his turn next to the brazier holding the will, he can burn it as a Bonus Action.</li><li><strong>Round 4, The Widow&#39;s due.</strong> Elspeth&#39;s spirit rises from her tomb (also triggers early when Quill drops below half his Hit Points). Wisdom Saving Throw: DC 15, Quill only. Failure: he has the Frightened condition until the fight ends.</li></ol>",
         "public": ""
       },
       "alignment": "Neutral Evil",
@@ -192,7 +192,7 @@
       "img": "systems/dnd5e/icons/svg/activity/utility.svg",
       "system": {
         "description": {
-          "value": "<p>Quill is immune to his own Banshee's Breath and has Advantage on saving throws against poison.</p>",
+          "value": "<p>Quill is immune to his own Banshee&#39;s Breath and has Advantage on saving throws against poison.</p>",
           "chat": ""
         },
         "source": {
@@ -983,7 +983,7 @@
             "units": "turns",
             "expiry": "turnEnd"
           },
-          "description": "<p>until the end of the target's next turn.</p>",
+          "description": "<p>until the end of the target&#39;s next turn.</p>",
           "origin": null,
           "tint": "#ffffff",
           "sort": 0,
@@ -1487,7 +1487,7 @@
       "img": "icons/containers/bags/case-leather-tan.webp",
       "system": {
         "description": {
-          "value": "<p>A worn leather physician's bag: bandages, tinctures, scalpels and a smell of mint and cloves. Quill never lets it out of reach.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-medical-bag\"><p><strong>DM:</strong> False bottom: Investigation DC 15 finds it, or it is found automatically if Quill is searched after the accusation. Detect poison and disease finds a faint trace inside, where an empty vial rolls loose. If he is asked to open it: &quot;Patient records, sir!&quot; A forced search or Sleight of Hand DC 15 finds the will and starts the finale early.</p></section>",
+          "value": "<p>A worn leather physician&#39;s bag: bandages, tinctures, scalpels and a smell of mint and cloves. Quill never lets it out of reach.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-medical-bag\"><p><strong>DM:</strong> False bottom: Investigation DC 15 finds it, or it is found automatically if Quill is searched after the accusation. Detect poison and disease finds a faint trace inside, where an empty vial rolls loose. If he is asked to open it: &quot;Patient records, sir!&quot; A forced search or Sleight of Hand DC 15 finds the will and starts the finale early.</p></section>",
           "chat": ""
         },
         "source": {
@@ -1566,7 +1566,7 @@
       "img": "icons/sundries/scrolls/scroll-bound-sealed-black-red.webp",
       "system": {
         "description": {
-          "value": "<p>A scroll sealed in black wax with the Ravenmoor raven. Fennick can confirm it as genuine on sight. Its text is clue card C14.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-new-will\"><p><strong>DM:</strong> Hidden in the false bottom of Quill's medical bag. Quill means to burn it in the crypt brazier from round 3 of the showdown. Whether it survives decides the ending.</p></section>",
+          "value": "<p>A scroll sealed in black wax with the Ravenmoor raven. Fennick can confirm it as genuine on sight. Its text is clue card C14.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-new-will\"><p><strong>DM:</strong> Hidden in the false bottom of Quill&#39;s medical bag. Quill means to burn it in the crypt brazier from round 3 of the showdown. Whether it survives decides the ending.</p></section>",
           "chat": ""
         },
         "source": {
@@ -1631,7 +1631,7 @@
       "img": "icons/consumables/potions/vial-cork-empty.webp",
       "system": {
         "description": {
-          "value": "<p>A small glass vial with a rime of white frost inside. It smells of mint.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-empty-vial\"><p><strong>DM:</strong> The vial that held the Banshee's Breath. Medicine or alchemist's supplies DC 13 matches it to the tonic glass (C6). There is no usable dose left.</p></section>",
+          "value": "<p>A small glass vial with a rime of white frost inside. It smells of mint.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-empty-vial\"><p><strong>DM:</strong> The vial that held the Banshee&#39;s Breath. Medicine or alchemist&#39;s supplies DC 13 matches it to the tonic glass (C6). There is no usable dose left.</p></section>",
           "chat": ""
         },
         "source": {
@@ -1853,7 +1853,7 @@
       "img": "icons/sundries/misc/key-short-red.webp",
       "system": {
         "description": {
-          "value": "<p>An old iron key on a ribbon. It hung on Silas's watch chain at 7:00 and was gone by 9:00.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-lockbox-key\"><p><strong>DM:</strong> Quill took it at 8:35 and plants it in Edric's coat at candle 8. Insight DC 13 senses that Quill is performing.</p></section>",
+          "value": "<p>An old iron key on a ribbon. It hung on Silas&#39;s watch chain at 7:00 and was gone by 9:00.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-lockbox-key\"><p><strong>DM:</strong> Quill took it at 8:35 and plants it in Edric&#39;s coat at candle 8. Insight DC 13 senses that Quill is performing.</p></section>",
           "chat": ""
         },
         "source": {
@@ -1924,6 +1924,8 @@
       "acSource": "oiled leather coat",
       "tokenMasked": "modules/ravenmoor-manor/assets/tokens/quill-masked.webp",
       "tokenUnmasked": "modules/ravenmoor-manor/assets/tokens/quill-unmasked.webp",
+      "portrait": "modules/ravenmoor-manor/assets/portraits/quill-masked.webp",
+      "portraitUnmasked": "modules/ravenmoor-manor/assets/portraits/quill-unmasked.webp",
       "lair": {
         "name": "The Chapel Crypt (midnight bell)",
         "initiative": 20,

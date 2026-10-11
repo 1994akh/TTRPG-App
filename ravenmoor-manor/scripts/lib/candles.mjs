@@ -2,7 +2,7 @@
  * House rule 1: the Twelve Candles clock. Everyone sees the panel; only the GM can snuff.
  */
 import {
-  actorFor, CONTENT, getSetting, giveItem, isLeadGM, itemsWithKey, LEVEL_ELEVATION, levelId, mainScene, MODULE_ID,
+  actorFor, CONTENT, esc, getSetting, giveItem, isLeadGM, itemsWithKey, LEVEL_ELEVATION, levelId, mainScene, MODULE_ID,
   postCard, requireGM, setSetting, tokensFor, whisperGM
 } from "./util.mjs";
 
@@ -10,12 +10,27 @@ const { ApplicationV2 } = foundry.applications.api;
 const TOTAL = 12;
 
 /** In-game time for a number of snuffed candles (9:00 PM plus 15 minutes per candle). */
-function clockTime(snuffed) {
+export function clockTime(snuffed) {
   const minutes = (21 * 60) + (snuffed * 15);
   const h = Math.floor(minutes / 60) % 24;
   const m = minutes % 60;
   if ( h === 0 ) return "Midnight";
   return `${((h + 11) % 12) + 1}:${String(m).padStart(2, "0")} PM`;
+}
+
+/** Real time since the session clock started, as h:mm, or null. */
+export function elapsed() {
+  const start = getSetting("sessionStart");
+  if ( !start ) return null;
+  const minutes = Math.floor((Date.now() - start) / 60000);
+  return `${Math.floor(minutes / 60)}:${String(minutes % 60).padStart(2, "0")}`;
+}
+
+/** GM reminders on the candles that trigger something (by snuff order). */
+function milestone(n) {
+  if ( n === TOTAL ) return "Midnight: the bell tolls and the accusation begins";
+  const escalation = CONTENT.text.escalations[n];
+  return escalation ? `Escalation: ${escalation.title}` : null;
 }
 
 export class CandlePanel extends ApplicationV2 {
@@ -35,25 +50,36 @@ export class CandlePanel extends ApplicationV2 {
   /** Last count rendered, so the candle that just went out can puff. */
   #lastLit = null;
 
+  /** Session timer refresh for the GM. */
+  #timer = null;
+
   /** @override */
   async _renderHTML() {
+    // Candles go out left to right, so each candle's number is its snuff order (candle 4 is the fourth to go out).
     const lit = getSetting("candlesLit");
-    const puff = (this.#lastLit !== null) && (lit < this.#lastLit) ? new Set(Array.from({ length: this.#lastLit - lit }, (_, i) => lit + i)) : new Set();
+    const next = TOTAL - lit;
+    const last = this.#lastLit;
+    const puff = (last !== null) && (lit < last) ? new Set(Array.from({ length: last - lit }, (_, i) => TOTAL - last + i)) : new Set();
     this.#lastLit = lit;
     const gm = game.user.isGM;
     const candles = Array.from({ length: TOTAL }, (_, i) => {
-      const isLit = i < lit;
-      const cls = ["ravenmoor-candle", isLit ? "lit" : "snuffed", puff.has(i) ? "puff" : ""].join(" ");
-      const attrs = gm && isLit && (i === lit - 1) ? "data-action=\"snuff\" data-tooltip=\"Snuff this candle\"" : "";
-      return `<button type="button" class="${cls}" ${attrs} ${gm ? "" : "disabled"} aria-label="Candle ${i + 1}${isLit ? ", lit" : ", out"}">`
+      const n = i + 1;
+      const isLit = i >= next;
+      const note = gm ? milestone(n) : null;
+      const cls = ["ravenmoor-candle", isLit ? "lit" : "snuffed", puff.has(i) ? "puff" : "", note ? "milestone" : ""].join(" ");
+      const tip = [gm && isLit && (i === next) ? "Snuff this candle" : null, note].filter(Boolean).join(" · ");
+      const attrs = (gm && isLit && (i === next) ? "data-action=\"snuff\" " : "") + (tip ? `data-tooltip="${esc(tip)}"` : "");
+      return `<button type="button" class="${cls}" ${attrs} ${gm ? "" : "disabled"} aria-label="Candle ${n}${isLit ? ", lit" : ", out"}">`
         + "<span class=\"wick\"></span><span class=\"flame\"></span><span class=\"wax\"></span><span class=\"wisp\"></span>"
-        + `<span class="num">${i + 1}</span></button>`;
+        + `<span class="num">${n}</span></button>`;
     }).join("");
+    const session = gm ? elapsed() : null;
     const split = getSetting("splitUp");
     const div = document.createElement("div");
     div.className = "ravenmoor-candles-body";
     div.innerHTML = `<div class="ravenmoor-candle-row">${candles}</div>`
       + `<footer><span class="time">${clockTime(TOTAL - lit)}</span><span class="left">${lit} of ${TOTAL} lit</span>`
+      + (session ? `<span class="session" data-tooltip="Real time since the session clock started (the gust comes at 1:55)">${session}</span>` : "")
       + (gm ? `<button type="button" data-action="split" class="${split ? "active" : ""}" data-tooltip="Split Up! One round of group scenes costs one candle.">Split Up!</button>`
         + "<button type=\"button\" data-action=\"relight\" data-tooltip=\"Relight one candle (undo)\"><i class=\"fa-solid fa-rotate-left\"></i></button>" : "")
       + "</footer>"
@@ -64,6 +90,24 @@ export class CandlePanel extends ApplicationV2 {
   /** @override */
   _replaceHTML(result, content) {
     content.replaceChildren(result);
+  }
+
+  /** @override */
+  _onRender(context, options) {
+    super._onRender?.(context, options);
+    if ( !game.user.isGM || this.#timer ) return;
+    this.#timer = setInterval(() => {
+      const span = this.element?.querySelector(".session");
+      const time = elapsed();
+      if ( span && time ) span.textContent = time;
+    }, 30 * 1000);
+  }
+
+  /** @override */
+  _onClose(options) {
+    super._onClose?.(options);
+    clearInterval(this.#timer);
+    this.#timer = null;
   }
 
   static #onSnuff() {
@@ -108,21 +152,30 @@ export async function lightCandles() {
  * Snuff one or more candles and run the hooks for candles 4, 8, 11 and 12.
  * @param {number} [count=1]
  */
+let snuffing = false;
 export async function snuffCandle(count=1) {
-  if ( !requireGM() ) return;
-  const before = getSetting("candlesLit");
-  if ( before <= 0 ) return ui.notifications.info("Every candle is already out.");
-  const after = Math.max(0, before - count);
-  await setSetting("candlesLit", after);
-  for ( let lit = before - 1; lit >= after; lit-- ) await onCandleSnuffed(TOTAL - lit);
+  if ( !requireGM() || snuffing ) return;
+  snuffing = true;
+  try {
+    const before = getSetting("candlesLit");
+    if ( before <= 0 ) return ui.notifications.info("Every candle is already out.");
+    const after = Math.max(0, before - count);
+    await setSetting("candlesLit", after);
+    for ( let lit = before - 1; lit >= after; lit-- ) await onCandleSnuffed(TOTAL - lit);
+  } finally {
+    // Ignore clicks until this candle's effects (escalation whispers, Fennick, Midnight) have run.
+    snuffing = false;
+  }
 }
 
 /**
  * @param {number} n  Which candle went out, 1-12.
  */
 async function onCandleSnuffed(n) {
-  const esc = CONTENT.text.escalations[n];
-  if ( esc ) await whisperGM(`Escalation · ${esc.title}`, `<p>${esc.text}</p>`, { type: "escalation", candle: n });
+  const escalation = CONTENT.text.escalations[n];
+  if ( escalation ) {
+    await whisperGM(`Escalation · ${escalation.title}`, `<p>${escalation.text}</p>`, { type: "escalation", candle: n });
+  }
   if ( n === 8 ) await plantLockboxKey();
   if ( n === 11 ) await placeFennick();
   if ( n === TOTAL ) {

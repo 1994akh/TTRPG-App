@@ -40,7 +40,9 @@ ok(rail.move === 20 && rail.sight === 0, "gallery railing blocks movement, not s
 ok(scene.walls.filter(w => w.door === 2).length === 2, "two secret doors");
 const hidden = scene.tokens.filter(t => t.hidden).map(t => t.flags.ravenmoor.actorKey).sort().join();
 ok(hidden === "quill,silas,skeleton,skeleton,skeleton,skeleton", "hidden at start: Silas's body, Quill (crypt) and four skeletons");
-ok(scene.tokens.filter(t => t.flags.ravenmoor.actorKey === "scarecrow" && !t.hidden).length === 2, "two scarecrows visible in the crypt");
+const props = scene.tokens.filter(t => t.flags.ravenmoor.actorKey === "scarecrow");
+ok(props.length === 2 && props.every(t => !t.hidden && t.disposition === 0 && t.displayName === 0 && t.name === "Scarecrow"),
+  "two scarecrows visible in the crypt as neutral, nameless props");
 
 console.log("Labels the macros use");
 const label = (arr, prefix) => arr.filter(d => (d.flags.ravenmoor.label ?? "").startsWith(prefix));
@@ -69,7 +71,9 @@ for ( const coll of Object.values(allDocs) ) for ( const d of coll ) ids.add(d._
 ok(badId === 0, "every _id is 16 alphanumeric characters");
 const pageIds = new Map(adventure.journal.flatMap(j => j.pages.map(p => [`${j._id}.${p._id}`, p])));
 ok(scene.notes.every(n => pageIds.has(`${n.entryId}.${n.pageId}`)), "every map note links to an existing page");
-ok(scene.notes.every(n => adventure.journal.find(j => j._id === n.entryId).ownership.default === 0 || n.flags.ravenmoor.clue), "location pins link to a GM-only journal");
+const locations = adventure.journal.find(j => j.flags.ravenmoor.key === "locations");
+ok(locations.ownership.default === 0 && locations.pages.every(p => (p.ownership.default ?? -1) <= 0)
+  && scene.notes.every(n => n.entryId === locations._id), "every pin (clue pins too) links to the GM-only Locations journal, so players see none");
 
 const text = JSON.stringify(adventure);
 const links = [...text.matchAll(/@UUID\[([^\]]+)\]/g)].map(m => m[1]);
@@ -117,12 +121,29 @@ ok(actor("pip").items.filter(i => i.type === "spell").length === 7, "Pip: 7 inna
 ok(quill.items.filter(i => i.system.container).length === 3, "Quill's bag holds the will, the vial and the powder");
 ok(actor("silas").prototypeToken.actorLink && adventure.actors.filter(a => a.prototypeToken.actorLink).length === 1, "only Silas is linked");
 ok(actor("pip").prototypeToken.disposition === 1 && actor("skeleton").prototypeToken.disposition === -1, "dispositions: Pip friendly, skeleton hostile");
+ok(adventure.actors.every(a => a.img.includes("/assets/portraits/") && fs.existsSync(path.join(ROOT, a.img.slice(MODULE_PATH.length + 1)))),
+  "every actor has a portrait on disk (tokens stay as tokens)");
+ok(adventure.actors.every(a => a.prototypeToken.texture.src.includes("/assets/tokens/")), "prototype tokens still use the token art");
+ok(actor("quill").flags.ravenmoor.portraitUnmasked?.endsWith("quill-unmasked.webp"), "Quill has an unmasked portrait for the unmasking");
+
+const adv = adventure.journal.find(j => j.flags.ravenmoor.key === "adventure");
+ok(adv.pages.filter(p => p.text.content.startsWith("<figure class=\"ravenmoor-banner\">")).length === 7, "7 Adventure chapters open with a banner");
+const household = adventure.journal.find(j => j.flags.ravenmoor.key === "household");
+ok(household.pages.every(p => p.text.content.includes("ravenmoor-portrait")), "every Household page shows a portrait");
 
 console.log("Runtime");
 const api = fs.readFileSync(path.join(ROOT, "scripts/ravenmoor.mjs"), "utf8").match(/const api = \{([\s\S]*?)\n\};/)[1];
 const apiFns = new Set([...api.replace(/\/\/.*$/gm, "").matchAll(/([a-zA-Z]+)\s*(?:,|$)/g)].map(m => m[1]));
 const macroFns = adventure.macros.map(m => m.command.match(/api\.(\w+)\(/)[1]);
 ok(macroFns.every(f => apiFns.has(f)), `all ${macroFns.length} macros call an API function`);
+const slots = adventure.macros.map(m => m.flags.ravenmoor.slot).filter(Boolean).sort((a, b) => a - b);
+ok(slots.join() === "1,2,3,4,5,6,7,8,9,10" && adventure.macros.find(m => m.flags.ravenmoor.slot === 1).flags.ravenmoor.fn === "openDirector",
+  "suggested hotbar fills slots 1-10, with the Director in slot 1");
+const director = fs.readFileSync(path.join(ROOT, "scripts/lib/director.mjs"), "utf8");
+const directorFns = [...director.matchAll(/\{ fn: "(\w+)"/g)].map(m => m[1]);
+ok(directorFns.length > 20 && directorFns.every(f => apiFns.has(f)), `all ${directorFns.length} Director buttons call an API function`);
+const readAlouds = [...JSON.stringify(adventure.journal).matchAll(/<blockquote class=\\"ravenmoor-readaloud\\"([^>]*)>/g)];
+ok(readAlouds.length > 20 && readAlouds.every(m => m[1].includes("data-tooltip")), `${readAlouds.length} journal read-aloud boxes carry the double-click hint`);
 const scripts = [];
 const collect = dir => fs.readdirSync(dir).forEach(f => {
   const p = path.join(dir, f);

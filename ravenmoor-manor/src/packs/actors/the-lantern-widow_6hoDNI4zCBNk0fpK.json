@@ -2,7 +2,7 @@
   "_id": "6hoDNI4zCBNk0fpK",
   "name": "The Lantern Widow",
   "type": "npc",
-  "img": "modules/ravenmoor-manor/assets/tokens/lantern-widow.webp",
+  "img": "modules/ravenmoor-manor/assets/portraits/lantern-widow.webp",
   "system": {
     "abilities": {
       "str": {
@@ -69,7 +69,7 @@
     },
     "details": {
       "biography": {
-        "value": "<p><strong>Look.</strong> Elspeth Ravenmoor, Silas's first wife, drowned in the manor pond on All Hallows' Eve thirty years ago. Pale woman, grey gown, veil, lantern of green glass. Never speaks; only bows her head.</p><p><strong>Appears.</strong> Exactly twice: rising from her tomb in round 4 of the showdown (or when Quill drops below half HP), and standing on the pond at dawn in the epilogue. Afterward her lantern waits on her memorial stone; it works as a Lantern of Revealing.</p>",
+        "value": "<p><strong>Look.</strong> Elspeth Ravenmoor, Silas&#39;s first wife, drowned in the manor pond on All Hallows&#39; Eve thirty years ago. Pale woman, grey gown, veil, lantern of green glass. Never speaks; only bows her head.</p><p><strong>Appears.</strong> Exactly twice: rising from her tomb in round 4 of the showdown (or when Quill drops below half HP), and standing on the pond at dawn in the epilogue. Afterward her lantern waits on her memorial stone; it works as a Lantern of Revealing.</p>",
         "public": ""
       },
       "alignment": "Neutral Good",
@@ -507,6 +507,8 @@
       "acSource": null,
       "tokenMasked": null,
       "tokenUnmasked": null,
+      "portrait": "modules/ravenmoor-manor/assets/portraits/lantern-widow.webp",
+      "portraitUnmasked": null,
       "lair": null,
       "cornered": null
     }

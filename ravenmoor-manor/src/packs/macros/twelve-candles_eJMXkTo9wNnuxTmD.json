@@ -6,14 +6,14 @@
   "scope": "global",
   "command": "game.modules.get(\"ravenmoor-manor\").api.toggleCandles();",
   "folder": null,
-  "sort": 1000,
+  "sort": 2000,
   "ownership": {
     "default": 0
   },
   "flags": {
     "ravenmoor": {
       "fn": "toggleCandles",
-      "slot": 1
+      "slot": 2
     }
   },
   "_stats": {

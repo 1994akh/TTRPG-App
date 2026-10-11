@@ -558,7 +558,7 @@ export default {
       "img": "icons/sundries/scrolls/scroll-bound-sealed-black-red.webp",
       "system": {
         "description": {
-          "value": "<p>A scroll sealed in black wax with the Ravenmoor raven. Fennick can confirm it as genuine on sight. Its text is clue card C14.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-new-will\"><p><strong>DM:</strong> Hidden in the false bottom of Quill's medical bag. Quill means to burn it in the crypt brazier from round 3 of the showdown. Whether it survives decides the ending.</p></section>",
+          "value": "<p>A scroll sealed in black wax with the Ravenmoor raven. Fennick can confirm it as genuine on sight. Its text is clue card C14.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-new-will\"><p><strong>DM:</strong> Hidden in the false bottom of Quill&#39;s medical bag. Quill means to burn it in the crypt brazier from round 3 of the showdown. Whether it survives decides the ending.</p></section>",
           "chat": ""
         },
         "source": {
@@ -619,7 +619,7 @@ export default {
       "img": "icons/sundries/documents/envelope-sealed-red-tan.webp",
       "system": {
         "description": {
-          "value": "<p>An envelope sealed in green wax, stamped with a mortar and pestle. Its text is Handout 3.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-debt-letter\"><p><strong>DM:</strong> Starts in Edric's inventory. The seal matches Quill's signet ring and the green wax in his room (C10).</p></section>",
+          "value": "<p>An envelope sealed in green wax, stamped with a mortar and pestle. Its text is Handout 3.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-debt-letter\"><p><strong>DM:</strong> Starts in Edric&#39;s inventory. The seal matches Quill&#39;s signet ring and the green wax in his room (C10).</p></section>",
           "chat": ""
         },
         "source": {
@@ -679,7 +679,7 @@ export default {
       "img": "icons/containers/chest/chest-reinforced-steel-walnut-brown.webp",
       "system": {
         "description": {
-          "value": "<p>A small iron lockbox from Silas's desk. Shown open in Scene 2 with the sealed will inside; found open and empty in Scene 5.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-lockbox\"><p><strong>DM:</strong> Scenery and a prop; it does not need to be picked up.</p></section>",
+          "value": "<p>A small iron lockbox from Silas&#39;s desk. Shown open in Scene 2 with the sealed will inside; found open and empty in Scene 5.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-lockbox\"><p><strong>DM:</strong> Scenery and a prop; it does not need to be picked up.</p></section>",
           "chat": ""
         },
         "source": {
@@ -753,7 +753,7 @@ export default {
       "img": "icons/sundries/misc/key-short-red.webp",
       "system": {
         "description": {
-          "value": "<p>An old iron key on a ribbon. It hung on Silas's watch chain at 7:00 and was gone by 9:00.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-lockbox-key\"><p><strong>DM:</strong> Quill took it at 8:35 and plants it in Edric's coat at candle 8. Insight DC 13 senses that Quill is performing.</p></section>",
+          "value": "<p>An old iron key on a ribbon. It hung on Silas&#39;s watch chain at 7:00 and was gone by 9:00.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-lockbox-key\"><p><strong>DM:</strong> Quill took it at 8:35 and plants it in Edric&#39;s coat at candle 8. Insight DC 13 senses that Quill is performing.</p></section>",
           "chat": ""
         },
         "source": {
@@ -813,7 +813,7 @@ export default {
       "img": "icons/containers/bags/case-leather-tan.webp",
       "system": {
         "description": {
-          "value": "<p>A worn leather physician's bag: bandages, tinctures, scalpels and a smell of mint and cloves. Quill never lets it out of reach.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-medical-bag\"><p><strong>DM:</strong> False bottom: Investigation DC 15 finds it, or it is found automatically if Quill is searched after the accusation. Detect poison and disease finds a faint trace inside, where an empty vial rolls loose. If he is asked to open it: &quot;Patient records, sir!&quot; A forced search or Sleight of Hand DC 15 finds the will and starts the finale early.</p></section>",
+          "value": "<p>A worn leather physician&#39;s bag: bandages, tinctures, scalpels and a smell of mint and cloves. Quill never lets it out of reach.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-medical-bag\"><p><strong>DM:</strong> False bottom: Investigation DC 15 finds it, or it is found automatically if Quill is searched after the accusation. Detect poison and disease finds a faint trace inside, where an empty vial rolls loose. If he is asked to open it: &quot;Patient records, sir!&quot; A forced search or Sleight of Hand DC 15 finds the will and starts the finale early.</p></section>",
           "chat": ""
         },
         "source": {
@@ -888,7 +888,7 @@ export default {
       "img": "icons/consumables/potions/vial-cork-empty.webp",
       "system": {
         "description": {
-          "value": "<p>A small glass vial with a rime of white frost inside. It smells of mint.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-empty-vial\"><p><strong>DM:</strong> The vial that held the Banshee's Breath. Medicine or alchemist's supplies DC 13 matches it to the tonic glass (C6). There is no usable dose left.</p></section>",
+          "value": "<p>A small glass vial with a rime of white frost inside. It smells of mint.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-empty-vial\"><p><strong>DM:</strong> The vial that held the Banshee&#39;s Breath. Medicine or alchemist&#39;s supplies DC 13 matches it to the tonic glass (C6). There is no usable dose left.</p></section>",
           "chat": ""
         },
         "source": {
@@ -1102,7 +1102,7 @@ export default {
       "img": "icons/equipment/back/cloak-layered-white.webp",
       "system": {
         "description": {
-          "value": "<p>A pale grey gown with a mud-caked hem, a lace veil, gloves crusted with glowing green foxfire paste, a green-glass lantern still warm to the touch, and a flask half full of murky pond water.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-costume-bundle\"><p><strong>DM:</strong> Found in the niche behind Elspeth's tomb (Investigation DC 13). The gloves match the smears on the gallery railing (C4).</p></section>",
+          "value": "<p>A pale grey gown with a mud-caked hem, a lace veil, gloves crusted with glowing green foxfire paste, a green-glass lantern still warm to the touch, and a flask half full of murky pond water.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-costume-bundle\"><p><strong>DM:</strong> Found in the niche behind Elspeth&#39;s tomb (Investigation DC 13). The gloves match the smears on the gallery railing (C4).</p></section>",
           "chat": ""
         },
         "source": {
@@ -1222,7 +1222,7 @@ export default {
       "img": "icons/weapons/staves/staff-simple-carved.webp",
       "system": {
         "description": {
-          "value": "<p>Lord Silas's black walking stick, topped with a silver raven. &quot;To whoever unmasks my killer, should it come to that: my cane, and my thanks.&quot; A fine walking stick worth 50 gp.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-raven-cane\"><p><strong>DM:</strong> Reward from the new will, if it survives. Uses the 2024 club statistics (Light; mastery Slow).</p></section>",
+          "value": "<p>Lord Silas&#39;s black walking stick, topped with a silver raven. &quot;To whoever unmasks my killer, should it come to that: my cane, and my thanks.&quot; A fine walking stick worth 50 gp.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-raven-cane\"><p><strong>DM:</strong> Reward from the new will, if it survives. Uses the 2024 club statistics (Light; mastery Slow).</p></section>",
           "chat": ""
         },
         "source": {
@@ -1476,7 +1476,7 @@ export default {
           "max": "1"
         },
         "description": {
-          "value": "<p><em>Elspeth's old lantern of green glass, found dry and warm on her memorial stone at dawn.</em></p><p><em>Wondrous Item, Uncommon</em></p><p>While lit, this hooded lantern burns for 6 hours on 1 pint of oil, shedding Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. &amp;Reference[Invisible apply=false] creatures and objects are visible as long as they are in the lantern's Bright Light. You can take a Utilize action to lower the hood, reducing the lantern's light to Dim Light in a 5-foot radius.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-elspeths-lantern\"><p><strong>DM:</strong> Epilogue reward for every ending. Prefer the dnd5e compendium copy and only override name, image and light colour.</p></section>",
+          "value": "<p><em>Elspeth&#39;s old lantern of green glass, found dry and warm on her memorial stone at dawn.</em></p><p><em>Wondrous Item, Uncommon</em></p><p>While lit, this hooded lantern burns for 6 hours on 1 pint of oil, shedding Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. &amp;Reference[Invisible apply=false] creatures and objects are visible as long as they are in the lantern's Bright Light. You can take a Utilize action to lower the hood, reducing the lantern's light to Dim Light in a 5-foot radius.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-elspeths-lantern\"><p><strong>DM:</strong> Epilogue reward for every ending. Prefer the dnd5e compendium copy and only override name, image and light colour.</p></section>",
           "chat": ""
         },
         "identifier": "elspeths-lantern",
@@ -1569,7 +1569,7 @@ export default {
       "img": "icons/consumables/plants/herb-marjoram-basil-oregano-leaf-bunch-green.webp",
       "system": {
         "description": {
-          "value": "<p>A bitter sprig Pip presses into your hand before the fight. Chew it and you have Advantage on saving throws against Banshee's Breath until the fight ends.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-counter-herb\"><p><strong>DM:</strong> The How Unmasking Edge. The 'Grant Unmasking Edges' macro hands one to every player character.</p></section>",
+          "value": "<p>A bitter sprig Pip presses into your hand before the fight. Chew it and you have Advantage on saving throws against Banshee&#39;s Breath until the fight ends.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-counter-herb\"><p><strong>DM:</strong> The How Unmasking Edge. The &#39;Grant Unmasking Edges&#39; macro hands one to every player character.</p></section>",
           "chat": ""
         },
         "source": {
@@ -2086,6 +2086,50 @@ export default {
       }
     }
   },
+  "suspects": [
+    {
+      "key": "morwenna",
+      "name": "Lady Morwenna Ravenmoor",
+      "who": "Silas's second wife",
+      "costume": "Black swan",
+      "portrait": "modules/ravenmoor-manor/assets/portraits/morwenna.webp"
+    },
+    {
+      "key": "edric",
+      "name": "Edric Ravenmoor",
+      "who": "Silas's eldest son",
+      "costume": "Headless horseman",
+      "portrait": "modules/ravenmoor-manor/assets/portraits/edric.webp"
+    },
+    {
+      "key": "pip",
+      "name": "Penelope \"Pip\" Ravenmoor",
+      "who": "Silas's granddaughter, a student illusionist",
+      "costume": "Witch",
+      "portrait": "modules/ravenmoor-manor/assets/portraits/pip.webp"
+    },
+    {
+      "key": "quill",
+      "name": "Dr. Thaddeus Quill",
+      "who": "Family physician",
+      "costume": "Plague doctor",
+      "portrait": "modules/ravenmoor-manor/assets/portraits/quill-masked.webp"
+    },
+    {
+      "key": "bramwell",
+      "name": "Bramwell Hatch",
+      "who": "Groundskeeper and gravedigger",
+      "costume": "Scarecrow coat",
+      "portrait": "modules/ravenmoor-manor/assets/portraits/bramwell.webp"
+    },
+    {
+      "key": "crane",
+      "name": "Mrs. Agatha Crane",
+      "who": "Housekeeper",
+      "costume": "None",
+      "portrait": "modules/ravenmoor-manor/assets/portraits/crane.webp"
+    }
+  ],
   "lair": {
     "name": "The Chapel Crypt (midnight bell)",
     "initiative": 20,

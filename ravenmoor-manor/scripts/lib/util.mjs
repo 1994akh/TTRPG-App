@@ -135,11 +135,20 @@ export const itemsWithKey = (actor, key) => actor?.items.filter(i => rm(i).key =
 /* -------------------------------------------- */
 
 /** Player characters: each player's assigned character, plus any player-owned character actors. */
+/**
+ * The party: each player's assigned character (User Configuration). A player with no assigned character is
+ * represented by the characters they own, so a partly assigned table loses nobody; assigning characters keeps
+ * backup and retired characters out of the showdown and the Treat Bag.
+ * @returns {Actor[]}
+ */
 export function partyActors() {
-  const out = new Set();
-  for ( const u of game.users ) if ( !u.isGM && u.character ) out.add(u.character);
-  for ( const a of game.actors ) if ( (a.type === "character") && a.hasPlayerOwner ) out.add(a);
-  return [...out];
+  const players = game.users.filter(u => !u.isGM);
+  const party = new Set(players.filter(u => u.character).map(u => u.character));
+  // A player without an assigned character still counts with the characters they own.
+  for ( const user of players.filter(u => !u.character) ) {
+    for ( const a of game.actors ) if ( (a.type === "character") && a.testUserPermission(user, "OWNER") ) party.add(a);
+  }
+  return [...party];
 }
 
 /** The actor a user acts as: their controlled token, else their assigned character. */
@@ -148,9 +157,17 @@ export function userActor(user=game.user) {
   return controlled ?? user.character ?? null;
 }
 
+/** Is the actor a combatant in a combat that has started? */
+export function inCombat(actor) {
+  return game.combats.some(c => c.started && c.combatants.some(cb => cb.actor === actor
+    || (cb.actorId === actor.id) || (actor.isToken && (cb.tokenId === actor.token?.id))));
+}
+
 /* -------------------------------------------- */
 /*  Chat and sound                              */
 /* -------------------------------------------- */
+
+export { escapeHTML as esc } from "./html.mjs";
 
 export const gmIds = () => game.users.filter(u => u.isGM).map(u => u.id);
 
@@ -198,6 +215,22 @@ export function playCue(cue) {
 export function tokenCenter(t) {
   const size = mainScene()?.grid.size ?? GRID;
   return { x: t.x + ((t.width * size) / 2), y: t.y + ((t.height * size) / 2) };
+}
+
+/**
+ * Grid squares between a token and a square, counting every square as 5 ft (2024 rules: diagonals cost the same).
+ * 0 means the token stands on the square, 1 means adjacent.
+ * @param {TokenDocument} t
+ * @param {{x: number, y: number}} square  Column and row of the square.
+ * @returns {number}
+ */
+export function squaresTo(t, square) {
+  const size = mainScene()?.grid.size ?? GRID;
+  const col = Math.round(t.x / size);
+  const row = Math.round(t.y / size);
+  const dx = Math.max(0, col - square.x, square.x - (col + t.width - 1));
+  const dy = Math.max(0, row - square.y, square.y - (row + t.height - 1));
+  return Math.max(dx, dy);
 }
 
 /** Distance in feet between two pixel points (straight line). */

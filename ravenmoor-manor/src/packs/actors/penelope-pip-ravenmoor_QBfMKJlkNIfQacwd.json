@@ -2,7 +2,7 @@
   "_id": "QBfMKJlkNIfQacwd",
   "name": "Penelope \"Pip\" Ravenmoor",
   "type": "npc",
-  "img": "modules/ravenmoor-manor/assets/tokens/pip.webp",
+  "img": "modules/ravenmoor-manor/assets/portraits/pip.webp",
   "system": {
     "abilities": {
       "str": {
@@ -77,7 +77,7 @@
     },
     "details": {
       "biography": {
-        "value": "<p><strong>Look.</strong> Silas's granddaughter, 19, student illusionist. Ink-stained fingers, an enormous witch's hat that keeps sliding over her eyes. Talks fast, apologizes often, braver than she looks.</p><p><strong>Wants.</strong> To know Elspeth, the grandmother she never met.</p><p><strong>Secret.</strong> For a month she has used Minor Illusion to stage Widow sightings to make Silas talk about Elspeth (C13). She spent 8:30-9:00 changing out of an ink-stained costume (true).</p><p><strong>Knows.</strong> Tonight's ghost was not hers: her illusions are just light, they don't snuff candles or leave smudges, and the lantern had real green glass. Detect Magic or Arcana DC 12 confirms no illusion on the gallery.</p><p><strong>Plays as.</strong> Guilty, eager, natural ally. Quill attacks her at candle 4. If befriended she joins the showdown and hands out counter-herb sprigs (How Unmasking Edge).</p><p><strong>Lines.</strong></p><ul><li>“Okay. So. The other ghosts were me. Not this one! This one was solid!”</li><li>“Grandfather took his tonic from the doctor every night...”</li></ul>",
+        "value": "<p><strong>Look.</strong> Silas&#39;s granddaughter, 19, student illusionist. Ink-stained fingers, an enormous witch&#39;s hat that keeps sliding over her eyes. Talks fast, apologizes often, braver than she looks.</p><p><strong>Wants.</strong> To know Elspeth, the grandmother she never met.</p><p><strong>Secret.</strong> For a month she has used Minor Illusion to stage Widow sightings to make Silas talk about Elspeth (C13). She spent 8:30-9:00 changing out of an ink-stained costume (true).</p><p><strong>Knows.</strong> Tonight&#39;s ghost was not hers: her illusions are just light, they don&#39;t snuff candles or leave smudges, and the lantern had real green glass. Detect Magic or Arcana DC 12 confirms no illusion on the gallery.</p><p><strong>Plays as.</strong> Guilty, eager, natural ally. Quill attacks her at candle 4. If befriended she joins the showdown and hands out counter-herb sprigs (How Unmasking Edge).</p><p><strong>Lines.</strong></p><ul><li>“Okay. So. The other ghosts were me. Not this one! This one was solid!”</li><li>“Grandfather took his tonic from the doctor every night...”</li></ul>",
         "public": ""
       },
       "alignment": "Chaotic Good",
@@ -1979,6 +1979,8 @@
       "acSource": null,
       "tokenMasked": null,
       "tokenUnmasked": null,
+      "portrait": "modules/ravenmoor-manor/assets/portraits/pip.webp",
+      "portraitUnmasked": null,
       "lair": null,
       "cornered": null
     }

@@ -27,6 +27,13 @@ const STARTING_ITEMS = {
 const mod = score => Math.floor((score - 10) / 2);
 
 /**
+ * Portrait for an actor sheet: assets/portraits/<same name as the token>.webp (tools/build_portraits.py).
+ * @param {string} token  The token path from npcs.json.
+ * @returns {string}
+ */
+export const portraitFor = token => assetPath(token.replace("assets/tokens/", "assets/portraits/"));
+
+/**
  * Item description for a stat-block entry: the printed wording, plus the trigger for reactions.
  * @param {object} entry
  * @returns {string}
@@ -358,7 +365,7 @@ function buildActor(npc, items) {
     _id,
     name: npc.name,
     type: "npc",
-    img: assetPath(npc.token),
+    img: portraitFor(npc.token),
     system,
     prototypeToken: prototypeToken(npc),
     items: embedded,
@@ -373,6 +380,8 @@ function buildActor(npc, items) {
         acSource: npc.ac.source || null,
         tokenMasked: npc.tokenUnmasked ? assetPath(npc.token) : null,
         tokenUnmasked: npc.tokenUnmasked ? assetPath(npc.tokenUnmasked) : null,
+        portrait: portraitFor(npc.token),
+        portraitUnmasked: npc.tokenUnmasked ? portraitFor(npc.tokenUnmasked) : null,
         lair: npc.lair ?? null,
         cornered: npc.key === "quill" ? { threshold: 30, runningLong: 50 } : null
       }

@@ -2,12 +2,20 @@
  * House rules 4 and 5: the Treat Bag and the Scaredy-Cat Bonus, plus the shared save-request chat card.
  */
 import {
-  giveItem, gmIds, itemsWithKey, MODULE_ID, partyActors, postCard, requireGM, userActor
+  esc, giveItem, gmIds, inCombat, isLeadGM, itemsWithKey, MODULE_ID, partyActors, postCard, requireGM, SOCKET
 } from "./util.mjs";
 
 const { ApplicationV2, DialogV2 } = foundry.applications.api;
 const CANDY = "treat-candy";
 const FRIGHT_IMG = "systems/dnd5e/icons/svg/statuses/frightened.svg";
+/** Outside combat there are no turns, so a scare's Frightened ends after this much real time (house rule 5). */
+const SCARE_MS = 60 * 1000;
+
+/** Server time, so the player who applies a scare and the GM who expires it agree whatever their clocks say. */
+const now = () => game.time?.serverTime ?? Date.now();
+
+/** Chat buttons that run an API call: only these, and only on cards the GM's client wrote. */
+const CHAT_API = new Set(["openDirector", "setupHotbar"]);
 
 /** Total candy an actor holds. */
 export const candyCount = actor => itemsWithKey(actor, CANDY).reduce((n, i) => n + (i.system.quantity ?? 0), 0);
@@ -21,8 +29,9 @@ export async function treatBagSetup() {
     const have = candyCount(actor);
     if ( have < 2 ) await giveItem(actor, CANDY, 2 - have);
   }
-  await postCard("The Treat Bag", `<p>Every guest receives two pieces of wrapped candy (${party.map(a => a.name).join(", ")}).</p>`
+  await postCard("The Treat Bag", `<p>Every guest receives two pieces of wrapped candy (${party.map(a => esc(a.name)).join(", ")}).</p>`
     + "<p>Eat one to <strong>reroll a d20</strong>, to <strong>add 1d4</strong> to a roll after seeing it, or to <strong>ask the DM one yes-or-no question</strong> about the case.</p>");
+  return true;
 }
 
 /** GM panel: candy per player with +1 buttons. */
@@ -37,7 +46,7 @@ export class TreatBagPanel extends ApplicationV2 {
 
   /** @override */
   async _renderHTML() {
-    const rows = partyActors().map(a => `<li><img src="${a.img}" alt=""><span class="name">${a.name}</span>`
+    const rows = partyActors().map(a => `<li><img src="${esc(a.img)}" alt=""><span class="name">${esc(a.name)}</span>`
       + `<span class="count">${candyCount(a)}</span>`
       + `<button type="button" data-action="give" data-actor="${a.uuid}" data-tooltip="Give a candy">+1</button></li>`).join("");
     const div = document.createElement("div");
@@ -56,7 +65,7 @@ export class TreatBagPanel extends ApplicationV2 {
     const actor = await fromUuid(target.dataset.actor);
     if ( !actor ) return;
     await giveItem(actor, CANDY, 1);
-    await postCard("A treat!", `<p>${actor.name} earns a piece of candy.</p>`);
+    await postCard("A treat!", `<p>${esc(actor.name)} earns a piece of candy.</p>`);
     this.render();
   }
 }
@@ -82,7 +91,7 @@ export async function onUseActivity(activity) {
   if ( !action || !actor ) return;
   if ( action === "treatReroll" ) return rerollLastD20(actor);
   if ( action === "treatQuestion" ) return postCard("A question for the DM",
-    `<p><strong>${actor.name}</strong> eats a candy and asks the DM one yes-or-no question about the case.</p>`
+    `<p><strong>${esc(actor.name)}</strong> eats a candy and asks the DM one yes-or-no question about the case.</p>`
     + "<div class=\"ravenmoor-buttons ravenmoor-gm-only\"><button type=\"button\" data-ravenmoor=\"answer\" data-answer=\"Yes\">Yes</button>"
     + "<button type=\"button\" data-ravenmoor=\"answer\" data-answer=\"No\">No</button></div>",
     { flags: { type: "question" }, speaker: ChatMessage.getSpeaker({ actor }) });
@@ -124,7 +133,7 @@ async function rerollLastD20(actor) {
 export async function postSaveRequest({ title, ability, dc, text="", actors, fright=false, damage=null, duration=null }) {
   actors ??= partyActors();
   const label = CONFIG.DND5E.abilities[ability]?.label ?? ability;
-  const rows = actors.map(a => `<li data-actor="${a.uuid}"><span class="name">${a.name}</span>`
+  const rows = actors.map((a, i) => `<li data-actor="${a.uuid}" data-row="${i}"><span class="name">${esc(a.name)}</span>`
     + `<button type="button" data-ravenmoor="save">Roll</button>`
     + (fright ? "<button type=\"button\" data-ravenmoor=\"scaredy\" data-tooltip=\"Fail on purpose and play it for laughs. Earn a candy.\">Scaredy-Cat</button>" : "")
     + "<span class=\"result\"></span></li>").join("");
@@ -141,21 +150,39 @@ export const frightSave = () => requireGM() && postSaveRequest({
 });
 
 /**
- * Apply Frightened with a duration.
+ * Apply Frightened. In combat it lasts until the end of the target's next turn (or the given duration); outside
+ * combat there are no turns, so it is flagged to expire after a minute and the GM's client removes it.
  * @param {Actor} actor
  * @param {object} [duration]
  * @param {string} [name]
  */
 export async function applyFrightened(actor, duration=null, name="Frightened") {
+  // A caller-given duration (the Widow's due: until the fight ends) always applies. Otherwise: until the end of the
+  // next turn in combat, or one minute of real time outside it.
+  const scare = !duration && !inCombat(actor);
   return actor.createEmbeddedDocuments("ActiveEffect", [{
     name,
     img: FRIGHT_IMG,
     type: "base",
     statuses: ["frightened"],
-    duration: duration ?? { value: 1, units: "turns", expiry: "turnEnd" },
-    flags: { ravenmoor: { fright: true } }
+    duration: duration ?? (scare ? { value: 6, units: "seconds", expiry: null } : { value: 1, units: "turns", expiry: "turnEnd" }),
+    flags: { ravenmoor: { fright: true, expiresAt: scare ? now() + SCARE_MS : null } }
   }]);
 }
+
+/** Lead GM: remove out-of-combat fright effects whose minute is up. */
+export async function expireScares() {
+  if ( !isLeadGM() ) return;
+  const time = now();
+  for ( const actor of partyActors() ) {
+    const ids = actor.effects.filter(e => e.flags?.ravenmoor?.fright && e.flags.ravenmoor.expiresAt
+      && (e.flags.ravenmoor.expiresAt <= time)).map(e => e.id);
+    if ( ids.length ) await actor.deleteEmbeddedDocuments("ActiveEffect", ids);
+  }
+}
+
+/** Rows already used on this client (guards double-clicks before the GM records them). */
+const used = new Set();
 
 /**
  * Wire up the module's chat card buttons.
@@ -174,15 +201,19 @@ export function onRenderChatMessage(message, html) {
     const actor = row ? await fromUuid(row.dataset.actor) : null;
 
     if ( kind === "answer" ) {
-      if ( !game.user.isGM ) return;
+      if ( !game.user.isGM || flags.answered ) return;
       const content = message.content.replace(/<div class="ravenmoor-buttons ravenmoor-gm-only">[\s\S]*?<\/div>/, "")
-        .replace(/<\/div>$/, `<p class="ravenmoor-answer">The DM answers: <strong>${button.dataset.answer}</strong></p></div>`);
+        .replace(/<\/div>$/, () => `<p class="ravenmoor-answer">The DM answers: <strong>${esc(button.dataset.answer)}</strong></p></div>`);
       return message.update({ content, [`flags.${MODULE_ID}.answered`]: button.dataset.answer });
     }
     if ( kind === "damage" ) {
       if ( !game.user.isGM ) return;
       const roll = await new Roll(button.dataset.formula).evaluate();
       return roll.toMessage({ flavor: "Ravenmoor damage", speaker: { alias: "Ravenmoor Manor" } });
+    }
+    if ( kind === "api" ) {
+      if ( !game.user.isGM || !message.author?.isGM || !CHAT_API.has(button.dataset.fn) ) return;
+      return game.modules.get(MODULE_ID).api[button.dataset.fn]?.();
     }
     if ( kind === "take-lantern" ) {
       const { takeLantern } = await import("./showdown.mjs");
@@ -191,32 +222,55 @@ export function onRenderChatMessage(message, html) {
     if ( !actor ) return;
     if ( !actor.isOwner ) return ui.notifications.warn(`You don't control ${actor.name}.`);
 
+    // One roll or Scaredy-Cat per row (two skeletons share an actor id, so rows are keyed by position).
+    const rowId = row.dataset.row ?? actor.id;
+    const key = `${message.id}:${rowId}`;
+    if ( used.has(key) || flags.done?.[rowId] ) return ui.notifications.info(`${actor.name} has already answered this one.`);
+    used.add(key);
+
     if ( kind === "save" ) {
       const rolls = await actor.rollSavingThrow({ ability: flags.ability, target: flags.dc });
       const total = rolls?.[0]?.total;
-      if ( total === undefined ) return;
+      if ( total === undefined ) {
+        used.delete(key);
+        return;
+      }
       const failed = total < flags.dc;
       if ( failed && flags.fright ) await applyFrightened(actor, flags.duration);
-      if ( game.user.isGM || message.isOwner ) await markRow(message, actor, failed ? `failed (${total})` : `saved (${total})`);
-      return;
+      return recordRow(message, actor, rowId, failed ? `failed (${total})` : `saved (${total})`);
     }
     if ( kind === "scaredy" ) {
       await applyFrightened(actor, flags.duration, "Frightened (Scaredy-Cat)");
       await giveItem(actor, CANDY, 1);
-      await postCard("Scaredy-Cat!", `<p><strong>${actor.name}</strong> fails on purpose, gloriously, and earns a candy.</p>`,
+      await postCard("Scaredy-Cat!", `<p><strong>${esc(actor.name)}</strong> fails on purpose, gloriously, and earns a candy.</p>`,
         { speaker: ChatMessage.getSpeaker({ actor }) });
-      if ( game.user.isGM || message.isOwner ) await markRow(message, actor, "Scaredy-Cat!");
+      return recordRow(message, actor, rowId, "Scaredy-Cat!");
     }
   }));
 }
 
-/** Note a result on a save card row (GM or the card's author only). */
-async function markRow(message, actor, text) {
-  const content = message.content.replace(
-    new RegExp(`(<li data-actor="${actor.uuid.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}">[\\s\\S]*?<span class="result">)[^<]*(</span>)`),
-    `$1${text}$2`
-  );
-  if ( content !== message.content ) await message.update({ content });
+/** Record a row's result: directly on the GM's client, otherwise through the socket. */
+function recordRow(message, actor, rowId, text) {
+  const data = { messageId: message.id, actorUuid: actor.uuid, rowId: String(rowId), text };
+  if ( game.user.isGM ) return markRow(data);
+  game.socket.emit(SOCKET, { action: "markRow", ...data });
+}
+
+/**
+ * GM side: replace the row's buttons with its result and mark the character as done on this card.
+ * @param {{messageId: string, actorUuid: string, text: string}} data
+ */
+export async function markRow({ messageId, actorUuid, rowId, text }) {
+  if ( !game.user.isGM ) return;
+  const message = game.messages.get(messageId);
+  const actor = await fromUuid(actorUuid);
+  rowId = String(rowId ?? "").replace(/[^\w-]/g, "");
+  if ( !message || !actor || !rowId || message.flags?.[MODULE_ID]?.done?.[rowId] ) return;
+  const row = `<li data-actor="${esc(actorUuid)}" data-row="${rowId}"><span class="name">${esc(actor.name)}</span>`
+    + `<span class="result">${esc(text)}</span></li>`;
+  // A function replacement, so "$" in a character's name is never read as a replacement pattern.
+  const content = message.content.replace(new RegExp(`<li data-actor="[^"]*" data-row="${rowId}">[\\s\\S]*?</li>`), () => row);
+  await message.update({ content, [`flags.${MODULE_ID}.done.${rowId}`]: text });
 }
 
 export { gmIds, DialogV2 };

@@ -2,7 +2,7 @@
   "_id": "ju55ASDCcVhTtED0",
   "name": "Lord Silas Ravenmoor",
   "type": "npc",
-  "img": "modules/ravenmoor-manor/assets/tokens/silas.webp",
+  "img": "modules/ravenmoor-manor/assets/portraits/silas.webp",
   "system": {
     "abilities": {
       "str": {
@@ -67,7 +67,7 @@
     },
     "details": {
       "biography": {
-        "value": "<p><strong>Look.</strong> Lord of Ravenmoor, 70s. Thin as a rake, velvet robe, raven-headed cane. Dry, dark humor; far more frightened than he lets on.</p><p><strong>Wants.</strong> His new will read at midnight: the manor to Hollow Brook as an orphanage paid for with the moonsilver, as atonement for Elspeth.</p><p><strong><em>Speak with dead</em> (five questions).</strong></p><ul><li><em>Who killed you?</em> “I saw no one. Only the cold. My tonic tasted of mint.”</li><li><em>Was it the ghost?</em> “Elspeth would never harm me.”</li><li><em>Where is the will?</em> “Gone from the box. I heard the bookcase groan before the dark.”</li><li><em>Who knew about the passage?</em> “Hatch. Crane. And the doctor. I showed him myself when my legs failed.”</li><li><em>Anything else?</em> “Under the chapel... silver. Let it build something good.”</li></ul><p><strong>Lines.</strong></p><ul><li>“If I'm dead before the bell, the old will stands, and that I will not allow.”</li><li>“Elspeth walks tonight, they say. She'll have to wait her turn.”</li><li>“It will disappoint everyone at dinner.”</li></ul><p><strong>Note.</strong> Alive only in Act 1. For Act 2, place a second token named 'Lord Silas Ravenmoor (body)' in his study chair with the Dead status.</p>",
+        "value": "<p><strong>Look.</strong> Lord of Ravenmoor, 70s. Thin as a rake, velvet robe, raven-headed cane. Dry, dark humor; far more frightened than he lets on.</p><p><strong>Wants.</strong> His new will read at midnight: the manor to Hollow Brook as an orphanage paid for with the moonsilver, as atonement for Elspeth.</p><p><strong><em>Speak with dead</em> (five questions).</strong></p><ul><li><em>Who killed you?</em> “I saw no one. Only the cold. My tonic tasted of mint.”</li><li><em>Was it the ghost?</em> “Elspeth would never harm me.”</li><li><em>Where is the will?</em> “Gone from the box. I heard the bookcase groan before the dark.”</li><li><em>Who knew about the passage?</em> “Hatch. Crane. And the doctor. I showed him myself when my legs failed.”</li><li><em>Anything else?</em> “Under the chapel... silver. Let it build something good.”</li></ul><p><strong>Lines.</strong></p><ul><li>“If I&#39;m dead before the bell, the old will stands, and that I will not allow.”</li><li>“Elspeth walks tonight, they say. She&#39;ll have to wait her turn.”</li><li>“It will disappoint everyone at dinner.”</li></ul><p><strong>Note.</strong> Alive only in Act 1. For Act 2, place a second token named &#39;Lord Silas Ravenmoor (body)&#39; in his study chair with the Dead status.</p>",
         "public": ""
       },
       "alignment": "Lawful Neutral",
@@ -369,7 +369,7 @@
       "img": "icons/weapons/staves/staff-simple-carved.webp",
       "system": {
         "description": {
-          "value": "<p>Lord Silas's black walking stick, topped with a silver raven. &quot;To whoever unmasks my killer, should it come to that: my cane, and my thanks.&quot; A fine walking stick worth 50 gp.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-raven-cane\"><p><strong>DM:</strong> Reward from the new will, if it survives. Uses the 2024 club statistics (Light; mastery Slow).</p></section>",
+          "value": "<p>Lord Silas&#39;s black walking stick, topped with a silver raven. &quot;To whoever unmasks my killer, should it come to that: my cane, and my thanks.&quot; A fine walking stick worth 50 gp.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-raven-cane\"><p><strong>DM:</strong> Reward from the new will, if it survives. Uses the 2024 club statistics (Light; mastery Slow).</p></section>",
           "chat": ""
         },
         "source": {
@@ -558,6 +558,8 @@
       "acSource": null,
       "tokenMasked": null,
       "tokenUnmasked": null,
+      "portrait": "modules/ravenmoor-manor/assets/portraits/silas.webp",
+      "portraitUnmasked": null,
       "lair": null,
       "cornered": null
     }

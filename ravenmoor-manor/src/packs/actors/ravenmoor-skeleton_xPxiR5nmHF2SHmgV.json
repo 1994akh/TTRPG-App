@@ -2,7 +2,7 @@
   "_id": "xPxiR5nmHF2SHmgV",
   "name": "Ravenmoor Skeleton",
   "type": "npc",
-  "img": "modules/ravenmoor-manor/assets/tokens/skeleton.webp",
+  "img": "modules/ravenmoor-manor/assets/portraits/skeleton.webp",
   "system": {
     "abilities": {
       "str": {
@@ -69,7 +69,7 @@
     },
     "details": {
       "biography": {
-        "value": "<p><strong>Look.</strong> Long-dead Ravenmoors in rotted finery and rusted family armor, raised by Quill's chalk circle. Run them all on one initiative count. They crumble the moment Quill surrenders.</p>",
+        "value": "<p><strong>Look.</strong> Long-dead Ravenmoors in rotted finery and rusted family armor, raised by Quill&#39;s chalk circle. Run them all on one initiative count. They crumble the moment Quill surrenders.</p>",
         "public": ""
       },
       "alignment": "Lawful Evil",
@@ -622,6 +622,8 @@
       "acSource": "armor scraps",
       "tokenMasked": null,
       "tokenUnmasked": null,
+      "portrait": "modules/ravenmoor-manor/assets/portraits/skeleton.webp",
+      "portraitUnmasked": null,
       "lair": null,
       "cornered": null
     }

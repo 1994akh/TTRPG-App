@@ -5,7 +5,7 @@
   "img": "icons/containers/bags/case-leather-tan.webp",
   "system": {
     "description": {
-      "value": "<p>A worn leather physician's bag: bandages, tinctures, scalpels and a smell of mint and cloves. Quill never lets it out of reach.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-medical-bag\"><p><strong>DM:</strong> False bottom: Investigation DC 15 finds it, or it is found automatically if Quill is searched after the accusation. Detect poison and disease finds a faint trace inside, where an empty vial rolls loose. If he is asked to open it: &quot;Patient records, sir!&quot; A forced search or Sleight of Hand DC 15 finds the will and starts the finale early.</p></section>",
+      "value": "<p>A worn leather physician&#39;s bag: bandages, tinctures, scalpels and a smell of mint and cloves. Quill never lets it out of reach.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-medical-bag\"><p><strong>DM:</strong> False bottom: Investigation DC 15 finds it, or it is found automatically if Quill is searched after the accusation. Detect poison and disease finds a faint trace inside, where an empty vial rolls loose. If he is asked to open it: &quot;Patient records, sir!&quot; A forced search or Sleight of Hand DC 15 finds the will and starts the finale early.</p></section>",
       "chat": ""
     },
     "source": {

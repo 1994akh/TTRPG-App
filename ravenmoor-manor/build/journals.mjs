@@ -5,7 +5,7 @@
  */
 import { marked } from "marked";
 import { IDS } from "./scenes.mjs";
-import { biographyHTML } from "./actors.mjs";
+import { biographyHTML, portraitFor } from "./actors.mjs";
 import { MACROS } from "./macros.mjs";
 import { renderClueTracker } from "../scripts/lib/clue-tracker.mjs";
 import { esc, MODULE_PATH, OWNERSHIP, readJSON, readText, stats } from "./util.mjs";
@@ -16,6 +16,17 @@ const SKILLS = {
 };
 const TOOLS = { alchemist: "Alchemist's Supplies" };
 const LEVEL_ORDER = ["ground", "upper", "below"];
+
+/** Adventure chapter banners (tools/build_banners.py), by chapter title. */
+const BANNERS = [
+  ["At a glance", "banner-arrival.webp"],
+  ["The truth", "banner-widow.webp"],
+  ["Act 1", "banner-masque.webp"],
+  ["The suspects", "suspects.webp"],
+  ["Act 2", "banner-candles.webp"],
+  ["Act 3", "banner-crypt.webp"],
+  ["Endings and epilogue", "banner-dawn.webp"]
+];
 
 /** Name forms to link to each actor, longest first. Quotes appear as &quot; in marked output. */
 const NAME_FORMS = {
@@ -54,6 +65,9 @@ export function checkText(c) {
  * @returns {object}
  */
 function textPage(journal, key, name, content, { sort=0, ownership={ default: -1 }, flags={}, showTitle=true }={}) {
+  // The runtime posts a read-aloud box to chat when the GM double-clicks it; the tooltip says so.
+  content = content.replaceAll("<blockquote class=\"ravenmoor-readaloud\">",
+    "<blockquote class=\"ravenmoor-readaloud\" data-tooltip=\"Double-click to read this aloud in chat\">");
   return {
     _id: IDS.page(journal, key),
     name,
@@ -202,6 +216,9 @@ function handoutHTML(card, handouts, locations) {
     // A notebook page opens with its title line in italics (Handout 4: "Banshee's Breath.").
     html += (card.id === "H4" && i === 0) ? `<p><em>${esc(para)}</em></p>` : `<p>${esc(para)}</p>`;
   }
+  if ( card.id === "H2" ) {
+    html += `<p class="ravenmoor-handout-art"><img src="${MODULE_PATH}/assets/art/suspects.webp" alt="The household in costume"></p>`;
+  }
   if ( card.table ) {
     html += "<table class=\"ravenmoor-table\"><thead><tr>"
       + card.table.columns.map(c => `<th>${esc(c)}</th>`).join("") + "</tr></thead><tbody>"
@@ -275,7 +292,11 @@ function locationHTML(loc, cards, subPins, npcs) {
     }).join(" · ")}</p>`;
   }
   if ( loc.npcs?.length ) {
-    html += `<p class="ravenmoor-npcs"><strong>People:</strong> ${loc.npcs.map(k => actorLink(k, npcs.find(n => n.key === k)?.name ?? k)).join(" · ")}</p>`;
+    html += `<p class="ravenmoor-npcs"><strong>People:</strong> ${loc.npcs.map(k => {
+      const npc = npcs.find(n => n.key === k);
+      const face = npc ? `<img class="ravenmoor-face" src="${MODULE_PATH}/${npc.token}" alt="">` : "";
+      return `${face}${actorLink(k, npc?.name ?? k)}`;
+    }).join(" · ")}</p>`;
   }
   if ( subPins.length ) {
     html += `<p class="ravenmoor-muted"><strong>Map pins on this page:</strong> ${subPins.map(p => `${p.number}. ${esc(p.label)}`).join(" · ")}</p>`;
@@ -291,13 +312,18 @@ function locationHTML(loc, cards, subPins, npcs) {
 function controlsHTML() {
   const rows = MACROS.map(m => `<tr><td>${m.slot ?? ""}</td><td><strong>${esc(m.name)}</strong></td><td>${esc(m.help)}</td></tr>`).join("");
   return "<div class=\"ravenmoor\">"
-    + "<p>Every set piece runs from a macro in the <strong>Ravenmoor</strong> macro folder. Each macro is one line that calls "
-    + "<code>game.modules.get(\"ravenmoor-manor\").api</code>, so the logic updates with the module. Drag the suggested ones "
-    + "to your hotbar; the rest are fine to run from the Macro Directory.</p>"
+    + "<p>The easiest way to run the night is the <strong>Ravenmoor Director</strong> (macro, or <kbd>Shift</kbd>+<kbd>R</kbd>): "
+    + "one window with every set piece below in running order, ticks for what has already happened, and the state of the night "
+    + "(candles, clues, edges, session time). Its <em>Set up my hotbar</em> button puts the suggested macros in the slots below.</p>"
+    + "<p>Every set piece is also a macro in the <strong>Ravenmoor</strong> macro folder. Each macro is one line that calls "
+    + "<code>game.modules.get(\"ravenmoor-manor\").api</code>, so the logic updates with the module.</p>"
+    + "<p><strong>Also handy:</strong> double-click any read-aloud box in these journals to post it to chat for the players. "
+    + "Snuffing a candle can be bound to a key in Configure Controls. <em>Reset the Night</em> puts the map, NPCs and handouts "
+    + "back to the start, for a test run or a replay.</p>"
     + "<table class=\"ravenmoor-table\"><thead><tr><th>Slot</th><th>Macro</th><th>What it does</th></tr></thead>"
     + `<tbody>${rows}</tbody></table>`
     + "<h2>Running order</h2><ol>"
-    + "<li><strong>Before the session:</strong> Treat Bag Setup (2 candy each), then Ravenmoor Settings to set the party size and, if you like, the session start time and sound cues.</li>"
+    + "<li><strong>Before the session:</strong> assign each player their character (User Configuration), then in the Director: Party arrives at the drive, Treat Bag (2 candy each), and Settings for the party size and, if you like, the session clock and sound cues.</li>"
     + "<li><strong>Act 1:</strong> Silas Retires (8:25), Lights Out (8:55), The Body (9:00). The Body lights the twelve candles and starts Act 2.</li>"
     + "<li><strong>Act 2:</strong> click a candle on the Twelve Candles panel after each scene. Reveal Handout whenever a card is found; the Clue Tracker ticks itself.</li>"
     + "<li><strong>Act 3:</strong> the twelfth candle runs Midnight and opens the Accusation. Then Showdown Setup, which builds the combat and the Midnight Bell lair turn.</li>"
@@ -325,8 +351,11 @@ export function buildJournals({ npcs, folders }) {
   const folder = folders.journal;
 
   // 1. Adventure
-  const adventurePages = sections(readText("data/content/adventure.md")).map((s, i) =>
-    textPage("adventure", slug(s.title), s.title, mdToHTML(s.body, cards), { sort: (i + 1) * 1000 }));
+  const adventurePages = sections(readText("data/content/adventure.md")).map((s, i) => {
+    const art = BANNERS.find(([prefix]) => s.title.startsWith(prefix))?.[1];
+    const banner = art ? `<figure class="ravenmoor-banner"><img src="${MODULE_PATH}/assets/art/${art}" alt=""></figure>` : "";
+    return textPage("adventure", slug(s.title), s.title, banner + mdToHTML(s.body, cards), { sort: (i + 1) * 1000 });
+  });
   const adventure = entry("adventure", "Death at Ravenmoor Manor", adventurePages, folder);
 
   // 2. DM Guide
@@ -383,7 +412,10 @@ export function buildJournals({ npcs, folders }) {
   const household = ["morwenna", "edric", "pip", "quill", "bramwell", "crane", "silas", "fennick", "widow"];
   const householdPages = household.map((key, i) => {
     const npc = npcs.find(n => n.key === key);
-    const html = `<div class="ravenmoor"><p class="ravenmoor-header">${esc(npc.role)}</p>`
+    const portraits = [npc.token, npc.tokenUnmasked].filter(Boolean).map(t =>
+      `<img class="ravenmoor-portrait" src="${portraitFor(t)}" alt="${esc(npc.name)}">`).join("");
+    const html = `<div class="ravenmoor ravenmoor-profile"><div class="ravenmoor-portraits">${portraits}</div>`
+      + `<p class="ravenmoor-header">${esc(npc.role.charAt(0).toUpperCase() + npc.role.slice(1))}</p>`
       + `<p>${actorLink(key, `Open ${npc.name}'s sheet`)}</p>${biographyHTML(npc)}</div>`;
     return textPage("household", key, npc.name, html, { sort: (i + 1) * 1000 });
   });

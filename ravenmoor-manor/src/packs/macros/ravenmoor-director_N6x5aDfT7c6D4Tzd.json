@@ -1,0 +1,31 @@
+{
+  "_id": "N6x5aDfT7c6D4Tzd",
+  "name": "Ravenmoor Director",
+  "type": "script",
+  "img": "icons/equipment/head/mask-carved-bird-grey-pink.webp",
+  "scope": "global",
+  "command": "game.modules.get(\"ravenmoor-manor\").api.openDirector();",
+  "folder": null,
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "fn": "openDirector",
+      "slot": 1
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": null,
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!macros!N6x5aDfT7c6D4Tzd"
+}

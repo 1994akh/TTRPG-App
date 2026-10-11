@@ -5,7 +5,7 @@
   "img": "icons/sundries/scrolls/scroll-bound-sealed-black-red.webp",
   "system": {
     "description": {
-      "value": "<p>A scroll sealed in black wax with the Ravenmoor raven. Fennick can confirm it as genuine on sight. Its text is clue card C14.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-new-will\"><p><strong>DM:</strong> Hidden in the false bottom of Quill's medical bag. Quill means to burn it in the crypt brazier from round 3 of the showdown. Whether it survives decides the ending.</p></section>",
+      "value": "<p>A scroll sealed in black wax with the Ravenmoor raven. Fennick can confirm it as genuine on sight. Its text is clue card C14.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-new-will\"><p><strong>DM:</strong> Hidden in the false bottom of Quill&#39;s medical bag. Quill means to burn it in the crypt brazier from round 3 of the showdown. Whether it survives decides the ending.</p></section>",
       "chat": ""
     },
     "source": {

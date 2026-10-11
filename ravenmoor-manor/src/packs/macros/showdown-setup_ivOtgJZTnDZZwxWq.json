@@ -6,14 +6,14 @@
   "scope": "global",
   "command": "game.modules.get(\"ravenmoor-manor\").api.showdownSetup();",
   "folder": null,
-  "sort": 8000,
+  "sort": 9000,
   "ownership": {
     "default": 0
   },
   "flags": {
     "ravenmoor": {
       "fn": "showdownSetup",
-      "slot": 8
+      "slot": 9
     }
   },
   "_stats": {
