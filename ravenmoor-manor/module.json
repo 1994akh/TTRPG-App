@@ -3,7 +3,7 @@
   "title": "Death at Ravenmoor Manor",
   "description": "A three-hour Halloween murder mystery for 5-6 level 5 characters (D&D 2024 rules): a gothic manor on three floors, six suspects, nineteen clues and handouts, and one climactic fight in the chapel crypt.",
   "version": "1.0.0",
-  "authors": [{ "name": "Your Name" }],
+  "authors": [{ "name": "Scuba Steve" }],
   "compatibility": { "minimum": "14", "verified": "14.368" },
   "relationships": {
     "systems": [{ "id": "dnd5e", "type": "system", "compatibility": { "minimum": "6.0.0", "verified": "6.0.6" } }]
