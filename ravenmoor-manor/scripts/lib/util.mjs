@@ -136,14 +136,19 @@ export const itemsWithKey = (actor, key) => actor?.items.filter(i => rm(i).key =
 
 /** Player characters: each player's assigned character, plus any player-owned character actors. */
 /**
- * The party: each player's assigned character. Only when no player has an assigned character does it fall back to
- * player-owned character actors, so backup and retired characters stay out of the showdown and the Treat Bag.
+ * The party: each player's assigned character (User Configuration). A player with no assigned character is
+ * represented by the characters they own, so a partly assigned table loses nobody; assigning characters keeps
+ * backup and retired characters out of the showdown and the Treat Bag.
  * @returns {Actor[]}
  */
 export function partyActors() {
-  const assigned = new Set(game.users.filter(u => !u.isGM && u.character).map(u => u.character));
-  if ( assigned.size ) return [...assigned];
-  return game.actors.filter(a => (a.type === "character") && a.hasPlayerOwner);
+  const players = game.users.filter(u => !u.isGM);
+  const party = new Set(players.filter(u => u.character).map(u => u.character));
+  // A player without an assigned character still counts with the characters they own.
+  for ( const user of players.filter(u => !u.character) ) {
+    for ( const a of game.actors ) if ( (a.type === "character") && a.testUserPermission(user, "OWNER") ) party.add(a);
+  }
+  return [...party];
 }
 
 /** The actor a user acts as: their controlled token, else their assigned character. */
@@ -162,16 +167,7 @@ export function inCombat(actor) {
 /*  Chat and sound                              */
 /* -------------------------------------------- */
 
-/**
- * Escape text for HTML. Actor and user names are player-controlled, so every name that goes into chat or a window
- * goes through this.
- * @param {string} text
- * @returns {string}
- */
-export function esc(text) {
-  return String(text ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
-    .replaceAll("\"", "&quot;").replaceAll("'", "&#39;");
-}
+export { escapeHTML as esc } from "./html.mjs";
 
 export const gmIds = () => game.users.filter(u => u.isGM).map(u => u.id);
 

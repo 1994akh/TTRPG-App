@@ -64,6 +64,7 @@ export async function partyArrives() {
   await placeParty("ground", CONTENT.partyStart.ground, DRIVE_OFFSETS);
   if ( !scene.active ) await scene.activate();
   await canvas.animatePan?.({ x: CONTENT.partyStart.ground.x + 100, y: CONTENT.partyStart.ground.y, scale: 0.8 });
+  return true;
 }
 
 /** Put the suggested Ravenmoor macros on this GM's hotbar. */
@@ -92,10 +93,19 @@ async function adventureSource() {
   return adventure?.toObject() ?? null;
 }
 
-/** Replace world documents with their compendium originals, keeping their ids so every link still works. */
-async function restore(cls, current, sources) {
-  for ( const doc of current ) if ( doc ) await doc.delete();
-  if ( sources.length ) await cls.implementation.createDocuments(sources, { keepId: true });
+/**
+ * Put world documents back to their compendium originals. Existing documents are overwritten in place, the way
+ * Foundry's own Adventure import updates documents that already exist (no diff, no recursive merge), so nothing is
+ * ever deleted; missing ones are created with their original ids so every link and map pin still works.
+ * @param {typeof Document} cls
+ * @param {WorldCollection} collection
+ * @param {object[]} sources
+ */
+async function restore(cls, collection, sources) {
+  const existing = sources.filter(s => collection.has(s._id));
+  const missing = sources.filter(s => !collection.has(s._id));
+  if ( existing.length ) await cls.implementation.updateDocuments(existing, { diff: false, recursive: false, noHook: true });
+  if ( missing.length ) await cls.implementation.createDocuments(missing, { keepId: true });
 }
 
 /** Director / macro: put the adventure back to its starting state. */
@@ -133,15 +143,18 @@ export async function resetNight() {
     const combats = game.combats.filter(c => c.flags?.ravenmoor?.showdown || (scene && (c.scene?.id === scene.id)));
     for ( const c of combats ) await c.delete();
     await resetSettings();
+    // Quill's mask, portrait and Hit Points, and the crypt minions, as before any fight.
+    const { restoreFoes } = await import("./showdown.mjs");
+    await restoreFoes();
     done.push("night state");
   }
   if ( choice.npcs ) {
-    await restore(Actor, source.actors.map(a => game.actors.get(a._id)), source.actors);
+    await restore(Actor, game.actors, source.actors);
     done.push("NPCs");
   }
   if ( choice.handouts ) {
     const handouts = source.journal.filter(j => j._id === CONTENT.ids.journals.handouts);
-    await restore(JournalEntry, handouts.map(j => game.journal.get(j._id)), handouts);
+    await restore(JournalEntry, game.journal, handouts);
     if ( !choice.state ) await setSetting("clues", {});
     done.push("handouts");
   }
@@ -156,12 +169,11 @@ export async function resetNight() {
     done.push("party items and effects");
   }
   if ( choice.map ) {
-    const old = mainScene();
-    const wasActive = !!old?.active;
-    const data = source.scenes.find(s => s._id === CONTENT.ids.scene);
-    await restore(Scene, [old], [data]);
+    const wasActive = !!mainScene()?.active;
+    const data = { ...source.scenes.find(s => s._id === CONTENT.ids.scene), active: wasActive };
+    await restore(Scene, game.scenes, [data]);
     const scene = mainScene();
-    if ( wasActive || !game.scenes.active ) await scene?.activate();
+    if ( !scene?.active && !game.scenes.active ) await scene?.activate();
     if ( partyActors().length ) await placeParty("ground", CONTENT.partyStart.ground, DRIVE_OFFSETS);
     done.push("map");
   }

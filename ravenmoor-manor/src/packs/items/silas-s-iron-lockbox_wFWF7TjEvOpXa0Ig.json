@@ -5,7 +5,7 @@
   "img": "icons/containers/chest/chest-reinforced-steel-walnut-brown.webp",
   "system": {
     "description": {
-      "value": "<p>A small iron lockbox from Silas's desk. Shown open in Scene 2 with the sealed will inside; found open and empty in Scene 5.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-lockbox\"><p><strong>DM:</strong> Scenery and a prop; it does not need to be picked up.</p></section>",
+      "value": "<p>A small iron lockbox from Silas&#39;s desk. Shown open in Scene 2 with the sealed will inside; found open and empty in Scene 5.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-lockbox\"><p><strong>DM:</strong> Scenery and a prop; it does not need to be picked up.</p></section>",
       "chat": ""
     },
     "source": {

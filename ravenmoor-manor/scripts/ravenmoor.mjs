@@ -19,7 +19,9 @@ import {
 } from "./lib/showdown.mjs";
 import { maybeWelcome, openDirector, refreshDirector } from "./lib/director.mjs";
 import { partyArrives, resetNight, resetSettings, setupHotbar } from "./lib/session.mjs";
-import { esc, getSetting, isLeadGM, MODULE_ID, requireGM, setSetting, SOCKET } from "./lib/util.mjs";
+import { CONTENT, esc, getSetting, isLeadGM, MODULE_ID, requireGM, setSetting, SOCKET } from "./lib/util.mjs";
+
+const CONTENT_SCENE_ID = CONTENT.ids.scene;
 
 /** Macro: module settings in one dialog. */
 async function openSettings() {
@@ -167,8 +169,15 @@ for ( const hook of ["createSetting", "updateSetting"] ) {
     if ( setting.key?.startsWith(`${MODULE_ID}.`) ) refreshDirector();
   });
 }
+// Map changes count only on the Ravenmoor scene (a token step elsewhere never re-renders the Director).
+const onRavenmoorScene = doc => {
+  const scene = doc?.parent?.parent ?? doc?.parent ?? doc?.scene;
+  return !scene || (scene.id === CONTENT_SCENE_ID);
+};
 for ( const hook of ["updateWall", "updateTile", "updateToken", "updateRegionBehavior", "createCombat", "deleteCombat"] ) {
-  Hooks.on(hook, () => refreshDirector());
+  Hooks.on(hook, doc => {
+    if ( onRavenmoorScene(doc) ) refreshDirector();
+  });
 }
 
 /**
@@ -178,6 +187,8 @@ for ( const hook of ["updateWall", "updateTile", "updateToken", "updateRegionBeh
 function readAloudToChat(event) {
   const box = event.target.closest?.("blockquote.ravenmoor-readaloud");
   if ( !box || box.closest(".chat-message, #chat-log, .chat-log") ) return;
+  // Not while editing: there a double-click selects a word.
+  if ( box.isContentEditable || box.closest("[contenteditable='true'], .editor-content, prose-mirror, .ProseMirror") ) return;
   event.preventDefault();
   window.getSelection?.()?.removeAllRanges();
   ChatMessage.implementation.create({

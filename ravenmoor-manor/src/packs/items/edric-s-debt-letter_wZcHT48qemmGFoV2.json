@@ -5,7 +5,7 @@
   "img": "icons/sundries/documents/envelope-sealed-red-tan.webp",
   "system": {
     "description": {
-      "value": "<p>An envelope sealed in green wax, stamped with a mortar and pestle. Its text is Handout 3.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-debt-letter\"><p><strong>DM:</strong> Starts in Edric's inventory. The seal matches Quill's signet ring and the green wax in his room (C10).</p></section>",
+      "value": "<p>An envelope sealed in green wax, stamped with a mortar and pestle. Its text is Handout 3.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-debt-letter\"><p><strong>DM:</strong> Starts in Edric&#39;s inventory. The seal matches Quill&#39;s signet ring and the green wax in his room (C10).</p></section>",
       "chat": ""
     },
     "source": {

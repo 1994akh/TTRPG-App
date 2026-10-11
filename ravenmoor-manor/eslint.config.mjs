@@ -13,6 +13,11 @@ export default [
     rules: { "no-undef": "error", "no-unused-vars": ["error", { args: "none", ignoreRestSiblings: true }] }
   },
   {
+    files: ["tests/**/*.mjs"],
+    languageOptions: { ecmaVersion: 2024, sourceType: "module", globals: { ...globals.node, ...globals.browser, ...FOUNDRY } },
+    rules: { "no-undef": "error", "no-unused-vars": ["error", { args: "none", ignoreRestSiblings: true }] }
+  },
+  {
     files: ["build/**/*.mjs", "eslint.config.mjs"],
     languageOptions: { ecmaVersion: 2024, sourceType: "module", globals: { ...globals.node } },
     rules: { "no-undef": "error", "no-unused-vars": ["error", { args: "none", ignoreRestSiblings: true }] }

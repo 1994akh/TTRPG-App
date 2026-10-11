@@ -5,7 +5,7 @@
   "img": "icons/weapons/staves/staff-simple-carved.webp",
   "system": {
     "description": {
-      "value": "<p>Lord Silas's black walking stick, topped with a silver raven. &quot;To whoever unmasks my killer, should it come to that: my cane, and my thanks.&quot; A fine walking stick worth 50 gp.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-raven-cane\"><p><strong>DM:</strong> Reward from the new will, if it survives. Uses the 2024 club statistics (Light; mastery Slow).</p></section>",
+      "value": "<p>Lord Silas&#39;s black walking stick, topped with a silver raven. &quot;To whoever unmasks my killer, should it come to that: my cane, and my thanks.&quot; A fine walking stick worth 50 gp.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-raven-cane\"><p><strong>DM:</strong> Reward from the new will, if it survives. Uses the 2024 club statistics (Light; mastery Slow).</p></section>",
       "chat": ""
     },
     "source": {

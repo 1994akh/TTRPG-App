@@ -95,6 +95,17 @@ The package's tokens are simple placeholder art (its generator says so). The mod
 - The Household pages show each portrait; Locations pages show a small token face beside each person; Handout 2 shows the household strip above its table (the handout's text is unchanged); the *Introduce the suspects* Director button and macro post the six portraits with Handout 2's "who they are" and costume columns to chat for Scene 3.
 - To use commissioned or hand-drawn art instead, replace the files in `assets/portraits` (and `assets/tokens`) keeping the same names, and rebuild; nothing else changes.
 
+## Tests
+
+`npm test` (also part of `npm run check`) runs 41 tests with Node's built-in runner:
+
+- `tests/harness.mjs` builds a simulated Foundry world from the module's own generated Adventure (the real scene, actors, journals, items and macros), with five players and their characters, and loads the unmodified runtime. It imitates the parts of Foundry the runtime calls: documents with dot-path updates and embedded collections, hooks, settings, chat, dialogs answered from a queue, combats, sockets, fixed dice, and ApplicationV2 rendering into jsdom.
+- `tests/night.test.mjs` plays the whole night in order: arrival, the Treat Bag, introducing the suspects, Silas retiring, Lights Out with a Scaredy-Cat, The Body, handouts and the secret door, all twelve candles with their escalations and Midnight, the accusation, Showdown Setup (and re-running it), every lair round, the will burning, the Widow, the unmasking and the epilogue.
+- `tests/reset.test.mjs` plays part of a night and checks that Reset the Night puts every part back with the same ids.
+- `tests/tools.test.mjs` covers the map-click tools, item hand-offs, candy, read-aloud to chat, the hotbar and the Director's guards; `tests/units.test.mjs` the small pieces; `tests/package.test.mjs` reads the compiled LevelDB packs back and checks the release zip contains everything the manifest and documents reference.
+
+The harness is not Foundry: it proves the module's own logic and data, not that the Foundry v14 and dnd5e 6.0.6 APIs behave as the runtime expects. Those still need the in-world checks below.
+
 ## Not verified in a running Foundry
 
 Everything above was built and statically checked (`npm run check`: ESLint with `no-undef`/`no-unused-vars` over the runtime and build code, then the acceptance checks), but this environment has no Foundry v14 server. Before running it at the table, test in a v14.368 + dnd5e 6.0.6 world:

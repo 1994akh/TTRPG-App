@@ -5,7 +5,7 @@
   "img": "icons/consumables/plants/herb-marjoram-basil-oregano-leaf-bunch-green.webp",
   "system": {
     "description": {
-      "value": "<p>A bitter sprig Pip presses into your hand before the fight. Chew it and you have Advantage on saving throws against Banshee's Breath until the fight ends.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-counter-herb\"><p><strong>DM:</strong> The How Unmasking Edge. The 'Grant Unmasking Edges' macro hands one to every player character.</p></section>",
+      "value": "<p>A bitter sprig Pip presses into your hand before the fight. Chew it and you have Advantage on saving throws against Banshee&#39;s Breath until the fight ends.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-counter-herb\"><p><strong>DM:</strong> The How Unmasking Edge. The &#39;Grant Unmasking Edges&#39; macro hands one to every player character.</p></section>",
       "chat": ""
     },
     "source": {

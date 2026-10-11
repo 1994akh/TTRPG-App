@@ -3,8 +3,7 @@
  * ticked), so it must not depend on Foundry globals.
  */
 
-const escape = text => String(text ?? "")
-  .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\"", "&quot;");
+import { escapeHTML as escape } from "./html.mjs";
 
 /**
  * @param {object} conclusions        handouts.json `conclusions`.

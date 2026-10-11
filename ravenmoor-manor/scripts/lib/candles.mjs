@@ -2,7 +2,7 @@
  * House rule 1: the Twelve Candles clock. Everyone sees the panel; only the GM can snuff.
  */
 import {
-  actorFor, CONTENT, getSetting, giveItem, isLeadGM, itemsWithKey, LEVEL_ELEVATION, levelId, mainScene, MODULE_ID,
+  actorFor, CONTENT, esc, getSetting, giveItem, isLeadGM, itemsWithKey, LEVEL_ELEVATION, levelId, mainScene, MODULE_ID,
   postCard, requireGM, setSetting, tokensFor, whisperGM
 } from "./util.mjs";
 
@@ -29,8 +29,8 @@ export function elapsed() {
 /** GM reminders on the candles that trigger something (by snuff order). */
 function milestone(n) {
   if ( n === TOTAL ) return "Midnight: the bell tolls and the accusation begins";
-  const esc = CONTENT.text.escalations[n];
-  return esc ? `Escalation: ${esc.title}` : null;
+  const escalation = CONTENT.text.escalations[n];
+  return escalation ? `Escalation: ${escalation.title}` : null;
 }
 
 export class CandlePanel extends ApplicationV2 {
@@ -68,7 +68,7 @@ export class CandlePanel extends ApplicationV2 {
       const note = gm ? milestone(n) : null;
       const cls = ["ravenmoor-candle", isLit ? "lit" : "snuffed", puff.has(i) ? "puff" : "", note ? "milestone" : ""].join(" ");
       const tip = [gm && isLit && (i === next) ? "Snuff this candle" : null, note].filter(Boolean).join(" · ");
-      const attrs = (gm && isLit && (i === next) ? "data-action=\"snuff\" " : "") + (tip ? `data-tooltip="${tip.replaceAll("\"", "&quot;")}"` : "");
+      const attrs = (gm && isLit && (i === next) ? "data-action=\"snuff\" " : "") + (tip ? `data-tooltip="${esc(tip)}"` : "");
       return `<button type="button" class="${cls}" ${attrs} ${gm ? "" : "disabled"} aria-label="Candle ${n}${isLit ? ", lit" : ", out"}">`
         + "<span class=\"wick\"></span><span class=\"flame\"></span><span class=\"wax\"></span><span class=\"wisp\"></span>"
         + `<span class="num">${n}</span></button>`;
@@ -172,8 +172,10 @@ export async function snuffCandle(count=1) {
  * @param {number} n  Which candle went out, 1-12.
  */
 async function onCandleSnuffed(n) {
-  const esc = CONTENT.text.escalations[n];
-  if ( esc ) await whisperGM(`Escalation · ${esc.title}`, `<p>${esc.text}</p>`, { type: "escalation", candle: n });
+  const escalation = CONTENT.text.escalations[n];
+  if ( escalation ) {
+    await whisperGM(`Escalation · ${escalation.title}`, `<p>${escalation.text}</p>`, { type: "escalation", candle: n });
+  }
   if ( n === 8 ) await plantLockboxKey();
   if ( n === 11 ) await placeFennick();
   if ( n === TOTAL ) {

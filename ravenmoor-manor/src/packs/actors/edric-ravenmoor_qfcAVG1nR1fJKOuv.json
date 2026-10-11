@@ -77,7 +77,7 @@
     },
     "details": {
       "biography": {
-        "value": "<p><strong>Look.</strong> Eldest son, 30s. Flushed face, black cloak with the collar hitched over his head, grinning papier-mache pumpkin head under one arm. Usually holding a glass.</p><p><strong>Wants.</strong> His inheritance, to pay debts that terrify him. Underneath, his father's approval.</p><p><strong>Secret.</strong> Ruinous gambling debts. Letter H3 in his coat says a new creditor bought them all; sealed in green wax with a mortar-and-pestle stamp. He spent 8:30-9:00 alone in the wine cellar (true).</p><p><strong>Knows.</strong> Around 8:40 he heard footsteps and dripping behind the cellar's bricked-up arch. Goes pale when he learns Quill's signet ring bears a mortar and pestle. Quill frames him at candle 8.</p><p><strong>Plays as.</strong> Bluster, self-pity and bad jokes.</p><p><strong>Lines.</strong></p><ul><li>“I'd say I lost my head, but that's just the costume.”</li><li>“Father and I argued about money. We always argued about money. That's not murder, that's family.”</li></ul>",
+        "value": "<p><strong>Look.</strong> Eldest son, 30s. Flushed face, black cloak with the collar hitched over his head, grinning papier-mache pumpkin head under one arm. Usually holding a glass.</p><p><strong>Wants.</strong> His inheritance, to pay debts that terrify him. Underneath, his father&#39;s approval.</p><p><strong>Secret.</strong> Ruinous gambling debts. Letter H3 in his coat says a new creditor bought them all; sealed in green wax with a mortar-and-pestle stamp. He spent 8:30-9:00 alone in the wine cellar (true).</p><p><strong>Knows.</strong> Around 8:40 he heard footsteps and dripping behind the cellar&#39;s bricked-up arch. Goes pale when he learns Quill&#39;s signet ring bears a mortar and pestle. Quill frames him at candle 8.</p><p><strong>Plays as.</strong> Bluster, self-pity and bad jokes.</p><p><strong>Lines.</strong></p><ul><li>“I&#39;d say I lost my head, but that&#39;s just the costume.”</li><li>“Father and I argued about money. We always argued about money. That&#39;s not murder, that&#39;s family.”</li></ul>",
         "public": ""
       },
       "alignment": "Chaotic Neutral",
@@ -632,7 +632,7 @@
       "img": "icons/sundries/documents/envelope-sealed-red-tan.webp",
       "system": {
         "description": {
-          "value": "<p>An envelope sealed in green wax, stamped with a mortar and pestle. Its text is Handout 3.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-debt-letter\"><p><strong>DM:</strong> Starts in Edric's inventory. The seal matches Quill's signet ring and the green wax in his room (C10).</p></section>",
+          "value": "<p>An envelope sealed in green wax, stamped with a mortar and pestle. Its text is Handout 3.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-debt-letter\"><p><strong>DM:</strong> Starts in Edric&#39;s inventory. The seal matches Quill&#39;s signet ring and the green wax in his room (C10).</p></section>",
           "chat": ""
         },
         "source": {

@@ -40,18 +40,7 @@ export function assetPath(rel) {
   return `${MODULE_PATH}/${rel}`;
 }
 
-/**
- * Escape text for HTML.
- * @param {string} text
- * @returns {string}
- */
-export function esc(text) {
-  return String(text ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll("\"", "&quot;");
-}
+export { escapeHTML as esc } from "../scripts/lib/html.mjs";
 
 /**
  * Document stats block shared by every generated document.

@@ -122,6 +122,7 @@ export async function showdownSetup() {
   await setSetting("willBurnable", false);
   await setSetting("quillUnmasked", false);
   await setSetting("willBurned", false);
+  await restoreFoes();
 
   // 1. The party, just below the crypt stairs.
   const party = partyActors();
@@ -197,10 +198,43 @@ export async function showdownSetup() {
     flags: { ravenmoor: { bell: true } }
   }]);
 
+  await setSetting("beats", { ...getSetting("beats"), showdownSetup: true });
   await postCard("The showdown", readAloudHTML(CONTENT.text.showdown), { css: "ravenmoor-ghost" });
   await whisperGM("Showdown ready", `<p>${partySize} characters: Quill, ${scarecrows.length} scarecrow${scarecrows.length === 1 ? "" : "s"}, `
     + `${skeletons.length} skeletons. Edges: ${Object.entries(edges).filter(([, v]) => v).map(([k]) => k).join(", ") || "none"}.</p>`
     + "<p>Roll initiative for everyone. The Midnight Bell acts on 20 (losing ties) and runs the next lair action.</p>");
+}
+
+/**
+ * Put Quill and the crypt's minions back as they were before any fight: full Hit Points, no fright, masked (token
+ * and sheet portrait), scarecrows disguised, skeletons whole. Used by Showdown Setup and Reset the Night.
+ */
+export async function restoreFoes() {
+  const scene = mainScene();
+  const quill = actorFor("quill");
+  const masked = quill?.flags?.ravenmoor?.tokenMasked;
+  const portrait = quill?.flags?.ravenmoor?.portrait;
+  if ( quill && portrait && (quill.img !== portrait) ) await quill.update({ img: portrait });
+  if ( !scene ) return;
+  for ( const t of tokensFor("quill") ) {
+    const actor = t.actor;
+    if ( !actor ) continue;
+    const hp = actor.system.attributes?.hp;
+    if ( hp && (hp.value !== hp.max) ) await actor.update({ "system.attributes.hp.value": hp.max });
+    const frights = actor.effects.filter(e => e.flags?.ravenmoor?.fright).map(e => e.id);
+    if ( frights.length ) await actor.deleteEmbeddedDocuments("ActiveEffect", frights);
+  }
+  const updates = [
+    ...tokensFor("quill").map(t => ({ _id: t.id, ...(masked ? { "texture.src": masked } : {}), disposition: NEUTRAL })),
+    ...tokensFor("scarecrow").map(t => ({ _id: t.id, name: "Scarecrow", disposition: NEUTRAL, rotation: 0,
+      displayName: CONST.TOKEN_DISPLAY_MODES.NONE, displayBars: CONST.TOKEN_DISPLAY_MODES.NONE, "flags.ravenmoor.animated": false })),
+    ...tokensFor("skeleton", f => !f.lair).map(t => ({ _id: t.id, alpha: 1 }))
+  ];
+  if ( updates.length ) await scene.updateEmbeddedDocuments("Token", updates);
+  for ( const t of [...tokensFor("scarecrow"), ...tokensFor("skeleton")] ) {
+    const hp = t.actor?.system.attributes?.hp;
+    if ( hp && (hp.value !== hp.max) ) await t.actor.update({ "system.attributes.hp.value": hp.max });
+  }
 }
 
 /**

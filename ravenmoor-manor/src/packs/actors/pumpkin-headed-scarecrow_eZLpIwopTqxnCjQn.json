@@ -69,7 +69,7 @@
     },
     "details": {
       "biography": {
-        "value": "<p><strong>Look.</strong> Two of Bramwell's pumpkin-patch scarecrows: stitched burlap, straw bursting at the seams, jack-o'-lantern heads lit from within. Animated by Quill's chalk-circle ritual; they wait motionless in the crypt until the showdown. Fire is their worst enemy.</p>",
+        "value": "<p><strong>Look.</strong> Two of Bramwell&#39;s pumpkin-patch scarecrows: stitched burlap, straw bursting at the seams, jack-o&#39;-lantern heads lit from within. Animated by Quill&#39;s chalk-circle ritual; they wait motionless in the crypt until the showdown. Fire is their worst enemy.</p>",
         "public": ""
       },
       "alignment": "Unaligned",
@@ -721,7 +721,7 @@
       "img": "systems/dnd5e/icons/svg/activity/save.svg",
       "system": {
         "description": {
-          "value": "<p>The candle in the scarecrow's carved head blazes. Wisdom Saving Throw: DC 13, one creature within 30 feet that can see the scarecrow. Failure: The target has the Frightened condition until the end of its next turn, and its Speed is 0 while Frightened this way.</p>",
+          "value": "<p>The candle in the scarecrow&#39;s carved head blazes. Wisdom Saving Throw: DC 13, one creature within 30 feet that can see the scarecrow. Failure: The target has the Frightened condition until the end of its next turn, and its Speed is 0 while Frightened this way.</p>",
           "chat": ""
         },
         "source": {
@@ -875,7 +875,7 @@
             "units": "turns",
             "expiry": "turnEnd"
           },
-          "description": "<p>until the end of the target's next turn. Speed 0 while Frightened this way.</p>",
+          "description": "<p>until the end of the target&#39;s next turn. Speed 0 while Frightened this way.</p>",
           "origin": null,
           "tint": "#ffffff",
           "sort": 0,

@@ -35,6 +35,7 @@ export async function introduceSuspects() {
     + `<img src="${s.portrait}" alt="${esc(s.name)}"><figcaption><strong>${esc(s.name)}</strong>`
     + `<span>${esc(s.who)}</span><em>Costume: ${esc(s.costume)}</em></figcaption></figure>`).join("");
   await postCard("The Hallows' feast: the household", `<div class="ravenmoor-suspects">${cards}</div>`, { css: "ravenmoor-gallery" });
+  return true;
 }
 
 /** 8:25 PM: Silas locks himself in his study. */

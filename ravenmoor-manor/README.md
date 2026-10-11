@@ -28,7 +28,8 @@ Requires Node 20+.
 ```sh
 npm install
 npm run build     # generate src/packs/** and compile the LevelDB packs into packs/**
-npm run check     # static checks: counts, links, assets, stat blocks, macros
+npm run check     # lint, static checks (counts, links, assets, stat blocks, macros) and the tests
+npm test          # just the tests: the whole night played in a simulated Foundry world
 npm run package   # dist/ravenmoor-manor.zip
 ```
 

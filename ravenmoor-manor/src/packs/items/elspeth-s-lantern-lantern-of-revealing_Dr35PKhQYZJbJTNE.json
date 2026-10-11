@@ -81,7 +81,7 @@
       "max": "1"
     },
     "description": {
-      "value": "<p><em>Elspeth's old lantern of green glass, found dry and warm on her memorial stone at dawn.</em></p><p><em>Wondrous Item, Uncommon</em></p><p>While lit, this hooded lantern burns for 6 hours on 1 pint of oil, shedding Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. &amp;Reference[Invisible apply=false] creatures and objects are visible as long as they are in the lantern's Bright Light. You can take a Utilize action to lower the hood, reducing the lantern's light to Dim Light in a 5-foot radius.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-elspeths-lantern\"><p><strong>DM:</strong> Epilogue reward for every ending. Prefer the dnd5e compendium copy and only override name, image and light colour.</p></section>",
+      "value": "<p><em>Elspeth&#39;s old lantern of green glass, found dry and warm on her memorial stone at dawn.</em></p><p><em>Wondrous Item, Uncommon</em></p><p>While lit, this hooded lantern burns for 6 hours on 1 pint of oil, shedding Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. &amp;Reference[Invisible apply=false] creatures and objects are visible as long as they are in the lantern's Bright Light. You can take a Utilize action to lower the hood, reducing the lantern's light to Dim Light in a 5-foot radius.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-elspeths-lantern\"><p><strong>DM:</strong> Epilogue reward for every ending. Prefer the dnd5e compendium copy and only override name, image and light colour.</p></section>",
       "chat": ""
     },
     "identifier": "elspeths-lantern",

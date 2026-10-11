@@ -5,7 +5,7 @@
   "img": "icons/sundries/misc/key-short-red.webp",
   "system": {
     "description": {
-      "value": "<p>An old iron key on a ribbon. It hung on Silas's watch chain at 7:00 and was gone by 9:00.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-lockbox-key\"><p><strong>DM:</strong> Quill took it at 8:35 and plants it in Edric's coat at candle 8. Insight DC 13 senses that Quill is performing.</p></section>",
+      "value": "<p>An old iron key on a ribbon. It hung on Silas&#39;s watch chain at 7:00 and was gone by 9:00.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-lockbox-key\"><p><strong>DM:</strong> Quill took it at 8:35 and plants it in Edric&#39;s coat at candle 8. Insight DC 13 senses that Quill is performing.</p></section>",
       "chat": ""
     },
     "source": {

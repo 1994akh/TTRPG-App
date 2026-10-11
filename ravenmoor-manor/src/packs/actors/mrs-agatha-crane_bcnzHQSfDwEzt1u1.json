@@ -74,7 +74,7 @@
     },
     "details": {
       "biography": {
-        "value": "<p><strong>Look.</strong> Housekeeper of forty years, 70s. Iron-grey bun, housekeeper's black, a ring of keys you hear two rooms away. She notices everything.</p><p><strong>Wants.</strong> Elspeth remembered and the truth told.</p><p><strong>Secret.</strong> She places white lilies (Elspeth's flower) in the study every Hallows' Eve; they were on the desk at 7:00. She never forgave Silas for the night Elspeth drowned.</p><p><strong>Knows.</strong> The 'ghost' that brushed past her on the servants' stair at 8:57 wore men's buckled boots and smelled of mint. At 8:45 Quill's room was dark and empty. The doctor always adds 'his drops' himself. The tonic glass is unwashed in the scullery.</p><p><strong>Plays as.</strong> Stern and precise; softens when anyone speaks kindly of Elspeth.</p><p><strong>Lines.</strong></p><ul><li>“I've kept this house forty years. I know every footstep in it, and that ghost walked like a man.”</li><li>“The doctor always added his own drops. Always.”</li></ul>",
+        "value": "<p><strong>Look.</strong> Housekeeper of forty years, 70s. Iron-grey bun, housekeeper&#39;s black, a ring of keys you hear two rooms away. She notices everything.</p><p><strong>Wants.</strong> Elspeth remembered and the truth told.</p><p><strong>Secret.</strong> She places white lilies (Elspeth&#39;s flower) in the study every Hallows&#39; Eve; they were on the desk at 7:00. She never forgave Silas for the night Elspeth drowned.</p><p><strong>Knows.</strong> The &#39;ghost&#39; that brushed past her on the servants&#39; stair at 8:57 wore men&#39;s buckled boots and smelled of mint. At 8:45 Quill&#39;s room was dark and empty. The doctor always adds &#39;his drops&#39; himself. The tonic glass is unwashed in the scullery.</p><p><strong>Plays as.</strong> Stern and precise; softens when anyone speaks kindly of Elspeth.</p><p><strong>Lines.</strong></p><ul><li>“I&#39;ve kept this house forty years. I know every footstep in it, and that ghost walked like a man.”</li><li>“The doctor always added his own drops. Always.”</li></ul>",
         "public": ""
       },
       "alignment": "Lawful Good",
@@ -191,7 +191,7 @@
       "img": "systems/dnd5e/icons/svg/activity/utility.svg",
       "system": {
         "description": {
-          "value": "<p>Mrs. Crane carries keys to every lock in Ravenmoor Manor except Silas's lockbox.</p>",
+          "value": "<p>Mrs. Crane carries keys to every lock in Ravenmoor Manor except Silas&#39;s lockbox.</p>",
           "chat": ""
         },
         "source": {

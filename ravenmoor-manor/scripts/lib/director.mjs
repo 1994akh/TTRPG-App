@@ -21,7 +21,7 @@ const DERIVED = {
   theBody: () => getSetting("act") !== "act1",
   revealSecretDoor: () => !!mainScene()?.regions.get(CONTENT.ids.stairs["hidden-stair"])?.behaviors.some(b => !b.disabled),
   midnight: () => ["act3", "epilogue"].includes(getSetting("act")),
-  showdownSetup: () => game.combats.some(c => c.flags?.ravenmoor?.showdown),
+  showdownSetup: () => game.combats.some(c => c.flags?.ravenmoor?.showdown) || (getSetting("lairRound") > 0) || getSetting("quillUnmasked"),
   unmaskQuill: () => getSetting("quillUnmasked"),
   epilogue: () => getSetting("act") === "epilogue"
 };
@@ -103,7 +103,9 @@ export class DirectorApp extends ApplicationV2 {
 
     const status = [
       `<li><strong>${ACTS[getSetting("act")] ?? getSetting("act")}</strong></li>`,
-      `<li>Candles: ${lit} of 12 lit (${clockTime(12 - lit)})</li>`,
+      (lit === 0) && (getSetting("act") === "act1")
+        ? "<li>Candles: not lit yet (The Body lights them)</li>"
+        : `<li>Candles: ${lit} of 12 lit (${clockTime(12 - lit)})</li>`,
       `<li>Cards found: ${found} of ${CONTENT.cards.length} · Quill evidence: ${quillHave} of ${quill.evidence.length}`
         + `${quillHave >= quill.readyToAccuseAt ? " <em>(ready to accuse)</em>" : ""}</li>`,
       `<li>Party: ${party.length ? `${party.length} character${party.length === 1 ? "" : "s"}` : "<em>no characters assigned</em>"}`
@@ -138,14 +140,18 @@ export class DirectorApp extends ApplicationV2 {
   static async #onRun(event, target) {
     const fn = target.dataset.fn;
     const api = game.modules.get(MODULE_ID).api;
-    if ( typeof api[fn] !== "function" ) return;
+    // Re-renders replace the button mid-run, so the guard lives here, not on the button.
+    if ( (typeof api[fn] !== "function") || running.has(fn) ) return;
+    running.add(fn);
     target.disabled = true;
     try {
-      await api[fn]();
+      const result = await api[fn]();
       const row = SECTIONS.flatMap(s => s.rows).find(r => r.fn === fn);
-      if ( row?.beat && !DERIVED[fn] ) await setSetting("beats", { ...getSetting("beats"), [fn]: true });
+      // Beats the world cannot show are ticked only when the call reports success (it returns true).
+      if ( row?.beat && !DERIVED[fn] && (result === true) ) await setSetting("beats", { ...getSetting("beats"), [fn]: true });
     } finally {
-      if ( this.rendered ) this.render();
+      running.delete(fn);
+      refreshDirector();
     }
   }
 
@@ -163,6 +169,9 @@ export class DirectorApp extends ApplicationV2 {
 
 let director;
 
+/** Set pieces currently running from the Director. */
+const running = new Set();
+
 /** Macro / keybinding: open the Director. */
 export function openDirector() {
   if ( !requireGM() ) return;
@@ -170,10 +179,10 @@ export function openDirector() {
   director.render({ force: true });
 }
 
-/** Re-render the Director if it is open. */
-export function refreshDirector() {
+/** Re-render the Director if it is open, at most every quarter second (a reset writes many settings). */
+export const refreshDirector = foundry.utils.debounce(() => {
   if ( director?.rendered ) director.render();
-}
+}, 250);
 
 /** Once per world, after the Adventure is imported: a GM card with the first steps. */
 export async function maybeWelcome() {
