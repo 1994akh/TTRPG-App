@@ -2,7 +2,7 @@
   "_id": "eZLpIwopTqxnCjQn",
   "name": "Pumpkin-Headed Scarecrow",
   "type": "npc",
-  "img": "modules/ravenmoor-manor/assets/tokens/pumpkin-scarecrow.webp",
+  "img": "modules/ravenmoor-manor/assets/portraits/pumpkin-scarecrow.webp",
   "system": {
     "abilities": {
       "str": {
@@ -931,6 +931,8 @@
       "acSource": "natural armor",
       "tokenMasked": null,
       "tokenUnmasked": null,
+      "portrait": "modules/ravenmoor-manor/assets/portraits/pumpkin-scarecrow.webp",
+      "portraitUnmasked": null,
       "lair": null,
       "cornered": null
     }

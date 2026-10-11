@@ -2086,6 +2086,50 @@ export default {
       }
     }
   },
+  "suspects": [
+    {
+      "key": "morwenna",
+      "name": "Lady Morwenna Ravenmoor",
+      "who": "Silas's second wife",
+      "costume": "Black swan",
+      "portrait": "modules/ravenmoor-manor/assets/portraits/morwenna.webp"
+    },
+    {
+      "key": "edric",
+      "name": "Edric Ravenmoor",
+      "who": "Silas's eldest son",
+      "costume": "Headless horseman",
+      "portrait": "modules/ravenmoor-manor/assets/portraits/edric.webp"
+    },
+    {
+      "key": "pip",
+      "name": "Penelope \"Pip\" Ravenmoor",
+      "who": "Silas's granddaughter, a student illusionist",
+      "costume": "Witch",
+      "portrait": "modules/ravenmoor-manor/assets/portraits/pip.webp"
+    },
+    {
+      "key": "quill",
+      "name": "Dr. Thaddeus Quill",
+      "who": "Family physician",
+      "costume": "Plague doctor",
+      "portrait": "modules/ravenmoor-manor/assets/portraits/quill-masked.webp"
+    },
+    {
+      "key": "bramwell",
+      "name": "Bramwell Hatch",
+      "who": "Groundskeeper and gravedigger",
+      "costume": "Scarecrow coat",
+      "portrait": "modules/ravenmoor-manor/assets/portraits/bramwell.webp"
+    },
+    {
+      "key": "crane",
+      "name": "Mrs. Agatha Crane",
+      "who": "Housekeeper",
+      "costume": "None",
+      "portrait": "modules/ravenmoor-manor/assets/portraits/crane.webp"
+    }
+  ],
   "lair": {
     "name": "The Chapel Crypt (midnight bell)",
     "initiative": 20,

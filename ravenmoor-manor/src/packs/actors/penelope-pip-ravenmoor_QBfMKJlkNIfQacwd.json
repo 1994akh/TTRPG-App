@@ -2,7 +2,7 @@
   "_id": "QBfMKJlkNIfQacwd",
   "name": "Penelope \"Pip\" Ravenmoor",
   "type": "npc",
-  "img": "modules/ravenmoor-manor/assets/tokens/pip.webp",
+  "img": "modules/ravenmoor-manor/assets/portraits/pip.webp",
   "system": {
     "abilities": {
       "str": {
@@ -1979,6 +1979,8 @@
       "acSource": null,
       "tokenMasked": null,
       "tokenUnmasked": null,
+      "portrait": "modules/ravenmoor-manor/assets/portraits/pip.webp",
+      "portraitUnmasked": null,
       "lair": null,
       "cornered": null
     }

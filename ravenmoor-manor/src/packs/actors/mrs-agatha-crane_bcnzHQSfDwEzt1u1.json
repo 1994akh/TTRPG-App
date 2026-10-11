@@ -2,7 +2,7 @@
   "_id": "bcnzHQSfDwEzt1u1",
   "name": "Mrs. Agatha Crane",
   "type": "npc",
-  "img": "modules/ravenmoor-manor/assets/tokens/crane.webp",
+  "img": "modules/ravenmoor-manor/assets/portraits/crane.webp",
   "system": {
     "abilities": {
       "str": {
@@ -439,6 +439,8 @@
       "acSource": null,
       "tokenMasked": null,
       "tokenUnmasked": null,
+      "portrait": "modules/ravenmoor-manor/assets/portraits/crane.webp",
+      "portraitUnmasked": null,
       "lair": null,
       "cornered": null
     }

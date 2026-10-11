@@ -35,6 +35,7 @@ const SECTIONS = [
     { fn: "setupHotbar", label: "Set up my hotbar" }
   ] },
   { title: "Act 1: The masque", rows: [
+    { fn: "introduceSuspects", label: "Introduce the suspects (7:30)", hint: "Posts the six suspects' portraits and costumes to chat", beat: true },
     { fn: "silasRetires", label: "Silas retires (8:25)", beat: true },
     { fn: "lightsOut", label: "Lights out (8:55)", beat: true },
     { fn: "theBody", label: "The body (9:00)", hint: "Lights the twelve candles and starts Act 2", beat: true }

@@ -544,6 +544,8 @@ export async function unmaskQuill() {
     const unmasked = actorFor("quill")?.flags?.ravenmoor?.tokenUnmasked ?? "modules/ravenmoor-manor/assets/tokens/quill-unmasked.webp";
     const quill = tokensFor("quill");
     await scene.updateEmbeddedDocuments("Token", quill.map(t => ({ _id: t.id, "texture.src": unmasked, disposition: NEUTRAL })));
+    const portrait = actorFor("quill")?.flags?.ravenmoor?.portraitUnmasked;
+    if ( portrait ) await actorFor("quill").update({ img: portrait });
 
     const combat = game.combat;
     if ( combat ) {

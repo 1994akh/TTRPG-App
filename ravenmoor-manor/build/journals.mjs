@@ -5,7 +5,7 @@
  */
 import { marked } from "marked";
 import { IDS } from "./scenes.mjs";
-import { biographyHTML } from "./actors.mjs";
+import { biographyHTML, portraitFor } from "./actors.mjs";
 import { MACROS } from "./macros.mjs";
 import { renderClueTracker } from "../scripts/lib/clue-tracker.mjs";
 import { esc, MODULE_PATH, OWNERSHIP, readJSON, readText, stats } from "./util.mjs";
@@ -16,6 +16,17 @@ const SKILLS = {
 };
 const TOOLS = { alchemist: "Alchemist's Supplies" };
 const LEVEL_ORDER = ["ground", "upper", "below"];
+
+/** Adventure chapter banners (tools/build_banners.py), by chapter title. */
+const BANNERS = [
+  ["At a glance", "banner-arrival.webp"],
+  ["The truth", "banner-widow.webp"],
+  ["Act 1", "banner-masque.webp"],
+  ["The suspects", "suspects.webp"],
+  ["Act 2", "banner-candles.webp"],
+  ["Act 3", "banner-crypt.webp"],
+  ["Endings and epilogue", "banner-dawn.webp"]
+];
 
 /** Name forms to link to each actor, longest first. Quotes appear as &quot; in marked output. */
 const NAME_FORMS = {
@@ -205,6 +216,9 @@ function handoutHTML(card, handouts, locations) {
     // A notebook page opens with its title line in italics (Handout 4: "Banshee's Breath.").
     html += (card.id === "H4" && i === 0) ? `<p><em>${esc(para)}</em></p>` : `<p>${esc(para)}</p>`;
   }
+  if ( card.id === "H2" ) {
+    html += `<p class="ravenmoor-handout-art"><img src="${MODULE_PATH}/assets/art/suspects.webp" alt="The household in costume"></p>`;
+  }
   if ( card.table ) {
     html += "<table class=\"ravenmoor-table\"><thead><tr>"
       + card.table.columns.map(c => `<th>${esc(c)}</th>`).join("") + "</tr></thead><tbody>"
@@ -278,7 +292,11 @@ function locationHTML(loc, cards, subPins, npcs) {
     }).join(" · ")}</p>`;
   }
   if ( loc.npcs?.length ) {
-    html += `<p class="ravenmoor-npcs"><strong>People:</strong> ${loc.npcs.map(k => actorLink(k, npcs.find(n => n.key === k)?.name ?? k)).join(" · ")}</p>`;
+    html += `<p class="ravenmoor-npcs"><strong>People:</strong> ${loc.npcs.map(k => {
+      const npc = npcs.find(n => n.key === k);
+      const face = npc ? `<img class="ravenmoor-face" src="${MODULE_PATH}/${npc.token}" alt="">` : "";
+      return `${face}${actorLink(k, npc?.name ?? k)}`;
+    }).join(" · ")}</p>`;
   }
   if ( subPins.length ) {
     html += `<p class="ravenmoor-muted"><strong>Map pins on this page:</strong> ${subPins.map(p => `${p.number}. ${esc(p.label)}`).join(" · ")}</p>`;
@@ -333,8 +351,11 @@ export function buildJournals({ npcs, folders }) {
   const folder = folders.journal;
 
   // 1. Adventure
-  const adventurePages = sections(readText("data/content/adventure.md")).map((s, i) =>
-    textPage("adventure", slug(s.title), s.title, mdToHTML(s.body, cards), { sort: (i + 1) * 1000 }));
+  const adventurePages = sections(readText("data/content/adventure.md")).map((s, i) => {
+    const art = BANNERS.find(([prefix]) => s.title.startsWith(prefix))?.[1];
+    const banner = art ? `<figure class="ravenmoor-banner"><img src="${MODULE_PATH}/assets/art/${art}" alt=""></figure>` : "";
+    return textPage("adventure", slug(s.title), s.title, banner + mdToHTML(s.body, cards), { sort: (i + 1) * 1000 });
+  });
   const adventure = entry("adventure", "Death at Ravenmoor Manor", adventurePages, folder);
 
   // 2. DM Guide
@@ -391,7 +412,10 @@ export function buildJournals({ npcs, folders }) {
   const household = ["morwenna", "edric", "pip", "quill", "bramwell", "crane", "silas", "fennick", "widow"];
   const householdPages = household.map((key, i) => {
     const npc = npcs.find(n => n.key === key);
-    const html = `<div class="ravenmoor"><p class="ravenmoor-header">${esc(npc.role)}</p>`
+    const portraits = [npc.token, npc.tokenUnmasked].filter(Boolean).map(t =>
+      `<img class="ravenmoor-portrait" src="${portraitFor(t)}" alt="${esc(npc.name)}">`).join("");
+    const html = `<div class="ravenmoor ravenmoor-profile"><div class="ravenmoor-portraits">${portraits}</div>`
+      + `<p class="ravenmoor-header">${esc(npc.role.charAt(0).toUpperCase() + npc.role.slice(1))}</p>`
       + `<p>${actorLink(key, `Open ${npc.name}'s sheet`)}</p>${biographyHTML(npc)}</div>`;
     return textPage("household", key, npc.name, html, { sort: (i + 1) * 1000 });
   });

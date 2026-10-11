@@ -2,7 +2,7 @@
   "_id": "gG0jEVDlvEP34M9J",
   "name": "Fennick Barrowdown",
   "type": "npc",
-  "img": "modules/ravenmoor-manor/assets/tokens/fennick.webp",
+  "img": "modules/ravenmoor-manor/assets/portraits/fennick.webp",
   "system": {
     "abilities": {
       "str": {
@@ -443,6 +443,8 @@
       "acSource": null,
       "tokenMasked": null,
       "tokenUnmasked": null,
+      "portrait": "modules/ravenmoor-manor/assets/portraits/fennick.webp",
+      "portraitUnmasked": null,
       "lair": null,
       "cornered": null
     }

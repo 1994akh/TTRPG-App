@@ -6,6 +6,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { id } from "./ids.mjs";
 import { IDS } from "./scenes.mjs";
+import { portraitFor } from "./actors.mjs";
 import { readJSON, readText, ROOT } from "./util.mjs";
 
 /** Strip Markdown emphasis. */
@@ -95,6 +96,12 @@ export function writeGenerated({ items, actors, scene }) {
       const { _id, folder, ...data } = v;
       return [k, data];
     })),
+    // Handout 2's household, in its order, with each suspect's portrait (Scene 3: introduce the suspects).
+    suspects: handouts.cards.find(c => c.id === "H2").table.rows.map(([name, who, costume]) => {
+      const npc = npcs.actors.find(a => a.name === name);
+      if ( !npc ) throw new Error(`Handout 2 names "${name}", who is not in npcs.json`);
+      return { key: npc.key, name, who, costume, portrait: portraitFor(npc.token) };
+    }),
     lair: npcs.actors.find(a => a.key === "quill").lair,
     encounter: npcs.encounter
   };

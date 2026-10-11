@@ -2,7 +2,7 @@
   "_id": "ju55ASDCcVhTtED0",
   "name": "Lord Silas Ravenmoor",
   "type": "npc",
-  "img": "modules/ravenmoor-manor/assets/tokens/silas.webp",
+  "img": "modules/ravenmoor-manor/assets/portraits/silas.webp",
   "system": {
     "abilities": {
       "str": {
@@ -558,6 +558,8 @@
       "acSource": null,
       "tokenMasked": null,
       "tokenUnmasked": null,
+      "portrait": "modules/ravenmoor-manor/assets/portraits/silas.webp",
+      "portraitUnmasked": null,
       "lair": null,
       "cornered": null
     }

@@ -11,7 +11,7 @@ import {
 import {
   expireScares, frightSave, markRow, onRenderChatMessage, onUseActivity, treatBagPanel, treatBagSetup
 } from "./lib/treats.mjs";
-import { lightsOut, revealSecretDoor, silasRetires, theBody } from "./lib/act1.mjs";
+import { introduceSuspects, lightsOut, revealSecretDoor, silasRetires, theBody } from "./lib/act1.mjs";
 import { clueTracker, onCluesChanged, revealCard, revealHandout } from "./lib/handouts.mjs";
 import {
   accusation, checkQuill, epilogue, lairAction, lanternTaken, midnight, onCombatEnd, onCombatTurn, showdownSetup,
@@ -69,7 +69,7 @@ const api = {
   // House rules 4 and 5
   treatBagSetup, treatBagPanel, frightSave,
   // Act 1
-  silasRetires, lightsOut, theBody, revealSecretDoor,
+  introduceSuspects, silasRetires, lightsOut, theBody, revealSecretDoor,
   // Handouts and clues
   revealHandout, revealCard, clueTracker,
   // Act 3

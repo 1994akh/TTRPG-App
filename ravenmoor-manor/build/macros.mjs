@@ -34,6 +34,8 @@ export const MACROS = [
     help: "GM panel: each player's candy count, with +1 buttons for great roleplay, deductions and screams." },
   { fn: "frightSave", name: "Fright Save (Scaredy-Cat)", img: "systems/dnd5e/icons/svg/statuses/frightened.svg",
     help: "Posts a Wisdom save against fright with the Scaredy-Cat button (fail on purpose, earn a candy)." },
+  { fn: "introduceSuspects", name: "Introduce the Suspects", img: "icons/commodities/treasure/mask-wood-tan.webp",
+    help: "Scene 3 (7:30 PM): posts each suspect's portrait, who they are and their costume to chat, in Handout 2's order." },
   { fn: "silasRetires", name: "Silas Retires", img: "icons/sundries/misc/key-short-red.webp",
     help: "8:25 PM. Moves Silas to his study chair and locks the study door." },
   { fn: "revealSecretDoor", name: "Reveal Secret Door", img: "icons/svg/eye.svg",

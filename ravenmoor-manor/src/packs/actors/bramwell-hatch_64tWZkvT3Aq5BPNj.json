@@ -2,7 +2,7 @@
   "_id": "64tWZkvT3Aq5BPNj",
   "name": "Bramwell Hatch",
   "type": "npc",
-  "img": "modules/ravenmoor-manor/assets/tokens/bramwell.webp",
+  "img": "modules/ravenmoor-manor/assets/portraits/bramwell.webp",
   "system": {
     "abilities": {
       "str": {
@@ -442,6 +442,8 @@
       "acSource": "patched leather coat",
       "tokenMasked": null,
       "tokenUnmasked": null,
+      "portrait": "modules/ravenmoor-manor/assets/portraits/bramwell.webp",
+      "portraitUnmasked": null,
       "lair": null,
       "cornered": null
     }

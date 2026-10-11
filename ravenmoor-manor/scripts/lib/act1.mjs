@@ -5,7 +5,7 @@ import { lightCandles } from "./candles.mjs";
 import { postSaveRequest } from "./treats.mjs";
 import { revealCard } from "./handouts.mjs";
 import {
-  CONTENT, LEVEL_ELEVATION, levelId, lightsByGroup, mainScene, playCue, postCard, readAloudHTML, requireGM,
+  CONTENT, esc, LEVEL_ELEVATION, levelId, lightsByGroup, mainScene, playCue, postCard, readAloudHTML, requireGM,
   setSetting, tileByLabel, tokensFor, wait, wallsByLabel, whisperGM
 } from "./util.mjs";
 
@@ -26,6 +26,15 @@ async function setWalls(label, data) {
 async function showTile(prefix, hidden=false) {
   const tile = tileByLabel(prefix);
   if ( tile ) await tile.update({ hidden });
+}
+
+/** Scene 3 (7:30 PM): introduce each suspect in one line, in costume, with their portraits (Handout 2's order). */
+export async function introduceSuspects() {
+  if ( !requireGM() ) return;
+  const cards = CONTENT.suspects.map(s => `<figure class="ravenmoor-suspect">`
+    + `<img src="${s.portrait}" alt="${esc(s.name)}"><figcaption><strong>${esc(s.name)}</strong>`
+    + `<span>${esc(s.who)}</span><em>Costume: ${esc(s.costume)}</em></figcaption></figure>`).join("");
+  await postCard("The Hallows' feast: the household", `<div class="ravenmoor-suspects">${cards}</div>`, { css: "ravenmoor-gallery" });
 }
 
 /** 8:25 PM: Silas locks himself in his study. */

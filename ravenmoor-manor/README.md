@@ -9,6 +9,7 @@ A Foundry VTT v14 adventure module for **dnd5e 6.x** (D&D 2024 rules): a three-h
 - **Eleven actors** with working 2024 stat blocks: Dr. Quill, the pumpkin-headed scarecrow, the skeleton minion, the five other suspects, Silas, Fennick and the Lantern Widow.
 - **Thirteen items**, from the stolen will to the Treat Bag candy and Elspeth's Lantern.
 - **Macros for every set piece**: the Twelve Candles clock, the Treat Bag and Scaredy-Cat bonus, Lights Out, The Body, revealing handouts, the secret door, Midnight and the Accusation, Showdown Setup with the Midnight Bell lair actions, Quill's unmasking, and the Epilogue.
+- **Art**: a silhouette portrait for every NPC (Victorian cut-paper profiles in gilt frames, used on the actor sheets and The Household; Quill's switches to unmasked when he surrenders), banners for the Adventure's chapters, the household's portraits on Handout 2, and an *Introduce the suspects* chat card for the feast.
 - **The Ravenmoor Director** (macro, or <kbd>Shift</kbd>+<kbd>R</kbd>): one GM window with every set piece in running order, ticks for what has happened, and the night at a glance (act, candles, clues found, edges, session time).
 - **GM conveniences**: place the party at the drive in one click, set up the hotbar in one click, double-click any journal read-aloud box to post it to chat, escalation markers and a session timer on the candle panel, and **Reset the Night** to put the map, NPCs and handouts back to the start for a test run or a replay.
 
@@ -31,7 +32,7 @@ npm run check     # static checks: counts, links, assets, stat blocks, macros
 npm run package   # dist/ravenmoor-manor.zip
 ```
 
-The build reads `data/` (scene data, adventure text, stat blocks, handouts) and `assets/` (maps, tokens, tiles, fonts). Never hand-edit `data/scenes/*.json` or the map images: regenerate them with `python3 tools/build_maps.py` (and `tools/build_tokens.py`, `tools/build_cover.py`), then rebuild. `npm run vendor -- <dnd5e checkout>` refreshes the SRD spells and Lantern of Revealing copied from the dnd5e system.
+The build reads `data/` (scene data, adventure text, stat blocks, handouts) and `assets/` (maps, tokens, tiles, fonts). Never hand-edit `data/scenes/*.json` or the map images: regenerate them with `python3 tools/build_maps.py` (and `tools/build_tokens.py`, `tools/build_cover.py`), then rebuild. The portraits and chapter banners come from `tools/build_portraits.py` and `tools/build_banners.py` (run the portraits first; the suspects strip is made from them). `npm run vendor -- <dnd5e checkout>` refreshes the SRD spells and Lantern of Revealing copied from the dnd5e system.
 
 Document ids are derived from stable keys (`build/ids.mjs`), so rebuilding never breaks links, and re-importing the Adventure updates documents rather than duplicating them.
 

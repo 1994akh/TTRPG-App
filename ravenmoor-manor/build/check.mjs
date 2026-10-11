@@ -121,6 +121,15 @@ ok(actor("pip").items.filter(i => i.type === "spell").length === 7, "Pip: 7 inna
 ok(quill.items.filter(i => i.system.container).length === 3, "Quill's bag holds the will, the vial and the powder");
 ok(actor("silas").prototypeToken.actorLink && adventure.actors.filter(a => a.prototypeToken.actorLink).length === 1, "only Silas is linked");
 ok(actor("pip").prototypeToken.disposition === 1 && actor("skeleton").prototypeToken.disposition === -1, "dispositions: Pip friendly, skeleton hostile");
+ok(adventure.actors.every(a => a.img.includes("/assets/portraits/") && fs.existsSync(path.join(ROOT, a.img.slice(MODULE_PATH.length + 1)))),
+  "every actor has a portrait on disk (tokens stay as tokens)");
+ok(adventure.actors.every(a => a.prototypeToken.texture.src.includes("/assets/tokens/")), "prototype tokens still use the token art");
+ok(actor("quill").flags.ravenmoor.portraitUnmasked?.endsWith("quill-unmasked.webp"), "Quill has an unmasked portrait for the unmasking");
+
+const adv = adventure.journal.find(j => j.flags.ravenmoor.key === "adventure");
+ok(adv.pages.filter(p => p.text.content.startsWith("<figure class=\"ravenmoor-banner\">")).length === 7, "7 Adventure chapters open with a banner");
+const household = adventure.journal.find(j => j.flags.ravenmoor.key === "household");
+ok(household.pages.every(p => p.text.content.includes("ravenmoor-portrait")), "every Household page shows a portrait");
 
 console.log("Runtime");
 const api = fs.readFileSync(path.join(ROOT, "scripts/ravenmoor.mjs"), "utf8").match(/const api = \{([\s\S]*?)\n\};/)[1];

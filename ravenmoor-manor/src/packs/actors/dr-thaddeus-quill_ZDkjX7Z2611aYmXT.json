@@ -2,7 +2,7 @@
   "_id": "ZDkjX7Z2611aYmXT",
   "name": "Dr. Thaddeus Quill",
   "type": "npc",
-  "img": "modules/ravenmoor-manor/assets/tokens/quill-masked.webp",
+  "img": "modules/ravenmoor-manor/assets/portraits/quill-masked.webp",
   "system": {
     "abilities": {
       "str": {
@@ -1924,6 +1924,8 @@
       "acSource": "oiled leather coat",
       "tokenMasked": "modules/ravenmoor-manor/assets/tokens/quill-masked.webp",
       "tokenUnmasked": "modules/ravenmoor-manor/assets/tokens/quill-unmasked.webp",
+      "portrait": "modules/ravenmoor-manor/assets/portraits/quill-masked.webp",
+      "portraitUnmasked": "modules/ravenmoor-manor/assets/portraits/quill-unmasked.webp",
       "lair": {
         "name": "The Chapel Crypt (midnight bell)",
         "initiative": 20,
