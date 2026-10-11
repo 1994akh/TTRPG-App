@@ -21,7 +21,9 @@ Where the build differs from `docs/HANDOFF.md`, and why. The rule from the hando
 | Optional crypt battle-map scene | Not built | It belongs to the fallback layout; the preferred one-scene layout already holds the crypt. The image still ships in `assets/maps`. |
 | Thumbnail generated at build or import | `tools/build_cover.py` renders `assets/maps/ravenmoor-thumb.webp` and the Adventure cover from the player map (never a DM key) | Deterministic and works before the scene is first viewed. |
 
-Clue pins: 15 of the 19 cards have a `mapPos`, so the scene has 39 location pins plus 15 clue pins (eye icon, green). Secret pins use the hazard icon tinted red.
+Clue pins: 15 of the 19 cards have a `mapPos`, so the scene has 39 location pins plus 15 clue pins (eye icon, green, labelled with the card). The spec links each clue pin to its card's page, but revealing a card makes that page visible to players, and Foundry shows a note to anyone who can see its page. So clue pins open the GM-only **Locations** page where the card is found (that page links the card). Every pin on the map therefore links into the GM-only Locations journal, and players never see one. Secret pins use the hazard icon tinted red.
+
+The two crypt scarecrows are placed as props: neutral, named "Scarecrow", with name and bars hidden, so hovering one during the investigation gives nothing away. Showdown Setup turns the ones that fight (one for five characters, two for six) hostile and gives them their real name; with five characters the other stays a prop and is not slumped at the unmasking.
 
 ## Actors
 
@@ -54,22 +56,28 @@ Clue pins: 15 of the 19 cards have a `mapPos`, so the scene has 39 location pins
 
 ## Runtime
 
-- Flags live in `flags.ravenmoor` as the spec asks. Because "ravenmoor" is not a package id, the runtime reads them directly (`doc.flags.ravenmoor`) and never through `getFlag`. Chat messages created at runtime use `flags["ravenmoor-manor"]`.
+- Flags live in `flags.ravenmoor` as the spec asks. v14 validates flag scopes only for package-id *format* (`BasePackage.validateId`), which "ravenmoor" passes; `getFlag` additionally requires an active package, so the runtime reads these flags directly (`doc.flags.ravenmoor`) and never through `getFlag`. Chat messages created at runtime use `flags["ravenmoor-manor"]`.
+- **The party** is each player's assigned character (User Configuration). Only if no player has one does the runtime fall back to every player-owned character, so assign characters before the session to keep backup characters out of the Treat Bag and the showdown.
 - **Twelve Candles**: snuffing candle *n* means the *n*th candle to go out (4, 8 and 11 whisper the escalations; 12 runs Midnight). The panel shows the in-game time. The 1:55 gust needs the session clock started (Ravenmoor Settings macro).
-- **Scaredy-Cat** lives on the module's own save-request card (Lights Out, lair round 2 and the Fright Save macro), not on dnd5e's generic request cards. Rolling from the card applies Frightened on a failure; Scaredy-Cat applies it and awards a candy.
+- **Scaredy-Cat** lives on the module's own save-request card (Lights Out, lair round 2 and the Fright Save macro), not on dnd5e's generic request cards. Rolling from the card applies Frightened on a failure; Scaredy-Cat applies it and awards a candy. Each character can answer a card once (roll or Scaredy-Cat): the GM's client records the result on the card, through the socket when a player clicks.
+- **Frightened outside combat**: turn-based durations only count down in combat, so a scare outside combat (Lights Out, Fright Save) is flagged to end after one minute of real time and the GM's client removes it. In combat it lasts until the end of the target's next turn.
 - **Treat Bag**: "Reroll a d20" rerolls the actor's latest chat roll that contains a d20; "Ask a yes-or-no question" posts a card with GM-only Yes/No buttons.
 - **Lights Out** fades the hall candles by shrinking their radii in two steps before hiding them (core has no light fade), and restores the radii so they can be relit.
 - **Who edge** is an Active Effect that adds Advantage to `system.attributes.init.roll.mode`, removed when the showdown combat ends.
 - **Unmask** fires in any combat that includes Quill, not only the one Showdown Setup builds. The Widow's early rise uses the same hook (Quill below half his maximum HP, 81).
 - **Showdown Setup** also hides Quill's ground-floor token, and gives the will back to Quill if the party took it early ("the party catches him in the crypt with the will in one hand").
-- **Snatch the Will** ties go to Quill (a contest tie keeps the status quo).
+- **Snatch the Will** ties go to Quill (a contest tie keeps the status quo). It only considers a Quill token on the board, and burning the will removes it from every Quill token and the base actor, so a burned will cannot be snatched later.
+- **The brazier** is grid square (45, 13). "Next to the brazier" means an adjacent square and "within 10 feet" means within two squares, counting diagonals as 5 ft (2024 rules).
+- **The Midnight Bell** acts at most once per combat round, recorded on the combat (`flags.ravenmoor.bellRound`), so adding skeletons or late initiative rolls that shift the turn order cannot run a lair action twice.
+- **Showdown Setup** can be run again: it asks, then deletes the previous showdown combat and its extra tokens (the Why allies and lair skeletons) before setting up afresh; characters keep at most one Counter-Herb.
+- **Snuffing Powder** only affects one floor: the selected token's, else the user's character's, else (Quill's macro) Quill's floor; the GM is asked when none applies.
 - **Epilogue**: core has no item piles, so Elspeth's Lantern appears as a tile on the memorial stone with a "Take the lantern" chat button; the first player to click receives the item and the tile is removed.
 - **Players and items**: item data for every module item is bundled in `scripts/lib/generated.mjs`, so players can receive candy or the lantern without access to the GM-only compendium.
 - Extra macros beyond the 14 features: Fright Save, Accusation (on its own), Midnight Bell (run a lair round by hand), Ravenmoor Settings (party size, running long, session clock, sounds, reset).
 
 ## Not verified in a running Foundry
 
-Everything above was built and statically checked (`npm run check`), but this environment has no Foundry v14 server. Before running it at the table, test in a v14.368 + dnd5e 6.0.6 world:
+Everything above was built and statically checked (`npm run check`: ESLint with `no-undef`/`no-unused-vars` over the runtime and build code, then the acceptance checks), but this environment has no Foundry v14 server. Before running it at the table, test in a v14.368 + dnd5e 6.0.6 world:
 
 1. The Change Level prompt on each stair, and the hidden stair only after Reveal Secret Door.
 2. The upper floor's compositing over the Great Hall (see the scene table above).

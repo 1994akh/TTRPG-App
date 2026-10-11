@@ -3,7 +3,7 @@
  */
 import { renderClueTracker } from "./clue-tracker.mjs";
 import {
-  CONTENT, getSetting, giveItem, handoutPage, isLeadGM, itemsWithKey, journalFor, mainScene, partyActors,
+  CONTENT, esc, getSetting, giveItem, handoutPage, isLeadGM, itemsWithKey, journalFor, mainScene, partyActors,
   postCard, requireGM, setSetting, whisperGM
 } from "./util.mjs";
 
@@ -41,7 +41,7 @@ export async function refreshTrackerPage() {
  * Reveal a card: players get Observer on its page, it is shown to them, it is ticked, and its onReveal runs.
  * @param {string} cardId
  * @param {object} [options]
- * @param {string[]|null} [options.users]   User ids to reveal to; null means everyone.
+ * @param {string[]|null} [options.users]   User ids to reveal to; null means everyone, an empty list means nobody.
  * @param {Actor|null} [options.giveTo]     Actor who receives the card's item.
  * @param {boolean} [options.notify=true]
  */
@@ -49,8 +49,9 @@ export async function revealCard(cardId, { users=null, giveTo=null, notify=true 
   const card = CONTENT.cards.find(c => c.id === cardId);
   const page = handoutPage(cardId);
   if ( !card || !page ) return ui.notifications.error(`Ravenmoor: handout ${cardId} not found. Import the Adventure first.`);
+  if ( Array.isArray(users) && !users.length ) return ui.notifications.warn("Ravenmoor: no players chosen to reveal the card to.");
 
-  if ( users?.length ) {
+  if ( users ) {
     const ownership = { ...page.ownership };
     for ( const u of users ) ownership[u] = Math.max(ownership[u] ?? 0, OBSERVER);
     await page.update({ ownership });
@@ -100,10 +101,10 @@ export async function revealHandout() {
     <label>Card <select name="card">${options}</select></label>
     <fieldset><legend>Show to</legend>
       <label><input type="checkbox" name="all" checked> All players</label>
-      ${players.map(u => `<label><input type="checkbox" name="user" value="${u.id}"> ${u.name}</label>`).join("")}
+      ${players.map(u => `<label><input type="checkbox" name="user" value="${u.id}"> ${esc(u.name)}</label>`).join("")}
     </fieldset>
     <label>Give its item to <select name="giveTo"><option value="">Nobody</option>
-      ${party.map(a => `<option value="${a.uuid}">${a.name}</option>`).join("")}</select></label>
+      ${party.map(a => `<option value="${a.uuid}">${esc(a.name)}</option>`).join("")}</select></label>
     <p class="ravenmoor-muted">✔ found already · ★ core clue. Items exist for H3, C7, C8 and C14.</p>
   </div>`;
   const result = await DialogV2.prompt({
@@ -124,6 +125,9 @@ export async function revealHandout() {
     rejectClose: false
   });
   if ( !result ) return;
+  if ( !result.all && !result.users.length ) {
+    return ui.notifications.warn("Tick \"All players\" or at least one player to reveal the card to.");
+  }
   const giveTo = result.giveTo ? await fromUuid(result.giveTo) : null;
   await revealCard(result.card, { users: result.all ? null : result.users, giveTo });
 }

@@ -206,14 +206,17 @@ export function buildScene({ actors, npcs, handouts, folder }) {
     });
   }
 
-  // GM-only clue pins.
+  // GM-only clue pins. They open the Locations page where the card is found (which links the card), not the card's
+  // own page: a revealed card's page becomes visible to players, and Foundry shows a note to anyone who can see its
+  // page, so pins linked to cards would appear on players' maps.
   for ( const card of handouts.cards ) {
     if ( !card.mapPos ) continue;
     const l = levelByKey[card.mapPos.level];
+    if ( !card.foundIn?.locationKey ) throw new Error(`Clue ${card.id} has a mapPos but no foundIn.locationKey`);
     notes.push({
       _id: id(`note:clue:${card.id}`),
-      entryId: IDS.journal("handouts"),
-      pageId: IDS.page("handouts", card.id),
+      entryId: IDS.journal("locations"),
+      pageId: IDS.page("locations", card.foundIn.locationKey),
       x: Math.round(card.mapPos.x * manifest.canvas.gridSize),
       y: Math.round(card.mapPos.y * manifest.canvas.gridSize),
       elevation: l.elevation.bottom,
@@ -296,9 +299,11 @@ function placedToken({ t, i, level, actors, npcs }) {
   const npc = npcs.find(n => n.key === key);
   const proto = prototypeToken(npc);
   const isBody = /\(body/i.test(t.actor);
+  // The crypt scarecrows stand in plain sight all night as props (False Appearance): neutral, nameless to players.
+  const disguised = key === "scarecrow";
   const token = {
     _id: id(`token:${level.key}:${i}`),
-    name: isBody ? `${npc.name} (body)` : proto.name,
+    name: isBody ? `${npc.name} (body)` : (disguised ? "Scarecrow" : proto.name),
     actorId: actor._id,
     actorLink: isBody ? false : proto.actorLink,
     level: IDS.level(level.key),
@@ -309,9 +314,9 @@ function placedToken({ t, i, level, actors, npcs }) {
     height: proto.height,
     texture: proto.texture,
     hidden: !!t.hidden,
-    disposition: proto.disposition,
-    displayName: DISPLAY.HOVER,
-    displayBars: DISPLAY.OWNER_HOVER,
+    disposition: disguised ? DISPOSITION.NEUTRAL : proto.disposition,
+    displayName: disguised ? DISPLAY.NONE : DISPLAY.HOVER,
+    displayBars: disguised ? DISPLAY.NONE : DISPLAY.OWNER_HOVER,
     bar1: proto.bar1,
     bar2: proto.bar2,
     lockRotation: true,

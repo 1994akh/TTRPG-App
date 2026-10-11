@@ -8,7 +8,9 @@ import { registerSettings } from "./lib/settings.mjs";
 import {
   snuffCandle, startGustTimer, startSessionClock, syncCandlePanel, toggleCandles
 } from "./lib/candles.mjs";
-import { frightSave, onRenderChatMessage, onUseActivity, treatBagPanel, treatBagSetup } from "./lib/treats.mjs";
+import {
+  expireScares, frightSave, markRow, onRenderChatMessage, onUseActivity, treatBagPanel, treatBagSetup
+} from "./lib/treats.mjs";
 import { lightsOut, revealSecretDoor, silasRetires, theBody } from "./lib/act1.mjs";
 import { clueTracker, onCluesChanged, revealCard, revealHandout } from "./lib/handouts.mjs";
 import {
@@ -83,9 +85,12 @@ Hooks.once("init", () => {
 Hooks.once("ready", () => {
   syncCandlePanel();
   startGustTimer();
+  // Out-of-combat scares end after a minute (there are no turns to end them).
+  if ( game.user.isGM ) setInterval(() => expireScares(), 15 * 1000);
   game.socket.on(SOCKET, data => {
     if ( data?.action === "lanternTaken" ) lanternTaken(data);
     if ( (data?.action === "snuff") && isLeadGM() ) snuffAt(data.point, { level: data.level ?? null });
+    if ( (data?.action === "markRow") && isLeadGM() ) markRow(data);
   });
 });
 

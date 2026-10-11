@@ -108,13 +108,20 @@ export async function lightCandles() {
  * Snuff one or more candles and run the hooks for candles 4, 8, 11 and 12.
  * @param {number} [count=1]
  */
+let snuffing = false;
 export async function snuffCandle(count=1) {
-  if ( !requireGM() ) return;
-  const before = getSetting("candlesLit");
-  if ( before <= 0 ) return ui.notifications.info("Every candle is already out.");
-  const after = Math.max(0, before - count);
-  await setSetting("candlesLit", after);
-  for ( let lit = before - 1; lit >= after; lit-- ) await onCandleSnuffed(TOTAL - lit);
+  if ( !requireGM() || snuffing ) return;
+  snuffing = true;
+  try {
+    const before = getSetting("candlesLit");
+    if ( before <= 0 ) return ui.notifications.info("Every candle is already out.");
+    const after = Math.max(0, before - count);
+    await setSetting("candlesLit", after);
+    for ( let lit = before - 1; lit >= after; lit-- ) await onCandleSnuffed(TOTAL - lit);
+  } finally {
+    // Ignore clicks until this candle's effects (escalation whispers, Fennick, Midnight) have run.
+    snuffing = false;
+  }
 }
 
 /**

@@ -40,7 +40,9 @@ ok(rail.move === 20 && rail.sight === 0, "gallery railing blocks movement, not s
 ok(scene.walls.filter(w => w.door === 2).length === 2, "two secret doors");
 const hidden = scene.tokens.filter(t => t.hidden).map(t => t.flags.ravenmoor.actorKey).sort().join();
 ok(hidden === "quill,silas,skeleton,skeleton,skeleton,skeleton", "hidden at start: Silas's body, Quill (crypt) and four skeletons");
-ok(scene.tokens.filter(t => t.flags.ravenmoor.actorKey === "scarecrow" && !t.hidden).length === 2, "two scarecrows visible in the crypt");
+const props = scene.tokens.filter(t => t.flags.ravenmoor.actorKey === "scarecrow");
+ok(props.length === 2 && props.every(t => !t.hidden && t.disposition === 0 && t.displayName === 0 && t.name === "Scarecrow"),
+  "two scarecrows visible in the crypt as neutral, nameless props");
 
 console.log("Labels the macros use");
 const label = (arr, prefix) => arr.filter(d => (d.flags.ravenmoor.label ?? "").startsWith(prefix));
@@ -69,7 +71,9 @@ for ( const coll of Object.values(allDocs) ) for ( const d of coll ) ids.add(d._
 ok(badId === 0, "every _id is 16 alphanumeric characters");
 const pageIds = new Map(adventure.journal.flatMap(j => j.pages.map(p => [`${j._id}.${p._id}`, p])));
 ok(scene.notes.every(n => pageIds.has(`${n.entryId}.${n.pageId}`)), "every map note links to an existing page");
-ok(scene.notes.every(n => adventure.journal.find(j => j._id === n.entryId).ownership.default === 0 || n.flags.ravenmoor.clue), "location pins link to a GM-only journal");
+const locations = adventure.journal.find(j => j.flags.ravenmoor.key === "locations");
+ok(locations.ownership.default === 0 && locations.pages.every(p => (p.ownership.default ?? -1) <= 0)
+  && scene.notes.every(n => n.entryId === locations._id), "every pin (clue pins too) links to the GM-only Locations journal, so players see none");
 
 const text = JSON.stringify(adventure);
 const links = [...text.matchAll(/@UUID\[([^\]]+)\]/g)].map(m => m[1]);
