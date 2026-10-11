@@ -35,6 +35,25 @@ test("every compiled pack reads back with the same documents as its sources", as
   }
 });
 
+test("packaging for a GitHub release stamps the tag's version and that release's zip; a bad tag is refused", () => {
+  const run = (...args) => execFileSync(process.execPath, [path.join(ROOT, "build/package.mjs"), ...args], { cwd: ROOT, stdio: "pipe" });
+  const source = JSON.parse(fs.readFileSync(path.join(ROOT, "module.json"), "utf8"));
+  try {
+    run("--release", "v1.2.3");
+    const files = unzipSync(fs.readFileSync(path.join(ROOT, "dist/ravenmoor-manor.zip")));
+    const packed = JSON.parse(new TextDecoder().decode(files["module.json"]));
+    assert.deepEqual(JSON.parse(fs.readFileSync(path.join(ROOT, "dist/module.json"), "utf8")), packed, "dist/module.json matches the zip");
+    assert.equal(packed.version, "1.2.3");
+    assert.equal(packed.download, "https://github.com/1994akh/TTRPG-App/releases/download/v1.2.3/ravenmoor-manor.zip");
+    assert.equal(packed.manifest, source.manifest, "updates still check the latest release");
+    assert.deepEqual({ ...packed, version: source.version, download: source.download }, source, "nothing else changes");
+    assert.equal(JSON.parse(fs.readFileSync(path.join(ROOT, "module.json"), "utf8")).version, source.version, "the source manifest is untouched");
+    assert.throws(() => run("--release", "nightly"), /not a version number/);
+  } finally {
+    run();
+  }
+});
+
 test("the release zip installs: manifest at the root and every referenced file present", () => {
   execFileSync(process.execPath, [path.join(ROOT, "build/package.mjs")], { cwd: ROOT, stdio: "pipe" });
   const files = unzipSync(fs.readFileSync(path.join(ROOT, "dist/ravenmoor-manor.zip")));

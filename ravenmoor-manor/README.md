@@ -15,11 +15,30 @@ A Foundry VTT v14 adventure module for **dnd5e 6.x** (D&D 2024 rules): a three-h
 
 ## Install
 
-1. Build the zip (below), or use a released `ravenmoor-manor.zip`.
-2. Unzip it into your Foundry `Data/modules/` folder so you have `Data/modules/ravenmoor-manor/module.json`.
-3. In a dnd5e 6.0.6 world on Foundry v14, enable **Death at Ravenmoor Manor**.
-4. Open the **Death at Ravenmoor Manor** compendium (Adventure) and click **Import**. The scene activates, the Adventure journal opens, and a GM-only welcome card appears in chat.
-5. Assign each player their character (User Configuration), then open the **Ravenmoor Director** from the welcome card (or <kbd>Shift</kbd>+<kbd>R</kbd>) and work down its *Before the session* list. Its *Set up my hotbar* button fills hotbar slots 1–10.
+**From a manifest URL** (once a release is published; see *Publishing a release* below):
+
+1. In Foundry's setup screen, open **Add-on Modules** and click **Install Module**.
+2. Paste this into **Manifest URL** at the bottom and click **Install**:
+   `https://github.com/1994akh/TTRPG-App/releases/latest/download/module.json`
+
+**Or from the zip:** download `ravenmoor-manor.zip` (from a release, or build it below) and unzip it into your Foundry `Data/modules/` folder so you have `Data/modules/ravenmoor-manor/module.json`.
+
+Then:
+
+1. In a dnd5e 6.0.6 world on Foundry v14, enable **Death at Ravenmoor Manor** (Game Settings → Manage Modules).
+2. Open the **Death at Ravenmoor Manor** compendium (Adventure) and click **Import**. The scene activates, the Adventure journal opens, and a GM-only welcome card appears in chat.
+3. Assign each player their character (User Configuration), then open the **Ravenmoor Director** from the welcome card (or <kbd>Shift</kbd>+<kbd>R</kbd>) and work down its *Before the session* list. Its *Set up my hotbar* button fills hotbar slots 1–10.
+
+## Publishing a release
+
+The repository must be **public**: Foundry downloads the manifest and zip without signing in to GitHub.
+
+1. On GitHub, open **Releases** → **Draft a new release**.
+2. Under **Choose a tag**, type a new version tag, such as `v1.0.0`, and choose **Create new tag on publish** (target `main`).
+3. Give it a title, leave **Set as a pre-release** unticked, and click **Publish release**.
+4. The **Release** action (Actions tab) builds and checks the module, then attaches `module.json` and `ravenmoor-manor.zip` to the release, in about two minutes.
+
+For an update, publish a new release with a higher tag (`v1.0.1`, `v1.1.0`, …). The released module takes its version from the tag, so Foundry's **Check for Updates** offers it to everyone who installed from the manifest URL.
 
 ## Build from source
 
