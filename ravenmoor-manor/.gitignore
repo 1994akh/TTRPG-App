@@ -1,6 +1,6 @@
 node_modules/
-packs/
-dist/
+/packs/
+/dist/
 *.log
 .DS_Store
 __pycache__/

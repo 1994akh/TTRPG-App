@@ -1,0 +1,31 @@
+{
+  "_id": "y2nuERwcaK1ve5CE",
+  "name": "Fright Save (Scaredy-Cat)",
+  "type": "script",
+  "img": "systems/dnd5e/icons/svg/statuses/frightened.svg",
+  "scope": "global",
+  "command": "game.modules.get(\"ravenmoor-manor\").api.frightSave();",
+  "folder": null,
+  "sort": 13000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "fn": "frightSave",
+      "slot": null
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": null,
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!macros!y2nuERwcaK1ve5CE"
+}

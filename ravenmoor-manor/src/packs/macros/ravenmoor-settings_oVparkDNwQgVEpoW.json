@@ -1,0 +1,31 @@
+{
+  "_id": "oVparkDNwQgVEpoW",
+  "name": "Ravenmoor Settings",
+  "type": "script",
+  "img": "icons/svg/d20-black.svg",
+  "scope": "global",
+  "command": "game.modules.get(\"ravenmoor-manor\").api.openSettings();",
+  "folder": null,
+  "sort": 21000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "fn": "openSettings",
+      "slot": null
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": null,
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!macros!oVparkDNwQgVEpoW"
+}

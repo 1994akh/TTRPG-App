@@ -1,0 +1,157 @@
+{
+  "_id": "BKvYZJRWPDfHjmKQ",
+  "name": "Pouch of Snuffing Powder",
+  "type": "consumable",
+  "img": "icons/commodities/gems/powder-raw-white.webp",
+  "system": {
+    "description": {
+      "value": "<p>Grey alchemical powder that smells of snow. As a Bonus Action, fling a pinch at a point within 60 feet: every nonmagical flame in a 20-foot-radius Sphere there goes out in a cold rush of air.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-snuffing-powder\"><p><strong>DM:</strong> Loot. In the fight Quill uses his own Snuffing Powder bonus action (2/Day) from his actor sheet; this pouch is what the party finds in his bag afterwards, so set its remaining uses to whatever he has left. The 8:55 pinch in the Great Hall is story, not a spent use.</p></section>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Death at Ravenmoor Manor",
+      "book": "",
+      "page": "",
+      "license": "",
+      "rules": "2024",
+      "revision": 1
+    },
+    "identifier": "snuffing-powder",
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "",
+    "identified": true,
+    "container": null,
+    "type": {
+      "value": "trinket",
+      "subtype": ""
+    },
+    "uses": {
+      "max": "2",
+      "spent": 0,
+      "recovery": [],
+      "autoDestroy": true
+    },
+    "properties": [],
+    "activities": {
+      "HXJalF79Eel6CxRW": {
+        "_id": "HXJalF79Eel6CxRW",
+        "type": "utility",
+        "name": "Snuff the flames",
+        "img": null,
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "value": "",
+          "special": "",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "sphere",
+            "size": "20",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "flags": {
+          "ravenmoor": {
+            "action": "snuffFlames"
+          }
+        },
+        "visibility": {
+          "level": {},
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    }
+  },
+  "effects": [],
+  "flags": {
+    "ravenmoor": {
+      "plot": false,
+      "key": "snuffing-powder",
+      "journalLink": null
+    }
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!BKvYZJRWPDfHjmKQ"
+}

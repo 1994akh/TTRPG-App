@@ -1,0 +1,200 @@
+{
+  "_id": "4RlKghqOQAqIc4K3",
+  "name": "Sprig of Counter-Herb",
+  "type": "consumable",
+  "img": "icons/consumables/plants/herb-marjoram-basil-oregano-leaf-bunch-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>A bitter sprig Pip presses into your hand before the fight. Chew it and you have Advantage on saving throws against Banshee's Breath until the fight ends.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-counter-herb\"><p><strong>DM:</strong> The How Unmasking Edge. The 'Grant Unmasking Edges' macro hands one to every player character.</p></section>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Death at Ravenmoor Manor",
+      "book": "",
+      "page": "",
+      "license": "",
+      "rules": "2024",
+      "revision": 1
+    },
+    "identifier": "counter-herb",
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "",
+    "identified": true,
+    "container": null,
+    "type": {
+      "value": "food",
+      "subtype": ""
+    },
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [],
+      "autoDestroy": false
+    },
+    "properties": [],
+    "activities": {
+      "7QH2EGQqQsoT0W8P": {
+        "_id": "7QH2EGQqQsoT0W8P",
+        "type": "utility",
+        "name": "Chew the sprig",
+        "img": null,
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "value": "",
+          "special": "",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "YH51yR0XVoAWhUdu"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "flags": {
+          "ravenmoor": {
+            "action": "counterHerb"
+          }
+        },
+        "visibility": {
+          "level": {},
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "YH51yR0XVoAWhUdu",
+      "name": "Counter-Herb",
+      "img": "icons/consumables/plants/herb-marjoram-basil-oregano-leaf-bunch-green.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "statuses": [],
+      "duration": {
+        "value": null,
+        "units": "rounds",
+        "expiry": "combatEnd"
+      },
+      "description": "<p>Advantage on saving throws against Banshee's Breath until the fight ends.</p>",
+      "origin": null,
+      "tint": "#ffffff",
+      "sort": 0,
+      "flags": {
+        "ravenmoor": {
+          "counterHerb": true
+        }
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1793404800000,
+        "modifiedTime": 1793404800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!items.effects!4RlKghqOQAqIc4K3.YH51yR0XVoAWhUdu"
+    }
+  ],
+  "flags": {
+    "ravenmoor": {
+      "edge": "how",
+      "key": "counter-herb",
+      "journalLink": null
+    }
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!4RlKghqOQAqIc4K3"
+}

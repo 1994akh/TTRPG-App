@@ -1,0 +1,63 @@
+{
+  "_id": "Ot1Qz2iLK7bay8FT",
+  "name": "Empty Vial (frost-rimmed)",
+  "type": "loot",
+  "img": "icons/consumables/potions/vial-cork-empty.webp",
+  "system": {
+    "description": {
+      "value": "<p>A small glass vial with a rime of white frost inside. It smells of mint.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-empty-vial\"><p><strong>DM:</strong> The vial that held the Banshee's Breath. Medicine or alchemist's supplies DC 13 matches it to the tonic glass (C6). There is no usable dose left.</p></section>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Death at Ravenmoor Manor",
+      "book": "",
+      "page": "",
+      "license": "",
+      "rules": "2024",
+      "revision": 1
+    },
+    "identifier": "empty-vial",
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "",
+    "identified": true,
+    "container": null,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "activities": {}
+  },
+  "effects": [],
+  "flags": {
+    "ravenmoor": {
+      "plot": true,
+      "key": "empty-vial",
+      "journalLink": null
+    }
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!Ot1Qz2iLK7bay8FT"
+}

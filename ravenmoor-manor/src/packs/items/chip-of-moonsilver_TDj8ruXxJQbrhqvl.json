@@ -1,0 +1,63 @@
+{
+  "_id": "TDj8ruXxJQbrhqvl",
+  "name": "Chip of Moonsilver",
+  "type": "loot",
+  "img": "icons/commodities/gems/gem-fragments-teal.webp",
+  "system": {
+    "description": {
+      "value": "<p>A sliver of silver-blue metal that seems to hold the lantern light a moment after it moves away.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-moonsilver-chip\"><p><strong>DM:</strong> The motive. The campaign doc gives it no price; if a player pockets one, it is worth whatever the table finds fun, and the new will says the vein belongs to Hollow Brook.</p></section>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Death at Ravenmoor Manor",
+      "book": "",
+      "page": "",
+      "license": "",
+      "rules": "2024",
+      "revision": 1
+    },
+    "identifier": "moonsilver-chip",
+    "quantity": 1,
+    "weight": {
+      "value": 0.1,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "",
+    "identified": true,
+    "container": null,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "activities": {}
+  },
+  "effects": [],
+  "flags": {
+    "ravenmoor": {
+      "plot": true,
+      "key": "moonsilver-chip",
+      "journalLink": "C8"
+    }
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!TDj8ruXxJQbrhqvl"
+}

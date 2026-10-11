@@ -1,0 +1,77 @@
+{
+  "_id": "wFWF7TjEvOpXa0Ig",
+  "name": "Silas's Iron Lockbox",
+  "type": "container",
+  "img": "icons/containers/chest/chest-reinforced-steel-walnut-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p>A small iron lockbox from Silas's desk. Shown open in Scene 2 with the sealed will inside; found open and empty in Scene 5.</p><section class=\"secret ravenmoor-dm-note\" id=\"secret-lockbox\"><p><strong>DM:</strong> Scenery and a prop; it does not need to be picked up.</p></section>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Death at Ravenmoor Manor",
+      "book": "",
+      "page": "",
+      "license": "",
+      "rules": "2024",
+      "revision": 1
+    },
+    "identifier": "lockbox",
+    "quantity": 1,
+    "weight": {
+      "value": 4,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "",
+    "identified": true,
+    "container": null,
+    "capacity": {
+      "count": null,
+      "volume": {
+        "value": null,
+        "units": "cubicFoot"
+      },
+      "weight": {
+        "value": null,
+        "units": "lb"
+      }
+    },
+    "currency": {
+      "pp": 0,
+      "gp": 0,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "activities": {}
+  },
+  "effects": [],
+  "flags": {
+    "ravenmoor": {
+      "plot": true,
+      "key": "lockbox",
+      "journalLink": null
+    }
+  },
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!wFWF7TjEvOpXa0Ig"
+}

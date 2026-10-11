@@ -1,0 +1,31 @@
+{
+  "_id": "kqFAY6GiLpnnVvqC",
+  "name": "Snuffing Powder",
+  "type": "script",
+  "img": "icons/commodities/gems/powder-raw-white.webp",
+  "scope": "global",
+  "command": "game.modules.get(\"ravenmoor-manor\").api.snuffingPowder();",
+  "folder": null,
+  "sort": 20000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "fn": "snuffingPowder",
+      "slot": null
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": null,
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!macros!kqFAY6GiLpnnVvqC"
+}

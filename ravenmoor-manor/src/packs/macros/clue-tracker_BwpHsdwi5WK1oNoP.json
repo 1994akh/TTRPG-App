@@ -1,0 +1,31 @@
+{
+  "_id": "BwpHsdwi5WK1oNoP",
+  "name": "Clue Tracker",
+  "type": "script",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "scope": "global",
+  "command": "game.modules.get(\"ravenmoor-manor\").api.clueTracker();",
+  "folder": null,
+  "sort": 4000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "fn": "clueTracker",
+      "slot": 4
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": null,
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!macros!BwpHsdwi5WK1oNoP"
+}

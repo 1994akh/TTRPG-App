@@ -1,0 +1,31 @@
+{
+  "_id": "AtPTo0r7Yc57P8gX",
+  "name": "Silas Retires",
+  "type": "script",
+  "img": "icons/sundries/misc/key-short-red.webp",
+  "scope": "global",
+  "command": "game.modules.get(\"ravenmoor-manor\").api.silasRetires();",
+  "folder": null,
+  "sort": 14000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ravenmoor": {
+      "fn": "silasRetires",
+      "slot": null
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.368",
+    "systemId": null,
+    "systemVersion": "6.0.6",
+    "createdTime": 1793404800000,
+    "modifiedTime": 1793404800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!macros!AtPTo0r7Yc57P8gX"
+}
