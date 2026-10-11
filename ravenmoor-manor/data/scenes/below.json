@@ -1,0 +1,635 @@
+{
+ "level": "below",
+ "name": "Crypt & Cellar",
+ "background": "modules/ravenmoor-manor/assets/maps/ravenmoor-below.webp",
+ "backgroundStandalone": null,
+ "width": 4800,
+ "height": 3600,
+ "grid": {
+  "type": 1,
+  "size": 100,
+  "distance": 5,
+  "units": "ft"
+ },
+ "padding": 0,
+ "partyStart": {
+  "x": 4400,
+  "y": 800
+ },
+ "rooms": [
+  {
+   "key": "cellar",
+   "name": "Wine Cellar",
+   "rect": {
+    "x": 3200,
+    "y": 600,
+    "width": 500,
+    "height": 800
+   }
+  },
+  {
+   "key": "passage",
+   "name": "Secret Passage",
+   "rect": {
+    "x": 3700,
+    "y": 900,
+    "width": 100,
+    "height": 600
+   }
+  },
+  {
+   "key": "crypt",
+   "name": "Chapel Crypt",
+   "rect": {
+    "x": 3800,
+    "y": 800,
+    "width": 800,
+    "height": 1000
+   }
+  }
+ ],
+ "walls": [
+  {
+   "c": [
+    3200,
+    600,
+    3700,
+    600
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3800,
+    800,
+    4600,
+    800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3700,
+    900,
+    3800,
+    900
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3200,
+    1400,
+    3700,
+    1400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3700,
+    1500,
+    3800,
+    1500
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3800,
+    1800,
+    4600,
+    1800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3200,
+    600,
+    3200,
+    1400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3700,
+    1200,
+    3700,
+    1400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "brick",
+     "label": "Bricked-up arch"
+    }
+   }
+  },
+  {
+   "c": [
+    3700,
+    600,
+    3700,
+    900
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3700,
+    1400,
+    3700,
+    1500
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3700,
+    900,
+    3700,
+    1200
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3800,
+    800,
+    3800,
+    900
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3800,
+    1500,
+    3800,
+    1800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3800,
+    900,
+    3800,
+    1400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3800,
+    1400,
+    3800,
+    1500
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 2,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "secret",
+     "label": "Hidden door behind Elspeth's tomb"
+    }
+   }
+  },
+  {
+   "c": [
+    4600,
+    800,
+    4600,
+    1800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  }
+ ],
+ "lights": [
+  {
+   "x": 3470,
+   "y": 1180,
+   "hidden": false,
+   "config": {
+    "dim": 15,
+    "bright": 5,
+    "color": "#ffb35c",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Edric's candle",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 3960,
+   "y": 1080,
+   "hidden": false,
+   "config": {
+    "dim": 15,
+    "bright": 5,
+    "color": "#ffb35c",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Crypt candelabra",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 4460,
+   "y": 1660,
+   "hidden": false,
+   "config": {
+    "dim": 15,
+    "bright": 5,
+    "color": "#ffb35c",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Crypt candelabra",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 4530,
+   "y": 1330,
+   "hidden": true,
+   "config": {
+    "dim": 30,
+    "bright": 15,
+    "color": "#38ff8c",
+    "alpha": 0.35,
+    "animation": {
+     "type": "ghost",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Hallows' brazier (green fire, lit at midnight)",
+     "group": null
+    }
+   }
+  }
+ ],
+ "notes": [
+  {
+   "number": 1,
+   "x": 3400,
+   "y": 950,
+   "label": "Wine Cellar",
+   "locationKey": "cellar",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 2,
+   "x": 3629,
+   "y": 1300,
+   "label": "Bricked-up arch",
+   "locationKey": null,
+   "parentKey": "cellar",
+   "secret": false
+  },
+  {
+   "number": 3,
+   "x": 3750,
+   "y": 1440,
+   "label": "Secret passage",
+   "locationKey": "passage",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 4,
+   "x": 4150,
+   "y": 990,
+   "label": "Chapel Crypt",
+   "locationKey": "crypt",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 5,
+   "x": 3960,
+   "y": 1550,
+   "label": "Elspeth's tomb & niche",
+   "locationKey": null,
+   "parentKey": "crypt",
+   "secret": false
+  },
+  {
+   "number": 6,
+   "x": 4220,
+   "y": 1320,
+   "label": "Chalk circle",
+   "locationKey": null,
+   "parentKey": "crypt",
+   "secret": false
+  },
+  {
+   "number": 7,
+   "x": 4530,
+   "y": 1490,
+   "label": "Hallows' brazier",
+   "locationKey": null,
+   "parentKey": "crypt",
+   "secret": false
+  },
+  {
+   "number": 8,
+   "x": 4340,
+   "y": 1660,
+   "label": "Moonsilver crack",
+   "locationKey": null,
+   "parentKey": "crypt",
+   "secret": false
+  },
+  {
+   "number": 9,
+   "x": 4500,
+   "y": 1150,
+   "label": "Crypt stairs up",
+   "locationKey": null,
+   "parentKey": "crypt",
+   "secret": false
+  }
+ ],
+ "tokens": [
+  {
+   "actor": "Dr. Thaddeus Quill",
+   "x": 4400,
+   "y": 1300,
+   "hidden": true
+  },
+  {
+   "actor": "Pumpkin-Headed Scarecrow",
+   "x": 4500,
+   "y": 1600,
+   "hidden": false
+  },
+  {
+   "actor": "Pumpkin-Headed Scarecrow",
+   "x": 4500,
+   "y": 1700,
+   "hidden": false
+  },
+  {
+   "actor": "Ravenmoor Skeleton",
+   "x": 3900,
+   "y": 900,
+   "hidden": true
+  },
+  {
+   "actor": "Ravenmoor Skeleton",
+   "x": 4100,
+   "y": 900,
+   "hidden": true
+  },
+  {
+   "actor": "Ravenmoor Skeleton",
+   "x": 3900,
+   "y": 1600,
+   "hidden": true
+  },
+  {
+   "actor": "Ravenmoor Skeleton",
+   "x": 4100,
+   "y": 1600,
+   "hidden": true
+  }
+ ],
+ "levelRegions": [
+  {
+   "name": "Cellar stairs",
+   "connectsTo": "ground",
+   "rect": {
+    "x": 3500,
+    "y": 1000,
+    "width": 200,
+    "height": 200
+   }
+  },
+  {
+   "name": "Crypt stairs",
+   "connectsTo": "ground",
+   "rect": {
+    "x": 4400,
+    "y": 800,
+    "width": 200,
+    "height": 300
+   }
+  },
+  {
+   "name": "Hidden stair",
+   "connectsTo": "upper",
+   "rect": {
+    "x": 3700,
+    "y": 900,
+    "width": 100,
+    "height": 300
+   }
+  }
+ ],
+ "tiles": [
+  {
+   "texture": "modules/ravenmoor-manor/assets/tiles/evidence-costume.webp",
+   "x": 3804,
+   "y": 1210,
+   "width": 90,
+   "height": 95,
+   "hidden": true,
+   "label": "C7 costume bundle (show when found)"
+  },
+  {
+   "texture": "modules/ravenmoor-manor/assets/tiles/brazier-flame.webp",
+   "x": 4480,
+   "y": 1280,
+   "width": 100,
+   "height": 100,
+   "hidden": true,
+   "label": "Green brazier fire (show at midnight)"
+  }
+ ],
+ "standaloneCrop": {
+  "file": "modules/ravenmoor-manor/assets/maps/ravenmoor-crypt-battlemap.webp",
+  "x": 3000,
+  "y": 400,
+  "width": 1800,
+  "height": 1600,
+  "note": "For a separate crypt scene: use this image and subtract x/y from every coordinate."
+ }
+}

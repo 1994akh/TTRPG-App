@@ -1,0 +1,1253 @@
+{
+  "_format": "Ravenmoor actor source. 2024 (modern) D&D rules. Skill keys use dnd5e abbreviations. Damage formulas exclude the average; descriptions are the player-facing stat-block text.",
+  "actors": [
+    {
+      "key": "quill",
+      "name": "Dr. Thaddeus Quill",
+      "role": "antagonist",
+      "token": "assets/tokens/quill-masked.webp",
+      "tokenUnmasked": "assets/tokens/quill-unmasked.webp",
+      "size": "med",
+      "creatureType": "humanoid",
+      "alignment": "Neutral Evil",
+      "cr": 7,
+      "xp": 2900,
+      "pb": 3,
+      "ac": {
+        "value": 15,
+        "source": "oiled leather coat"
+      },
+      "initiative": {
+        "modifier": 3,
+        "score": 13
+      },
+      "hp": {
+        "average": 162,
+        "formula": "25d8 + 50"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "abilities": {
+        "str": 10,
+        "dex": 16,
+        "con": 14,
+        "int": 18,
+        "wis": 13,
+        "cha": 14
+      },
+      "saves": [
+        "dex",
+        "int",
+        "wis"
+      ],
+      "skills": {
+        "dec": "proficient",
+        "med": "expertise"
+      },
+      "passivePerception": 11,
+      "senses": {},
+      "languages": [
+        "common",
+        "elvish"
+      ],
+      "immunities": {
+        "damage": [],
+        "condition": []
+      },
+      "resistances": [],
+      "vulnerabilities": [],
+      "gear": [
+        "Medical bag with a false bottom (holds the new will)",
+        "Acid flasks",
+        "Scalpels",
+        "Snuffing powder",
+        "Plague doctor mask",
+        "Signet ring with a mortar and pestle"
+      ],
+      "traits": [
+        {
+          "name": "Plague Mask",
+          "text": "Quill is immune to his own Banshee's Breath and has Advantage on saving throws against poison."
+        },
+        {
+          "name": "Cornered",
+          "text": "When Quill is reduced to 30 Hit Points or fewer (50 if the session is running long), he tears off his mask and surrenders. His skeletons crumble and his scarecrows slump lifeless.",
+          "automation": "Module hook: on HP <= threshold, run the Unmask Quill macro."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Multiattack",
+          "text": "Quill makes three attacks, using Scalpel or Acid Flask in any combination."
+        },
+        {
+          "name": "Scalpel",
+          "attack": {
+            "kind": "melee",
+            "bonus": 6,
+            "reach": 5
+          },
+          "damage": [
+            {
+              "formula": "1d4 + 3",
+              "type": "slashing"
+            },
+            {
+              "formula": "2d6",
+              "type": "poison"
+            }
+          ],
+          "text": "Melee Attack Roll: +6, reach 5 ft. Hit: 5 (1d4 + 3) Slashing damage plus 7 (2d6) Poison damage."
+        },
+        {
+          "name": "Acid Flask",
+          "attack": {
+            "kind": "ranged",
+            "bonus": 6,
+            "range": [
+              30,
+              60
+            ]
+          },
+          "damage": [
+            {
+              "formula": "3d6",
+              "type": "acid"
+            }
+          ],
+          "text": "Ranged Attack Roll: +6, range 30/60 ft. Hit: 10 (3d6) Acid damage."
+        },
+        {
+          "name": "Banshee's Breath",
+          "recharge": [
+            5,
+            6
+          ],
+          "save": {
+            "ability": "con",
+            "dc": 15,
+            "area": {
+              "shape": "cone",
+              "size": 15
+            },
+            "onSuccess": "half"
+          },
+          "damage": [
+            {
+              "formula": "5d8",
+              "type": "poison"
+            }
+          ],
+          "condition": {
+            "status": "frightened",
+            "duration": "until the end of the target's next turn",
+            "onFailOnly": true
+          },
+          "text": "Constitution Saving Throw: DC 15, each creature in a 15-foot Cone. Failure: 22 (5d8) Poison damage, and the target has the Frightened condition until the end of its next turn. Success: Half damage only."
+        }
+      ],
+      "bonusActions": [
+        {
+          "name": "Ring the Bone Bell",
+          "text": "Up to two allies Quill can see move up to half their Speed, and one of them makes one attack."
+        },
+        {
+          "name": "Snuffing Powder",
+          "uses": {
+            "max": 2,
+            "per": "day"
+          },
+          "text": "Quill flings alchemical powder at a point within 60 feet. Every nonmagical flame in a 20-foot-radius Sphere there goes out in a cold rush of air.",
+          "automation": "Module: hide every AmbientLight flagged nonmagical within 20 ft of a chosen point."
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Slippery Physician",
+          "trigger": "A melee attack roll hits Quill.",
+          "text": "Trigger: A melee attack roll hits Quill. Response: He adds 3 to his AC against that attack, possibly causing it to miss. If it misses, he moves up to 10 feet without provoking Opportunity Attacks."
+        }
+      ],
+      "lair": {
+        "name": "The Chapel Crypt (midnight bell)",
+        "initiative": 20,
+        "intro": "Quill fights in the chapel crypt beneath Ravenmoor Manor. On initiative count 20 (losing ties), as the midnight bell tolls, the crypt takes one lair action, in order.",
+        "rounds": [
+          {
+            "round": 1,
+            "name": "The dead rise",
+            "text": "Two Ravenmoor skeletons burst from coffins. If the party earned the Why Unmasking Edge, Edric and Bramwell hold the lids shut and nothing happens.",
+            "automation": "Spawn 2 skeletons at the coffin spots unless flag unmaskWhy is set."
+          },
+          {
+            "round": 2,
+            "name": "Candles gutter",
+            "text": "A ghostly wail fills the crypt. Wisdom Saving Throw: DC 13, each player character. Failure: the Frightened condition until the end of its next turn."
+          },
+          {
+            "round": 3,
+            "name": "Green flame",
+            "text": "The brazier flares. Dexterity Saving Throw: DC 13, each creature within 10 feet of the brazier. Failure: 7 (2d6) Fire damage. From now on, if Quill starts his turn next to the brazier holding the will, he can burn it as a Bonus Action.",
+            "automation": "Reveal brazier light + flame tile."
+          },
+          {
+            "round": 4,
+            "name": "The Widow's due",
+            "text": "Elspeth's spirit rises from her tomb (also triggers early when Quill drops below half his Hit Points). Wisdom Saving Throw: DC 15, Quill only. Failure: he has the Frightened condition until the fight ends.",
+            "automation": "Reveal the Lantern Widow token at Elspeth's tomb."
+          }
+        ]
+      },
+      "biography": {
+        "look": "Family physician and amateur alchemist, 50s. Silver whiskers, half-moon spectacles, a voice like warm cocoa. Tonight: plague doctor costume, beaked mask stuffed with frost-mint and cloves, long oiled coat, tall buckled boots, mortar-and-pestle signet ring.",
+        "wants": "The manor, for the vein of moonsilver beneath the crypt. He secretly owns all of Edric's debts.",
+        "playsAs": "Warm, grandfatherly, always 'just trying to help.' Steers suspicion to the ghost, then Edric, then Morwenna. In a zone of truth he goes quiet rather than lie.",
+        "tells": "Smell of mint; foxfire paste under his fingernails (Perception DC 15); pond mud on his buckled boots; room dark at 8:45.",
+        "lines": [
+          "Poor Silas. Fear is a terrible poison.",
+          "Edric owed a great deal of money. I only mention it because I care.",
+          "You lot were supposed to stay scared!"
+        ]
+      }
+    },
+    {
+      "key": "scarecrow",
+      "name": "Pumpkin-Headed Scarecrow",
+      "role": "monster",
+      "token": "assets/tokens/pumpkin-scarecrow.webp",
+      "size": "med",
+      "creatureType": "construct",
+      "alignment": "Unaligned",
+      "cr": 3,
+      "xp": 700,
+      "pb": 2,
+      "ac": {
+        "value": 13,
+        "source": "natural armor"
+      },
+      "initiative": {
+        "modifier": 2,
+        "score": 12
+      },
+      "hp": {
+        "average": 52,
+        "formula": "8d8 + 16"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "abilities": {
+        "str": 16,
+        "dex": 14,
+        "con": 14,
+        "int": 4,
+        "wis": 10,
+        "cha": 1
+      },
+      "saves": [],
+      "skills": {},
+      "passivePerception": 10,
+      "senses": {
+        "darkvision": 60
+      },
+      "languages": [
+        "understands Common but can't speak"
+      ],
+      "immunities": {
+        "damage": [
+          "poison"
+        ],
+        "condition": [
+          "charmed",
+          "frightened",
+          "poisoned"
+        ]
+      },
+      "resistances": [],
+      "vulnerabilities": [
+        "fire"
+      ],
+      "traits": [
+        {
+          "name": "False Appearance",
+          "text": "While the scarecrow remains motionless, it is indistinguishable from an ordinary scarecrow."
+        },
+        {
+          "name": "Pumpkin Burst",
+          "save": {
+            "ability": "dex",
+            "dc": 13,
+            "area": {
+              "shape": "emanation",
+              "size": 5
+            }
+          },
+          "damage": [
+            {
+              "formula": "3d6",
+              "type": "fire"
+            }
+          ],
+          "text": "When the scarecrow drops to 0 Hit Points, its carved head bursts in candle flame. Dexterity Saving Throw: DC 13, each creature within 5 feet of it. Failure: 10 (3d6) Fire damage."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Multiattack",
+          "text": "The scarecrow makes two Claw attacks."
+        },
+        {
+          "name": "Claw",
+          "attack": {
+            "kind": "melee",
+            "bonus": 5,
+            "reach": 5
+          },
+          "damage": [
+            {
+              "formula": "1d10 + 3",
+              "type": "slashing"
+            }
+          ],
+          "text": "Melee Attack Roll: +5, reach 5 ft. Hit: 8 (1d10 + 3) Slashing damage."
+        },
+        {
+          "name": "Grinning Glare",
+          "recharge": [
+            5,
+            6
+          ],
+          "save": {
+            "ability": "wis",
+            "dc": 13,
+            "range": 30,
+            "targets": 1
+          },
+          "condition": {
+            "status": "frightened",
+            "duration": "until the end of the target's next turn",
+            "extra": "Speed 0 while Frightened this way"
+          },
+          "text": "The candle in the scarecrow's carved head blazes. Wisdom Saving Throw: DC 13, one creature within 30 feet that can see the scarecrow. Failure: The target has the Frightened condition until the end of its next turn, and its Speed is 0 while Frightened this way."
+        }
+      ],
+      "biography": {
+        "look": "Two of Bramwell's pumpkin-patch scarecrows: stitched burlap, straw bursting at the seams, jack-o'-lantern heads lit from within. Animated by Quill's chalk-circle ritual; they wait motionless in the crypt until the showdown. Fire is their worst enemy."
+      }
+    },
+    {
+      "key": "skeleton",
+      "name": "Ravenmoor Skeleton",
+      "role": "minion",
+      "token": "assets/tokens/skeleton.webp",
+      "size": "med",
+      "creatureType": "undead",
+      "alignment": "Lawful Evil",
+      "cr": 0.125,
+      "xp": 25,
+      "pb": 2,
+      "ac": {
+        "value": 13,
+        "source": "armor scraps"
+      },
+      "initiative": {
+        "modifier": 2,
+        "score": 12
+      },
+      "hp": {
+        "average": 1,
+        "formula": ""
+      },
+      "speed": {
+        "walk": 30
+      },
+      "abilities": {
+        "str": 10,
+        "dex": 14,
+        "con": 15,
+        "int": 6,
+        "wis": 8,
+        "cha": 5
+      },
+      "saves": [],
+      "skills": {},
+      "passivePerception": 9,
+      "senses": {
+        "darkvision": 60
+      },
+      "languages": [
+        "understands Common but can't speak"
+      ],
+      "immunities": {
+        "damage": [
+          "poison"
+        ],
+        "condition": [
+          "exhaustion",
+          "poisoned"
+        ]
+      },
+      "resistances": [],
+      "vulnerabilities": [],
+      "traits": [
+        {
+          "name": "Minion",
+          "text": "The skeleton is destroyed by any damage. If it succeeds on a saving throw against an effect that deals half damage on a success, it takes no damage instead."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Shortsword",
+          "attack": {
+            "kind": "melee",
+            "bonus": 4,
+            "reach": 5
+          },
+          "damage": [
+            {
+              "formula": "1d6 + 2",
+              "type": "piercing"
+            }
+          ],
+          "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 5 (1d6 + 2) Piercing damage."
+        },
+        {
+          "name": "Shortbow",
+          "attack": {
+            "kind": "ranged",
+            "bonus": 4,
+            "range": [
+              80,
+              320
+            ]
+          },
+          "damage": [
+            {
+              "formula": "1d6 + 2",
+              "type": "piercing"
+            }
+          ],
+          "text": "Ranged Attack Roll: +4, range 80/320 ft. Hit: 5 (1d6 + 2) Piercing damage."
+        }
+      ],
+      "biography": {
+        "look": "Long-dead Ravenmoors in rotted finery and rusted family armor, raised by Quill's chalk circle. Run them all on one initiative count. They crumble the moment Quill surrenders."
+      }
+    },
+    {
+      "key": "morwenna",
+      "name": "Lady Morwenna Ravenmoor",
+      "role": "suspect",
+      "token": "assets/tokens/morwenna.webp",
+      "size": "med",
+      "creatureType": "humanoid",
+      "alignment": "Lawful Neutral",
+      "cr": 0.125,
+      "xp": 25,
+      "pb": 2,
+      "ac": {
+        "value": 12,
+        "source": "swan-feather gown"
+      },
+      "initiative": {
+        "modifier": 2,
+        "score": 12
+      },
+      "hp": {
+        "average": 13,
+        "formula": "3d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "abilities": {
+        "str": 9,
+        "dex": 14,
+        "con": 11,
+        "int": 13,
+        "wis": 14,
+        "cha": 16
+      },
+      "saves": [],
+      "skills": {
+        "dec": "proficient",
+        "ins": "proficient",
+        "per": "proficient"
+      },
+      "passivePerception": 12,
+      "senses": {},
+      "languages": [
+        "common",
+        "elvish"
+      ],
+      "immunities": {
+        "damage": [],
+        "condition": []
+      },
+      "resistances": [],
+      "vulnerabilities": [],
+      "traits": [
+        {
+          "name": "Society Grace",
+          "text": "Morwenna has Advantage on Charisma checks made to influence nobles and officials, including Master Fennick."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Stiletto",
+          "attack": {
+            "kind": "melee",
+            "bonus": 4,
+            "reach": 5
+          },
+          "damage": [
+            {
+              "formula": "1d4 + 2",
+              "type": "piercing"
+            }
+          ],
+          "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 4 (1d4 + 2) Piercing damage."
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Parry",
+          "trigger": "Morwenna is hit by a melee attack roll while holding her stiletto.",
+          "text": "Trigger: Morwenna is hit by a melee attack roll while holding her stiletto. Response: She adds 2 to her AC against that attack, possibly causing it to miss."
+        }
+      ],
+      "biography": {
+        "look": "Silas's second wife, 40s. Sharp cheekbones, black-feathered swan mask and gown, a fan she snaps shut when annoyed. Stable mud on her hem.",
+        "wants": "Out of a cold marriage; to leave at dawn with a lover who signs his letters 'R.'",
+        "secret": "Her packed trunk is in a carriage in the stables and R.'s love letter (C12) is tucked in her glove. She spent 8:30-9:00 loading the carriage.",
+        "knows": "At about 8:45, from the stable yard, she saw a green glow moving past the chapel windows. Shares it once her secret is safe (Persuasion DC 14, or the letter plus a promise of discretion).",
+        "playsAs": "Clipped and haughty; softens only when treated with respect.",
+        "lines": [
+          "I was in my room. With a headache. Which you are now giving me.",
+          "If I tell you what I saw, my business stays my own. Agreed?"
+        ]
+      }
+    },
+    {
+      "key": "edric",
+      "name": "Edric Ravenmoor",
+      "role": "suspect",
+      "token": "assets/tokens/edric.webp",
+      "size": "med",
+      "creatureType": "humanoid",
+      "alignment": "Chaotic Neutral",
+      "cr": 0.5,
+      "xp": 100,
+      "pb": 2,
+      "ac": {
+        "value": 12,
+        "source": "leather riding coat"
+      },
+      "initiative": {
+        "modifier": 1,
+        "score": 11
+      },
+      "hp": {
+        "average": 27,
+        "formula": "5d8 + 5"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "abilities": {
+        "str": 14,
+        "dex": 12,
+        "con": 12,
+        "int": 10,
+        "wis": 9,
+        "cha": 13
+      },
+      "saves": [],
+      "skills": {
+        "ath": "proficient",
+        "dec": "proficient",
+        "per": "proficient"
+      },
+      "passivePerception": 9,
+      "senses": {},
+      "languages": [
+        "common"
+      ],
+      "immunities": {
+        "damage": [],
+        "condition": []
+      },
+      "resistances": [],
+      "vulnerabilities": [],
+      "traits": [
+        {
+          "name": "Liquid Courage",
+          "text": "While Edric has had a drink in the past hour, he has Advantage on saving throws to avoid or end the Frightened condition and Disadvantage on Wisdom (Perception) checks."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Ceremonial Sabre",
+          "attack": {
+            "kind": "melee",
+            "bonus": 4,
+            "reach": 5
+          },
+          "damage": [
+            {
+              "formula": "1d8 + 2",
+              "type": "slashing"
+            }
+          ],
+          "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) Slashing damage."
+        }
+      ],
+      "bonusActions": [
+        {
+          "name": "Hurl Head",
+          "uses": {
+            "max": 1,
+            "per": "day"
+          },
+          "attack": {
+            "kind": "ranged",
+            "bonus": 3,
+            "range": [
+              20,
+              20
+            ]
+          },
+          "damage": [
+            {
+              "formula": "1",
+              "type": "bludgeoning"
+            }
+          ],
+          "text": "Ranged Attack Roll: +3, range 20 ft. Hit: 1 Bludgeoning damage, and the target has Disadvantage on its next attack roll before the end of its next turn."
+        }
+      ],
+      "biography": {
+        "look": "Eldest son, 30s. Flushed face, black cloak with the collar hitched over his head, grinning papier-mache pumpkin head under one arm. Usually holding a glass.",
+        "wants": "His inheritance, to pay debts that terrify him. Underneath, his father's approval.",
+        "secret": "Ruinous gambling debts. Letter H3 in his coat says a new creditor bought them all; sealed in green wax with a mortar-and-pestle stamp. He spent 8:30-9:00 alone in the wine cellar (true).",
+        "knows": "Around 8:40 he heard footsteps and dripping behind the cellar's bricked-up arch. Goes pale when he learns Quill's signet ring bears a mortar and pestle. Quill frames him at candle 8.",
+        "playsAs": "Bluster, self-pity and bad jokes.",
+        "lines": [
+          "I'd say I lost my head, but that's just the costume.",
+          "Father and I argued about money. We always argued about money. That's not murder, that's family."
+        ]
+      }
+    },
+    {
+      "key": "pip",
+      "name": "Penelope \"Pip\" Ravenmoor",
+      "role": "suspect / ally",
+      "token": "assets/tokens/pip.webp",
+      "size": "med",
+      "creatureType": "humanoid",
+      "alignment": "Chaotic Good",
+      "cr": 0.5,
+      "xp": 100,
+      "pb": 2,
+      "ac": {
+        "value": 12,
+        "source": ""
+      },
+      "initiative": {
+        "modifier": 2,
+        "score": 12
+      },
+      "hp": {
+        "average": 22,
+        "formula": "5d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "abilities": {
+        "str": 8,
+        "dex": 14,
+        "con": 10,
+        "int": 16,
+        "wis": 11,
+        "cha": 13
+      },
+      "saves": [
+        "int",
+        "wis"
+      ],
+      "skills": {
+        "arc": "proficient",
+        "dec": "proficient",
+        "slt": "proficient"
+      },
+      "passivePerception": 10,
+      "senses": {},
+      "languages": [
+        "common",
+        "elvish"
+      ],
+      "immunities": {
+        "damage": [],
+        "condition": []
+      },
+      "resistances": [],
+      "vulnerabilities": [],
+      "traits": [
+        {
+          "name": "Illusionist's Eye",
+          "text": "Pip knows whether any effect she can see within 30 feet is an illusion."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Fire Bolt",
+          "attack": {
+            "kind": "rangedSpell",
+            "bonus": 5,
+            "range": [
+              120,
+              120
+            ]
+          },
+          "damage": [
+            {
+              "formula": "1d10",
+              "type": "fire"
+            }
+          ],
+          "text": "Ranged Attack Roll: +5, range 120 ft. Hit: 5 (1d10) Fire damage."
+        },
+        {
+          "name": "Spellcasting",
+          "spellcasting": {
+            "ability": "int",
+            "dc": 13,
+            "noMaterial": true,
+            "atWill": [
+              "Light",
+              "Mage Hand",
+              "Minor Illusion",
+              "Prestidigitation"
+            ],
+            "perDay": {
+              "2": [
+                "Disguise Self",
+                "Silent Image"
+              ],
+              "1": [
+                "Invisibility"
+              ]
+            }
+          },
+          "text": "Pip casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save DC 13): At Will: Light, Mage Hand, Minor Illusion, Prestidigitation. 2/Day Each: Disguise Self, Silent Image. 1/Day: Invisibility."
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Protective Magic",
+          "uses": {
+            "max": 1,
+            "per": "day"
+          },
+          "trigger": "An attack roll hits Pip.",
+          "text": "Trigger: An attack roll hits Pip. Response: Pip casts Shield, gaining +5 AC until the start of her next turn, including against the triggering attack."
+        }
+      ],
+      "biography": {
+        "look": "Silas's granddaughter, 19, student illusionist. Ink-stained fingers, an enormous witch's hat that keeps sliding over her eyes. Talks fast, apologizes often, braver than she looks.",
+        "wants": "To know Elspeth, the grandmother she never met.",
+        "secret": "For a month she has used Minor Illusion to stage Widow sightings to make Silas talk about Elspeth (C13). She spent 8:30-9:00 changing out of an ink-stained costume (true).",
+        "knows": "Tonight's ghost was not hers: her illusions are just light, they don't snuff candles or leave smudges, and the lantern had real green glass. Detect Magic or Arcana DC 12 confirms no illusion on the gallery.",
+        "playsAs": "Guilty, eager, natural ally. Quill attacks her at candle 4. If befriended she joins the showdown and hands out counter-herb sprigs (How Unmasking Edge).",
+        "lines": [
+          "Okay. So. The other ghosts were me. Not this one! This one was solid!",
+          "Grandfather took his tonic from the doctor every night..."
+        ]
+      }
+    },
+    {
+      "key": "bramwell",
+      "name": "Bramwell Hatch",
+      "role": "suspect",
+      "token": "assets/tokens/bramwell.webp",
+      "size": "med",
+      "creatureType": "humanoid",
+      "alignment": "Neutral Good",
+      "cr": 0.5,
+      "xp": 100,
+      "pb": 2,
+      "ac": {
+        "value": 11,
+        "source": "patched leather coat"
+      },
+      "initiative": {
+        "modifier": 0,
+        "score": 10
+      },
+      "hp": {
+        "average": 32,
+        "formula": "5d8 + 10"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "abilities": {
+        "str": 15,
+        "dex": 10,
+        "con": 14,
+        "int": 9,
+        "wis": 13,
+        "cha": 8
+      },
+      "saves": [],
+      "skills": {
+        "ath": "proficient",
+        "prc": "proficient",
+        "sur": "proficient"
+      },
+      "passivePerception": 13,
+      "senses": {},
+      "languages": [
+        "common"
+      ],
+      "immunities": {
+        "damage": [],
+        "condition": []
+      },
+      "resistances": [],
+      "vulnerabilities": [],
+      "traits": [
+        {
+          "name": "Graveside Knowledge",
+          "text": "Bramwell has Advantage on ability checks to find hidden doors, passages and graves on the Ravenmoor grounds."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Shovel",
+          "attack": {
+            "kind": "melee",
+            "bonus": 4,
+            "reach": 5
+          },
+          "damage": [
+            {
+              "formula": "1d8 + 2",
+              "type": "bludgeoning"
+            }
+          ],
+          "text": "Melee Attack Roll: +4, reach 5 ft. Hit: 6 (1d8 + 2) Bludgeoning damage."
+        }
+      ],
+      "biography": {
+        "look": "Groundskeeper and gravedigger, 60s. Stooped, mud to the knees, smells of pond water and pipe smoke. Scarecrow-patched coat, lantern, a shovel he never puts down.",
+        "wants": "Elspeth to rest in peace.",
+        "secret": "Every Hallows' Eve he lights warding lanterns around the pond; he was there 8:30-9:00. Decades ago he helped brick up part of an old passage under the house.",
+        "knows": "The passage runs from the chapel crypt up to the master's study, behind the bookshelves. Two scarecrows are missing (C9). Shares it if the party helps with his lanterns, respects the legend, or wins Insight/Persuasion DC 13.",
+        "playsAs": "Gruff and slow, spits between sentences, lowers his voice at any mention of the pond. With the Why Edge he and Edric hold the coffin lids shut.",
+        "lines": [
+          "Mind the pond. She's restless tonight.",
+          "She walks every Hallows' Eve. Never hurt a soul. Not till now, they'll say. They'll be wrong."
+        ]
+      }
+    },
+    {
+      "key": "crane",
+      "name": "Mrs. Agatha Crane",
+      "role": "suspect / witness",
+      "token": "assets/tokens/crane.webp",
+      "size": "med",
+      "creatureType": "humanoid",
+      "alignment": "Lawful Good",
+      "cr": 0,
+      "xp": 10,
+      "pb": 2,
+      "ac": {
+        "value": 10,
+        "source": ""
+      },
+      "initiative": {
+        "modifier": 0,
+        "score": 10
+      },
+      "hp": {
+        "average": 9,
+        "formula": "2d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "abilities": {
+        "str": 8,
+        "dex": 10,
+        "con": 10,
+        "int": 13,
+        "wis": 15,
+        "cha": 11
+      },
+      "saves": [],
+      "skills": {
+        "ins": "proficient",
+        "prc": "proficient"
+      },
+      "passivePerception": 14,
+      "senses": {},
+      "languages": [
+        "common"
+      ],
+      "immunities": {
+        "damage": [],
+        "condition": []
+      },
+      "resistances": [],
+      "vulnerabilities": [],
+      "traits": [
+        {
+          "name": "Every Key in the House",
+          "text": "Mrs. Crane carries keys to every lock in Ravenmoor Manor except Silas's lockbox."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Ring of Keys",
+          "attack": {
+            "kind": "melee",
+            "bonus": 1,
+            "reach": 5
+          },
+          "damage": [
+            {
+              "formula": "1d4 - 1",
+              "type": "bludgeoning"
+            }
+          ],
+          "text": "Melee Attack Roll: +1, reach 5 ft. Hit: 1 (1d4 - 1) Bludgeoning damage."
+        }
+      ],
+      "biography": {
+        "look": "Housekeeper of forty years, 70s. Iron-grey bun, housekeeper's black, a ring of keys you hear two rooms away. She notices everything.",
+        "wants": "Elspeth remembered and the truth told.",
+        "secret": "She places white lilies (Elspeth's flower) in the study every Hallows' Eve; they were on the desk at 7:00. She never forgave Silas for the night Elspeth drowned.",
+        "knows": "The 'ghost' that brushed past her on the servants' stair at 8:57 wore men's buckled boots and smelled of mint. At 8:45 Quill's room was dark and empty. The doctor always adds 'his drops' himself. The tonic glass is unwashed in the scullery.",
+        "playsAs": "Stern and precise; softens when anyone speaks kindly of Elspeth.",
+        "lines": [
+          "I've kept this house forty years. I know every footstep in it, and that ghost walked like a man.",
+          "The doctor always added his own drops. Always."
+        ]
+      }
+    },
+    {
+      "key": "fennick",
+      "name": "Fennick Barrowdown",
+      "role": "npc",
+      "token": "assets/tokens/fennick.webp",
+      "size": "sm",
+      "creatureType": "humanoid",
+      "alignment": "Lawful Neutral",
+      "cr": 0,
+      "xp": 10,
+      "pb": 2,
+      "ac": {
+        "value": 10,
+        "source": ""
+      },
+      "initiative": {
+        "modifier": 0,
+        "score": 10
+      },
+      "hp": {
+        "average": 7,
+        "formula": "2d6"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "abilities": {
+        "str": 8,
+        "dex": 11,
+        "con": 10,
+        "int": 14,
+        "wis": 12,
+        "cha": 10
+      },
+      "saves": [],
+      "skills": {
+        "his": "proficient",
+        "ins": "proficient",
+        "inv": "proficient"
+      },
+      "passivePerception": 11,
+      "senses": {},
+      "languages": [
+        "common",
+        "halfling"
+      ],
+      "immunities": {
+        "damage": [],
+        "condition": []
+      },
+      "resistances": [],
+      "vulnerabilities": [],
+      "traits": [
+        {
+          "name": "Luck",
+          "text": "When Fennick rolls a 1 on the d20 of a D20 Test, he can reroll the die and must use the new roll."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Satchel Swat",
+          "attack": {
+            "kind": "melee",
+            "bonus": 1,
+            "reach": 5
+          },
+          "damage": [
+            {
+              "formula": "1d4 - 1",
+              "type": "bludgeoning"
+            }
+          ],
+          "text": "Melee Attack Roll: +1, reach 5 ft. Hit: 1 (1d4 - 1) Bludgeoning damage."
+        }
+      ],
+      "biography": {
+        "look": "The family solicitor, a damp and nervous halfling. Fogged spectacles, dripping cloak, a satchel (holding the old will) clutched to his chest. Arrives at midnight by the ferry path.",
+        "wants": "To read the correct will, be paid, and go home to bed.",
+        "knows": "The old will leaves everything to Edric. Silas told him a new will existed but not its contents. A genuine Ravenmoor will bears Silas's black raven seal, so he can confirm the recovered will on sight.",
+        "playsAs": "Fussy and easily startled, scrupulously honest. Reads whichever valid will is in front of him at midnight.",
+        "lines": [
+          "Fennick Barrowdown, solicitor. I'm here to read Lord Ravenmoor's will. Which will, I'm told, is... in question?"
+        ]
+      }
+    },
+    {
+      "key": "widow",
+      "name": "The Lantern Widow",
+      "role": "spirit (not meant to be fought)",
+      "token": "assets/tokens/lantern-widow.webp",
+      "size": "med",
+      "creatureType": "undead",
+      "alignment": "Neutral Good",
+      "cr": 0,
+      "xp": 0,
+      "pb": 2,
+      "ac": {
+        "value": 11,
+        "source": ""
+      },
+      "initiative": {
+        "modifier": 1,
+        "score": 11
+      },
+      "hp": {
+        "average": 45,
+        "formula": "10d8"
+      },
+      "speed": {
+        "walk": 0,
+        "fly": 40,
+        "hover": true
+      },
+      "abilities": {
+        "str": 7,
+        "dex": 13,
+        "con": 10,
+        "int": 10,
+        "wis": 12,
+        "cha": 17
+      },
+      "saves": [],
+      "skills": {},
+      "passivePerception": 11,
+      "senses": {
+        "darkvision": 60
+      },
+      "languages": [
+        "understands Common but does not speak"
+      ],
+      "immunities": {
+        "damage": [
+          "cold",
+          "necrotic",
+          "poison"
+        ],
+        "condition": [
+          "charmed",
+          "exhaustion",
+          "frightened",
+          "grappled",
+          "paralyzed",
+          "petrified",
+          "poisoned",
+          "prone",
+          "restrained"
+        ]
+      },
+      "resistances": [
+        "acid",
+        "bludgeoning",
+        "fire",
+        "lightning",
+        "piercing",
+        "slashing",
+        "thunder"
+      ],
+      "vulnerabilities": [],
+      "traits": [
+        {
+          "name": "Incorporeal Movement",
+          "text": "The Widow can move through other creatures and objects as if they were Difficult Terrain."
+        },
+        {
+          "name": "Ethereal Retreat",
+          "text": "If any creature attacks the Widow, she fades into the Ethereal Plane and does not return this night."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Widow's Due",
+          "save": {
+            "ability": "wis",
+            "dc": 15,
+            "range": 60,
+            "targets": 1
+          },
+          "condition": {
+            "status": "frightened",
+            "duration": "until the end of the encounter"
+          },
+          "text": "Wisdom Saving Throw: DC 15, one creature the Widow can see within 60 feet. Failure: The target has the Frightened condition until the end of the encounter. She uses this only on Dr. Quill."
+        }
+      ],
+      "biography": {
+        "look": "Elspeth Ravenmoor, Silas's first wife, drowned in the manor pond on All Hallows' Eve thirty years ago. Pale woman, grey gown, veil, lantern of green glass. Never speaks; only bows her head.",
+        "appears": "Exactly twice: rising from her tomb in round 4 of the showdown (or when Quill drops below half HP), and standing on the pond at dawn in the epilogue. Afterward her lantern waits on her memorial stone; it works as a Lantern of Revealing."
+      }
+    },
+    {
+      "key": "silas",
+      "name": "Lord Silas Ravenmoor",
+      "role": "victim",
+      "token": "assets/tokens/silas.webp",
+      "size": "med",
+      "creatureType": "humanoid",
+      "alignment": "Lawful Neutral",
+      "cr": 0,
+      "xp": 10,
+      "pb": 2,
+      "ac": {
+        "value": 10,
+        "source": ""
+      },
+      "initiative": {
+        "modifier": 0,
+        "score": 10
+      },
+      "hp": {
+        "average": 4,
+        "formula": "1d8"
+      },
+      "speed": {
+        "walk": 25
+      },
+      "abilities": {
+        "str": 8,
+        "dex": 10,
+        "con": 9,
+        "int": 14,
+        "wis": 13,
+        "cha": 13
+      },
+      "saves": [],
+      "skills": {},
+      "passivePerception": 11,
+      "senses": {},
+      "languages": [
+        "common"
+      ],
+      "immunities": {
+        "damage": [],
+        "condition": []
+      },
+      "resistances": [],
+      "vulnerabilities": [],
+      "traits": [],
+      "actions": [
+        {
+          "name": "Raven-Headed Cane",
+          "attack": {
+            "kind": "melee",
+            "bonus": 1,
+            "reach": 5
+          },
+          "damage": [
+            {
+              "formula": "1d4 - 1",
+              "type": "bludgeoning"
+            }
+          ],
+          "text": "Melee Attack Roll: +1, reach 5 ft. Hit: 1 (1d4 - 1) Bludgeoning damage."
+        }
+      ],
+      "notes": "Alive only in Act 1. For Act 2, place a second token named 'Lord Silas Ravenmoor (body)' in his study chair with the Dead status.",
+      "biography": {
+        "look": "Lord of Ravenmoor, 70s. Thin as a rake, velvet robe, raven-headed cane. Dry, dark humor; far more frightened than he lets on.",
+        "wants": "His new will read at midnight: the manor to Hollow Brook as an orphanage paid for with the moonsilver, as atonement for Elspeth.",
+        "speakWithDead": [
+          {
+            "q": "Who killed you?",
+            "a": "I saw no one. Only the cold. My tonic tasted of mint."
+          },
+          {
+            "q": "Was it the ghost?",
+            "a": "Elspeth would never harm me."
+          },
+          {
+            "q": "Where is the will?",
+            "a": "Gone from the box. I heard the bookcase groan before the dark."
+          },
+          {
+            "q": "Who knew about the passage?",
+            "a": "Hatch. Crane. And the doctor. I showed him myself when my legs failed."
+          },
+          {
+            "q": "Anything else?",
+            "a": "Under the chapel... silver. Let it build something good."
+          }
+        ],
+        "lines": [
+          "If I'm dead before the bell, the old will stands, and that I will not allow.",
+          "Elspeth walks tonight, they say. She'll have to wait her turn.",
+          "It will disappoint everyone at dinner."
+        ]
+      }
+    }
+  ],
+  "encounter": {
+    "name": "Showdown in the Chapel Crypt",
+    "scene": "below",
+    "sixCharacters": {
+      "quill": 1,
+      "scarecrow": 2,
+      "skeleton": 4,
+      "skeletonsFromLairRound1": 2
+    },
+    "fiveCharacters": {
+      "quill": 1,
+      "scarecrow": 1,
+      "skeleton": 4,
+      "skeletonsFromLairRound1": 2
+    },
+    "difficulty2024": "Moderate under the 2024 rules. Six characters: 4,400 XP at the start, 4,450 once lair round 1 adds two skeletons (Moderate budget 4,500). Five characters: 3,700 XP, 3,750 with the extra skeletons (budget 3,750).",
+    "unmaskingEdges": {
+      "who": "Every character rolls initiative with Advantage.",
+      "how": "Every character has Advantage on saves against Banshee's Breath.",
+      "why": "Edric and Bramwell hold the lids; the round 1 lair action does nothing."
+    },
+    "willRule": "From round 3, if Quill starts his turn next to the brazier holding the will, he burns it as a Bonus Action. A character next to him can snatch it: an action and a contested Athletics or Sleight of Hand check.",
+    "terrain": "Crypt is 40 x 50 ft, dim light. Coffins give Half Cover. Knocking over a candelabra (an action) sets a 10-ft square ablaze: 2d6 Fire damage to anything inside."
+  }
+}

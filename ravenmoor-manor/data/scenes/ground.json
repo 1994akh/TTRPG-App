@@ -1,0 +1,3106 @@
+{
+ "level": "ground",
+ "name": "Ground Floor & Grounds",
+ "background": "modules/ravenmoor-manor/assets/maps/ravenmoor-ground.webp",
+ "backgroundStandalone": null,
+ "width": 4800,
+ "height": 3600,
+ "grid": {
+  "type": 1,
+  "size": 100,
+  "distance": 5,
+  "units": "ft"
+ },
+ "padding": 0,
+ "partyStart": {
+  "x": 2300,
+  "y": 3300
+ },
+ "rooms": [
+  {
+   "key": "long_gallery",
+   "name": "Long Gallery",
+   "rect": {
+    "x": 1600,
+    "y": 600,
+    "width": 1600,
+    "height": 400
+   }
+  },
+  {
+   "key": "library",
+   "name": "Library",
+   "rect": {
+    "x": 1000,
+    "y": 600,
+    "width": 600,
+    "height": 800
+   }
+  },
+  {
+   "key": "stair_hall",
+   "name": "Stair Hall",
+   "rect": {
+    "x": 1000,
+    "y": 1400,
+    "width": 600,
+    "height": 500
+   }
+  },
+  {
+   "key": "drawing_room",
+   "name": "Drawing Room",
+   "rect": {
+    "x": 1000,
+    "y": 1900,
+    "width": 1100,
+    "height": 500
+   }
+  },
+  {
+   "key": "foyer",
+   "name": "Foyer",
+   "rect": {
+    "x": 2100,
+    "y": 1900,
+    "width": 600,
+    "height": 500
+   }
+  },
+  {
+   "key": "office",
+   "name": "Housekeeper's Office",
+   "rect": {
+    "x": 2700,
+    "y": 1900,
+    "width": 500,
+    "height": 500
+   }
+  },
+  {
+   "key": "great_hall",
+   "name": "Great Hall",
+   "rect": {
+    "x": 1600,
+    "y": 1000,
+    "width": 1600,
+    "height": 900
+   }
+  },
+  {
+   "key": "kitchen",
+   "name": "Kitchen",
+   "rect": {
+    "x": 3200,
+    "y": 600,
+    "width": 600,
+    "height": 600
+   }
+  },
+  {
+   "key": "shaft",
+   "name": "Hidden Shaft (walled)",
+   "rect": {
+    "x": 3700,
+    "y": 900,
+    "width": 100,
+    "height": 300
+   }
+  },
+  {
+   "key": "scullery",
+   "name": "Scullery",
+   "rect": {
+    "x": 3200,
+    "y": 1200,
+    "width": 600,
+    "height": 400
+   }
+  },
+  {
+   "key": "east_corridor",
+   "name": "East Corridor",
+   "rect": {
+    "x": 3200,
+    "y": 1600,
+    "width": 600,
+    "height": 300
+   }
+  },
+  {
+   "key": "servants_stair",
+   "name": "Servants' Stair",
+   "rect": {
+    "x": 3200,
+    "y": 1900,
+    "width": 600,
+    "height": 500
+   }
+  },
+  {
+   "key": "chapel",
+   "name": "Chapel",
+   "rect": {
+    "x": 3800,
+    "y": 800,
+    "width": 800,
+    "height": 1000
+   }
+  },
+  {
+   "key": "stables",
+   "name": "Stables",
+   "rect": {
+    "x": 100,
+    "y": 500,
+    "width": 800,
+    "height": 1000
+   }
+  }
+ ],
+ "walls": [
+  {
+   "c": [
+    100,
+    500,
+    900,
+    500
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3500,
+    600,
+    3600,
+    600
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "door",
+     "label": "Kitchen back door"
+    }
+   }
+  },
+  {
+   "c": [
+    1000,
+    600,
+    1900,
+    600
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    2000,
+    600,
+    2400,
+    600
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    2500,
+    600,
+    2800,
+    600
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    2900,
+    600,
+    3300,
+    600
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3400,
+    600,
+    3500,
+    600
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3600,
+    600,
+    3800,
+    600
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1900,
+    600,
+    2000,
+    600
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    2400,
+    600,
+    2500,
+    600
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    2800,
+    600,
+    2900,
+    600
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3300,
+    600,
+    3400,
+    600
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3800,
+    800,
+    4000,
+    800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    4100,
+    800,
+    4600,
+    800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    4000,
+    800,
+    4100,
+    800
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3700,
+    900,
+    3800,
+    900
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1900,
+    1000,
+    2000,
+    1000
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "door",
+     "label": "Long Gallery / Great Hall (west)"
+    }
+   }
+  },
+  {
+   "c": [
+    2800,
+    1000,
+    2900,
+    1000
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "door",
+     "label": "Long Gallery / Great Hall (east)"
+    }
+   }
+  },
+  {
+   "c": [
+    1600,
+    1000,
+    1900,
+    1000
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    2000,
+    1000,
+    2800,
+    1000
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    2900,
+    1000,
+    3200,
+    1000
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3300,
+    1200,
+    3400,
+    1200
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "door",
+     "label": "Kitchen / Scullery"
+    }
+   }
+  },
+  {
+   "c": [
+    3200,
+    1200,
+    3300,
+    1200
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3400,
+    1200,
+    3800,
+    1200
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1400,
+    1400,
+    1500,
+    1400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "door",
+     "label": "Stair Hall / Library"
+    }
+   }
+  },
+  {
+   "c": [
+    1000,
+    1400,
+    1400,
+    1400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1500,
+    1400,
+    1600,
+    1400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    400,
+    1500,
+    500,
+    1500
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "double",
+     "label": "Stable doors"
+    }
+   }
+  },
+  {
+   "c": [
+    500,
+    1500,
+    600,
+    1500
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "double",
+     "label": "Stable doors"
+    }
+   }
+  },
+  {
+   "c": [
+    100,
+    1500,
+    400,
+    1500
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    600,
+    1500,
+    900,
+    1500
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3400,
+    1600,
+    3500,
+    1600
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "door",
+     "label": "Scullery / East Corridor"
+    }
+   }
+  },
+  {
+   "c": [
+    3200,
+    1600,
+    3400,
+    1600
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3500,
+    1600,
+    3800,
+    1600
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    4100,
+    1800,
+    4200,
+    1800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "double",
+     "label": "Chapel south doors"
+    }
+   }
+  },
+  {
+   "c": [
+    4200,
+    1800,
+    4300,
+    1800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "double",
+     "label": "Chapel south doors"
+    }
+   }
+  },
+  {
+   "c": [
+    3800,
+    1800,
+    3900,
+    1800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    4000,
+    1800,
+    4100,
+    1800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    4300,
+    1800,
+    4400,
+    1800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    4500,
+    1800,
+    4600,
+    1800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3900,
+    1800,
+    4000,
+    1800
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    4400,
+    1800,
+    4500,
+    1800
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1400,
+    1900,
+    1500,
+    1900
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "door",
+     "label": "Drawing Room / Stair Hall"
+    }
+   }
+  },
+  {
+   "c": [
+    3400,
+    1900,
+    3500,
+    1900
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "door",
+     "label": "East Corridor / Servants' Stair"
+    }
+   }
+  },
+  {
+   "c": [
+    2300,
+    1900,
+    2400,
+    1900
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "double",
+     "label": "Great Hall doors"
+    }
+   }
+  },
+  {
+   "c": [
+    2400,
+    1900,
+    2500,
+    1900
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "double",
+     "label": "Great Hall doors"
+    }
+   }
+  },
+  {
+   "c": [
+    1000,
+    1900,
+    1400,
+    1900
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1500,
+    1900,
+    2300,
+    1900
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    2500,
+    1900,
+    3400,
+    1900
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3500,
+    1900,
+    3800,
+    1900
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    2300,
+    2400,
+    2400,
+    2400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "double",
+     "label": "Front doors"
+    }
+   }
+  },
+  {
+   "c": [
+    2400,
+    2400,
+    2500,
+    2400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "double",
+     "label": "Front doors"
+    }
+   }
+  },
+  {
+   "c": [
+    1000,
+    2400,
+    1300,
+    2400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1400,
+    2400,
+    1700,
+    2400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1800,
+    2400,
+    2300,
+    2400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    2500,
+    2400,
+    2900,
+    2400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3000,
+    2400,
+    3500,
+    2400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3600,
+    2400,
+    3800,
+    2400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1300,
+    2400,
+    1400,
+    2400
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1700,
+    2400,
+    1800,
+    2400
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    2900,
+    2400,
+    3000,
+    2400
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3500,
+    2400,
+    3600,
+    2400
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    100,
+    500,
+    100,
+    800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    100,
+    900,
+    100,
+    1100
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    100,
+    1200,
+    100,
+    1500
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    100,
+    1100,
+    100,
+    1200
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    100,
+    800,
+    100,
+    900
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    900,
+    500,
+    900,
+    1500
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1000,
+    600,
+    1000,
+    800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1000,
+    900,
+    1000,
+    1100
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1000,
+    1200,
+    1000,
+    1500
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1000,
+    1600,
+    1000,
+    2100
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1000,
+    2200,
+    1000,
+    2400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1000,
+    1100,
+    1000,
+    1200
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1000,
+    1500,
+    1000,
+    1600
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1000,
+    2100,
+    1000,
+    2200
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1000,
+    800,
+    1000,
+    900
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1600,
+    1600,
+    1600,
+    1700
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "door",
+     "label": "Stair Hall / Great Hall"
+    }
+   }
+  },
+  {
+   "c": [
+    1600,
+    700,
+    1600,
+    800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "door",
+     "label": "Library / Long Gallery"
+    }
+   }
+  },
+  {
+   "c": [
+    1600,
+    600,
+    1600,
+    700
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1600,
+    800,
+    1600,
+    1600
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    1600,
+    1700,
+    1600,
+    1900
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    2100,
+    2100,
+    2100,
+    2200
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "door",
+     "label": "Foyer / Drawing Room"
+    }
+   }
+  },
+  {
+   "c": [
+    2100,
+    1900,
+    2100,
+    2100
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    2100,
+    2200,
+    2100,
+    2400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    2700,
+    2100,
+    2700,
+    2200
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "door",
+     "label": "Foyer / Office"
+    }
+   }
+  },
+  {
+   "c": [
+    2700,
+    1900,
+    2700,
+    2100
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    2700,
+    2200,
+    2700,
+    2400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3200,
+    1700,
+    3200,
+    1800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "door",
+     "label": "East Corridor / Great Hall"
+    }
+   }
+  },
+  {
+   "c": [
+    3200,
+    2100,
+    3200,
+    2200
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "door",
+     "label": "Office / Servants' Stair"
+    }
+   }
+  },
+  {
+   "c": [
+    3200,
+    700,
+    3200,
+    800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "door",
+     "label": "Long Gallery / Kitchen"
+    }
+   }
+  },
+  {
+   "c": [
+    3200,
+    600,
+    3200,
+    700
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3200,
+    800,
+    3200,
+    1700
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3200,
+    1800,
+    3200,
+    2100
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3200,
+    2200,
+    3200,
+    2400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3700,
+    900,
+    3700,
+    1200
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3800,
+    1600,
+    3800,
+    1700
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 1,
+   "ds": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "door",
+     "label": "East Corridor / Chapel"
+    }
+   }
+  },
+  {
+   "c": [
+    3800,
+    700,
+    3800,
+    800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3800,
+    1800,
+    3800,
+    2100
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3800,
+    2200,
+    3800,
+    2400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3800,
+    800,
+    3800,
+    1600
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3800,
+    1700,
+    3800,
+    1800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "int",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3800,
+    2100,
+    3800,
+    2200
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    3800,
+    600,
+    3800,
+    700
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    4600,
+    800,
+    4600,
+    1000
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    4600,
+    1100,
+    4600,
+    1400
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    4600,
+    1500,
+    4600,
+    1800
+   ],
+   "move": 20,
+   "sight": 20,
+   "light": 20,
+   "sound": 20,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "ext",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    4600,
+    1000,
+    4600,
+    1100
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  },
+  {
+   "c": [
+    4600,
+    1400,
+    4600,
+    1500
+   ],
+   "move": 20,
+   "sight": 0,
+   "light": 0,
+   "sound": 10,
+   "door": 0,
+   "flags": {
+    "ravenmoor": {
+     "kind": "window",
+     "label": null
+    }
+   }
+  }
+ ],
+ "lights": [
+  {
+   "x": 2150,
+   "y": 3180,
+   "hidden": false,
+   "config": {
+    "dim": 10,
+    "bright": 0,
+    "color": "#ff8a2a",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Jack-o'-lantern",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 2650,
+   "y": 3180,
+   "hidden": false,
+   "config": {
+    "dim": 10,
+    "bright": 0,
+    "color": "#ff8a2a",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Jack-o'-lantern",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 2150,
+   "y": 3320,
+   "hidden": false,
+   "config": {
+    "dim": 10,
+    "bright": 0,
+    "color": "#ff8a2a",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Jack-o'-lantern",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 2650,
+   "y": 3320,
+   "hidden": false,
+   "config": {
+    "dim": 10,
+    "bright": 0,
+    "color": "#ff8a2a",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Jack-o'-lantern",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 2150,
+   "y": 3460,
+   "hidden": false,
+   "config": {
+    "dim": 10,
+    "bright": 0,
+    "color": "#ff8a2a",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Jack-o'-lantern",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 2650,
+   "y": 3460,
+   "hidden": false,
+   "config": {
+    "dim": 10,
+    "bright": 0,
+    "color": "#ff8a2a",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Jack-o'-lantern",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 2300,
+   "y": 2520,
+   "hidden": false,
+   "config": {
+    "dim": 20,
+    "bright": 5,
+    "color": "#ffc46b",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Door lantern",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 2500,
+   "y": 2520,
+   "hidden": false,
+   "config": {
+    "dim": 20,
+    "bright": 5,
+    "color": "#ffc46b",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Door lantern",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 1096,
+   "y": 2974,
+   "hidden": false,
+   "config": {
+    "dim": 10,
+    "bright": 0,
+    "color": "#ffd27a",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Warding lantern",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 715,
+   "y": 3259,
+   "hidden": false,
+   "config": {
+    "dim": 10,
+    "bright": 0,
+    "color": "#ffd27a",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Warding lantern",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 218,
+   "y": 3135,
+   "hidden": false,
+   "config": {
+    "dim": 10,
+    "bright": 0,
+    "color": "#ffd27a",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Warding lantern",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 103,
+   "y": 2725,
+   "hidden": false,
+   "config": {
+    "dim": 10,
+    "bright": 0,
+    "color": "#ffd27a",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Warding lantern",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 484,
+   "y": 2440,
+   "hidden": false,
+   "config": {
+    "dim": 10,
+    "bright": 0,
+    "color": "#ffd27a",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Warding lantern",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 981,
+   "y": 2564,
+   "hidden": false,
+   "config": {
+    "dim": 10,
+    "bright": 0,
+    "color": "#ffd27a",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Warding lantern",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 459,
+   "y": 1420,
+   "hidden": false,
+   "config": {
+    "dim": 15,
+    "bright": 5,
+    "color": "#ffc46b",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Stable lantern",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 1230,
+   "y": 1350,
+   "hidden": false,
+   "config": {
+    "dim": 20,
+    "bright": 10,
+    "color": "#ff9a45",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Library fire",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 1800,
+   "y": 1950,
+   "hidden": false,
+   "config": {
+    "dim": 20,
+    "bright": 10,
+    "color": "#ff9a45",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Drawing room fire",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 2400,
+   "y": 2160,
+   "hidden": false,
+   "config": {
+    "dim": 15,
+    "bright": 5,
+    "color": "#ffa64d",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Foyer centrepiece",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 2100,
+   "y": 1450,
+   "hidden": false,
+   "config": {
+    "dim": 15,
+    "bright": 5,
+    "color": "#ffb35c",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Feast candelabra",
+     "group": "hall_candles"
+    }
+   }
+  },
+  {
+   "x": 2400,
+   "y": 1450,
+   "hidden": false,
+   "config": {
+    "dim": 15,
+    "bright": 5,
+    "color": "#ffb35c",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Feast candelabra",
+     "group": "hall_candles"
+    }
+   }
+  },
+  {
+   "x": 2700,
+   "y": 1450,
+   "hidden": false,
+   "config": {
+    "dim": 15,
+    "bright": 5,
+    "color": "#ffb35c",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Feast candelabra",
+     "group": "hall_candles"
+    }
+   }
+  },
+  {
+   "x": 1650,
+   "y": 1320,
+   "hidden": false,
+   "config": {
+    "dim": 30,
+    "bright": 10,
+    "color": "#ff9a45",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Great Hall fire",
+     "group": "hall_candles"
+    }
+   }
+  },
+  {
+   "x": 1650,
+   "y": 1850,
+   "hidden": false,
+   "config": {
+    "dim": 15,
+    "bright": 5,
+    "color": "#ffb35c",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Hall candelabra",
+     "group": "hall_candles"
+    }
+   }
+  },
+  {
+   "x": 3150,
+   "y": 1850,
+   "hidden": false,
+   "config": {
+    "dim": 15,
+    "bright": 5,
+    "color": "#ffb35c",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Hall candelabra",
+     "group": "hall_candles"
+    }
+   }
+  },
+  {
+   "x": 3150,
+   "y": 1050,
+   "hidden": false,
+   "config": {
+    "dim": 15,
+    "bright": 5,
+    "color": "#ffb35c",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Hall candelabra",
+     "group": "hall_candles"
+    }
+   }
+  },
+  {
+   "x": 3250,
+   "y": 1060,
+   "hidden": false,
+   "config": {
+    "dim": 25,
+    "bright": 10,
+    "color": "#ff9a45",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Kitchen hearth",
+     "group": null
+    }
+   }
+  },
+  {
+   "x": 4520,
+   "y": 1300,
+   "hidden": false,
+   "config": {
+    "dim": 20,
+    "bright": 5,
+    "color": "#ffc46b",
+    "alpha": 0.35,
+    "animation": {
+     "type": "torch",
+     "speed": 2,
+     "intensity": 3
+    }
+   },
+   "flags": {
+    "ravenmoor": {
+     "label": "Altar candles",
+     "group": null
+    }
+   }
+  }
+ ],
+ "notes": [
+  {
+   "number": 1,
+   "x": 2400,
+   "y": 3100,
+   "label": "Drive & jack-o'-lanterns",
+   "locationKey": "drive",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 2,
+   "x": 2460,
+   "y": 2290,
+   "label": "Foyer",
+   "locationKey": "foyer",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 3,
+   "x": 2100,
+   "y": 1760,
+   "label": "Great Hall",
+   "locationKey": "great_hall",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 4,
+   "x": 2400,
+   "y": 800,
+   "label": "Long Gallery",
+   "locationKey": "long_gallery",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 5,
+   "x": 1460,
+   "y": 1270,
+   "label": "Library",
+   "locationKey": "library",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 6,
+   "x": 1460,
+   "y": 1660,
+   "label": "Stair Hall",
+   "locationKey": "stair_hall",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 7,
+   "x": 1360,
+   "y": 2120,
+   "label": "Drawing Room",
+   "locationKey": "drawing_room",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 8,
+   "x": 2940,
+   "y": 2060,
+   "label": "Housekeeper's Office",
+   "locationKey": "office",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 9,
+   "x": 3460,
+   "y": 1050,
+   "label": "Kitchen (cellar stairs)",
+   "locationKey": "kitchen",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 10,
+   "x": 3400,
+   "y": 1490,
+   "label": "Scullery",
+   "locationKey": "scullery",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 11,
+   "x": 3500,
+   "y": 1750,
+   "label": "East Corridor",
+   "locationKey": "east_corridor",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 12,
+   "x": 3340,
+   "y": 2150,
+   "label": "Servants' Stair",
+   "locationKey": "servants_stair",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 13,
+   "x": 4120,
+   "y": 1300,
+   "label": "Chapel (crypt stairs)",
+   "locationKey": "chapel",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 14,
+   "x": 250,
+   "y": 1000,
+   "label": "Stables",
+   "locationKey": "stables",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 15,
+   "x": 600,
+   "y": 2850,
+   "label": "Pond & Elspeth's memorial",
+   "locationKey": "pond",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 16,
+   "x": 4260,
+   "y": 3240,
+   "label": "Pumpkin patch",
+   "locationKey": "pumpkin_patch",
+   "parentKey": null,
+   "secret": false
+  },
+  {
+   "number": 17,
+   "x": 3750,
+   "y": 1050,
+   "label": "Hidden shaft (inside the wall)",
+   "locationKey": null,
+   "parentKey": "kitchen",
+   "secret": true
+  }
+ ],
+ "tokens": [
+  {
+   "actor": "Lord Silas Ravenmoor",
+   "x": 3000,
+   "y": 1400,
+   "hidden": false
+  },
+  {
+   "actor": "Dr. Thaddeus Quill",
+   "x": 2800,
+   "y": 1200,
+   "hidden": false
+  },
+  {
+   "actor": "Lady Morwenna Ravenmoor",
+   "x": 2800,
+   "y": 1600,
+   "hidden": false
+  },
+  {
+   "actor": "Edric Ravenmoor",
+   "x": 2500,
+   "y": 1200,
+   "hidden": false
+  },
+  {
+   "actor": "Penelope \"Pip\" Ravenmoor",
+   "x": 2200,
+   "y": 1600,
+   "hidden": false
+  },
+  {
+   "actor": "Mrs. Agatha Crane",
+   "x": 3100,
+   "y": 1600,
+   "hidden": false
+  },
+  {
+   "actor": "Bramwell Hatch",
+   "x": 2400,
+   "y": 2600,
+   "hidden": false
+  }
+ ],
+ "levelRegions": [
+  {
+   "name": "Main stair",
+   "connectsTo": "upper",
+   "rect": {
+    "x": 1000,
+    "y": 1400,
+    "width": 300,
+    "height": 500
+   }
+  },
+  {
+   "name": "Servants' stair",
+   "connectsTo": "upper",
+   "rect": {
+    "x": 3500,
+    "y": 2000,
+    "width": 300,
+    "height": 400
+   }
+  },
+  {
+   "name": "Cellar stairs",
+   "connectsTo": "below",
+   "rect": {
+    "x": 3500,
+    "y": 1000,
+    "width": 200,
+    "height": 200
+   }
+  },
+  {
+   "name": "Crypt stairs",
+   "connectsTo": "below",
+   "rect": {
+    "x": 4400,
+    "y": 800,
+    "width": 200,
+    "height": 300
+   }
+  }
+ ],
+ "tiles": [
+  {
+   "texture": "modules/ravenmoor-manor/assets/tiles/evidence-bootprint.webp",
+   "x": 3590,
+   "y": 2120,
+   "width": 100,
+   "height": 100,
+   "hidden": true,
+   "label": "C5 buckled boot print (show from Act 2)"
+  }
+ ]
+}

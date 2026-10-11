@@ -1,0 +1,28 @@
+{
+  "id": "ravenmoor-manor",
+  "title": "Death at Ravenmoor Manor",
+  "description": "A three-hour Halloween murder mystery for 5-6 level 5 characters (D&D 2024 rules): a gothic manor on three floors, six suspects, nineteen clues and handouts, and one climactic fight in the chapel crypt.",
+  "version": "1.0.0",
+  "authors": [{ "name": "Your Name" }],
+  "compatibility": { "minimum": "14", "verified": "14.368" },
+  "relationships": {
+    "systems": [{ "id": "dnd5e", "type": "system", "compatibility": { "minimum": "6.0.0", "verified": "6.0.6" } }]
+  },
+  "esmodules": ["scripts/ravenmoor.mjs"],
+  "styles": ["styles/ravenmoor.css"],
+  "languages": [{ "lang": "en", "name": "English", "path": "lang/en.json" }],
+  "socket": true,
+  "packs": [
+    { "name": "adventure", "label": "Death at Ravenmoor Manor", "type": "Adventure", "system": "dnd5e", "path": "packs/adventure", "ownership": { "PLAYER": "NONE", "ASSISTANT": "OWNER" } },
+    { "name": "actors", "label": "Ravenmoor Actors", "type": "Actor", "system": "dnd5e", "path": "packs/actors", "ownership": { "PLAYER": "NONE", "ASSISTANT": "OWNER" } },
+    { "name": "items", "label": "Ravenmoor Items", "type": "Item", "system": "dnd5e", "path": "packs/items", "ownership": { "PLAYER": "NONE", "ASSISTANT": "OWNER" } },
+    { "name": "macros", "label": "Ravenmoor Macros", "type": "Macro", "path": "packs/macros", "ownership": { "PLAYER": "NONE", "ASSISTANT": "OWNER" } }
+  ],
+  "packFolders": [{ "name": "Death at Ravenmoor Manor", "sorting": "m", "packs": ["adventure", "actors", "items", "macros"] }],
+  "quickstart": {
+    "adventures": {
+      "dnd5e": { "uuid": "Compendium.ravenmoor-manor.adventure.Adventure.TPKqOOoEhfVP3WMa" }
+    }
+  },
+  "flags": {}
+}
