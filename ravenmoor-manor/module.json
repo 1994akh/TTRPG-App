@@ -4,6 +4,9 @@
   "description": "A three-hour Halloween murder mystery for 5-6 level 5 characters (D&D 2024 rules): a gothic manor on three floors, six suspects, nineteen clues and handouts, and one climactic fight in the chapel crypt.",
   "version": "1.0.0",
   "authors": [{ "name": "Scuba Steve" }],
+  "url": "https://github.com/1994akh/TTRPG-App",
+  "manifest": "https://github.com/1994akh/TTRPG-App/releases/latest/download/module.json",
+  "download": "https://github.com/1994akh/TTRPG-App/releases/latest/download/ravenmoor-manor.zip",
   "compatibility": { "minimum": "14", "verified": "14.368" },
   "relationships": {
     "systems": [{ "id": "dnd5e", "type": "system", "compatibility": { "minimum": "6.0.0", "verified": "6.0.6" } }]

@@ -162,6 +162,14 @@ for ( const s of scripts ) {
 const manifest = readJSON("module.json");
 ok(manifest.quickstart.adventures.dnd5e.uuid.endsWith(adventure._id), "module.json quickstart points at the Adventure");
 ok(manifest.packs.every(p => fs.existsSync(path.join(ROOT, p.path))), "every pack in module.json is compiled");
+const releases = `${manifest.url}/releases/latest/download`;
+ok(/^https:\/\/github\.com\/[\w.-]+\/[\w.-]+$/.test(manifest.url ?? ""), "module.json url is the GitHub repository");
+ok(manifest.manifest === `${releases}/module.json`, "module.json manifest is the latest release's module.json");
+ok(manifest.download === `${releases}/${manifest.id}.zip`, "module.json download is the latest release's zip");
+const workflow = path.join(ROOT, "../.github/workflows/release.yml");
+const release = fs.existsSync(workflow) ? fs.readFileSync(workflow, "utf8") : "";
+ok(release.includes(`gh release upload "$TAG" dist/module.json dist/${manifest.id}.zip`),
+  "the Release workflow attaches the module.json and zip the manifest links to");
 
 console.log(failures ? `\n${failures} check(s) failed.` : "\nAll checks passed.");
 process.exit(failures ? 1 : 0);

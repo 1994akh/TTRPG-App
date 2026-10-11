@@ -97,14 +97,23 @@ The package's tokens are simple placeholder art (its generator says so). The mod
 
 ## Tests
 
-`npm test` (also part of `npm run check`) runs 41 tests with Node's built-in runner:
+`npm test` (also part of `npm run check`) runs 42 tests with Node's built-in runner:
 
 - `tests/harness.mjs` builds a simulated Foundry world from the module's own generated Adventure (the real scene, actors, journals, items and macros), with five players and their characters, and loads the unmodified runtime. It imitates the parts of Foundry the runtime calls: documents with dot-path updates and embedded collections, hooks, settings, chat, dialogs answered from a queue, combats, sockets, fixed dice, and ApplicationV2 rendering into jsdom.
 - `tests/night.test.mjs` plays the whole night in order: arrival, the Treat Bag, introducing the suspects, Silas retiring, Lights Out with a Scaredy-Cat, The Body, handouts and the secret door, all twelve candles with their escalations and Midnight, the accusation, Showdown Setup (and re-running it), every lair round, the will burning, the Widow, the unmasking and the epilogue.
 - `tests/reset.test.mjs` plays part of a night and checks that Reset the Night puts every part back with the same ids.
-- `tests/tools.test.mjs` covers the map-click tools, item hand-offs, candy, read-aloud to chat, the hotbar and the Director's guards; `tests/units.test.mjs` the small pieces; `tests/package.test.mjs` reads the compiled LevelDB packs back and checks the release zip contains everything the manifest and documents reference.
+- `tests/tools.test.mjs` covers the map-click tools, item hand-offs, candy, read-aloud to chat, the hotbar and the Director's guards; `tests/units.test.mjs` the small pieces; `tests/package.test.mjs` reads the compiled LevelDB packs back and checks the release zip contains everything the manifest and documents reference, and that packaging for a release stamps the tag's version and download link.
 
 The harness is not Foundry: it proves the module's own logic and data, not that the Foundry v14 and dnd5e 6.0.6 APIs behave as the runtime expects. Those still need the in-world checks below.
+
+## Releases (beyond the spec)
+
+The spec ships a zip to unpack by hand. The module can also be installed and updated from a manifest URL:
+
+- `module.json` has `url`, `manifest` (`…/releases/latest/download/module.json`) and `download` (`…/releases/latest/download/ravenmoor-manor.zip`) on the GitHub repository. `npm run check` checks the links have that shape.
+- `.github/workflows/release.yml` (at the repository root) runs when a GitHub release is published: `npm ci`, `npm run build`, `npm run check`, then `npm run package -- --release <tag>`, and attaches `dist/module.json` and `dist/ravenmoor-manor.zip` to the release.
+- `--release <tag>` stamps the packaged `module.json` (inside the zip and beside it) with the tag's version (`v1.2.0` → `1.2.0`) and that release's own zip as `download`, so an installed copy reinstalls the version it came from while `manifest` keeps pointing at the latest release for Foundry's update check. The source `module.json` is not changed; a tag that is not a version number fails the release.
+- GitHub's `releases/latest` skips drafts and pre-releases, and Foundry downloads without credentials, so the manifest URL works only for a published, non-pre-release release on a public repository.
 
 ## Not verified in a running Foundry
 

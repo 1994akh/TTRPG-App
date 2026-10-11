@@ -1,0 +1,41 @@
+# Publishing a GitHub release builds the Ravenmoor Manor module and attaches module.json and ravenmoor-manor.zip
+# to it. Foundry installs from https://github.com/1994akh/TTRPG-App/releases/latest/download/module.json
+name: Release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  ravenmoor-manor:
+    name: Build and attach Death at Ravenmoor Manor
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ravenmoor-manor
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: ravenmoor-manor/package-lock.json
+
+      - run: npm ci
+      - run: npm run build
+      - run: npm run check
+
+      - name: Package for this release
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+        run: npm run package -- --release "$TAG"
+
+      - name: Attach module.json and the zip to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: gh release upload "$TAG" dist/module.json dist/ravenmoor-manor.zip --clobber --repo "$GITHUB_REPOSITORY"
