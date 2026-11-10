@@ -94,7 +94,8 @@ system.castAbility      "STR".."CHA"|"None"
 system.training.saves   {STR..CHA: rank}   system.training.skills {skillId: rank}   (ranks: Untrained..Legendary)
 system.baseSpeed (30)  system.gearBonus (0)
 system.currency {cp, sp, gp, pp}
-system.details {pronouns, age, drive, appearance (html), biography (html), notes (html)}
+system.details {pronouns, age, drive, height, weight, eyes, skin, hair, languages, otherProficiencies (strings),
+                appearance, biography, notes, traits, ideals, bonds, flaws, backstory, allies (html)}   (shown on the Details tab)
 system.story {role: "pc"|"trio"|"guest", path: {class: [ids], profession: [ids]}}   (the trio's set evolution)
 derived: system.derived {combatEL, craftEL, rgm, scores{}, mods{}, saves{}, ac, initiative, speed, hpMax, hitDice,
          attack, spellDC, spellAttack, passivePerception, carry, damage, damageAvg, craftEffort, divergence,
@@ -158,3 +159,31 @@ The module (`possibilities-act1`) builds on that API and never re-implements the
 - `.github/workflows/release.yml` builds and attaches every package; manifest URLs
   `https://github.com/1994akh/TTRPG-App/releases/latest/download/system.json` and `.../possibilities-act1.json`
   (module manifest renamed so it doesn't clash with Ravenmoor's `module.json`).
+
+## Additions made while building the system (10 Nov 2026, additive only)
+
+Nothing above was renamed or removed. These fields and calls were added:
+
+- `hero`: `system.hitDiceUsed` (short rests), `system.dying.dead` (3 failed pips), `system.turn.aid` (a pending Aid
+  bonus, used up by the next check). Derived extras: `derived.acBase`, `derived.weapons[itemId] = {formula, text, avg,
+  die, attackMod, attack, tool}`, `derived.unarmedFormula`, `derived.damageFormula`/`craftEffortFormula` (Roll-ready),
+  `derived.hitDie`, `derived.hitDiceLeft`, `derived.castMod`, `derived.dc`, `derived.complete`. `system.hp.max` and
+  `system.points.max` are set at derive time so token bars work.
+- `npc`: `system.hp.temp`; `derived.{acBase, ac, attack, hpMax, dc, initiative, damage, damageFormula, damagePerRound,
+  check, benchmarks}`; `system.hp.max` at derive time.
+- `obstacle`: `system.status` ("active" | "won" | "lost"); `system.dc` may be `null` (= standard DC from EL and grade);
+  `derived.dc`.
+- `weapon`: `damage` (formula; NPC attacks, blank = benchmark), `improvised` (bool) and `tools` (comma-separated
+  profession ids). Improvised: d4 at −2, unless the hero's profession is in `tools` (then d6, no penalty).
+- Settings (world): `pointsFormula`, `recoveryDC`, `undertaking`, `guardBonus`, `creatorExtraSkills`,
+  `sceneAttemptCost`, `manualRolls` ("Enter my own rolls": every check, Strike, damage and effort roll asks for the
+  player's number, with a "Roll for me" button).
+- API extras on `game.possibilities`: `rollSkill`, `rollSave`, `applyDamage`, `recoveryCheck`, `stabilise`,
+  `triggerSetback(obstacle, hero, index)`, `resolveScene`, `aptness(hero, approach)`, `partyHeroes()`,
+  `makeHero(data)` (the creator without the dialog), `applyBinding(actor, classId)`, `postCard(actor, {title, subtitle,
+  body, tone})`, `math` (rules.mjs), `defaults`. Hooks also: `possibilities.setback(obstacle, hero, setback)`,
+  `possibilities.ready(api)`. Actor methods: `rollSkill`, `rollSave`, `strike`, `basicAction(kind)`, `aid(ally)`,
+  `recallKnowledge(target)`, `withdraw()`, `useAbility(item)`.
+- A Scene attempt costs 1 action (`sceneAttemptCost`). When a Scene's clock moves (once per round, when the Scene is
+  in the combat tracker, or by the sheet's Tick button), one Setback strikes a random party hero.
+- Coins show as copper bits, silver marks, gold crowns, platinum charters (keys stay cp/sp/gp/pp).

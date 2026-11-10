@@ -86,7 +86,7 @@ export class FakeActor extends FakeDocument {
   static documentName = "Actor";
   static models = {};
   static async create(data) {
-    const a = new globalThis.Actor(data);
+    const a = new this(data);
     globalThis.game.actors.set(a.id, a);
     return a;
   }

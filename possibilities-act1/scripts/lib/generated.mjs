@@ -398,9 +398,10 @@ export const CONTENT = {
    "rebuffRounds": 2
   },
   "light": {
-   "clockRounds": 6,
-   "resistance": 50,
-   "dc": 12
+   "clockRounds": 8,
+   "resistance": 80,
+   "dc": 12,
+   "note": "8 rounds to match the 8 points of the sun's path on the Grate Chamber map (one point per tick)."
   },
   "pcStart": {
    "gp": 2,

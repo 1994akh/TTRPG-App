@@ -157,3 +157,4 @@
 .poss-choice { padding: 4px; border-bottom: 1px dotted var(--poss-line); }
 .poss-bind { max-height: 480px; overflow-y: auto; }
 .poss-new-hero { flex: 1 1 100%; }
+.personality { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0 12px; }

@@ -49,7 +49,13 @@ export default class HeroData extends foundry.abstract.TypeDataModel {
       baseSpeed: intField(30, { min: 0 }),
       gearBonus: intField(0),
       currency: new f.SchemaField({ cp: intField(0, { min: 0 }), sp: intField(0, { min: 0 }), gp: intField(0, { min: 0 }), pp: intField(0, { min: 0 }) }),
-      details: new f.SchemaField({ pronouns: str(""), age: str(""), drive: str(""), appearance: html(), biography: html(), notes: html() }),
+      details: new f.SchemaField({
+        pronouns: str(""), age: str(""), drive: str(""),
+        height: str(""), weight: str(""), eyes: str(""), skin: str(""), hair: str(""),
+        languages: str(""), otherProficiencies: str(""),
+        appearance: html(), biography: html(), notes: html(),
+        traits: html(), ideals: html(), bonds: html(), flaws: html(), backstory: html(), allies: html()
+      }),
       story: new f.SchemaField({
         role: str("pc", { blank: false, choices: ["pc", "trio", "guest"] }),
         path: new f.SchemaField({

@@ -4,6 +4,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { APTNESS, CONDITIONS, DENOMINATIONS, ROLES, ZONES } from "../module/config.mjs";
+import Handlebars from "handlebars";
 import { readJSON, ROOT } from "./util.mjs";
 
 const errors = [];
@@ -34,9 +35,18 @@ for ( const [doc, types] of Object.entries(sys.documentTypes) ) {
 const sheets = read("module/sheets.mjs");
 for ( const m of sheets.matchAll(/`\$\{T\}\/([^`]+)`/g) ) if ( !exists(`templates/${m[1]}`) ) fail(`missing template templates/${m[1]}`);
 
+// Templates compile.
+for ( const f of walk("templates").filter(x => x.endsWith(".hbs")) ) {
+  try {
+    Handlebars.precompile(read(f));
+  } catch ( err ) {
+    fail(`${f}: ${err.message.split("\n")[0]}`);
+  }
+}
+
 // Language keys.
 const get = key => key.split(".").reduce((o, k) => (o && typeof o === "object") ? o[k] : undefined, lang);
-const DYNAMIC = new Set(["POSS.Action", "POSS.Aptness", "POSS.Coin", "POSS.Condition", "POSS.Per", "POSS.Role", "POSS.Scene.Status",
+const DYNAMIC = new Set(["POSS.Action", "POSS.Aptness", "POSS.Coin", "POSS.Condition", "POSS.Details", "POSS.Per", "POSS.Role", "POSS.Scene.Status",
   "POSS.Setting", "POSS.Tab", "POSS.Track", "POSS.Zone"]);
 const files = [...walk("module"), ...walk("templates")].filter(f => /\.(mjs|hbs)$/.test(f) && !f.endsWith("rules-data.mjs"));
 for ( const f of files ) {
@@ -49,6 +59,7 @@ const families = {
   "POSS.Zone": ZONES, "POSS.Aptness": APTNESS, "POSS.Condition": CONDITIONS, "POSS.Coin": DENOMINATIONS, "POSS.Role": ROLES,
   "POSS.Scene.Status": ["active", "won", "lost"], "POSS.Tab": ["main", "actions", "inventory", "story"], "POSS.Track": ["Combat", "Craft"],
   "POSS.Per": ["scene", "rest", "day"],
+  "POSS.Details": ["height", "weight", "eyes", "skin", "hair", "languages", "otherProficiencies", "traits", "ideals", "bonds", "flaws", "backstory", "allies"],
   "POSS.Action": ["strike", "stride", "guard", "aid", "stabilise", "recall", "interact", "withdraw", "strideText", "guardText", "interactText", "withdrawText", "aidText"]
 };
 for ( const [prefix, keys] of Object.entries(families) ) for ( const k of keys ) if ( typeof get(`${prefix}.${k}`) !== "string" ) fail(`language key ${prefix}.${k} missing`);

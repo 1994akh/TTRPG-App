@@ -5,8 +5,8 @@
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "resistance": {
-      "value": 50,
-      "max": 50
+      "value": 80,
+      "max": 80
     },
     "dc": 12,
     "el": 0,
@@ -93,7 +93,7 @@
     ],
     "clock": {
       "value": 0,
-      "max": 6,
+      "max": 8,
       "label": "The sun crosses the floor",
       "onEnd": "The light slides off the floor and up the wall. The Gloam uncoils. Draft: the party drags Petra out by the culvert and must come back at tomorrow's noon; the loaners are all Damaged."
     },

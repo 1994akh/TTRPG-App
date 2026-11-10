@@ -11,14 +11,21 @@ const S = key => game.settings.get("possibilities-act1", key);
 const actor = key => game.actors.get(CONTENT.ids.actors[key]);
 const ticked = key => !!S("beats")[key];
 const scene = key => game.scenes.get(CONTENT.ids.scenes[key]);
+/** Hooks run the set pieces without being awaited: wait until the world shows the result. */
+const until = async (f, what) => {
+  for ( let i = 0; (i < 2000) && !f(); i++ ) await settle();
+  assert.ok(f(), what);
+};
 
 test("all 14 steps play in order", async () => {
   // 1. The player character: a Vulpine (Beastkin) gets the Beastkin intro.
-  world.dialogs.push({ createHero: { name: "Wren", race: "Vulpine", profession: "Merchant", skills: ["Deception", "Society", "Appraisal", "Persuasion"] } });
+  world.dialogs.push({ createHero: { name: "Wren", race: "Vulpine", profession: "Merchant", skills: ["Deception", "Society", "Appraisal", "Persuasion"] } },
+    { prompt: "Because the sea is the only place nobody owes anything." });
   assert.equal(await api.makeCharacter(), true);
   assert.equal(S("pcName"), "Wren");
   const pc = game.actors.get(S("pcActor"));
   assert.equal(pc.system.derived.family, "Beastkin");
+  assert.equal(pc.system.details.drive, "Because the sea is the only place nobody owes anything.");
   assert.equal(world.rendered.at(-1).opts.pageId, CONTENT.ids.pages.act1.ch1_intro_beastkin);
   assert.ok(ticked("pc"));
   await api.readScene("ch1_intro_beastkin");
@@ -27,7 +34,10 @@ test("all 14 steps play in order", async () => {
   // 2-3. The broker: the trio join; a question.
   await api.readScene("ch1_broker");
   assert.ok(S("trioJoined"));
-  assert.ok(world.chat.at(-1).content.includes("And you, Wren. Let me guess."), "{pc} is filled in when read aloud");
+  const said = world.chat.find(c => c.content.includes("And you, Wren. Let me guess."));
+  assert.ok(said, "{pc} is filled in when read aloud");
+  assert.equal(said.speaker.alias, "Odile Sallow", "posted as the speaker");
+  assert.match(said.content, /pa1-face/, "with their portrait");
   world.dialogs.push({ wait: "q4" });
   await api.askBroker();
   assert.match(world.chat.at(-1).content, /unfixed water eats the unbound/);
@@ -57,8 +67,7 @@ test("all 14 steps play in order", async () => {
   assert.ok(gnawFight);
   assert.equal(gnawFight.combatants.size, 4 + 1 + 3, "four heroes, Old Gnaw and three rats");
   await gnawFight.delete();
-  await settle();
-  assert.ok(ticked("gnaw"));
+  await until(() => ticked("gnaw"), "the Old Gnaw step ticks when the fight ends");
 
   // 8. The Gloam throws them back after two rounds, on its own.
   await api.startGloam();
@@ -66,8 +75,7 @@ test("all 14 steps play in order", async () => {
   await gloamFight.update({ round: 2 });
   assert.ok(game.combats.get(gloamFight.id), "still fighting in round 2");
   await gloamFight.update({ round: 3 });
-  await settle();
-  assert.ok(!game.combats.get(gloamFight.id), "the rebuff ended the fight");
+  await until(() => !game.combats.get(gloamFight.id) && ticked("gloam"), "the rebuff ended the fight");
   assert.equal(pc.system.zone, "far");
   assert.ok(ticked("gloam"));
 
@@ -80,14 +88,12 @@ test("all 14 steps play in order", async () => {
   assert.deepEqual([start.x, start.y], CONTENT.sunPath[0]);
   const lightFight = game.combats.get(S("lightCombat"));
   await lightFight.update({ round: 2 });
-  await settle();
-  assert.equal(light.system.clock.value, 1);
+  await until(() => light.system.clock.value === 1, "the sun clock ticks on the new round");
   assert.notDeepEqual([grate.lights.get(sunId).x, grate.lights.get(sunId).y], [start.x, start.y], "the sunlight moved");
   Hooks.callAll("possibilities.setback", light, actor("protag3"), { gearDamage: true });
-  await settle(); await settle();
-  assert.ok(actor("protag3").items.some(i => i.system.condition === "damaged"));
+  await until(() => actor("protag3").items.some(i => i.system.condition === "damaged"), "a Setback damages a loaner");
   await light.update({ "system.resistance.value": 0 });
-  await settle(); await settle();
+  await until(() => ticked("light"), "Resistance 0 wins the Scene");
   assert.equal(light.flags["possibilities-act1"].resolved, "won");
   assert.ok(ticked("light"));
 
@@ -119,6 +125,9 @@ test("all 14 steps play in order", async () => {
   assert.ok(!actor("enkrid").statuses.has("unconscious"));
   await api.readScene("ch1_missed_ship");
   await api.endAct();
+  assert.ok(world.chat.some(c => c.content.includes("scruffy captain")));
+  await api.milestone();
+  assert.equal(pc.system.profession.rank, "Apprentice");
   assert.match(world.chat.find(c => c.content.includes("pa1-titlecard")).content, /Possibilities/);
 
   for ( const s of CONTENT.steps ) assert.ok(ticked(s.key), `step ${s.n} ${s.title} is ticked`);

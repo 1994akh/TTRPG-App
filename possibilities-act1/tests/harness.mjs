@@ -301,6 +301,11 @@ export async function setup({ seed=1 }={}) {
     possibilities: fakeSystem()
   };
   for ( const a of game.actors ) a.prepare();
+  globalThis.Roll = class {
+    constructor(formula) { this.formula = formula; }
+    async evaluate() { this.total = rollFormula(this.formula, world.rand); return this; }
+  };
+  Object.defineProperty(globalThis, "navigator", { configurable: true, value: { clipboard: { writeText: async t => { world.clipboard = t; } } } });
   globalThis.ChatMessage = { implementation: { create: async d => { world.chat.push(d); return d; } } };
   globalThis.Actor = { implementation: { create: async d => {
     const a = makeDoc({ items: [], ...d, system: { ...defaultHero(), ...d.system } }, "Actor", null);

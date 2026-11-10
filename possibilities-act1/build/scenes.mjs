@@ -55,7 +55,10 @@ function buildOne(key, { actors, folder }) {
       x: t.x, y: t.y, elevation: 0, width: proto.width, height: proto.height, texture: proto.texture,
       hidden: !!t.hidden, disposition: proto.disposition, displayName: DISPLAY.HOVER, displayBars: proto.displayBars,
       bar1: proto.bar1, bar2: proto.bar2, lockRotation: true, sight: proto.sight, ring: { enabled: false },
-      flags: { [SCOPE]: { actorKey: t.actor } }
+      flags: { [SCOPE]: { actorKey: t.actor } },
+      // The three Coldwater sellswords are corpses: marked dead on the map.
+      ...(t.actor === "sellsword" ? { delta: { effects: [{ _id: id(`effect:${key}:${i}:dead`), name: "Dead", img: "icons/svg/skull.svg",
+        statuses: ["dead"], disabled: false, transfer: false, changes: [], duration: {}, flags: {} }] }, displayBars: DISPLAY.NONE } : {})
     };
   }).filter(Boolean);
   return {

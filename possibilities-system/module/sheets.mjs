@@ -186,8 +186,12 @@ export class HeroSheet extends PossibilitiesActorSheet {
       path: { class: path(s.story.path.class, s.class.node), profession: path(s.story.path.profession, s.profession.node) },
       currencyList: DENOMINATIONS.map(k => ({ k, v: s.currency[k], label: loc(`POSS.Coin.${k}`) })),
       enriched: {
-        appearance: await enrich(s.details.appearance, doc), biography: await enrich(s.details.biography, doc), notes: await enrich(s.details.notes, doc)
+        appearance: await enrich(s.details.appearance, doc), biography: await enrich(s.details.biography, doc), notes: await enrich(s.details.notes, doc),
+        traits: await enrich(s.details.traits, doc), ideals: await enrich(s.details.ideals, doc), bonds: await enrich(s.details.bonds, doc),
+        flaws: await enrich(s.details.flaws, doc), backstory: await enrich(s.details.backstory, doc), allies: await enrich(s.details.allies, doc)
       },
+      lookFields: ["height", "weight", "eyes", "skin", "hair"].map(k => ({ k, v: s.details[k], label: loc(`POSS.Details.${k}`) })),
+      personality: ["traits", "ideals", "bonds", "flaws"].map(k => ({ k, v: s.details[k], label: loc(`POSS.Details.${k}`) })),
       costs: DEFAULTS.costs
     });
     return ctx;

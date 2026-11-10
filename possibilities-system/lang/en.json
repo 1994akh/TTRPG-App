@@ -275,13 +275,14 @@
     "StoryRole": {
       "pc": "Player character",
       "trio": "The trio",
-      "guest": "Story guest"
+      "guest": "Story guest",
+      "label": "Story role"
     },
     "Tab": {
       "main": "Sheet",
       "actions": "Actions",
       "inventory": "Gear",
-      "story": "Story"
+      "story": "Details"
     },
     "Track": {
       "Combat": "Combat skills",
@@ -300,6 +301,21 @@
       "near": "Near",
       "far": "Far",
       "distant": "Distant"
+    },
+    "Details": {
+      "height": "Height",
+      "weight": "Weight",
+      "eyes": "Eyes",
+      "skin": "Skin",
+      "hair": "Hair",
+      "languages": "Languages",
+      "otherProficiencies": "Other proficiencies",
+      "traits": "Personality traits",
+      "ideals": "Ideals",
+      "bonds": "Bonds",
+      "flaws": "Flaws",
+      "backstory": "Backstory",
+      "allies": "Allies & organisations"
     }
   },
   "TYPES": {

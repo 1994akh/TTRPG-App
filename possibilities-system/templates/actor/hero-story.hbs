@@ -2,9 +2,14 @@
   <div class="row">
     <label>{{localize "POSS.Pronouns"}} <input type="text" name="system.details.pronouns" value="{{system.details.pronouns}}"></label>
     <label>{{localize "POSS.Age"}} <input type="text" name="system.details.age" value="{{system.details.age}}"></label>
-    <label>{{localize "POSS.Role"}} <select name="system.story.role">{{selectOptions (object pc=(localize "POSS.StoryRole.pc") trio=(localize "POSS.StoryRole.trio") guest=(localize "POSS.StoryRole.guest")) selected=system.story.role}}</select></label>
+    <label>{{localize "POSS.StoryRole.label"}} <select name="system.story.role">{{selectOptions (object pc=(localize "POSS.StoryRole.pc") trio=(localize "POSS.StoryRole.trio") guest=(localize "POSS.StoryRole.guest")) selected=system.story.role}}</select></label>
+  </div>
+  <div class="row">
+    {{#each lookFields}}<label>{{label}} <input type="text" name="system.details.{{k}}" value="{{v}}"></label>{{/each}}
   </div>
   <label class="wide">{{localize "POSS.Drive"}} <input type="text" name="system.details.drive" value="{{system.details.drive}}"></label>
+  <label class="wide">{{localize "POSS.Details.languages"}} <input type="text" name="system.details.languages" value="{{system.details.languages}}"></label>
+  <label class="wide">{{localize "POSS.Details.otherProficiencies"}} <input type="text" name="system.details.otherProficiencies" value="{{system.details.otherProficiencies}}"></label>
   {{#if path.class.length}}
   <h3>{{localize "POSS.Path"}}</h3>
   <ol class="path">{{#each path.class}}<li class="{{state}}">{{id}}</li>{{/each}}</ol>
@@ -12,6 +17,16 @@
   {{/if}}
   <h3>{{localize "POSS.Appearance"}}</h3>
   <prose-mirror name="system.details.appearance" button toggled value="{{system.details.appearance}}" data-document-uuid="{{actor.uuid}}">{{{enriched.appearance}}}</prose-mirror>
+  <div class="personality">
+    {{#each personality}}
+    <div><h3>{{label}}</h3>
+      <prose-mirror name="system.details.{{k}}" button toggled value="{{v}}" data-document-uuid="{{@root.actor.uuid}}">{{{lookup @root.enriched k}}}</prose-mirror></div>
+    {{/each}}
+  </div>
+  <h3>{{localize "POSS.Details.backstory"}}</h3>
+  <prose-mirror name="system.details.backstory" button toggled value="{{system.details.backstory}}" data-document-uuid="{{actor.uuid}}">{{{enriched.backstory}}}</prose-mirror>
+  <h3>{{localize "POSS.Details.allies"}}</h3>
+  <prose-mirror name="system.details.allies" button toggled value="{{system.details.allies}}" data-document-uuid="{{actor.uuid}}">{{{enriched.allies}}}</prose-mirror>
   <h3>{{localize "POSS.Biography"}}</h3>
   <prose-mirror name="system.details.biography" button toggled value="{{system.details.biography}}" data-document-uuid="{{actor.uuid}}">{{{enriched.biography}}}</prose-mirror>
   <h3>{{localize "POSS.Notes"}}</h3>

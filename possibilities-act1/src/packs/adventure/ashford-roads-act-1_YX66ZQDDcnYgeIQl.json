@@ -2687,7 +2687,7 @@
           "hidden": false,
           "disposition": 1,
           "displayName": 30,
-          "displayBars": 20,
+          "displayBars": 0,
           "bar1": {
             "attribute": "hp"
           },
@@ -2706,6 +2706,23 @@
             "possibilities-act1": {
               "actorKey": "sellsword"
             }
+          },
+          "delta": {
+            "effects": [
+              {
+                "_id": "dTMEkVWePNdN8D8Y",
+                "name": "Dead",
+                "img": "icons/svg/skull.svg",
+                "statuses": [
+                  "dead"
+                ],
+                "disabled": false,
+                "transfer": false,
+                "changes": [],
+                "duration": {},
+                "flags": {}
+              }
+            ]
           }
         },
         {
@@ -2727,7 +2744,7 @@
           "hidden": false,
           "disposition": 1,
           "displayName": 30,
-          "displayBars": 20,
+          "displayBars": 0,
           "bar1": {
             "attribute": "hp"
           },
@@ -2746,6 +2763,23 @@
             "possibilities-act1": {
               "actorKey": "sellsword"
             }
+          },
+          "delta": {
+            "effects": [
+              {
+                "_id": "ZwlhqTIM7qD0WzC3",
+                "name": "Dead",
+                "img": "icons/svg/skull.svg",
+                "statuses": [
+                  "dead"
+                ],
+                "disabled": false,
+                "transfer": false,
+                "changes": [],
+                "duration": {},
+                "flags": {}
+              }
+            ]
           }
         },
         {
@@ -2767,7 +2801,7 @@
           "hidden": false,
           "disposition": 1,
           "displayName": 30,
-          "displayBars": 20,
+          "displayBars": 0,
           "bar1": {
             "attribute": "hp"
           },
@@ -2786,6 +2820,23 @@
             "possibilities-act1": {
               "actorKey": "sellsword"
             }
+          },
+          "delta": {
+            "effects": [
+              {
+                "_id": "jerIMLeFHZTeEG3t",
+                "name": "Dead",
+                "img": "icons/svg/skull.svg",
+                "statuses": [
+                  "dead"
+                ],
+                "disabled": false,
+                "transfer": false,
+                "changes": [],
+                "duration": {},
+                "flags": {}
+              }
+            ]
           }
         },
         {
@@ -7820,8 +7871,8 @@
       "img": "icons/svg/mystery-man.svg",
       "system": {
         "resistance": {
-          "value": 50,
-          "max": 50
+          "value": 80,
+          "max": 80
         },
         "dc": 12,
         "el": 0,
@@ -7908,7 +7959,7 @@
         ],
         "clock": {
           "value": 0,
-          "max": 6,
+          "max": 8,
           "label": "The sun crosses the floor",
           "onEnd": "The light slides off the floor and up the wall. The Gloam uncoils. Draft: the party drags Petra out by the culvert and must come back at tomorrow's noon; the loaners are all Damaged."
         },
