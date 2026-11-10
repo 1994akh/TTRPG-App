@@ -1,0 +1,62 @@
+{
+ "source": "Game lore",
+ "data": [
+  {
+   "id": "unclassed",
+   "name": "Unclassed",
+   "status": "Written",
+   "fields": {},
+   "text": [
+    "Everyone can learn a profession, but becoming classed means paying to have brume possibility bound into you. Unclassed is the tier at the bottom, before F. The heroes start Unclassed."
+   ],
+   "sections": {},
+   "file": "Glossary.docx"
+  },
+  {
+   "id": "binding",
+   "name": "Binding",
+   "status": "Written",
+   "fields": {},
+   "text": [
+    "Making Possibility permanent in a person, which is what produces grade. Licensed in Compact waters; licensed binding carries a debt to the Compact. In the game, binding is the paid step that gives a hero their class."
+   ],
+   "sections": {},
+   "file": "Glossary.docx"
+  },
+  {
+   "id": "monsterkin",
+   "name": "Monsterkin",
+   "status": "Written",
+   "fields": {},
+   "text": [
+    "The race family once listed as Monster. Monsterkin hate being lumped in with the mindless beasts and monsters of the world; they are no less enlightened than anyone, just with different challenges. \"Monster\" is what the Compact writes on the manifest."
+   ],
+   "sections": {},
+   "file": "Glossary.docx"
+  },
+  {
+   "id": "pocket_watch",
+   "name": "the inventor's pocket watch",
+   "status": "Written",
+   "fields": {
+    "kind": "Key item"
+   },
+   "text": [
+    "Crystal-faced and engraved: a token of identity and remembrance of Enkrid's goals. The inventor leaves it with him before the legends depart."
+   ],
+   "sections": {},
+   "file": "Glossary.docx"
+  },
+  {
+   "id": "danger_fee",
+   "name": "danger fee",
+   "status": "Draft by Claude",
+   "fields": {},
+   "text": [
+    "What a crew presses a broker for when a job turns out worse than described. Brokers pay it because a crew that talks is bad for business."
+   ],
+   "sections": {},
+   "file": "Glossary.docx"
+  }
+ ]
+}

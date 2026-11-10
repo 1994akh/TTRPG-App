@@ -1,0 +1,889 @@
+{
+ "source": "Game lore",
+ "data": [
+  {
+   "id": "ch1_intro_founding",
+   "name": "The Coast Road (Founding)",
+   "status": "Draft by Claude",
+   "fields": {
+    "chapter": "1",
+    "order": "1",
+    "where": "coast_road",
+    "style": "played",
+    "beat": "The player character's intro, for the Founding peoples."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Chapter 1 - Ashford.docx",
+   "script": [
+    {
+     "note": "Dawn. The player walks the Coast Road through the ash fields toward Ashford; the refinery stacks glow ahead."
+    },
+    {
+     "speaker": "narrator",
+     "text": "The Coast Road ends where the ash fields begin, and the ash fields end at {ashford}."
+    },
+    {
+     "speaker": "narrator",
+     "text": "You have a profession, a pack, and coin for a week. You do not have a class, a ship, or a plan past the harbour."
+    },
+    {
+     "note": "A carter passes and nods; nobody looks twice. Founding peoples pass unremarked."
+    },
+    {
+     "speaker": "narrator",
+     "text": "Nobody looks twice at you. In {ashford} that is a kind of luck."
+    },
+    {
+     "note": "A pinned notice at the city gate: \"Crews wanted. Ask at {sallows_exchange}.\""
+    },
+    {
+     "speaker": "narrator",
+     "text": "Every notice on the gate says the same thing: ask at {sallows_exchange}."
+    }
+   ]
+  },
+  {
+   "id": "ch1_intro_beastkin",
+   "name": "The Coast Road (Beastkin)",
+   "status": "Draft by Claude",
+   "fields": {
+    "chapter": "1",
+    "order": "1",
+    "where": "coast_road",
+    "style": "played",
+    "beat": "The player character's intro, for the Beastkin."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Chapter 1 - Ashford.docx",
+   "script": [
+    {
+     "note": "Dawn on the Coast Road. A gate clerk checks papers."
+    },
+    {
+     "speaker": "narrator",
+     "text": "Every beastkin family can name its home rock. Yours is two days' sail behind you, and {ashford} is in front."
+    },
+    {
+     "speaker": "narrator",
+     "text": "The gate clerk asks for your island before your name, and writes the island down first."
+    },
+    {
+     "speaker": "narrator",
+     "text": "You have a profession, a pack, and coin for a week. You do not have a class, or a ship."
+    },
+    {
+     "speaker": "narrator",
+     "text": "The clerk points without looking up. Work, ships and crews: {sallows_exchange}, by the port."
+    }
+   ]
+  },
+  {
+   "id": "ch1_intro_fae",
+   "name": "The Coast Road (Fae)",
+   "status": "Draft by Claude",
+   "fields": {
+    "chapter": "1",
+    "order": "1",
+    "where": "coast_road",
+    "style": "played",
+    "beat": "The player character's intro, for the Fae."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Chapter 1 - Ashford.docx",
+   "script": [
+    {
+     "note": "Dawn on the Coast Road. The refinery's haze makes the player's outline shimmer; a child points."
+    },
+    {
+     "speaker": "narrator",
+     "text": "Fae are closer to unfixed than anyone alive, and {ashford} burns the unfixed sea for fuel. The stacks are lit all night."
+    },
+    {
+     "speaker": "narrator",
+     "text": "A child on a cart points at you, and her mother pulls her arm down. Not cruelly. Just quickly."
+    },
+    {
+     "speaker": "narrator",
+     "text": "You have a profession, a pack, and coin for a week. No class, no ship."
+    },
+    {
+     "speaker": "narrator",
+     "text": "The notices at the gate all point one way: {sallows_exchange}, by the port."
+    }
+   ]
+  },
+  {
+   "id": "ch1_intro_monsterkin",
+   "name": "The Coast Road (Monsterkin)",
+   "status": "Draft by Claude",
+   "fields": {
+    "chapter": "1",
+    "order": "1",
+    "where": "coast_road",
+    "style": "played",
+    "beat": "The player character's intro, for the Monsterkin."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Chapter 1 - Ashford.docx",
+   "script": [
+    {
+     "note": "Dawn at the city gate. A guard steps out with a ledger."
+    },
+    {
+     "speaker": "narrator",
+     "text": "\"Monster\" is what the Compact writes on the manifest. The gate guard writes it on yours."
+    },
+    {
+     "speaker": "narrator",
+     "text": "Surety, he says: a bond before you can stay inside the walls overnight. You don't have it. You have a profession, a pack, and coin for a week."
+    },
+    {
+     "speaker": "narrator",
+     "text": "He lets you through for the day. The quay inns won't take you, he adds, except one."
+    },
+    {
+     "speaker": "narrator",
+     "text": "Work, ships and crews are at {sallows_exchange}. He says it like he expects you'll be back at the gate by dusk."
+    }
+   ]
+  },
+  {
+   "id": "ch1_broker",
+   "name": "A hard time at the Exchange",
+   "status": "Draft by Claude",
+   "fields": {
+    "chapter": "1",
+    "order": "2",
+    "where": "sallows_exchange",
+    "style": "played",
+    "beat": "Deck event 02, beats 1-4."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Chapter 1 - Ashford.docx",
+   "script": [
+    {
+     "note": "Inside {sallows_exchange}. {protag2} and {protag3} are already at the high desk; the player joins the queue behind them."
+    },
+    {
+     "speaker": "broker",
+     "text": "A crow with a satchel full of somebody else's pens. No."
+    },
+    {
+     "speaker": "protag2",
+     "text": "They're my pens. Now."
+    },
+    {
+     "speaker": "broker",
+     "text": "And a Trollblood who wants a berth on a ship. Dear heart, I can't even get you a bed."
+    },
+    {
+     "speaker": "protag3",
+     "text": "I sleep on deck. I'm first up and last down. Write that on whatever you write."
+    },
+    {
+     "speaker": "broker",
+     "text": "And you, {pc}. Let me guess. Big plans, no class."
+    },
+    {
+     "choice": "I'm here for a ship."
+    },
+    {
+     "choice": "I'm here for work."
+    },
+    {
+     "speaker": "broker",
+     "text": "Everyone is. Sit down, the three of you, and stop blocking my door."
+    },
+    {
+     "note": "The door bangs. {enkrid} comes in out of breath, a pocket watch chain swinging."
+    },
+    {
+     "speaker": "enkrid",
+     "text": "{ashford}. Is this where the legends' crews hire? {captain}'s people?"
+    },
+    {
+     "speaker": "broker",
+     "text": "{captain} has been gone eight years, little road fae. And now there are four of you."
+    },
+    {
+     "speaker": "broker",
+     "text": "Here is the part none of you will like. No captain in this harbour signs on unclassed crew. Not even for the galley. Get bound, then come back."
+    },
+    {
+     "speaker": "protag3",
+     "text": "How much is binding?"
+    },
+    {
+     "speaker": "broker",
+     "text": "More than you have. All four together, more than you have."
+    },
+    {
+     "speaker": "protag2",
+     "text": "Then we put it together."
+    },
+    {
+     "speaker": "enkrid",
+     "text": "Together. Yes."
+    },
+    {
+     "speaker": "broker",
+     "text": "You've known each other a minute and a half."
+    },
+    {
+     "speaker": "protag3",
+     "text": "Then it's a good minute and a half. Give us work. And answer questions."
+    },
+    {
+     "speaker": "broker",
+     "text": "Oh, I'll answer your stupid, basic, and naive questions. Questions are free today. Tomorrow they're a silver each."
+    },
+    {
+     "note": "Opens the broker's question menu (see the Questions entry). Then the commission."
+    }
+   ]
+  },
+  {
+   "id": "ch1_questions",
+   "name": "Stupid, basic, and naive questions",
+   "status": "Draft by Claude",
+   "fields": {
+    "chapter": "1",
+    "order": "3",
+    "where": "sallows_exchange",
+    "style": "menu",
+    "beat": "Deck event 02, beat 4: the broker answers their questions. The game's tutorial menu; each Heading 2 is one question."
+   },
+   "text": [],
+   "sections": {
+    "Q: What is a class?": [
+     "What binding gives you. Brume possibility bound into your body, and with it the way you fight. Until you're bound you can swing a stick like anyone; after, you're a Vanguard, a Theorist, whatever you pay for."
+    ],
+    "Q: What is a profession?": [
+     "What you do when nobody's trying to kill you. Anyone can learn one. It's how you earn, mend, chart and cook, and in a harbour it matters more than your class."
+    ],
+    "Q: What is grade?": [
+     "How firmly a thing is written into the world. You're F, or you will be once you're bound. Water has a grade too. Sail into water above your grade and it will tell you so."
+    ],
+    "Q: Why won't ships take unclassed crew?": [
+     "Because the sea outside the Reach is unfixed, and unfixed water eats the unbound. Insurers won't cover you. Captains won't carry what the insurers won't."
+    ],
+    "Q: Who runs Ashford?": [
+     "The Compact owns the refinery, the licences and most of the captains. The Bench owns the charts. I own what everyone tells me."
+    ],
+    "Q: Where did the legends' crew go?": [
+     "Out past Kelder's Wall, eight years ago, on the best-found ship that ever left this quay. Nobody's heard a word. That's the honest answer. The dishonest ones cost more."
+    ]
+   },
+   "file": "Chapter 1 - Ashford.docx"
+  },
+  {
+   "id": "ch1_commission",
+   "name": "The commission",
+   "status": "Draft by Claude",
+   "fields": {
+    "chapter": "1",
+    "order": "4",
+    "where": "sallows_exchange",
+    "style": "played",
+    "beat": "Deck event 02, beats 5-8."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Chapter 1 - Ashford.docx",
+   "script": [
+    {
+     "speaker": "broker",
+     "text": "Work, then. One job pays enough to bind four. {merchant}, charge-lamp money on {refinery_row}. His daughter {petra} went into the {undercourses} four days ago and hasn't come out."
+    },
+    {
+     "speaker": "protag2",
+     "text": "Into the sewers. On purpose."
+    },
+    {
+     "speaker": "broker",
+     "text": "She saw something from her window and went to look. Rich girls do."
+    },
+    {
+     "speaker": "enkrid",
+     "text": "Something's off. Why hasn't anyone taken it?"
+    },
+    {
+     "speaker": "broker",
+     "text": "Someone did."
+    },
+    {
+     "speaker": "protag3",
+     "text": "And?"
+    },
+    {
+     "speaker": "broker",
+     "text": "Three Coldwater sellswords, six days ago. They haven't come out either."
+    },
+    {
+     "note": "Beat. Everyone looks at each other."
+    },
+    {
+     "speaker": "protag3",
+     "text": "Then the pay goes up."
+    },
+    {
+     "speaker": "broker",
+     "text": "The pay is the pay."
+    },
+    {
+     "speaker": "protag2",
+     "text": "Then you lend us gear. We have a pack each and a stolen pen."
+    },
+    {
+     "speaker": "broker",
+     "text": "Loaners. Basic blades, a lamp, a pry bar. Bring them back whole or pay for them."
+    },
+    {
+     "note": "The heroes receive the loaned gear: one basic weapon each, a charge lamp, a pry bar. Marked \"Loaned\"."
+    },
+    {
+     "note": "Outside, on the Exchange steps, the four check their gear. Bonding beat."
+    },
+    {
+     "speaker": "protag3",
+     "text": "Four people, one job, zero classes. I've had worse crews."
+    },
+    {
+     "speaker": "protag2",
+     "text": "You've had a crew?"
+    },
+    {
+     "speaker": "protag3",
+     "text": "I've had a dock. Same thing with fewer oars."
+    },
+    {
+     "speaker": "enkrid",
+     "text": "{captain}'s crew started in this harbour too. Did you know that?"
+    },
+    {
+     "note": "{enkrid} takes out the pocket watch. The flashback begins: the Prologue entry."
+    }
+   ]
+  },
+  {
+   "id": "ch1_prologue",
+   "name": "Prologue: the three legends",
+   "status": "Draft by Claude",
+   "fields": {
+    "chapter": "1",
+    "order": "5",
+    "where": "enkrid_village",
+    "style": "flashback",
+    "beat": "Deck event 01, all seven beats, told as {enkrid}'s flashback when he first opens up to the group."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Chapter 1 - Ashford.docx",
+   "script": [
+    {
+     "note": "Flashback filter. Night in {enkrid_village}. A small {enkrid}, maybe nine, curled on the ground behind a hovel."
+    },
+    {
+     "speaker": "dov",
+     "text": "Road fae. Horns like a goat and legs like a stork. Get up so we can knock you down again."
+    },
+    {
+     "note": "The boys kick him. Nobody from the fire comes."
+    },
+    {
+     "speaker": "narrator",
+     "text": "Nobody ever came. Nobody stood up for an orphaned road fae."
+    },
+    {
+     "speaker": "captain",
+     "text": "That's enough. Go home, all of you, before I decide you're crew and put you to work."
+    },
+    {
+     "note": "The boys scatter. {captain} kneels. Behind her, {first_mate} with a chart case and {inventor} with a toolbag full of brass."
+    },
+    {
+     "speaker": "captain",
+     "text": "Life is worth living, little one. If only to see what the world's still hiding."
+    },
+    {
+     "speaker": "narrator",
+     "text": "They were recruiting. Strong backs and quick hands, for an expedition past anything anyone had charted."
+    },
+    {
+     "speaker": "enkrid",
+     "text": "I can work. I can fix things. I fixed the chapel clock."
+    },
+    {
+     "speaker": "first_mate",
+     "text": "How old are you? Nine? The Sea of Possibility doesn't care how clever you are. Grow first. Learn first."
+    },
+    {
+     "speaker": "narrator",
+     "text": "They said no. He was bruised, and small, and nine."
+    },
+    {
+     "speaker": "inventor",
+     "text": "Wait. We can't leave him here like this."
+    },
+    {
+     "speaker": "narrator",
+     "text": "So they paid. Four years at the Wright chapel: schooling, room and board, Brother Ansel's patience."
+    },
+    {
+     "speaker": "captain",
+     "text": "When you're grown and done with school, come and find us. Ashford Roads. Any captain there will know our names."
+    },
+    {
+     "speaker": "inventor",
+     "text": "Here. It keeps time, and it'll remind you what you're keeping time for."
+    },
+    {
+     "note": "{inventor} gives him the crystal-faced, engraved pocket watch. Close-up on the engraving (the user to write what it says)."
+    },
+    {
+     "speaker": "narrator",
+     "text": "They left the next morning on the expedition they'd planned, and were never heard from again."
+    },
+    {
+     "speaker": "narrator",
+     "text": "Everyone said they were lost. {enkrid} wound the watch every night and decided everyone was wrong."
+    },
+    {
+     "note": "Flashback ends on the Exchange steps."
+    },
+    {
+     "speaker": "enkrid",
+     "text": "They're alive. I'm going to find them."
+    },
+    {
+     "speaker": "protag3",
+     "text": "Then we'd better get bound. Sewers first."
+    }
+   ]
+  },
+  {
+   "id": "ch1_sewer_enter",
+   "name": "Into the Undercourses",
+   "status": "Draft by Claude",
+   "fields": {
+    "chapter": "1",
+    "order": "6",
+    "where": "undercourses",
+    "style": "played",
+    "beat": "Deck event 03, beat 1."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Chapter 1 - Ashford.docx",
+   "script": [
+    {
+     "note": "The heroes drop through a culvert hatch under Refinery Row. Warm, foul air. Rat noise everywhere."
+    },
+    {
+     "speaker": "protag2",
+     "text": "It's warm. Why is a sewer warm?"
+    },
+    {
+     "speaker": "enkrid",
+     "text": "Refinery run-off. Forty years of it."
+    },
+    {
+     "note": "A side tunnel: three bodies in Coldwater colours, gnawed. A dropped journal."
+    },
+    {
+     "speaker": "protag3",
+     "text": "The sellswords. All three."
+    },
+    {
+     "speaker": "protag2",
+     "text": "Rats did this. Look at the marks. Lots of rats."
+    },
+    {
+     "speaker": "enkrid",
+     "text": "Rats don't usually finish a person."
+    },
+    {
+     "note": "The journal's last page: \"Something in the big cistern. Lamps don't scare it. Light does.\" Kept as a clue item."
+    }
+   ]
+  },
+  {
+   "id": "ch1_old_gnaw",
+   "name": "Old Gnaw",
+   "status": "Draft by Claude",
+   "fields": {
+    "chapter": "1",
+    "order": "7",
+    "where": "undercourses",
+    "style": "battle",
+    "beat": "Deck event 03, beats 2-3."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Chapter 1 - Ashford.docx",
+   "script": [
+    {
+     "note": "A rat the size of a pony, with a dozen smaller rats. Battle: {old_gnaw} and a rat swarm. Unclassed heroes: Strike, Aid, Stabilise, items."
+    },
+    {
+     "speaker": "protag3",
+     "text": "That is not a rat. That's a rat's landlord."
+    },
+    {
+     "note": "After the win, no casualties."
+    },
+    {
+     "speaker": "enkrid",
+     "text": "We did that. Unclassed, with loaners."
+    },
+    {
+     "speaker": "protag3",
+     "text": "We did that. Keep going."
+    },
+    {
+     "speaker": "narrator",
+     "text": "Confident now, they pressed on."
+    }
+   ]
+  },
+  {
+   "id": "ch1_the_gloam",
+   "name": "The thing in the dark",
+   "status": "Draft by Claude",
+   "fields": {
+    "chapter": "1",
+    "order": "8",
+    "where": "grate_chamber",
+    "style": "battle",
+    "beat": "Deck event 03, beats 4-6. A fight they can't win: the battle ends after two rounds with the party pushed back, no one lost."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Chapter 1 - Ashford.docx",
+   "script": [
+    {
+     "note": "The Grate Chamber. {petra} is huddled on a ledge. Something made of dark and teeth uncoils in the cistern: {gloam}."
+    },
+    {
+     "speaker": "petra",
+     "text": "Don't! It doesn't stop!"
+    },
+    {
+     "note": "Battle: {gloam}. Its Resistance is far beyond the party. After two rounds it throws them back to the doorway."
+    },
+    {
+     "speaker": "protag3",
+     "text": "Everything I hit, it just isn't there anymore."
+    },
+    {
+     "speaker": "protag2",
+     "text": "Fighting it isn't working. Look at the room instead."
+    },
+    {
+     "note": "A shaft of daylight through the street grate falls in a bright square on the floor. {gloam} flows around it, every time."
+    },
+    {
+     "speaker": "enkrid",
+     "text": "It won't touch the light."
+    },
+    {
+     "speaker": "petra",
+     "text": "It goes still when the sun comes through. Every day, around noon. That's how I'm alive."
+    }
+   ]
+  },
+  {
+   "id": "ch1_into_the_light",
+   "name": "Into the light",
+   "status": "Draft by Claude",
+   "fields": {
+    "chapter": "1",
+    "order": "9",
+    "where": "grate_chamber",
+    "style": "scene",
+    "beat": "Deck event 03, beats 7-9. A Scene on the battle screen: get the Gloam into the light before the sun moves off. Resistance is the timing; Setbacks damage the loaned gear."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Chapter 1 - Ashford.docx",
+   "script": [
+    {
+     "speaker": "protag3",
+     "text": "So we put it in the light."
+    },
+    {
+     "speaker": "protag2",
+     "text": "The light's moving. The sun doesn't wait for us."
+    },
+    {
+     "speaker": "enkrid",
+     "text": "Then we move faster than the sun."
+    },
+    {
+     "note": "Scene approaches, shown before the player picks: Bait it (Full, Combat Effort, takes hits). Block its exits (Full, Athletics). Angle the light with the charge lamp's mirror or by prying the grate wider (Full for Tinker, Half for others). Rig a line to drag the grate cover (Full for Sailor). Talk to Petra and read its pattern (Half, Craft Effort). Aid (Half)."
+    },
+    {
+     "note": "Setbacks hit hit points and the loaned gear; each Setback marks one loaner Damaged."
+    },
+    {
+     "speaker": "narrator",
+     "text": "They had underestimated how long the sun would take. They took every hit while it crawled across the floor."
+    },
+    {
+     "note": "Win: {gloam} is caught in the light, goes rigid, and comes apart into warm grey fog that settles in the water. {petra} is free."
+    },
+    {
+     "speaker": "petra",
+     "text": "You came all the way down here for me?"
+    },
+    {
+     "speaker": "protag2",
+     "text": "For your father's money. But also for you. Mostly the money."
+    }
+   ]
+  },
+  {
+   "id": "ch1_danger_fee",
+   "name": "Paying for the loaners",
+   "status": "Draft by Claude",
+   "fields": {
+    "chapter": "1",
+    "order": "10",
+    "where": "sallows_exchange",
+    "style": "played",
+    "beat": "Deck event 03, beats 10-11."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Chapter 1 - Ashford.docx",
+   "script": [
+    {
+     "note": "Back at the Exchange. Petra is home; the fee is paid. The broker inspects the battered loaners."
+    },
+    {
+     "speaker": "broker",
+     "text": "Bent, chipped, cracked, and is that tooth marks? You'll pay for these."
+    },
+    {
+     "speaker": "protag3",
+     "text": "Then they're ours."
+    },
+    {
+     "speaker": "broker",
+     "text": "Then they're yours. Which leaves you short of four bindings by a little."
+    },
+    {
+     "speaker": "enkrid",
+     "text": "The sellswords' journal said light. You knew what was down there."
+    },
+    {
+     "speaker": "broker",
+     "text": "I suspected."
+    },
+    {
+     "speaker": "protag2",
+     "text": "Suspected is a word that costs a danger fee."
+    },
+    {
+     "speaker": "protag3",
+     "text": "Unless you'd like Coldwater to hear how their sellswords died."
+    },
+    {
+     "note": "Beat. The broker counts out more coin."
+    },
+    {
+     "speaker": "broker",
+     "text": "Danger fee. Don't come back for a week. Actually, come back. I like you. I'll deny it."
+    },
+    {
+     "speaker": "narrator",
+     "text": "Just enough to bind four. Not a copper over."
+    },
+    {
+     "note": "The loaned gear is now owned. The broker's commissions board opens: F-grade work around Ashford."
+    }
+   ]
+  },
+  {
+   "id": "ch1_binding",
+   "name": "Binding",
+   "status": "Draft by Claude",
+   "fields": {
+    "chapter": "1",
+    "order": "11",
+    "where": "binding_house",
+    "style": "played",
+    "beat": "Deck event 04, beat A. The player picks a class here; the trio take theirs from the story."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Chapter 1 - Ashford.docx",
+   "script": [
+    {
+     "note": "The Binding House: a white hall, brass coils, glass cylinders of warm grey brume."
+    },
+    {
+     "speaker": "binder",
+     "text": "Cash or Compact debt?"
+    },
+    {
+     "speaker": "protag3",
+     "text": "Cash. All of it."
+    },
+    {
+     "speaker": "binder",
+     "text": "Rare. Choose your binding."
+    },
+    {
+     "note": "The player chooses one of the twelve F-grade classes. The trio: {enkrid} Bloodcharged, {protag2} Theorist, {protag3} Vanguard."
+    },
+    {
+     "speaker": "binder",
+     "text": "Hold still. I've stopped promising it won't hurt."
+    }
+   ]
+  },
+  {
+   "id": "ch1_collapse",
+   "name": "It hurts",
+   "status": "Draft by Claude",
+   "fields": {
+    "chapter": "1",
+    "order": "12",
+    "where": "binding_house",
+    "style": "played",
+    "beat": "Deck event 04, beats B-C."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Chapter 1 - Ashford.docx",
+   "script": [
+    {
+     "note": "Binding: the brume flows in. White light. Everyone staggers. {enkrid} drops."
+    },
+    {
+     "speaker": "protag2",
+     "text": "Is he breathing? He's fae. Is it different for fae?"
+    },
+    {
+     "speaker": "binder",
+     "text": "Fae take in more than they should. He'll live. He'll want a bed."
+    },
+    {
+     "speaker": "protag3",
+     "text": "Then he gets a bed. We stick together."
+    },
+    {
+     "note": "They carry {enkrid} to {lantern_lee}."
+    }
+   ]
+  },
+  {
+   "id": "ch1_inn_night",
+   "name": "A night at the Lantern and Lee",
+   "status": "Draft by Claude",
+   "fields": {
+    "chapter": "1",
+    "order": "13",
+    "where": "lantern_lee",
+    "style": "played",
+    "beat": "Deck event 04, beat C. They stay the night. Optional talks with each of the trio (party bonding)."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Chapter 1 - Ashford.docx",
+   "script": [
+    {
+     "speaker": "innkeeper",
+     "text": "Monsterkin, fae, crow and whatever you are. One room. I don't ask, you don't break anything."
+    },
+    {
+     "note": "Optional: talk to each of the trio before sleeping."
+    },
+    {
+     "speaker": "protag3",
+     "text": "I've never been bound before. I can feel the floor through my boots. I can feel the whole quay."
+    },
+    {
+     "speaker": "protag2",
+     "text": "My father would call this a waste of a good family's money. It's the first thing I've ever bought myself."
+    },
+    {
+     "speaker": "enkrid",
+     "text": "The watch stopped when I fell. It's ticking again now."
+    },
+    {
+     "speaker": "narrator",
+     "text": "They slept late. Much too late."
+    }
+   ]
+  },
+  {
+   "id": "ch1_missed_ship",
+   "name": "The Gilded Tern leaves without them",
+   "status": "Draft by Claude",
+   "fields": {
+    "chapter": "1",
+    "order": "14",
+    "where": "long_quay",
+    "style": "played",
+    "beat": "Deck events 04 to 05: delayed, they meet the nobles and miss the first ship. The demo ends here."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Chapter 1 - Ashford.docx",
+   "script": [
+    {
+     "note": "Midmorning. The heroes run onto the Long Quay. {gilded_tern} is loading. {rourke} stands at the gangway with {noble} and her retinue."
+    },
+    {
+     "speaker": "protag3",
+     "text": "Captain! Four bound crew, ready to sign!"
+    },
+    {
+     "speaker": "rourke",
+     "text": "Four bound crew. Yesterday I'd have taken you. This morning, {noble} needs the berths for her household."
+    },
+    {
+     "speaker": "noble",
+     "text": "Is that a troll?"
+    },
+    {
+     "speaker": "protag3",
+     "text": "Trollblood. And I'm crew."
+    },
+    {
+     "speaker": "rourke",
+     "text": "Not on my ship. No offence to your blood. It's business."
+    },
+    {
+     "note": "The gangway comes up. {gilded_tern} slips its lines."
+    },
+    {
+     "speaker": "enkrid",
+     "text": "That was our ship."
+    },
+    {
+     "speaker": "protag2",
+     "text": "That was a ship."
+    },
+    {
+     "speaker": "protag3",
+     "text": "There'll be another. There's always another ship."
+    },
+    {
+     "speaker": "narrator",
+     "text": "The first ship left without them."
+    },
+    {
+     "note": "End of the demo. Title card: \"Possibilities\". The next chapter begins with the Second Captain."
+    }
+   ]
+  }
+ ]
+}

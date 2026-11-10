@@ -1,0 +1,2136 @@
+{
+ "source": "Possibilities_TTRPG_System_v1_1.xlsx",
+ "data": [
+  {
+   "id": "Smith",
+   "name": "Smith",
+   "grade": "F",
+   "line": "Forge",
+   "hit_die": "",
+   "primary": "STR",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 1,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 1,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Sound Repair",
+   "evolves_from": [],
+   "evolves_into": [
+    "Armorer",
+    "Gunsmith"
+   ],
+   "skills": [
+    "Crafting",
+    "Appraisal"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Herbalist",
+   "name": "Herbalist",
+   "grade": "F",
+   "line": "Life",
+   "hit_die": "",
+   "primary": "WIS",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 1,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Field Dressing",
+   "evolves_from": [],
+   "evolves_into": [
+    "Apothecary"
+   ],
+   "skills": [
+    "Medicine",
+    "Alchemy"
+   ],
+   "feature": "Growing Stock",
+   "feature_text": "Between Scenes you gather one dose of a tier-1 remedy free, wherever anything grows."
+  },
+  {
+   "id": "Cartographer",
+   "name": "Cartographer",
+   "grade": "F",
+   "line": "Wayfaring",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 1,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Dead Reckoning",
+   "evolves_from": [],
+   "evolves_into": [
+    "Surveyor",
+    "Navigator"
+   ],
+   "skills": [
+    "Cartography",
+    "Survival"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Merchant",
+   "name": "Merchant",
+   "grade": "F",
+   "line": "Commerce",
+   "hit_die": "",
+   "primary": "CHA",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 1,
+    "WIS": 0,
+    "CHA": 1
+   },
+   "signature": "Haggle",
+   "evolves_from": [],
+   "evolves_into": [
+    "Broker",
+    "Purveyor"
+   ],
+   "skills": [
+    "Persuasion",
+    "Society"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Scribe",
+   "name": "Scribe",
+   "grade": "F",
+   "line": "Lore",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 0,
+    "DEX": 1,
+    "CON": 0,
+    "INT": 1,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Copy Exact",
+   "evolves_from": [],
+   "evolves_into": [
+    "Archivist",
+    "Sigil Scribe"
+   ],
+   "skills": [
+    "History",
+    "Investigation"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "Ship's Cook",
+   "name": "Ship's Cook",
+   "grade": "F",
+   "line": "Life",
+   "hit_die": "",
+   "primary": "WIS",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Field Dressing",
+   "evolves_from": [],
+   "evolves_into": [
+    "Purveyor"
+   ],
+   "skills": [
+    "Medicine",
+    "Alchemy"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Netter",
+   "name": "Netter",
+   "grade": "F",
+   "line": "Wayfaring",
+   "hit_die": "",
+   "primary": "DEX",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 1,
+    "CON": 0,
+    "INT": 0,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Dead Reckoning",
+   "evolves_from": [],
+   "evolves_into": [
+    "Sailmaker"
+   ],
+   "skills": [
+    "Cartography",
+    "Survival"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Mason",
+   "name": "Mason",
+   "grade": "F",
+   "line": "Forge",
+   "hit_die": "",
+   "primary": "STR",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 1,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Sound Repair",
+   "evolves_from": [],
+   "evolves_into": [
+    "Engineer",
+    "Shipwright"
+   ],
+   "skills": [
+    "Crafting",
+    "Appraisal"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Tinker",
+   "name": "Tinker",
+   "grade": "F",
+   "line": "Artifice",
+   "hit_die": "",
+   "primary": "DEX",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 1,
+    "CON": 0,
+    "INT": 1,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Sound Mechanism",
+   "evolves_from": [],
+   "evolves_into": [
+    "Sigil Scribe",
+    "Engineer",
+    "Clockwright"
+   ],
+   "skills": [
+    "Crafting",
+    "Investigation"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Sailor",
+   "name": "Sailor",
+   "grade": "F",
+   "line": "Wayfaring",
+   "hit_die": "",
+   "primary": "CON",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 0,
+    "DEX": 1,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Dead Reckoning",
+   "evolves_from": [],
+   "evolves_into": [
+    "Navigator",
+    "Shipwright"
+   ],
+   "skills": [
+    "Cartography",
+    "Survival"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "Miner",
+   "name": "Miner",
+   "grade": "F",
+   "line": "Forge",
+   "hit_die": "",
+   "primary": "CON",
+   "secondary": "STR",
+   "abilities": {
+    "STR": 1,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Sound Repair",
+   "evolves_from": [],
+   "evolves_into": [
+    "Gunsmith",
+    "Surveyor",
+    "Brume Harvester"
+   ],
+   "skills": [
+    "Crafting",
+    "Appraisal"
+   ],
+   "feature": "Set Your Weight",
+   "feature_text": "Once per Scene, ignore a forced move, a knockdown or a Grab without rolling."
+  },
+  {
+   "id": "Physician",
+   "name": "Physician",
+   "grade": "F",
+   "line": "Life",
+   "hit_die": "",
+   "primary": "WIS",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 1,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Field Dressing",
+   "evolves_from": [],
+   "evolves_into": [
+    "Apothecary",
+    "Chirurgeon"
+   ],
+   "skills": [
+    "Medicine",
+    "Alchemy"
+   ],
+   "feature": "Steady Hands",
+   "feature_text": "Your Stabilise attempts succeed automatically on a target at Dying 1 or 2."
+  },
+  {
+   "id": "Armorer",
+   "name": "Armorer",
+   "grade": "E",
+   "line": "Forge",
+   "hit_die": "",
+   "primary": "STR",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 2,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 1,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Fine Temper",
+   "evolves_from": [
+    "Smith"
+   ],
+   "evolves_into": [
+    "Platewright",
+    "Bladesmith"
+   ],
+   "skills": [
+    "Crafting",
+    "Appraisal"
+   ],
+   "feature": "Fitted",
+   "feature_text": "Armour you maintain grants +1 AC to its wearer."
+  },
+  {
+   "id": "Gunsmith",
+   "name": "Gunsmith",
+   "grade": "E",
+   "line": "Forge",
+   "hit_die": "",
+   "primary": "STR",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 2,
+    "DEX": 1,
+    "CON": 0,
+    "INT": 1,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Fine Temper",
+   "evolves_from": [
+    "Smith",
+    "Miner"
+   ],
+   "evolves_into": [
+    "Bladesmith"
+   ],
+   "skills": [
+    "Crafting",
+    "Appraisal"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "Apothecary",
+   "name": "Apothecary",
+   "grade": "E",
+   "line": "Life",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 2,
+    "WIS": 2,
+    "CHA": 0
+   },
+   "signature": "Tonic Craft",
+   "evolves_from": [
+    "Herbalist",
+    "Physician"
+   ],
+   "evolves_into": [
+    "Alchemist",
+    "Vital Surgeon"
+   ],
+   "skills": [
+    "Medicine",
+    "Alchemy"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Surveyor",
+   "name": "Surveyor",
+   "grade": "E",
+   "line": "Wayfaring",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 2,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "True North",
+   "evolves_from": [
+    "Cartographer",
+    "Miner"
+   ],
+   "evolves_into": [
+    "Chartwright",
+    "Deep Diver"
+   ],
+   "skills": [
+    "Cartography",
+    "Survival"
+   ],
+   "feature": "Measured Ground",
+   "feature_text": "You establish a region's grade without entering it, from one cell away."
+  },
+  {
+   "id": "Navigator",
+   "name": "Navigator",
+   "grade": "E",
+   "line": "Wayfaring",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 2,
+    "WIS": 2,
+    "CHA": 0
+   },
+   "signature": "True North",
+   "evolves_from": [
+    "Cartographer",
+    "Sailor"
+   ],
+   "evolves_into": [
+    "Chartwright",
+    "Fleetwright"
+   ],
+   "skills": [
+    "Cartography",
+    "Survival"
+   ],
+   "feature": "Dead Certain",
+   "feature_text": "Once per journey, treat a failed Navigate check as a success."
+  },
+  {
+   "id": "Broker",
+   "name": "Broker",
+   "grade": "E",
+   "line": "Commerce",
+   "hit_die": "",
+   "primary": "CHA",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 2,
+    "WIS": 0,
+    "CHA": 2
+   },
+   "signature": "Supply Line",
+   "evolves_from": [
+    "Merchant"
+   ],
+   "evolves_into": [
+    "Guildmaster",
+    "Quartermaster"
+   ],
+   "skills": [
+    "Persuasion",
+    "Society"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Archivist",
+   "name": "Archivist",
+   "grade": "E",
+   "line": "Lore",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 1,
+    "CON": 0,
+    "INT": 2,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Perfect Recall",
+   "evolves_from": [
+    "Scribe"
+   ],
+   "evolves_into": [
+    "Loremaster",
+    "Runescribe"
+   ],
+   "skills": [
+    "History",
+    "Investigation"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Sigil Scribe",
+   "name": "Sigil Scribe",
+   "grade": "E",
+   "line": "Lore",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 0,
+    "DEX": 2,
+    "CON": 0,
+    "INT": 2,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Perfect Recall",
+   "evolves_from": [
+    "Scribe",
+    "Tinker"
+   ],
+   "evolves_into": [
+    "Alchemist",
+    "Loremaster",
+    "Runescribe"
+   ],
+   "skills": [
+    "History",
+    "Investigation"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "Purveyor",
+   "name": "Purveyor",
+   "grade": "E",
+   "line": "Commerce",
+   "hit_die": "",
+   "primary": "WIS",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 2,
+    "CHA": 1
+   },
+   "signature": "Supply Line",
+   "evolves_from": [
+    "Ship's Cook",
+    "Merchant"
+   ],
+   "evolves_into": [
+    "Guildmaster",
+    "Quartermaster"
+   ],
+   "skills": [
+    "Persuasion",
+    "Society"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Sailmaker",
+   "name": "Sailmaker",
+   "grade": "E",
+   "line": "Life",
+   "hit_die": "",
+   "primary": "DEX",
+   "secondary": "STR",
+   "abilities": {
+    "STR": 1,
+    "DEX": 2,
+    "CON": 0,
+    "INT": 0,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Tonic Craft",
+   "evolves_from": [
+    "Netter"
+   ],
+   "evolves_into": [
+    "Beastcrafter"
+   ],
+   "skills": [
+    "Medicine",
+    "Alchemy"
+   ],
+   "feature": "Set Your Weight",
+   "feature_text": "Once per Scene, ignore a forced move, a knockdown or a Grab without rolling."
+  },
+  {
+   "id": "Engineer",
+   "name": "Engineer",
+   "grade": "E",
+   "line": "Artifice",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "STR",
+   "abilities": {
+    "STR": 2,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 1,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Clockwork Aid",
+   "evolves_from": [
+    "Mason",
+    "Tinker"
+   ],
+   "evolves_into": [
+    "Platewright",
+    "Sapper",
+    "Artificer"
+   ],
+   "skills": [
+    "Crafting",
+    "Investigation"
+   ],
+   "feature": "Set Your Weight",
+   "feature_text": "Once per Scene, ignore a forced move, a knockdown or a Grab without rolling."
+  },
+  {
+   "id": "Clockwright",
+   "name": "Clockwright",
+   "grade": "E",
+   "line": "Artifice",
+   "hit_die": "",
+   "primary": "DEX",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 2,
+    "CON": 0,
+    "INT": 2,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Clockwork Aid",
+   "evolves_from": [
+    "Tinker"
+   ],
+   "evolves_into": [
+    "Artificer"
+   ],
+   "skills": [
+    "Crafting",
+    "Investigation"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Shipwright",
+   "name": "Shipwright",
+   "grade": "E",
+   "line": "Forge",
+   "hit_die": "",
+   "primary": "STR",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 1,
+    "DEX": 1,
+    "CON": 1,
+    "INT": 1,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Fine Temper",
+   "evolves_from": [
+    "Sailor",
+    "Mason"
+   ],
+   "evolves_into": [
+    "Fleetwright"
+   ],
+   "skills": [
+    "Crafting",
+    "Appraisal"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Chirurgeon",
+   "name": "Chirurgeon",
+   "grade": "E",
+   "line": "Life",
+   "hit_die": "",
+   "primary": "WIS",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 0,
+    "DEX": 1,
+    "CON": 0,
+    "INT": 1,
+    "WIS": 2,
+    "CHA": 0
+   },
+   "signature": "Tonic Craft",
+   "evolves_from": [
+    "Physician"
+   ],
+   "evolves_into": [
+    "Beastcrafter",
+    "Vital Surgeon"
+   ],
+   "skills": [
+    "Medicine",
+    "Alchemy"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "Brume Harvester",
+   "name": "Brume Harvester",
+   "grade": "E",
+   "line": "Wayfaring",
+   "hit_die": "",
+   "primary": "CON",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 1,
+    "DEX": 0,
+    "CON": 2,
+    "INT": 0,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "True North",
+   "evolves_from": [
+    "Miner"
+   ],
+   "evolves_into": [
+    "Sapper",
+    "Deep Diver"
+   ],
+   "skills": [
+    "Cartography",
+    "Survival"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Platewright",
+   "name": "Platewright",
+   "grade": "D",
+   "line": "Forge",
+   "hit_die": "",
+   "primary": "STR",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 3,
+    "DEX": 0,
+    "CON": 2,
+    "INT": 1,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Masterwork",
+   "evolves_from": [
+    "Armorer",
+    "Engineer"
+   ],
+   "evolves_into": [
+    "Grandsmith",
+    "Yardmaster"
+   ],
+   "skills": [
+    "Crafting",
+    "Appraisal"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Bladesmith",
+   "name": "Bladesmith",
+   "grade": "D",
+   "line": "Forge",
+   "hit_die": "",
+   "primary": "STR",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 3,
+    "DEX": 2,
+    "CON": 0,
+    "INT": 1,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Masterwork",
+   "evolves_from": [
+    "Gunsmith",
+    "Armorer"
+   ],
+   "evolves_into": [
+    "Grandsmith"
+   ],
+   "skills": [
+    "Crafting",
+    "Appraisal"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "Alchemist",
+   "name": "Alchemist",
+   "grade": "D",
+   "line": "Life",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 3,
+    "WIS": 2,
+    "CHA": 0
+   },
+   "signature": "Grafting",
+   "evolves_from": [
+    "Apothecary",
+    "Sigil Scribe"
+   ],
+   "evolves_into": [
+    "Transmuter",
+    "Lifebinder"
+   ],
+   "skills": [
+    "Medicine",
+    "Alchemy"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Chartwright",
+   "name": "Chartwright",
+   "grade": "D",
+   "line": "Wayfaring",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 3,
+    "WIS": 2,
+    "CHA": 1
+   },
+   "signature": "Chart the Unknown",
+   "evolves_from": [
+    "Navigator",
+    "Surveyor"
+   ],
+   "evolves_into": [
+    "Master Charter",
+    "Wayfinder"
+   ],
+   "skills": [
+    "Cartography",
+    "Survival"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Guildmaster",
+   "name": "Guildmaster",
+   "grade": "D",
+   "line": "Commerce",
+   "hit_die": "",
+   "primary": "CHA",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 2,
+    "WIS": 1,
+    "CHA": 3
+   },
+   "signature": "Market Read",
+   "evolves_from": [
+    "Broker",
+    "Purveyor"
+   ],
+   "evolves_into": [
+    "Magnate"
+   ],
+   "skills": [
+    "Persuasion",
+    "Society"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Loremaster",
+   "name": "Loremaster",
+   "grade": "D",
+   "line": "Lore",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 1,
+    "CON": 0,
+    "INT": 3,
+    "WIS": 2,
+    "CHA": 0
+   },
+   "signature": "Sigil Literacy",
+   "evolves_from": [
+    "Archivist",
+    "Sigil Scribe"
+   ],
+   "evolves_into": [
+    "Grand Archivist"
+   ],
+   "skills": [
+    "History",
+    "Investigation"
+   ],
+   "feature": "Cross-Reference",
+   "feature_text": "Once per downtime week, convert a failed Research into a success."
+  },
+  {
+   "id": "Runescribe",
+   "name": "Runescribe",
+   "grade": "D",
+   "line": "Lore",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 0,
+    "DEX": 3,
+    "CON": 0,
+    "INT": 3,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Sigil Literacy",
+   "evolves_from": [
+    "Sigil Scribe",
+    "Archivist"
+   ],
+   "evolves_into": [
+    "Transmuter",
+    "Grand Archivist",
+    "Relicwright"
+   ],
+   "skills": [
+    "History",
+    "Investigation"
+   ],
+   "feature": "Legible",
+   "feature_text": "Sigils you inscribe may be read and triggered by anyone in the party."
+  },
+  {
+   "id": "Beastcrafter",
+   "name": "Beastcrafter",
+   "grade": "D",
+   "line": "Life",
+   "hit_die": "",
+   "primary": "WIS",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 1,
+    "DEX": 3,
+    "CON": 0,
+    "INT": 0,
+    "WIS": 2,
+    "CHA": 0
+   },
+   "signature": "Grafting",
+   "evolves_from": [
+    "Sailmaker",
+    "Chirurgeon"
+   ],
+   "evolves_into": [
+    "Chimerist"
+   ],
+   "skills": [
+    "Medicine",
+    "Alchemy"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "Sapper",
+   "name": "Sapper",
+   "grade": "D",
+   "line": "Artifice",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "STR",
+   "abilities": {
+    "STR": 3,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 2,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Autonomous Device",
+   "evolves_from": [
+    "Engineer",
+    "Brume Harvester"
+   ],
+   "evolves_into": [
+    "Yardmaster",
+    "Brume Sovereign"
+   ],
+   "skills": [
+    "Crafting",
+    "Investigation"
+   ],
+   "feature": "Set Your Weight",
+   "feature_text": "Once per Scene, ignore a forced move, a knockdown or a Grab without rolling."
+  },
+  {
+   "id": "Artificer",
+   "name": "Artificer",
+   "grade": "D",
+   "line": "Artifice",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 0,
+    "DEX": 3,
+    "CON": 0,
+    "INT": 3,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Autonomous Device",
+   "evolves_from": [
+    "Clockwright",
+    "Engineer"
+   ],
+   "evolves_into": [
+    "Relicwright"
+   ],
+   "skills": [
+    "Crafting",
+    "Investigation"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "Fleetwright",
+   "name": "Fleetwright",
+   "grade": "D",
+   "line": "Wayfaring",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 1,
+    "DEX": 1,
+    "CON": 2,
+    "INT": 2,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Chart the Unknown",
+   "evolves_from": [
+    "Shipwright",
+    "Navigator"
+   ],
+   "evolves_into": [
+    "Admiral of Trade",
+    "Wayfinder"
+   ],
+   "skills": [
+    "Cartography",
+    "Survival"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Vital Surgeon",
+   "name": "Vital Surgeon",
+   "grade": "D",
+   "line": "Life",
+   "hit_die": "",
+   "primary": "WIS",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 1,
+    "CON": 0,
+    "INT": 2,
+    "WIS": 3,
+    "CHA": 0
+   },
+   "signature": "Grafting",
+   "evolves_from": [
+    "Chirurgeon",
+    "Apothecary"
+   ],
+   "evolves_into": [
+    "Chimerist",
+    "Lifebinder"
+   ],
+   "skills": [
+    "Medicine",
+    "Alchemy"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Deep Diver",
+   "name": "Deep Diver",
+   "grade": "D",
+   "line": "Wayfaring",
+   "hit_die": "",
+   "primary": "CON",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 1,
+    "DEX": 0,
+    "CON": 3,
+    "INT": 0,
+    "WIS": 2,
+    "CHA": 0
+   },
+   "signature": "Chart the Unknown",
+   "evolves_from": [
+    "Brume Harvester",
+    "Surveyor"
+   ],
+   "evolves_into": [
+    "Master Charter",
+    "Brume Sovereign"
+   ],
+   "skills": [
+    "Cartography",
+    "Survival"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Quartermaster",
+   "name": "Quartermaster",
+   "grade": "D",
+   "line": "Commerce",
+   "hit_die": "",
+   "primary": "WIS",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 3,
+    "CHA": 2
+   },
+   "signature": "Market Read",
+   "evolves_from": [
+    "Purveyor",
+    "Broker"
+   ],
+   "evolves_into": [
+    "Magnate",
+    "Admiral of Trade"
+   ],
+   "skills": [
+    "Persuasion",
+    "Society"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Grandsmith",
+   "name": "Grandsmith",
+   "grade": "C",
+   "line": "Forge",
+   "hit_die": "",
+   "primary": "STR",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 4,
+    "DEX": 0,
+    "CON": 2,
+    "INT": 2,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Living Alloy",
+   "evolves_from": [
+    "Platewright",
+    "Bladesmith"
+   ],
+   "evolves_into": [
+    "Legendary Forgemaster"
+   ],
+   "skills": [
+    "Crafting",
+    "Appraisal"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Transmuter",
+   "name": "Transmuter",
+   "grade": "C",
+   "line": "Life",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 2,
+    "INT": 4,
+    "WIS": 2,
+    "CHA": 0
+   },
+   "signature": "Vital Rewrite",
+   "evolves_from": [
+    "Alchemist",
+    "Runescribe"
+   ],
+   "evolves_into": [
+    "Grand Transmuter"
+   ],
+   "skills": [
+    "Medicine",
+    "Alchemy"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Master Charter",
+   "name": "Master Charter",
+   "grade": "C",
+   "line": "Wayfaring",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 4,
+    "WIS": 3,
+    "CHA": 1
+   },
+   "signature": "Brume Mapping",
+   "evolves_from": [
+    "Chartwright",
+    "Deep Diver"
+   ],
+   "evolves_into": [
+    "Archipelago Wright"
+   ],
+   "skills": [
+    "Cartography",
+    "Survival"
+   ],
+   "feature": "Sealable",
+   "feature_text": "Charts you produce are Bench-sealable without an inspection."
+  },
+  {
+   "id": "Magnate",
+   "name": "Magnate",
+   "grade": "C",
+   "line": "Commerce",
+   "hit_die": "",
+   "primary": "CHA",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 3,
+    "WIS": 1,
+    "CHA": 4
+   },
+   "signature": "Monopoly",
+   "evolves_from": [
+    "Guildmaster",
+    "Quartermaster"
+   ],
+   "evolves_into": [
+    "Sovereign of Coin"
+   ],
+   "skills": [
+    "Persuasion",
+    "Society"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Grand Archivist",
+   "name": "Grand Archivist",
+   "grade": "C",
+   "line": "Lore",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 1,
+    "CON": 0,
+    "INT": 4,
+    "WIS": 3,
+    "CHA": 0
+   },
+   "signature": "Forbidden Index",
+   "evolves_from": [
+    "Loremaster",
+    "Runescribe"
+   ],
+   "evolves_into": [
+    "Keeper of Records",
+    "Worldbinder"
+   ],
+   "skills": [
+    "History",
+    "Investigation"
+   ],
+   "feature": "The Whole Shelf",
+   "feature_text": "You may Recall Knowledge as a free action once per Scene."
+  },
+  {
+   "id": "Relicwright",
+   "name": "Relicwright",
+   "grade": "C",
+   "line": "Artifice",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 0,
+    "DEX": 4,
+    "CON": 0,
+    "INT": 4,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Bound Construct",
+   "evolves_from": [
+    "Artificer",
+    "Runescribe"
+   ],
+   "evolves_into": [
+    "Grand Transmuter",
+    "Keeper of Records"
+   ],
+   "skills": [
+    "Crafting",
+    "Investigation"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "Chimerist",
+   "name": "Chimerist",
+   "grade": "C",
+   "line": "Life",
+   "hit_die": "",
+   "primary": "WIS",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 1,
+    "DEX": 3,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 3,
+    "CHA": 0
+   },
+   "signature": "Vital Rewrite",
+   "evolves_from": [
+    "Beastcrafter",
+    "Vital Surgeon"
+   ],
+   "evolves_into": [
+    "Fleshshaper"
+   ],
+   "skills": [
+    "Medicine",
+    "Alchemy"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Yardmaster",
+   "name": "Yardmaster",
+   "grade": "C",
+   "line": "Artifice",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "STR",
+   "abilities": {
+    "STR": 4,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 3,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Bound Construct",
+   "evolves_from": [
+    "Sapper",
+    "Platewright"
+   ],
+   "evolves_into": [
+    "Legendary Forgemaster",
+    "Skyforge Engineer"
+   ],
+   "skills": [
+    "Crafting",
+    "Investigation"
+   ],
+   "feature": "Set Your Weight",
+   "feature_text": "Once per Scene, ignore a forced move, a knockdown or a Grab without rolling."
+  },
+  {
+   "id": "Admiral of Trade",
+   "name": "Admiral of Trade",
+   "grade": "C",
+   "line": "Commerce",
+   "hit_die": "",
+   "primary": "CHA",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 1,
+    "DEX": 1,
+    "CON": 3,
+    "INT": 2,
+    "WIS": 0,
+    "CHA": 1
+   },
+   "signature": "Monopoly",
+   "evolves_from": [
+    "Fleetwright",
+    "Quartermaster"
+   ],
+   "evolves_into": [
+    "Sovereign of Coin"
+   ],
+   "skills": [
+    "Persuasion",
+    "Society"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Lifebinder",
+   "name": "Lifebinder",
+   "grade": "C",
+   "line": "Life",
+   "hit_die": "",
+   "primary": "WIS",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 1,
+    "CON": 0,
+    "INT": 3,
+    "WIS": 4,
+    "CHA": 0
+   },
+   "signature": "Vital Rewrite",
+   "evolves_from": [
+    "Vital Surgeon",
+    "Alchemist"
+   ],
+   "evolves_into": [
+    "Fleshshaper"
+   ],
+   "skills": [
+    "Medicine",
+    "Alchemy"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Brume Sovereign",
+   "name": "Brume Sovereign",
+   "grade": "C",
+   "line": "Wayfaring",
+   "hit_die": "",
+   "primary": "CON",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 1,
+    "DEX": 0,
+    "CON": 4,
+    "INT": 1,
+    "WIS": 2,
+    "CHA": 0
+   },
+   "signature": "Brume Mapping",
+   "evolves_from": [
+    "Deep Diver",
+    "Sapper"
+   ],
+   "evolves_into": [
+    "Skyforge Engineer"
+   ],
+   "skills": [
+    "Cartography",
+    "Survival"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Wayfinder",
+   "name": "Wayfinder",
+   "grade": "C",
+   "line": "Wayfaring",
+   "hit_die": "",
+   "primary": "WIS",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 4,
+    "WIS": 3,
+    "CHA": 1
+   },
+   "signature": "Brume Mapping",
+   "evolves_from": [
+    "Chartwright",
+    "Fleetwright"
+   ],
+   "evolves_into": [
+    "Archipelago Wright",
+    "Worldbinder"
+   ],
+   "skills": [
+    "Cartography",
+    "Survival"
+   ],
+   "feature": "Never Lost",
+   "feature_text": "You always know the direction and distance to any Charted region."
+  },
+  {
+   "id": "Legendary Forgemaster",
+   "name": "Legendary Forgemaster",
+   "grade": "B",
+   "line": "Forge",
+   "hit_die": "",
+   "primary": "STR",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 5,
+    "DEX": 0,
+    "CON": 2,
+    "INT": 3,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Everforge",
+   "evolves_from": [
+    "Grandsmith",
+    "Yardmaster"
+   ],
+   "evolves_into": [
+    "Demiforger"
+   ],
+   "skills": [
+    "Crafting",
+    "Appraisal"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Grand Transmuter",
+   "name": "Grand Transmuter",
+   "grade": "B",
+   "line": "Life",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 2,
+    "INT": 5,
+    "WIS": 3,
+    "CHA": 0
+   },
+   "signature": "Rebirth",
+   "evolves_from": [
+    "Transmuter",
+    "Relicwright"
+   ],
+   "evolves_into": [
+    "Philosopher's Hand"
+   ],
+   "skills": [
+    "Medicine",
+    "Alchemy"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Archipelago Wright",
+   "name": "Archipelago Wright",
+   "grade": "B",
+   "line": "Wayfaring",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 5,
+    "WIS": 3,
+    "CHA": 1
+   },
+   "signature": "Fold Distance",
+   "evolves_from": [
+    "Master Charter",
+    "Wayfinder"
+   ],
+   "evolves_into": [
+    "Realm Cartographer"
+   ],
+   "skills": [
+    "Cartography",
+    "Survival"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Sovereign of Coin",
+   "name": "Sovereign of Coin",
+   "grade": "B",
+   "line": "Commerce",
+   "hit_die": "",
+   "primary": "CHA",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 4,
+    "WIS": 1,
+    "CHA": 5
+   },
+   "signature": "Trade Empire",
+   "evolves_from": [
+    "Magnate",
+    "Admiral of Trade"
+   ],
+   "evolves_into": [
+    "Archon of Commerce"
+   ],
+   "skills": [
+    "Persuasion",
+    "Society"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Keeper of Records",
+   "name": "Keeper of Records",
+   "grade": "B",
+   "line": "Lore",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 1,
+    "CON": 0,
+    "INT": 5,
+    "WIS": 4,
+    "CHA": 0
+   },
+   "signature": "Total Archive",
+   "evolves_from": [
+    "Grand Archivist",
+    "Relicwright"
+   ],
+   "evolves_into": [
+    "Archon of Commerce"
+   ],
+   "skills": [
+    "History",
+    "Investigation"
+   ],
+   "feature": "Nothing Is Lost",
+   "feature_text": "You may recall any document the party has ever read."
+  },
+  {
+   "id": "Fleshshaper",
+   "name": "Fleshshaper",
+   "grade": "B",
+   "line": "Life",
+   "hit_die": "",
+   "primary": "WIS",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 1,
+    "DEX": 3,
+    "CON": 2,
+    "INT": 0,
+    "WIS": 4,
+    "CHA": 0
+   },
+   "signature": "Rebirth",
+   "evolves_from": [
+    "Chimerist",
+    "Lifebinder"
+   ],
+   "evolves_into": [
+    "Philosopher's Hand"
+   ],
+   "skills": [
+    "Medicine",
+    "Alchemy"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Skyforge Engineer",
+   "name": "Skyforge Engineer",
+   "grade": "B",
+   "line": "Artifice",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "STR",
+   "abilities": {
+    "STR": 5,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 4,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Skyworks",
+   "evolves_from": [
+    "Yardmaster",
+    "Brume Sovereign"
+   ],
+   "evolves_into": [
+    "Demiforger",
+    "Genesis Wright"
+   ],
+   "skills": [
+    "Crafting",
+    "Investigation"
+   ],
+   "feature": "Set Your Weight",
+   "feature_text": "Once per Scene, ignore a forced move, a knockdown or a Grab without rolling."
+  },
+  {
+   "id": "Worldbinder",
+   "name": "Worldbinder",
+   "grade": "B",
+   "line": "Wayfaring",
+   "hit_die": "",
+   "primary": "WIS",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 5,
+    "WIS": 4,
+    "CHA": 1
+   },
+   "signature": "Fold Distance",
+   "evolves_from": [
+    "Wayfinder",
+    "Grand Archivist"
+   ],
+   "evolves_into": [
+    "Realm Cartographer",
+    "Genesis Wright"
+   ],
+   "skills": [
+    "Cartography",
+    "Survival"
+   ],
+   "feature": "Fixed Point",
+   "feature_text": "One region you have Charted can never become unfixed again."
+  },
+  {
+   "id": "Demiforger",
+   "name": "Demiforger",
+   "grade": "A",
+   "line": "Forge",
+   "hit_die": "",
+   "primary": "STR",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 6,
+    "DEX": 0,
+    "CON": 2,
+    "INT": 4,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Demiforge",
+   "evolves_from": [
+    "Legendary Forgemaster",
+    "Skyforge Engineer"
+   ],
+   "evolves_into": [
+    "Worldsmith",
+    "Great Work"
+   ],
+   "skills": [
+    "Crafting",
+    "Appraisal"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Philosopher's Hand",
+   "name": "Philosopher's Hand",
+   "grade": "A",
+   "line": "Life",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 2,
+    "INT": 6,
+    "WIS": 4,
+    "CHA": 0
+   },
+   "signature": "Panacea",
+   "evolves_from": [
+    "Grand Transmuter",
+    "Fleshshaper"
+   ],
+   "evolves_into": [
+    "Great Work"
+   ],
+   "skills": [
+    "Medicine",
+    "Alchemy"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Realm Cartographer",
+   "name": "Realm Cartographer",
+   "grade": "A",
+   "line": "Wayfaring",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 6,
+    "WIS": 4,
+    "CHA": 1
+   },
+   "signature": "Realm Gate",
+   "evolves_from": [
+    "Archipelago Wright",
+    "Worldbinder"
+   ],
+   "evolves_into": [
+    "Axis Mundi"
+   ],
+   "skills": [
+    "Cartography",
+    "Survival"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Archon of Commerce",
+   "name": "Archon of Commerce",
+   "grade": "A",
+   "line": "Commerce",
+   "hit_die": "",
+   "primary": "CHA",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 5,
+    "WIS": 1,
+    "CHA": 6
+   },
+   "signature": "Economic Fiat",
+   "evolves_from": [
+    "Sovereign of Coin",
+    "Keeper of Records"
+   ],
+   "evolves_into": [
+    "Axis Mundi"
+   ],
+   "skills": [
+    "Persuasion",
+    "Society"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Genesis Wright",
+   "name": "Genesis Wright",
+   "grade": "A",
+   "line": "Artifice",
+   "hit_die": "",
+   "primary": "WIS",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 6,
+    "WIS": 5,
+    "CHA": 1
+   },
+   "signature": "Self-Making",
+   "evolves_from": [
+    "Worldbinder",
+    "Skyforge Engineer"
+   ],
+   "evolves_into": [
+    "Worldsmith"
+   ],
+   "skills": [
+    "Crafting",
+    "Investigation"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Worldsmith",
+   "name": "Worldsmith",
+   "grade": "S",
+   "line": "Forge",
+   "hit_die": "",
+   "primary": "STR",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 7,
+    "DEX": 0,
+    "CON": 2,
+    "INT": 5,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "World-Anvil",
+   "evolves_from": [
+    "Demiforger",
+    "Genesis Wright"
+   ],
+   "evolves_into": [],
+   "skills": [
+    "Crafting",
+    "Appraisal"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Great Work",
+   "name": "Great Work",
+   "grade": "S",
+   "line": "Life",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 2,
+    "INT": 7,
+    "WIS": 5,
+    "CHA": 0
+   },
+   "signature": "Genesis",
+   "evolves_from": [
+    "Philosopher's Hand",
+    "Demiforger"
+   ],
+   "evolves_into": [],
+   "skills": [
+    "Medicine",
+    "Alchemy"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Axis Mundi",
+   "name": "Axis Mundi",
+   "grade": "S",
+   "line": "Wayfaring",
+   "hit_die": "",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 7,
+    "WIS": 5,
+    "CHA": 1
+   },
+   "signature": "Axis Point",
+   "evolves_from": [
+    "Realm Cartographer",
+    "Archon of Commerce"
+   ],
+   "evolves_into": [],
+   "skills": [
+    "Cartography",
+    "Survival"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  }
+ ]
+}

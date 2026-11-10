@@ -1,0 +1,4105 @@
+{
+ "source": "Possibilities_TTRPG_System_v1_1.xlsx",
+ "data": [
+  {
+   "id": "Human",
+   "name": "Human",
+   "family": "Founding",
+   "signature_abilities": [
+    "CON",
+    "CHA"
+   ],
+   "skills": [
+    "Persuasion",
+    "Society"
+   ],
+   "trait": "Adaptive: one extra skill trained at every grade.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 11,
+      "DEX": 11,
+      "CON": 11,
+      "INT": 11,
+      "WIS": 11,
+      "CHA": 11
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 11,
+      "DEX": 11,
+      "CON": 12,
+      "INT": 11,
+      "WIS": 11,
+      "CHA": 12
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 11,
+      "DEX": 11,
+      "CON": 13,
+      "INT": 11,
+      "WIS": 11,
+      "CHA": 13
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 11,
+      "DEX": 11,
+      "CON": 14,
+      "INT": 11,
+      "WIS": 11,
+      "CHA": 14
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 11,
+      "DEX": 11,
+      "CON": 15,
+      "INT": 11,
+      "WIS": 11,
+      "CHA": 15
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 11,
+      "DEX": 11,
+      "CON": 16,
+      "INT": 11,
+      "WIS": 11,
+      "CHA": 16
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 11,
+      "DEX": 11,
+      "CON": 17,
+      "INT": 11,
+      "WIS": 11,
+      "CHA": 17
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Elf",
+   "name": "Elf",
+   "family": "Founding",
+   "signature_abilities": [
+    "DEX",
+    "INT"
+   ],
+   "skills": [
+    "Perception",
+    "Arcana"
+   ],
+   "trait": "Keen Senses: advantage vs. sleep and charm; 120 ft. low-light vision.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 12,
+      "CON": 10,
+      "INT": 11,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 13,
+      "CON": 10,
+      "INT": 12,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 10,
+      "INT": 13,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 15,
+      "CON": 10,
+      "INT": 14,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 16,
+      "CON": 10,
+      "INT": 15,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 17,
+      "CON": 10,
+      "INT": 16,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 18,
+      "CON": 10,
+      "INT": 17,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Dwarf",
+   "name": "Dwarf",
+   "family": "Founding",
+   "signature_abilities": [
+    "CON",
+    "STR"
+   ],
+   "skills": [
+    "Crafting",
+    "Appraisal"
+   ],
+   "trait": "Stonecunning: double Craft EL on checks about worked stone and metal.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 11,
+      "DEX": 10,
+      "CON": 12,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 12,
+      "DEX": 10,
+      "CON": 13,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 13,
+      "DEX": 10,
+      "CON": 14,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 14,
+      "DEX": 10,
+      "CON": 15,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 15,
+      "DEX": 10,
+      "CON": 16,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 16,
+      "DEX": 10,
+      "CON": 17,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 17,
+      "DEX": 10,
+      "CON": 18,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Halfling",
+   "name": "Halfling",
+   "family": "Founding",
+   "signature_abilities": [
+    "DEX",
+    "CHA"
+   ],
+   "skills": [
+    "Stealth",
+    "Acrobatics"
+   ],
+   "trait": "Lucky: reroll a natural 1 once per rank per day.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 12,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 11
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 13,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 12
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 13
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 15,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 14
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 16,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 15
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 17,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 16
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 18,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 17
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Gnome",
+   "name": "Gnome",
+   "family": "Founding",
+   "signature_abilities": [
+    "INT",
+    "CON"
+   ],
+   "skills": [
+    "Alchemy",
+    "Investigation"
+   ],
+   "trait": "Gnome Cunning: advantage on INT/WIS/CHA saves vs. magic.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 11,
+      "INT": 12,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 12,
+      "INT": 13,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 13,
+      "INT": 14,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 14,
+      "INT": 15,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 15,
+      "INT": 16,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 16,
+      "INT": 17,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 17,
+      "INT": 18,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Half-Orc",
+   "name": "Half-Orc",
+   "family": "Founding",
+   "signature_abilities": [
+    "STR",
+    "CON"
+   ],
+   "skills": [
+    "Intimidation",
+    "Endurance"
+   ],
+   "trait": "Relentless: drop to 1 HP instead of 0 once per grade per day.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 12,
+      "DEX": 10,
+      "CON": 11,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 13,
+      "DEX": 10,
+      "CON": 12,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 14,
+      "DEX": 10,
+      "CON": 13,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 15,
+      "DEX": 10,
+      "CON": 14,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 16,
+      "DEX": 10,
+      "CON": 15,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 17,
+      "DEX": 10,
+      "CON": 16,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 18,
+      "DEX": 10,
+      "CON": 17,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Tiefling",
+   "name": "Tiefling",
+   "family": "Founding",
+   "signature_abilities": [
+    "CHA",
+    "INT"
+   ],
+   "skills": [
+    "Deception",
+    "Arcana"
+   ],
+   "trait": "Infernal Legacy: fire resistance; one innate spell per grade.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 11,
+      "WIS": 10,
+      "CHA": 12
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 12,
+      "WIS": 10,
+      "CHA": 13
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 13,
+      "WIS": 10,
+      "CHA": 14
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 14,
+      "WIS": 10,
+      "CHA": 15
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 15,
+      "WIS": 10,
+      "CHA": 16
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 16,
+      "WIS": 10,
+      "CHA": 17
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 17,
+      "WIS": 10,
+      "CHA": 18
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Dragonborn",
+   "name": "Dragonborn",
+   "family": "Founding",
+   "signature_abilities": [
+    "STR",
+    "CHA"
+   ],
+   "skills": [
+    "Intimidation",
+    "Athletics"
+   ],
+   "trait": "Breath Weapon: 1d6 per grade index +1, damage scales with RGM.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 12,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 11
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 13,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 12
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 14,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 13
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 15,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 14
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 16,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 15
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 17,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 16
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 18,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 17
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Goblin",
+   "name": "Goblin",
+   "family": "Founding",
+   "signature_abilities": [
+    "DEX",
+    "CHA"
+   ],
+   "skills": [
+    "Stealth",
+    "Survival"
+   ],
+   "trait": "Darkvision; Nimble Escape: disengage as a bonus action.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 12,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 11
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 13,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 12
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 13
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 15,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 14
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 16,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 15
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 17,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 16
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 18,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 17
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Kobold",
+   "name": "Kobold",
+   "family": "Founding",
+   "signature_abilities": [
+    "DEX",
+    "INT"
+   ],
+   "skills": [
+    "Crafting",
+    "Stealth"
+   ],
+   "trait": "Pack Tactics: advantage when an ally is adjacent to the target.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 12,
+      "CON": 10,
+      "INT": 11,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 13,
+      "CON": 10,
+      "INT": 12,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 10,
+      "INT": 13,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 15,
+      "CON": 10,
+      "INT": 14,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 16,
+      "CON": 10,
+      "INT": 15,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 17,
+      "CON": 10,
+      "INT": 16,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 18,
+      "CON": 10,
+      "INT": 17,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Catfolk",
+   "name": "Catfolk",
+   "family": "Founding",
+   "signature_abilities": [
+    "DEX",
+    "WIS"
+   ],
+   "skills": [
+    "Acrobatics",
+    "Perception"
+   ],
+   "trait": "Cat's Luck: reroll a failed DEX save once per rank per day.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 12,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 11
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 13,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 11,
+      "CHA": 11
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 12,
+      "CHA": 11
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 15,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 13,
+      "CHA": 11
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 16,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 14,
+      "CHA": 11
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 17,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 15,
+      "CHA": 11
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 18,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 16,
+      "CHA": 11
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Tengu",
+   "name": "Tengu",
+   "family": "Founding",
+   "signature_abilities": [
+    "WIS",
+    "DEX"
+   ],
+   "skills": [
+    "Perception",
+    "Society"
+   ],
+   "trait": "Storm Sense: read weather and omens; glide at any grade above F.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 11,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 12,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 12,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 13,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 13,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 14,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 15,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 15,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 16,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 16,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 17,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 17,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 18,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Merrow",
+   "name": "Merrow",
+   "family": "Founding",
+   "signature_abilities": [
+    "CON",
+    "WIS"
+   ],
+   "skills": [
+    "Survival",
+    "Athletics"
+   ],
+   "trait": "Amphibious: breathe water, swim at full Speed, and take no penalty in the Sunken Mile's lower levels.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 12,
+      "INT": 10,
+      "WIS": 11,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 13,
+      "INT": 10,
+      "WIS": 12,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 14,
+      "INT": 10,
+      "WIS": 13,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 15,
+      "INT": 10,
+      "WIS": 14,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 16,
+      "INT": 10,
+      "WIS": 15,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 17,
+      "INT": 10,
+      "WIS": 16,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 18,
+      "INT": 10,
+      "WIS": 17,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Selkie",
+   "name": "Selkie",
+   "family": "Founding",
+   "signature_abilities": [
+    "DEX",
+    "CON"
+   ],
+   "skills": [
+    "Acrobatics",
+    "Deception"
+   ],
+   "trait": "Second Skin: shift to a seal form as one action. Losing the skin is a genuine catastrophe.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 12,
+      "CON": 11,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 13,
+      "CON": 12,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 13,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 15,
+      "CON": 14,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 16,
+      "CON": 15,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 17,
+      "CON": 16,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 18,
+      "CON": 17,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Clockborn",
+   "name": "Clockborn",
+   "family": "Founding",
+   "signature_abilities": [
+    "INT",
+    "CON"
+   ],
+   "skills": [
+    "Crafting",
+    "Alchemy"
+   ],
+   "trait": "Charge-Driven: you do not eat, drink or breathe, but you spend one point of attunement per day of activity.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 11,
+      "INT": 12,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 12,
+      "INT": 13,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 13,
+      "INT": 14,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 14,
+      "INT": 15,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 15,
+      "INT": 16,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 16,
+      "INT": 17,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 17,
+      "INT": 18,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Ashkin",
+   "name": "Ashkin",
+   "family": "Founding",
+   "signature_abilities": [
+    "STR",
+    "CON"
+   ],
+   "skills": [
+    "Endurance",
+    "Crafting"
+   ],
+   "trait": "Cinder-Born: fire resistance, and you ignore heat-based ambient damage one grade above your own.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 12,
+      "DEX": 10,
+      "CON": 11,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 13,
+      "DEX": 10,
+      "CON": 12,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 14,
+      "DEX": 10,
+      "CON": 13,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 15,
+      "DEX": 10,
+      "CON": 14,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 16,
+      "DEX": 10,
+      "CON": 15,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 17,
+      "DEX": 10,
+      "CON": 16,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 18,
+      "DEX": 10,
+      "CON": 17,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Stormborn",
+   "name": "Stormborn",
+   "family": "Founding",
+   "signature_abilities": [
+    "CHA",
+    "DEX"
+   ],
+   "skills": [
+    "Perception",
+    "Persuasion"
+   ],
+   "trait": "Conceived in heavy brume and never entirely fixed. Once per rank per day, reroll any one d20.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 11,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 12
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 12,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 13
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 13,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 14
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 15
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 15,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 16
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 16,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 17
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 17,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 18
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Aeryn",
+   "name": "Aeryn",
+   "family": "Founding",
+   "signature_abilities": [
+    "DEX",
+    "WIS"
+   ],
+   "skills": [
+    "Acrobatics",
+    "Perception"
+   ],
+   "trait": "Cliff-Born: glide at any grade, and gain true flight at C-grade. Cannot wear heavy armour.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 12,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 11,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 13,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 12,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 13,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 15,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 14,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 16,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 15,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 17,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 16,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 18,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 17,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Deepkin",
+   "name": "Deepkin",
+   "family": "Founding",
+   "signature_abilities": [
+    "CON",
+    "INT"
+   ],
+   "skills": [
+    "Endurance",
+    "History"
+   ],
+   "trait": "Pressure-Bred: immune to crushing depth and darkness. Bright daylight leaves you Off-Guard.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 12,
+      "INT": 11,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 13,
+      "INT": 12,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 14,
+      "INT": 13,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 15,
+      "INT": 14,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 16,
+      "INT": 15,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 17,
+      "INT": 16,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 18,
+      "INT": 17,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Sirenkin",
+   "name": "Sirenkin",
+   "family": "Founding",
+   "signature_abilities": [
+    "CHA",
+    "WIS"
+   ],
+   "skills": [
+    "Performance",
+    "Insight"
+   ],
+   "trait": "Carrying Voice: your voice reaches the Far zone unimpeded, and Demoralize costs you no action once per encounter.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 11,
+      "CHA": 12
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 12,
+      "CHA": 13
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 13,
+      "CHA": 14
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 14,
+      "CHA": 15
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 15,
+      "CHA": 16
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 16,
+      "CHA": 17
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 17,
+      "CHA": 18
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Ursine",
+   "name": "Ursine",
+   "family": "Beastkin",
+   "signature_abilities": [
+    "STR",
+    "CON"
+   ],
+   "skills": [
+    "Athletics",
+    "Survival"
+   ],
+   "trait": "Bear-kin. Winter Fat: ignore the first Fatigued condition each day, and cold ambient damage is halved.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 12,
+      "DEX": 10,
+      "CON": 11,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 13,
+      "DEX": 10,
+      "CON": 12,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 14,
+      "DEX": 10,
+      "CON": 13,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 15,
+      "DEX": 10,
+      "CON": 14,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 16,
+      "DEX": 10,
+      "CON": 15,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 17,
+      "DEX": 10,
+      "CON": 16,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 18,
+      "DEX": 10,
+      "CON": 17,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Lupine",
+   "name": "Lupine",
+   "family": "Beastkin",
+   "signature_abilities": [
+    "DEX",
+    "WIS"
+   ],
+   "skills": [
+    "Survival",
+    "Perception"
+   ],
+   "trait": "Wolf-kin. Pack Sense: while an ally is in your zone, both of you gain +1 to attack and to Aid.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 12,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 11,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 13,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 12,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 13,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 15,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 14,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 16,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 15,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 17,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 16,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 18,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 17,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Corvine",
+   "name": "Corvine",
+   "family": "Beastkin",
+   "signature_abilities": [
+    "INT",
+    "DEX"
+   ],
+   "skills": [
+    "Investigation",
+    "Skulduggery"
+   ],
+   "trait": "Crow-kin. Mimicry and Memory: reproduce any voice you have heard, and recall any place you have seen once.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 11,
+      "CON": 10,
+      "INT": 12,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 12,
+      "CON": 10,
+      "INT": 13,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 13,
+      "CON": 10,
+      "INT": 14,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 10,
+      "INT": 15,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 15,
+      "CON": 10,
+      "INT": 16,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 16,
+      "CON": 10,
+      "INT": 17,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 17,
+      "CON": 10,
+      "INT": 18,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Cervine",
+   "name": "Cervine",
+   "family": "Beastkin",
+   "signature_abilities": [
+    "WIS",
+    "DEX"
+   ],
+   "skills": [
+    "Perception",
+    "Acrobatics"
+   ],
+   "trait": "Deer-kin. Bounding Step: your first Stride each turn crosses two zones instead of one.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 11,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 12,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 12,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 13,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 13,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 14,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 15,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 15,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 16,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 16,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 17,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 17,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 18,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Vulpine",
+   "name": "Vulpine",
+   "family": "Beastkin",
+   "signature_abilities": [
+    "CHA",
+    "DEX"
+   ],
+   "skills": [
+    "Deception",
+    "Society"
+   ],
+   "trait": "Fox-kin. Second Story: once per Scene, reroll a failed Deception or Persuasion check.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 11,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 12
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 12,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 13
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 13,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 14
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 15
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 15,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 16
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 16,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 17
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 17,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 18
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Serpentine",
+   "name": "Serpentine",
+   "family": "Beastkin",
+   "signature_abilities": [
+    "DEX",
+    "CON"
+   ],
+   "skills": [
+    "Stealth",
+    "Endurance"
+   ],
+   "trait": "Snake-kin. Venom: once per encounter a Strike that hits also inflicts Persistent Damage equal to your Combat EL.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 12,
+      "CON": 11,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 13,
+      "CON": 12,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 13,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 15,
+      "CON": 14,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 16,
+      "CON": 15,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 17,
+      "CON": 16,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 18,
+      "CON": 17,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Testudine",
+   "name": "Testudine",
+   "family": "Beastkin",
+   "signature_abilities": [
+    "CON",
+    "WIS"
+   ],
+   "skills": [
+    "Endurance",
+    "Crafting"
+   ],
+   "trait": "Tortoise-kin. Shell: +1 AC permanently, and Raise Guard is free once per encounter. Base Speed 20 ft, not 30.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 12,
+      "INT": 10,
+      "WIS": 11,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 13,
+      "INT": 10,
+      "WIS": 12,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 14,
+      "INT": 10,
+      "WIS": 13,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 15,
+      "INT": 10,
+      "WIS": 14,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 16,
+      "INT": 10,
+      "WIS": 15,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 17,
+      "INT": 10,
+      "WIS": 16,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 18,
+      "INT": 10,
+      "WIS": 17,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Simian",
+   "name": "Simian",
+   "family": "Beastkin",
+   "signature_abilities": [
+    "STR",
+    "DEX"
+   ],
+   "skills": [
+    "Athletics",
+    "Acrobatics"
+   ],
+   "trait": "Ape-kin. Four Hands: climb at full Speed, and you never drop a held item on a critical failure.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 12,
+      "DEX": 11,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 13,
+      "DEX": 12,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 14,
+      "DEX": 13,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 15,
+      "DEX": 14,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 16,
+      "DEX": 15,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 17,
+      "DEX": 16,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 18,
+      "DEX": 17,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Sylph",
+   "name": "Sylph",
+   "family": "Fae",
+   "signature_abilities": [
+    "DEX",
+    "CHA"
+   ],
+   "skills": [
+    "Acrobatics",
+    "Performance"
+   ],
+   "trait": "Air-fae. Weightless: glide at any grade, fall damage never applies, and you may Step through an occupied zone. You cannot wear medium or heavy armour.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 12,
+      "CON": 9,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 12
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 13,
+      "CON": 9,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 13
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 9,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 14
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 15,
+      "CON": 9,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 15
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 16,
+      "CON": 9,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 16
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 17,
+      "CON": 9,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 17
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 18,
+      "CON": 9,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 18
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Nixie",
+   "name": "Nixie",
+   "family": "Fae",
+   "signature_abilities": [
+    "INT",
+    "CHA"
+   ],
+   "skills": [
+    "Arcana",
+    "Persuasion"
+   ],
+   "trait": "Water-fae. Drowning Voice: once per Scene one creature in Near saves or is Frightened 2 and cannot approach the water's edge.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 12,
+      "WIS": 10,
+      "CHA": 12
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 13,
+      "WIS": 10,
+      "CHA": 13
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 14,
+      "WIS": 10,
+      "CHA": 14
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 15,
+      "WIS": 10,
+      "CHA": 15
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 16,
+      "WIS": 10,
+      "CHA": 16
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 17,
+      "WIS": 10,
+      "CHA": 17
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 18,
+      "WIS": 10,
+      "CHA": 18
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Thornborn",
+   "name": "Thornborn",
+   "family": "Fae",
+   "signature_abilities": [
+    "WIS",
+    "CON"
+   ],
+   "skills": [
+    "Nature",
+    "Medicine"
+   ],
+   "trait": "Briar-fae. Regrowth: a short rest recovers one additional hit die, and Wounded clears one step.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 11,
+      "INT": 10,
+      "WIS": 13,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 12,
+      "INT": 10,
+      "WIS": 14,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 13,
+      "INT": 10,
+      "WIS": 15,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 14,
+      "INT": 10,
+      "WIS": 16,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 15,
+      "INT": 10,
+      "WIS": 17,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 16,
+      "INT": 10,
+      "WIS": 18,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 17,
+      "INT": 10,
+      "WIS": 19,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Glimmer",
+   "name": "Glimmer",
+   "family": "Fae",
+   "signature_abilities": [
+    "CHA",
+    "INT"
+   ],
+   "skills": [
+    "Performance",
+    "Society"
+   ],
+   "trait": "Light-fae. Unbearable to Look Away From: enemies attacking you take -1, and you have advantage on any check to be believed. You cannot Hide while unobscured.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 9,
+      "INT": 11,
+      "WIS": 10,
+      "CHA": 13
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 9,
+      "INT": 12,
+      "WIS": 10,
+      "CHA": 14
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 9,
+      "INT": 13,
+      "WIS": 10,
+      "CHA": 15
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 9,
+      "INT": 14,
+      "WIS": 10,
+      "CHA": 16
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 9,
+      "INT": 15,
+      "WIS": 10,
+      "CHA": 17
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 9,
+      "INT": 16,
+      "WIS": 10,
+      "CHA": 18
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 9,
+      "INT": 17,
+      "WIS": 10,
+      "CHA": 19
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Hollow",
+   "name": "Hollow",
+   "family": "Fae",
+   "signature_abilities": [
+    "INT",
+    "DEX"
+   ],
+   "skills": [
+    "Insight",
+    "Investigation"
+   ],
+   "trait": "Twilight-fae. Reads the Shape of Intent: once per Scene, ask what a creature most wants. It answers honestly. People find your company difficult to sit with.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 9,
+      "DEX": 11,
+      "CON": 10,
+      "INT": 13,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 9,
+      "DEX": 12,
+      "CON": 10,
+      "INT": 14,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 9,
+      "DEX": 13,
+      "CON": 10,
+      "INT": 15,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 9,
+      "DEX": 14,
+      "CON": 10,
+      "INT": 16,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 9,
+      "DEX": 15,
+      "CON": 10,
+      "INT": 17,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 9,
+      "DEX": 16,
+      "CON": 10,
+      "INT": 18,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 9,
+      "DEX": 17,
+      "CON": 10,
+      "INT": 19,
+      "WIS": 10,
+      "CHA": 10
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Duskling",
+   "name": "Duskling",
+   "family": "Fae",
+   "signature_abilities": [
+    "WIS",
+    "CHA"
+   ],
+   "skills": [
+    "Insight",
+    "Deception"
+   ],
+   "trait": "Evening-fae. Half-Remembered: those who meet you briefly cannot describe you afterwards. Pursuit checks against you are made at -4.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 12,
+      "CHA": 12
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 13,
+      "CHA": 13
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 14,
+      "CHA": 14
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 15,
+      "CHA": 15
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 16,
+      "CHA": 16
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 17,
+      "CHA": 17
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 9,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 18,
+      "CHA": 18
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Ogrekin",
+   "name": "Ogrekin",
+   "family": "Monsterkin",
+   "signature_abilities": [
+    "STR",
+    "CON"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "trait": "Enormous, and slandered for it. Heavy Frame: your damage die counts one size larger and you carry double. Most ports demand a surety before they let you ashore.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 13,
+      "DEX": 10,
+      "CON": 12,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 14,
+      "DEX": 10,
+      "CON": 13,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 15,
+      "DEX": 10,
+      "CON": 14,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 16,
+      "DEX": 10,
+      "CON": 15,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 17,
+      "DEX": 10,
+      "CON": 16,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 18,
+      "DEX": 10,
+      "CON": 17,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 19,
+      "DEX": 10,
+      "CON": 18,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Trollblood",
+   "name": "Trollblood",
+   "family": "Monsterkin",
+   "signature_abilities": [
+    "CON",
+    "STR"
+   ],
+   "skills": [
+    "Endurance",
+    "Survival"
+   ],
+   "trait": "Regeneration: recover your grade index in hit points at the start of each turn while above 0. Fire and acid suppress it until you rest. You are refused lodging almost everywhere.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 12,
+      "DEX": 10,
+      "CON": 13,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 13,
+      "DEX": 10,
+      "CON": 14,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 14,
+      "DEX": 10,
+      "CON": 15,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 15,
+      "DEX": 10,
+      "CON": 16,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 16,
+      "DEX": 10,
+      "CON": 17,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 17,
+      "DEX": 10,
+      "CON": 18,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 18,
+      "DEX": 10,
+      "CON": 19,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Chitin",
+   "name": "Chitin",
+   "family": "Monsterkin",
+   "signature_abilities": [
+    "DEX",
+    "CON"
+   ],
+   "skills": [
+    "Stealth",
+    "Crafting"
+   ],
+   "trait": "Insectile. Carapace: +1 AC, immune to bleeding Persistent Damage, and you scale sheer walls. People find you upsetting to sit beside, and say so.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 13,
+      "CON": 12,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 13,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 15,
+      "CON": 14,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 16,
+      "CON": 15,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 17,
+      "CON": 16,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 18,
+      "CON": 17,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 19,
+      "CON": 18,
+      "INT": 10,
+      "WIS": 10,
+      "CHA": 8
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Harrowed",
+   "name": "Harrowed",
+   "family": "Monsterkin",
+   "signature_abilities": [
+    "CON",
+    "WIS"
+   ],
+   "skills": [
+    "Endurance",
+    "Religion"
+   ],
+   "trait": "Died once and came back wrong. You do not breathe, and your Dying track always starts at 1 regardless of Wounded. The Communion is formally undecided about you.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 13,
+      "INT": 10,
+      "WIS": 11,
+      "CHA": 9
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 14,
+      "INT": 10,
+      "WIS": 12,
+      "CHA": 9
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 15,
+      "INT": 10,
+      "WIS": 13,
+      "CHA": 9
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 16,
+      "INT": 10,
+      "WIS": 14,
+      "CHA": 9
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 17,
+      "INT": 10,
+      "WIS": 15,
+      "CHA": 9
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 18,
+      "INT": 10,
+      "WIS": 16,
+      "CHA": 9
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 10,
+      "DEX": 10,
+      "CON": 19,
+      "INT": 10,
+      "WIS": 17,
+      "CHA": 9
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Gorgonkin",
+   "name": "Gorgonkin",
+   "family": "Monsterkin",
+   "signature_abilities": [
+    "STR",
+    "WIS"
+   ],
+   "skills": [
+    "Intimidation",
+    "Perception"
+   ],
+   "trait": "Serpent-crowned. Stilling Gaze: once per Scene one creature in Near saves or is Immobilized until the end of its next turn. Nobody meets your eyes willingly.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 12,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 12,
+      "CHA": 9
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 13,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 13,
+      "CHA": 9
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 14,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 14,
+      "CHA": 9
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 15,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 15,
+      "CHA": 9
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 16,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 16,
+      "CHA": 9
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 17,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 17,
+      "CHA": 9
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 18,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 18,
+      "CHA": 9
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Wyrmscale",
+   "name": "Wyrmscale",
+   "family": "Monsterkin",
+   "signature_abilities": [
+    "STR",
+    "CHA"
+   ],
+   "skills": [
+    "Intimidation",
+    "Athletics"
+   ],
+   "trait": "Drake-blooded, and feared rather than despised. Breath: once per encounter deal your Combat EL in damage to every creature in Near, Reflex for half. No guild will formally employ you.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 12,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 9,
+      "WIS": 10,
+      "CHA": 12
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 13,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 9,
+      "WIS": 10,
+      "CHA": 13
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 14,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 9,
+      "WIS": 10,
+      "CHA": 14
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 15,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 9,
+      "WIS": 10,
+      "CHA": 15
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 16,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 9,
+      "WIS": 10,
+      "CHA": 16
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 17,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 9,
+      "WIS": 10,
+      "CHA": 17
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 18,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 9,
+      "WIS": 10,
+      "CHA": 18
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  },
+  {
+   "id": "Wendlin",
+   "name": "Wendlin",
+   "family": "Fae",
+   "signature_abilities": [
+    "STR",
+    "CHA"
+   ],
+   "skills": [
+    "Survival",
+    "Performance"
+   ],
+   "trait": "Road-fae. Long-Legged: your Speed is 40 instead of 30, rough ground is never difficult terrain to you, and you may Leap as part of a Stride without spending an action. Once per Scene, when you Stride into a creature's zone, it saves or is pushed one zone and knocked prone. Your hooves ring — you cannot Hide on stone, deck, or any hard surface.",
+   "grades": {
+    "F": {
+     "rgm": 1,
+     "abilities": {
+      "STR": 12,
+      "DEX": 10,
+      "CON": 9,
+      "INT": 9,
+      "WIS": 11,
+      "CHA": 12
+     },
+     "gate": "Starting grade."
+    },
+    "E": {
+     "rgm": 1.3,
+     "abilities": {
+      "STR": 13,
+      "DEX": 10,
+      "CON": 9,
+      "INT": 9,
+      "WIS": 11,
+      "CHA": 13
+     },
+     "gate": "Class AND Profession both at F-Master."
+    },
+    "D": {
+     "rgm": 1.7,
+     "abilities": {
+      "STR": 14,
+      "DEX": 10,
+      "CON": 9,
+      "INT": 9,
+      "WIS": 11,
+      "CHA": 14
+     },
+     "gate": "Class AND Profession both at E-Master."
+    },
+    "C": {
+     "rgm": 2.2,
+     "abilities": {
+      "STR": 15,
+      "DEX": 10,
+      "CON": 9,
+      "INT": 9,
+      "WIS": 11,
+      "CHA": 15
+     },
+     "gate": "Class AND Profession both at D-Master."
+    },
+    "B": {
+     "rgm": 2.8,
+     "abilities": {
+      "STR": 16,
+      "DEX": 10,
+      "CON": 9,
+      "INT": 9,
+      "WIS": 11,
+      "CHA": 16
+     },
+     "gate": "Class AND Profession both at C-Master."
+    },
+    "A": {
+     "rgm": 3.5,
+     "abilities": {
+      "STR": 17,
+      "DEX": 10,
+      "CON": 9,
+      "INT": 9,
+      "WIS": 11,
+      "CHA": 17
+     },
+     "gate": "Class AND Profession both at B-Master."
+    },
+    "S": {
+     "rgm": 4.5,
+     "abilities": {
+      "STR": 18,
+      "DEX": 10,
+      "CON": 9,
+      "INT": 9,
+      "WIS": 11,
+      "CHA": 18
+     },
+     "gate": "Class AND Profession both at A-Master."
+    }
+   }
+  }
+ ]
+}

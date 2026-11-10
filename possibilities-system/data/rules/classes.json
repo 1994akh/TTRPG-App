@@ -1,0 +1,2866 @@
+{
+ "source": "Possibilities_TTRPG_System_v1_1.xlsx",
+ "data": [
+  {
+   "id": "Reaver",
+   "name": "Reaver",
+   "grade": "F",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "STR",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 2,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Boarding Strike",
+   "evolves_from": [],
+   "evolves_into": [
+    "Boarder",
+    "Stormbound"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Momentum",
+   "feature_text": "If you moved before Striking this turn, your first Strike gains one extra weapon die."
+  },
+  {
+   "id": "Firebrand",
+   "name": "Firebrand",
+   "grade": "F",
+   "line": "Fathomless",
+   "hit_die": "d8",
+   "primary": "CHA",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 0,
+    "DEX": 1,
+    "CON": 0,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 2
+   },
+   "signature": "Fathom Whisper",
+   "evolves_from": [],
+   "evolves_into": [
+    "Fathom Reader",
+    "Shantyman"
+   ],
+   "skills": [
+    "Deception",
+    "Performance"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "Chaplain",
+   "name": "Chaplain",
+   "grade": "F",
+   "line": "Divine",
+   "hit_die": "d10",
+   "primary": "WIS",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 2,
+    "CHA": 0
+   },
+   "signature": "Channel Faith",
+   "evolves_from": [],
+   "evolves_into": [
+    "Wright",
+    "Zealot"
+   ],
+   "skills": [
+    "Religion",
+    "Insight"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Tidecaller",
+   "name": "Tidecaller",
+   "grade": "F",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "WIS",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 2,
+    "CHA": 0
+   },
+   "signature": "Sea Sense",
+   "evolves_from": [],
+   "evolves_into": [
+    "Stormbound",
+    "Deepwarden",
+    "Brume Speaker"
+   ],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Vanguard",
+   "name": "Vanguard",
+   "grade": "F",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "STR",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 2,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Boarding Strike",
+   "evolves_from": [],
+   "evolves_into": [
+    "Boarder",
+    "Cors",
+    "Ironside"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Hold the Line",
+   "feature_text": "Enemies that begin their turn Engaged with you take -1 to leave your zone."
+  },
+  {
+   "id": "Duelist",
+   "name": "Duelist",
+   "grade": "F",
+   "line": "Undertow",
+   "hit_die": "d8",
+   "primary": "DEX",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 2,
+    "CON": 0,
+    "INT": 0,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Knife in the Dark",
+   "evolves_from": [],
+   "evolves_into": [
+    "Cors",
+    "Stillhand",
+    "Nightrunner"
+   ],
+   "skills": [
+    "Stealth",
+    "Skulduggery"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Oathkeeper",
+   "name": "Oathkeeper",
+   "grade": "F",
+   "line": "Divine",
+   "hit_die": "d10",
+   "primary": "STR",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 2,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 1
+   },
+   "signature": "Channel Faith",
+   "evolves_from": [],
+   "evolves_into": [
+    "Ironside",
+    "Zealot",
+    "Icon Bearer"
+   ],
+   "skills": [
+    "Religion",
+    "Insight"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Beastbound",
+   "name": "Beastbound",
+   "grade": "F",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "DEX",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 2,
+    "CON": 0,
+    "INT": 0,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Sea Sense",
+   "evolves_from": [],
+   "evolves_into": [
+    "Topman",
+    "Brume Speaker",
+    "Harpooner"
+   ],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Shade",
+   "name": "Shade",
+   "grade": "F",
+   "line": "Undertow",
+   "hit_die": "d8",
+   "primary": "DEX",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 2,
+    "CON": 0,
+    "INT": 1,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Knife in the Dark",
+   "evolves_from": [],
+   "evolves_into": [
+    "Cutthroat",
+    "Topman",
+    "Nightrunner"
+   ],
+   "skills": [
+    "Stealth",
+    "Skulduggery"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Bloodcharged",
+   "name": "Bloodcharged",
+   "grade": "F",
+   "line": "Artifice",
+   "hit_die": "d6",
+   "primary": "CHA",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 2
+   },
+   "signature": "Charge Tap",
+   "evolves_from": [],
+   "evolves_into": [
+    "Furnace Adept",
+    "Overcharged"
+   ],
+   "skills": [
+    "Arcana",
+    "Investigation"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Medium",
+   "name": "Medium",
+   "grade": "F",
+   "line": "Fathomless",
+   "hit_die": "d8",
+   "primary": "CHA",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 2
+   },
+   "signature": "Fathom Whisper",
+   "evolves_from": [],
+   "evolves_into": [
+    "Overcharged",
+    "Fathom Reader"
+   ],
+   "skills": [
+    "Deception",
+    "Performance"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Theorist",
+   "name": "Theorist",
+   "grade": "F",
+   "line": "Artifice",
+   "hit_die": "d6",
+   "primary": "INT",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 0,
+    "DEX": 1,
+    "CON": 0,
+    "INT": 2,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Charge Tap",
+   "evolves_from": [],
+   "evolves_into": [
+    "Charge Adept",
+    "Furnace Adept"
+   ],
+   "skills": [
+    "Arcana",
+    "Investigation"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "Boarder",
+   "name": "Boarder",
+   "grade": "E",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "STR",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 4,
+    "DEX": 0,
+    "CON": 2,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Cleaving Blow",
+   "evolves_from": [
+    "Reaver",
+    "Vanguard"
+   ],
+   "evolves_into": [
+    "Breaker",
+    "Powdermad"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Stormbound",
+   "name": "Stormbound",
+   "grade": "E",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "CON",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 2,
+    "DEX": 0,
+    "CON": 3,
+    "INT": 0,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Beast Bond",
+   "evolves_from": [
+    "Reaver",
+    "Tidecaller"
+   ],
+   "evolves_into": [
+    "Wavebound",
+    "Leviathan-Marked"
+   ],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "Weatherwise",
+   "feature_text": "You always know what the next watch's weather will do, and the party's Endurance saves against it gain +1."
+  },
+  {
+   "id": "Cors",
+   "name": "Cors",
+   "grade": "E",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "STR",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 4,
+    "DEX": 1,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Cleaving Blow",
+   "evolves_from": [
+    "Vanguard",
+    "Duelist"
+   ],
+   "evolves_into": [
+    "Blademaster",
+    "Captain",
+    "Stillwater Adept"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "Ironside",
+   "name": "Ironside",
+   "grade": "E",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "CON",
+   "secondary": "STR",
+   "abilities": {
+    "STR": 3,
+    "DEX": 0,
+    "CON": 3,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Cleaving Blow",
+   "evolves_from": [
+    "Vanguard",
+    "Oathkeeper"
+   ],
+   "evolves_into": [
+    "Captain",
+    "Bulwark"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Set Your Weight",
+   "feature_text": "Once per Scene, ignore a forced move, a knockdown or a Grab without rolling."
+  },
+  {
+   "id": "Cutthroat",
+   "name": "Cutthroat",
+   "grade": "E",
+   "line": "Undertow",
+   "hit_die": "d8",
+   "primary": "DEX",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 0,
+    "DEX": 4,
+    "CON": 0,
+    "INT": 1,
+    "WIS": 0,
+    "CHA": 1
+   },
+   "signature": "Silent Step",
+   "evolves_from": [
+    "Shade"
+   ],
+   "evolves_into": [
+    "Blademaster",
+    "Assassin"
+   ],
+   "skills": [
+    "Stealth",
+    "Skulduggery"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Topman",
+   "name": "Topman",
+   "grade": "E",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "DEX",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 4,
+    "CON": 0,
+    "INT": 1,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Beast Bond",
+   "evolves_from": [
+    "Shade",
+    "Beastbound"
+   ],
+   "evolves_into": [
+    "Trailbreaker"
+   ],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "Aloft",
+   "feature_text": "You climb at full Speed and never fall from rigging, a mast or a cliff you were holding."
+  },
+  {
+   "id": "Stillhand",
+   "name": "Stillhand",
+   "grade": "E",
+   "line": "Undertow",
+   "hit_die": "d8",
+   "primary": "WIS",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 0,
+    "DEX": 3,
+    "CON": 0,
+    "INT": 0,
+    "WIS": 3,
+    "CHA": 0
+   },
+   "signature": "Silent Step",
+   "evolves_from": [
+    "Duelist"
+   ],
+   "evolves_into": [
+    "Stillwater Adept",
+    "Brumewalker"
+   ],
+   "skills": [
+    "Stealth",
+    "Skulduggery"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "Nightrunner",
+   "name": "Nightrunner",
+   "grade": "E",
+   "line": "Undertow",
+   "hit_die": "d8",
+   "primary": "DEX",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 4,
+    "CON": 0,
+    "INT": 1,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Silent Step",
+   "evolves_from": [
+    "Duelist",
+    "Shade"
+   ],
+   "evolves_into": [
+    "Assassin",
+    "Brumewalker"
+   ],
+   "skills": [
+    "Stealth",
+    "Skulduggery"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Wright",
+   "name": "Wright",
+   "grade": "E",
+   "line": "Divine",
+   "hit_die": "d10",
+   "primary": "WIS",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 4,
+    "CHA": 1
+   },
+   "signature": "Sacred Rite",
+   "evolves_from": [
+    "Chaplain"
+   ],
+   "evolves_into": [
+    "Hierophant",
+    "Inquisitor"
+   ],
+   "skills": [
+    "Religion",
+    "Insight"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Zealot",
+   "name": "Zealot",
+   "grade": "E",
+   "line": "Divine",
+   "hit_die": "d10",
+   "primary": "STR",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 2,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 3,
+    "CHA": 0
+   },
+   "signature": "Sacred Rite",
+   "evolves_from": [
+    "Chaplain",
+    "Oathkeeper"
+   ],
+   "evolves_into": [
+    "Inquisitor",
+    "Templar"
+   ],
+   "skills": [
+    "Religion",
+    "Insight"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Icon Bearer",
+   "name": "Icon Bearer",
+   "grade": "E",
+   "line": "Divine",
+   "hit_die": "d10",
+   "primary": "CHA",
+   "secondary": "STR",
+   "abilities": {
+    "STR": 3,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 3
+   },
+   "signature": "Sacred Rite",
+   "evolves_from": [
+    "Oathkeeper"
+   ],
+   "evolves_into": [
+    "Bulwark",
+    "Templar"
+   ],
+   "skills": [
+    "Religion",
+    "Insight"
+   ],
+   "feature": "Set Your Weight",
+   "feature_text": "Once per Scene, ignore a forced move, a knockdown or a Grab without rolling."
+  },
+  {
+   "id": "Deepwarden",
+   "name": "Deepwarden",
+   "grade": "E",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "WIS",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 2,
+    "INT": 0,
+    "WIS": 4,
+    "CHA": 0
+   },
+   "signature": "Beast Bond",
+   "evolves_from": [
+    "Tidecaller"
+   ],
+   "evolves_into": [
+    "Leviathan-Marked",
+    "Beastmaster"
+   ],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Brume Speaker",
+   "name": "Brume Speaker",
+   "grade": "E",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "WIS",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 1,
+    "WIS": 4,
+    "CHA": 0
+   },
+   "signature": "Beast Bond",
+   "evolves_from": [
+    "Tidecaller",
+    "Beastbound"
+   ],
+   "evolves_into": [
+    "Wavebound",
+    "Stormcaller"
+   ],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Harpooner",
+   "name": "Harpooner",
+   "grade": "E",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "DEX",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 4,
+    "CON": 0,
+    "INT": 0,
+    "WIS": 2,
+    "CHA": 0
+   },
+   "signature": "Beast Bond",
+   "evolves_from": [
+    "Beastbound"
+   ],
+   "evolves_into": [
+    "Trailbreaker",
+    "Beastmaster"
+   ],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "Line and Barb",
+   "feature_text": "On a hit with a thrown weapon, the target cannot leave its zone until it Escapes."
+  },
+  {
+   "id": "Charge Adept",
+   "name": "Charge Adept",
+   "grade": "E",
+   "line": "Artifice",
+   "hit_die": "d6",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 1,
+    "CON": 0,
+    "INT": 4,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Charge Shaping",
+   "evolves_from": [
+    "Theorist"
+   ],
+   "evolves_into": [
+    "Charge Engineer",
+    "Sigilwright"
+   ],
+   "skills": [
+    "Arcana",
+    "Investigation"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Furnace Adept",
+   "name": "Furnace Adept",
+   "grade": "E",
+   "line": "Artifice",
+   "hit_die": "d6",
+   "primary": "INT",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 1,
+    "CON": 1,
+    "INT": 4,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Charge Shaping",
+   "evolves_from": [
+    "Theorist",
+    "Bloodcharged"
+   ],
+   "evolves_into": [
+    "Stormcaller",
+    "Sigilwright"
+   ],
+   "skills": [
+    "Arcana",
+    "Investigation"
+   ],
+   "feature": "Banked Heat",
+   "feature_text": "Your damaging spells ignore fire and cold resistance below your grade."
+  },
+  {
+   "id": "Overcharged",
+   "name": "Overcharged",
+   "grade": "E",
+   "line": "Artifice",
+   "hit_die": "d6",
+   "primary": "CHA",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 2,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 4
+   },
+   "signature": "Charge Shaping",
+   "evolves_from": [
+    "Bloodcharged",
+    "Medium"
+   ],
+   "evolves_into": [
+    "Powdermad",
+    "Charge Engineer",
+    "Hexer"
+   ],
+   "skills": [
+    "Arcana",
+    "Investigation"
+   ],
+   "feature": "Runs Hot",
+   "feature_text": "Once per Scene, cast without spending points. You are Fatigued until you next rest."
+  },
+  {
+   "id": "Fathom Reader",
+   "name": "Fathom Reader",
+   "grade": "E",
+   "line": "Fathomless",
+   "hit_die": "d8",
+   "primary": "CHA",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 1,
+    "WIS": 0,
+    "CHA": 4
+   },
+   "signature": "Binding Pact",
+   "evolves_from": [
+    "Medium",
+    "Firebrand"
+   ],
+   "evolves_into": [
+    "Hexer",
+    "Chantmaster"
+   ],
+   "skills": [
+    "Deception",
+    "Performance"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Shantyman",
+   "name": "Shantyman",
+   "grade": "E",
+   "line": "Fathomless",
+   "hit_die": "d8",
+   "primary": "CHA",
+   "secondary": "STR",
+   "abilities": {
+    "STR": 1,
+    "DEX": 1,
+    "CON": 0,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 4
+   },
+   "signature": "Binding Pact",
+   "evolves_from": [
+    "Firebrand"
+   ],
+   "evolves_into": [
+    "Chantmaster"
+   ],
+   "skills": [
+    "Deception",
+    "Performance"
+   ],
+   "feature": "Set Your Weight",
+   "feature_text": "Once per Scene, ignore a forced move, a knockdown or a Grab without rolling."
+  },
+  {
+   "id": "Breaker",
+   "name": "Breaker",
+   "grade": "D",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "STR",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 6,
+    "DEX": 0,
+    "CON": 3,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Hull Breaker",
+   "evolves_from": [
+    "Boarder"
+   ],
+   "evolves_into": [
+    "Warbringer",
+    "Powder Tyrant"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Powdermad",
+   "name": "Powdermad",
+   "grade": "D",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "STR",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 6,
+    "DEX": 0,
+    "CON": 2,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 1
+   },
+   "signature": "Hull Breaker",
+   "evolves_from": [
+    "Boarder",
+    "Overcharged"
+   ],
+   "evolves_into": [
+    "Powder Tyrant"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Blast Wake",
+   "feature_text": "When you critically hit, every other enemy in the zone takes your ability modifier in damage."
+  },
+  {
+   "id": "Wavebound",
+   "name": "Wavebound",
+   "grade": "D",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "WIS",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 2,
+    "DEX": 0,
+    "CON": 4,
+    "INT": 0,
+    "WIS": 3,
+    "CHA": 0
+   },
+   "signature": "Tide Form",
+   "evolves_from": [
+    "Stormbound",
+    "Brume Speaker"
+   ],
+   "evolves_into": [
+    "Tide Champion",
+    "Leviathan Lord"
+   ],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Blademaster",
+   "name": "Blademaster",
+   "grade": "D",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "DEX",
+   "secondary": "STR",
+   "abilities": {
+    "STR": 5,
+    "DEX": 3,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Hull Breaker",
+   "evolves_from": [
+    "Cors",
+    "Cutthroat"
+   ],
+   "evolves_into": [
+    "Swordsaint"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Perfect Line",
+   "feature_text": "Your second Strike each turn takes -2 rather than -4."
+  },
+  {
+   "id": "Captain",
+   "name": "Captain",
+   "grade": "D",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "STR",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 5,
+    "DEX": 0,
+    "CON": 3,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 1
+   },
+   "signature": "Hull Breaker",
+   "evolves_from": [
+    "Ironside",
+    "Cors"
+   ],
+   "evolves_into": [
+    "Warbringer",
+    "Commodore"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Give the Order",
+   "feature_text": "Once per round, an ally in Near may Stride as a reaction."
+  },
+  {
+   "id": "Bulwark",
+   "name": "Bulwark",
+   "grade": "D",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "CON",
+   "secondary": "STR",
+   "abilities": {
+    "STR": 4,
+    "DEX": 0,
+    "CON": 5,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Hull Breaker",
+   "evolves_from": [
+    "Ironside",
+    "Icon Bearer"
+   ],
+   "evolves_into": [
+    "Aegis Warden"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Immovable",
+   "feature_text": "You may Intercept twice per round instead of once."
+  },
+  {
+   "id": "Assassin",
+   "name": "Assassin",
+   "grade": "D",
+   "line": "Undertow",
+   "hit_die": "d8",
+   "primary": "DEX",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 6,
+    "CON": 0,
+    "INT": 2,
+    "WIS": 0,
+    "CHA": 1
+   },
+   "signature": "Killing Angle",
+   "evolves_from": [
+    "Cutthroat",
+    "Nightrunner"
+   ],
+   "evolves_into": [
+    "Undertow Lord"
+   ],
+   "skills": [
+    "Stealth",
+    "Skulduggery"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Trailbreaker",
+   "name": "Trailbreaker",
+   "grade": "D",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "DEX",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 6,
+    "CON": 0,
+    "INT": 1,
+    "WIS": 2,
+    "CHA": 0
+   },
+   "signature": "Tide Form",
+   "evolves_from": [
+    "Topman",
+    "Harpooner"
+   ],
+   "evolves_into": [
+    "Trailblazer"
+   ],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "Read the Ground",
+   "feature_text": "The party ignores difficult ground on any leg you have personally walked."
+  },
+  {
+   "id": "Stillwater Adept",
+   "name": "Stillwater Adept",
+   "grade": "D",
+   "line": "Undertow",
+   "hit_die": "d8",
+   "primary": "WIS",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 0,
+    "DEX": 4,
+    "CON": 0,
+    "INT": 0,
+    "WIS": 5,
+    "CHA": 0
+   },
+   "signature": "Killing Angle",
+   "evolves_from": [
+    "Stillhand",
+    "Cors"
+   ],
+   "evolves_into": [
+    "Swordsaint",
+    "Perfect Stillness"
+   ],
+   "skills": [
+    "Stealth",
+    "Skulduggery"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "Brumewalker",
+   "name": "Brumewalker",
+   "grade": "D",
+   "line": "Undertow",
+   "hit_die": "d8",
+   "primary": "DEX",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 0,
+    "DEX": 6,
+    "CON": 0,
+    "INT": 1,
+    "WIS": 1,
+    "CHA": 1
+   },
+   "signature": "Killing Angle",
+   "evolves_from": [
+    "Nightrunner",
+    "Stillhand"
+   ],
+   "evolves_into": [
+    "Undertow Lord",
+    "Perfect Stillness"
+   ],
+   "skills": [
+    "Stealth",
+    "Skulduggery"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Hierophant",
+   "name": "Hierophant",
+   "grade": "D",
+   "line": "Divine",
+   "hit_die": "d10",
+   "primary": "WIS",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 6,
+    "CHA": 2
+   },
+   "signature": "Smite the Unmade",
+   "evolves_from": [
+    "Wright"
+   ],
+   "evolves_into": [
+    "High Wright"
+   ],
+   "skills": [
+    "Religion",
+    "Insight"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Inquisitor",
+   "name": "Inquisitor",
+   "grade": "D",
+   "line": "Divine",
+   "hit_die": "d10",
+   "primary": "WIS",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 1,
+    "WIS": 6,
+    "CHA": 1
+   },
+   "signature": "Smite the Unmade",
+   "evolves_from": [
+    "Wright",
+    "Zealot"
+   ],
+   "evolves_into": [
+    "High Wright",
+    "Doomsayer"
+   ],
+   "skills": [
+    "Religion",
+    "Insight"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Templar",
+   "name": "Templar",
+   "grade": "D",
+   "line": "Divine",
+   "hit_die": "d10",
+   "primary": "STR",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 4,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 4,
+    "CHA": 0
+   },
+   "signature": "Smite the Unmade",
+   "evolves_from": [
+    "Zealot",
+    "Icon Bearer"
+   ],
+   "evolves_into": [
+    "Commodore",
+    "Aegis Warden"
+   ],
+   "skills": [
+    "Religion",
+    "Insight"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Leviathan-Marked",
+   "name": "Leviathan-Marked",
+   "grade": "D",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "CON",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 4,
+    "INT": 0,
+    "WIS": 5,
+    "CHA": 0
+   },
+   "signature": "Tide Form",
+   "evolves_from": [
+    "Deepwarden",
+    "Stormbound"
+   ],
+   "evolves_into": [
+    "Tide Champion"
+   ],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "Deep Lungs",
+   "feature_text": "You breathe water, and pressure or depth never harms you."
+  },
+  {
+   "id": "Stormcaller",
+   "name": "Stormcaller",
+   "grade": "D",
+   "line": "Artifice",
+   "hit_die": "d6",
+   "primary": "INT",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 2,
+    "INT": 3,
+    "WIS": 4,
+    "CHA": 0
+   },
+   "signature": "Sigil Focus",
+   "evolves_from": [
+    "Brume Speaker",
+    "Furnace Adept"
+   ],
+   "evolves_into": [
+    "Tempest Sage"
+   ],
+   "skills": [
+    "Arcana",
+    "Investigation"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Beastmaster",
+   "name": "Beastmaster",
+   "grade": "D",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "WIS",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 0,
+    "DEX": 5,
+    "CON": 0,
+    "INT": 0,
+    "WIS": 4,
+    "CHA": 0
+   },
+   "signature": "Tide Form",
+   "evolves_from": [
+    "Harpooner",
+    "Deepwarden"
+   ],
+   "evolves_into": [
+    "Trailblazer",
+    "Leviathan Lord"
+   ],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "Charge Engineer",
+   "name": "Charge Engineer",
+   "grade": "D",
+   "line": "Artifice",
+   "hit_die": "d6",
+   "primary": "INT",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 0,
+    "DEX": 2,
+    "CON": 0,
+    "INT": 6,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Sigil Focus",
+   "evolves_from": [
+    "Charge Adept",
+    "Overcharged"
+   ],
+   "evolves_into": [
+    "Archwright",
+    "Mythwright"
+   ],
+   "skills": [
+    "Arcana",
+    "Investigation"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "Sigilwright",
+   "name": "Sigilwright",
+   "grade": "D",
+   "line": "Artifice",
+   "hit_die": "d6",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 1,
+    "CON": 0,
+    "INT": 6,
+    "WIS": 2,
+    "CHA": 0
+   },
+   "signature": "Sigil Focus",
+   "evolves_from": [
+    "Charge Adept",
+    "Furnace Adept"
+   ],
+   "evolves_into": [
+    "Tempest Sage",
+    "Archwright"
+   ],
+   "skills": [
+    "Arcana",
+    "Investigation"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Hexer",
+   "name": "Hexer",
+   "grade": "D",
+   "line": "Fathomless",
+   "hit_die": "d8",
+   "primary": "CHA",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 2,
+    "WIS": 0,
+    "CHA": 6
+   },
+   "signature": "Curse Weave",
+   "evolves_from": [
+    "Fathom Reader",
+    "Overcharged"
+   ],
+   "evolves_into": [
+    "Doomsayer",
+    "Curseweaver"
+   ],
+   "skills": [
+    "Deception",
+    "Performance"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Chantmaster",
+   "name": "Chantmaster",
+   "grade": "D",
+   "line": "Fathomless",
+   "hit_die": "d8",
+   "primary": "CHA",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 1,
+    "DEX": 1,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 6
+   },
+   "signature": "Curse Weave",
+   "evolves_from": [
+    "Shantyman",
+    "Fathom Reader"
+   ],
+   "evolves_into": [
+    "Curseweaver",
+    "Mythwright"
+   ],
+   "skills": [
+    "Deception",
+    "Performance"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Warbringer",
+   "name": "Warbringer",
+   "grade": "C",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "STR",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 8,
+    "DEX": 0,
+    "CON": 4,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 0
+   },
+   "signature": "Broadside",
+   "evolves_from": [
+    "Breaker",
+    "Captain"
+   ],
+   "evolves_into": [
+    "Fleet Admiral",
+    "Bloodtide Titan"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Powder Tyrant",
+   "name": "Powder Tyrant",
+   "grade": "C",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "STR",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 8,
+    "DEX": 0,
+    "CON": 2,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 2
+   },
+   "signature": "Broadside",
+   "evolves_from": [
+    "Powdermad",
+    "Breaker"
+   ],
+   "evolves_into": [
+    "Bloodtide Titan"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Tide Champion",
+   "name": "Tide Champion",
+   "grade": "C",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "WIS",
+   "secondary": "STR",
+   "abilities": {
+    "STR": 3,
+    "DEX": 0,
+    "CON": 4,
+    "INT": 0,
+    "WIS": 5,
+    "CHA": 0
+   },
+   "signature": "Wild Surge",
+   "evolves_from": [
+    "Wavebound",
+    "Leviathan-Marked"
+   ],
+   "evolves_into": [
+    "Avatar of the Deep"
+   ],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "Set Your Weight",
+   "feature_text": "Once per Scene, ignore a forced move, a knockdown or a Grab without rolling."
+  },
+  {
+   "id": "Swordsaint",
+   "name": "Swordsaint",
+   "grade": "C",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "DEX",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 5,
+    "DEX": 5,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Broadside",
+   "evolves_from": [
+    "Blademaster",
+    "Stillwater Adept"
+   ],
+   "evolves_into": [
+    "Perfect Blade"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Commodore",
+   "name": "Commodore",
+   "grade": "C",
+   "line": "Divine",
+   "hit_die": "d10",
+   "primary": "CHA",
+   "secondary": "STR",
+   "abilities": {
+    "STR": 6,
+    "DEX": 0,
+    "CON": 3,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 3
+   },
+   "signature": "Aegis of the Making",
+   "evolves_from": [
+    "Captain",
+    "Templar"
+   ],
+   "evolves_into": [
+    "Fleet Admiral",
+    "Bastion Eternal"
+   ],
+   "skills": [
+    "Religion",
+    "Insight"
+   ],
+   "feature": "Set Your Weight",
+   "feature_text": "Once per Scene, ignore a forced move, a knockdown or a Grab without rolling."
+  },
+  {
+   "id": "Aegis Warden",
+   "name": "Aegis Warden",
+   "grade": "C",
+   "line": "Divine",
+   "hit_die": "d10",
+   "primary": "CON",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 4,
+    "DEX": 0,
+    "CON": 7,
+    "INT": 0,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Aegis of the Making",
+   "evolves_from": [
+    "Bulwark",
+    "Templar"
+   ],
+   "evolves_into": [
+    "Bastion Eternal"
+   ],
+   "skills": [
+    "Religion",
+    "Insight"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Undertow Lord",
+   "name": "Undertow Lord",
+   "grade": "C",
+   "line": "Undertow",
+   "hit_die": "d8",
+   "primary": "DEX",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 0,
+    "DEX": 8,
+    "CON": 0,
+    "INT": 2,
+    "WIS": 0,
+    "CHA": 2
+   },
+   "signature": "Brume Step",
+   "evolves_from": [
+    "Assassin",
+    "Brumewalker"
+   ],
+   "evolves_into": [
+    "Sovereign of the Undertow",
+    "Harbinger"
+   ],
+   "skills": [
+    "Stealth",
+    "Skulduggery"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Trailblazer",
+   "name": "Trailblazer",
+   "grade": "C",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "DEX",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 8,
+    "CON": 1,
+    "INT": 1,
+    "WIS": 2,
+    "CHA": 0
+   },
+   "signature": "Wild Surge",
+   "evolves_from": [
+    "Trailbreaker",
+    "Beastmaster"
+   ],
+   "evolves_into": [
+    "Sea-Walker"
+   ],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "First Through",
+   "feature_text": "The first time the party enters a region, its opening event is drawn at one grade lower."
+  },
+  {
+   "id": "Perfect Stillness",
+   "name": "Perfect Stillness",
+   "grade": "C",
+   "line": "Undertow",
+   "hit_die": "d8",
+   "primary": "WIS",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 0,
+    "DEX": 5,
+    "CON": 0,
+    "INT": 0,
+    "WIS": 7,
+    "CHA": 0
+   },
+   "signature": "Brume Step",
+   "evolves_from": [
+    "Stillwater Adept",
+    "Brumewalker"
+   ],
+   "evolves_into": [
+    "Perfect Blade"
+   ],
+   "skills": [
+    "Stealth",
+    "Skulduggery"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "High Wright",
+   "name": "High Wright",
+   "grade": "C",
+   "line": "Divine",
+   "hit_die": "d10",
+   "primary": "WIS",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 8,
+    "CHA": 3
+   },
+   "signature": "Aegis of the Making",
+   "evolves_from": [
+    "Hierophant",
+    "Inquisitor"
+   ],
+   "evolves_into": [
+    "Voice of the Making"
+   ],
+   "skills": [
+    "Religion",
+    "Insight"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Doomsayer",
+   "name": "Doomsayer",
+   "grade": "C",
+   "line": "Fathomless",
+   "hit_die": "d8",
+   "primary": "CHA",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 1,
+    "WIS": 7,
+    "CHA": 3
+   },
+   "signature": "Fate Thread",
+   "evolves_from": [
+    "Inquisitor",
+    "Hexer"
+   ],
+   "evolves_into": [
+    "Voice of the Making",
+    "Harbinger"
+   ],
+   "skills": [
+    "Deception",
+    "Performance"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Leviathan Lord",
+   "name": "Leviathan Lord",
+   "grade": "C",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "WIS",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 5,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 6,
+    "CHA": 0
+   },
+   "signature": "Wild Surge",
+   "evolves_from": [
+    "Beastmaster",
+    "Wavebound"
+   ],
+   "evolves_into": [
+    "Avatar of the Deep",
+    "Sea-Walker"
+   ],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "Something Follows",
+   "feature_text": "Once per Scene, something large in the water makes one Strike on your behalf."
+  },
+  {
+   "id": "Tempest Sage",
+   "name": "Tempest Sage",
+   "grade": "C",
+   "line": "Artifice",
+   "hit_die": "d6",
+   "primary": "INT",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 3,
+    "INT": 5,
+    "WIS": 4,
+    "CHA": 0
+   },
+   "signature": "Overcharge",
+   "evolves_from": [
+    "Stormcaller",
+    "Sigilwright"
+   ],
+   "evolves_into": [
+    "Stormlord"
+   ],
+   "skills": [
+    "Arcana",
+    "Investigation"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Archwright",
+   "name": "Archwright",
+   "grade": "C",
+   "line": "Artifice",
+   "hit_die": "d6",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 2,
+    "CON": 0,
+    "INT": 8,
+    "WIS": 2,
+    "CHA": 0
+   },
+   "signature": "Overcharge",
+   "evolves_from": [
+    "Charge Engineer",
+    "Sigilwright"
+   ],
+   "evolves_into": [
+    "Stormlord",
+    "Grand Archwright"
+   ],
+   "skills": [
+    "Arcana",
+    "Investigation"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Curseweaver",
+   "name": "Curseweaver",
+   "grade": "C",
+   "line": "Fathomless",
+   "hit_die": "d8",
+   "primary": "CHA",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 3,
+    "WIS": 0,
+    "CHA": 8
+   },
+   "signature": "Fate Thread",
+   "evolves_from": [
+    "Hexer",
+    "Chantmaster"
+   ],
+   "evolves_into": [
+    "Sovereign of the Undertow",
+    "Fatebinder"
+   ],
+   "skills": [
+    "Deception",
+    "Performance"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Mythwright",
+   "name": "Mythwright",
+   "grade": "C",
+   "line": "Fathomless",
+   "hit_die": "d8",
+   "primary": "INT",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 1,
+    "DEX": 1,
+    "CON": 1,
+    "INT": 2,
+    "WIS": 0,
+    "CHA": 7
+   },
+   "signature": "Fate Thread",
+   "evolves_from": [
+    "Chantmaster",
+    "Charge Engineer"
+   ],
+   "evolves_into": [
+    "Grand Archwright",
+    "Fatebinder"
+   ],
+   "skills": [
+    "Deception",
+    "Performance"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Fleet Admiral",
+   "name": "Fleet Admiral",
+   "grade": "B",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "STR",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 10,
+    "DEX": 0,
+    "CON": 4,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 1
+   },
+   "signature": "Titan's Wrath",
+   "evolves_from": [
+    "Warbringer",
+    "Commodore"
+   ],
+   "evolves_into": [
+    "Godsbane",
+    "Immortal Bastion"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Bloodtide Titan",
+   "name": "Bloodtide Titan",
+   "grade": "B",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "STR",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 10,
+    "DEX": 0,
+    "CON": 3,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 2
+   },
+   "signature": "Titan's Wrath",
+   "evolves_from": [
+    "Powder Tyrant",
+    "Warbringer"
+   ],
+   "evolves_into": [
+    "Godsbane"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Avatar of the Deep",
+   "name": "Avatar of the Deep",
+   "grade": "B",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "WIS",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 3,
+    "DEX": 0,
+    "CON": 5,
+    "INT": 0,
+    "WIS": 7,
+    "CHA": 0
+   },
+   "signature": "Turn of the Season",
+   "evolves_from": [
+    "Tide Champion",
+    "Leviathan Lord"
+   ],
+   "evolves_into": [
+    "World Serpent"
+   ],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Perfect Blade",
+   "name": "Perfect Blade",
+   "grade": "B",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "DEX",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 5,
+    "DEX": 7,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 2,
+    "CHA": 0
+   },
+   "signature": "Titan's Wrath",
+   "evolves_from": [
+    "Swordsaint",
+    "Perfect Stillness"
+   ],
+   "evolves_into": [
+    "Godsbane"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Bastion Eternal",
+   "name": "Bastion Eternal",
+   "grade": "B",
+   "line": "Divine",
+   "hit_die": "d10",
+   "primary": "CON",
+   "secondary": "STR",
+   "abilities": {
+    "STR": 5,
+    "DEX": 0,
+    "CON": 9,
+    "INT": 0,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Judgement",
+   "evolves_from": [
+    "Aegis Warden",
+    "Commodore"
+   ],
+   "evolves_into": [
+    "Immortal Bastion",
+    "Hand of the Making"
+   ],
+   "skills": [
+    "Religion",
+    "Insight"
+   ],
+   "feature": "Set Your Weight",
+   "feature_text": "Once per Scene, ignore a forced move, a knockdown or a Grab without rolling."
+  },
+  {
+   "id": "Sovereign of the Undertow",
+   "name": "Sovereign of the Undertow",
+   "grade": "B",
+   "line": "Undertow",
+   "hit_die": "d8",
+   "primary": "DEX",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 0,
+    "DEX": 10,
+    "CON": 0,
+    "INT": 2,
+    "WIS": 0,
+    "CHA": 3
+   },
+   "signature": "Undertow Body",
+   "evolves_from": [
+    "Undertow Lord",
+    "Curseweaver"
+   ],
+   "evolves_into": [
+    "Eclipse Sovereign"
+   ],
+   "skills": [
+    "Stealth",
+    "Skulduggery"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Sea-Walker",
+   "name": "Sea-Walker",
+   "grade": "B",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "DEX",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 10,
+    "CON": 1,
+    "INT": 1,
+    "WIS": 3,
+    "CHA": 0
+   },
+   "signature": "Turn of the Season",
+   "evolves_from": [
+    "Trailblazer",
+    "Leviathan Lord"
+   ],
+   "evolves_into": [
+    "World Serpent"
+   ],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Voice of the Making",
+   "name": "Voice of the Making",
+   "grade": "B",
+   "line": "Divine",
+   "hit_die": "d10",
+   "primary": "WIS",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 10,
+    "CHA": 4
+   },
+   "signature": "Judgement",
+   "evolves_from": [
+    "High Wright",
+    "Doomsayer"
+   ],
+   "evolves_into": [
+    "Hand of the Making"
+   ],
+   "skills": [
+    "Religion",
+    "Insight"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Stormlord",
+   "name": "Stormlord",
+   "grade": "B",
+   "line": "Artifice",
+   "hit_die": "d6",
+   "primary": "INT",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 4,
+    "INT": 7,
+    "WIS": 4,
+    "CHA": 0
+   },
+   "signature": "Charge Sovereignty",
+   "evolves_from": [
+    "Tempest Sage",
+    "Archwright"
+   ],
+   "evolves_into": [
+    "Stormsovereign"
+   ],
+   "skills": [
+    "Arcana",
+    "Investigation"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Grand Archwright",
+   "name": "Grand Archwright",
+   "grade": "B",
+   "line": "Artifice",
+   "hit_die": "d6",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 2,
+    "CON": 0,
+    "INT": 10,
+    "WIS": 3,
+    "CHA": 0
+   },
+   "signature": "Charge Sovereignty",
+   "evolves_from": [
+    "Archwright",
+    "Mythwright"
+   ],
+   "evolves_into": [
+    "Stormsovereign",
+    "Reality Scribe"
+   ],
+   "skills": [
+    "Arcana",
+    "Investigation"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Fatebinder",
+   "name": "Fatebinder",
+   "grade": "B",
+   "line": "Fathomless",
+   "hit_die": "d8",
+   "primary": "CHA",
+   "secondary": "INT",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 4,
+    "WIS": 0,
+    "CHA": 10
+   },
+   "signature": "Mind's Dominion",
+   "evolves_from": [
+    "Curseweaver",
+    "Mythwright"
+   ],
+   "evolves_into": [
+    "Reality Scribe",
+    "Doom of Ages"
+   ],
+   "skills": [
+    "Deception",
+    "Performance"
+   ],
+   "feature": "Read the Problem",
+   "feature_text": "Once per Scene, ask the GM one factual question about the obstacle in front of you. The answer is true and not a hint."
+  },
+  {
+   "id": "Harbinger",
+   "name": "Harbinger",
+   "grade": "B",
+   "line": "Fathomless",
+   "hit_die": "d8",
+   "primary": "CHA",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 1,
+    "WIS": 8,
+    "CHA": 5
+   },
+   "signature": "Mind's Dominion",
+   "evolves_from": [
+    "Doomsayer",
+    "Undertow Lord"
+   ],
+   "evolves_into": [
+    "Eclipse Sovereign",
+    "Doom of Ages"
+   ],
+   "skills": [
+    "Deception",
+    "Performance"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Godsbane",
+   "name": "Godsbane",
+   "grade": "A",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "STR",
+   "secondary": "DEX",
+   "abilities": {
+    "STR": 12,
+    "DEX": 1,
+    "CON": 4,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 1
+   },
+   "signature": "Shipbreaker",
+   "evolves_from": [
+    "Fleet Admiral",
+    "Bloodtide Titan",
+    "Perfect Blade"
+   ],
+   "evolves_into": [
+    "Sovereign of Arms"
+   ],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Loose Footing",
+   "feature_text": "Your first Step each Scene is free and does not count against your three actions."
+  },
+  {
+   "id": "Immortal Bastion",
+   "name": "Immortal Bastion",
+   "grade": "A",
+   "line": "Divine",
+   "hit_die": "d10",
+   "primary": "CON",
+   "secondary": "STR",
+   "abilities": {
+    "STR": 6,
+    "DEX": 0,
+    "CON": 11,
+    "INT": 0,
+    "WIS": 1,
+    "CHA": 0
+   },
+   "signature": "Word of Making",
+   "evolves_from": [
+    "Bastion Eternal",
+    "Fleet Admiral"
+   ],
+   "evolves_into": [
+    "Sovereign of Arms",
+    "Eternal"
+   ],
+   "skills": [
+    "Religion",
+    "Insight"
+   ],
+   "feature": "Set Your Weight",
+   "feature_text": "Once per Scene, ignore a forced move, a knockdown or a Grab without rolling."
+  },
+  {
+   "id": "World Serpent",
+   "name": "World Serpent",
+   "grade": "A",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "CON",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 3,
+    "DEX": 0,
+    "CON": 7,
+    "INT": 0,
+    "WIS": 8,
+    "CHA": 0
+   },
+   "signature": "Living Storm",
+   "evolves_from": [
+    "Avatar of the Deep",
+    "Sea-Walker"
+   ],
+   "evolves_into": [
+    "Primordial"
+   ],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Eclipse Sovereign",
+   "name": "Eclipse Sovereign",
+   "grade": "A",
+   "line": "Undertow",
+   "hit_die": "d8",
+   "primary": "DEX",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 0,
+    "DEX": 12,
+    "CON": 0,
+    "INT": 2,
+    "WIS": 0,
+    "CHA": 4
+   },
+   "signature": "Unseen Death",
+   "evolves_from": [
+    "Sovereign of the Undertow",
+    "Harbinger"
+   ],
+   "evolves_into": [
+    "The Unfixed"
+   ],
+   "skills": [
+    "Stealth",
+    "Skulduggery"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Hand of the Making",
+   "name": "Hand of the Making",
+   "grade": "A",
+   "line": "Divine",
+   "hit_die": "d10",
+   "primary": "WIS",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 12,
+    "CHA": 5
+   },
+   "signature": "Word of Making",
+   "evolves_from": [
+    "Voice of the Making",
+    "Bastion Eternal"
+   ],
+   "evolves_into": [
+    "Eternal"
+   ],
+   "skills": [
+    "Religion",
+    "Insight"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Stormsovereign",
+   "name": "Stormsovereign",
+   "grade": "A",
+   "line": "Artifice",
+   "hit_die": "d6",
+   "primary": "INT",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 5,
+    "INT": 9,
+    "WIS": 4,
+    "CHA": 0
+   },
+   "signature": "Reality Edit",
+   "evolves_from": [
+    "Stormlord",
+    "Grand Archwright"
+   ],
+   "evolves_into": [
+    "Primordial",
+    "Demiurge"
+   ],
+   "skills": [
+    "Arcana",
+    "Investigation"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Reality Scribe",
+   "name": "Reality Scribe",
+   "grade": "A",
+   "line": "Artifice",
+   "hit_die": "d6",
+   "primary": "INT",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 0,
+    "DEX": 2,
+    "CON": 0,
+    "INT": 12,
+    "WIS": 3,
+    "CHA": 1
+   },
+   "signature": "Reality Edit",
+   "evolves_from": [
+    "Grand Archwright",
+    "Fatebinder"
+   ],
+   "evolves_into": [
+    "Demiurge"
+   ],
+   "skills": [
+    "Arcana",
+    "Investigation"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Doom of Ages",
+   "name": "Doom of Ages",
+   "grade": "A",
+   "line": "Fathomless",
+   "hit_die": "d8",
+   "primary": "CHA",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 1,
+    "INT": 1,
+    "WIS": 9,
+    "CHA": 7
+   },
+   "signature": "Doom Spoken",
+   "evolves_from": [
+    "Harbinger",
+    "Fatebinder"
+   ],
+   "evolves_into": [
+    "The Unfixed"
+   ],
+   "skills": [
+    "Deception",
+    "Performance"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Sovereign of Arms",
+   "name": "Sovereign of Arms",
+   "grade": "S",
+   "line": "Ironclad",
+   "hit_die": "d12",
+   "primary": "STR",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 14,
+    "DEX": 1,
+    "CON": 5,
+    "INT": 0,
+    "WIS": 0,
+    "CHA": 1
+   },
+   "signature": "Annihilation",
+   "evolves_from": [
+    "Godsbane",
+    "Immortal Bastion"
+   ],
+   "evolves_into": [],
+   "skills": [
+    "Athletics",
+    "Intimidation"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  },
+  {
+   "id": "Primordial",
+   "name": "Primordial",
+   "grade": "S",
+   "line": "Tidebound",
+   "hit_die": "d10",
+   "primary": "CON",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 3,
+    "DEX": 0,
+    "CON": 9,
+    "INT": 0,
+    "WIS": 9,
+    "CHA": 0
+   },
+   "signature": "Voice of the Deep",
+   "evolves_from": [
+    "World Serpent",
+    "Stormsovereign"
+   ],
+   "evolves_into": [],
+   "skills": [
+    "Survival",
+    "Nature"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "The Unfixed",
+   "name": "The Unfixed",
+   "grade": "S",
+   "line": "Undertow",
+   "hit_die": "d8",
+   "primary": "DEX",
+   "secondary": "CHA",
+   "abilities": {
+    "STR": 0,
+    "DEX": 14,
+    "CON": 0,
+    "INT": 2,
+    "WIS": 0,
+    "CHA": 5
+   },
+   "signature": "Absence",
+   "evolves_from": [
+    "Eclipse Sovereign",
+    "Doom of Ages"
+   ],
+   "evolves_into": [],
+   "skills": [
+    "Stealth",
+    "Skulduggery"
+   ],
+   "feature": "Carry the Room",
+   "feature_text": "Once per Scene, an ally who can see you rerolls a failed save."
+  },
+  {
+   "id": "Demiurge",
+   "name": "Demiurge",
+   "grade": "S",
+   "line": "Artifice",
+   "hit_die": "d6",
+   "primary": "INT",
+   "secondary": "WIS",
+   "abilities": {
+    "STR": 0,
+    "DEX": 2,
+    "CON": 0,
+    "INT": 14,
+    "WIS": 4,
+    "CHA": 1
+   },
+   "signature": "Authorship",
+   "evolves_from": [
+    "Reality Scribe",
+    "Stormsovereign"
+   ],
+   "evolves_into": [],
+   "skills": [
+    "Arcana",
+    "Investigation"
+   ],
+   "feature": "Know the Turn",
+   "feature_text": "Once per Scene, act immediately after the current creature instead of on your own initiative."
+  },
+  {
+   "id": "Eternal",
+   "name": "Eternal",
+   "grade": "S",
+   "line": "Divine",
+   "hit_die": "d10",
+   "primary": "WIS",
+   "secondary": "CON",
+   "abilities": {
+    "STR": 0,
+    "DEX": 0,
+    "CON": 2,
+    "INT": 0,
+    "WIS": 14,
+    "CHA": 5
+   },
+   "signature": "Apotheosis",
+   "evolves_from": [
+    "Hand of the Making",
+    "Immortal Bastion"
+   ],
+   "evolves_into": [],
+   "skills": [
+    "Religion",
+    "Insight"
+   ],
+   "feature": "Second Breath",
+   "feature_text": "Once per Scene, when you would drop to 0, drop to 1 instead. Once per long rest."
+  }
+ ]
+}

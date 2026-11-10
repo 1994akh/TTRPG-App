@@ -1,5 +1,5 @@
-# Publishing a GitHub release builds the Ravenmoor Manor module and attaches module.json and ravenmoor-manor.zip
-# to it. Foundry installs from https://github.com/1994akh/TTRPG-App/releases/latest/download/module.json
+# Publishing a GitHub release builds every package and attaches its manifest and zip:
+# ravenmoor-manor (module.json), the Possibilities system (system.json) and Ashford Roads Act 1 (possibilities-act1.json).
 name: Release
 
 on:
@@ -39,3 +39,55 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.event.release.tag_name }}
         run: gh release upload "$TAG" dist/module.json dist/ravenmoor-manor.zip --clobber --repo "$GITHUB_REPOSITORY"
+
+  possibilities-system:
+    name: Build and attach the Possibilities system
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: possibilities-system
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: possibilities-system/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - run: npm run check
+      - name: Package for this release
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+        run: npm run package -- --release "$TAG"
+      - name: Attach system.json and the zip to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: gh release upload "$TAG" dist/system.json dist/possibilities.zip --clobber --repo "$GITHUB_REPOSITORY"
+
+  possibilities-act1:
+    name: Build and attach Ashford Roads, Act 1
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: possibilities-act1
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: possibilities-act1/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - run: npm run check
+      - name: Package for this release
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+        run: npm run package -- --release "$TAG"
+      - name: Attach possibilities-act1.json and the zip to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: gh release upload "$TAG" dist/possibilities-act1.json dist/possibilities-act1.zip --clobber --repo "$GITHUB_REPOSITORY"

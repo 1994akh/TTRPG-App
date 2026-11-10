@@ -1,0 +1,369 @@
+{
+ "source": "Game lore",
+ "data": [
+  {
+   "id": "enkrid",
+   "name": "Enkrid",
+   "status": "Written",
+   "fields": {
+    "role": "Party member. Protagonist 1.",
+    "race": "Wendlin",
+    "class": "Bloodcharged",
+    "profession": "Tinker",
+    "age": "16-20 at the start",
+    "pronouns": "he/him",
+    "class path": "Bloodcharged > Overcharged > Charge Engineer > Archwright > Grand Archwright",
+    "profession path": "Tinker > Engineer > Sapper > Yardmaster > Skyforge Engineer"
+   },
+   "text": [
+    "Orphaned road fae; no one would stand up for him. Wiry, small for his age, and sure it's a curse. He sees the sky ship as escape and adventure, and tinkering as his way onto a ship. He carries the inventor's pocket watch and wants to find the three legends, sure they still live."
+   ],
+   "sections": {
+    "Motivation": [
+     "To escape the mundane and cruel life of the mainland, to travel, building power and knowledge to feel in control of his life."
+    ],
+    "Path note": [
+     "Walks the Inventor's path (decided 3 Nov): main story to C-grade Archwright and Yardmaster, B-grade in the post-game."
+    ]
+   },
+   "file": "Characters.docx",
+   "class_path": [
+    "Bloodcharged",
+    "Overcharged",
+    "Charge Engineer",
+    "Archwright",
+    "Grand Archwright"
+   ],
+   "profession_path": [
+    "Tinker",
+    "Engineer",
+    "Sapper",
+    "Yardmaster",
+    "Skyforge Engineer"
+   ]
+  },
+  {
+   "id": "protag2",
+   "name": "Rook",
+   "status": "Draft by Claude",
+   "fields": {
+    "role": "Party member. Protagonist 2.",
+    "race": "Corvine",
+    "class": "Theorist",
+    "profession": "Cartographer",
+    "age": "18-22 at the start",
+    "pronouns": "he/him",
+    "class path": "Theorist > Furnace Adept > Stormcaller > Tempest Sage > Stormlord",
+    "profession path": "Cartographer > Navigator > Chartwright > Master Charter > Archipelago Wright"
+   },
+   "text": [
+    "Crow-kin from an old Bench family on the mainland, raised to copy charts and never draw one. Has seen every coastline in his father's archive once, so he can draw them all, and can do his father's voice well enough to sign for him. He left with one satchel, three stolen pens, and a debt of disappointment he means to outrun."
+   ],
+   "sections": {
+    "Motivation": [
+     "To escape the mundane and cruel life of the mainland, building power and knowledge to feel free from family and cultural expectations."
+    ],
+    "Path note": [
+     "Walks the First Mate's path."
+    ]
+   },
+   "file": "Characters.docx",
+   "class_path": [
+    "Theorist",
+    "Furnace Adept",
+    "Stormcaller",
+    "Tempest Sage",
+    "Stormlord"
+   ],
+   "profession_path": [
+    "Cartographer",
+    "Navigator",
+    "Chartwright",
+    "Master Charter",
+    "Archipelago Wright"
+   ]
+  },
+  {
+   "id": "protag3",
+   "name": "Tova",
+   "status": "Draft by Claude",
+   "fields": {
+    "role": "Party member. Protagonist 3, and technically the party leader.",
+    "race": "Trollblood",
+    "class": "Vanguard",
+    "profession": "Sailor",
+    "age": "19-23 at the start",
+    "pronouns": "she/her",
+    "class path": "Vanguard > Ironside > Captain > Commodore > Fleet Admiral",
+    "profession path": "Sailor > Navigator > Fleetwright > Wayfinder > Worldbinder"
+   },
+   "text": [
+    "Monsterkin, big, loud and the first on deck because no inn will have her. Has worked every dock in the Reach and been paid less than the human beside her on all of them. Keeps a scrapbook of wanted posters and plans to be on one, for the right reasons."
+   ],
+   "sections": {
+    "Motivation": [
+     "She wants to prove she and those called monsterkin are more than they seem, and fame never hurt her!"
+    ],
+    "Path note": [
+     "Walks the Captain's path."
+    ]
+   },
+   "file": "Characters.docx",
+   "class_path": [
+    "Vanguard",
+    "Ironside",
+    "Captain",
+    "Commodore",
+    "Fleet Admiral"
+   ],
+   "profession_path": [
+    "Sailor",
+    "Navigator",
+    "Fleetwright",
+    "Wayfinder",
+    "Worldbinder"
+   ]
+  },
+  {
+   "id": "captain",
+   "name": "Captain Isolde Varr",
+   "status": "Draft by Claude",
+   "fields": {
+    "role": "Legend. Legendary B-grade, one of the three who pass through Enkrid's village. Vanished.",
+    "race": "Human",
+    "class": "Fleet Admiral",
+    "profession": "Worldbinder",
+    "class path": "Vanguard > Ironside > Captain > Commodore > Fleet Admiral",
+    "profession path": "Sailor > Navigator > Fleetwright > Wayfinder > Worldbinder"
+   },
+   "text": [
+    "Stops the local boys and tells Enkrid life is worth living, if only to see the world's mysteries. Shares a start with Tova."
+   ],
+   "sections": {},
+   "file": "Characters.docx",
+   "class_path": [
+    "Vanguard",
+    "Ironside",
+    "Captain",
+    "Commodore",
+    "Fleet Admiral"
+   ],
+   "profession_path": [
+    "Sailor",
+    "Navigator",
+    "Fleetwright",
+    "Wayfinder",
+    "Worldbinder"
+   ]
+  },
+  {
+   "id": "first_mate",
+   "name": "Elian Marsh",
+   "status": "Draft by Claude",
+   "fields": {
+    "role": "Legend. Legendary B-grade, the cartographer. Vanished.",
+    "race": "Elf",
+    "class": "Stormlord",
+    "profession": "Archipelago Wright",
+    "class path": "Theorist > Furnace Adept > Stormcaller > Tempest Sage > Stormlord",
+    "profession path": "Cartographer > Navigator > Chartwright > Master Charter > Archipelago Wright"
+   },
+   "text": [
+    "Brings up Enkrid's age: he must learn and grow before facing the Sea of Possibility. Shares a start with Rook."
+   ],
+   "sections": {},
+   "file": "Characters.docx",
+   "class_path": [
+    "Theorist",
+    "Furnace Adept",
+    "Stormcaller",
+    "Tempest Sage",
+    "Stormlord"
+   ],
+   "profession_path": [
+    "Cartographer",
+    "Navigator",
+    "Chartwright",
+    "Master Charter",
+    "Archipelago Wright"
+   ]
+  },
+  {
+   "id": "inventor",
+   "name": "Aurelio Fenn",
+   "status": "Draft by Claude",
+   "fields": {
+    "role": "Legend. Legendary B-grade, the tinker. Inventor of the brume possibility engine. Vanished.",
+    "race": "Gnome",
+    "class": "Grand Archwright",
+    "profession": "Skyforge Engineer",
+    "class path": "Bloodcharged > Overcharged > Charge Engineer > Archwright > Grand Archwright",
+    "profession path": "Tinker > Engineer > Sapper > Yardmaster > Skyforge Engineer"
+   },
+   "text": [
+    "Leaves Enkrid a crystal-faced, engraved pocket watch. Shares a start with Enkrid."
+   ],
+   "sections": {},
+   "file": "Characters.docx",
+   "class_path": [
+    "Bloodcharged",
+    "Overcharged",
+    "Charge Engineer",
+    "Archwright",
+    "Grand Archwright"
+   ],
+   "profession_path": [
+    "Tinker",
+    "Engineer",
+    "Sapper",
+    "Yardmaster",
+    "Skyforge Engineer"
+   ]
+  },
+  {
+   "id": "ansel",
+   "name": "Brother Ansel",
+   "status": "Draft by Claude",
+   "fields": {
+    "role": "The Wright chaplain who schools Enkrid for four years on the legends' coin.",
+    "race": "Human"
+   },
+   "text": [
+    "Patient, underpaid, and secretly proud. Taught Enkrid letters, sums, and to take apart the chapel clock only if he could put it back."
+   ],
+   "sections": {},
+   "file": "Characters.docx"
+  },
+  {
+   "id": "dov",
+   "name": "Dov",
+   "status": "Draft by Claude",
+   "fields": {
+    "role": "The village boy who leads the beating in the prologue."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Characters.docx"
+  },
+  {
+   "id": "broker",
+   "name": "Odile Sallow",
+   "status": "Draft by Claude",
+   "fields": {
+    "role": "The Ashford public information broker.",
+    "race": "Vulpine"
+   },
+   "text": [
+    "Fox-kin, sharp-dressed, and always with a second story ready. Calls every question a new crew asks \"stupid, basic, and naive\", and answers them anyway, for a price. Knows more about the missing merchant's daughter than she says."
+   ],
+   "sections": {},
+   "file": "Characters.docx"
+  },
+  {
+   "id": "merchant",
+   "name": "Hollis Tarrant",
+   "status": "Draft by Claude",
+   "fields": {
+    "role": "The wealthy merchant whose daughter is missing.",
+    "race": "Human"
+   },
+   "text": [
+    "A charge-lamp importer on Refinery Row, rich enough to pay and proud enough not to ask the Compact for help."
+   ],
+   "sections": {},
+   "file": "Characters.docx"
+  },
+  {
+   "id": "petra",
+   "name": "Petra Tarrant",
+   "status": "Draft by Claude",
+   "fields": {
+    "role": "The merchant's missing daughter.",
+    "race": "Human"
+   },
+   "text": [
+    "Went into the Undercourses after something she saw from her window. Alive, for now."
+   ],
+   "sections": {},
+   "file": "Characters.docx"
+  },
+  {
+   "id": "binder",
+   "name": "Binder Maren Quell",
+   "status": "Draft by Claude",
+   "fields": {
+    "role": "The licensed binder at the Compact's Binding House.",
+    "race": "Dwarf"
+   },
+   "text": [
+    "Has bound a thousand people and stopped promising any of them it won't hurt."
+   ],
+   "sections": {},
+   "file": "Characters.docx"
+  },
+  {
+   "id": "innkeeper",
+   "name": "Old Dunmore",
+   "status": "Draft by Claude",
+   "fields": {
+    "role": "Keeps the Lantern and Lee, the one inn on the quay that takes monsterkin.",
+    "race": "Half-Orc"
+   },
+   "text": [],
+   "sections": {},
+   "file": "Characters.docx"
+  },
+  {
+   "id": "rourke",
+   "name": "Captain Silvan Rourke",
+   "status": "Draft by Claude",
+   "fields": {
+    "role": "Captain of the first ship, the Gilded Tern. Leaves the heroes behind for nobles. Later revealed as the antagonist.",
+    "race": "Human"
+   },
+   "text": [
+    "Polished, generous in public, and paid twice for every berth."
+   ],
+   "sections": {},
+   "file": "Characters.docx"
+  },
+  {
+   "id": "noble",
+   "name": "Lady Celestine Varenne",
+   "status": "Draft by Claude",
+   "fields": {
+    "role": "The noble whose party takes the heroes' berths on the Gilded Tern.",
+    "race": "Human"
+   },
+   "text": [],
+   "sections": {},
+   "file": "Characters.docx"
+  },
+  {
+   "id": "old_gnaw",
+   "name": "Old Gnaw",
+   "status": "Draft by Claude",
+   "fields": {
+    "kind": "Creature",
+    "role": "The giant rat of the Undercourses. Chapter 1's first real fight."
+   },
+   "text": [],
+   "sections": {},
+   "file": "Characters.docx"
+  },
+  {
+   "id": "gloam",
+   "name": "the Gloam",
+   "status": "Draft by Claude",
+   "fields": {
+    "kind": "Creature",
+    "role": "The thing in the dark under Ashford. Much stronger than the rats; keeps out of the sunlight. Chapter 1's boss."
+   },
+   "text": [
+    "Brume pooled under Ashford for forty years of refinery run-off and woke up as something hungry. It can't bear a fixed light: sunlight settles it."
+   ],
+   "sections": {},
+   "file": "Characters.docx"
+  }
+ ]
+}

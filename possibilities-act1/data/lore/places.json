@@ -1,0 +1,179 @@
+{
+ "source": "Game lore",
+ "data": [
+  {
+   "id": "enkrid_village",
+   "name": "the village with no name",
+   "status": "Draft by Claude",
+   "fields": {
+    "kind": "Village",
+    "region": "The mainland plains"
+   },
+   "text": [
+    "A cluster of stone hovels on grassy plains that stretch with no end, around one communal fire. Its people have grey-green, stone-like skin; Enkrid, a road fae left among them, never looked like anyone. The Wright chapel at its edge is the only building with a clock."
+   ],
+   "sections": {},
+   "file": "Places.docx"
+  },
+  {
+   "id": "wright_chapel",
+   "name": "the Wright chapel",
+   "status": "Draft by Claude",
+   "fields": {
+    "kind": "Building"
+   },
+   "text": [
+    "Where Brother Ansel schools Enkrid for four years."
+   ],
+   "sections": {},
+   "file": "Places.docx"
+  },
+  {
+   "id": "ashford",
+   "name": "Ashford Roads",
+   "status": "Written",
+   "fields": {
+    "kind": "Port city",
+    "region": "The Reach",
+    "grade": "F"
+   },
+   "text": [
+    "The home port. A deepwater harbour, a Compact refinery running day and night, a Bench office, and eleven thousand people who mostly work for one or the other. Everything a crew needs is here, at a price, and everything they do is noticed. Everyone but the Compact calls it Ashford."
+   ],
+   "sections": {},
+   "file": "Places.docx"
+  },
+  {
+   "id": "coast_road",
+   "name": "the Coast Road",
+   "status": "Draft by Claude",
+   "fields": {
+    "kind": "Road"
+   },
+   "text": [
+    "The way into Ashford from the mainland, through the refinery's ash fields. Where the player character's story starts."
+   ],
+   "sections": {},
+   "file": "Places.docx"
+  },
+  {
+   "id": "sallows_exchange",
+   "name": "Sallow's Exchange",
+   "status": "Draft by Claude",
+   "fields": {
+    "kind": "Building"
+   },
+   "text": [
+    "The public information broker near the port: a counting-room full of pinned notices, a commissions board, and Odile Sallow at the high desk. Crews come here to find work, ships and each other."
+   ],
+   "sections": {},
+   "file": "Places.docx"
+  },
+  {
+   "id": "refinery_row",
+   "name": "Refinery Row",
+   "status": "Draft by Claude",
+   "fields": {
+    "kind": "District"
+   },
+   "text": [
+    "Ashford's rich street, built where the refinery's heat keeps the fog off. The Tarrant house is here."
+   ],
+   "sections": {},
+   "file": "Places.docx"
+  },
+  {
+   "id": "undercourses",
+   "name": "the Undercourses",
+   "status": "Draft by Claude",
+   "fields": {
+    "kind": "Dungeon",
+    "grade": "F"
+   },
+   "text": [
+    "Ashford's sewers: old stone culverts under Refinery Row, warm with refinery run-off, and full of rats. Chapter 1's dungeon. The outer tunnels stay open for rat culls after the chapter."
+   ],
+   "sections": {},
+   "file": "Places.docx"
+  },
+  {
+   "id": "grate_chamber",
+   "name": "the Grate Chamber",
+   "status": "Draft by Claude",
+   "fields": {
+    "kind": "Room"
+   },
+   "text": [
+    "A cistern under a street grate, deep in the Undercourses. Around midday one shaft of sunlight comes through the grate and crawls across the floor. The Gloam's lair."
+   ],
+   "sections": {},
+   "file": "Places.docx"
+  },
+  {
+   "id": "binding_house",
+   "name": "the Binding House",
+   "status": "Draft by Claude",
+   "fields": {
+    "kind": "Building"
+   },
+   "text": [
+    "The Compact's licensed binding hall, where brume possibility is bound into a person for a fee and they leave classed. The fee is cash or debt. Most leave with debt."
+   ],
+   "sections": {},
+   "file": "Places.docx"
+  },
+  {
+   "id": "lantern_lee",
+   "name": "the Lantern and Lee",
+   "status": "Draft by Claude",
+   "fields": {
+    "kind": "Inn"
+   },
+   "text": [
+    "The one inn on the quay that takes monsterkin, run by Old Dunmore. Cheap, loud, and warm."
+   ],
+   "sections": {},
+   "file": "Places.docx"
+  },
+  {
+   "id": "long_quay",
+   "name": "the Long Quay",
+   "status": "Draft by Claude",
+   "fields": {
+    "kind": "Dock"
+   },
+   "text": [
+    "Where the outbound ships berth, and where the Gilded Tern leaves without them."
+   ],
+   "sections": {},
+   "file": "Places.docx"
+  },
+  {
+   "id": "gilded_tern",
+   "name": "the Gilded Tern",
+   "status": "Draft by Claude",
+   "fields": {
+    "kind": "Ship"
+   },
+   "text": [
+    "Captain Rourke's ship, the first ship out. Fast, handsome, and full of nobles."
+   ],
+   "sections": {},
+   "file": "Places.docx"
+  },
+  {
+   "id": "coldwater",
+   "name": "Coldwater",
+   "status": "Written",
+   "fields": {
+    "kind": "Island",
+    "region": "The Reach"
+   },
+   "text": [
+    "Windward, rocky, salt and fish. Coldwater was the important island until the refinery went to Ashford, and has not forgiven it. Cheap berths, honest shipwrights, and a standing grievance a clever crew can use."
+   ],
+   "sections": {},
+   "file": "Places.docx"
+  }
+ ]
+}

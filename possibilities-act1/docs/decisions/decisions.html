@@ -1,0 +1,296 @@
+<title>Ashford Roads Decisions</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: a single reading column of decision cards under a sticky tab bar; sea-chart paper and brume grey with a copper compass accent. */
+:root {
+  --bg: #edf1ef; --surface: #fbfcfa; --ink: #142629; --muted: #566a6d; --line: #cfdad8;
+  --accent: #9a4a1c; --accent-soft: #f6e8de; --ok: #1b6c74; --ok-soft: #dcefef; --talk: #6a4fa3; --talk-soft: #ece6f7;
+  --display: "IM Fell English SC", "Iowan Old Style", Georgia, serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0a1618; --surface: #112326; --ink: #e0ebe9; --muted: #92a7a8; --line: #23393c;
+  --accent: #e8915a; --accent-soft: #2e1d13; --ok: #5cc0c6; --ok-soft: #10302f; --talk: #b9a3ec; --talk-soft: #241d38;
+  color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0a1618; --surface: #112326; --ink: #e0ebe9; --muted: #92a7a8; --line: #23393c;
+  --accent: #e8915a; --accent-soft: #2e1d13; --ok: #5cc0c6; --ok-soft: #10302f; --talk: #b9a3ec; --talk-soft: #241d38;
+  color-scheme: dark; }
+
+html, body { background: var(--bg); }
+body { color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 760px; margin: 0 auto; padding-block: 20px 64px; display: grid; gap: 18px; }
+h1 { font-family: var(--display); font-weight: 600; font-size: 1.7rem; letter-spacing: .04em; margin: 0; text-wrap: balance; }
+.lede { margin: 4px 0 0; color: var(--muted); max-width: 62ch; }
+.meter { display: grid; gap: 6px; }
+.meter-row { display: flex; justify-content: space-between; gap: 12px; font-size: .9rem; color: var(--muted); flex-wrap: wrap; }
+.meter-row b { color: var(--ink); font-family: var(--mono); font-weight: 500; }
+.bar { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.bar > span { display: block; height: 100%; background: var(--ok); width: 0; transition: width .3s; }
+.notice { border: 1px solid var(--line); background: var(--surface); padding: 10px 12px; border-radius: 6px; font-size: .92rem; }
+.notice[data-kind="warn"] { border-color: var(--accent); background: var(--accent-soft); }
+
+.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 2; background: var(--bg); padding-block: 8px;
+  display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; border-bottom: 1px solid var(--line); }
+.tab { flex: 0 0 auto; font: 600 .92rem var(--body); color: var(--muted); background: transparent; border: 1px solid transparent;
+  border-radius: 999px; padding: 6px 12px; cursor: pointer; display: inline-flex; gap: 6px; align-items: baseline; }
+.tab .n { font-family: var(--mono); font-size: .78rem; }
+.tab[aria-selected="true"] { color: var(--ink); background: var(--surface); border-color: var(--line); }
+.tab:focus-visible, button:focus-visible, textarea:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.toolbar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.toggle { display: inline-flex; gap: 8px; align-items: center; font-size: .92rem; color: var(--muted); cursor: pointer; }
+.toggle input { accent-color: var(--accent); width: 18px; height: 18px; }
+.link { color: var(--accent); font-weight: 600; text-decoration: none; font-size: .92rem; }
+.link:hover { text-decoration: underline; }
+.btn { font: 600 .9rem var(--body); border-radius: 6px; padding: 7px 12px; cursor: pointer; border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.bulk { display: none; gap: 8px; align-items: center; flex-wrap: wrap; font-size: .92rem; }
+.bulk.show { display: flex; }
+
+.group-head { font-family: var(--display); font-size: 1rem; letter-spacing: .05em; color: var(--muted); margin: 6px 0 -6px; }
+.cards { display: grid; gap: 14px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 14px 12px; display: grid; gap: 10px; min-width: 0; }
+.card-top { display: flex; gap: 10px; justify-content: space-between; align-items: flex-start; }
+.card h3 { margin: 0; font-size: 1.06rem; line-height: 1.3; text-wrap: balance; }
+.tag { font-family: var(--mono); font-size: .74rem; color: var(--muted); letter-spacing: .03em; text-transform: uppercase; display: block; margin-bottom: 2px; }
+.state { flex: 0 0 auto; font: 600 .74rem var(--body); text-transform: uppercase; letter-spacing: .06em; padding: 3px 8px; border-radius: 999px;
+  background: var(--bg); color: var(--muted); border: 1px solid var(--line); }
+.state[data-s="rec"], .state[data-s="alt"] { background: var(--ok-soft); color: var(--ok); border-color: transparent; }
+.state[data-s="talk"] { background: var(--talk-soft); color: var(--talk); border-color: transparent; }
+.context { margin: 0; color: var(--muted); font-size: .95rem; }
+.opts { display: grid; gap: 6px; }
+.opt { text-align: left; font: 400 .95rem/1.45 var(--body); color: var(--ink); background: transparent; border: 1px solid var(--line);
+  border-radius: 6px; padding: 9px 11px 9px 34px; cursor: pointer; position: relative; min-width: 0; overflow-wrap: anywhere; }
+.opt::before { content: ""; position: absolute; left: 11px; top: 12px; width: 13px; height: 13px; border-radius: 50%; border: 2px solid var(--line); box-sizing: border-box; }
+.opt .lbl { display: block; font: 600 .72rem var(--body); text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 1px; }
+.opt.rec { border-color: var(--accent); }
+.opt.rec .lbl { color: var(--accent); }
+.opt[aria-pressed="true"] { background: var(--ok-soft); border-color: var(--ok); }
+.opt[aria-pressed="true"]::before { border-color: var(--ok); background: var(--ok); box-shadow: inset 0 0 0 2px var(--surface); }
+.opt.talk[aria-pressed="true"] { background: var(--talk-soft); border-color: var(--talk); }
+.opt.talk[aria-pressed="true"]::before { border-color: var(--talk); background: var(--talk); }
+.opt:disabled { cursor: default; opacity: .75; }
+.note { display: grid; gap: 4px; }
+.note label { font-size: .8rem; color: var(--muted); }
+.note textarea { font: .95rem/1.4 var(--body); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 6px;
+  padding: 8px 10px; min-height: 2.6em; resize: vertical; width: 100%; box-sizing: border-box; }
+.saved { font-size: .78rem; color: var(--muted); min-height: 1em; }
+.empty { color: var(--muted); text-align: center; padding: 24px 0; }
+@media (prefers-reduced-motion: reduce) { .bar > span { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Ashford Roads Decisions</h1>
+    <p class="lede">Questions that flesh out the Wayfinder setting and the Foundry VTT version of Possibilities and Act 1, each with a recommendation. Tap an answer and it saves straight away; Claude reads the answers and updates the system and the module. Names and plot stay yours: every recommendation is a suggestion until you pick it.</p>
+  </header>
+
+  <section class="meter" aria-label="Progress">
+    <div class="meter-row"><span><b id="answered">0</b> of <b id="total">0</b> answered</span>
+      <span><b id="talks">0</b> to talk over</span></div>
+    <div class="bar" role="progressbar" aria-label="Answered" aria-valuemin="0" id="bar"><span></span></div>
+  </section>
+
+  <div class="notice" id="notice">Connecting to the answer store…</div>
+
+  <nav class="tabs" role="tablist" id="tabs"></nav>
+
+  <div class="toolbar">
+    <label class="toggle"><input type="checkbox" id="openOnly"> Show only open questions</label>
+    <span id="docLink"></span>
+  </div>
+  <div class="bulk" id="bulkRow">
+    <button class="btn" id="bulkAsk" type="button"></button>
+    <span id="bulkConfirm" hidden>Accept the recommendation for <b id="bulkN">0</b> open questions here?
+      <button class="btn primary" id="bulkYes" type="button">Accept them</button>
+      <button class="btn" id="bulkNo" type="button">Cancel</button></span>
+  </div>
+
+  <main class="cards" id="cards"></main>
+</div>
+
+<script type="application/json" id="decisions">[{"id": "tone-1", "page": "tone", "pageLabel": "Tone", "n": 1, "code": "", "group": "Your two words", "title": "What \"Dungeonpunk\" means in Wayfinder", "context": "Dungeonpunk usually means dungeon-crawling inside an industrial or post-industrial fantasy world, where delving is a job and the dungeons are often built things. Act 1's dungeon is already a sewer under a refinery district.", "recommended": "Dungeons are made by industry: sewers, refinery works, flooded pump-halls, Compact-licensed ruins, wrecked brume engines. Delving is a trade with brokers, permits, insurers and danger fees, and crews do it for the money.", "alternatives": ["Old-world dungeons (ruins from before the sea went unfixed) explored with gaslit-era gear", "Punk as attitude: dungeons are the places the Compact's order doesn't reach, and crews use them to live outside it", "A mix: industrial dungeons in the Reach, old-world ruins beyond Kelder's Wall"]}, {"id": "tone-2", "page": "tone", "pageLabel": "Tone", "n": 2, "code": "", "group": "Your two words", "title": "What \"Gaslit fantasy\" means in Wayfinder", "context": "Gaslamp fantasy is usually Victorian-era society with magic: gas streetlamps, fog, ledgers, class lines, newspapers. In Wayfinder the lamps already burn charge refined from brume.", "recommended": "Gaslamp-era society where the 'gas' is refined brume: charge-lamps on every street, refinery smoke, licences and ledgers, top hats and soot, class lines you can see. Magic is an industry and a profession, not a mystery.", "alternatives": ["Gaslit feel only in the cities; the sea and the islands are a frontier age of sail", "Gaslit as gothic mood (fog, unseen things, gaslight horror) more than as a technology level", "Closer to steampunk: brass machines and sky ships common, not rare"]}, {"id": "tone-3", "page": "tone", "pageLabel": "Tone", "n": 3, "code": "", "group": "Mood", "title": "How dark is Ashford?", "context": "Act 1 has three dead sellswords, prejudice at the gate, a girl held by a monster, and a painful binding. Influences you named include One Piece and Indiana Jones.", "recommended": "Grim streets, hopeful crew. The cruelty is systemic (the Compact, the Bench, how monsterkin and fae are treated) and the danger is real, but the story is about found family, wonder and getting out. Deaths happen off-screen or to strangers in Act 1.", "alternatives": ["Darker: gothic horror at the edges, the Gloam's victims shown, real fear", "Lighter: pulp adventure, villains are bad but fun, the sewer is more gross than scary"]}, {"id": "tone-4", "page": "tone", "pageLabel": "Tone", "n": 4, "code": "", "group": "Mood", "title": "How strange is the Gloam?", "context": "The script calls it 'something made of dark and teeth' that comes apart into warm grey fog in sunlight.", "recommended": "Uncanny, not gory: it moves wrong, sounds are muffled near it, the lamps don't light it, and it is never seen clearly until the sun holds it.", "alternatives": ["Body horror: something that was once people", "Animal: a huge, real beast that hates light"]}, {"id": "tone-5", "page": "tone", "pageLabel": "Tone", "n": 5, "code": "", "group": "Mood", "title": "Weather and light in Ashford", "context": "Places text: Refinery Row is built where the refinery's heat keeps the fog off.", "recommended": "Fog rolls in off the brume every night and burns off by mid-morning everywhere except Refinery Row, which stays clear and warm. Night streets are pools of amber charge-light in grey.", "alternatives": ["Permanent haze, sunlight is rare (which makes the Grate Chamber's sunbeam special)", "Clear sea air; the fog is only out on the water"]}, {"id": "tone-6", "page": "tone", "pageLabel": "Tone", "n": 6, "code": "", "group": "Mood", "title": "Humour", "context": "The broker, Tova and Rook already trade dry jokes in the drafted scenes.", "recommended": "Keep the banter: dry, quick, character-led, never undercutting a serious beat.", "alternatives": ["More comic, closer to One Piece", "Less: keep jokes to a line or two per scene"]}, {"id": "world-1", "page": "world", "pageLabel": "World", "n": 1, "code": "", "group": "Brume and charge", "title": "What brume is", "context": "Lore: the sea is covered in brume; it is 'unfixed'; binding puts brume possibility into a person; the refinery burns 'the unfixed sea for fuel'.", "recommended": "A grey fog of unfixed Possibility lying on the open sea. Breathed in deep water it slowly unwrites things that aren't bound; refined, it becomes charge; bound into a person, it becomes their class and grade.", "alternatives": ["A substance in the water itself, the fog is only its breath", "Something nobody understands; the Compact's explanation is propaganda", "You'll write it; keep it vague in Act 1"]}, {"id": "world-2", "page": "world", "pageLabel": "World", "n": 2, "code": "", "group": "Brume and charge", "title": "What charge is and what it powers", "context": "Tinker works with 'mechanisms, clockwork, charge'; the merchant has 'charge-lamp money'; the loaners include a charge lamp.", "recommended": "Refined brume sealed in glass cells. It lights lamps, runs lifts, pumps and engines, and drives Artifice spells. Charge cells are graded like everything else, and a full F-grade cell costs about a day's wage.", "alternatives": ["Charge is rare and expensive: only the rich have charge-lamps, everyone else burns oil", "Charge is liquid, piped through cities like gas"]}, {"id": "world-3", "page": "world", "pageLabel": "World", "n": 3, "code": "", "group": "Brume and charge", "title": "Sky ships", "context": "Enkrid's prologue sparks his dream of the sky ship; influences.md puts it as the mid-to-late game reward.", "recommended": "They exist but almost nobody has seen one: the legends' expedition was rumoured to use the inventor's brume engine to fly. In Act 1 they are a dream and a rumour.", "alternatives": ["The Compact has a few; you see one over Ashford in Act 1", "None exist yet; the inventor's watch is a clue to building the first"]}, {"id": "world-4", "page": "world", "pageLabel": "World", "n": 4, "code": "", "group": "Powers in Ashford", "title": "The Compact", "context": "Lore: the Compact owns the refinery, the licences and most of the captains; licensed binding carries a debt to it; it writes 'Monster' on manifests.", "recommended": "A chartered trading company that became a government in all but name: refinery, licences, insurance, wardens, debt. Polite, legal and merciless. In Act 1 it is everywhere but never the villain on screen.", "alternatives": ["A league of noble houses that share a charter", "A guild of binders that grew into an empire"]}, {"id": "world-5", "page": "world", "pageLabel": "World", "n": 5, "code": "", "group": "Powers in Ashford", "title": "The Bench", "context": "Lore: 'The Bench owns the charts.' Rook comes from an old Bench family and was raised to copy charts, never draw one.", "recommended": "The courts and record-keepers of the Reach: charts, deeds, inheritances and contracts. Bench families are old money that holds the maps, and a chart isn't true until the Bench stamps it.", "alternatives": ["A scholars' academy that controls cartography", "A religious order of record-keepers"]}, {"id": "world-6", "page": "world", "pageLabel": "World", "n": 6, "code": "", "group": "Powers in Ashford", "title": "The Wrights", "context": "Enkrid is schooled at a Wright chapel by Brother Ansel; it's the only building in his village with a clock.", "recommended": "A faith of makers who teach that the world was wrought, and that fixing things is holy. Chapels keep the clocks and the schools. Tinkers are often Wright-raised.", "alternatives": ["A minor sect, not a main religion", "The main church of the mainland, rich and political"]}, {"id": "world-7", "page": "world", "pageLabel": "World", "n": 7, "code": "", "group": "Powers in Ashford", "title": "Law on the streets", "context": "At the gate a guard asks a monsterkin PC for 'surety' to stay overnight.", "recommended": "Two forces: the city Watch (underpaid, answers to the Bench) and Compact Wardens (well paid, answer to the refinery). The surety bond for monsterkin is Compact policy the Watch enforces.", "alternatives": ["Only Compact Wardens", "A city Watch only; the Compact uses hired sellswords"]}, {"id": "world-8", "page": "world", "pageLabel": "World", "n": 8, "code": "", "group": "The sea", "title": "Kelder's Wall", "context": "Lore: the legends sailed 'out past Kelder's Wall, eight years ago'.", "recommended": "The edge of the charted Reach: a standing bank of brume that never lifts, graded far above anything in the Reach. Ships that go past it rarely come back.", "alternatives": ["A real wall: an ancient sea-wall of stone across the water", "A Compact blockade line"]}, {"id": "world-9", "page": "world", "pageLabel": "World", "n": 9, "code": "", "group": "The sea", "title": "Why insurers matter", "context": "Lore: unclassed crew can't sail because insurers won't cover them.", "recommended": "The Compact underwrites every voyage out of Ashford. No policy, no berth, no harbour will take you. That's the real reason class is a gate.", "alternatives": ["Independent underwriters' houses that compete", "No insurers; it's a captain's superstition"]}, {"id": "world-10", "page": "world", "pageLabel": "World", "n": 10, "code": "", "group": "People", "title": "How fae are treated", "context": "Lore: 'Fae are closer to unfixed than anyone alive'; Enkrid is a road fae ('Skirl' in the Reach); a mother pulls her child's arm down.", "recommended": "Distrusted, not hated: people think fae leak Possibility and bring bad luck aboard. Polite avoidance, higher prices, captains who 'have no berths'. Binding hits fae harder (Enkrid collapses).", "alternatives": ["Openly persecuted", "Exotic: welcomed as lucky by sailors, distrusted by the Compact"]}, {"id": "world-11", "page": "world", "pageLabel": "World", "n": 11, "code": "", "group": "People", "title": "How monsterkin are treated", "context": "Lore: the Compact writes 'Monster' on manifests; one inn on the quay takes them; Tova is paid less than humans.", "recommended": "Legal second-class: surety bonds, one inn, lower wages, written policy. Plenty of ordinary people are kind one-to-one; the system isn't.", "alternatives": ["Worse: barred from the city after dark", "Milder: it's mostly the Compact's paperwork"]}, {"id": "world-12", "page": "world", "pageLabel": "World", "n": 12, "code": "", "group": "People", "title": "Who lives in Ashford", "context": "Ashford has 11,000 people. The drafted NPCs are Human, Vulpine, Dwarf and Half-Orc.", "recommended": "Mostly Founding peoples (humans, dwarves, half-orcs), a big beastkin quarter by the fish market, few fae, and monsterkin only on the quay.", "alternatives": ["Very mixed, a true crossroads port", "Mostly humans; everyone else is visibly a visitor"]}, {"id": "world-13", "page": "world", "pageLabel": "World", "n": 13, "code": "", "group": "Money", "title": "Coin names", "context": "The rules use cp / sp / gp / pp with prices x3 per grade. The broker says questions will cost 'a silver each'.", "recommended": "Keep cp/sp/gp/pp in the rules and on sheets, with Reach names in the text: copper bits, silver marks, gold crowns, platinum charters.", "alternatives": ["Use the plain D&D names everywhere", "Compact scrip as paper money on top of coin"]}, {"id": "story-1", "page": "story", "pageLabel": "Act 1", "n": 1, "code": "", "group": "Names still marked Draft", "title": "Protagonist 2 and 3's names", "context": "The deck leaves them TBD. The Game lore drafts call them Rook (Corvine) and Tova (Trollblood). The module uses whatever the lore says, so renaming is one edit.", "recommended": "Keep Rook and Tova as working names until you choose.", "alternatives": ["Rename them now (write the names in the note)", "Let the player name them in play"]}, {"id": "story-2", "page": "story", "pageLabel": "Act 1", "n": 2, "code": "", "group": "Names still marked Draft", "title": "The other drafted names", "context": "Draft by Claude: Odile Sallow (broker), Hollis and Petra Tarrant, Binder Maren Quell, Old Dunmore, Captain Silvan Rourke, Lady Celestine Varenne, Captain Isolde Varr, Elian Marsh, Aurelio Fenn, Brother Ansel, Dov, Old Gnaw, the Gloam.", "recommended": "Keep them as placeholders; rename any in the note and the module follows.", "alternatives": ["Replace them all before I play (list your names in the note)"]}, {"id": "story-3", "page": "story", "pageLabel": "Act 1", "n": 3, "code": "", "group": "The commission", "title": "What Petra saw from her window", "context": "Script: 'She saw something from her window and went to look. Rich girls do.'", "recommended": "Grey fog moving against the wind out of the street grates at night, and a light under the street where no one should be. A hook for what the refinery dumps below.", "alternatives": ["A person she knew going down the culvert hatch", "Leave it a mystery Petra won't explain"]}, {"id": "story-4", "page": "story", "pageLabel": "Act 1", "n": 4, "code": "", "group": "The commission", "title": "What the Gloam is", "context": "It avoids sunlight and comes apart into warm grey fog that settles in the water when the light holds it.", "recommended": "Brume run-off from the refinery that pooled in the dark for forty years until it started wanting. Sunlight fixes it and it falls apart. Nobody in Ashford wants that known, which quietly sets up the Compact.", "alternatives": ["A failed, unlicensed binding: something that was a person", "An animal of the unfixed sea that came up the outflow", "Leave it unexplained in Act 1"]}, {"id": "story-5", "page": "story", "pageLabel": "Act 1", "n": 5, "code": "", "group": "The commission", "title": "Did the broker know?", "context": "Script: Odile 'suspected'. The danger fee is pressed out of her.", "recommended": "She suspected from the sellswords' silence and Petra's story, and sent the cheapest crew she could find. Not evil, a broker.", "alternatives": ["She knew exactly, and someone paid her to keep it quiet", "She had no idea"]}, {"id": "story-6", "page": "story", "pageLabel": "Act 1", "n": 6, "code": "", "group": "The commission", "title": "How Hollis Tarrant pays", "context": "The fee must be 'enough to bind four' minus the loaner bill, topped up by the danger fee.", "recommended": "He pays in full and in public, so Refinery Row sees he's generous, and asks them never to mention where Petra was found.", "alternatives": ["He haggles and pays short", "He pays through the broker, who takes her cut"]}, {"id": "story-7", "page": "story", "pageLabel": "Act 1", "n": 7, "code": "", "group": "The commission", "title": "The three dead sellswords", "context": "Three Coldwater sellswords went in six days before. Their journal says 'Lamps don't scare it. Light does.'", "recommended": "Give them names in the journal (Draft) and a Coldwater crew mark, so Coldwater can come back later. Their journal is a handout.", "alternatives": ["Keep them nameless", "One survived and is still down there"]}, {"id": "story-8", "page": "story", "pageLabel": "Act 1", "n": 8, "code": "", "group": "The prologue", "title": "The pocket watch's engraving", "context": "The script leaves this for you: 'Close-up on the engraving (the user to write what it says)'.", "recommended": "You write it. Until then the flashback and the item show a blank engraving line you fill in once on the item.", "alternatives": ["'Keep time for what matters'", "Coordinates or a date only the inventor understood", "A single word in the inventor's own script"]}, {"id": "story-9", "page": "story", "pageLabel": "Act 1", "n": 9, "code": "", "group": "The prologue", "title": "How the flashback plays at the table", "context": "The prologue plays when Enkrid takes out the watch on the Exchange steps.", "recommended": "Read-aloud with a sepia journal page, played as narration with one or two choices for young Enkrid (no dice), then back to the steps.", "alternatives": ["Played as a short scene with young-Enkrid stats", "Skippable narration only"]}, {"id": "story-10", "page": "story", "pageLabel": "Act 1", "n": 10, "code": "", "group": "The player character", "title": "Who your character is in Act 1", "context": "The JRPG plan: a fourth traveller in Ashford also trying to earn a class and passage, with an intro by race family.", "recommended": "Same as the JRPG: you make one custom character, the trio are fixed characters you also run, and your character's intro depends on their race family.", "alternatives": ["You play Enkrid as the main character instead", "All four are yours to build"]}, {"id": "story-11", "page": "story", "pageLabel": "Act 1", "n": 11, "code": "", "group": "The player character", "title": "Your character's reason to need a ship", "context": "The broker asks: 'I'm here for a ship' or 'I'm here for work'.", "recommended": "Leave it to you at character creation: a short 'Why I need a ship' line on the sheet that the journal prompts refer back to.", "alternatives": ["Offer four ready-made reasons (debt, a lost sibling, exile, a map)", "No fixed reason; it comes out in play"]}, {"id": "story-12", "page": "story", "pageLabel": "Act 1", "n": 12, "code": "", "group": "Binding", "title": "What binding feels and looks like", "context": "Script: a white hall, brass coils, glass cylinders of warm grey brume; it hurts; fae take in more than they should.", "recommended": "The brume goes in through the hands and chest; everything goes white and too-sharp for a moment; it leaves a faint grey vein mark (the 'binding mark') that darkens with each grade.", "alternatives": ["No visible mark", "A Compact tattoo/brand recording the debt, even when paid in cash"]}, {"id": "story-13", "page": "story", "pageLabel": "Act 1", "n": 13, "code": "", "group": "Binding", "title": "The binding fee", "context": "Must make the money tight: reward + danger fee − loaner bill = exactly four bindings. Default in the module: 50 gp each (200 gp), reward 160 gp, loaner bill 30 gp, danger fee 70 gp.", "recommended": "50 gp per F-grade binding, x3 per grade after (150 gp at E), with the numbers above.", "alternatives": ["Cheaper (20 gp each), so the money is about pride more than survival", "Dearer (100 gp each), and the danger fee becomes the real climax"]}, {"id": "story-14", "page": "story", "pageLabel": "Act 1", "n": 14, "code": "", "group": "The missed ship", "title": "How much Rourke shows in Act 1", "context": "Rourke is later revealed as the antagonist (a mid-level grunt of the series villain).", "recommended": "Charming and reasonable on the quay; one detail that sticks (his crew is armed like mercenaries, not sailors) that pays off on island 3.", "alternatives": ["Visibly cruel already", "Barely seen; the noble is the face of the snub"]}, {"id": "story-15", "page": "story", "pageLabel": "Act 1", "n": 15, "code": "", "group": "The missed ship", "title": "How Act 1 ends at the table", "context": "The demo ends with the Gilded Tern leaving and a title card; the Second Captain opens Act 2.", "recommended": "The Tern leaves; a last read-aloud; then one line where a scruffy captain on the next berth has been watching them. Title card. My Story asks you to write the end of Act 1.", "alternatives": ["End on the Tern leaving, nothing more", "Play the Second Captain's offer as an epilogue"]}, {"id": "story-16", "page": "story", "pageLabel": "Act 1", "n": 16, "code": "", "group": "Pacing", "title": "How many days Act 1 covers", "context": "The JRPG uses a calendar; Act 1 is one city chapter.", "recommended": "Four days: arrive and take the job (day 1), the Undercourses (day 2, the Gloam at noon), paid and bound (day 3), the missed ship (day 4 morning).", "alternatives": ["One long day and a morning", "A week, with time for the broker's board between beats"]}, {"id": "story-17", "page": "story", "pageLabel": "Act 1", "n": 17, "code": "", "group": "Pacing", "title": "Side work in Act 1", "context": "The JRPG has filler after the commission: the broker's board, rat culls, the training yard, gathering, journal page 1.", "recommended": "Include the broker's board (a few F-grade jobs as a roll table) and the outer Undercourses rat cull as optional, off by default in the Director.", "alternatives": ["None; keep Act 1 tight", "All of the JRPG's filler"]}, {"id": "story-18", "page": "story", "pageLabel": "Act 1", "n": 18, "code": "", "group": "Pacing", "title": "The legends' journal page 1", "context": "The JRPG plans a trail of the legends' lost journal pages, page 1 somewhere in Ashford.", "recommended": "Hide it in Act 1 at the Lantern and Lee (Dunmore kept a page Captain Varr left with a bar tab). You write its text; the module has a blank handout.", "alternatives": ["Leave it for Act 2", "In the Undercourses, among the sellswords' things"]}, {"id": "play-1", "page": "play", "pageLabel": "Playing it", "n": 1, "code": "", "group": "How you'll play", "title": "Who's at the table", "context": "You said you want to play through it and write your story.", "recommended": "Solo: you run the world as GM and play all four heroes. The Act 1 Director shows the next beat, posts read-aloud and opens the right map, so you rarely need the journals mid-scene.", "alternatives": ["You GM for a group; players take the heroes", "Solo with a GM emulator (oracle rolls for yes/no questions)"]}, {"id": "play-2", "page": "play", "pageLabel": "Playing it", "n": 2, "code": "", "group": "How you'll play", "title": "An oracle for solo play", "context": "Solo players often use a yes/no oracle to answer questions the script doesn't cover.", "recommended": "Add a small oracle macro: ask a question, pick likely/even/unlikely, get Yes / Yes, and / Yes, but / No, but / No / No, and.", "alternatives": ["No oracle; follow the script", "A fuller emulator with random events"]}, {"id": "play-3", "page": "play", "pageLabel": "Playing it", "n": 3, "code": "", "group": "How you'll play", "title": "Read-aloud", "context": "The lore has full scripts with speakers, stage notes and choices.", "recommended": "Post read-aloud lines to chat as the speaker (with their portrait), one tap per block, so the chat log becomes the story so far.", "alternatives": ["Read from the journal only", "Show the script as a popup for a second screen"]}, {"id": "play-4", "page": "play", "pageLabel": "Playing it", "n": 4, "code": "", "group": "How you'll play", "title": "Dice", "context": "Foundry rolls dice for you; some players like real dice.", "recommended": "Foundry dice by default, with an 'enter my own roll' option on every check.", "alternatives": ["Foundry dice only", "Always ask for my roll"]}, {"id": "play-5", "page": "play", "pageLabel": "Playing it", "n": 5, "code": "", "group": "Writing your story", "title": "How My Story works", "context": "The module has a My Story journal: one page per beat with a prompt, plus a session log the module appends to.", "recommended": "Keep that: a prompt per beat (what your character said, what changed, a line to remember), the Director's 'Write this beat' button, and an automatic session log of what happened.", "alternatives": ["One free page; no prompts", "Prompts plus a chat-log export into the journal at the end of each session"]}, {"id": "play-6", "page": "play", "pageLabel": "Playing it", "n": 6, "code": "", "group": "Writing your story", "title": "Where your story goes afterwards", "context": "You keep the book's lore in the Game lore Word folder in OneDrive.", "recommended": "Add a 'Copy my story' button that turns My Story into clean text you can paste into Word.", "alternatives": ["Leave it in Foundry", "Export straight to a .docx file"]}, {"id": "play-7", "page": "play", "pageLabel": "Playing it", "n": 7, "code": "", "group": "Maps", "title": "Maps or theatre of the mind", "context": "The module ships generated maps for the city, the Exchange, the Undercourses, the Grate Chamber, the Binding House, the inn and the quay.", "recommended": "Battle maps for the two fights and the Scene; the rest as scene art you can use or ignore.", "alternatives": ["Battle maps for every location", "Theatre of the mind only; maps as handouts"]}, {"id": "play-8", "page": "play", "pageLabel": "Playing it", "n": 8, "code": "", "group": "Maps", "title": "Zones on a grid", "context": "Possibilities uses four zones (Engaged, Near, Far, Distant), not squares.", "recommended": "Track zones on the sheets; the grid is only for placing tokens so the picture reads.", "alternatives": ["Convert zones to squares (Engaged 1, Near 6, Far 12)", "Draw zone regions on each map"]}, {"id": "play-9", "page": "play", "pageLabel": "Playing it", "n": 9, "code": "", "group": "Difficulty", "title": "How hard should Act 1 be", "context": "Unclassed heroes have about 6 HP each. The Gloam's first fight is a scripted loss.", "recommended": "Fair but tense: Old Gnaw can drop one hero if you're careless; nobody dies in Act 1 unless you turn on the Undertaking setting.", "alternatives": ["Story-light: fights are short", "Harsh: death is possible from the first rat"]}, {"id": "rules-1", "page": "rules", "pageLabel": "Rules gaps", "n": 1, "code": "", "group": "Gaps in the rules the system had to fill", "title": "Raise Guard", "context": "The JRPG lists Raise Guard as an action; the effect isn't in the imported data.", "recommended": "1 action: +2 AC until the start of your next turn.", "alternatives": ["2 actions: +4 AC", "Use the workbook's Combat Reference text (paste it in the note)"]}, {"id": "rules-2", "page": "rules", "pageLabel": "Rules gaps", "n": 2, "code": "", "group": "Gaps in the rules the system had to fill", "title": "Aid", "context": "Aid is one of the three things unclassed heroes can do.", "recommended": "1 action: an ally within Near gets +2 on their next check this round.", "alternatives": ["Roll a DC 12 check: success +2, critical +4, critical failure −1", "Use the workbook's text (note)"]}, {"id": "rules-3", "page": "rules", "pageLabel": "Rules gaps", "n": 3, "code": "", "group": "Gaps in the rules the system had to fill", "title": "Stabilise", "context": "The JRPG decision: anyone can Stabilise for 1 action; 'the most valuable action'.", "recommended": "Automatic for an Engaged ally at 0 HP; they stop Dying and stay at 0 HP.", "alternatives": ["A Medicine check vs DC 12", "Automatic, and restores 1 HP"]}, {"id": "rules-4", "page": "rules", "pageLabel": "Rules gaps", "n": 4, "code": "", "group": "Gaps in the rules the system had to fill", "title": "Recovery checks while Dying", "context": "Tabletop: three failed recovery checks in one fight kills. The check's DC isn't in the data.", "recommended": "At the start of each turn: d20 + CON save vs DC 12. Success = stable; three failures = dead (or Defeated with the Undertaking setting off).", "alternatives": ["A flat d20 vs 10", "Use the workbook's text (note)"]}, {"id": "rules-5", "page": "rules", "pageLabel": "Rules gaps", "n": 5, "code": "", "group": "Gaps in the rules the system had to fill", "title": "Possibility points pool", "context": "Signatures and spells cost points (tier = cost) from a pool; its size isn't imported.", "recommended": "3 + Combat EL, refilled on a long rest.", "alternatives": ["Casting modifier + Combat EL", "Use the workbook's Spells & Techniques sheet value (note)"]}, {"id": "rules-6", "page": "rules", "pageLabel": "Rules gaps", "n": 6, "code": "", "group": "Gaps in the rules the system had to fill", "title": "Profession signatures before binding", "context": "Professions have signatures too (Smith: Sound Repair). Unclassed heroes have professions in full.", "recommended": "Usable before binding, from the same pool (3 points when unclassed).", "alternatives": ["Not until bound", "Free once per Scene"]}, {"id": "rules-7", "page": "rules", "pageLabel": "Rules gaps", "n": 7, "code": "", "group": "Gaps in the rules the system had to fill", "title": "Scenes: when a Setback hits", "context": "Scenes run on Resistance, Setbacks and Full/Half/None approaches.", "recommended": "On a critical failure always, on a failure when the approach says so, and once at the end of every round the clock moves.", "alternatives": ["Only on failures", "Only at the end of each round"]}, {"id": "rules-8", "page": "rules", "pageLabel": "Rules gaps", "n": 8, "code": "", "group": "Gaps in the rules the system had to fill", "title": "Short rests", "context": "Hit dice exist (hit dice = Combat EL × the class die) but the rest rules aren't imported.", "recommended": "A short rest (one watch) spends hit dice: roll each, add CON mod. A long rest restores everything.", "alternatives": ["Short rests restore half HP", "No short rests in Act 1"]}, {"id": "rules-9", "page": "rules", "pageLabel": "Rules gaps", "n": 9, "code": "", "group": "Gaps in the rules the system had to fill", "title": "Unarmed and improvised weapons", "context": "The damage formula needs a weapon die.", "recommended": "Unarmed d4; improvised d4 with −2 to hit unless your profession uses the tool (a Tinker with a pry bar uses it at d6).", "alternatives": ["Unarmed d4, improvised d6, no penalty"]}, {"id": "rules-10", "page": "rules", "pageLabel": "Rules gaps", "n": 10, "code": "", "group": "Gaps in the rules the system had to fill", "title": "XP in Act 1", "context": "XP to next rank = 50 × EL². Unclassed heroes have no class XP to earn.", "recommended": "Track profession XP from Scenes, and give a milestone at the end of Act 1; class XP starts after binding.", "alternatives": ["Award XP per challenge exactly as the workbook (8 challenges per rank)", "No XP in Act 1"]}, {"id": "look-1", "page": "look", "pageLabel": "Look", "n": 1, "code": "", "group": "Look and feel", "title": "Visual touchstones", "context": "The sheets and maps use soot, brass, verdigris and charge-lamp amber.", "recommended": "Victorian dockside and refinery, wet stone undercity, brass instruments, ledgers and wax seals. Think Dishonored's streets and Arcane's undercity, kept your own.", "alternatives": ["Brighter: sun-bleached port, the gloom only underground", "Name your own touchstones in the note"]}, {"id": "look-2", "page": "look", "pageLabel": "Look", "n": 2, "code": "", "group": "Look and feel", "title": "Portraits", "context": "The module ships generated silhouette portraits in brass frames as placeholders.", "recommended": "Keep the silhouettes until you have art; every portrait is one image you can swap on the actor.", "alternatives": ["Use your own images now (tell me where they are)", "No portraits; names only"]}, {"id": "look-3", "page": "look", "pageLabel": "Look", "n": 3, "code": "", "group": "Look and feel", "title": "Music", "context": "Foundry can play a playlist per scene. Nothing is bundled.", "recommended": "An empty playlist per location (Ashford, the Exchange, the Undercourses, the Gloam, the Binding House, the inn, the quay) for your own tracks.", "alternatives": ["No playlists", "Point me at a music folder to wire in"]}]</script>
+<script>
+(function () {
+  const DECISIONS = JSON.parse(document.getElementById("decisions").textContent);
+  const PAGES = [{"key": "all", "label": "All"}, {"key": "tone", "label": "Tone"}, {"key": "world", "label": "World"}, {"key": "story", "label": "Act 1"}, {"key": "play", "label": "Playing it"}, {"key": "rules", "label": "Rules gaps"}, {"key": "look", "label": "Look"}];
+  const REPO = "";
+  const answers = {};          // id -> {choice, note, at}
+  let db = null, canWrite = false, tab = "all";
+  const pending = {};          // id -> queued body (one write at a time per doc)
+  const busy = {};
+
+  try { const t = localStorage.getItem("ard.tab"); if (t && PAGES.some(p => p.key === t)) tab = t; } catch (e) {}
+  try { document.getElementById("openOnly").checked = localStorage.getItem("ard.open") === "1"; } catch (e) {}
+
+  const $ = id => document.getElementById(id);
+  function el(tag, attrs, kids) {
+    const n = document.createElement(tag);
+    for (const k in attrs || {}) {
+      if (k === "text") n.textContent = attrs[k];
+      else if (k === "class") n.className = attrs[k];
+      else n.setAttribute(k, attrs[k]);
+    }
+    (kids || []).forEach(c => c && n.appendChild(c));
+    return n;
+  }
+  function choiceKind(c) { return !c ? "" : c === "rec" ? "rec" : c === "talk" ? "talk" : "alt"; }
+  function stateLabel(c) { return { "": "Open", rec: "Recommended", alt: "Alternative", talk: "Talk it over" }[choiceKind(c)]; }
+
+  function renderTabs() {
+    const nav = $("tabs"); nav.textContent = "";
+    PAGES.forEach(p => {
+      const list = p.key === "all" ? DECISIONS : DECISIONS.filter(d => d.page === p.key);
+      const open = list.filter(d => !answers[d.id] || !answers[d.id].choice).length;
+      const b = el("button", { class: "tab", role: "tab", type: "button", "aria-selected": String(p.key === tab) },
+        [el("span", { text: p.label }), el("span", { class: "n", text: open ? open + " open" : "done" })]);
+      b.addEventListener("click", () => { tab = p.key; try { localStorage.setItem("ard.tab", tab); } catch (e) {} render(); });
+      nav.appendChild(b);
+    });
+  }
+
+  function renderMeter() {
+    const done = DECISIONS.filter(d => answers[d.id] && answers[d.id].choice && answers[d.id].choice !== "talk").length;
+    const talks = DECISIONS.filter(d => answers[d.id] && answers[d.id].choice === "talk").length;
+    $("answered").textContent = done; $("total").textContent = DECISIONS.length; $("talks").textContent = talks;
+    $("bar").setAttribute("aria-valuemax", DECISIONS.length); $("bar").setAttribute("aria-valuenow", done);
+    $("bar").firstElementChild.style.width = (100 * done / DECISIONS.length) + "%";
+  }
+
+  function card(d) {
+    const a = answers[d.id] || {};
+    const tagText = d.pageLabel + " " + d.n + (d.code ? " · " + d.code : "");
+    const state = el("span", { class: "state", "data-s": choiceKind(a.choice), text: stateLabel(a.choice) });
+    const top = el("div", { class: "card-top" }, [
+      el("div", {}, [el("span", { class: "tag", text: tagText }), el("h3", { text: d.title })]), state]);
+    const kids = [top];
+    if (d.context) kids.push(el("p", { class: "context", text: d.context }));
+    const opts = el("div", { class: "opts", role: "group", "aria-label": "Answer" });
+    const mk = (value, label, text, cls) => {
+      const b = el("button", { class: "opt " + (cls || ""), type: "button", "aria-pressed": String(a.choice === value) },
+        [el("span", { class: "lbl", text: label }), document.createTextNode(text)]);
+      b.disabled = !canWrite;
+      b.addEventListener("click", () => choose(d.id, a.choice === value ? "" : value));
+      return b;
+    };
+    opts.appendChild(mk("rec", "Recommended · go with this", d.recommended, "rec"));
+    d.alternatives.forEach((t, i) => opts.appendChild(mk("alt" + i, "Instead", t)));
+    opts.appendChild(mk("talk", "Not yet", "Talk it over with Claude first", "talk"));
+    kids.push(opts);
+    const ta = el("textarea", { id: "note-" + d.id, rows: "2", placeholder: "Anything to add or change? (optional)" });
+    ta.value = a.note || ""; ta.disabled = !canWrite;
+    let t = null;
+    const flush = () => { clearTimeout(t); if ((answers[d.id] || {}).note !== ta.value) saveNote(d.id, ta.value); };
+    ta.addEventListener("input", () => { clearTimeout(t); t = setTimeout(flush, 900); });
+    ta.addEventListener("blur", flush);
+    kids.push(el("div", { class: "note" }, [el("label", { for: "note-" + d.id, text: "Your note" }), ta]));
+    kids.push(el("div", { class: "saved", id: "saved-" + d.id, "aria-live": "polite" }));
+    return el("article", { class: "card", id: "card-" + d.id }, kids);
+  }
+
+  function render() {
+    renderTabs(); renderMeter();
+    const openOnly = $("openOnly").checked;
+    let list = tab === "all" ? DECISIONS : DECISIONS.filter(d => d.page === tab);
+    const openHere = list.filter(d => !answers[d.id] || !answers[d.id].choice);
+    if (openOnly) list = openHere;
+    const page = PAGES.find(p => p.key === tab);
+    const dl = $("docLink"); dl.textContent = "";
+    if (page.file && REPO) dl.appendChild(el("a", { class: "link", href: REPO + page.file, target: "_blank", rel: "noopener", text: "Read the full " + page.label.toLowerCase() + " page ↗" }));
+    const bulk = $("bulkRow");
+    bulk.classList.toggle("show", canWrite && tab !== "all" && openHere.length > 0);
+    $("bulkAsk").textContent = "Accept every open recommendation in " + page.label;
+    $("bulkN").textContent = openHere.length;
+    const root = $("cards"); root.textContent = "";
+    if (!list.length) { root.appendChild(el("p", { class: "empty", text: "Nothing open here. Every question in this tab has an answer." })); return; }
+    let lastGroup = null;
+    list.forEach(d => {
+      const g = tab === "all" ? d.pageLabel : d.group;
+      if (g && g !== lastGroup) { root.appendChild(el("h2", { class: "group-head", text: g })); lastGroup = g; }
+      root.appendChild(card(d));
+    });
+  }
+
+  function markSaved(id, text) { const s = $("saved-" + id); if (s) s.textContent = text; }
+
+  async function write(id) {
+    if (busy[id]) return;
+    busy[id] = true;
+    try {
+      while (pending[id]) {
+        const body = pending[id]; delete pending[id];
+        try { await db.doc("answers/" + id).set(body); markSaved(id, "Saved"); }
+        catch (e) {
+          if (e && e.code === "invalid_argument") { canWrite = false; showNotice("warn", "This view can read the answers but not change them."); render(); }
+          else if (e && e.code === "quota_exceeded") showNotice("warn", "The answer store is full, so this answer wasn't saved.");
+          else markSaved(id, "Not saved. Try again in a moment.");
+          break;
+        }
+      }
+    } finally { busy[id] = false; }
+  }
+  function store(id, body) {
+    answers[id] = body;
+    if (!db) return;
+    pending[id] = body; markSaved(id, "Saving…"); write(id);
+  }
+  function choose(id, choice) {
+    const prev = answers[id] || {};
+    store(id, { choice: choice, note: prev.note || "", at: new Date().toISOString() });
+    render();
+    const c = $("card-" + id); if (c) c.querySelector(".opt[aria-pressed='true']")?.focus({ preventScroll: true });
+  }
+  function saveNote(id, note) {
+    const prev = answers[id] || {};
+    store(id, { choice: prev.choice || "", note: note, at: new Date().toISOString() });
+    renderMeter();
+  }
+
+  $("openOnly").addEventListener("change", () => { try { localStorage.setItem("ard.open", $("openOnly").checked ? "1" : "0"); } catch (e) {} render(); });
+  $("bulkAsk").addEventListener("click", () => { $("bulkConfirm").hidden = false; $("bulkAsk").hidden = true; });
+  $("bulkNo").addEventListener("click", () => { $("bulkConfirm").hidden = true; $("bulkAsk").hidden = false; });
+  $("bulkYes").addEventListener("click", () => {
+    const list = DECISIONS.filter(d => d.page === tab && (!answers[d.id] || !answers[d.id].choice));
+    list.forEach(d => { const prev = answers[d.id] || {}; store(d.id, { choice: "rec", note: prev.note || "", at: new Date().toISOString() }); });
+    $("bulkConfirm").hidden = true; $("bulkAsk").hidden = false; render();
+  });
+
+  function showNotice(kind, text) { const n = $("notice"); n.hidden = false; n.dataset.kind = kind; n.textContent = text; }
+
+  render();
+
+  (async () => {
+    for (let i = 0; i < 30 && !(window.claude && window.claude.use); i++) await new Promise(r => setTimeout(r, 100));
+    db = window.claude && window.claude.use ? await window.claude.use("db") : null;
+    if (!db) { showNotice("warn", "Answers can't be saved in this view. Open the page on claude.ai to answer."); return; }
+    canWrite = true;
+    $("notice").hidden = true;
+    render();
+    db.collection("answers").onSnapshot(snap => {
+      let changed = false;
+      snap.docChanges().forEach(ch => {
+        const id = ch.doc.id;
+        if (pending[id] || busy[id]) return;           // our own write in flight wins locally
+        if (ch.type === "removed") { delete answers[id]; changed = true; return; }
+        const v = ch.doc.data() || {};
+        const cur = answers[id] || {};
+        if (cur.choice !== v.choice || cur.note !== v.note) { answers[id] = { choice: v.choice || "", note: v.note || "", at: v.at || "" }; changed = true; }
+      });
+      if (changed) {
+        const active = document.activeElement;
+        const editing = active && active.tagName === "TEXTAREA" ? active.id : null;
+        const pos = editing ? [active.selectionStart, active.selectionEnd, active.value] : null;
+        render();
+        if (editing) { const t = $(editing); if (t) { t.value = pos[2]; t.focus({ preventScroll: true }); t.setSelectionRange(pos[0], pos[1]); } }
+      }
+    }, e => { if (e && e.code === "revoked") { canWrite = false; render(); } else showNotice("warn", "Live updates stopped. Reload the page to see the latest answers."); });
+  })();
+})();
+</script>

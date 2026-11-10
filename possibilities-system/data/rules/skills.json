@@ -1,0 +1,149 @@
+{
+ "source": "Possibilities_TTRPG_System_v1_1.xlsx",
+ "data": [
+  {
+   "id": "Acrobatics",
+   "name": "Acrobatics",
+   "ability": "DEX",
+   "track": "Combat"
+  },
+  {
+   "id": "Alchemy",
+   "name": "Alchemy",
+   "ability": "INT",
+   "track": "Craft"
+  },
+  {
+   "id": "Animal Handling",
+   "name": "Animal Handling",
+   "ability": "WIS",
+   "track": "Craft"
+  },
+  {
+   "id": "Appraisal",
+   "name": "Appraisal",
+   "ability": "WIS",
+   "track": "Craft"
+  },
+  {
+   "id": "Arcana",
+   "name": "Arcana",
+   "ability": "INT",
+   "track": "Craft"
+  },
+  {
+   "id": "Athletics",
+   "name": "Athletics",
+   "ability": "STR",
+   "track": "Combat"
+  },
+  {
+   "id": "Cartography",
+   "name": "Cartography",
+   "ability": "INT",
+   "track": "Craft"
+  },
+  {
+   "id": "Crafting",
+   "name": "Crafting",
+   "ability": "INT",
+   "track": "Craft"
+  },
+  {
+   "id": "Deception",
+   "name": "Deception",
+   "ability": "CHA",
+   "track": "Craft"
+  },
+  {
+   "id": "Endurance",
+   "name": "Endurance",
+   "ability": "CON",
+   "track": "Combat"
+  },
+  {
+   "id": "History",
+   "name": "History",
+   "ability": "INT",
+   "track": "Craft"
+  },
+  {
+   "id": "Insight",
+   "name": "Insight",
+   "ability": "WIS",
+   "track": "Craft"
+  },
+  {
+   "id": "Intimidation",
+   "name": "Intimidation",
+   "ability": "CHA",
+   "track": "Combat"
+  },
+  {
+   "id": "Investigation",
+   "name": "Investigation",
+   "ability": "INT",
+   "track": "Craft"
+  },
+  {
+   "id": "Medicine",
+   "name": "Medicine",
+   "ability": "WIS",
+   "track": "Craft"
+  },
+  {
+   "id": "Nature",
+   "name": "Nature",
+   "ability": "INT",
+   "track": "Craft"
+  },
+  {
+   "id": "Perception",
+   "name": "Perception",
+   "ability": "WIS",
+   "track": "Combat"
+  },
+  {
+   "id": "Performance",
+   "name": "Performance",
+   "ability": "CHA",
+   "track": "Craft"
+  },
+  {
+   "id": "Persuasion",
+   "name": "Persuasion",
+   "ability": "CHA",
+   "track": "Craft"
+  },
+  {
+   "id": "Religion",
+   "name": "Religion",
+   "ability": "INT",
+   "track": "Craft"
+  },
+  {
+   "id": "Skulduggery",
+   "name": "Skulduggery",
+   "ability": "DEX",
+   "track": "Combat"
+  },
+  {
+   "id": "Society",
+   "name": "Society",
+   "ability": "CHA",
+   "track": "Craft"
+  },
+  {
+   "id": "Stealth",
+   "name": "Stealth",
+   "ability": "DEX",
+   "track": "Combat"
+  },
+  {
+   "id": "Survival",
+   "name": "Survival",
+   "ability": "WIS",
+   "track": "Craft"
+  }
+ ]
+}

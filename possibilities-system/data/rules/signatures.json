@@ -1,0 +1,845 @@
+{
+ "source": "Possibilities_TTRPG_System_v1_1.xlsx",
+ "data": [
+  {
+   "id": "Boarding Strike",
+   "name": "Boarding Strike",
+   "line": "Ironclad",
+   "tier": 1,
+   "grade": "F",
+   "points": 1,
+   "cost": "1 action",
+   "effect": "Make a Strike. You may Stride into the target's zone as part of it, without provoking. On a critical hit the target is knocked Prone."
+  },
+  {
+   "id": "Cleaving Blow",
+   "name": "Cleaving Blow",
+   "line": "Ironclad",
+   "tier": 2,
+   "grade": "E",
+   "points": 2,
+   "cost": "2 actions",
+   "effect": "One Strike against every enemy in your zone, each at -2. Roll damage once and apply it to all."
+  },
+  {
+   "id": "Hull Breaker",
+   "name": "Hull Breaker",
+   "line": "Ironclad",
+   "tier": 3,
+   "grade": "D",
+   "points": 3,
+   "cost": "2 actions",
+   "effect": "A Strike that treats your weapon as one grade higher against the damage gate, and deals full damage to structures and vessels. On a hit the target is Off-Guard until your next turn."
+  },
+  {
+   "id": "Broadside",
+   "name": "Broadside",
+   "line": "Ironclad",
+   "tier": 4,
+   "grade": "C",
+   "points": 4,
+   "cost": "3 actions",
+   "effect": "One Strike against every enemy in Engaged and Near. Any critical hit also knocks its target Prone."
+  },
+  {
+   "id": "Titan's Wrath",
+   "name": "Titan's Wrath",
+   "line": "Ironclad",
+   "tier": 5,
+   "grade": "B",
+   "points": 5,
+   "cost": "2 actions",
+   "effect": "For one minute your Strikes gain one extra weapon die, and any enemy that ends its turn in your zone takes damage equal to your ability modifier x your RGM."
+  },
+  {
+   "id": "Shipbreaker",
+   "name": "Shipbreaker",
+   "line": "Ironclad",
+   "tier": 6,
+   "grade": "A",
+   "points": 6,
+   "cost": "3 actions",
+   "effect": "One Strike against a structure, vessel, or creature of Elite role or larger. It deals maximum damage, and a vessel takes a permanent breach that a Forge profession must repair."
+  },
+  {
+   "id": "Annihilation",
+   "name": "Annihilation",
+   "line": "Ironclad",
+   "tier": 7,
+   "grade": "S",
+   "points": 7,
+   "cost": "3 actions",
+   "effect": "One Strike. If it would reduce the target below half its maximum hit points, the target dies instead. Bosses are immune, but become Slowed 2 until the end of their next turn."
+  },
+  {
+   "id": "Knife in the Dark",
+   "name": "Knife in the Dark",
+   "line": "Undertow",
+   "tier": 1,
+   "grade": "F",
+   "points": 1,
+   "cost": "1 action",
+   "effect": "A Strike with one extra weapon die against a target that is Off-Guard, Hidden from, or unaware of you."
+  },
+  {
+   "id": "Silent Step",
+   "name": "Silent Step",
+   "line": "Undertow",
+   "tier": 2,
+   "grade": "E",
+   "points": 2,
+   "cost": "1 action",
+   "effect": "Stride and Hide as a single action. The Stride does not provoke and leaves no trace anyone below your grade can follow."
+  },
+  {
+   "id": "Killing Angle",
+   "name": "Killing Angle",
+   "line": "Undertow",
+   "tier": 3,
+   "grade": "D",
+   "points": 3,
+   "cost": "2 actions",
+   "effect": "A Strike. On a critical hit the target gains Persistent Damage equal to your Combat EL."
+  },
+  {
+   "id": "Brume Step",
+   "name": "Brume Step",
+   "line": "Undertow",
+   "tier": 4,
+   "grade": "C",
+   "points": 4,
+   "cost": "1 action",
+   "effect": "Step into the brume and out again anywhere within Far. You arrive Hidden. In an uncharted region the range extends to Distant."
+  },
+  {
+   "id": "Undertow Body",
+   "name": "Undertow Body",
+   "line": "Undertow",
+   "tier": 5,
+   "grade": "B",
+   "points": 5,
+   "cost": "2 actions",
+   "effect": "For one minute you are Concealed at all times: attacks against you have disadvantage, and you may Step once per round as a free action."
+  },
+  {
+   "id": "Unseen Death",
+   "name": "Unseen Death",
+   "line": "Undertow",
+   "tier": 6,
+   "grade": "A",
+   "points": 6,
+   "cost": "3 actions",
+   "effect": "A Strike made from Hidden. On a hit the target cannot act until the end of its next turn. On a critical hit it does not register that it was struck at all."
+  },
+  {
+   "id": "Absence",
+   "name": "Absence",
+   "line": "Undertow",
+   "tier": 7,
+   "grade": "S",
+   "points": 7,
+   "cost": "3 actions",
+   "effect": "Remove yourself from the scene for up to one minute. You cannot act and cannot be acted upon. You return anywhere you choose within the region."
+  },
+  {
+   "id": "Channel Faith",
+   "name": "Channel Faith",
+   "line": "Divine",
+   "tier": 1,
+   "grade": "F",
+   "points": 1,
+   "cost": "2 actions",
+   "effect": "Restore (1d8 + your Combat EL) x your RGM hit points to a creature in Engaged or Near. This also stabilises a Dying creature at Dying 0."
+  },
+  {
+   "id": "Sacred Rite",
+   "name": "Sacred Rite",
+   "line": "Divine",
+   "tier": 2,
+   "grade": "E",
+   "points": 2,
+   "cost": "2 actions",
+   "effect": "Allies in Near gain +1 to attacks and saving throws for one minute. Rites do not stack."
+  },
+  {
+   "id": "Smite the Unmade",
+   "name": "Smite the Unmade",
+   "line": "Divine",
+   "tier": 3,
+   "grade": "D",
+   "points": 3,
+   "cost": "1 action",
+   "effect": "Add two weapon dice to a Strike against anything unfixed, undead, or of a grade above the region's."
+  },
+  {
+   "id": "Aegis of the Making",
+   "name": "Aegis of the Making",
+   "line": "Divine",
+   "tier": 4,
+   "grade": "C",
+   "points": 4,
+   "cost": "2 actions",
+   "effect": "An ally in Near gains temporary hit points equal to your Combat EL x RGM, and immunity to one named condition, for one minute."
+  },
+  {
+   "id": "Judgement",
+   "name": "Judgement",
+   "line": "Divine",
+   "tier": 5,
+   "grade": "B",
+   "points": 5,
+   "cost": "3 actions",
+   "effect": "One creature in Far attempts a Will save. On a failure it is Frightened 3 and cannot target you. On a critical failure it must spend its next turn withdrawing."
+  },
+  {
+   "id": "Word of Making",
+   "name": "Word of Making",
+   "line": "Divine",
+   "tier": 6,
+   "grade": "A",
+   "points": 6,
+   "cost": "3 actions",
+   "effect": "An ally who died this scene returns at 1 hit point with Wounded 2. Once per long rest."
+  },
+  {
+   "id": "Apotheosis",
+   "name": "Apotheosis",
+   "line": "Divine",
+   "tier": 7,
+   "grade": "S",
+   "points": 7,
+   "cost": "3 actions",
+   "effect": "For one minute you count as one grade higher for every purpose: the damage gate, resistances, your DCs and your saves. Afterwards you are Drained 2 and cannot bind Possibility until you rest fully."
+  },
+  {
+   "id": "Sea Sense",
+   "name": "Sea Sense",
+   "line": "Tidebound",
+   "tier": 1,
+   "grade": "F",
+   "points": 1,
+   "cost": "1 action",
+   "effect": "Learn the weather, current and depth for the coming watch. The party's next Navigate check gains +2."
+  },
+  {
+   "id": "Beast Bond",
+   "name": "Beast Bond",
+   "line": "Tidebound",
+   "tier": 2,
+   "grade": "E",
+   "points": 2,
+   "cost": "2 actions",
+   "effect": "A beast of your grade or lower follows one reasonable instruction. In combat it acts as a Minion under your control until the encounter ends."
+  },
+  {
+   "id": "Tide Form",
+   "name": "Tide Form",
+   "line": "Tidebound",
+   "tier": 3,
+   "grade": "D",
+   "points": 3,
+   "cost": "2 actions",
+   "effect": "Take a sea-beast form for ten minutes. Gain a swim Speed equal to your Speed, +2 AC, and unarmed Strikes that use your normal weapon dice."
+  },
+  {
+   "id": "Wild Surge",
+   "name": "Wild Surge",
+   "line": "Tidebound",
+   "tier": 4,
+   "grade": "C",
+   "points": 4,
+   "cost": "2 actions",
+   "effect": "Water in Near erupts. Every enemy there attempts a Reflex save, taking your Combat EL x RGM damage and falling Prone on a failure."
+  },
+  {
+   "id": "Turn of the Season",
+   "name": "Turn of the Season",
+   "line": "Tidebound",
+   "tier": 5,
+   "grade": "B",
+   "points": 5,
+   "cost": "3 actions",
+   "effect": "Change the weather across the whole region for one watch. Storms break; calm ends. Travel speed for that watch is doubled or halved as you choose."
+  },
+  {
+   "id": "Living Storm",
+   "name": "Living Storm",
+   "line": "Tidebound",
+   "tier": 6,
+   "grade": "A",
+   "points": 6,
+   "cost": "3 actions",
+   "effect": "For one minute you are a storm. Enemies in Near are Slowed 1 and take your Combat EL damage each round. Ranged attacks against you automatically fail."
+  },
+  {
+   "id": "Voice of the Deep",
+   "name": "Voice of the Deep",
+   "line": "Tidebound",
+   "tier": 7,
+   "grade": "S",
+   "points": 7,
+   "cost": "3 actions",
+   "effect": "Call something enormous. It arrives within a watch and will do one thing for you. It will remember having been asked."
+  },
+  {
+   "id": "Charge Tap",
+   "name": "Charge Tap",
+   "line": "Artifice",
+   "tier": 1,
+   "grade": "F",
+   "points": 1,
+   "cost": "1 action",
+   "effect": "Regain 2 points of attunement, or give 2 to an ally in Engaged. Once per encounter."
+  },
+  {
+   "id": "Charge Shaping",
+   "name": "Charge Shaping",
+   "line": "Artifice",
+   "tier": 2,
+   "grade": "E",
+   "points": 2,
+   "cost": "1 action",
+   "effect": "Change the damage type of your next spell or technique and extend its range by one zone."
+  },
+  {
+   "id": "Sigil Focus",
+   "name": "Sigil Focus",
+   "line": "Artifice",
+   "tier": 3,
+   "grade": "D",
+   "points": 3,
+   "cost": "2 actions",
+   "effect": "Inscribe a sigil in your zone for one minute. Allies within it gain +2 to saves; enemies entering take your Combat EL in damage, once each."
+  },
+  {
+   "id": "Overcharge",
+   "name": "Overcharge",
+   "line": "Artifice",
+   "tier": 4,
+   "grade": "C",
+   "points": 4,
+   "cost": "free",
+   "effect": "Cast one spell or technique at a tier one above your Highest Tier. You are Drained 1 until you next rest fully."
+  },
+  {
+   "id": "Charge Sovereignty",
+   "name": "Charge Sovereignty",
+   "line": "Artifice",
+   "tier": 5,
+   "grade": "B",
+   "points": 5,
+   "cost": "2 actions",
+   "effect": "For one minute every spell and technique you use costs one point fewer, to a minimum of one."
+  },
+  {
+   "id": "Reality Edit",
+   "name": "Reality Edit",
+   "line": "Artifice",
+   "tier": 6,
+   "grade": "A",
+   "points": 6,
+   "cost": "3 actions",
+   "effect": "Reroll any single d20 in the current scene, including one already resolved. The first result did not happen."
+  },
+  {
+   "id": "Authorship",
+   "name": "Authorship",
+   "line": "Artifice",
+   "tier": 7,
+   "grade": "S",
+   "points": 7,
+   "cost": "3 actions",
+   "effect": "Declare one fact about this region that could plausibly be true. It is true, and was always true. Once per grade."
+  },
+  {
+   "id": "Fathom Whisper",
+   "name": "Fathom Whisper",
+   "line": "Fathomless",
+   "tier": 1,
+   "grade": "F",
+   "points": 1,
+   "cost": "1 action",
+   "effect": "Ask one question of a creature in Near. It answers truthfully unless it succeeds a Will save, and it does not remember being asked."
+  },
+  {
+   "id": "Binding Pact",
+   "name": "Binding Pact",
+   "line": "Fathomless",
+   "tier": 2,
+   "grade": "E",
+   "points": 2,
+   "cost": "2 actions",
+   "effect": "Strike a bargain. Both parties are bound; whoever breaks it takes Drained 2 and Frightened 2 for a full day, wherever they are."
+  },
+  {
+   "id": "Curse Weave",
+   "name": "Curse Weave",
+   "line": "Fathomless",
+   "tier": 3,
+   "grade": "D",
+   "points": 3,
+   "cost": "2 actions",
+   "effect": "One creature in Far takes -2 on one chosen roll type for an hour. On a critical failure the penalty lasts until removed."
+  },
+  {
+   "id": "Fate Thread",
+   "name": "Fate Thread",
+   "line": "Fathomless",
+   "tier": 4,
+   "grade": "C",
+   "points": 4,
+   "cost": "1 action",
+   "effect": "Declare a roll before it is made. Its result counts as one degree worse for an enemy, or one degree better for an ally."
+  },
+  {
+   "id": "Mind's Dominion",
+   "name": "Mind's Dominion",
+   "line": "Fathomless",
+   "tier": 5,
+   "grade": "B",
+   "points": 5,
+   "cost": "3 actions",
+   "effect": "One creature of Standard role or lower in Far obeys you for one minute. Elites attempt a Will save at the end of each of their turns."
+  },
+  {
+   "id": "Doom Spoken",
+   "name": "Doom Spoken",
+   "line": "Fathomless",
+   "tier": 6,
+   "grade": "A",
+   "points": 6,
+   "cost": "3 actions",
+   "effect": "Name a creature and name a condition. If that condition occurs within a day, the creature drops to Dying 1 wherever it stands."
+  },
+  {
+   "id": "Unmaking",
+   "name": "Unmaking",
+   "line": "Fathomless",
+   "tier": 7,
+   "grade": "S",
+   "points": 7,
+   "cost": "3 actions",
+   "effect": "One creature or object in Far is struck from the record. Written references decay; those who knew it must save to recall it. Once per grade."
+  },
+  {
+   "id": "Sound Repair",
+   "name": "Sound Repair",
+   "line": "Forge",
+   "tier": 1,
+   "grade": "F",
+   "points": 1,
+   "cost": "1 hour",
+   "effect": "Restore a damaged item to working order, removing one grade of degradation. No roll required."
+  },
+  {
+   "id": "Fine Temper",
+   "name": "Fine Temper",
+   "line": "Forge",
+   "tier": 2,
+   "grade": "E",
+   "points": 2,
+   "cost": "1 day",
+   "effect": "A weapon or suit of armour gains +1 to attack or AC for a week. Does not stack with itself."
+  },
+  {
+   "id": "Masterwork",
+   "name": "Masterwork",
+   "line": "Forge",
+   "tier": 3,
+   "grade": "D",
+   "points": 3,
+   "cost": "1 downtime week",
+   "effect": "Raise an item one grade permanently, up to your own profession grade. Consumes materials of the new grade."
+  },
+  {
+   "id": "Living Alloy",
+   "name": "Living Alloy",
+   "line": "Forge",
+   "tier": 4,
+   "grade": "C",
+   "points": 4,
+   "cost": "1 downtime week",
+   "effect": "An item repairs itself between rests and cannot be sundered by anything below your grade."
+  },
+  {
+   "id": "Everforge",
+   "name": "Everforge",
+   "line": "Forge",
+   "tier": 5,
+   "grade": "B",
+   "points": 5,
+   "cost": "1 downtime week",
+   "effect": "Craft two items in the time one would take, or one item at half its material cost."
+  },
+  {
+   "id": "Demiforge",
+   "name": "Demiforge",
+   "line": "Forge",
+   "tier": 6,
+   "grade": "A",
+   "points": 6,
+   "cost": "1 downtime month",
+   "effect": "Create an item of your grade carrying one signature property of your choosing."
+  },
+  {
+   "id": "World-Anvil",
+   "name": "World-Anvil",
+   "line": "Forge",
+   "tier": 7,
+   "grade": "S",
+   "points": 7,
+   "cost": "1 season",
+   "effect": "Create an artifact. It has a name, a will of its own, and it will outlast you."
+  },
+  {
+   "id": "Field Dressing",
+   "name": "Field Dressing",
+   "line": "Life",
+   "tier": 1,
+   "grade": "F",
+   "points": 1,
+   "cost": "2 actions",
+   "effect": "Restore (1d8 + your Craft EL) x your RGM hit points to a creature in Engaged, and stabilise a Dying creature at Dying 0."
+  },
+  {
+   "id": "Tonic Craft",
+   "name": "Tonic Craft",
+   "line": "Life",
+   "tier": 2,
+   "grade": "E",
+   "points": 2,
+   "cost": "1 hour",
+   "effect": "Brew (Craft EL / 5, minimum 1) doses. Each restores (2d8 + Craft EL) x RGM and keeps for a week. THIS is how healing keeps pace at high grade — bought potions do not."
+  },
+  {
+   "id": "Grafting",
+   "name": "Grafting",
+   "line": "Life",
+   "tier": 3,
+   "grade": "D",
+   "points": 3,
+   "cost": "1 day",
+   "effect": "Replace a lost limb or organ. Removes all Drained and Wounded conditions from the patient."
+  },
+  {
+   "id": "Vital Rewrite",
+   "name": "Vital Rewrite",
+   "line": "Life",
+   "tier": 4,
+   "grade": "C",
+   "points": 4,
+   "cost": "10 minutes",
+   "effect": "Remove one disease, poison, curse or persistent condition of your grade or below."
+  },
+  {
+   "id": "Rebirth",
+   "name": "Rebirth",
+   "line": "Life",
+   "tier": 5,
+   "grade": "B",
+   "points": 5,
+   "cost": "1 hour",
+   "effect": "Restore a creature dead less than a day. It returns at half hit points with Wounded 3."
+  },
+  {
+   "id": "Panacea",
+   "name": "Panacea",
+   "line": "Life",
+   "tier": 6,
+   "grade": "A",
+   "points": 6,
+   "cost": "2 actions",
+   "effect": "Every ally in Near is restored to full hit points and loses every condition. Once per long rest."
+  },
+  {
+   "id": "Genesis",
+   "name": "Genesis",
+   "line": "Life",
+   "tier": 7,
+   "grade": "S",
+   "points": 7,
+   "cost": "1 season",
+   "effect": "Make a living thing that has never existed before. It breeds true."
+  },
+  {
+   "id": "Dead Reckoning",
+   "name": "Dead Reckoning",
+   "line": "Wayfaring",
+   "tier": 1,
+   "grade": "F",
+   "points": 1,
+   "cost": "1 watch",
+   "effect": "Succeed at this watch's Navigate check automatically, with no roll and no chance of getting lost."
+  },
+  {
+   "id": "True North",
+   "name": "True North",
+   "line": "Wayfaring",
+   "tier": 2,
+   "grade": "E",
+   "points": 2,
+   "cost": "1 action",
+   "effect": "You know your exact position and bearing for a day, even in heavy brume, even where instruments stop."
+  },
+  {
+   "id": "Chart the Unknown",
+   "name": "Chart the Unknown",
+   "line": "Wayfaring",
+   "tier": 3,
+   "grade": "D",
+   "points": 3,
+   "cost": "1 watch",
+   "effect": "Chart a region in a single watch rather than a full survey. It counts as a full Discovery, and the region becomes Charted."
+  },
+  {
+   "id": "Brume Mapping",
+   "name": "Brume Mapping",
+   "line": "Wayfaring",
+   "tier": 4,
+   "grade": "C",
+   "points": 4,
+   "cost": "1 watch",
+   "effect": "Map a region you have not entered, from up to two cells away. The result is Sighted, never Charted."
+  },
+  {
+   "id": "Fold Distance",
+   "name": "Fold Distance",
+   "line": "Wayfaring",
+   "tier": 5,
+   "grade": "B",
+   "points": 5,
+   "cost": "1 hour",
+   "effect": "For a full day the party covers double legs per watch, whatever their transport."
+  },
+  {
+   "id": "Realm Gate",
+   "name": "Realm Gate",
+   "line": "Wayfaring",
+   "tier": 6,
+   "grade": "A",
+   "points": 6,
+   "cost": "10 minutes",
+   "effect": "Open a passage between two regions you have personally Charted. It holds for one watch."
+  },
+  {
+   "id": "Axis Point",
+   "name": "Axis Point",
+   "line": "Wayfaring",
+   "tier": 7,
+   "grade": "S",
+   "points": 7,
+   "cost": "1 season",
+   "effect": "Fix a permanent gate between two Charted regions. It appears on every chart thereafter, and every power in the sea will want it, or want it closed."
+  },
+  {
+   "id": "Haggle",
+   "name": "Haggle",
+   "line": "Commerce",
+   "tier": 1,
+   "grade": "F",
+   "points": 1,
+   "cost": "10 minutes",
+   "effect": "Buy at 20% below listed price or sell at 20% above. Once per settlement per visit."
+  },
+  {
+   "id": "Supply Line",
+   "name": "Supply Line",
+   "line": "Commerce",
+   "tier": 2,
+   "grade": "E",
+   "points": 2,
+   "cost": "1 downtime week",
+   "effect": "The Supply die does not step down at all for the party's next full journey."
+  },
+  {
+   "id": "Market Read",
+   "name": "Market Read",
+   "line": "Commerce",
+   "tier": 3,
+   "grade": "D",
+   "points": 3,
+   "cost": "1 hour",
+   "effect": "Learn what a settlement needs, fears, and is concealing about its trade. +4 on social checks there for a day."
+  },
+  {
+   "id": "Monopoly",
+   "name": "Monopoly",
+   "line": "Commerce",
+   "tier": 4,
+   "grade": "C",
+   "points": 4,
+   "cost": "1 downtime month",
+   "effect": "Corner one commodity in one settlement. Your downtime income there doubles while it holds."
+  },
+  {
+   "id": "Trade Empire",
+   "name": "Trade Empire",
+   "line": "Commerce",
+   "tier": 5,
+   "grade": "B",
+   "points": 5,
+   "cost": "1 downtime season",
+   "effect": "Establish a standing route. It pays your downtime income whether you work it or not."
+  },
+  {
+   "id": "Economic Fiat",
+   "name": "Economic Fiat",
+   "line": "Commerce",
+   "tier": 6,
+   "grade": "A",
+   "points": 6,
+   "cost": "1 downtime month",
+   "effect": "Set the price of one commodity across an entire ring. The Compact will find out who did it."
+  },
+  {
+   "id": "Value Itself",
+   "name": "Value Itself",
+   "line": "Commerce",
+   "tier": 7,
+   "grade": "S",
+   "points": 7,
+   "cost": "1 season",
+   "effect": "Declare what a thing is worth. It is worth that, everywhere, until something stronger disagrees."
+  },
+  {
+   "id": "Copy Exact",
+   "name": "Copy Exact",
+   "line": "Lore",
+   "tier": 1,
+   "grade": "F",
+   "points": 1,
+   "cost": "1 hour",
+   "effect": "Reproduce any document perfectly, including a Bench seal. Doing so is forgery and is prosecuted as such in Compact waters."
+  },
+  {
+   "id": "Perfect Recall",
+   "name": "Perfect Recall",
+   "line": "Lore",
+   "tier": 2,
+   "grade": "E",
+   "points": 2,
+   "cost": "free",
+   "effect": "You remember everything you have read or been told. Ask the GM one factual question about the history of the current scene."
+  },
+  {
+   "id": "Sigil Literacy",
+   "name": "Sigil Literacy",
+   "line": "Lore",
+   "tier": 3,
+   "grade": "D",
+   "points": 3,
+   "cost": "10 minutes",
+   "effect": "Read any script, sigil or chart of your grade or below, including ones no living person can read."
+  },
+  {
+   "id": "Forbidden Index",
+   "name": "Forbidden Index",
+   "line": "Lore",
+   "tier": 4,
+   "grade": "C",
+   "points": 4,
+   "cost": "1 day",
+   "effect": "Learn one true fact about any named creature, object or place: its grade, and one weakness."
+  },
+  {
+   "id": "Total Archive",
+   "name": "Total Archive",
+   "line": "Lore",
+   "tier": 5,
+   "grade": "B",
+   "points": 5,
+   "cost": "1 downtime week",
+   "effect": "Reconstruct a lost work from fragments. Counts as a full Discovery."
+  },
+  {
+   "id": "The Unwritten Read",
+   "name": "The Unwritten Read",
+   "line": "Lore",
+   "tier": 6,
+   "grade": "A",
+   "points": 6,
+   "cost": "1 hour",
+   "effect": "Read a region's history directly out of its brume. You learn why it holds the grade it holds."
+  },
+  {
+   "id": "The Record",
+   "name": "The Record",
+   "line": "Lore",
+   "tier": 7,
+   "grade": "S",
+   "points": 7,
+   "cost": "1 season",
+   "effect": "Write something into the record permanently. It becomes historically true, and always was."
+  },
+  {
+   "id": "Sound Mechanism",
+   "name": "Sound Mechanism",
+   "line": "Artifice",
+   "tier": 1,
+   "grade": "F",
+   "points": 1,
+   "cost": "1 hour",
+   "effect": "Repair or disable any mechanism, lock or trap of your grade or below without a roll."
+  },
+  {
+   "id": "Clockwork Aid",
+   "name": "Clockwork Aid",
+   "line": "Artifice",
+   "tier": 2,
+   "grade": "E",
+   "points": 2,
+   "cost": "1 day",
+   "effect": "Build a device granting +2 on one named skill for a week. One per person."
+  },
+  {
+   "id": "Autonomous Device",
+   "name": "Autonomous Device",
+   "line": "Artifice",
+   "tier": 3,
+   "grade": "D",
+   "points": 3,
+   "cost": "1 day",
+   "effect": "Build a construct that fights as a Minion of your grade. It runs for a week on stored charge."
+  },
+  {
+   "id": "Bound Construct",
+   "name": "Bound Construct",
+   "line": "Artifice",
+   "tier": 4,
+   "grade": "C",
+   "points": 4,
+   "cost": "1 downtime week",
+   "effect": "Build a construct that fights as a Standard of your grade. Permanent while maintained."
+  },
+  {
+   "id": "Skyworks",
+   "name": "Skyworks",
+   "line": "Artifice",
+   "tier": 5,
+   "grade": "B",
+   "points": 5,
+   "cost": "1 downtime month",
+   "effect": "Build or refit a vessel of your grade or below, including airships. Halves the purchase price."
+  },
+  {
+   "id": "Self-Making",
+   "name": "Self-Making",
+   "line": "Artifice",
+   "tier": 6,
+   "grade": "A",
+   "points": 6,
+   "cost": "1 season",
+   "effect": "Your construct becomes capable of building. It works while you sleep, and it does not stop."
+  },
+  {
+   "id": "Prime Mover",
+   "name": "Prime Mover",
+   "line": "Artifice",
+   "tier": 7,
+   "grade": "S",
+   "points": 7,
+   "cost": "1 year",
+   "effect": "Build an engine that needs no charge at all. Every power in the sea will want it, or want it destroyed, and most will want both."
+  }
+ ]
+}

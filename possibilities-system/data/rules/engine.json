@@ -1,0 +1,250 @@
+{
+ "source": "Possibilities_TTRPG_System_v1_1.xlsx",
+ "data": {
+  "grades": [
+   {
+    "grade": "F",
+    "index": 0,
+    "rgm": 1
+   },
+   {
+    "grade": "E",
+    "index": 1,
+    "rgm": 1.3
+   },
+   {
+    "grade": "D",
+    "index": 2,
+    "rgm": 1.7
+   },
+   {
+    "grade": "C",
+    "index": 3,
+    "rgm": 2.2
+   },
+   {
+    "grade": "B",
+    "index": 4,
+    "rgm": 2.8
+   },
+   {
+    "grade": "A",
+    "index": 5,
+    "rgm": 3.5
+   },
+   {
+    "grade": "S",
+    "index": 6,
+    "rgm": 4.5
+   }
+  ],
+  "ranks": [
+   {
+    "rank": "Novice",
+    "index": 1
+   },
+   {
+    "rank": "Apprentice",
+    "index": 2
+   },
+   {
+    "rank": "Journeyman",
+    "index": 3
+   },
+   {
+    "rank": "Adept",
+    "index": 4
+   },
+   {
+    "rank": "Master",
+    "index": 5
+   }
+  ],
+  "proficiency": [
+   {
+    "rank": "Untrained",
+    "bonus": 0
+   },
+   {
+    "rank": "Trained",
+    "bonus": 2
+   },
+   {
+    "rank": "Expert",
+    "bonus": 4
+   },
+   {
+    "rank": "Master",
+    "bonus": 6
+   },
+   {
+    "rank": "Legendary",
+    "bonus": 8
+   }
+  ],
+  "weapon_dice": [
+   {
+    "die": "d4",
+    "average": 2.5
+   },
+   {
+    "die": "d6",
+    "average": 3.5
+   },
+   {
+    "die": "d8",
+    "average": 4.5
+   },
+   {
+    "die": "d10",
+    "average": 5.5
+   },
+   {
+    "die": "d12",
+    "average": 6.5
+   },
+   {
+    "die": "2d6",
+    "average": 7
+   },
+   {
+    "die": "2d8",
+    "average": 9
+   }
+  ],
+  "armour": [
+   {
+    "type": "None",
+    "base_ac": 0,
+    "dex_cap": 99
+   },
+   {
+    "type": "Light",
+    "base_ac": 2,
+    "dex_cap": 4
+   },
+   {
+    "type": "Medium",
+    "base_ac": 4,
+    "dex_cap": 2
+   },
+   {
+    "type": "Heavy",
+    "base_ac": 6,
+    "dex_cap": 0
+   }
+  ],
+  "constants": {
+   "el_per_grade": {
+    "value": 5,
+    "label": "EL per Grade",
+    "note": "The core disparity dial. Raise it to make grade gaps harsher."
+   },
+   "standard_dc_base": {
+    "value": 12,
+    "label": "Standard DC Base",
+    "note": "Standard DC = this + target EL."
+   },
+   "enemy_ac_base": {
+    "value": 15,
+    "label": "Enemy AC Base",
+    "note": "Benchmark enemy AC = this + its EL."
+   },
+   "enemy_attack_base": {
+    "value": 5,
+    "label": "Enemy Attack Base",
+    "note": "Benchmark enemy attack = this + its EL."
+   },
+   "enemy_hp_per_el": {
+    "value": 4,
+    "label": "Enemy HP per EL",
+    "note": "Standard enemy HP = (Base + this x EL) x its RGM. Retuned from 3 to 4 after simulating 3-action turns, where a PC makes two Strikes per round."
+   },
+   "xp_coefficient": {
+    "value": 50,
+    "label": "XP Coefficient",
+    "note": "XP to next rank = this x EL^2."
+   },
+   "class_primary_gain_grade": {
+    "value": 2,
+    "label": "REFERENCE — Class Primary Gain / Grade",
+    "note": "Ability points to the class primary at each grade-up."
+   },
+   "class_secondary_gain_grade": {
+    "value": 1,
+    "label": "REFERENCE — Class Secondary Gain / Grade",
+    "note": "Ability points to the class secondary at each grade-up."
+   },
+   "profession_gain_grade": {
+    "value": 1,
+    "label": "REFERENCE — Profession Gain / Grade",
+    "note": "Points to each of the profession's two abilities per grade."
+   },
+   "race_gain_grade": {
+    "value": 1,
+    "label": "REFERENCE — Race Gain / Grade",
+    "note": "Points to each racial signature ability per grade above F."
+   },
+   "base_ability_score": {
+    "value": 10,
+    "label": "REFERENCE — Base Ability Score",
+    "note": "Starting value before any race, class or profession input."
+   },
+   "grade_price_multiplier": {
+    "value": 3,
+    "label": "Grade Price Multiplier",
+    "note": "Cost and income multiply by this per grade index. A longsword is 15 gp at F, 45 gp at E, 135 gp at D. Set to 3 because 3^6 = 729, which fits inside the 1,000x span from 1 cp to 1 pp — so standard coinage covers all seven grades. At 4 or 5 the coins break and you would need new denominations."
+   },
+   "max_track_divergence_el": {
+    "value": 10,
+    "label": "Max Track Divergence (EL)",
+    "note": "Combat EL and Craft EL may not differ by more than this. 10 = two grades. Set high to allow free specialisation; set to 5 to force the tracks to move together."
+   },
+   "grade_compensation": {
+    "value": 2,
+    "label": "Grade Compensation",
+    "note": "Added to every DC and enemy stat per grade index. Tested at 1.5 and 2.5 against real characters built from the sheet with the Acquisitions proficiency schedule: 2 holds a Standard fight at 0.02-0.49 drops and 99-100% win across all seven grades. DO NOT set to 0."
+   },
+   "challenges_per_rank": {
+    "value": 8,
+    "label": "Challenges per Rank",
+    "note": "The master pacing dial. 8 gives 40 challenges per grade, an 8-13 session chapter. Lower for brisk play, higher for a long campaign."
+   },
+   "grade_escalation_factor": {
+    "value": 1,
+    "label": "Grade Escalation Factor",
+    "note": "Multiplies challenges-per-rank by this to the power of grade index. 1.0 = constant pacing (recommended). 1.15 makes S-grade ranks take 2.3x as many challenges as F-grade."
+   },
+   "discovery_weight": {
+    "value": 1.5,
+    "label": "Discovery Weight",
+    "note": "A discovery is worth this many challenges before the 2x2 split routes it. Above 1 because exploration is the premise of the game."
+   },
+   "enemy_hp_base": {
+    "value": 10,
+    "label": "Enemy HP Base",
+    "note": "Flat HP added before the per-EL term, so low-grade foes are not one-shot."
+   },
+   "enemy_damage_per_el": {
+    "value": 3,
+    "label": "Enemy Damage per EL",
+    "note": "Standard enemy damage per round = this x EL x its RGM. Raised from 2 to 3 after simulation: at 2 a Standard encounter downed 0.07 PCs and the party won 100% of the time."
+   },
+   "weapon_die_average": {
+    "value": 4.5,
+    "label": "Weapon Die Average",
+    "note": "Fallback weapon average if none is selected. d8 = 4.5."
+   },
+   "ambient_divisor": {
+    "value": 3,
+    "label": "Ambient Divisor",
+    "note": "Ambient damage per watch = Region EL x Region RGM / this, x (grade gap - 1). Lower it to make over-grade regions crueller."
+   },
+   "track_spillover": {
+    "value": 0.5,
+    "label": "REFERENCE — Track Spillover",
+    "note": "When a track cannot accept XP — at the divergence cap, or already at EL 35 — the award goes to the OTHER track at this rate. Without it a party that only ever fights freezes permanently at Combat EL 11. With it they reach both maxima in 287 sessions against 186 for balanced play."
+   }
+  }
+ }
+}
