@@ -54,7 +54,7 @@
 .vital.points .bar span { background: linear-gradient(90deg, var(--poss-verdigris), #7fd6c2); }
 .vital.resistance .bar span { background: linear-gradient(90deg, var(--poss-brass), var(--poss-brass-2)); }
 .vital .nums { display: flex; gap: 6px; align-items: center; margin-top: 3px; }
-.stat { display: grid; justify-items: center; min-width: 58px; } .stat b { font-size: 1.4rem; font-family: var(--poss-display); }
+.stat { display: grid; justify-items: center; min-width: 58px; } .stat b { font-size: 1.4rem; font-family: var(--poss-body); font-weight: 600; font-variant-numeric: lining-nums tabular-nums; }
 .turnline, .clock { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .turnline .label, .clock .label { font-family: var(--poss-display); color: var(--poss-brass); }
 .pips { display: inline-flex; gap: 6px; }
@@ -77,7 +77,7 @@
 .track { border: 1px solid var(--poss-line); border-top: 3px solid var(--poss-brass); padding: 6px 8px; border-radius: 4px; background: var(--poss-paper-2); display: grid; gap: 4px; align-content: start; }
 .track.class { border-top-color: var(--poss-blood); } .track.profession { border-top-color: var(--poss-verdigris); }
 .track h3 { margin: 0; border: none; } .track select { width: 100%; }
-.track .figure { margin: 0; } .track .figure b { font-family: var(--poss-display); font-size: 1.3rem; }
+.track .figure { margin: 0; } .track .figure b { font-family: var(--poss-body); font-weight: 600; font-size: 1.3rem; font-variant-numeric: lining-nums tabular-nums; }
 .xp { display: flex; gap: 6px; align-items: center; } .xp .bar { flex: 1; } .xp .bar span { background: linear-gradient(90deg, var(--poss-brass), var(--poss-brass-2)); }
 
 .columns { display: grid; grid-template-columns: minmax(250px, 1fr) minmax(280px, 1.2fr); gap: 14px; }
@@ -99,7 +99,7 @@
 .possibilities button.action { display: flex; gap: 8px; align-items: center; text-align: left; padding: 6px 8px; min-height: 48px; }
 .possibilities button.action img { width: 32px; height: 32px; border: none; }
 .possibilities button.action span { flex: 1; display: grid; } .possibilities button.action small { color: var(--poss-muted); }
-.possibilities button.action em { font-style: normal; font-family: var(--poss-display); width: 24px; height: 24px; border-radius: 50%;
+.possibilities button.action em { font-style: normal; font-family: var(--poss-body); font-variant-numeric: lining-nums; width: 24px; height: 24px; border-radius: 50%;
   display: grid; place-items: center; background: var(--poss-brass); color: var(--poss-on-brass); }
 .ability-list, .item-list, .setbacks { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
 .ability-list li, .item-list li, .setbacks li { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
