@@ -1,0 +1,33 @@
+{
+  "_id": "PjQnl8PgdCM5GcnA",
+  "name": "Binding Pact",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Fathomless",
+    "tier": 2,
+    "grade": "E",
+    "points": 2,
+    "cost": "2 actions",
+    "effect": "Strike a bargain. Both parties are bound; whoever breaks it takes Drained 2 and Frightened 2 for a full day, wherever they are."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!PjQnl8PgdCM5GcnA"
+}

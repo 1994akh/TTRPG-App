@@ -1,0 +1,35 @@
+{
+  "_id": "hw9FshbX9tcEY3W6",
+  "name": "Curse of Small Failures",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Fathomless",
+    "tier": 3,
+    "grade": "D",
+    "points": 3,
+    "actions": "2",
+    "range": "Far",
+    "save": "Will",
+    "effect": "For an hour the target's critical successes count as ordinary successes."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!hw9FshbX9tcEY3W6"
+}

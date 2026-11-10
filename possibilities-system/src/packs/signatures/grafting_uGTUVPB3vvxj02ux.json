@@ -1,0 +1,33 @@
+{
+  "_id": "uGTUVPB3vvxj02ux",
+  "name": "Grafting",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Life",
+    "tier": 3,
+    "grade": "D",
+    "points": 3,
+    "cost": "1 day",
+    "effect": "Replace a lost limb or organ. Removes all Drained and Wounded conditions from the patient."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!uGTUVPB3vvxj02ux"
+}

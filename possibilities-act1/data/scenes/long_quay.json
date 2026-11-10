@@ -1,0 +1,115 @@
+{
+ "id": "long_quay",
+ "name": "The Long Quay",
+ "width": 2400,
+ "height": 1400,
+ "gridSize": 100,
+ "gridType": "square",
+ "background": "assets/maps/long_quay.webp",
+ "darkness": 0.0,
+ "walls": [
+  {
+   "c": [
+    0,
+    0,
+    2400,
+    0
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    0,
+    1400,
+    2400,
+    1400
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    0,
+    0,
+    0,
+    1400
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    2400,
+    0,
+    2400,
+    1400
+   ],
+   "door": 0
+  }
+ ],
+ "lights": [
+  {
+   "x": 400,
+   "y": 100,
+   "dim": 20,
+   "bright": 5,
+   "color": "#ffc27a",
+   "alpha": 0.3,
+   "animation": {
+    "type": "torch",
+    "speed": 2,
+    "intensity": 3
+   }
+  },
+  {
+   "x": 1200,
+   "y": 100,
+   "dim": 20,
+   "bright": 5,
+   "color": "#ffc27a",
+   "alpha": 0.3,
+   "animation": {
+    "type": "torch",
+    "speed": 2,
+    "intensity": 3
+   }
+  },
+  {
+   "x": 2000,
+   "y": 100,
+   "dim": 20,
+   "bright": 5,
+   "color": "#ffc27a",
+   "alpha": 0.3,
+   "animation": {
+    "type": "torch",
+    "speed": 2,
+    "intensity": 3
+   }
+  }
+ ],
+ "notes": [
+  {
+   "x": 1100,
+   "y": 700,
+   "page": "ch1_missed_ship",
+   "label": "The Gilded Tern leaves without them"
+  },
+  {
+   "x": 1450,
+   "y": 1120,
+   "page": "gilded_tern",
+   "label": "The Gilded Tern"
+  }
+ ],
+ "tokens": [
+  {
+   "actor": "rourke",
+   "x": 1100,
+   "y": 740
+  },
+  {
+   "actor": "noble",
+   "x": 1220,
+   "y": 580
+  }
+ ]
+}

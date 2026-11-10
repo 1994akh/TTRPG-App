@@ -1,0 +1,33 @@
+{
+  "_id": "Ttel0VLkUsZyVqf3",
+  "name": "Silent Step",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Undertow",
+    "tier": 2,
+    "grade": "E",
+    "points": 2,
+    "cost": "1 action",
+    "effect": "Stride and Hide as a single action. The Stride does not provoke and leaves no trace anyone below your grade can follow."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!Ttel0VLkUsZyVqf3"
+}

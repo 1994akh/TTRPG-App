@@ -1,0 +1,28 @@
+{
+  "_id": "5Nqq3HO5FuVG5lER",
+  "name": "Swordsaint",
+  "type": "class",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "ruleId": "Swordsaint"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 6200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!5Nqq3HO5FuVG5lER"
+}

@@ -1,0 +1,28 @@
+{
+  "_id": "An0R6t3LECVumE2j",
+  "name": "World Serpent",
+  "type": "class",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "ruleId": "World Serpent"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 8700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!An0R6t3LECVumE2j"
+}

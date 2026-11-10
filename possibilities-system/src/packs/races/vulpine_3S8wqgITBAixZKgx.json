@@ -1,0 +1,28 @@
+{
+  "_id": "3S8wqgITBAixZKgx",
+  "name": "Vulpine",
+  "type": "race",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "ruleId": "Vulpine"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!3S8wqgITBAixZKgx"
+}

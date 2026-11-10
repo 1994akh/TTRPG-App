@@ -1,0 +1,141 @@
+{
+ "id": "lantern_lee",
+ "name": "The Lantern and Lee",
+ "width": 1600,
+ "height": 1200,
+ "gridSize": 100,
+ "gridType": "square",
+ "background": "assets/maps/lantern_lee.webp",
+ "darkness": 0.45,
+ "walls": [
+  {
+   "c": [
+    1100,
+    300,
+    1100,
+    400
+   ],
+   "door": 1
+  },
+  {
+   "c": [
+    1100,
+    800,
+    1100,
+    900
+   ],
+   "door": 1
+  },
+  {
+   "c": [
+    400,
+    1100,
+    600,
+    1100
+   ],
+   "door": 1
+  },
+  {
+   "c": [
+    100,
+    100,
+    1500,
+    100
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    100,
+    1100,
+    400,
+    1100
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    600,
+    1100,
+    1500,
+    1100
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    100,
+    100,
+    100,
+    1100
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    1500,
+    100,
+    1500,
+    1100
+   ],
+   "door": 0
+  }
+ ],
+ "lights": [
+  {
+   "x": 990,
+   "y": 1000,
+   "dim": 25,
+   "bright": 10,
+   "color": "#ff8a3a",
+   "alpha": 0.45,
+   "animation": {
+    "type": "torch",
+    "speed": 2,
+    "intensity": 3
+   }
+  },
+  {
+   "x": 500,
+   "y": 650,
+   "dim": 30,
+   "bright": 15,
+   "color": "#ffc27a",
+   "alpha": 0.3,
+   "animation": {
+    "type": "torch",
+    "speed": 2,
+    "intensity": 3
+   }
+  },
+  {
+   "x": 1300,
+   "y": 350,
+   "dim": 10,
+   "bright": 5,
+   "color": "#ffc27a",
+   "alpha": 0.25
+  }
+ ],
+ "notes": [
+  {
+   "x": 500,
+   "y": 280,
+   "page": "ch1_inn_night",
+   "label": "A night at the Lantern and Lee"
+  },
+  {
+   "x": 1300,
+   "y": 350,
+   "page": "lantern_lee",
+   "label": "The one room"
+  }
+ ],
+ "tokens": [
+  {
+   "actor": "innkeeper",
+   "x": 500,
+   "y": 280
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "PRd2oihf5sczWtHt",
+  "name": "Unmaking",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Fathomless",
+    "tier": 7,
+    "grade": "S",
+    "points": 7,
+    "cost": "3 actions",
+    "effect": "One creature or object in Far is struck from the record. Written references decay; those who knew it must save to recall it. Once per grade."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 8100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!PRd2oihf5sczWtHt"
+}

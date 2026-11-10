@@ -1,0 +1,43 @@
+{
+  "_id": "Sf9Sm9lOBtBy5fCy",
+  "name": "Loaned charge lamp (with mirror)",
+  "type": "gear",
+  "img": "icons/sundries/lights/lantern-iron-lit-yellow.webp",
+  "system": {
+    "grade": "F",
+    "price": {
+      "value": 6,
+      "denom": "gp"
+    },
+    "loaned": true,
+    "condition": "intact",
+    "description": "<p>A brass charge-lamp with a hinged mirror hood for throwing the beam.</p>",
+    "quantity": 1,
+    "keyItem": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "charge_lamp",
+      "loaner": true,
+      "count": 1
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!Sf9Sm9lOBtBy5fCy"
+}

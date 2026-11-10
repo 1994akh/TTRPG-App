@@ -1,0 +1,93 @@
+{
+  "_id": "ZdinBL8KoEyWutvs",
+  "name": "Hollis Tarrant",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "el": 0,
+    "grade": "F",
+    "role": "standard",
+    "hp": {
+      "value": 10
+    },
+    "overrides": {
+      "ac": null,
+      "attack": null,
+      "hpMax": null,
+      "damage": null,
+      "dc": null,
+      "initiative": null
+    },
+    "zone": "near",
+    "turn": {
+      "actions": 3,
+      "attacks": 0,
+      "guard": false
+    },
+    "description": "<p>A charge-lamp importer on Refinery Row, rich enough to pay and proud enough not to ask the Compact for help.</p>",
+    "tactics": "",
+    "bestiary": {
+      "known": false,
+      "lore": "<p>A charge-lamp importer on Refinery Row, rich enough to pay and proud enough not to ask the Compact for help.</p>"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "Hollis Tarrant",
+    "displayName": 30,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": 1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "lockRotation": true,
+    "sight": {
+      "enabled": true,
+      "range": 30
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {
+      "possibilities-act1": {
+        "actorKey": "merchant"
+      }
+    }
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "merchant",
+      "foe": false,
+      "people": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!ZdinBL8KoEyWutvs"
+}

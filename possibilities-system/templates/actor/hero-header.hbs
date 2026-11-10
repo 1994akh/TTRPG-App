@@ -1,0 +1,45 @@
+<header class="poss-header">
+  <img class="portrait" src="{{actor.img}}" data-edit="img" data-action="editImage" alt="{{actor.name}}">
+  <div class="identity">
+    <input class="name" type="text" name="name" value="{{actor.name}}" placeholder="{{localize 'POSS.Name'}}">
+    <div class="subline">
+      <span>{{race.name}} · {{tracks.race.family}}</span>
+      <span>{{#if unclassed}}{{localize "POSS.Unclassed"}}{{else}}{{cls.name}} {{system.class.rank}}{{/if}}</span>
+      <span>{{pro.name}} {{system.profession.rank}}</span>
+      {{#if system.details.pronouns}}<span>{{system.details.pronouns}}</span>{{/if}}
+    </div>
+    <div class="vitals">
+      <div class="vital hp">
+        <label>{{localize "POSS.HP"}}</label>
+        <div class="bar"><span style="width: {{hpPct}}%"></span></div>
+        <div class="nums"><input type="number" name="system.hp.value" value="{{system.hp.value}}" min="0"> / {{derived.hpMax}}
+          <small>{{localize "POSS.Temp"}}</small> <input type="number" name="system.hp.temp" value="{{system.hp.temp}}" min="0"></div>
+      </div>
+      <div class="vital points">
+        <label>{{localize "POSS.Points"}}</label>
+        <div class="bar"><span style="width: {{pointsPct}}%"></span></div>
+        <div class="nums"><input type="number" name="system.points.value" value="{{system.points.value}}" min="0"> / {{derived.pointsMax}}</div>
+      </div>
+      <div class="stat"><label>{{localize "POSS.AC"}}</label><b>{{derived.ac}}</b>{{#if system.turn.guard}}<small>{{localize "POSS.Guarded"}}</small>{{/if}}</div>
+      <div class="stat"><label>{{localize "POSS.Init"}}</label><b>{{possSigned derived.initiative}}</b></div>
+      <div class="stat"><label>{{localize "POSS.Speed"}}</label><b>{{derived.speed}}</b></div>
+      <div class="stat"><label>{{localize "POSS.Zone.label"}}</label>
+        <select name="system.zone">{{selectOptions zones selected=system.zone}}</select></div>
+    </div>
+    <div class="turnline">
+      <span class="label">{{localize "POSS.Actions"}}</span>
+      <span class="pips">{{#each pips}}<button type="button" class="pip {{#if on}}on{{/if}}" data-action="setActions" data-n="{{n}}" aria-label="{{n}}"></button>{{/each}}</span>
+      <button type="button" class="mini" data-action="resetTurn"><i class="fa-solid fa-rotate"></i> {{localize "POSS.NewTurn"}}</button>
+      {{#if mapLabel}}<span class="map">{{localize "POSS.MAP"}} {{mapLabel}}</span>{{/if}}
+      {{#if system.turn.aid}}<span class="aid">{{localize "POSS.Aided"}} +{{system.turn.aid}}</span>{{/if}}
+      {{#if (possOr system.dying.active system.dying.stable system.dying.dead)}}
+      <span class="dying {{#if system.dying.dead}}dead{{/if}}">
+        <span class="label">{{#if system.dying.dead}}{{localize "POSS.Dying.Fallen"}}{{else if system.dying.stable}}{{localize "POSS.Dying.StableLabel"}}{{else}}{{localize "POSS.Dying.Label"}}{{/if}}</span>
+        {{#each dyingPips}}<button type="button" class="pip skull {{#if on}}on{{/if}}" data-action="setDying" data-n="{{n}}" aria-label="{{n}}"></button>{{/each}}
+        <button type="button" class="mini" data-action="clearDying"><i class="fa-solid fa-xmark"></i></button>
+      </span>
+      {{/if}}
+      {{#if system.dying.wounded}}<span class="wounded">{{localize "POSS.Wounded"}} {{system.dying.wounded}}</span>{{/if}}
+    </div>
+  </div>
+</header>

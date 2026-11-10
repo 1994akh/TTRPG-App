@@ -1,0 +1,84 @@
+<section class="tab poss-main {{tabs.main.cssClass}}" data-group="primary" data-tab="main">
+  {{#unless derived.complete}}<p class="poss-warn">{{localize "POSS.Incomplete"}}</p>{{/unless}}
+  <div class="tracks">
+    <div class="track race">
+      <h3>{{localize "POSS.Race"}}</h3>
+      <select name="system.race">{{{raceOptions}}}</select>
+      <label>{{localize "POSS.Grade"}} <select name="system.raceGrade">{{selectOptions grades selected=system.raceGrade}}</select></label>
+      <p class="figure">RGM <b>{{derived.rgm}}</b></p>
+      <p class="small">{{tracks.race.trait}}</p>
+      {{#if tracks.race.gate}}<p class="small muted">{{localize "POSS.Gate"}}: {{tracks.race.gate}}</p>{{/if}}
+    </div>
+    <div class="track class">
+      <h3>{{localize "POSS.Class"}}</h3>
+      <select name="system.class.node">{{{classOptions}}}</select>
+      {{#unless unclassed}}<label>{{localize "POSS.Rank"}} <select name="system.class.rank">{{selectOptions ranks selected=system.class.rank}}</select></label>{{/unless}}
+      <p class="figure">{{localize "POSS.CombatEL"}} <b>{{tracks.class.el}}</b></p>
+      {{#if unclassed}}
+        <p class="small">{{localize "POSS.UnclassedHint"}}</p>
+        {{#if editable}}<button type="button" data-action="bind"><i class="fa-solid fa-bolt"></i> {{localize "POSS.Bind.Button"}}</button>{{/if}}
+      {{else}}
+        <div class="xp"><div class="bar"><span style="width: {{tracks.class.pct}}%"></span></div>
+          <input type="number" name="system.xp.class" value="{{system.xp.class}}" min="0"> / {{tracks.class.next}} XP</div>
+        <p class="small">{{tracks.class.feature}}</p>
+      {{/unless}}
+    </div>
+    <div class="track profession">
+      <h3>{{localize "POSS.Profession"}}</h3>
+      <select name="system.profession.node">{{{professionOptions}}}</select>
+      <label>{{localize "POSS.Rank"}} <select name="system.profession.rank">{{selectOptions ranks selected=system.profession.rank}}</select></label>
+      <p class="figure">{{localize "POSS.CraftEL"}} <b>{{tracks.profession.el}}</b></p>
+      <div class="xp"><div class="bar"><span style="width: {{tracks.profession.pct}}%"></span></div>
+        <input type="number" name="system.xp.profession" value="{{system.xp.profession}}" min="0"> / {{tracks.profession.next}} XP</div>
+      <p class="small">{{tracks.profession.feature}}</p>
+    </div>
+  </div>
+  {{#if divergenceWarn}}<p class="poss-warn {{#if divergenceBlock}}block{{/if}}">{{localize "POSS.Divergence"}} {{derived.divergence}} / {{derived.divergenceCap}}</p>{{/if}}
+
+  <div class="columns">
+    <div class="abilities">
+      <h3>{{localize "POSS.Abilities"}}</h3>
+      <table>
+        <thead><tr><th></th><th>{{localize "POSS.Score"}}</th><th>{{localize "POSS.Mod"}}</th><th>{{localize "POSS.Save"}}</th><th>{{localize "POSS.Training"}}</th></tr></thead>
+        <tbody>
+        {{#each abilities}}
+          <tr><th>{{key}}</th><td>{{score}}</td><td>{{mod}}</td>
+            <td><button type="button" class="roll" data-action="rollSave" data-ability="{{key}}">{{save}}</button></td>
+            <td><select name="system.training.saves.{{key}}">{{selectOptions @root.training selected=rank}}</select></td></tr>
+        {{/each}}
+        </tbody>
+      </table>
+      <div class="derived-list">
+        <div><span>{{localize "POSS.Attack"}}</span><b>{{possSigned derived.attack}}</b></div>
+        <div><span>{{localize "POSS.Damage"}}</span><b>{{derived.damageFormula}}</b></div>
+        <div><span>{{localize "POSS.CraftEffort"}}</span><b>{{derived.craftEffortFormula}}</b></div>
+        <div><span>{{localize "POSS.SpellDC"}}</span><b>{{#if derived.spellDC}}{{derived.spellDC}} / {{possSigned derived.spellAttack}}{{else}}—{{/if}}</b></div>
+        <div><span>{{localize "POSS.PassivePerception"}}</span><b>{{derived.passivePerception}}</b></div>
+        <div><span>{{localize "POSS.HitDice"}}</span><b>{{derived.hitDice}}</b></div>
+        <div><span>{{localize "POSS.Carry"}}</span><b>{{derived.carry}}</b></div>
+      </div>
+      <h3>{{localize "POSS.Training"}}</h3>
+      <div class="training">
+        <label>{{localize "POSS.Weapons"}} <select name="system.training.weapon">{{selectOptions training selected=system.training.weapon}}</select></label>
+        <label>{{localize "POSS.ArmourTraining"}} <select name="system.training.armour">{{selectOptions training selected=system.training.armour}}</select></label>
+        <label>{{localize "POSS.Spells"}} <select name="system.training.spell">{{selectOptions training selected=system.training.spell}}</select></label>
+        <label>{{localize "POSS.CastAbility"}} <select name="system.castAbility">{{selectOptions abilitiesList selected=system.castAbility}}</select></label>
+        <label>{{localize "POSS.BaseSpeed"}} <input type="number" name="system.baseSpeed" value="{{system.baseSpeed}}"></label>
+        <label>{{localize "POSS.GearBonus"}} <input type="number" name="system.gearBonus" value="{{system.gearBonus}}"></label>
+      </div>
+    </div>
+    <div class="skills">
+      {{#each skillGroups}}
+      <h3>{{label}}</h3>
+      <ul class="skill-list">
+        {{#each skills}}
+        <li class="{{#if (possEq rank 'Untrained')}}untrained{{/if}}">
+          <button type="button" class="roll skill" data-action="rollSkill" data-skill="{{id}}"><span class="n">{{id}}</span> <small>{{ability}}</small> <b>{{totalLabel}}</b></button>
+          <select name="system.training.skills.{{id}}" aria-label="{{id}}">{{selectOptions @root.training selected=rank}}</select>
+        </li>
+        {{/each}}
+      </ul>
+      {{/each}}
+    </div>
+  </div>
+</section>

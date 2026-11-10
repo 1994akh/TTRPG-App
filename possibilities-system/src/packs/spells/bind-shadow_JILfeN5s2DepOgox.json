@@ -1,0 +1,35 @@
+{
+  "_id": "JILfeN5s2DepOgox",
+  "name": "Bind Shadow",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Fathomless",
+    "tier": 2,
+    "grade": "E",
+    "points": 2,
+    "actions": "2",
+    "range": "Near",
+    "save": "Will",
+    "effect": "The target's shadow is pinned. It is Immobilized while you concentrate."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!JILfeN5s2DepOgox"
+}

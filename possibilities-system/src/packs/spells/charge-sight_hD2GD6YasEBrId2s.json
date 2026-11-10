@@ -1,0 +1,35 @@
+{
+  "_id": "hD2GD6YasEBrId2s",
+  "name": "Charge Sight",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Artifice",
+    "tier": 2,
+    "grade": "E",
+    "points": 2,
+    "actions": "1",
+    "range": "Self",
+    "save": "",
+    "effect": "For an hour you see Possibility: charge, sigils, brume density and recent binding."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!hD2GD6YasEBrId2s"
+}

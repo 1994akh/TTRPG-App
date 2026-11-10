@@ -1,0 +1,71 @@
+<div class="poss-npc">
+  <header class="poss-header">
+    <img class="portrait" src="{{actor.img}}" data-edit="img" data-action="editImage" alt="{{actor.name}}">
+    <div class="identity">
+      <input class="name" type="text" name="name" value="{{actor.name}}">
+      <div class="row">
+        <label>EL <input type="number" name="system.el" value="{{system.el}}" min="0" max="35"></label>
+        <label>{{localize "POSS.Grade"}} <select name="system.grade">{{selectOptions grades selected=system.grade}}</select></label>
+        <label>{{localize "POSS.Role.label"}} <select name="system.role">{{selectOptions roles selected=system.role}}</select></label>
+        <label>{{localize "POSS.Zone.label"}} <select name="system.zone">{{selectOptions zones selected=system.zone}}</select></label>
+      </div>
+      <div class="vitals">
+        <div class="vital hp"><label>{{localize "POSS.HP"}}</label><div class="bar"><span style="width: {{hpPct}}%"></span></div>
+          <div class="nums"><input type="number" name="system.hp.value" value="{{system.hp.value}}" min="0"> / {{derived.hpMax}}</div></div>
+        <div class="stat"><label>{{localize "POSS.AC"}}</label><b>{{derived.ac}}</b></div>
+        <div class="stat"><label>{{localize "POSS.Attack"}}</label><b>{{possSigned derived.attack}}</b></div>
+        <div class="stat"><label>DC</label><b>{{derived.dc}}</b></div>
+        <div class="stat"><label>{{localize "POSS.Init"}}</label><b>{{possSigned derived.initiative}}</b></div>
+      </div>
+      <div class="turnline">
+        <span class="label">{{localize "POSS.Actions"}}</span>
+        <span class="pips">{{#each pips}}<button type="button" class="pip {{#if on}}on{{/if}}" data-action="setActions" data-n="{{n}}" aria-label="{{n}}"></button>{{/each}}</span>
+        <button type="button" class="mini" data-action="resetTurn"><i class="fa-solid fa-rotate"></i> {{localize "POSS.NewTurn"}}</button>
+      </div>
+    </div>
+  </header>
+
+  <h3>{{localize "POSS.Attacks"}} <small>{{localize "POSS.NextAttack"}} {{nextAttack}}</small>
+    <button type="button" class="mini" data-action="createItem" data-type="weapon"><i class="fa-solid fa-plus"></i></button></h3>
+  <div class="action-grid">
+    {{#each weapons}}
+    <button type="button" class="action" data-action="strike" data-item-id="{{id}}"><span><b>{{name}}</b><small>{{#if system.damage}}{{system.damage}}{{else}}{{@root.derived.damageFormula}}{{/if}} · {{system.traits}}</small></span><em>1</em></button>
+    {{/each}}
+    <button type="button" class="action" data-action="strike"><span><b>{{localize "POSS.Action.strike"}}</b><small>{{derived.damageFormula}}</small></span><em>1</em></button>
+    <button type="button" class="action" data-action="guard"><span><b>{{localize "POSS.Action.guard"}}</b></span><em>1</em></button>
+    <button type="button" class="action" data-action="withdraw"><span><b>{{localize "POSS.Action.withdraw"}}</b></span><em>3</em></button>
+  </div>
+  <ul class="item-list">
+    {{#each weapons}}<li data-item-id="{{id}}"><button type="button" class="link" data-action="editItem">{{name}}</button>
+      <button type="button" class="mini" data-action="deleteItem"><i class="fa-solid fa-trash"></i></button></li>{{/each}}
+  </ul>
+  <h3>{{localize "POSS.Features"}} <button type="button" class="mini" data-action="createItem" data-type="feature"><i class="fa-solid fa-plus"></i></button></h3>
+  <ul class="item-list">
+    {{#each features}}<li data-item-id="{{id}}"><button type="button" class="link" data-action="editItem">{{name}}</button>
+      {{#if system.uses.max}}<span class="uses">{{system.uses.value}}/{{system.uses.max}}</span>{{/if}}
+      <button type="button" class="mini" data-action="deleteItem"><i class="fa-solid fa-trash"></i></button></li>
+    {{else}}<li class="empty">{{localize "POSS.NoneYet"}}</li>{{/each}}
+  </ul>
+
+  <details class="overrides" {{#if editable}}open{{/if}}>
+    <summary>{{localize "POSS.Benchmarks"}}</summary>
+    <p class="hint">{{localize "POSS.BenchmarksHint"}}</p>
+    <div class="override-grid">
+      <label>AC <small>({{b.ac}})</small> <input type="number" name="system.overrides.ac" value="{{system.overrides.ac}}" placeholder="{{b.ac}}"></label>
+      <label>{{localize "POSS.Attack"}} <small>({{b.attack}})</small> <input type="number" name="system.overrides.attack" value="{{system.overrides.attack}}" placeholder="{{b.attack}}"></label>
+      <label>{{localize "POSS.HP"}} <small>({{b.hpMax}})</small> <input type="number" name="system.overrides.hpMax" value="{{system.overrides.hpMax}}" placeholder="{{b.hpMax}}"></label>
+      <label>DC <small>({{b.dc}})</small> <input type="number" name="system.overrides.dc" value="{{system.overrides.dc}}" placeholder="{{b.dc}}"></label>
+      <label>{{localize "POSS.Init"}} <small>({{b.initiative}})</small> <input type="number" name="system.overrides.initiative" value="{{system.overrides.initiative}}" placeholder="{{b.initiative}}"></label>
+      <label>{{localize "POSS.Damage"}} <small>({{b.damage}}, {{b.damagePerRound}}/round)</small> <input type="text" name="system.overrides.damage" value="{{system.overrides.damage}}" placeholder="{{b.damage}}"></label>
+    </div>
+  </details>
+
+  <h3>{{localize "POSS.Description"}}</h3>
+  <prose-mirror name="system.description" button toggled value="{{system.description}}" data-document-uuid="{{actor.uuid}}">{{{enriched.description}}}</prose-mirror>
+  {{#if owner}}
+  <h3>{{localize "POSS.Tactics"}}</h3>
+  <prose-mirror name="system.tactics" button toggled value="{{system.tactics}}" data-document-uuid="{{actor.uuid}}">{{{enriched.tactics}}}</prose-mirror>
+  {{/if}}
+  <h3>{{localize "POSS.Bestiary"}} <label class="inline"><input type="checkbox" name="system.bestiary.known" {{checked system.bestiary.known}}> {{localize "POSS.Known"}}</label></h3>
+  <prose-mirror name="system.bestiary.lore" button toggled value="{{system.bestiary.lore}}" data-document-uuid="{{actor.uuid}}">{{{enriched.lore}}}</prose-mirror>
+</div>

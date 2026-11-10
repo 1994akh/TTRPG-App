@@ -1,0 +1,35 @@
+{
+  "_id": "jhcmja6HtxoDe88B",
+  "name": "Reading Light",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Artifice",
+    "tier": 1,
+    "grade": "F",
+    "points": 1,
+    "actions": "1",
+    "range": "Self",
+    "save": "",
+    "effect": "Light to the Near zone for an hour. In brume it reveals which way the fog thins."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!jhcmja6HtxoDe88B"
+}

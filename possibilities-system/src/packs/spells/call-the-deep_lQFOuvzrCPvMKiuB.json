@@ -1,0 +1,35 @@
+{
+  "_id": "lQFOuvzrCPvMKiuB",
+  "name": "Call the Deep",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Tidebound",
+    "tier": 3,
+    "grade": "D",
+    "points": 3,
+    "actions": "3",
+    "range": "Near",
+    "save": "Reflex",
+    "effect": "Water floods a zone. Creatures failing are Prone and Slowed 1 while it lasts."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!lQFOuvzrCPvMKiuB"
+}

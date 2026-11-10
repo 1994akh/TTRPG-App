@@ -1,0 +1,33 @@
+{
+  "_id": "axaiwWd2GLEOnjtD",
+  "name": "Total Archive",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Lore",
+    "tier": 5,
+    "grade": "B",
+    "points": 5,
+    "cost": "1 downtime week",
+    "effect": "Reconstruct a lost work from fragments. Counts as a full Discovery."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!axaiwWd2GLEOnjtD"
+}

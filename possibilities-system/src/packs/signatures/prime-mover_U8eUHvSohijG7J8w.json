@@ -1,0 +1,33 @@
+{
+  "_id": "U8eUHvSohijG7J8w",
+  "name": "Prime Mover",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Artifice",
+    "tier": 7,
+    "grade": "S",
+    "points": 7,
+    "cost": "1 year",
+    "effect": "Build an engine that needs no charge at all. Every power in the sea will want it, or want it destroyed, and most will want both."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 7900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!U8eUHvSohijG7J8w"
+}

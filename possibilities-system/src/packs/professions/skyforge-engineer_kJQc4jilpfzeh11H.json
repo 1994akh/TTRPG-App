@@ -1,0 +1,28 @@
+{
+  "_id": "kJQc4jilpfzeh11H",
+  "name": "Skyforge Engineer",
+  "type": "profession",
+  "img": "icons/svg/hammer.svg",
+  "system": {
+    "ruleId": "Skyforge Engineer"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!kJQc4jilpfzeh11H"
+}

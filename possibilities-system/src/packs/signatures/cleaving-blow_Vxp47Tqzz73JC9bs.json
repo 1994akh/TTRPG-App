@@ -1,0 +1,33 @@
+{
+  "_id": "Vxp47Tqzz73JC9bs",
+  "name": "Cleaving Blow",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Ironclad",
+    "tier": 2,
+    "grade": "E",
+    "points": 2,
+    "cost": "2 actions",
+    "effect": "One Strike against every enemy in your zone, each at -2. Roll damage once and apply it to all."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!Vxp47Tqzz73JC9bs"
+}

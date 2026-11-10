@@ -1,0 +1,33 @@
+{
+  "_id": "X6bC9FlC9NRvleDa",
+  "name": "Apotheosis",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Divine",
+    "tier": 7,
+    "grade": "S",
+    "points": 7,
+    "cost": "3 actions",
+    "effect": "For one minute you count as one grade higher for every purpose: the damage gate, resistances, your DCs and your saves. Afterwards you are Drained 2 and cannot bind Possibility until you rest fully."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 7500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!X6bC9FlC9NRvleDa"
+}

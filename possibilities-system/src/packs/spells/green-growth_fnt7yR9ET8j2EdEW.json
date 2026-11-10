@@ -1,0 +1,35 @@
+{
+  "_id": "fnt7yR9ET8j2EdEW",
+  "name": "Green Growth",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Tidebound",
+    "tier": 4,
+    "grade": "C",
+    "points": 4,
+    "actions": "1 hour",
+    "range": "Near",
+    "save": "",
+    "effect": "Make barren ground fertile for a season. On an island this is a political act."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!fnt7yR9ET8j2EdEW"
+}

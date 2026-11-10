@@ -1,0 +1,35 @@
+{
+  "_id": "wNSy8vWOfwnHxlYv",
+  "name": "The Killing Ground",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Martial",
+    "tier": 5,
+    "grade": "B",
+    "points": 5,
+    "actions": "3",
+    "range": "Near",
+    "save": "",
+    "effect": "Choose a zone. For one minute, enemies there are Slowed 1 and you have advantage against them."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!wNSy8vWOfwnHxlYv"
+}

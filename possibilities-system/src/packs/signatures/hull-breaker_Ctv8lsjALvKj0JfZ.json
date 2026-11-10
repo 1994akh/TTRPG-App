@@ -1,0 +1,33 @@
+{
+  "_id": "Ctv8lsjALvKj0JfZ",
+  "name": "Hull Breaker",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Ironclad",
+    "tier": 3,
+    "grade": "D",
+    "points": 3,
+    "cost": "2 actions",
+    "effect": "A Strike that treats your weapon as one grade higher against the damage gate, and deals full damage to structures and vessels. On a hit the target is Off-Guard until your next turn."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!Ctv8lsjALvKj0JfZ"
+}

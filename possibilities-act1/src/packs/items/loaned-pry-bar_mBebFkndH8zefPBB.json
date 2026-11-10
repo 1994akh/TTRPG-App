@@ -1,0 +1,43 @@
+{
+  "_id": "mBebFkndH8zefPBB",
+  "name": "Loaned pry bar",
+  "type": "gear",
+  "img": "icons/tools/hand/pickaxe-steel-white.webp",
+  "system": {
+    "grade": "F",
+    "price": {
+      "value": 4,
+      "denom": "gp"
+    },
+    "loaned": true,
+    "condition": "intact",
+    "description": "<p>Iron, a yard long, bent at one end.</p>",
+    "quantity": 1,
+    "keyItem": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "pry_bar",
+      "loaner": true,
+      "count": 1
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!mBebFkndH8zefPBB"
+}

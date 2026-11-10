@@ -1,0 +1,107 @@
+{
+  "id": "possibilities-act1",
+  "title": "Ashford Roads: Act 1",
+  "description": "Act 1 of the Wayfinder story for the Possibilities system: your own character with Enkrid, Rook and Tova, from the Coast Road into Ashford's sewers to the day the Gilded Tern leaves without them. Seven maps, the Act 1 Director, the Purse, the Into the light Scene with its sun clock, and My Story, a journal for writing it up as you play.",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "Aaron Hancock"
+    }
+  ],
+  "url": "https://github.com/1994akh/TTRPG-App",
+  "manifest": "https://github.com/1994akh/TTRPG-App/releases/latest/download/possibilities-act1.json",
+  "download": "https://github.com/1994akh/TTRPG-App/releases/latest/download/possibilities-act1.zip",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14.370"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "possibilities",
+        "type": "system",
+        "compatibility": {
+          "minimum": "0.1.0"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/act1.mjs"
+  ],
+  "styles": [
+    "styles/act1.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "adventure",
+      "label": "Ashford Roads: Act 1",
+      "type": "Adventure",
+      "system": "possibilities",
+      "path": "packs/adventure",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "actors",
+      "label": "Act 1 Actors",
+      "type": "Actor",
+      "system": "possibilities",
+      "path": "packs/actors",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "items",
+      "label": "Act 1 Items",
+      "type": "Item",
+      "system": "possibilities",
+      "path": "packs/items",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "macros",
+      "label": "Act 1 Macros",
+      "type": "Macro",
+      "path": "packs/macros",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Ashford Roads: Act 1",
+      "sorting": "m",
+      "packs": [
+        "adventure",
+        "actors",
+        "items",
+        "macros"
+      ]
+    }
+  ],
+  "quickstart": {
+    "adventures": {
+      "possibilities": {
+        "uuid": "Compendium.possibilities-act1.adventure.Adventure.YX66ZQDDcnYgeIQl"
+      }
+    }
+  },
+  "flags": {}
+}

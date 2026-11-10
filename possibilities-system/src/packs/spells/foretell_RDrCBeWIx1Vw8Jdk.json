@@ -1,0 +1,35 @@
+{
+  "_id": "RDrCBeWIx1Vw8Jdk",
+  "name": "Foretell",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Fathomless",
+    "tier": 5,
+    "grade": "B",
+    "points": 5,
+    "actions": "1 minute",
+    "range": "Self",
+    "save": "",
+    "effect": "Ask one yes-or-no question about the coming watch. The answer is honest but not complete."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!RDrCBeWIx1Vw8Jdk"
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "FPwdTIHOkCVDTsPE",
+  "name": "The Long Doom",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Fathomless",
+    "tier": 7,
+    "grade": "S",
+    "points": 7,
+    "actions": "1 minute",
+    "range": "Any",
+    "save": "Will",
+    "effect": "Name a creature anywhere in the sea. It knows. It has one year, and it knows that too."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 6900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!FPwdTIHOkCVDTsPE"
+}

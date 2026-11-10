@@ -1,0 +1,44 @@
+{
+  "_id": "IiWbox4OXzyMAaBI",
+  "name": "The sellswords' journal",
+  "type": "gear",
+  "img": "icons/sundries/books/book-worn-brown.webp",
+  "system": {
+    "grade": "F",
+    "price": {
+      "value": 0,
+      "denom": "gp"
+    },
+    "loaned": false,
+    "condition": "intact",
+    "description": "<p>A Coldwater sellsword&#39;s pocket journal, found by the bodies in the Undercourses.</p>",
+    "quantity": 1,
+    "keyItem": true
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "sellswords_journal",
+      "keyItem": true,
+      "holder": null,
+      "handout": "sellswords_journal"
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!IiWbox4OXzyMAaBI"
+}

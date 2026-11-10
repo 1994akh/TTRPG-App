@@ -1,0 +1,93 @@
+{
+  "_id": "PC7eW86GP7LoUv6a",
+  "name": "Old Dunmore",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "el": 4,
+    "grade": "F",
+    "role": "standard",
+    "hp": {
+      "value": 26
+    },
+    "overrides": {
+      "ac": null,
+      "attack": null,
+      "hpMax": null,
+      "damage": null,
+      "dc": null,
+      "initiative": null
+    },
+    "zone": "near",
+    "turn": {
+      "actions": 3,
+      "attacks": 0,
+      "guard": false
+    },
+    "description": "",
+    "tactics": "",
+    "bestiary": {
+      "known": false,
+      "lore": ""
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "Old Dunmore",
+    "displayName": 30,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": 1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "lockRotation": true,
+    "sight": {
+      "enabled": true,
+      "range": 30
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {
+      "possibilities-act1": {
+        "actorKey": "innkeeper"
+      }
+    }
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "innkeeper",
+      "foe": false,
+      "people": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!PC7eW86GP7LoUv6a"
+}

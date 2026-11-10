@@ -1,0 +1,180 @@
+{
+ "id": "sallows_exchange",
+ "name": "Sallow's Exchange",
+ "width": 1800,
+ "height": 1400,
+ "gridSize": 100,
+ "gridType": "square",
+ "background": "assets/maps/sallows_exchange.webp",
+ "darkness": 0.2,
+ "walls": [
+  {
+   "c": [
+    800,
+    1000,
+    1000,
+    1000
+   ],
+   "door": 1
+  },
+  {
+   "c": [
+    100,
+    100,
+    1700,
+    100
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    100,
+    1000,
+    500,
+    1000
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    1300,
+    1000,
+    1700,
+    1000
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    500,
+    1400,
+    1300,
+    1400
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    100,
+    100,
+    100,
+    1000
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    500,
+    1000,
+    500,
+    1400
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    1300,
+    1000,
+    1300,
+    1400
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    1700,
+    100,
+    1700,
+    1000
+   ],
+   "door": 0
+  }
+ ],
+ "lights": [
+  {
+   "x": 960,
+   "y": 500,
+   "dim": 20,
+   "bright": 10,
+   "color": "#ffbf6a",
+   "alpha": 0.4,
+   "animation": {
+    "type": "torch",
+    "speed": 2,
+    "intensity": 3
+   }
+  },
+  {
+   "x": 1510,
+   "y": 500,
+   "dim": 20,
+   "bright": 10,
+   "color": "#ffbf6a",
+   "alpha": 0.4,
+   "animation": {
+    "type": "torch",
+    "speed": 2,
+    "intensity": 3
+   }
+  },
+  {
+   "x": 400,
+   "y": 500,
+   "dim": 25,
+   "bright": 10,
+   "color": "#ffd9a0",
+   "alpha": 0.25
+  },
+  {
+   "x": 900,
+   "y": 1200,
+   "dim": 25,
+   "bright": 10,
+   "color": "#c9d2d8",
+   "alpha": 0.15
+  }
+ ],
+ "notes": [
+  {
+   "x": 1230,
+   "y": 590,
+   "page": "ch1_broker",
+   "label": "A hard time at the Exchange"
+  },
+  {
+   "x": 370,
+   "y": 190,
+   "page": "ch1_questions",
+   "label": "Stupid, basic, and naive questions"
+  },
+  {
+   "x": 880,
+   "y": 190,
+   "page": "ch1_commission",
+   "label": "The commission"
+  },
+  {
+   "x": 900,
+   "y": 1180,
+   "page": "ch1_prologue",
+   "label": "On the steps (the watch)"
+  }
+ ],
+ "tokens": [
+  {
+   "actor": "broker",
+   "x": 1240,
+   "y": 340
+  },
+  {
+   "actor": "protag2",
+   "x": 1150,
+   "y": 650
+  },
+  {
+   "actor": "protag3",
+   "x": 1250,
+   "y": 650
+  }
+ ]
+}

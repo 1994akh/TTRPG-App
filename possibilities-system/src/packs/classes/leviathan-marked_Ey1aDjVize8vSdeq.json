@@ -1,0 +1,28 @@
+{
+  "_id": "Ey1aDjVize8vSdeq",
+  "name": "Leviathan-Marked",
+  "type": "class",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "ruleId": "Leviathan-Marked"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!Ey1aDjVize8vSdeq"
+}

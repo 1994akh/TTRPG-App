@@ -1,0 +1,33 @@
+{
+  "_id": "EzTeBosDvmHD1pl4",
+  "name": "Tonic Craft",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Life",
+    "tier": 2,
+    "grade": "E",
+    "points": 2,
+    "cost": "1 hour",
+    "effect": "Brew (Craft EL / 5, minimum 1) doses. Each restores (2d8 + Craft EL) x RGM and keeps for a week. THIS is how healing keeps pace at high grade — bought potions do not."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!EzTeBosDvmHD1pl4"
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "EBcx03UlkoI7cwhc",
+  "name": "Sigil Focus",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Artifice",
+    "tier": 3,
+    "grade": "D",
+    "points": 3,
+    "cost": "2 actions",
+    "effect": "Inscribe a sigil in your zone for one minute. Allies within it gain +2 to saves; enemies entering take your Combat EL in damage, once each."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!EBcx03UlkoI7cwhc"
+}

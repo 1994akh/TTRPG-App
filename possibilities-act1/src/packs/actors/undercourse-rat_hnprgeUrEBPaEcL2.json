@@ -1,0 +1,133 @@
+{
+  "_id": "hnprgeUrEBPaEcL2",
+  "name": "Undercourse rat",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "el": 0,
+    "grade": "F",
+    "role": "minion",
+    "hp": {
+      "value": 4
+    },
+    "overrides": {
+      "ac": 11,
+      "attack": 2,
+      "hpMax": 4,
+      "damage": "1d3",
+      "dc": null,
+      "initiative": 2
+    },
+    "zone": "near",
+    "turn": {
+      "actions": 3,
+      "attacks": 0,
+      "guard": false
+    },
+    "description": "<p>A sewer rat grown fat on refinery-warm run-off.</p>",
+    "tactics": "<p>Swarms the nearest hero. Flees when Old Gnaw falls.</p>",
+    "bestiary": {
+      "known": false,
+      "lore": ""
+    }
+  },
+  "items": [
+    {
+      "_id": "Kzq2tch5ELSn8MNy",
+      "name": "Bite",
+      "type": "weapon",
+      "img": "icons/creatures/abilities/mouth-teeth-sharp.webp",
+      "system": {
+        "die": "d3",
+        "range": "engaged",
+        "traits": "1d3",
+        "grade": "F",
+        "price": {
+          "value": 0,
+          "denom": "gp"
+        },
+        "equipped": true,
+        "loaned": false,
+        "condition": "intact",
+        "description": ""
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 100,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "possibilities",
+        "systemVersion": "0.1.0",
+        "createdTime": 1794268800000,
+        "modifiedTime": 1794268800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!hnprgeUrEBPaEcL2.Kzq2tch5ELSn8MNy"
+    }
+  ],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "Undercourse rat",
+    "displayName": 30,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "lockRotation": true,
+    "sight": {
+      "enabled": false,
+      "range": 0
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {
+      "possibilities-act1": {
+        "actorKey": "rat"
+      }
+    }
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "rat",
+      "foe": true,
+      "people": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!hnprgeUrEBPaEcL2"
+}

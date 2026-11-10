@@ -1,0 +1,33 @@
+{
+  "_id": "3z2p4bGmWfpPfCf3",
+  "name": "Fate Thread",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Fathomless",
+    "tier": 4,
+    "grade": "C",
+    "points": 4,
+    "cost": "1 action",
+    "effect": "Declare a roll before it is made. Its result counts as one degree worse for an enemy, or one degree better for an ally."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!3z2p4bGmWfpPfCf3"
+}

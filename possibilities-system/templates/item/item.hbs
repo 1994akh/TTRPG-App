@@ -1,0 +1,96 @@
+<div class="poss-item type-{{type}}">
+  <header class="poss-header">
+    <img class="portrait small" src="{{item.img}}" data-edit="img" data-action="editImage" alt="{{item.name}}">
+    <div class="identity">
+      <input class="name" type="text" name="name" value="{{item.name}}">
+      <p class="subline"><span>{{localize (concat "TYPES.Item." type)}}</span></p>
+    </div>
+  </header>
+
+  {{#if reference}}
+    {{#if entry}}
+    <div class="reference">
+      <p><b>{{entry.name}}</b>{{#if entry.grade}} · {{entry.grade}}-grade{{/if}}{{#if entry.line}} · {{entry.line}}{{/if}}{{#if entry.family}} · {{entry.family}}{{/if}}</p>
+      {{#if entry.hit_die}}<p>{{localize "POSS.HitDie"}} {{entry.hit_die}} · {{entry.primary}}/{{entry.secondary}}</p>{{/if}}
+      {{#if entry.abilitiesText}}<p>{{entry.abilitiesText}}</p>{{/if}}
+      {{#if entry.skills}}<p>{{localize "POSS.Skills"}}: {{#each entry.skills}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>{{/if}}
+      {{#if entry.feature}}<p><b>{{entry.feature}}.</b> {{entry.feature_text}}</p>{{/if}}
+      {{#if entry.signature}}<p>{{localize "POSS.Signature"}}: {{entry.signature}}</p>{{/if}}
+      {{#if entry.trait}}<p>{{entry.trait}}</p>{{/if}}
+      {{#if entry.evolves_into.length}}<p>{{localize "POSS.EvolvesInto"}}: {{#each entry.evolves_into}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>{{/if}}
+      {{#if entry.evolves_from.length}}<p>{{localize "POSS.EvolvesFrom"}}: {{#each entry.evolves_from}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>{{/if}}
+      {{#if entry.raceRows}}
+      <table><thead><tr><th>{{localize "POSS.Grade"}}</th><th>RGM</th><th>{{localize "POSS.Abilities"}}</th></tr></thead>
+        <tbody>{{#each entry.raceRows}}<tr><td>{{g}}</td><td>{{rgm}}</td><td>{{abilities}}</td></tr>{{/each}}</tbody></table>
+      {{/if}}
+      <p class="hint">{{localize "POSS.DropHint"}}</p>
+    </div>
+    {{else}}<p class="poss-warn">{{localize "POSS.UnknownRule"}}</p>{{/if}}
+    <label>{{localize "POSS.RuleId"}} <input type="text" name="system.ruleId" value="{{system.ruleId}}"></label>
+  {{/if}}
+
+  {{#if is.weapon}}
+  <div class="fields">
+    <label>{{localize "POSS.Die"}} <select name="system.die">{{selectOptions dice selected=system.die}}</select></label>
+    <label>{{localize "POSS.Range"}} <select name="system.range">{{selectOptions ranges selected=system.range}}</select></label>
+    <label>{{localize "POSS.Traits"}} <input type="text" name="system.traits" value="{{system.traits}}"></label>
+    <label>{{localize "POSS.DamageOverride"}} <input type="text" name="system.damage" value="{{system.damage}}" placeholder="NPCs: 1d6 + 2"></label>
+    <label class="inline"><input type="checkbox" name="system.equipped" {{checked system.equipped}}> {{localize "POSS.Equipped"}}</label>
+  </div>
+  {{/if}}
+  {{#if is.armour}}
+  <div class="fields">
+    <label>{{localize "POSS.ArmourType"}} <select name="system.armourType">{{selectOptions armourTypes selected=system.armourType}}</select></label>
+    <label>{{localize "POSS.GearBonus"}} <input type="number" name="system.bonus" value="{{system.bonus}}"></label>
+    <label class="inline"><input type="checkbox" name="system.equipped" {{checked system.equipped}}> {{localize "POSS.Equipped"}}</label>
+  </div>
+  {{/if}}
+  {{#if is.gear}}
+  <div class="fields">
+    <label>{{localize "POSS.Quantity"}} <input type="number" name="system.quantity" value="{{system.quantity}}" min="0"></label>
+    <label class="inline"><input type="checkbox" name="system.keyItem" {{checked system.keyItem}}> {{localize "POSS.KeyItem"}}</label>
+  </div>
+  {{/if}}
+  {{#if equipment}}
+  <div class="fields">
+    <label>{{localize "POSS.Grade"}} <select name="system.grade">{{selectOptions grades selected=system.grade}}</select></label>
+    <label>{{localize "POSS.Price"}} <input type="number" name="system.price.value" value="{{system.price.value}}" min="0">
+      <select name="system.price.denom">{{selectOptions denoms selected=system.price.denom}}</select></label>
+    <label class="inline"><input type="checkbox" name="system.loaned" {{checked system.loaned}}> {{localize "POSS.Loaned"}}</label>
+    <label>{{localize "POSS.Condition.label"}} <select name="system.condition">{{selectOptions conditions selected=system.condition}}</select></label>
+  </div>
+  <h3>{{localize "POSS.Description"}}</h3>
+  <prose-mirror name="system.description" button toggled value="{{system.description}}" data-document-uuid="{{item.uuid}}">{{{enriched.description}}}</prose-mirror>
+  {{/if}}
+
+  {{#if is.signature}}
+  <div class="fields">
+    <label>{{localize "POSS.Line"}} <input type="text" name="system.line" value="{{system.line}}"></label>
+    <label>{{localize "POSS.Tier"}} <input type="number" name="system.tier" value="{{system.tier}}"></label>
+    <label>{{localize "POSS.Grade"}} <select name="system.grade">{{selectOptions grades selected=system.grade}}</select></label>
+    <label>{{localize "POSS.Points"}} <input type="number" name="system.points" value="{{system.points}}"></label>
+    <label>{{localize "POSS.Cost"}} <input type="text" name="system.cost" value="{{system.cost}}"></label>
+  </div>
+  <label class="wide">{{localize "POSS.Effect"}} <textarea name="system.effect" rows="5">{{system.effect}}</textarea></label>
+  {{/if}}
+  {{#if is.spell}}
+  <div class="fields">
+    <label>{{localize "POSS.Tradition"}} <input type="text" name="system.tradition" value="{{system.tradition}}"></label>
+    <label>{{localize "POSS.Tier"}} <input type="number" name="system.tier" value="{{system.tier}}"></label>
+    <label>{{localize "POSS.Grade"}} <select name="system.grade">{{selectOptions grades selected=system.grade}}</select></label>
+    <label>{{localize "POSS.Points"}} <input type="number" name="system.points" value="{{system.points}}"></label>
+    <label>{{localize "POSS.Actions"}} <input type="text" name="system.actions" value="{{system.actions}}"></label>
+    <label>{{localize "POSS.Range"}} <input type="text" name="system.range" value="{{system.range}}"></label>
+    <label>{{localize "POSS.Save"}} <input type="text" name="system.save" value="{{system.save}}"></label>
+  </div>
+  <label class="wide">{{localize "POSS.Effect"}} <textarea name="system.effect" rows="5">{{system.effect}}</textarea></label>
+  {{/if}}
+  {{#if is.feature}}
+  <div class="fields">
+    <label>{{localize "POSS.Uses"}} <input type="number" name="system.uses.value" value="{{system.uses.value}}" min="0"> /
+      <input type="number" name="system.uses.max" value="{{system.uses.max}}" min="0"></label>
+    <label>{{localize "POSS.Per.label"}} <select name="system.uses.per">{{selectOptions per selected=system.uses.per}}</select></label>
+  </div>
+  <prose-mirror name="system.text" button toggled value="{{system.text}}" data-document-uuid="{{item.uuid}}">{{{enriched.text}}}</prose-mirror>
+  {{/if}}
+</div>

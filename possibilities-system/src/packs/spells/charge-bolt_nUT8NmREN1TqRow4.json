@@ -1,0 +1,35 @@
+{
+  "_id": "nUT8NmREN1TqRow4",
+  "name": "Charge Bolt",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Artifice",
+    "tier": 1,
+    "grade": "F",
+    "points": 1,
+    "actions": "2",
+    "range": "Far",
+    "save": "",
+    "effect": "Spell attack. d6 dice. On a critical, target is Off-Guard until your next turn."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!nUT8NmREN1TqRow4"
+}

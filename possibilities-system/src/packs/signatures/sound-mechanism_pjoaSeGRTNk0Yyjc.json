@@ -1,0 +1,33 @@
+{
+  "_id": "pjoaSeGRTNk0Yyjc",
+  "name": "Sound Mechanism",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Artifice",
+    "tier": 1,
+    "grade": "F",
+    "points": 1,
+    "cost": "1 hour",
+    "effect": "Repair or disable any mechanism, lock or trap of your grade or below without a roll."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!pjoaSeGRTNk0Yyjc"
+}

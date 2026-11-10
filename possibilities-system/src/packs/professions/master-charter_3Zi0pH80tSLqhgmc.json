@@ -1,0 +1,28 @@
+{
+  "_id": "3Zi0pH80tSLqhgmc",
+  "name": "Master Charter",
+  "type": "profession",
+  "img": "icons/svg/hammer.svg",
+  "system": {
+    "ruleId": "Master Charter"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!3Zi0pH80tSLqhgmc"
+}

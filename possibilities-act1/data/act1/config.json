@@ -1,0 +1,55 @@
+{
+  "note": "Every number the user may change from the Possibilities Foundry decisions page. Draft by Claude.",
+  "purse": {
+    "bindingFeeGp": 50,
+    "bindings": 4,
+    "entries": [
+      {
+        "key": "reward",
+        "step": "fee",
+        "label": "Hollis Tarrant's reward for Petra",
+        "gp": 160
+      },
+      {
+        "key": "loanerBill",
+        "step": "fee",
+        "label": "The bill for the damaged loaners",
+        "gp": -30
+      },
+      {
+        "key": "dangerFee",
+        "step": "fee",
+        "label": "The danger fee, pressed out of the broker",
+        "gp": 70
+      }
+    ]
+  },
+  "gloam": {
+    "rebuffRounds": 2
+  },
+  "light": {
+    "clockRounds": 6,
+    "resistance": 50,
+    "dc": 12
+  },
+  "pcStart": {
+    "gp": 2,
+    "sp": 5,
+    "cp": 0
+  },
+  "fClasses": [
+    "Reaver",
+    "Firebrand",
+    "Chaplain",
+    "Tidecaller",
+    "Vanguard",
+    "Duelist",
+    "Oathkeeper",
+    "Beastbound",
+    "Shade",
+    "Bloodcharged",
+    "Medium",
+    "Theorist"
+  ],
+  "fClassesNote": "Fallback list for the Binding when the system API is missing; read from the rules data at authoring time."
+}

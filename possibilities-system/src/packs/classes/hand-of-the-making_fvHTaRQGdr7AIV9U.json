@@ -1,0 +1,28 @@
+{
+  "_id": "fvHTaRQGdr7AIV9U",
+  "name": "Hand of the Making",
+  "type": "class",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "ruleId": "Hand of the Making"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 8300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!fvHTaRQGdr7AIV9U"
+}

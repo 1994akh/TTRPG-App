@@ -1,0 +1,33 @@
+{
+  "_id": "vbLZ7O8K6nXnXnww",
+  "name": "Mind's Dominion",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Fathomless",
+    "tier": 5,
+    "grade": "B",
+    "points": 5,
+    "cost": "3 actions",
+    "effect": "One creature of Standard role or lower in Far obeys you for one minute. Elites attempt a Will save at the end of each of their turns."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!vbLZ7O8K6nXnXnww"
+}

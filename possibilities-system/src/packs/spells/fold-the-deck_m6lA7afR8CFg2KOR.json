@@ -1,0 +1,35 @@
+{
+  "_id": "m6lA7afR8CFg2KOR",
+  "name": "Fold the Deck",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Artifice",
+    "tier": 4,
+    "grade": "C",
+    "points": 4,
+    "actions": "2",
+    "range": "Self",
+    "save": "",
+    "effect": "Move yourself and all allies in Engaged one zone in any direction, instantly."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!m6lA7afR8CFg2KOR"
+}

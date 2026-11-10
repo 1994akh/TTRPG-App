@@ -1,0 +1,28 @@
+{
+  "_id": "nCKZklBqdS70Qe1o",
+  "name": "Vital Surgeon",
+  "type": "profession",
+  "img": "icons/svg/hammer.svg",
+  "system": {
+    "ruleId": "Vital Surgeon"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!nCKZklBqdS70Qe1o"
+}

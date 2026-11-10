@@ -1,0 +1,199 @@
+{
+  "_id": "fMWLOVfCJAtgARWB",
+  "name": "Enkrid",
+  "type": "hero",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "race": "Wendlin",
+    "raceGrade": "F",
+    "class": {
+      "node": "",
+      "rank": "Novice"
+    },
+    "profession": {
+      "node": "Tinker",
+      "rank": "Novice"
+    },
+    "xp": {
+      "class": 0,
+      "profession": 0
+    },
+    "hp": {
+      "value": 6,
+      "temp": 0
+    },
+    "points": {
+      "value": 0
+    },
+    "dying": {
+      "value": 0,
+      "active": false,
+      "stable": false,
+      "wounded": 0
+    },
+    "turn": {
+      "actions": 3,
+      "attacks": 0,
+      "guard": false
+    },
+    "zone": "near",
+    "training": {
+      "armour": "Untrained",
+      "weapon": "Trained",
+      "spell": "Untrained",
+      "saves": {
+        "STR": "Untrained",
+        "DEX": "Untrained",
+        "CON": "Untrained",
+        "INT": "Untrained",
+        "WIS": "Untrained",
+        "CHA": "Untrained"
+      },
+      "skills": {
+        "Survival": "Trained",
+        "Performance": "Trained",
+        "Crafting": "Trained",
+        "Investigation": "Trained"
+      }
+    },
+    "castAbility": "None",
+    "baseSpeed": 30,
+    "gearBonus": 0,
+    "currency": {
+      "cp": 0,
+      "sp": 5,
+      "gp": 1,
+      "pp": 0
+    },
+    "details": {
+      "pronouns": "he/him",
+      "age": "16-20 at the start",
+      "drive": "To escape the mundane and cruel life of the mainland, to travel, building power and knowledge to feel in control of his life.",
+      "appearance": "",
+      "biography": "<p>Orphaned road fae; no one would stand up for him. Wiry, small for his age, and sure it&#39;s a curse. He sees the sky ship as escape and adventure, and tinkering as his way onto a ship. He carries the inventor&#39;s pocket watch and wants to find the three legends, sure they still live.</p><p>Motivation: To escape the mundane and cruel life of the mainland, to travel, building power and knowledge to feel in control of his life.</p><p>Path note: Walks the Inventor&#39;s path (decided 3 Nov): main story to C-grade Archwright and Yardmaster, B-grade in the post-game.</p>",
+      "notes": ""
+    },
+    "story": {
+      "role": "trio",
+      "path": {
+        "class": [
+          "Bloodcharged",
+          "Overcharged",
+          "Charge Engineer",
+          "Archwright",
+          "Grand Archwright"
+        ],
+        "profession": [
+          "Tinker",
+          "Engineer",
+          "Sapper",
+          "Yardmaster",
+          "Skyforge Engineer"
+        ]
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "AtkEdpzxEC0CZNWe",
+      "name": "The inventor's pocket watch",
+      "type": "gear",
+      "img": "icons/tools/scribal/pocketwatch-gold.webp",
+      "system": {
+        "grade": "F",
+        "price": {
+          "value": 0,
+          "denom": "gp"
+        },
+        "loaned": false,
+        "condition": "intact",
+        "description": "<p>Crystal-faced and engraved: a token of identity and remembrance of Enkrid&#39;s goals. The inventor leaves it with him before the legends depart.</p>",
+        "quantity": 1,
+        "keyItem": true
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "possibilities-act1": {
+          "key": "pocket_watch",
+          "keyItem": true,
+          "holder": "enkrid",
+          "handout": null
+        }
+      },
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "possibilities",
+        "systemVersion": "0.1.0",
+        "createdTime": 1794268800000,
+        "modifiedTime": 1794268800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!fMWLOVfCJAtgARWB.AtkEdpzxEC0CZNWe"
+    }
+  ],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "Enkrid",
+    "displayName": 30,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": 1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "lockRotation": true,
+    "sight": {
+      "enabled": true,
+      "range": 30
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {
+      "possibilities-act1": {
+        "actorKey": "enkrid"
+      }
+    }
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "enkrid",
+      "trio": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!fMWLOVfCJAtgARWB"
+}

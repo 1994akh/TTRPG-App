@@ -1,0 +1,35 @@
+{
+  "_id": "qpP3pBtgmuye2F8v",
+  "name": "Read the Swell",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Tidebound",
+    "tier": 1,
+    "grade": "F",
+    "points": 1,
+    "actions": "1",
+    "range": "Self",
+    "save": "",
+    "effect": "Know the weather and current for the coming watch. +2 to the party's Navigate."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!qpP3pBtgmuye2F8v"
+}

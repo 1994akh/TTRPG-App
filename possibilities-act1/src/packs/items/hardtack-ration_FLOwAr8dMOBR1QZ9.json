@@ -1,0 +1,43 @@
+{
+  "_id": "FLOwAr8dMOBR1QZ9",
+  "name": "Hardtack ration",
+  "type": "gear",
+  "img": "icons/containers/bags/pack-simple-leather-brown.webp",
+  "system": {
+    "grade": "F",
+    "price": {
+      "value": 5,
+      "denom": "sp"
+    },
+    "loaned": false,
+    "condition": "intact",
+    "description": "",
+    "quantity": 3,
+    "keyItem": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "kit_tinker_3",
+      "kit": "kit_tinker",
+      "kitName": "Tinker's roll"
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!FLOwAr8dMOBR1QZ9"
+}

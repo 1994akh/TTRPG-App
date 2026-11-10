@@ -1,0 +1,28 @@
+{
+  "_id": "4L815CIXYNEHZG2H",
+  "name": "Admiral of Trade",
+  "type": "profession",
+  "img": "icons/svg/hammer.svg",
+  "system": {
+    "ruleId": "Admiral of Trade"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!4L815CIXYNEHZG2H"
+}

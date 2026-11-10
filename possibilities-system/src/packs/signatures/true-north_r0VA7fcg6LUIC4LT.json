@@ -1,0 +1,33 @@
+{
+  "_id": "r0VA7fcg6LUIC4LT",
+  "name": "True North",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Wayfaring",
+    "tier": 2,
+    "grade": "E",
+    "points": 2,
+    "cost": "1 action",
+    "effect": "You know your exact position and bearing for a day, even in heavy brume, even where instruments stop."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!r0VA7fcg6LUIC4LT"
+}

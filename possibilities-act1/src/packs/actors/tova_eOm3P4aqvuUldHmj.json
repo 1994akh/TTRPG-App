@@ -1,0 +1,154 @@
+{
+  "_id": "eOm3P4aqvuUldHmj",
+  "name": "Tova",
+  "type": "hero",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "race": "Trollblood",
+    "raceGrade": "F",
+    "class": {
+      "node": "",
+      "rank": "Novice"
+    },
+    "profession": {
+      "node": "Sailor",
+      "rank": "Novice"
+    },
+    "xp": {
+      "class": 0,
+      "profession": 0
+    },
+    "hp": {
+      "value": 6,
+      "temp": 0
+    },
+    "points": {
+      "value": 0
+    },
+    "dying": {
+      "value": 0,
+      "active": false,
+      "stable": false,
+      "wounded": 0
+    },
+    "turn": {
+      "actions": 3,
+      "attacks": 0,
+      "guard": false
+    },
+    "zone": "engaged",
+    "training": {
+      "armour": "Untrained",
+      "weapon": "Trained",
+      "spell": "Untrained",
+      "saves": {
+        "STR": "Untrained",
+        "DEX": "Untrained",
+        "CON": "Untrained",
+        "INT": "Untrained",
+        "WIS": "Untrained",
+        "CHA": "Untrained"
+      },
+      "skills": {
+        "Endurance": "Trained",
+        "Survival": "Trained",
+        "Cartography": "Trained",
+        "Athletics": "Trained"
+      }
+    },
+    "castAbility": "None",
+    "baseSpeed": 30,
+    "gearBonus": 0,
+    "currency": {
+      "cp": 0,
+      "sp": 5,
+      "gp": 1,
+      "pp": 0
+    },
+    "details": {
+      "pronouns": "she/her",
+      "age": "19-23 at the start",
+      "drive": "She wants to prove she and those called monsterkin are more than they seem, and fame never hurt her!",
+      "appearance": "",
+      "biography": "<p>Monsterkin, big, loud and the first on deck because no inn will have her. Has worked every dock in the Reach and been paid less than the human beside her on all of them. Keeps a scrapbook of wanted posters and plans to be on one, for the right reasons.</p><p>Motivation: She wants to prove she and those called monsterkin are more than they seem, and fame never hurt her!</p><p>Path note: Walks the Captain&#39;s path.</p>",
+      "notes": ""
+    },
+    "story": {
+      "role": "trio",
+      "path": {
+        "class": [
+          "Vanguard",
+          "Ironside",
+          "Captain",
+          "Commodore",
+          "Fleet Admiral"
+        ],
+        "profession": [
+          "Sailor",
+          "Navigator",
+          "Fleetwright",
+          "Wayfinder",
+          "Worldbinder"
+        ]
+      }
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "Tova",
+    "displayName": 30,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": 1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "lockRotation": true,
+    "sight": {
+      "enabled": true,
+      "range": 30
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {
+      "possibilities-act1": {
+        "actorKey": "protag3"
+      }
+    }
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "protag3",
+      "trio": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!eOm3P4aqvuUldHmj"
+}

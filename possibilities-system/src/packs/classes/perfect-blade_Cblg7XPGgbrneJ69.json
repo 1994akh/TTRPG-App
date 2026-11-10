@@ -1,0 +1,28 @@
+{
+  "_id": "Cblg7XPGgbrneJ69",
+  "name": "Perfect Blade",
+  "type": "class",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "ruleId": "Perfect Blade"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 7500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!Cblg7XPGgbrneJ69"
+}

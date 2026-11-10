@@ -1,0 +1,35 @@
+{
+  "_id": "HGRyM6FCSKSbSnRE",
+  "name": "Ward Sigil",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Artifice",
+    "tier": 1,
+    "grade": "F",
+    "points": 1,
+    "actions": "2",
+    "range": "Touch",
+    "save": "",
+    "effect": "Target gains +1 AC for one minute. Ends early if the target falls unconscious."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!HGRyM6FCSKSbSnRE"
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "qhbVkUpDe9neyqhX",
+  "name": "Terror",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Fathomless",
+    "tier": 4,
+    "grade": "C",
+    "points": 4,
+    "actions": "3",
+    "range": "Far",
+    "save": "Will",
+    "effect": "Every enemy in a zone is Frightened 3. Critical failure means they flee for one minute."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!qhbVkUpDe9neyqhX"
+}

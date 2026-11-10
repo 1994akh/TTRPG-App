@@ -1,0 +1,35 @@
+{
+  "_id": "6JpQJWxbtQz86TFb",
+  "name": "Charge Cascade",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Artifice",
+    "tier": 5,
+    "grade": "B",
+    "points": 5,
+    "actions": "3",
+    "range": "Far",
+    "save": "Reflex",
+    "effect": "d10 dice in a zone. It then jumps to an adjacent zone at one die fewer, twice."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!6JpQJWxbtQz86TFb"
+}

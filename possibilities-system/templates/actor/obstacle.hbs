@@ -1,0 +1,103 @@
+<div class="poss-obstacle status-{{system.status}}">
+  <header class="poss-header">
+    <img class="portrait" src="{{actor.img}}" data-edit="img" data-action="editImage" alt="{{actor.name}}">
+    <div class="identity">
+      <input class="name" type="text" name="name" value="{{actor.name}}">
+      <p class="subline"><span>{{localize "POSS.Scene.Kind"}}</span><span>{{localize (concat "POSS.Scene.Status." system.status)}}</span></p>
+      <div class="vitals">
+        <div class="vital resistance"><label>{{localize "POSS.Scene.Resistance"}}</label>
+          <div class="bar"><span style="width: {{derived.resistancePct}}%"></span></div>
+          <div class="nums"><input type="number" name="system.resistance.value" value="{{system.resistance.value}}" min="0"> /
+            <input type="number" name="system.resistance.max" value="{{system.resistance.max}}" min="0"></div></div>
+        <div class="stat"><label>DC</label><b>{{derived.dc}}</b></div>
+        <div class="stat"><label>EL</label><input type="number" name="system.el" value="{{system.el}}" min="0"></div>
+        <div class="stat"><label>{{localize "POSS.Grade"}}</label><select name="system.grade">{{selectOptions grades selected=system.grade}}</select></div>
+      </div>
+      {{#if derived.hasClock}}
+      <div class="clock">
+        <span class="label">{{#if system.clock.label}}{{system.clock.label}}{{else}}{{localize "POSS.Scene.Clock"}}{{/if}}</span>
+        <span class="pips">{{#each clockPips}}<span class="pip clock {{#if on}}on{{/if}}"></span>{{/each}}</span>
+        <span>{{system.clock.value}} / {{system.clock.max}}</span>
+        {{#if owner}}<button type="button" class="mini" data-action="untick"><i class="fa-solid fa-minus"></i></button>
+        <button type="button" class="mini" data-action="tick"><i class="fa-solid fa-plus"></i> {{localize "POSS.Scene.Tick"}}</button>{{/if}}
+      </div>
+      {{/if}}
+    </div>
+  </header>
+
+  <div class="description">{{{enriched.description}}}</div>
+
+  <h3>{{localize "POSS.Scene.Approaches"}}
+    {{#if owner}}<button type="button" class="mini" data-action="toggleEdit"><i class="fa-solid fa-pen"></i> {{#if editing}}{{localize "POSS.Done"}}{{else}}{{localize "POSS.Edit"}}{{/if}}</button>{{/if}}</h3>
+  {{#unless heroes.length}}<p class="hint">{{localize "POSS.Scene.NoHeroes"}}</p>{{/unless}}
+  <ol class="approaches">
+    {{#each approaches}}
+    <li class="approach">
+      {{#if @root.editing}}
+      <div class="approach-edit">
+        <label>{{localize "POSS.Scene.Label"}} <input type="text" name="system.approaches.{{index}}.label" value="{{label}}"></label>
+        <label>{{localize "POSS.Scene.Check"}} <select name="system.approaches.{{index}}.skill">{{selectOptions @root.skillChoices selected=skill}}</select></label>
+        <label>{{localize "POSS.Aptness.full"}} <input type="text" name="system.approaches.{{index}}.full" value="{{fullText}}" placeholder="Tinker, Athletics"></label>
+        <label>{{localize "POSS.Aptness.half"}} <input type="text" name="system.approaches.{{index}}.half" value="{{halfText}}"></label>
+        <label>{{localize "POSS.Aptness.none"}} <input type="text" name="system.approaches.{{index}}.none" value="{{noneText}}"></label>
+        <label>{{localize "POSS.Scene.Default"}} <select name="system.approaches.{{index}}.default">{{selectOptions @root.aptChoices selected=default}}</select></label>
+        <label class="inline"><input type="checkbox" name="system.approaches.{{index}}.setbackOnFail" {{checked setbackOnFail}}> {{localize "POSS.Scene.SetbackOnFail"}}</label>
+        <label class="wide">{{localize "POSS.Scene.Note"}} <input type="text" name="system.approaches.{{index}}.note" value="{{note}}"></label>
+        <button type="button" class="mini" data-action="removeApproach" data-index="{{index}}"><i class="fa-solid fa-trash"></i></button>
+      </div>
+      {{else}}
+      <div class="approach-head"><b>{{label}}</b> <small>{{skillLabel}}{{#if setbackOnFail}} · {{localize "POSS.Scene.SetbackOnFailShort"}}{{/if}}</small>
+        {{#if note}}<p class="note">{{note}}</p>{{/if}}</div>
+      <div class="approach-heroes">
+        {{#each heroes}}
+        <button type="button" class="attempt apt-{{apt}}" data-action="attempt" data-hero-id="{{id}}" data-index="{{../index}}">
+          <span class="who">{{name}}</span><span class="apt">{{aptLabel}}</span><span class="mod">{{mod}}</span></button>
+        {{/each}}
+      </div>
+      {{/if}}
+    </li>
+    {{/each}}
+  </ol>
+  {{#if editing}}<button type="button" data-action="addApproach"><i class="fa-solid fa-plus"></i> {{localize "POSS.Scene.AddApproach"}}</button>{{/if}}
+
+  <h3>{{localize "POSS.Scene.Setbacks"}}</h3>
+  {{#if owner}}{{#if heroes.length}}<label class="inline">{{localize "POSS.Scene.SetbackOn"}} <select data-setback-hero>
+    <option value="">—</option>{{#each heroes}}<option value="{{id}}">{{name}}</option>{{/each}}</select></label>{{/if}}{{/if}}
+  <ul class="setbacks">
+    {{#each setbacks}}
+    <li>
+      {{#if @root.editing}}
+      <div class="approach-edit">
+        <label>{{localize "POSS.Scene.Label"}} <input type="text" name="system.setbacks.{{index}}.label" value="{{label}}"></label>
+        <label>{{localize "POSS.Damage"}} <input type="text" name="system.setbacks.{{index}}.damage" value="{{damage}}" placeholder="1d6"></label>
+        <label class="inline"><input type="checkbox" name="system.setbacks.{{index}}.gearDamage" {{checked gearDamage}}> {{localize "POSS.Scene.GearDamage"}}</label>
+        <label class="wide">{{localize "POSS.Scene.Text"}} <input type="text" name="system.setbacks.{{index}}.text" value="{{text}}"></label>
+        <button type="button" class="mini" data-action="removeSetback" data-index="{{index}}"><i class="fa-solid fa-trash"></i></button>
+      </div>
+      {{else}}
+      <span><b>{{label}}</b> {{text}} {{#if damage}}<small>({{damage}})</small>{{/if}}{{#if gearDamage}} <span class="badge loaned">{{localize "POSS.Scene.GearDamage"}}</span>{{/if}}</span>
+      {{#if @root.owner}}<button type="button" class="mini" data-action="setback" data-index="{{index}}">{{localize "POSS.Scene.Trigger"}}</button>{{/if}}
+      {{/if}}
+    </li>
+    {{/each}}
+  </ul>
+  {{#if editing}}
+  <button type="button" data-action="addSetback"><i class="fa-solid fa-plus"></i> {{localize "POSS.Scene.AddSetback"}}</button>
+  <h3>{{localize "POSS.Scene.Clock"}}</h3>
+  <div class="row">
+    <label>{{localize "POSS.Scene.Label"}} <input type="text" name="system.clock.label" value="{{system.clock.label}}"></label>
+    <label>{{localize "POSS.Scene.ClockMax"}} <input type="number" name="system.clock.max" value="{{system.clock.max}}" min="0"></label>
+    <label>{{localize "POSS.Scene.ClockValue"}} <input type="number" name="system.clock.value" value="{{system.clock.value}}" min="0"></label>
+    <label>{{localize "POSS.Scene.Status.label"}} <select name="system.status">{{selectOptions statuses selected=system.status}}</select></label>
+  </div>
+  <label class="wide">{{localize "POSS.Scene.OnEnd"}} <input type="text" name="system.clock.onEnd" value="{{system.clock.onEnd}}"></label>
+  <label class="wide">DC <small>{{localize "POSS.Scene.DCHint"}}</small> <input type="number" name="system.dc" value="{{system.dc}}"></label>
+  <h3>{{localize "POSS.Description"}}</h3>
+  <prose-mirror name="system.description" button toggled value="{{system.description}}" data-document-uuid="{{actor.uuid}}">{{{enriched.description}}}</prose-mirror>
+  <h3>{{localize "POSS.Scene.WinText"}}</h3>
+  <prose-mirror name="system.outcome.win" button toggled value="{{system.outcome.win}}" data-document-uuid="{{actor.uuid}}">{{{enriched.win}}}</prose-mirror>
+  <h3>{{localize "POSS.Scene.LoseText"}}</h3>
+  <prose-mirror name="system.outcome.lose" button toggled value="{{system.outcome.lose}}" data-document-uuid="{{actor.uuid}}">{{{enriched.lose}}}</prose-mirror>
+  {{/if}}
+  {{#if owner}}<p><button type="button" data-action="resetScene"><i class="fa-solid fa-rotate-left"></i> {{localize "POSS.Scene.Reset"}}</button></p>{{/if}}
+</div>

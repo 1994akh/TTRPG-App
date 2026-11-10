@@ -1,0 +1,133 @@
+{
+  "_id": "CaIa89DBftTWEZ6p",
+  "name": "Rat swarm",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "el": 0,
+    "grade": "F",
+    "role": "standard",
+    "hp": {
+      "value": 8
+    },
+    "overrides": {
+      "ac": 10,
+      "attack": 2,
+      "hpMax": 8,
+      "damage": "1d4",
+      "dc": null,
+      "initiative": 1
+    },
+    "zone": "near",
+    "turn": {
+      "actions": 3,
+      "attacks": 0,
+      "guard": false
+    },
+    "description": "<p>A carpet of small rats moving as one. Use it in place of three rats, or for the outer-tunnel culls.</p>",
+    "tactics": "<p>Engages everyone in its zone; each turn, one Bite against each hero Engaged with it (no multiple attack penalty).</p>",
+    "bestiary": {
+      "known": false,
+      "lore": ""
+    }
+  },
+  "items": [
+    {
+      "_id": "JzGTWou7ZKH0PDFS",
+      "name": "Swarming Bites",
+      "type": "weapon",
+      "img": "icons/creatures/abilities/mouth-teeth-sharp.webp",
+      "system": {
+        "die": "d4",
+        "range": "engaged",
+        "traits": "1d4, hits every Engaged hero",
+        "grade": "F",
+        "price": {
+          "value": 0,
+          "denom": "gp"
+        },
+        "equipped": true,
+        "loaned": false,
+        "condition": "intact",
+        "description": ""
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 100,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "possibilities",
+        "systemVersion": "0.1.0",
+        "createdTime": 1794268800000,
+        "modifiedTime": 1794268800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!CaIa89DBftTWEZ6p.JzGTWou7ZKH0PDFS"
+    }
+  ],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "Rat swarm",
+    "displayName": 30,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "lockRotation": true,
+    "sight": {
+      "enabled": false,
+      "range": 0
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {
+      "possibilities-act1": {
+        "actorKey": "rat_swarm"
+      }
+    }
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "rat_swarm",
+      "foe": true,
+      "people": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!CaIa89DBftTWEZ6p"
+}

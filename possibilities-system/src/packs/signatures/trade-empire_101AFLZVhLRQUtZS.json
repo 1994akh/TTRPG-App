@@ -1,0 +1,33 @@
+{
+  "_id": "101AFLZVhLRQUtZS",
+  "name": "Trade Empire",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Commerce",
+    "tier": 5,
+    "grade": "B",
+    "points": 5,
+    "cost": "1 downtime season",
+    "effect": "Establish a standing route. It pays your downtime income whether you work it or not."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!101AFLZVhLRQUtZS"
+}

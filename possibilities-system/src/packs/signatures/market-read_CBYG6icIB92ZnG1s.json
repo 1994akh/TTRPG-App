@@ -1,0 +1,33 @@
+{
+  "_id": "CBYG6icIB92ZnG1s",
+  "name": "Market Read",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Commerce",
+    "tier": 3,
+    "grade": "D",
+    "points": 3,
+    "cost": "1 hour",
+    "effect": "Learn what a settlement needs, fears, and is concealing about its trade. +4 on social checks there for a day."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!CBYG6icIB92ZnG1s"
+}

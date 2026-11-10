@@ -1,0 +1,33 @@
+{
+  "_id": "7FbnM5INzUUXJkxK",
+  "name": "Fathom Whisper",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Fathomless",
+    "tier": 1,
+    "grade": "F",
+    "points": 1,
+    "cost": "1 action",
+    "effect": "Ask one question of a creature in Near. It answers truthfully unless it succeeds a Will save, and it does not remember being asked."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!7FbnM5INzUUXJkxK"
+}

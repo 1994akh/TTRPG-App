@@ -1,0 +1,45 @@
+{
+  "_id": "1ottP42SZoIPatHi",
+  "name": "Walking staff",
+  "type": "weapon",
+  "img": "icons/weapons/swords/sword-guard-brown.webp",
+  "system": {
+    "grade": "F",
+    "price": {
+      "value": 1,
+      "denom": "gp"
+    },
+    "loaned": false,
+    "condition": "intact",
+    "description": "",
+    "die": "d6",
+    "range": "engaged",
+    "traits": "two-handed",
+    "equipped": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "kit_scrivener_2",
+      "kit": "kit_scrivener",
+      "kitName": "Scrivener's kit"
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!1ottP42SZoIPatHi"
+}

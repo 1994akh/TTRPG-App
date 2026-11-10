@@ -1,0 +1,154 @@
+{
+  "_id": "OyfDUQQ0ZsTMKR57",
+  "name": "Rook",
+  "type": "hero",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "race": "Corvine",
+    "raceGrade": "F",
+    "class": {
+      "node": "",
+      "rank": "Novice"
+    },
+    "profession": {
+      "node": "Cartographer",
+      "rank": "Novice"
+    },
+    "xp": {
+      "class": 0,
+      "profession": 0
+    },
+    "hp": {
+      "value": 6,
+      "temp": 0
+    },
+    "points": {
+      "value": 0
+    },
+    "dying": {
+      "value": 0,
+      "active": false,
+      "stable": false,
+      "wounded": 0
+    },
+    "turn": {
+      "actions": 3,
+      "attacks": 0,
+      "guard": false
+    },
+    "zone": "near",
+    "training": {
+      "armour": "Untrained",
+      "weapon": "Trained",
+      "spell": "Untrained",
+      "saves": {
+        "STR": "Untrained",
+        "DEX": "Untrained",
+        "CON": "Untrained",
+        "INT": "Untrained",
+        "WIS": "Untrained",
+        "CHA": "Untrained"
+      },
+      "skills": {
+        "Investigation": "Trained",
+        "Skulduggery": "Trained",
+        "Cartography": "Trained",
+        "Survival": "Trained"
+      }
+    },
+    "castAbility": "None",
+    "baseSpeed": 30,
+    "gearBonus": 0,
+    "currency": {
+      "cp": 0,
+      "sp": 5,
+      "gp": 1,
+      "pp": 0
+    },
+    "details": {
+      "pronouns": "he/him",
+      "age": "18-22 at the start",
+      "drive": "To escape the mundane and cruel life of the mainland, building power and knowledge to feel free from family and cultural expectations.",
+      "appearance": "",
+      "biography": "<p>Crow-kin from an old Bench family on the mainland, raised to copy charts and never draw one. Has seen every coastline in his father&#39;s archive once, so he can draw them all, and can do his father&#39;s voice well enough to sign for him. He left with one satchel, three stolen pens, and a debt of disappointment he means to outrun.</p><p>Motivation: To escape the mundane and cruel life of the mainland, building power and knowledge to feel free from family and cultural expectations.</p><p>Path note: Walks the First Mate&#39;s path.</p>",
+      "notes": ""
+    },
+    "story": {
+      "role": "trio",
+      "path": {
+        "class": [
+          "Theorist",
+          "Furnace Adept",
+          "Stormcaller",
+          "Tempest Sage",
+          "Stormlord"
+        ],
+        "profession": [
+          "Cartographer",
+          "Navigator",
+          "Chartwright",
+          "Master Charter",
+          "Archipelago Wright"
+        ]
+      }
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "Rook",
+    "displayName": 30,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": 1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "lockRotation": true,
+    "sight": {
+      "enabled": true,
+      "range": 30
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {
+      "possibilities-act1": {
+        "actorKey": "protag2"
+      }
+    }
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "protag2",
+      "trio": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!OyfDUQQ0ZsTMKR57"
+}

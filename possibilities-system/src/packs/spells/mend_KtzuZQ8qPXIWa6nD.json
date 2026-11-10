@@ -1,0 +1,35 @@
+{
+  "_id": "KtzuZQ8qPXIWa6nD",
+  "name": "Mend",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Artifice",
+    "tier": 1,
+    "grade": "F",
+    "points": 1,
+    "actions": "1 minute",
+    "range": "Touch",
+    "save": "",
+    "effect": "Repair one broken non-magical object of your grade or below."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!KtzuZQ8qPXIWa6nD"
+}

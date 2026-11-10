@@ -1,0 +1,63 @@
+{
+ "id": "ashford",
+ "name": "Ashford Roads",
+ "width": 3000,
+ "height": 2000,
+ "gridSize": 100,
+ "gridType": "none",
+ "background": "assets/maps/ashford.webp",
+ "darkness": 0.0,
+ "walls": [],
+ "lights": [],
+ "notes": [
+  {
+   "x": 1306,
+   "y": 883,
+   "page": "coast_road",
+   "label": "The Coast Road"
+  },
+  {
+   "x": 1550,
+   "y": 760,
+   "page": "ashford",
+   "label": "Ashford Roads"
+  },
+  {
+   "x": 1780,
+   "y": 1120,
+   "page": "sallows_exchange",
+   "label": "Sallow's Exchange"
+  },
+  {
+   "x": 2290,
+   "y": 830,
+   "page": "refinery_row",
+   "label": "Refinery Row"
+  },
+  {
+   "x": 2200,
+   "y": 880,
+   "page": "undercourses",
+   "label": "The culvert hatch (the Undercourses)"
+  },
+  {
+   "x": 1860,
+   "y": 650,
+   "page": "binding_house",
+   "label": "The Binding House"
+  },
+  {
+   "x": 2470,
+   "y": 1209,
+   "page": "lantern_lee",
+   "label": "The Lantern and Lee"
+  },
+  {
+   "x": 2050,
+   "y": 1212,
+   "page": "long_quay",
+   "label": "The Long Quay"
+  }
+ ],
+ "tokens": []
+}

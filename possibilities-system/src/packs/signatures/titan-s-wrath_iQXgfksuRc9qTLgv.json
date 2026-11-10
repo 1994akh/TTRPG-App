@@ -1,0 +1,33 @@
+{
+  "_id": "iQXgfksuRc9qTLgv",
+  "name": "Titan's Wrath",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Ironclad",
+    "tier": 5,
+    "grade": "B",
+    "points": 5,
+    "cost": "2 actions",
+    "effect": "For one minute your Strikes gain one extra weapon die, and any enemy that ends its turn in your zone takes damage equal to your ability modifier x your RGM."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!iQXgfksuRc9qTLgv"
+}

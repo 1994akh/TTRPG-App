@@ -1,0 +1,28 @@
+{
+  "_id": "3N0oYqFkKaLQUZcC",
+  "name": "Icon Bearer",
+  "type": "class",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "ruleId": "Icon Bearer"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!3N0oYqFkKaLQUZcC"
+}

@@ -1,0 +1,28 @@
+<section class="tab poss-inventory {{tabs.inventory.cssClass}}" data-group="primary" data-tab="inventory">
+  <div class="currency">
+    {{#each currencyList}}<label>{{k}} <input type="number" name="system.currency.{{k}}" value="{{v}}" min="0"></label>{{/each}}
+  </div>
+  {{#*inline "rows"}}
+  <ul class="item-list">
+    {{#each list}}
+    <li data-item-id="{{id}}" class="{{system.condition}}">
+      <img src="{{img}}" alt="">
+      <button type="button" class="link" data-action="editItem">{{name}}</button>
+      {{#if extra}}<small>{{extra}}</small>{{/if}}
+      {{#if system.loaned}}<span class="badge loaned">{{localize "POSS.Loaned"}}</span>{{/if}}
+      {{#if system.keyItem}}<span class="badge key">{{localize "POSS.KeyItem"}}</span>{{/if}}
+      <button type="button" class="badge cond {{system.condition}}" data-action="cycleCondition">{{condLabel}}</button>
+      {{#if equippable}}<button type="button" class="mini {{#if system.equipped}}on{{/if}}" data-action="toggleEquip" aria-label="{{localize 'POSS.Equip'}}"><i class="fa-solid fa-hand-fist"></i> {{#if system.equipped}}{{localize "POSS.Equipped"}}{{else}}{{localize "POSS.Equip"}}{{/if}}</button>{{/if}}
+      {{#if system.quantity}}<span class="qty">×{{system.quantity}}</span>{{/if}}
+      <button type="button" class="mini" data-action="deleteItem" aria-label="{{localize 'POSS.Delete'}}"><i class="fa-solid fa-trash"></i></button>
+    </li>
+    {{else}}<li class="empty">{{localize "POSS.NoneYet"}}</li>{{/each}}
+  </ul>
+  {{/inline}}
+  <h3>{{localize "TYPES.Item.weapon"}} <button type="button" class="mini" data-action="createItem" data-type="weapon"><i class="fa-solid fa-plus"></i></button></h3>
+  {{> rows list=weapons equippable=true}}
+  <h3>{{localize "TYPES.Item.armour"}} <button type="button" class="mini" data-action="createItem" data-type="armour"><i class="fa-solid fa-plus"></i></button></h3>
+  {{> rows list=armour equippable=true}}
+  <h3>{{localize "TYPES.Item.gear"}} <button type="button" class="mini" data-action="createItem" data-type="gear"><i class="fa-solid fa-plus"></i></button></h3>
+  {{> rows list=gear}}
+</section>

@@ -1,0 +1,186 @@
+{
+ "id": "binding_house",
+ "name": "The Binding House",
+ "width": 1600,
+ "height": 1200,
+ "gridSize": 100,
+ "gridType": "square",
+ "background": "assets/maps/binding_house.webp",
+ "darkness": 0.3,
+ "walls": [
+  {
+   "c": [
+    700,
+    800,
+    900,
+    800
+   ],
+   "door": 1
+  },
+  {
+   "c": [
+    700,
+    1100,
+    900,
+    1100
+   ],
+   "door": 1
+  },
+  {
+   "c": [
+    100,
+    100,
+    1500,
+    100
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    100,
+    800,
+    500,
+    800
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    1100,
+    800,
+    1500,
+    800
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    500,
+    1100,
+    700,
+    1100
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    900,
+    1100,
+    1100,
+    1100
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    100,
+    100,
+    100,
+    800
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    500,
+    800,
+    500,
+    1100
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    1100,
+    800,
+    1100,
+    1100
+   ],
+   "door": 0
+  },
+  {
+   "c": [
+    1500,
+    100,
+    1500,
+    800
+   ],
+   "door": 0
+  }
+ ],
+ "lights": [
+  {
+   "x": 300,
+   "y": 300,
+   "dim": 10,
+   "bright": 5,
+   "color": "#d8e0f0",
+   "alpha": 0.4,
+   "animation": {
+    "type": "pulse",
+    "speed": 2,
+    "intensity": 2
+   }
+  },
+  {
+   "x": 630,
+   "y": 300,
+   "dim": 10,
+   "bright": 5,
+   "color": "#d8e0f0",
+   "alpha": 0.4,
+   "animation": {
+    "type": "pulse",
+    "speed": 2,
+    "intensity": 2
+   }
+  },
+  {
+   "x": 970,
+   "y": 300,
+   "dim": 10,
+   "bright": 5,
+   "color": "#d8e0f0",
+   "alpha": 0.4,
+   "animation": {
+    "type": "pulse",
+    "speed": 2,
+    "intensity": 2
+   }
+  },
+  {
+   "x": 1300,
+   "y": 300,
+   "dim": 10,
+   "bright": 5,
+   "color": "#d8e0f0",
+   "alpha": 0.4,
+   "animation": {
+    "type": "pulse",
+    "speed": 2,
+    "intensity": 2
+   }
+  }
+ ],
+ "notes": [
+  {
+   "x": 800,
+   "y": 480,
+   "page": "ch1_binding",
+   "label": "Binding"
+  },
+  {
+   "x": 800,
+   "y": 950,
+   "page": "ch1_collapse",
+   "label": "It hurts"
+  }
+ ],
+ "tokens": [
+  {
+   "actor": "binder",
+   "x": 800,
+   "y": 530
+  }
+ ]
+}

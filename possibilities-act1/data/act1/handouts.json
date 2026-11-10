@@ -1,0 +1,34 @@
+{
+  "note": "Handouts. 'lore' lines are the user's (quoted verbatim from the scene scripts); 'draft' paragraphs are Draft by Claude.",
+  "handouts": [
+    { "key": "gate_notice", "title": "The notice on the gate", "step": "pc",
+      "lore": ["Crews wanted. Ask at {sallows_exchange}."],
+      "draft": ["Pinned over a dozen older notices just like it. Somebody has drawn a ship in the margin." ] },
+    { "key": "commission", "title": "The commission", "step": "commission",
+      "lore": [],
+      "draft": ["COMMISSION, Sallow's Exchange, by order of {merchant}, {refinery_row}.", "Wanted: the safe return of {petra}, last seen entering {undercourses} by the Refinery Row culvert.", "Pay on delivery. One previous engagement unconcluded. Loaned gear to be returned whole or paid for."] },
+    { "key": "sellswords_journal", "title": "The sellswords' journal", "step": "sewer",
+      "lore": ["Something in the big cistern. Lamps don't scare it. Light does."],
+      "draft": ["(The last page. The earlier pages are tallies of pay and complaints about the smell.)"] },
+    { "key": "loaner_bill", "title": "The bill for the loaners", "step": "fee",
+      "lore": [],
+      "draft": ["SALLOW'S EXCHANGE. Loaned and not returned whole:", "Four blades, bent and chipped: 20 gp.", "One charge lamp, mirror cracked: 6 gp.", "One pry bar, tooth marks: 4 gp.", "Total 30 gp. Paid. The goods are now the borrowers' own."] },
+    { "key": "binding_receipt", "title": "The binding receipt", "step": "binding",
+      "lore": [],
+      "draft": ["THE COMPACT. Licensed Binding House, {ashford}.", "Bindings at F-grade: four. Paid in cash. No debt recorded.", "The Compact accepts no liability for discomfort, collapse, or what the bound do next."] }
+  ],
+  "board": {
+    "name": "The broker's board (F-grade)",
+    "note": "Draft by Claude: filler commissions for after the act (chapter-1-plan.md 'Filler and grind in Ashford').",
+    "results": [
+      "Rat cull in the outer Undercourses: clear a rat swarm. 2 gp.",
+      "A delivery across districts: a sealed crate from the quay to Refinery Row, before the shift bell. 1 gp.",
+      "A lost cat in the canal: it is on a barge, and the barge is moving. 5 sp.",
+      "Scrap and charge cells in the workshop alley: gather six (Crafting or Investigation). 1 gp, or keep two cells.",
+      "Herbs by the canal: a Physician wants twenty sprigs of saltwort (Nature or Survival). 1 gp.",
+      "Tide tables at the harbour office: copy a month of tables before the clerk notices (Cartography). 2 gp.",
+      "The training yard at the port: three practice bouts at F-grade, no risk. 1 gp for winning two.",
+      "A page of the legends' lost journal is rumoured somewhere in Ashford Roads. No pay. Ask around."
+    ]
+  }
+}

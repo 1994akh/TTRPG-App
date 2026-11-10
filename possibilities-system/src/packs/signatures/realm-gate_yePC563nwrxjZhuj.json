@@ -1,0 +1,33 @@
+{
+  "_id": "yePC563nwrxjZhuj",
+  "name": "Realm Gate",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Wayfaring",
+    "tier": 6,
+    "grade": "A",
+    "points": 6,
+    "cost": "10 minutes",
+    "effect": "Open a passage between two regions you have personally Charted. It holds for one watch."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 6700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!yePC563nwrxjZhuj"
+}

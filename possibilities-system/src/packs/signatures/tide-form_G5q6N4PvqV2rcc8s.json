@@ -1,0 +1,33 @@
+{
+  "_id": "G5q6N4PvqV2rcc8s",
+  "name": "Tide Form",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Tidebound",
+    "tier": 3,
+    "grade": "D",
+    "points": 3,
+    "cost": "2 actions",
+    "effect": "Take a sea-beast form for ten minutes. Gain a swim Speed equal to your Speed, +2 AC, and unarmed Strikes that use your normal weapon dice."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!G5q6N4PvqV2rcc8s"
+}

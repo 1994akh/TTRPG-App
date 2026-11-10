@@ -1,0 +1,35 @@
+{
+  "_id": "jYYIdo92QWaDuUoz",
+  "name": "Sanctuary of the Wright",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Divine",
+    "tier": 4,
+    "grade": "C",
+    "points": 4,
+    "actions": "3",
+    "range": "Near",
+    "save": "",
+    "effect": "A zone becomes safe ground: no ambient damage, and rest is possible for one watch regardless of grade."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!jYYIdo92QWaDuUoz"
+}

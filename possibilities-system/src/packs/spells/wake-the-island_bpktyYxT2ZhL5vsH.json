@@ -1,0 +1,35 @@
+{
+  "_id": "bpktyYxT2ZhL5vsH",
+  "name": "Wake the Island",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Tidebound",
+    "tier": 7,
+    "grade": "S",
+    "points": 7,
+    "actions": "3",
+    "range": "Region",
+    "save": "",
+    "effect": "The island itself moves. Where it goes and what it wants are not yours to decide."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 7000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!bpktyYxT2ZhL5vsH"
+}

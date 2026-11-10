@@ -1,0 +1,35 @@
+{
+  "_id": "icLT5BmqiRwMSVWv",
+  "name": "Lock the Air",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Artifice",
+    "tier": 2,
+    "grade": "E",
+    "points": 2,
+    "actions": "2",
+    "range": "Near",
+    "save": "Reflex",
+    "effect": "One creature is Immobilized for one minute. It may Escape at the end of each turn."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!icLT5BmqiRwMSVWv"
+}

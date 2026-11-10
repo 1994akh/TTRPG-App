@@ -1,0 +1,28 @@
+{
+  "_id": "rRItz9Tee3PHc0W0",
+  "name": "Nixie",
+  "type": "race",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "ruleId": "Nixie"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!rRItz9Tee3PHc0W0"
+}

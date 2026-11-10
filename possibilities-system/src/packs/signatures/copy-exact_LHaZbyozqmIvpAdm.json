@@ -1,0 +1,33 @@
+{
+  "_id": "LHaZbyozqmIvpAdm",
+  "name": "Copy Exact",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Lore",
+    "tier": 1,
+    "grade": "F",
+    "points": 1,
+    "cost": "1 hour",
+    "effect": "Reproduce any document perfectly, including a Bench seal. Doing so is forgery and is prosecuted as such in Compact waters."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!LHaZbyozqmIvpAdm"
+}

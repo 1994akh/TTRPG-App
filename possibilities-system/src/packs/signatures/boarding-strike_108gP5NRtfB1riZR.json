@@ -1,0 +1,33 @@
+{
+  "_id": "108gP5NRtfB1riZR",
+  "name": "Boarding Strike",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Ironclad",
+    "tier": 1,
+    "grade": "F",
+    "points": 1,
+    "cost": "1 action",
+    "effect": "Make a Strike. You may Stride into the target's zone as part of it, without provoking. On a critical hit the target is knocked Prone."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!108gP5NRtfB1riZR"
+}

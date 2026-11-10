@@ -1,0 +1,33 @@
+{
+  "_id": "M8vlMdmb7lCqR4Vy",
+  "name": "Voice of the Deep",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Tidebound",
+    "tier": 7,
+    "grade": "S",
+    "points": 7,
+    "cost": "3 actions",
+    "effect": "Call something enormous. It arrives within a watch and will do one thing for you. It will remember having been asked."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 8300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!M8vlMdmb7lCqR4Vy"
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "oWRrSzHGVVHqz8he",
+  "name": "Boarding Hook",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Martial",
+    "tier": 2,
+    "grade": "E",
+    "points": 2,
+    "actions": "1",
+    "range": "Near",
+    "save": "Reflex",
+    "effect": "Drag a creature or yourself between zones. On a critical the target is Prone."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!oWRrSzHGVVHqz8he"
+}

@@ -1,0 +1,93 @@
+{
+  "_id": "ZGm1dcO3TTuuRJlb",
+  "name": "Captain Isolde Varr",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "el": 24,
+    "grade": "B",
+    "role": "boss",
+    "hp": {
+      "value": 265
+    },
+    "overrides": {
+      "ac": null,
+      "attack": null,
+      "hpMax": null,
+      "damage": null,
+      "dc": null,
+      "initiative": null
+    },
+    "zone": "near",
+    "turn": {
+      "actions": 3,
+      "attacks": 0,
+      "guard": false
+    },
+    "description": "<p>Stops the local boys and tells Enkrid life is worth living, if only to see the world&#39;s mysteries. Shares a start with Tova.</p>",
+    "tactics": "",
+    "bestiary": {
+      "known": false,
+      "lore": "<p>Stops the local boys and tells Enkrid life is worth living, if only to see the world&#39;s mysteries. Shares a start with Tova.</p>"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "Captain Isolde Varr",
+    "displayName": 30,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": 1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "lockRotation": true,
+    "sight": {
+      "enabled": true,
+      "range": 30
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {
+      "possibilities-act1": {
+        "actorKey": "captain"
+      }
+    }
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "captain",
+      "foe": false,
+      "people": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!ZGm1dcO3TTuuRJlb"
+}

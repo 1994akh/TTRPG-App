@@ -1,0 +1,19 @@
+<section class="tab poss-story {{tabs.story.cssClass}}" data-group="primary" data-tab="story">
+  <div class="row">
+    <label>{{localize "POSS.Pronouns"}} <input type="text" name="system.details.pronouns" value="{{system.details.pronouns}}"></label>
+    <label>{{localize "POSS.Age"}} <input type="text" name="system.details.age" value="{{system.details.age}}"></label>
+    <label>{{localize "POSS.Role"}} <select name="system.story.role">{{selectOptions (object pc=(localize "POSS.StoryRole.pc") trio=(localize "POSS.StoryRole.trio") guest=(localize "POSS.StoryRole.guest")) selected=system.story.role}}</select></label>
+  </div>
+  <label class="wide">{{localize "POSS.Drive"}} <input type="text" name="system.details.drive" value="{{system.details.drive}}"></label>
+  {{#if path.class.length}}
+  <h3>{{localize "POSS.Path"}}</h3>
+  <ol class="path">{{#each path.class}}<li class="{{state}}">{{id}}</li>{{/each}}</ol>
+  <ol class="path">{{#each path.profession}}<li class="{{state}}">{{id}}</li>{{/each}}</ol>
+  {{/if}}
+  <h3>{{localize "POSS.Appearance"}}</h3>
+  <prose-mirror name="system.details.appearance" button toggled value="{{system.details.appearance}}" data-document-uuid="{{actor.uuid}}">{{{enriched.appearance}}}</prose-mirror>
+  <h3>{{localize "POSS.Biography"}}</h3>
+  <prose-mirror name="system.details.biography" button toggled value="{{system.details.biography}}" data-document-uuid="{{actor.uuid}}">{{{enriched.biography}}}</prose-mirror>
+  <h3>{{localize "POSS.Notes"}}</h3>
+  <prose-mirror name="system.details.notes" button toggled value="{{system.details.notes}}" data-document-uuid="{{actor.uuid}}">{{{enriched.notes}}}</prose-mirror>
+</section>

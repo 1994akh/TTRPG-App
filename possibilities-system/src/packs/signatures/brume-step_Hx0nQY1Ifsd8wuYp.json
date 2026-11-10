@@ -1,0 +1,33 @@
+{
+  "_id": "Hx0nQY1Ifsd8wuYp",
+  "name": "Brume Step",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Undertow",
+    "tier": 4,
+    "grade": "C",
+    "points": 4,
+    "cost": "1 action",
+    "effect": "Step into the brume and out again anywhere within Far. You arrive Hidden. In an uncharted region the range extends to Distant."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!Hx0nQY1Ifsd8wuYp"
+}

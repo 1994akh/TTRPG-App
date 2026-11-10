@@ -1,0 +1,28 @@
+{
+  "_id": "KHt3ypkLlG19gt4G",
+  "name": "Captain",
+  "type": "class",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "ruleId": "Captain"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!KHt3ypkLlG19gt4G"
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "OAXfvt5ZUeqih6JG",
+  "name": "Summon Squall",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Tidebound",
+    "tier": 2,
+    "grade": "E",
+    "points": 2,
+    "actions": "2",
+    "range": "Far",
+    "save": "",
+    "effect": "One zone is heavily obscured for a minute. Ranged attacks through it have disadvantage."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!OAXfvt5ZUeqih6JG"
+}

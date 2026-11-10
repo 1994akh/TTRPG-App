@@ -1,0 +1,33 @@
+{
+  "_id": "PJEvJJu62orNjf5a",
+  "name": "Forbidden Index",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Lore",
+    "tier": 4,
+    "grade": "C",
+    "points": 4,
+    "cost": "1 day",
+    "effect": "Learn one true fact about any named creature, object or place: its grade, and one weakness."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!PJEvJJu62orNjf5a"
+}

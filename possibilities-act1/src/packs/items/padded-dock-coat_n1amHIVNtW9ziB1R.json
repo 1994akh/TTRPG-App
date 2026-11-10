@@ -1,0 +1,43 @@
+{
+  "_id": "n1amHIVNtW9ziB1R",
+  "name": "Padded dock coat",
+  "type": "armour",
+  "img": "icons/equipment/chest/coat-leather-brown.webp",
+  "system": {
+    "grade": "F",
+    "price": {
+      "value": 10,
+      "denom": "gp"
+    },
+    "loaned": false,
+    "condition": "intact",
+    "description": "",
+    "armourType": "Light",
+    "bonus": 0,
+    "equipped": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "shop_padded-dock-coat",
+      "shop": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!n1amHIVNtW9ziB1R"
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "7o9o3K6dQrG5EoFN",
+  "name": "Thornlash",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Tidebound",
+    "tier": 1,
+    "grade": "F",
+    "points": 1,
+    "actions": "2",
+    "range": "Near",
+    "save": "Reflex",
+    "effect": "d6 dice. On a failed save the target is also Immobilized until it Escapes."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!7o9o3K6dQrG5EoFN"
+}

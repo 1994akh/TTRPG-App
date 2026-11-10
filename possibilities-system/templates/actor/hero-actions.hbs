@@ -1,0 +1,51 @@
+<section class="tab poss-actions {{tabs.actions.cssClass}}" data-group="primary" data-tab="actions">
+  <p class="hint">{{localize "POSS.ActionsHint"}}</p>
+  <h3>{{localize "POSS.Action.strike"}} <small>{{localize "POSS.NextAttack"}} {{nextAttack}}</small></h3>
+  <div class="action-grid">
+    {{#each weapons}}
+    <button type="button" class="action" data-action="strike" data-item-id="{{id}}">
+      <img src="{{img}}" alt=""><span><b>{{name}}</b><small>{{damage}} · {{localize (concat "POSS.Zone." system.range)}}{{#if system.loaned}} · {{localize "POSS.Loaned"}}{{/if}}</small></span><em>1</em></button>
+    {{/each}}
+    <button type="button" class="action" data-action="strike"><span><b>{{localize "POSS.Unarmed"}}</b><small>{{derived.damageFormula}}</small></span><em>1</em></button>
+  </div>
+  <h3>{{localize "POSS.BasicActions"}}</h3>
+  <div class="action-grid">
+    {{#each strideZones}}<button type="button" class="action" data-action="stride" data-zone="{{z}}"><span><b>{{localize "POSS.Action.stride"}}</b><small>→ {{label}}</small></span><em>{{@root.costs.stride}}</em></button>{{/each}}
+    <button type="button" class="action" data-action="guard"><span><b>{{localize "POSS.Action.guard"}}</b><small>+2 AC</small></span><em>{{costs.guard}}</em></button>
+    <button type="button" class="action" data-action="aid"><span><b>{{localize "POSS.Action.aid"}}</b><small>+2 ally</small></span><em>{{costs.aid}}</em></button>
+    <button type="button" class="action" data-action="stabilise"><span><b>{{localize "POSS.Action.stabilise"}}</b><small>{{localize "POSS.Action.stabiliseShort"}}</small></span><em>{{costs.stabilise}}</em></button>
+    <button type="button" class="action" data-action="recall"><span><b>{{localize "POSS.Action.recall"}}</b><small>{{localize "POSS.Action.recallShort"}}</small></span><em>{{costs.recall}}</em></button>
+    <button type="button" class="action" data-action="interact"><span><b>{{localize "POSS.Action.interact"}}</b></span><em>{{costs.interact}}</em></button>
+    <button type="button" class="action" data-action="withdraw"><span><b>{{localize "POSS.Action.withdraw"}}</b></span><em>{{costs.withdraw}}</em></button>
+  </div>
+  <h3>{{localize "POSS.Signatures"}} <button type="button" class="mini" data-action="createItem" data-type="signature"><i class="fa-solid fa-plus"></i></button></h3>
+  <ul class="ability-list">
+    {{#each signatures}}
+    <li data-item-id="{{id}}">
+      <button type="button" class="action wide" data-action="useItem" data-item-id="{{id}}"><span><b>{{name}}</b><small>{{system.cost}} · {{system.points}} pts · {{system.effect}}</small></span></button>
+      <button type="button" class="mini" data-action="editItem"><i class="fa-solid fa-pen"></i></button>
+    </li>
+    {{else}}<li class="empty">{{localize "POSS.NoneYet"}}</li>{{/each}}
+  </ul>
+  <h3>{{localize "POSS.Spells"}} <button type="button" class="mini" data-action="createItem" data-type="spell"><i class="fa-solid fa-plus"></i></button></h3>
+  <ul class="ability-list">
+    {{#each spells}}
+    <li data-item-id="{{id}}">
+      <button type="button" class="action wide" data-action="useItem" data-item-id="{{id}}"><span><b>{{name}}</b><small>{{system.actions}} actions · {{system.points}} pts · {{system.effect}}</small></span></button>
+      <button type="button" class="mini" data-action="editItem"><i class="fa-solid fa-pen"></i></button>
+    </li>
+    {{else}}<li class="empty">{{localize "POSS.NoneYet"}}</li>{{/each}}
+  </ul>
+  <h3>{{localize "POSS.Features"}} <button type="button" class="mini" data-action="createItem" data-type="feature"><i class="fa-solid fa-plus"></i></button></h3>
+  <ul class="item-list">
+    {{#each features}}
+    <li data-item-id="{{id}}"><button type="button" class="link" data-action="editItem">{{name}}</button>
+      {{#if system.uses.max}}<span class="uses">{{system.uses.value}}/{{system.uses.max}}</span>{{/if}}</li>
+    {{else}}<li class="empty">{{localize "POSS.NoneYet"}}</li>{{/each}}
+  </ul>
+  <h3>{{localize "POSS.Rest.label"}}</h3>
+  <div class="action-grid">
+    <button type="button" class="action" data-action="restShort"><span><b>{{localize "POSS.Rest.Short"}}</b><small>{{derived.hitDiceLeft}} × {{derived.hitDie}}</small></span></button>
+    <button type="button" class="action" data-action="restLong"><span><b>{{localize "POSS.Rest.Long"}}</b></span></button>
+  </div>
+</section>

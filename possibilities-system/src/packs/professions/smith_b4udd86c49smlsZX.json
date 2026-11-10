@@ -1,0 +1,28 @@
+{
+  "_id": "b4udd86c49smlsZX",
+  "name": "Smith",
+  "type": "profession",
+  "img": "icons/svg/hammer.svg",
+  "system": {
+    "ruleId": "Smith"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!b4udd86c49smlsZX"
+}

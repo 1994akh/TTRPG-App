@@ -1,0 +1,35 @@
+{
+  "_id": "fvODDfJcFfWeAmFd",
+  "name": "Concussive Sigil",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Artifice",
+    "tier": 2,
+    "grade": "E",
+    "points": 2,
+    "actions": "2",
+    "range": "Far",
+    "save": "Reflex",
+    "effect": "d6 dice to every creature in one zone. Half on a success."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!fvODDfJcFfWeAmFd"
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "tnZqn2I7dhmF5e0f",
+  "name": "Second Wind",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Martial",
+    "tier": 2,
+    "grade": "E",
+    "points": 2,
+    "actions": "1",
+    "range": "Self",
+    "save": "",
+    "effect": "Regain (2d8 + Combat EL) x RGM hit points. Once per long rest."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!tnZqn2I7dhmF5e0f"
+}

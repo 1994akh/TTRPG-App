@@ -1,0 +1,28 @@
+{
+  "_id": "eIrJrCElWEr9koVx",
+  "name": "Charge Adept",
+  "type": "class",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "ruleId": "Charge Adept"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!eIrJrCElWEr9koVx"
+}

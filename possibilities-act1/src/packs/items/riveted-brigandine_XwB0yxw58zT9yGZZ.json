@@ -1,0 +1,43 @@
+{
+  "_id": "XwB0yxw58zT9yGZZ",
+  "name": "Riveted brigandine",
+  "type": "armour",
+  "img": "icons/equipment/chest/coat-leather-brown.webp",
+  "system": {
+    "grade": "F",
+    "price": {
+      "value": 30,
+      "denom": "gp"
+    },
+    "loaned": false,
+    "condition": "intact",
+    "description": "",
+    "armourType": "Medium",
+    "bonus": 0,
+    "equipped": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "shop_riveted-brigandine",
+      "shop": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!XwB0yxw58zT9yGZZ"
+}

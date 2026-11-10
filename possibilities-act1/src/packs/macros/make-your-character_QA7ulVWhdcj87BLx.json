@@ -1,0 +1,31 @@
+{
+  "_id": "QA7ulVWhdcj87BLx",
+  "name": "Make your character",
+  "type": "script",
+  "img": "icons/svg/mystery-man.svg",
+  "scope": "global",
+  "command": "game.modules.get(\"possibilities-act1\").api.makeCharacter();",
+  "folder": null,
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "possibilities-act1": {
+      "fn": "makeCharacter",
+      "slot": 2
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": null,
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!macros!QA7ulVWhdcj87BLx"
+}

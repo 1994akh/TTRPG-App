@@ -1,0 +1,45 @@
+{
+  "_id": "m5yhrF5MTPPQjfBY",
+  "name": "Loaned blade",
+  "type": "weapon",
+  "img": "icons/weapons/swords/sword-guard-brown.webp",
+  "system": {
+    "grade": "F",
+    "price": {
+      "value": 5,
+      "denom": "gp"
+    },
+    "loaned": true,
+    "condition": "intact",
+    "description": "<p>A plain short blade from the Exchange&#39;s back room, stamped SALLOW on the tang.</p>",
+    "die": "d6",
+    "range": "engaged",
+    "traits": "basic",
+    "equipped": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "loaner_blade",
+      "loaner": true,
+      "count": 4
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!m5yhrF5MTPPQjfBY"
+}

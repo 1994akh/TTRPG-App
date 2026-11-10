@@ -1,0 +1,93 @@
+{
+  "_id": "Jtrd5s6i5emQu7jF",
+  "name": "Elian Marsh",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "el": 24,
+    "grade": "B",
+    "role": "boss",
+    "hp": {
+      "value": 265
+    },
+    "overrides": {
+      "ac": null,
+      "attack": null,
+      "hpMax": null,
+      "damage": null,
+      "dc": null,
+      "initiative": null
+    },
+    "zone": "near",
+    "turn": {
+      "actions": 3,
+      "attacks": 0,
+      "guard": false
+    },
+    "description": "<p>Brings up Enkrid&#39;s age: he must learn and grow before facing the Sea of Possibility. Shares a start with Rook.</p>",
+    "tactics": "",
+    "bestiary": {
+      "known": false,
+      "lore": "<p>Brings up Enkrid&#39;s age: he must learn and grow before facing the Sea of Possibility. Shares a start with Rook.</p>"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "Elian Marsh",
+    "displayName": 30,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": 1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "lockRotation": true,
+    "sight": {
+      "enabled": true,
+      "range": 30
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {
+      "possibilities-act1": {
+        "actorKey": "first_mate"
+      }
+    }
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "first_mate",
+      "foe": false,
+      "people": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!Jtrd5s6i5emQu7jF"
+}

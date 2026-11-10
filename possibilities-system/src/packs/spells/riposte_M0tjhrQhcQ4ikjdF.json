@@ -1,0 +1,35 @@
+{
+  "_id": "M0tjhrQhcQ4ikjdF",
+  "name": "Riposte",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Martial",
+    "tier": 3,
+    "grade": "D",
+    "points": 3,
+    "actions": "free",
+    "range": "Engaged",
+    "save": "",
+    "effect": "When an attack against you misses, make a Strike. Costs your reaction."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!M0tjhrQhcQ4ikjdF"
+}

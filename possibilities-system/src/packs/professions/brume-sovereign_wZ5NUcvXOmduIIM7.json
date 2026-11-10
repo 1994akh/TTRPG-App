@@ -1,0 +1,28 @@
+{
+  "_id": "wZ5NUcvXOmduIIM7",
+  "name": "Brume Sovereign",
+  "type": "profession",
+  "img": "icons/svg/hammer.svg",
+  "system": {
+    "ruleId": "Brume Sovereign"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!wZ5NUcvXOmduIIM7"
+}

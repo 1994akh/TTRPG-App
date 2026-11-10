@@ -1,0 +1,35 @@
+{
+  "_id": "NbR6tG5iqPgCC1fb",
+  "name": "Rewrite a Debt",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Fathomless",
+    "tier": 4,
+    "grade": "C",
+    "points": 4,
+    "actions": "10 minutes",
+    "range": "Touch",
+    "save": "",
+    "effect": "Transfer one obligation, oath or curse from one willing creature to another."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!NbR6tG5iqPgCC1fb"
+}

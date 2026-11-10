@@ -1,0 +1,35 @@
+{
+  "_id": "SolNlNt9fDNHPxHu",
+  "name": "Puppet",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Fathomless",
+    "tier": 5,
+    "grade": "B",
+    "points": 5,
+    "actions": "3",
+    "range": "Far",
+    "save": "Will",
+    "effect": "One creature of Standard role or below acts on your turn for one minute."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!SolNlNt9fDNHPxHu"
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "5NBi0YtWrf8wd3VC",
+  "name": "Fine Temper",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Forge",
+    "tier": 2,
+    "grade": "E",
+    "points": 2,
+    "cost": "1 day",
+    "effect": "A weapon or suit of armour gains +1 to attack or AC for a week. Does not stack with itself."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!5NBi0YtWrf8wd3VC"
+}

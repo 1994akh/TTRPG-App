@@ -1,0 +1,35 @@
+{
+  "_id": "j6q5DOk00MG7FnUj",
+  "name": "Storm of Steel",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Martial",
+    "tier": 4,
+    "grade": "C",
+    "points": 4,
+    "actions": "3",
+    "range": "Engaged",
+    "save": "",
+    "effect": "Three Strikes at -2 each, distributed as you choose within your zone."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!j6q5DOk00MG7FnUj"
+}

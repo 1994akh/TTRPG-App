@@ -1,0 +1,33 @@
+{
+  "_id": "az8Soyr6zSkuCHnC",
+  "name": "World-Anvil",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Forge",
+    "tier": 7,
+    "grade": "S",
+    "points": 7,
+    "cost": "1 season",
+    "effect": "Create an artifact. It has a name, a will of its own, and it will outlast you."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 8400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!az8Soyr6zSkuCHnC"
+}

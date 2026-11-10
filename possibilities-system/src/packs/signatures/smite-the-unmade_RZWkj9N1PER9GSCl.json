@@ -1,0 +1,33 @@
+{
+  "_id": "RZWkj9N1PER9GSCl",
+  "name": "Smite the Unmade",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Divine",
+    "tier": 3,
+    "grade": "D",
+    "points": 3,
+    "cost": "1 action",
+    "effect": "Add two weapon dice to a Strike against anything unfixed, undead, or of a grade above the region's."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!RZWkj9N1PER9GSCl"
+}

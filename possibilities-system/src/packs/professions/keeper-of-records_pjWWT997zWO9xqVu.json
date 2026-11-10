@@ -1,0 +1,28 @@
+{
+  "_id": "pjWWT997zWO9xqVu",
+  "name": "Keeper of Records",
+  "type": "profession",
+  "img": "icons/svg/hammer.svg",
+  "system": {
+    "ruleId": "Keeper of Records"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!pjWWT997zWO9xqVu"
+}

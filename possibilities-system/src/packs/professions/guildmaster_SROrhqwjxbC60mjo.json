@@ -1,0 +1,28 @@
+{
+  "_id": "SROrhqwjxbC60mjo",
+  "name": "Guildmaster",
+  "type": "profession",
+  "img": "icons/svg/hammer.svg",
+  "system": {
+    "ruleId": "Guildmaster"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!SROrhqwjxbC60mjo"
+}

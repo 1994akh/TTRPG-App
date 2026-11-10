@@ -1,0 +1,77 @@
+{
+  "note": "Builds for Act 1's actors. Lore (names, races, roles, paths) comes from data/lore/characters.json; everything here (skill picks, numbers, foe stats, feature text) is Draft by Claude, tuned for four Unclassed heroes (6 HP, AC 10, attack +2/+3, 1d6+1 damage at Combat EL 0).",
+  "trio": {
+    "enkrid": { "profession": "Tinker", "skills": ["Survival", "Performance", "Crafting", "Investigation"], "weapon": "Trained", "zone": "near" },
+    "protag2": { "profession": "Cartographer", "skills": ["Investigation", "Skulduggery", "Cartography", "Survival"], "weapon": "Trained", "zone": "near" },
+    "protag3": { "profession": "Sailor", "skills": ["Endurance", "Survival", "Cartography", "Athletics"], "weapon": "Trained", "zone": "engaged" }
+  },
+  "people": {
+    "broker": { "el": 3, "grade": "F", "role": "standard", "fight": false },
+    "merchant": { "el": 0, "grade": "F", "role": "standard", "fight": false },
+    "petra": { "el": 0, "grade": "F", "role": "minion", "fight": false },
+    "binder": { "el": 6, "grade": "E", "role": "standard", "fight": false },
+    "innkeeper": { "el": 4, "grade": "F", "role": "standard", "fight": false },
+    "rourke": { "el": 9, "grade": "E", "role": "elite", "fight": false },
+    "noble": { "el": 2, "grade": "F", "role": "standard", "fight": false },
+    "captain": { "el": 24, "grade": "B", "role": "boss", "fight": false },
+    "first_mate": { "el": 24, "grade": "B", "role": "boss", "fight": false },
+    "inventor": { "el": 24, "grade": "B", "role": "boss", "fight": false },
+    "ansel": { "el": 1, "grade": "F", "role": "standard", "fight": false },
+    "dov": { "el": 0, "grade": "F", "role": "minion", "fight": false },
+    "sellsword": { "name": "Coldwater sellsword (dead)", "el": 0, "grade": "F", "role": "standard", "fight": false,
+      "description": "Three of them, in Coldwater colours, gnawed. One dropped a journal." }
+  },
+  "foes": {
+    "rat": {
+      "name": "Undercourse rat", "el": 0, "grade": "F", "role": "minion",
+      "overrides": { "ac": 11, "attack": 2, "hpMax": 4, "damage": "1d3", "initiative": 2 },
+      "description": "A sewer rat grown fat on refinery-warm run-off.",
+      "tactics": "Swarms the nearest hero. Flees when Old Gnaw falls.",
+      "attacks": [{ "name": "Bite", "die": "d3", "range": "engaged", "traits": "1d3" }]
+    },
+    "rat_swarm": {
+      "name": "Rat swarm", "el": 0, "grade": "F", "role": "standard",
+      "overrides": { "ac": 10, "attack": 2, "hpMax": 8, "damage": "1d4", "initiative": 1 },
+      "description": "A carpet of small rats moving as one. Use it in place of three rats, or for the outer-tunnel culls.",
+      "tactics": "Engages everyone in its zone; each turn, one Bite against each hero Engaged with it (no multiple attack penalty).",
+      "attacks": [{ "name": "Swarming Bites", "die": "d4", "range": "engaged", "traits": "1d4, hits every Engaged hero" }]
+    },
+    "old_gnaw": {
+      "name": "Old Gnaw", "el": 0, "grade": "F", "role": "elite",
+      "overrides": { "ac": 12, "attack": 4, "hpMax": 16, "damage": "1d4+1", "initiative": 3 },
+      "description": "A rat the size of a pony.",
+      "tactics": "Bites twice a turn (the second at -4) and uses its third action to Shove a hero out of the Engaged zone. Three rats come with it.",
+      "attacks": [{ "name": "Bite", "die": "d4", "range": "engaged", "traits": "1d4 + 1" }],
+      "features": [{ "name": "Shove (1 action)", "text": "One Engaged hero makes an Athletics or Acrobatics check against DC 12 or is pushed to Near." }]
+    },
+    "gloam": {
+      "name": "the Gloam", "el": 6, "grade": "F", "role": "boss",
+      "overrides": { "ac": 24, "attack": 9, "hpMax": 99, "damage": "1d4", "initiative": 8 },
+      "description": "Something made of dark and teeth.",
+      "tactics": "The first fight is a rebuff: it ends after two rounds with the party thrown back to the doorway, and no one is lost. Its Coil and Throw does little damage; what it does is push.",
+      "attacks": [{ "name": "Coil and Throw", "die": "d4", "range": "engaged", "traits": "1d4, the target is pushed to Far" }],
+      "features": [
+        { "name": "Not There", "text": "Outside the sunlight, every hit passes through it: it takes no damage and is never Off-Guard." },
+        { "name": "Light-shy", "text": "It will not enter the square of sunlight under the grate, and flows around it every time. Caught in the light, it goes rigid." }
+      ]
+    }
+  },
+  "light": {
+    "name": "Into the light",
+    "description": "Get the Gloam into the shaft of sunlight before the sun moves off the floor.",
+    "approaches": [
+      { "label": "Bait it", "skill": "combat", "default": "full", "setbackOnFail": true, "note": "Full, Combat Effort, takes hits." },
+      { "label": "Block its exits", "skill": "Athletics", "default": "full", "setbackOnFail": true, "note": "Full, Athletics." },
+      { "label": "Angle the light (the charge lamp's mirror, or pry the grate wider)", "skill": "Crafting", "default": "half", "full": ["Tinker"], "setbackOnFail": false, "note": "Full for Tinker, Half for others." },
+      { "label": "Rig a line to drag the grate cover", "skill": "Athletics", "default": "half", "full": ["Sailor"], "setbackOnFail": false, "note": "Full for Sailor. (Half for others is a Draft rule.)" },
+      { "label": "Talk to Petra and read its pattern", "skill": "Insight", "default": "half", "setbackOnFail": false, "note": "Half, Craft Effort." },
+      { "label": "Aid", "skill": "craft", "default": "half", "setbackOnFail": false, "note": "Half." }
+    ],
+    "setbacks": [
+      { "label": "It lashes out", "text": "The Gloam strikes the hero who failed. They take the damage, and one of their loaners is marked Damaged.", "damage": "1d2", "gearDamage": true },
+      { "label": "The sun crawls", "text": "End of the round: the light moves one step across the floor (the sun clock).", "damage": "", "gearDamage": false }
+    ],
+    "win": "{gloam} is caught in the light, goes rigid, and comes apart into warm grey fog that settles in the water. {petra} is free.",
+    "lose": "The light slides off the floor and up the wall. The Gloam uncoils. Draft: the party drags Petra out by the culvert and must come back at tomorrow's noon; the loaners are all Damaged."
+  }
+}

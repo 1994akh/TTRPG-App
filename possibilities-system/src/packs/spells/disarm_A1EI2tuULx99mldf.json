@@ -1,0 +1,35 @@
+{
+  "_id": "A1EI2tuULx99mldf",
+  "name": "Disarm",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Martial",
+    "tier": 1,
+    "grade": "F",
+    "points": 1,
+    "actions": "1",
+    "range": "Engaged",
+    "save": "Reflex",
+    "effect": "On a failure the target drops one held item into your zone."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!A1EI2tuULx99mldf"
+}

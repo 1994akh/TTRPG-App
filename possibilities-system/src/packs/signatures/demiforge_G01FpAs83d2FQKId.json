@@ -1,0 +1,33 @@
+{
+  "_id": "G01FpAs83d2FQKId",
+  "name": "Demiforge",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Forge",
+    "tier": 6,
+    "grade": "A",
+    "points": 6,
+    "cost": "1 downtime month",
+    "effect": "Create an item of your grade carrying one signature property of your choosing."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 6100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!G01FpAs83d2FQKId"
+}

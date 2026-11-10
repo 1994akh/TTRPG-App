@@ -1,0 +1,35 @@
+{
+  "_id": "p857UKeevaeVeZBX",
+  "name": "Pillar of Judgement",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Divine",
+    "tier": 3,
+    "grade": "D",
+    "points": 3,
+    "actions": "3",
+    "range": "Far",
+    "save": "Will",
+    "effect": "d8 dice radiant in one zone. Enemies failing are also Frightened 2."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!p857UKeevaeVeZBX"
+}

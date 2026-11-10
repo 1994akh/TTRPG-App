@@ -1,0 +1,33 @@
+{
+  "_id": "pUzK8BXNOAb0vvC8",
+  "name": "Beast Bond",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Tidebound",
+    "tier": 2,
+    "grade": "E",
+    "points": 2,
+    "cost": "2 actions",
+    "effect": "A beast of your grade or lower follows one reasonable instruction. In combat it acts as a Minion under your control until the encounter ends."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!pUzK8BXNOAb0vvC8"
+}

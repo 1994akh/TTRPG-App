@@ -1,0 +1,35 @@
+{
+  "_id": "mthCLBISj1AABjWt",
+  "name": "Speak with Beasts",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Tidebound",
+    "tier": 1,
+    "grade": "F",
+    "points": 1,
+    "actions": "2",
+    "range": "Near",
+    "save": "",
+    "effect": "Converse with any non-sapient creature for ten minutes. It answers as it understands."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!mthCLBISj1AABjWt"
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "1Q6dbJ1xNzsI2OOS",
+  "name": "Field Dressing",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Life",
+    "tier": 1,
+    "grade": "F",
+    "points": 1,
+    "cost": "2 actions",
+    "effect": "Restore (1d8 + your Craft EL) x your RGM hit points to a creature in Engaged, and stabilise a Dying creature at Dying 0."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!1Q6dbJ1xNzsI2OOS"
+}

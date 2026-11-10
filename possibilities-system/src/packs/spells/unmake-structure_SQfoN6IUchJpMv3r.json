@@ -1,0 +1,35 @@
+{
+  "_id": "SQfoN6IUchJpMv3r",
+  "name": "Unmake Structure",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Artifice",
+    "tier": 5,
+    "grade": "B",
+    "points": 5,
+    "actions": "3",
+    "range": "Far",
+    "save": "",
+    "effect": "One structure, wall or vessel section of your grade or below simply ceases to hold together."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!SQfoN6IUchJpMv3r"
+}

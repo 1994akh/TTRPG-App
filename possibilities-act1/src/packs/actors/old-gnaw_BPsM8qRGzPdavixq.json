@@ -1,0 +1,166 @@
+{
+  "_id": "BPsM8qRGzPdavixq",
+  "name": "Old Gnaw",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "el": 0,
+    "grade": "F",
+    "role": "elite",
+    "hp": {
+      "value": 16
+    },
+    "overrides": {
+      "ac": 12,
+      "attack": 4,
+      "hpMax": 16,
+      "damage": "1d4+1",
+      "dc": null,
+      "initiative": 3
+    },
+    "zone": "near",
+    "turn": {
+      "actions": 3,
+      "attacks": 0,
+      "guard": false
+    },
+    "description": "<p>A rat the size of a pony.</p>",
+    "tactics": "<p>Bites twice a turn (the second at -4) and uses its third action to Shove a hero out of the Engaged zone. Three rats come with it.</p>",
+    "bestiary": {
+      "known": false,
+      "lore": ""
+    }
+  },
+  "items": [
+    {
+      "_id": "QZLThb0DykqHojd1",
+      "name": "Bite",
+      "type": "weapon",
+      "img": "icons/creatures/abilities/mouth-teeth-sharp.webp",
+      "system": {
+        "die": "d4",
+        "range": "engaged",
+        "traits": "1d4 + 1",
+        "grade": "F",
+        "price": {
+          "value": 0,
+          "denom": "gp"
+        },
+        "equipped": true,
+        "loaned": false,
+        "condition": "intact",
+        "description": ""
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 100,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "possibilities",
+        "systemVersion": "0.1.0",
+        "createdTime": 1794268800000,
+        "modifiedTime": 1794268800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!BPsM8qRGzPdavixq.QZLThb0DykqHojd1"
+    },
+    {
+      "_id": "JLrLiWdAhSecptfQ",
+      "name": "Shove (1 action)",
+      "type": "feature",
+      "img": "icons/svg/aura.svg",
+      "system": {
+        "text": "<p>One Engaged hero makes an Athletics or Acrobatics check against DC 12 or is pushed to Near.</p>",
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": ""
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "possibilities",
+        "systemVersion": "0.1.0",
+        "createdTime": 1794268800000,
+        "modifiedTime": 1794268800000,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "_key": "!actors.items!BPsM8qRGzPdavixq.JLrLiWdAhSecptfQ"
+    }
+  ],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "Old Gnaw",
+    "displayName": 30,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "lockRotation": true,
+    "sight": {
+      "enabled": false,
+      "range": 0
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {
+      "possibilities-act1": {
+        "actorKey": "old_gnaw"
+      }
+    }
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "old_gnaw",
+      "foe": true,
+      "people": false
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!BPsM8qRGzPdavixq"
+}

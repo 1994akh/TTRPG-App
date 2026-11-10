@@ -1,0 +1,35 @@
+{
+  "_id": "lhpLq5Eb9NEBM6q9",
+  "name": "Whisper of Doubt",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Fathomless",
+    "tier": 2,
+    "grade": "E",
+    "points": 2,
+    "actions": "1",
+    "range": "Far",
+    "save": "Will",
+    "effect": "On a failure the target's next roll is one degree worse."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!lhpLq5Eb9NEBM6q9"
+}

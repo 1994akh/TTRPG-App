@@ -1,0 +1,35 @@
+{
+  "_id": "tcsABlz56EdIKEI8",
+  "name": "Engine of the Self",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Artifice",
+    "tier": 6,
+    "grade": "A",
+    "points": 6,
+    "actions": "1 hour",
+    "range": "Self",
+    "save": "",
+    "effect": "You need no food, sleep or air for a season, and ambient damage cannot reduce you below 1."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!tcsABlz56EdIKEI8"
+}

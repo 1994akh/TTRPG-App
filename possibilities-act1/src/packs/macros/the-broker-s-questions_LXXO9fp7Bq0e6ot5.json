@@ -1,0 +1,31 @@
+{
+  "_id": "LXXO9fp7Bq0e6ot5",
+  "name": "The broker's questions",
+  "type": "script",
+  "img": "icons/skills/social/diplomacy-writing-letter.webp",
+  "scope": "global",
+  "command": "game.modules.get(\"possibilities-act1\").api.askBroker();",
+  "folder": null,
+  "sort": 20000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "possibilities-act1": {
+      "fn": "askBroker",
+      "slot": null
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": null,
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!macros!LXXO9fp7Bq0e6ot5"
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "YIxzTiUoSnPTIR2d",
+  "name": "Restoration",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Divine",
+    "tier": 3,
+    "grade": "D",
+    "points": 3,
+    "actions": "2",
+    "range": "Engaged",
+    "save": "",
+    "effect": "Remove one condition: Drained, Enfeebled, Fatigued, Blinded, or a disease."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!YIxzTiUoSnPTIR2d"
+}

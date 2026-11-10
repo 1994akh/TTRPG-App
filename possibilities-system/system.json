@@ -1,0 +1,46 @@
+{
+  "id": "possibilities",
+  "title": "Possibilities",
+  "description": "The Possibilities tabletop RPG (v1_1 workbook) for Foundry VTT: three tracks (race, class, profession), grades F to S, d20 + modifier + proficiency + EL, three actions a turn, Scenes with Resistance and aptness, and the Dying track. Wayfinder setting.",
+  "version": "0.1.0",
+  "authors": [{ "name": "Aaron Hancock" }],
+  "url": "https://github.com/1994akh/TTRPG-App",
+  "manifest": "https://github.com/1994akh/TTRPG-App/releases/latest/download/system.json",
+  "download": "https://github.com/1994akh/TTRPG-App/releases/latest/download/possibilities.zip",
+  "compatibility": { "minimum": "14", "verified": "14.370" },
+  "esmodules": ["module/possibilities.mjs"],
+  "styles": ["styles/possibilities.css"],
+  "languages": [{ "lang": "en", "name": "English", "path": "lang/en.json" }],
+  "documentTypes": {
+    "Actor": {
+      "hero": { "htmlFields": ["details.appearance", "details.biography", "details.notes"] },
+      "npc": { "htmlFields": ["description", "tactics", "bestiary.lore"] },
+      "obstacle": { "htmlFields": ["description", "outcome.win", "outcome.lose"] }
+    },
+    "Item": {
+      "weapon": { "htmlFields": ["description"] },
+      "armour": { "htmlFields": ["description"] },
+      "gear": { "htmlFields": ["description"] },
+      "signature": {},
+      "spell": {},
+      "feature": { "htmlFields": ["text"] },
+      "race": {},
+      "class": {},
+      "profession": {}
+    }
+  },
+  "initiative": "1d20 + @derived.initiative",
+  "grid": { "type": 1, "distance": 5, "units": "ft", "diagonals": 0 },
+  "primaryTokenAttribute": "hp",
+  "secondaryTokenAttribute": "points",
+  "packs": [
+    { "name": "rules", "label": "Rules of Possibilities", "type": "JournalEntry", "path": "packs/rules", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "races", "label": "Races", "type": "Item", "system": "possibilities", "path": "packs/races", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "classes", "label": "Classes", "type": "Item", "system": "possibilities", "path": "packs/classes", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "professions", "label": "Professions", "type": "Item", "system": "possibilities", "path": "packs/professions", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "signatures", "label": "Signatures", "type": "Item", "system": "possibilities", "path": "packs/signatures", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
+    { "name": "spells", "label": "Spells", "type": "Item", "system": "possibilities", "path": "packs/spells", "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } }
+  ],
+  "packFolders": [{ "name": "Possibilities", "sorting": "m", "packs": ["rules", "races", "classes", "professions", "signatures", "spells"] }],
+  "flags": {}
+}

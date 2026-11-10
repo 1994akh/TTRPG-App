@@ -1,0 +1,42 @@
+{
+  "_id": "UVXxVoAH8D3rrbeP",
+  "name": "Physician's tonic",
+  "type": "gear",
+  "img": "icons/containers/bags/pack-simple-leather-brown.webp",
+  "system": {
+    "grade": "F",
+    "price": {
+      "value": 5,
+      "denom": "gp"
+    },
+    "loaned": false,
+    "condition": "intact",
+    "description": "<p>Drink (1 action): heal 1d6 + 1.</p>",
+    "quantity": 1,
+    "keyItem": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "shop_physician-s-tonic",
+      "shop": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!UVXxVoAH8D3rrbeP"
+}

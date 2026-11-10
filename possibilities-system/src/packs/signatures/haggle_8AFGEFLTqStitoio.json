@@ -1,0 +1,33 @@
+{
+  "_id": "8AFGEFLTqStitoio",
+  "name": "Haggle",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Commerce",
+    "tier": 1,
+    "grade": "F",
+    "points": 1,
+    "cost": "10 minutes",
+    "effect": "Buy at 20% below listed price or sell at 20% above. Once per settlement per visit."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!8AFGEFLTqStitoio"
+}

@@ -1,0 +1,93 @@
+{
+  "_id": "Y84JqtjUWDq14XIg",
+  "name": "Binder Maren Quell",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "el": 6,
+    "grade": "E",
+    "role": "standard",
+    "hp": {
+      "value": 34
+    },
+    "overrides": {
+      "ac": null,
+      "attack": null,
+      "hpMax": null,
+      "damage": null,
+      "dc": null,
+      "initiative": null
+    },
+    "zone": "near",
+    "turn": {
+      "actions": 3,
+      "attacks": 0,
+      "guard": false
+    },
+    "description": "<p>Has bound a thousand people and stopped promising any of them it won&#39;t hurt.</p>",
+    "tactics": "",
+    "bestiary": {
+      "known": false,
+      "lore": "<p>Has bound a thousand people and stopped promising any of them it won&#39;t hurt.</p>"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "Binder Maren Quell",
+    "displayName": 30,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": 1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "lockRotation": true,
+    "sight": {
+      "enabled": true,
+      "range": 30
+    },
+    "ring": {
+      "enabled": false
+    },
+    "flags": {
+      "possibilities-act1": {
+        "actorKey": "binder"
+      }
+    }
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "binder",
+      "foe": false,
+      "people": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!actors!Y84JqtjUWDq14XIg"
+}

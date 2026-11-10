@@ -1,0 +1,28 @@
+{
+  "_id": "Lg7RUGUGMZGt0G9f",
+  "name": "Cutthroat",
+  "type": "class",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "ruleId": "Cutthroat"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!Lg7RUGUGMZGt0G9f"
+}

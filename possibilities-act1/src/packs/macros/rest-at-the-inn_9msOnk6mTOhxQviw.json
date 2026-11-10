@@ -1,0 +1,31 @@
+{
+  "_id": "9msOnk6mTOhxQviw",
+  "name": "Rest at the inn",
+  "type": "script",
+  "img": "icons/environment/settlement/house-cottage.webp",
+  "scope": "global",
+  "command": "game.modules.get(\"possibilities-act1\").api.innRest();",
+  "folder": null,
+  "sort": 18000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "possibilities-act1": {
+      "fn": "innRest",
+      "slot": null
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": null,
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!macros!9msOnk6mTOhxQviw"
+}

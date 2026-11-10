@@ -1,0 +1,33 @@
+{
+  "_id": "7nxaLrnG7rca1yDz",
+  "name": "Clockwork Aid",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Artifice",
+    "tier": 2,
+    "grade": "E",
+    "points": 2,
+    "cost": "1 day",
+    "effect": "Build a device granting +2 on one named skill for a week. One per person."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!7nxaLrnG7rca1yDz"
+}

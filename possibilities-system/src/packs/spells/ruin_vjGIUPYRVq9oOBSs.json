@@ -1,0 +1,35 @@
+{
+  "_id": "vjGIUPYRVq9oOBSs",
+  "name": "Ruin",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Artifice",
+    "tier": 4,
+    "grade": "C",
+    "points": 4,
+    "actions": "3",
+    "range": "Far",
+    "save": "Reflex",
+    "effect": "d10 dice to one creature, or d8 dice to a zone. Ignores one grade of the damage gate."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!vjGIUPYRVq9oOBSs"
+}

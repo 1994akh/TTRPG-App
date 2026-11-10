@@ -1,0 +1,35 @@
+{
+  "_id": "TWG7CjWHsj6k1JRM",
+  "name": "Beast Form",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Tidebound",
+    "tier": 2,
+    "grade": "E",
+    "points": 2,
+    "actions": "2",
+    "range": "Self",
+    "save": "",
+    "effect": "Take a beast shape for ten minutes: swim or climb Speed, +2 AC, unarmed Strikes."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 1500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!TWG7CjWHsj6k1JRM"
+}

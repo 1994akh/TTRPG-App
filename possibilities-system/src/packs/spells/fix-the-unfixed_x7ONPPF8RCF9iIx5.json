@@ -1,0 +1,35 @@
+{
+  "_id": "x7ONPPF8RCF9iIx5",
+  "name": "Fix the Unfixed",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Artifice",
+    "tier": 7,
+    "grade": "S",
+    "points": 7,
+    "actions": "1 watch",
+    "range": "Region",
+    "save": "",
+    "effect": "Settle an uncharted region permanently without surveying it. It yields no Discovery, and it never will again."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 6700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!x7ONPPF8RCF9iIx5"
+}

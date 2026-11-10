@@ -1,0 +1,33 @@
+{
+  "_id": "oDqnkN7IIF4UhWuf",
+  "name": "Brume Mapping",
+  "type": "signature",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "line": "Wayfaring",
+    "tier": 4,
+    "grade": "C",
+    "points": 4,
+    "cost": "1 watch",
+    "effect": "Map a region you have not entered, from up to two cells away. The result is Sighted, never Charted."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!oDqnkN7IIF4UhWuf"
+}

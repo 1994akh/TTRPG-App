@@ -1,0 +1,35 @@
+{
+  "_id": "KYOaTVbZyqzlvfgv",
+  "name": "Turn the Weather",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Tidebound",
+    "tier": 5,
+    "grade": "B",
+    "points": 5,
+    "actions": "10 minutes",
+    "range": "Region",
+    "save": "",
+    "effect": "Set the weather across the region for a full watch. Travel doubles or halves."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!KYOaTVbZyqzlvfgv"
+}

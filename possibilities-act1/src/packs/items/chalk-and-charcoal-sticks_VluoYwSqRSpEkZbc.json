@@ -1,0 +1,43 @@
+{
+  "_id": "VluoYwSqRSpEkZbc",
+  "name": "Chalk and charcoal sticks",
+  "type": "gear",
+  "img": "icons/containers/bags/pack-simple-leather-brown.webp",
+  "system": {
+    "grade": "F",
+    "price": {
+      "value": 1,
+      "denom": "sp"
+    },
+    "loaned": false,
+    "condition": "intact",
+    "description": "",
+    "quantity": 6,
+    "keyItem": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "possibilities-act1": {
+      "key": "kit_scrivener_1",
+      "kit": "kit_scrivener",
+      "kitName": "Scrivener's kit"
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!VluoYwSqRSpEkZbc"
+}

@@ -1,0 +1,82 @@
+/* Ashford Roads: Act 1 — Dungeonpunk / gaslit: soot, brass, gaslight amber, wet stone, ledger paper. */
+@font-face { font-family: "PA1 Fell"; src: url("../assets/fonts/IMFellEnglish-Regular.ttf"); }
+@font-face { font-family: "PA1 Fell"; font-style: italic; src: url("../assets/fonts/IMFellEnglish-Italic.ttf"); }
+@font-face { font-family: "PA1 Garamond"; src: url("../assets/fonts/EBGaramond-Variable.ttf"); font-weight: 400 800; }
+@font-face { font-family: "PA1 Garamond"; font-style: italic; src: url("../assets/fonts/EBGaramond-Italic-Variable.ttf"); font-weight: 400 800; }
+
+.pa1 {
+  --pa1-soot: #1b1612; --pa1-stone: #2c2620; --pa1-brass: #b58a3c; --pa1-gas: #f3c77a; --pa1-paper: #efe3c8;
+  --pa1-ink: #2a2118; --pa1-verdigris: #3f7f74; --pa1-ember: #c0532a; --pa1-muted: #7d6e5c;
+  --pa1-display: "PA1 Fell", "IM Fell English", Georgia, serif; --pa1-body: "PA1 Garamond", "EB Garamond", Georgia, serif;
+}
+.pa1-page, .pa1-card { --pa1-brass: #b58a3c; --pa1-gas: #f3c77a; --pa1-ink: #2a2118; --pa1-muted: #7d6e5c; --pa1-ember: #c0532a; --pa1-verdigris: #3f7f74; }
+
+/* Journal pages */
+.pa1-page { font-family: "PA1 Garamond", Georgia, serif; font-size: 1.05em; line-height: 1.5; }
+.pa1-page h2, .pa1-page h3 { font-family: "PA1 Fell", Georgia, serif; border-bottom: 1px solid var(--pa1-brass); color: inherit; }
+.pa1-muted { color: var(--pa1-muted); font-size: .92em; }
+.pa1-badge { display: inline-block; font: 600 .72em/1.6 system-ui, sans-serif; letter-spacing: .04em; text-transform: uppercase;
+  padding: 0 .6em; border-radius: 999px; border: 1px solid currentColor; }
+.pa1-draft { color: var(--pa1-ember); }
+.pa1-written { color: var(--pa1-verdigris); }
+.pa1-tag { display: inline-block; font: .75em/1.6 system-ui, sans-serif; padding: 0 .5em; margin: 0 .2em .2em 0; border-radius: 4px;
+  background: rgba(181, 138, 60, .15); }
+.pa1-draftnote { border-left: 3px solid var(--pa1-ember); padding: .3em .7em; margin: .6em 0; font-size: .92em; background: rgba(192, 83, 42, .07); }
+.pa1-beat { font-style: italic; }
+.pa1-tools { display: flex; flex-wrap: wrap; gap: .4em; margin: .6em 0; }
+a.pa1-run { display: inline-flex; align-items: center; gap: .35em; min-height: 32px; padding: .2em .7em; border-radius: 6px; cursor: pointer;
+  background: #2c2620; color: #f3c77a !important; border: 1px solid #b58a3c; font: 600 .9em system-ui, sans-serif; text-decoration: none; }
+a.pa1-run:hover, a.pa1-run:focus-visible { background: #3a3128; outline: 2px solid #f3c77a; outline-offset: 1px; }
+.pa1-pc { font-weight: 700; }
+
+/* The play script */
+.pa1-script { margin: .8em 0; }
+.pa1-script .pa1-note { font-style: italic; color: var(--pa1-muted); margin: .5em 0 .5em 1.2em; }
+.pa1-script .pa1-note::before { content: "( "; } .pa1-script .pa1-note::after { content: " )"; }
+blockquote.pa1-line { margin: .35em 0; padding: .35em .8em; border-left: 3px solid var(--pa1-brass); background: rgba(243, 199, 122, .1); }
+.pa1-speaker { font-family: "PA1 Fell", Georgia, serif; font-variant: small-caps; letter-spacing: .05em; font-weight: 700; margin-right: .3em; }
+.pa1-speaker::after { content: "."; }
+.pa1-choices { list-style: none; padding-left: 1.2em; }
+.pa1-choices li::before { content: "▸ "; color: var(--pa1-ember); }
+.pa1-portrait { float: right; max-width: 34%; margin: 0 0 .6em .8em; border: 2px solid var(--pa1-brass); border-radius: 4px; }
+.pa1-node { display: inline-block; padding: 0 .4em; border: 1px dashed var(--pa1-muted); border-radius: 3px; opacity: .65; }
+.pa1-node.pa1-now { opacity: 1; border-style: solid; border-color: var(--pa1-brass); font-weight: 700; }
+.pa1-handout { padding: 1em 1.2em; background: #efe3c8; color: #2a2118; border: 1px solid #b58a3c; box-shadow: inset 0 0 40px rgba(90, 60, 20, .25);
+  font-family: "PA1 Fell", Georgia, serif; }
+.pa1-handout .pa1-draftline { opacity: .9; }
+.pa1-prompt { font-size: 1.1em; font-style: italic; border-left: 3px solid var(--pa1-verdigris); padding-left: .7em; }
+.pa1-logentry { border-top: 1px solid var(--pa1-brass); margin-top: .8em; }
+
+/* Chat cards */
+.pa1-card { font-family: "PA1 Garamond", Georgia, serif; }
+.pa1-card h3 { font-family: "PA1 Fell", Georgia, serif; margin: 0 0 .3em; border-bottom: 1px solid var(--pa1-brass); }
+.pa1-card h3:empty { display: none; }
+.pa1-card .pa1-line { margin: .25em 0; }
+.pa1-card .pa1-note { font-style: italic; color: var(--pa1-muted); }
+.pa1-card .pa1-choice { color: var(--pa1-ember); }
+.pa1-buttons { display: flex; gap: .4em; flex-wrap: wrap; margin-top: .4em; }
+.pa1-buttons button { min-height: 32px; }
+.pa1-titlecard { text-align: center; padding: 1.2em .4em; background: radial-gradient(circle at 50% 40%, #3a2e22, #120d0a); color: #f3c77a; border-radius: 4px; }
+.pa1-tc-title { font-family: "PA1 Fell", Georgia, serif; font-size: 2.2em; letter-spacing: .12em; margin: .2em 0; }
+.pa1-tc-small { font-style: italic; opacity: .85; margin: 0; }
+
+/* Director and Purse windows (touch-friendly: 36px targets, no hover-only controls) */
+.pa1-director .window-content, .pa1-purse .window-content { font-family: "PA1 Garamond", Georgia, serif; background: #1b1612; color: #efe3c8; }
+.pa1-director button, .pa1-purse button { min-height: 36px; padding: 0 .7em; margin: 2px; background: #2c2620; color: #f3c77a; border: 1px solid #6b5332; border-radius: 6px; }
+.pa1-director button.tool { border-color: #b58a3c; }
+.pa1-director button.danger { color: #ff9b7a; border-color: #c0532a; }
+.pa1-status { list-style: none; padding: .4em .6em; margin: 0 0 .6em; background: #2c2620; border: 1px solid #6b5332; border-radius: 6px; }
+.pa1-steps { list-style: none; padding: 0; margin: 0; }
+.pa1-step { display: flex; gap: .4em; padding: .4em 0; border-bottom: 1px solid #3a3128; }
+.pa1-step.now { background: rgba(243, 199, 122, .08); }
+.pa1-step.done .title { opacity: .6; text-decoration: line-through; text-decoration-color: #b58a3c; }
+.pa1-step .tick { min-width: 40px; font-size: 1.2em; background: none; border: none; }
+.pa1-step .body { flex: 1; }
+.pa1-step .title { font-family: "PA1 Fell", Georgia, serif; font-size: 1.08em; }
+.pa1-step .row, .pa1-tools .row, .pa1-purse .row { display: flex; flex-wrap: wrap; gap: 2px; }
+.pa1-warning { color: #ff9b7a; }
+.pa1-big { font-family: "PA1 Fell", Georgia, serif; font-size: 1.8em; margin: .2em 0; }
+.pa1-entries { list-style: none; padding: 0; }
+.pa1-entries li { display: flex; justify-content: space-between; align-items: center; }
+.pa1-entries .amt { font-variant-numeric: tabular-nums; }
+.pa1-verdict { font-style: italic; color: #f3c77a; }

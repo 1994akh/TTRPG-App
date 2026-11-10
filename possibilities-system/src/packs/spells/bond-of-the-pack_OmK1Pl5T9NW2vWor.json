@@ -1,0 +1,35 @@
+{
+  "_id": "OmK1Pl5T9NW2vWor",
+  "name": "Bond of the Pack",
+  "type": "spell",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "tradition": "Tidebound",
+    "tier": 3,
+    "grade": "D",
+    "points": 3,
+    "actions": "2",
+    "range": "Near",
+    "save": "",
+    "effect": "Summon a beast that fights as a Standard of your grade for one minute."
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "possibilities",
+    "systemVersion": "0.1.0",
+    "createdTime": 1794268800000,
+    "modifiedTime": 1794268800000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "_key": "!items!OmK1Pl5T9NW2vWor"
+}
