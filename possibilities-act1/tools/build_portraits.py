@@ -570,13 +570,14 @@ def frame_portrait(img, role, name):
     return out.resize((W // S, H // S), Image.LANCZOS).convert("RGB")
 
 
-TOKEN_CROP = {"rat": (0.5, 0.6, 0.9), "rat_swarm": (0.5, 0.6, 1.0), "old_gnaw": (0.5, 0.6, 1.0), "gloam": (0.5, 0.5, 1.0),
-              "inventor": (0.52, 0.5, 0.62), "binder": (0.52, 0.52, 0.66), "petra": (0.52, 0.5, 0.6), "dov": (0.52, 0.5, 0.6)}
+TOKEN_CROP = {"rat": (0.5, 0.6, 0.96), "rat_swarm": (0.5, 0.56, 1.0), "old_gnaw": (0.5, 0.6, 0.96), "gloam": (0.5, 0.5, 1.0),
+              "inventor": (0.5, 0.46, 0.86), "binder": (0.5, 0.48, 0.86), "petra": (0.5, 0.46, 0.84), "dov": (0.5, 0.46, 0.84),
+              "merchant": (0.5, 0.36, 0.92), "rourke": (0.5, 0.38, 0.92), "noble": (0.5, 0.38, 0.9), "enkrid": (0.5, 0.38, 0.9)}
 
 
 def token(img, role, key):
     fr0, fr1 = ROLE[role]["frame"]
-    cxr, cyr, sc = TOKEN_CROP.get(key, (0.52, 0.44, 0.6))
+    cxr, cyr, sc = TOKEN_CROP.get(key, (0.5, 0.4, 0.88))
     side = int(W * sc)
     cx, cy = int(W * cxr), int(H * cyr)
     box = (cx - side // 2, cy - side // 2, cx + side // 2, cy + side // 2)
@@ -618,10 +619,10 @@ def cover():
             wx, wy = x + int(r.integers(6, max(7, bw // S - 14))) * S, h - 170 * S - bh + int(r.integers(10, max(11, bh // S - 20))) * S
             d.rectangle([wx, wy, wx + 8 * S, wy + 12 * S], fill=(255, 196, 110))
         x += bw
-    for (sx, sw_, sh_) in [(700, 34, 380), (780, 28, 440), (860, 40, 360), (960, 30, 300)]:
+    for (sx, sw_, sh_) in [(860, 34, 440), (930, 28, 380), (1010, 40, 410), (1110, 30, 300), (720, 26, 300)]:
         d.rectangle([sx * S, (600 - sh_) * S, (sx + sw_) * S, h], fill=(20, 18, 20))
         d.ellipse([(sx - 6) * S, (600 - sh_ - 10) * S, (sx + sw_ + 6) * S, (600 - sh_ + 10) * S], fill=(255, 130, 50))
-    for (tx, tr) in [(620, 70), (1040, 90), (1130, 60)]:
+    for (tx, tr) in [(640, 70), (980, 90), (1160, 60)]:
         d.ellipse([(tx - tr) * S, (470 - tr) * S, (tx + tr) * S, (470 + tr) * S], fill=(22, 20, 22))
     d.rectangle([0, 520 * S, w, h], fill=(14, 12, 14))
     for x in range(40, 1200, 160):
