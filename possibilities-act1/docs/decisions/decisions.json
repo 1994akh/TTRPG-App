@@ -724,5 +724,102 @@
    "The approach names a skill each time",
    "The hero picks any Craft-track skill and the GM rules on aptness"
   ]
+ },
+ {
+  "page": "story",
+  "group": "Invented while building Act 1 (10 Nov)",
+  "title": "The Into the light Scene's numbers",
+  "context": "Resistance 80, DC 12, 8 rounds of sun (one per step of the light on the map). In 2,000 simulated runs with the trio and a player character it was won 90% of the time, in about 5 rounds; Setbacks deal 1d2 and damage a loaner.",
+  "recommended": "Keep these numbers.",
+  "alternatives": [
+   "Harder: 6 rounds of sun",
+   "Easier: Resistance 60"
+  ]
+ },
+ {
+  "page": "story",
+  "group": "Invented while building Act 1 (10 Nov)",
+  "title": "Old Gnaw and the rats",
+  "context": "Rat 4 HP, AC 11, +2, 1d3. Rat swarm 8 HP, AC 10, 1d4 to everyone Engaged. Old Gnaw 16 HP, AC 12, +4, 1d4+1, two bites and a Shove (DC 12). Simulated: the party wins 96% of the time and a hero drops in 44% of fights.",
+  "recommended": "Keep these numbers (fair but tense, as you chose).",
+  "alternatives": [
+   "Harder: Old Gnaw 22 HP",
+   "Easier: drop the swarm"
+  ]
+ },
+ {
+  "page": "story",
+  "group": "Invented while building Act 1 (10 Nov)",
+  "title": "Starting coin",
+  "context": "Your character starts with 2 gold crowns 5 silver marks; each of the trio has 1 gold crown 5 silver. Loaners cost blade 5, lamp 6 and pry bar 4 gold (the 30 gp bill).",
+  "recommended": "Keep these.",
+  "alternatives": [
+   "Everyone starts with nothing but the pack",
+   "Your character starts richer (5 gold crowns)"
+  ]
+ },
+ {
+  "page": "story",
+  "group": "Invented while building Act 1 (10 Nov)",
+  "title": "The Coldwater sellswords",
+  "context": "The module names them Harl Venn, Mags Orrin and Teague Pell, a crew called the Knotted Gull, with a mark of a gull over a knotted net (all Draft).",
+  "recommended": "Keep as placeholders.",
+  "alternatives": [
+   "Rename them (note)",
+   "Leave them nameless"
+  ]
+ },
+ {
+  "page": "story",
+  "group": "Invented while building Act 1 (10 Nov)",
+  "title": "Young Enkrid's flashback choices",
+  "context": "Two Draft choices for young Enkrid during the prologue, plus the scruffy captain's closing line and the Scene's lose outcome ('come back at tomorrow's noon'), are Claude's.",
+  "recommended": "Keep as Draft until you rewrite them in the journal.",
+  "alternatives": [
+   "Remove the choices; the flashback is narration only"
+  ]
+ },
+ {
+  "page": "story",
+  "group": "Invented while building Act 1 (10 Nov)",
+  "title": "The trio's starting skills",
+  "context": "Picked from each one's race, profession and class skills: Tova trains Athletics (instead of Survival twice), and all three are Trained in weapons once bound.",
+  "recommended": "Keep these builds.",
+  "alternatives": [
+   "Let me choose their skills on first import"
+  ]
+ },
+ {
+  "page": "play",
+  "group": "Invented while building Act 1 (10 Nov)",
+  "title": "The yes/no oracle's odds",
+  "context": "d20, +4 when likely and −4 when unlikely, with bands at 3 / 7 / 10 / 13 / 17 for No, and / No / No, but / Yes, but / Yes / Yes, and.",
+  "recommended": "Keep these odds.",
+  "alternatives": [
+   "Use a 2d6 oracle instead",
+   "Only Yes / No, with no 'and/but'"
+  ]
+ },
+ {
+  "page": "rules",
+  "group": "Invented while building Act 1 (10 Nov)",
+  "title": "The Act 1 milestone",
+  "context": "At the end of Act 1 everyone's profession goes from Novice to Apprentice. Class stays at Novice (it was just bound).",
+  "recommended": "Keep it.",
+  "alternatives": [
+   "No milestone; XP only",
+   "Both tracks go up a rank"
+  ]
+ },
+ {
+  "page": "look",
+  "group": "Invented while building Act 1 (10 Nov)",
+  "title": "Shop and kit prices",
+  "context": "Starting kits and the Ashford shop use F-grade prices (x3 per grade above F); the physician's tonic heals 1d6 + 1. The broker's board has eight Draft jobs; a rat cull pays 2 gold crowns.",
+  "recommended": "Keep these prices.",
+  "alternatives": [
+   "Cheaper, so coin matters less",
+   "Dearer, so the danger fee matters more"
+  ]
  }
 ]
