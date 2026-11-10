@@ -14,8 +14,11 @@
     "description": "<p>Iron, a yard long, bent at one end.</p>",
     "die": "d4",
     "range": "engaged",
-    "traits": "improvised: d4 and -2 to hit, unless your profession uses the tool (a Tinker uses it at d6, no penalty)",
-    "equipped": false
+    "traits": "improvised: d4 at -2, unless your profession uses the tool (a Tinker uses it at d6, no penalty)",
+    "equipped": false,
+    "damage": "",
+    "improvised": true,
+    "tools": "Tinker"
   },
   "effects": [],
   "folder": null,

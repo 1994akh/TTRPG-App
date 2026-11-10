@@ -85,13 +85,13 @@ export function sessionEntry({ steps, beats, logged, date, pcName, storyPage }) 
 
 /* -------------------------------------------- The party -------------------------------------------- */
 
-/** Which hero gets which loaner: a blade each; the lamp to the Tinker, the pry bar to the strongest. */
+/** Which hero gets which loaner: a blade each; the pry bar to the Tinker (a tool they use at d6), the lamp to Rook. */
 export function loanerPlan(heroes) {
   const plan = heroes.map(h => ({ hero: h.key, items: ["loaner_blade"] }));
   const tinker = heroes.find(h => h.profession === "Tinker") ?? heroes[0];
-  const strong = heroes.find(h => h.key === "protag3") ?? heroes.at(-1);
-  plan.find(p => p.hero === tinker?.key)?.items.push("charge_lamp");
-  plan.find(p => p.hero === strong?.key)?.items.push("pry_bar");
+  const lamp = heroes.find(h => h.key === "protag2") ?? heroes.find(h => h !== tinker) ?? tinker;
+  plan.find(p => p.hero === tinker?.key)?.items.push("pry_bar");
+  plan.find(p => p.hero === lamp?.key)?.items.push("charge_lamp");
   return plan;
 }
 

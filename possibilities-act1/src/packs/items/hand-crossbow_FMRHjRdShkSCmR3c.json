@@ -15,7 +15,10 @@
     "die": "d6",
     "range": "far",
     "traits": "reload 1 action",
-    "equipped": false
+    "equipped": false,
+    "damage": "",
+    "improvised": false,
+    "tools": ""
   },
   "effects": [],
   "folder": null,

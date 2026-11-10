@@ -22,7 +22,10 @@ const IMG = {
 export function systemFor(d, { loaned=false }={}) {
   const common = { grade: "F", price: d.price ?? { value: 0, denom: "gp" }, loaned, condition: "intact",
     description: d.description ? `<p>${esc(resolve(d.description))}</p>` : "" };
-  if ( d.type === "weapon" ) return { ...common, die: d.die, range: d.range ?? "engaged", traits: d.traits ?? "", equipped: false };
+  if ( d.type === "weapon" ) {
+    return { ...common, die: d.die, range: d.range ?? "engaged", traits: d.traits ?? "", equipped: false, damage: "",
+      improvised: !!d.improvised, tools: d.tools ?? "" };
+  }
   if ( d.type === "armour" ) return { ...common, armourType: d.armourType, bonus: d.bonus ?? 0, equipped: false };
   return { ...common, quantity: d.quantity ?? 1, keyItem: !!d.keyItem };
 }

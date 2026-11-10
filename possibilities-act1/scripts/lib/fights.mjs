@@ -3,7 +3,7 @@
  */
 import {
   actorFor, around, CONTENT, ensureTokens, esc, getSetting, isLeadGM, openPage, partyHeroes, postCard, requireGM, sceneFor,
-  SCOPE, setSetting
+  SCOPE, setSetting, sys
 } from "./util.mjs";
 import { sunPoint } from "./logic.mjs";
 import { damageLoaner, sceneCardHTML, tickStep } from "./story.mjs";
@@ -132,7 +132,7 @@ export async function startLight() {
   const scene = await showMap("grate_chamber");
   if ( !obstacle || !scene ) return false;
   const cfg = CONTENT.config.light;
-  await obstacle.update({ "system.resistance.value": cfg.resistance, "system.resistance.max": cfg.resistance, "system.dc": cfg.dc,
+  await obstacle.update({ "system.status": "active", "system.resistance.value": cfg.resistance, "system.resistance.max": cfg.resistance, "system.dc": cfg.dc,
     "system.clock.value": 0, "system.clock.max": cfg.clockRounds, [`flags.${SCOPE}.resolved`]: null });
   await placeSun(0, cfg.clockRounds);
   const party = await placeParty(scene, Math.round(scene.width / 2) - 300, Math.round(scene.height / 2));
@@ -153,6 +153,12 @@ export async function sunClock() {
   if ( !obstacle ) return false;
   const { value, max } = obstacle.system.clock;
   if ( obstacle.flags?.[SCOPE]?.resolved ) return false;
+  // The system ticks the clock, runs the round's Setback and resolves a lost Scene (firing possibilities.sceneResolved).
+  if ( typeof sys().advanceClock === "function" ) {
+    await sys().advanceClock(obstacle);
+    await placeSun(obstacle.system.clock.value, max);
+    return true;
+  }
   const next = Math.min(max, value + 1);
   await obstacle.update({ "system.clock.value": next });
   await placeSun(next, max);
@@ -162,11 +168,14 @@ export async function sunClock() {
 }
 
 /** The Scene ends. */
-export async function resolveLight(obstacle, won) {
+export async function resolveLight(obstacle, won, { fromSystem=false }={}) {
   if ( obstacle.flags?.[SCOPE]?.resolved ) return false;
   await obstacle.update({ [`flags.${SCOPE}.resolved`]: won ? "won" : "lost" });
-  const html = won ? obstacle.system.outcome?.win : obstacle.system.outcome?.lose;
-  await postCard(won ? "Into the light" : "The light is gone", html ?? "");
+  // The system's resolveScene has already posted the outcome; post it here only when this module resolved it.
+  if ( !fromSystem ) {
+    const html = won ? obstacle.system.outcome?.win : obstacle.system.outcome?.lose;
+    await postCard(won ? "Into the light" : "The light is gone", html ?? "");
+  }
   if ( won ) {
     const gloam = sceneFor("grate_chamber")?.tokens.filter(t => t.actorId === actorFor("gloam")?.id) ?? [];
     for ( const t of gloam ) await t.update({ hidden: true });
@@ -185,7 +194,9 @@ export async function onCombatRound(combat, changes) {
   if ( !isLeadGM() || !("round" in changes) ) return;
   const f = combat.flags?.[SCOPE] ?? {};
   if ( f.gloam && (combat.round > CONTENT.config.gloam.rebuffRounds) ) await gloamRebuff();
-  if ( f.light && (combat.round > 1) ) await sunClock();
+  // The system ticks the clock itself when the Scene is in the combat tracker; then only the light follows (below).
+  const sceneInCombat = combat.combatants?.some?.(c => c.actorId === CONTENT.ids.actors.into_the_light);
+  if ( f.light && (combat.round > 1) && !sceneInCombat ) await sunClock();
 }
 
 /** The Old Gnaw fight ends: tick the step. */
@@ -197,11 +208,18 @@ export async function onCombatEnd(combat) {
 /** Resistance reaches 0: the Scene is won (also from the system's sceneResolved hook). */
 export async function onObstacleUpdate(actor) {
   if ( !isLeadGM() || (actor.id !== CONTENT.ids.actors.into_the_light) ) return;
+  // However the clock moved (this module, the sheet's Tick button, or the combat tracker), the sunlight follows it.
+  const { value, max } = actor.system?.clock ?? {};
+  if ( max ) await placeSun(value, max);
+  if ( typeof sys().resolveScene === "function" ) return;  // the system resolves it and fires possibilities.sceneResolved
   if ( (actor.system?.resistance?.value ?? 1) <= 0 ) await resolveLight(actor, true);
 }
 
-/** A Setback with gearDamage marks one of the acting hero's loaners. */
+/**
+ * A Setback with gearDamage marks one of the acting hero's loaners. The system's triggerSetback already does that
+ * (and then fires this hook), so this only steps in when the Setback came from elsewhere without the system's handling.
+ */
 export async function onSetback(obstacle, hero, setback) {
-  if ( !isLeadGM() || !setback?.gearDamage || !hero ) return;
+  if ( !isLeadGM() || !setback?.gearDamage || !hero || (typeof sys().triggerSetback === "function") ) return;
   await damageLoaner(hero);
 }

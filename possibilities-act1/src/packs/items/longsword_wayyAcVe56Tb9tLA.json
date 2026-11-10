@@ -15,7 +15,10 @@
     "die": "d8",
     "range": "engaged",
     "traits": "versatile",
-    "equipped": false
+    "equipped": false,
+    "damage": "",
+    "improvised": false,
+    "tools": ""
   },
   "effects": [],
   "folder": null,

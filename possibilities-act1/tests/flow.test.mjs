@@ -49,8 +49,9 @@ test("all 14 steps play in order", async () => {
     const blade = a.items.find(i => i.flags["possibilities-act1"]?.key === "loaner_blade");
     assert.ok(blade?.system.loaned && blade.system.equipped, `${a.name} has an equipped loaned blade`);
   }
-  assert.ok(actor("enkrid").items.some(i => i.flags["possibilities-act1"]?.key === "charge_lamp"));
-  assert.ok(actor("protag3").items.some(i => i.flags["possibilities-act1"]?.key === "pry_bar"));
+  const bar = actor("enkrid").items.find(i => i.flags["possibilities-act1"]?.key === "pry_bar");
+  assert.ok(bar?.system.improvised && (bar.system.tools === "Tinker"), "the Tinker's pry bar is an improvised tool he uses at d6");
+  assert.ok(actor("protag2").items.some(i => i.flags["possibilities-act1"]?.key === "charge_lamp"));
   assert.ok(actor("enkrid").items.some(i => i.flags["possibilities-act1"]?.key === "pocket_watch"));
   assert.ok(ticked("commission"));
 

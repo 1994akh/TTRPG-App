@@ -1,7 +1,7 @@
 /** scripts/lib/generated.mjs: the data the runtime needs, written by the build (do not edit by hand). */
 import fs from "node:fs";
 import path from "node:path";
-import { byId, LORE, resolve, speakerName } from "./lore.mjs";
+import { byId, LORE, PROLOGUE_DRAFT, resolve, speakerName } from "./lore.mjs";
 import { IDS, MAPS } from "./keys.mjs";
 import { HANDOUTS, STEPS } from "./journals.mjs";
 import { MACROS } from "./macros.mjs";
@@ -14,6 +14,8 @@ export function generatedContent({ actors, items, scenes }) {
     lines: (s.script ?? []).map(l => ("note" in l ? { note: resolve(l.note) }
       : ("choice" in l ? { choice: resolve(l.choice) } : { speaker: l.speaker, name: speakerName(l.speaker), text: resolve(l.text) })))
   }]));
+  // The user's own prologue prose is read first, as narration.
+  if ( PROLOGUE_DRAFT.length ) scripts.ch1_prologue.lines.unshift(...PROLOGUE_DRAFT.map(t => ({ speaker: "narrator", name: "Narrator", text: t, draft: true })));
   const questions = Object.entries(byId.scenes.ch1_questions.sections).map(([q, lines], i) => ({
     key: `q${i + 1}`, question: resolve(q.replace(/^Q:\s*/, "")), answer: [].concat(lines).map(resolve).join(" ")
   }));

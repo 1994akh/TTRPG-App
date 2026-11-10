@@ -4,7 +4,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
-import { LORE, resolve } from "./lore.mjs";
+import { LORE, PROLOGUE_DRAFT, resolve } from "./lore.mjs";
 import { esc, ROOT } from "./util.mjs";
 import { STEPS } from "./journals.mjs";
 
@@ -73,6 +73,7 @@ for ( const s of LORE.scenes ) {
   for ( const l of s.script ?? [] ) want(l.text ?? l.note ?? l.choice, s.id);
   for ( const [, ls] of Object.entries(s.sections ?? {}) ) for ( const l of [].concat(ls) ) want(l, s.id);
 }
+for ( const t of PROLOGUE_DRAFT ) want(t, "prologue_draft.txt");
 for ( const kind of ["characters", "places", "terms"] ) for ( const e of LORE[kind] ) for ( const t of e.text ?? [] ) want(t, e.id);
 
 // Unresolved tokens (anything but {pc}).

@@ -6,7 +6,7 @@
  * for module actions (the runtime's enricher turns them into buttons). {pc} stays in the text; the runtime enricher
  * shows the player character's name.
  */
-import { byId, isDraft, LORE, resolve, speakerName, titleCase } from "./lore.mjs";
+import { byId, isDraft, LORE, PROLOGUE_DRAFT, resolve, speakerName, titleCase } from "./lore.mjs";
 import { IDS, MAPS, pageUuid } from "./keys.mjs";
 import { assetOr, esc, OWNERSHIP, readJSON, stats, SCOPE } from "./util.mjs";
 
@@ -147,6 +147,10 @@ function act1Journal(folder) {
         ${family ? `<p class="pa1-muted">Play this intro if {pc} is of the ${family} family.</p>` : ""}
         <div class="pa1-tools">${run(`readScene:${sceneId}`, "Read it aloud in chat")} ${run(`writeBeat:${step.key}`, "Write this beat")} ${tools}</div>
         ${map || actors ? `<p class="pa1-muted">${map}${map && actors ? " · " : ""}${actors}</p>` : ""}
+        ${sceneId === "ch1_prologue" && PROLOGUE_DRAFT.length ? `<h2>From your draft</h2>
+          <p>${WRITTEN} <span class="pa1-badge pa1-yours">Your draft (unfinished)</span></p>
+          <div class="pa1-yourdraft">${PROLOGUE_DRAFT.map(t => `<blockquote class="pa1-line pa1-readaloud pa1-prose" data-speaker="narrator">${esc(t)}</blockquote>`).join("")}</div>
+          <p class="pa1-muted">Read it first; the drafted script below picks up from it.</p>` : ""}
         <h2>The scene</h2>
         ${(s.text ?? []).map(p).join("")}
         ${sceneId === "ch1_prologue" ? `<p class="pa1-muted">The watch's engraving is yours to write: @UUID[Actor.${IDS.actor("enkrid")}]{edit the pocket watch on Enkrid}. ${esc(WATCH.engraving)}</p>` : ""}

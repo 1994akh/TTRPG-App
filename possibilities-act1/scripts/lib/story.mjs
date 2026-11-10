@@ -90,13 +90,18 @@ export async function makeCharacter() {
     actor?.sheet?.render({ force: true });
   }
   if ( !actor ) return false;
-  const why = await DialogV2().prompt({
+  const why = actor.system?.details?.drive ? null : await DialogV2().prompt({
     window: { title: `${actor.name}: why I need a ship` },
     content: "<label>One line, in their words. The journal prompts come back to it. <input type=\"text\" name=\"why\" autofocus></label>",
     ok: { label: "Save", callback: (e, button) => button.form.elements.why.value.trim() },
     rejectClose: false
   });
   if ( why ) await actor.update({ "system.details.drive": why });
+  // Until you have art: the default silhouette portrait and token (one image each, swap them on the actor).
+  if ( !actor.img || /mystery-man/.test(actor.img) ) {
+    await actor.update({ img: `modules/${MODULE_ID}/assets/portraits/pc_default.webp`,
+      "prototypeToken.texture.src": `modules/${MODULE_ID}/assets/tokens/pc_default.webp` });
+  }
   const start = CONTENT.config.pcStart;
   await actor.update({ [`flags.${SCOPE}.key`]: "pc", "system.story.role": "pc", "system.currency.gp": start.gp,
     "system.currency.sp": start.sp, "system.currency.cp": start.cp });
@@ -430,7 +435,7 @@ export async function resetAct({ confirm=true }={}) {
     if ( loaners.length ) await me.deleteEmbeddedDocuments("Item", loaners);
   }
   const light = actorFor("into_the_light");
-  if ( light ) await light.update({ "system.resistance.value": light.system.resistance.max, "system.clock.value": 0, [`flags.${SCOPE}.resolved`]: null });
+  if ( light ) await light.update({ "system.status": "active", "system.resistance.value": light.system.resistance.max, "system.clock.value": 0, [`flags.${SCOPE}.resolved`]: null });
   for ( const c of game.combats.filter(x => x.flags?.[SCOPE]) ) await c.delete();
   for ( const key of ["beats", "logged"] ) await setSetting(key, {});
   await setSetting("purse", { applied: {}, spent: 0, extra: 0, bound: false });

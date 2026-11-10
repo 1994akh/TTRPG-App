@@ -126,7 +126,8 @@ export const CONTENT = {
     "A line to remember."
    ],
    "gmNotes": [
-    "Play it as narration on a sepia page, with one or two choices for young Enkrid and no dice, then go back to the steps."
+    "Play it as narration on a sepia page, with one or two choices for young Enkrid and no dice, then go back to the steps.",
+    "Staging from your draft: at the communal fire, a lone man with a long walking staff tells a story to about thirty villagers, thumping the staff in time with his words, while young Enkrid hides behind a hovel."
    ]
   },
   {
@@ -806,6 +807,42 @@ export const CONTENT = {
    "name": "Prologue: the three legends",
    "style": "flashback",
    "lines": [
+    {
+     "speaker": "narrator",
+     "name": "Narrator",
+     "text": "Prologue-",
+     "draft": true
+    },
+    {
+     "speaker": "narrator",
+     "name": "Narrator",
+     "text": "Enkrid stooped behind the hovels edge, tightly hugging his knees to his chest, body aching from . Hidden by the darkness of the moonless night and the shadows cast by the communal fire at center of the small so called village, the small child shivered silent. The child did not shiver due to the warm humid air of the mid-summer night nor the soft dry breeze that rolled off of the grassy planes that stretched seemingly with no end. Fear drove him, his hear raced at every noise.",
+     "draft": true
+    },
+    {
+     "speaker": "narrator",
+     "name": "Narrator",
+     "text": "N the largest or tallest of the village’s children, nor did Enkrid ever expect he would be, his wiry frame showed only the smallest possibility of blooming into height or muscle, his greatest wish. Even while considering his long standing gripe against the gods, spirits or whomever had cursed him with his frame, he knew that his future size was the least of his concerns at the moment. His muscles ached from making himself small to hide, yet he still risked it.",
+     "draft": true
+    },
+    {
+     "speaker": "narrator",
+     "name": "Narrator",
+     "text": "Paces away, people of all ages, seemingly the entire village sat, laid, or silently stood to listen to a lone man standing near the fire, central for all to see, around 30 people. Painted in by the flickering fire, the people of the village looked Erie in the fright Enkrid thought to himself. The orange of the small fire discoloring the villagers grey and green stone like skin gave each a nightmarish look, only quickening his heart in fear as he peered from his hiding place.",
+     "draft": true
+    },
+    {
+     "speaker": "narrator",
+     "name": "Narrator",
+     "text": "The figure in the center gesticulated with one hand and rhythmically thumped his long walking staff in time with his words.",
+     "draft": true
+    },
+    {
+     "speaker": "narrator",
+     "name": "Narrator",
+     "text": "Even after another round of torture by the other children of their nameless village, why would he brave being seen",
+     "draft": true
+    },
     {
      "note": "Flashback filter. Night in the village with no name. A small Enkrid, maybe nine, curled on the ground behind a hovel."
     },
@@ -1595,7 +1632,10 @@ export const CONTENT = {
     "die": "d6",
     "range": "engaged",
     "traits": "basic",
-    "equipped": false
+    "equipped": false,
+    "damage": "",
+    "improvised": false,
+    "tools": ""
    },
    "flags": {
     "possibilities-act1": {
@@ -1644,8 +1684,11 @@ export const CONTENT = {
     "description": "<p>Iron, a yard long, bent at one end.</p>",
     "die": "d4",
     "range": "engaged",
-    "traits": "improvised: d4 and -2 to hit, unless your profession uses the tool (a Tinker uses it at d6, no penalty)",
-    "equipped": false
+    "traits": "improvised: d4 at -2, unless your profession uses the tool (a Tinker uses it at d6, no penalty)",
+    "equipped": false,
+    "damage": "",
+    "improvised": true,
+    "tools": "Tinker"
    },
    "flags": {
     "possibilities-act1": {
@@ -1745,7 +1788,10 @@ export const CONTENT = {
     "die": "d4",
     "range": "engaged",
     "traits": "light",
-    "equipped": false
+    "equipped": false,
+    "damage": "",
+    "improvised": false,
+    "tools": ""
    },
    "flags": {
     "possibilities-act1": {
@@ -1867,7 +1913,10 @@ export const CONTENT = {
     "die": "d6",
     "range": "engaged",
     "traits": "two-handed",
-    "equipped": false
+    "equipped": false,
+    "damage": "",
+    "improvised": false,
+    "tools": ""
    },
    "flags": {
     "possibilities-act1": {
@@ -1965,7 +2014,10 @@ export const CONTENT = {
     "die": "d4",
     "range": "engaged",
     "traits": "light",
-    "equipped": false
+    "equipped": false,
+    "damage": "",
+    "improvised": false,
+    "tools": ""
    },
    "flags": {
     "possibilities-act1": {
@@ -2015,7 +2067,10 @@ export const CONTENT = {
     "die": "d8",
     "range": "engaged",
     "traits": "versatile",
-    "equipped": false
+    "equipped": false,
+    "damage": "",
+    "improvised": false,
+    "tools": ""
    },
    "flags": {
     "possibilities-act1": {
@@ -2040,7 +2095,10 @@ export const CONTENT = {
     "die": "d6",
     "range": "engaged",
     "traits": "reach to Near",
-    "equipped": false
+    "equipped": false,
+    "damage": "",
+    "improvised": false,
+    "tools": ""
    },
    "flags": {
     "possibilities-act1": {
@@ -2065,7 +2123,10 @@ export const CONTENT = {
     "die": "d6",
     "range": "far",
     "traits": "reload 1 action",
-    "equipped": false
+    "equipped": false,
+    "damage": "",
+    "improvised": false,
+    "tools": ""
    },
    "flags": {
     "possibilities-act1": {
@@ -2090,7 +2151,10 @@ export const CONTENT = {
     "die": "d8",
     "range": "far",
     "traits": "needs a charge cell per 6 shots",
-    "equipped": false
+    "equipped": false,
+    "damage": "",
+    "improvised": false,
+    "tools": ""
    },
    "flags": {
     "possibilities-act1": {

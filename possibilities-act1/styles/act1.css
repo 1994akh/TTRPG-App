@@ -89,3 +89,5 @@ blockquote.pa1-line { margin: .35em 0; padding: .35em .8em; border-left: 3px sol
 .pa1-day { font: .72em system-ui, sans-serif; opacity: .7; margin-left: .3em; }
 .pa1-storytext { width: 100%; font-family: "PA1 Garamond", Georgia, serif; }
 .pa1-draftchoices { margin-left: 1.2em; }
+.pa1-yours { color: #6a4fa3; }
+.pa1-yourdraft blockquote.pa1-prose { border-left-color: #6a4fa3; font-style: normal; }

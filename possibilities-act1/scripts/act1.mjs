@@ -107,7 +107,7 @@ Hooks.on("updateActor", actor => {
 });
 // The Possibilities system's own Scene hooks (see possibilities-system/docs/SPEC.md).
 Hooks.on("possibilities.sceneResolved", (obstacle, won) => {
-  if ( obstacle?.id === CONTENT.ids.actors.into_the_light ) resolveLight(obstacle, won);
+  if ( obstacle?.id === CONTENT.ids.actors.into_the_light ) resolveLight(obstacle, won, { fromSystem: true });
 });
 Hooks.on("possibilities.setback", (obstacle, hero, setback) => {
   if ( obstacle?.id === CONTENT.ids.actors.into_the_light ) onSetback(obstacle, hero, setback);

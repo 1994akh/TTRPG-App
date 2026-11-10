@@ -15,7 +15,10 @@
     "die": "d6",
     "range": "engaged",
     "traits": "basic",
-    "equipped": false
+    "equipped": false,
+    "damage": "",
+    "improvised": false,
+    "tools": ""
   },
   "effects": [],
   "folder": null,

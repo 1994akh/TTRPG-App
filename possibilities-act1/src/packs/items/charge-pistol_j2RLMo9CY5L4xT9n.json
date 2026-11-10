@@ -15,7 +15,10 @@
     "die": "d8",
     "range": "far",
     "traits": "needs a charge cell per 6 shots",
-    "equipped": false
+    "equipped": false,
+    "damage": "",
+    "improvised": false,
+    "tools": ""
   },
   "effects": [],
   "folder": null,
