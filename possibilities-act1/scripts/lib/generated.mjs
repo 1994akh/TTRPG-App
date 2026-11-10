@@ -17,7 +17,16 @@ export const CONTENT = {
     "makeCharacter"
    ],
    "systems": "The creator (race, profession, skills, looks, name; no class yet). One intro by race family, played on the Coast Road.",
-   "prompt": "Who is {pc}? Where did they come from, what did they leave behind, and what do they want from Ashford?"
+   "day": 1,
+   "prompts": [
+    "What did {pc} say when the gate let them through?",
+    "What does {pc} leave behind, and why do they need a ship?",
+    "A line to remember."
+   ],
+   "gmNotes": [
+    "Act 1 covers four days: day 1 arrive and take the job; day 2 the Undercourses, the Gloam at noon; day 3 paid and bound; day 4 morning, the missed ship.",
+    "Fog rolls in off the brume every night and burns off by mid-morning everywhere except Refinery Row, which stays clear and warm."
+   ]
   },
   {
    "key": "broker",
@@ -37,7 +46,13 @@ export const CONTENT = {
     "addTrio"
    ],
    "systems": "Dialogue with one choice. The trio join the party here.",
-   "prompt": "What did {pc} tell the broker they came for? What did they make of the other three?"
+   "day": 1,
+   "prompts": [
+    "What did {pc} tell the broker they came for?",
+    "What changed for {pc}, or between the four of them?",
+    "A line to remember."
+   ],
+   "gmNotes": []
   },
   {
    "key": "questions",
@@ -54,7 +69,13 @@ export const CONTENT = {
     "askBroker"
    ],
    "systems": "The broker's question menu: show any answer to the table.",
-   "prompt": "Which question did {pc} ask first, and which answer stayed with them?"
+   "day": 1,
+   "prompts": [
+    "Which question did {pc} ask first?",
+    "What changed for {pc}, or between the four of them?",
+    "A line to remember."
+   ],
+   "gmNotes": []
   },
   {
    "key": "commission",
@@ -71,7 +92,16 @@ export const CONTENT = {
     "giveLoaners"
    ],
    "systems": "Loaned gear (marked Loaned). The broker's board opens for filler after the act.",
-   "prompt": "What did the four of them say to each other on the Exchange steps?"
+   "day": 1,
+   "prompts": [
+    "What did {pc} say on the Exchange steps?",
+    "What changed for {pc}, or between the four of them?",
+    "A line to remember."
+   ],
+   "gmNotes": [
+    "Petra saw grey fog moving against the wind out of the street grates at night, and a light under the street where no one should be. That is why she went down.",
+    "The broker suspected from the sellswords' silence and Petra's story, and sent the cheapest crew she could find. Not evil, a broker."
+   ]
   },
   {
    "key": "prologue",
@@ -89,7 +119,15 @@ export const CONTENT = {
    ],
    "tools": [],
    "systems": "A flashback: read it aloud, or play young Enkrid. No saves, nothing at stake.",
-   "prompt": "What does the pocket watch's engraving say? How did {pc} react to Enkrid's story?"
+   "day": 1,
+   "prompts": [
+    "What did {pc} say to Enkrid after his story?",
+    "What changed for {pc}, or between the four of them?",
+    "A line to remember."
+   ],
+   "gmNotes": [
+    "Play it as narration on a sepia page, with one or two choices for young Enkrid and no dice, then go back to the steps."
+   ]
   },
   {
    "key": "sewer",
@@ -106,7 +144,15 @@ export const CONTENT = {
     "revealHandout"
    ],
    "systems": "The first dungeon. The sellswords' journal is a clue item.",
-   "prompt": "What did {pc} notice first down there? What did the sellswords' journal make them think?"
+   "day": 2,
+   "prompts": [
+    "What did {pc} say over the sellswords' bodies?",
+    "What changed for {pc}, or between the four of them?",
+    "A line to remember."
+   ],
+   "gmNotes": [
+    "The three sellswords wear a Coldwater crew mark (a gull over a knotted net), so Coldwater can come back later. Their names are in the handout."
+   ]
   },
   {
    "key": "gnaw",
@@ -125,7 +171,15 @@ export const CONTENT = {
     "startGnaw"
    ],
    "systems": "The first real fight, Unclassed: Strike, Aid, Stabilise and items. Three actions a turn; -4 / -8 on the second and third Strike.",
-   "prompt": "How did the fight with Old Gnaw go for {pc}? Who stood beside whom?"
+   "day": 2,
+   "prompts": [
+    "What did {pc} shout in the fight with Old Gnaw?",
+    "What changed for {pc}, or between the four of them?",
+    "A line to remember."
+   ],
+   "gmNotes": [
+    "Fair but tense: Old Gnaw can drop one hero if the party is careless. Nobody dies in Act 1 unless the Undertaking setting is on."
+   ]
   },
   {
    "key": "gloam",
@@ -144,7 +198,16 @@ export const CONTENT = {
     "gloamRebuff"
    ],
    "systems": "A fight they can't win: after two rounds the Gloam throws the party back to the doorway. Nobody dies.",
-   "prompt": "What did {pc} see when everything they hit 'just wasn't there'?"
+   "day": 2,
+   "prompts": [
+    "What did {pc} say when everything they hit 'just wasn't there'?",
+    "What changed for {pc}, or between the four of them?",
+    "A line to remember."
+   ],
+   "gmNotes": [
+    "What the Gloam is: brume run-off from the refinery that pooled in the dark for forty years until it started wanting. Sunlight fixes it and it falls apart. Nobody in Ashford wants that known.",
+    "Play it uncanny, not gory: it moves wrong, sounds are muffled near it, the lamps don't light it, and it is never seen clearly until the sun holds it."
+   ]
   },
   {
    "key": "light",
@@ -164,7 +227,16 @@ export const CONTENT = {
     "sunClock"
    ],
    "systems": "A Scene: Resistance, approaches (Full / Half / None), Setbacks that damage the loaners, and the sun clock.",
-   "prompt": "Whose idea worked? What broke? What did {pc} say to Petra?"
+   "day": 2,
+   "prompts": [
+    "What did {pc} say to Petra?",
+    "What changed for {pc}, or between the four of them?",
+    "A line to remember."
+   ],
+   "gmNotes": [
+    "Setbacks hit on a critical failure always, on a failure when the approach says so, and once at the end of every round the sun clock moves.",
+    "Profession XP comes from Scenes: this one counts for every hero who made an attempt."
+   ]
   },
   {
    "key": "fee",
@@ -182,7 +254,15 @@ export const CONTENT = {
     "keepLoaners"
    ],
    "systems": "The purse: the reward, the bill for the loaners, the danger fee. The loaners become the party's own.",
-   "prompt": "Who pressed the broker hardest for the danger fee, and how?"
+   "day": 3,
+   "prompts": [
+    "What did {pc} say to press the broker for the danger fee?",
+    "What changed for {pc}, or between the four of them?",
+    "A line to remember."
+   ],
+   "gmNotes": [
+    "Hollis Tarrant pays in full and in public, so Refinery Row sees he is generous, and asks them never to mention where Petra was found."
+   ]
   },
   {
    "key": "binding",
@@ -199,7 +279,16 @@ export const CONTENT = {
     "bindAll"
    ],
    "systems": "The PC picks one of the twelve F-grade classes; the trio take theirs from the story. Everyone becomes F-Novice.",
-   "prompt": "Which binding did {pc} choose, and why that one?"
+   "day": 3,
+   "prompts": [
+    "What did {pc} say when the binder asked them to choose?",
+    "What changed for {pc}, or between the four of them?",
+    "A line to remember."
+   ],
+   "gmNotes": [
+    "The brume goes in through the hands and chest; everything goes white and too-sharp for a moment; it leaves a faint grey vein mark, the binding mark, that darkens with each grade.",
+    "Binding hits fae harder: that is why Enkrid collapses."
+   ]
   },
   {
    "key": "collapse",
@@ -216,7 +305,13 @@ export const CONTENT = {
     "enkridCollapses"
    ],
    "systems": "Enkrid is down (a story condition) until the inn.",
-   "prompt": "What did binding feel like for {pc}?"
+   "day": 3,
+   "prompts": [
+    "What did {pc} say while they carried Enkrid?",
+    "What changed for {pc}, or between the four of them?",
+    "A line to remember."
+   ],
+   "gmNotes": []
   },
   {
    "key": "inn",
@@ -230,10 +325,19 @@ export const CONTENT = {
     "innkeeper"
    ],
    "tools": [
-    "innRest"
+    "innRest",
+    "revealHandout"
    ],
    "systems": "A long rest at the inn. Optional talks with each of the trio.",
-   "prompt": "Who did {pc} talk to before sleeping, and what did they learn about them?"
+   "day": 3,
+   "prompts": [
+    "What did {pc} say to each of the trio before sleeping?",
+    "What changed for {pc}, or between the four of them?",
+    "A line to remember."
+   ],
+   "gmNotes": [
+    "The legends' journal page 1 is here: Dunmore kept a page Captain Varr left with a bar tab. Show it with the Show a handout tool; you write its text."
+   ]
   },
   {
    "key": "ship",
@@ -248,10 +352,20 @@ export const CONTENT = {
     "noble"
    ],
    "tools": [
-    "endAct"
+    "endAct",
+    "milestone"
    ],
    "systems": "The end of Act 1: the title card, then the session log.",
-   "prompt": "Watching the Gilded Tern go: what does {pc} want now?"
+   "day": 4,
+   "prompts": [
+    "What did {pc} say as the Gilded Tern slipped its lines?",
+    "Write the end of Act 1: where are the four of them now, and what do they want next?",
+    "A line to remember."
+   ],
+   "gmNotes": [
+    "Rourke is charming and reasonable on the quay. The one detail that sticks: his crew is armed like mercenaries, not sailors. It pays off on island 3.",
+    "After the last line: a scruffy captain on the next berth has been watching them. Then the title card, then the milestone."
+   ]
   }
  ],
  "config": {
@@ -307,7 +421,63 @@ export const CONTENT = {
    "Medium",
    "Theorist"
   ],
-  "fClassesNote": "Fallback list for the Binding when the system API is missing; read from the rules data at authoring time."
+  "fClassesNote": "Fallback list for the Binding when the system API is missing; read from the rules data at authoring time.",
+  "coin": {
+   "cp": "copper bits",
+   "sp": "silver marks",
+   "gp": "gold crowns",
+   "pp": "platinum charters"
+  },
+  "playlists": [
+   "Ashford",
+   "Sallow's Exchange",
+   "The Undercourses",
+   "The Gloam",
+   "The Binding House",
+   "The Lantern and Lee",
+   "The Long Quay"
+  ],
+  "oracle": {
+   "odds": {
+    "likely": 4,
+    "even": 0,
+    "unlikely": -4
+   },
+   "bands": [
+    [
+     3,
+     "No, and"
+    ],
+    [
+     7,
+     "No"
+    ],
+    [
+     10,
+     "No, but"
+    ],
+    [
+     13,
+     "Yes, but"
+    ],
+    [
+     17,
+     "Yes"
+    ],
+    [
+     99,
+     "Yes, and"
+    ]
+   ],
+   "note": "d20 + odds; at or under each band's number."
+  },
+  "milestone": {
+   "profession": "Apprentice",
+   "note": "Draft: the end-of-Act-1 milestone raises each hero's profession one rank (Novice to Apprentice)."
+  },
+  "sideWork": {
+   "default": false
+  }
  },
  "scripts": {
   "ch1_intro_founding": {
@@ -1160,6 +1330,11 @@ export const CONTENT = {
    "key": "binding_receipt",
    "title": "The binding receipt",
    "step": "binding"
+  },
+  {
+   "key": "legends_page_1",
+   "title": "The legends' journal, page 1",
+   "step": "inn"
   }
  ],
  "intros": {
@@ -1287,7 +1462,8 @@ export const CONTENT = {
     "commission": "80Tp5bPrBpumgeU5",
     "sellswords_journal": "JBDwPel14i7Xc1mv",
     "loaner_bill": "iy4F8VRYxJGowJvO",
-    "binding_receipt": "oXiK5MhOgsV7fMCX"
+    "binding_receipt": "oXiK5MhOgsV7fMCX",
+    "legends_page_1": "PTFXcfn7SDKV6jOX"
    },
    "story": {
     "beat_pc": "3LwpfnxnYr5wvl4c",
@@ -1380,7 +1556,7 @@ export const CONTENT = {
    "sunClock": "lzcaamptoehuDWha",
    "bindAll": "tMmmZkPVfnQcgqKz",
    "sessionLog": "MXA7gnlzveikpWIv",
-   "brokerBoard": "GC9u2qkhqudvpqA5",
+   "oracle": "tqaDOkI6d9oWhaiM",
    "openStory": "1j3XnVCcrLTzFDeY",
    "giveLoaners": "y9Fkt8zQfP4m02Bu",
    "keepLoaners": "Hm7QCuIcSpq807VJ",
@@ -1392,6 +1568,10 @@ export const CONTENT = {
    "innRest": "9msOnk6mTOhxQviw",
    "endAct": "C3RzzejzYaUovfyg",
    "askBroker": "LXXO9fp7Bq0e6ot5",
+   "copyStory": "Bj9qOeJFropdozD0",
+   "milestone": "2pqACumby2aPzqfa",
+   "brokerBoard": "GC9u2qkhqudvpqA5",
+   "ratCull": "pT3kY569q8VUIwpN",
    "resetAct": "lLN9ux8RYQhZtW2K"
   },
   "table": "jK9lSfN5uS8Xo8oW",
@@ -1450,7 +1630,7 @@ export const CONTENT = {
   },
   "pry_bar": {
    "name": "Loaned pry bar",
-   "type": "gear",
+   "type": "weapon",
    "img": "icons/tools/hand/pickaxe-steel-white.webp",
    "system": {
     "grade": "F",
@@ -1461,8 +1641,10 @@ export const CONTENT = {
     "loaned": true,
     "condition": "intact",
     "description": "<p>Iron, a yard long, bent at one end.</p>",
-    "quantity": 1,
-    "keyItem": false
+    "die": "d4",
+    "range": "engaged",
+    "traits": "improvised: d4 and -2 to hit, unless your profession uses the tool (a Tinker uses it at d6, no penalty)",
+    "equipped": false
    },
    "flags": {
     "possibilities-act1": {
@@ -1484,7 +1666,7 @@ export const CONTENT = {
     },
     "loaned": false,
     "condition": "intact",
-    "description": "<p>Crystal-faced and engraved: a token of identity and remembrance of Enkrid&#39;s goals. The inventor leaves it with him before the legends depart.</p>",
+    "description": "<p>Crystal-faced and engraved: a token of identity and remembrance of Enkrid&#39;s goals. The inventor leaves it with him before the legends depart. The engraving reads: ____________ (yours to write: edit this item&#39;s description once, and the flashback page points here).</p>",
     "quantity": 1,
     "keyItem": true
    },
@@ -2153,10 +2335,10 @@ export const CONTENT = {
    "help": "Adds today's entry to My Story: the steps you played since the last entry."
   },
   {
-   "fn": "brokerBoard",
-   "name": "The broker's board",
+   "fn": "oracle",
+   "name": "Ask the oracle",
    "slot": 9,
-   "help": "Draws an F-grade commission for after the act."
+   "help": "Solo play: a yes/no question, likely / even / unlikely; Yes, and / Yes / Yes, but / No, but / No / No, and."
   },
   {
    "fn": "openStory",
@@ -2223,6 +2405,30 @@ export const CONTENT = {
    "name": "The broker's questions",
    "slot": null,
    "help": "Pick a question; the broker's answer is read to chat."
+  },
+  {
+   "fn": "copyStory",
+   "name": "Copy my story",
+   "slot": null,
+   "help": "My Story as clean text, on the clipboard and in a window, ready to paste into Word."
+  },
+  {
+   "fn": "milestone",
+   "name": "Apply the milestone",
+   "slot": null,
+   "help": "The end of Act 1: every hero's profession goes up a rank (Draft)."
+  },
+  {
+   "fn": "brokerBoard",
+   "name": "The broker's board",
+   "slot": null,
+   "help": "Side work: draws an F-grade commission (optional)."
+  },
+  {
+   "fn": "ratCull",
+   "name": "Rat cull",
+   "slot": null,
+   "help": "Side work: one rat swarm in the outer Undercourses (optional)."
   },
   {
    "fn": "resetAct",

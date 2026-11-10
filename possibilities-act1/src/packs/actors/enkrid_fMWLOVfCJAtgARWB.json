@@ -2,7 +2,7 @@
   "_id": "fMWLOVfCJAtgARWB",
   "name": "Enkrid",
   "type": "hero",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "modules/possibilities-act1/assets/portraits/enkrid.webp",
   "system": {
     "race": "Wendlin",
     "raceGrade": "F",
@@ -23,7 +23,7 @@
       "temp": 0
     },
     "points": {
-      "value": 0
+      "value": 3
     },
     "dying": {
       "value": 0,
@@ -107,7 +107,7 @@
         },
         "loaned": false,
         "condition": "intact",
-        "description": "<p>Crystal-faced and engraved: a token of identity and remembrance of Enkrid&#39;s goals. The inventor leaves it with him before the legends depart.</p>",
+        "description": "<p>Crystal-faced and engraved: a token of identity and remembrance of Enkrid&#39;s goals. The inventor leaves it with him before the legends depart. The engraving reads: ____________ (yours to write: edit this item&#39;s description once, and the flashback page points here).</p>",
         "quantity": 1,
         "keyItem": true
       },
@@ -152,7 +152,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "icons/svg/mystery-man.svg",
+      "src": "modules/possibilities-act1/assets/tokens/enkrid.webp",
       "scaleX": 1,
       "scaleY": 1
     },

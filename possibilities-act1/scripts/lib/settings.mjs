@@ -3,7 +3,7 @@ import { MODULE_ID } from "./util.mjs";
 
 export const DEFAULTS = {
   pcName: "", pcActor: "", trioJoined: false, beats: {}, logged: {}, purse: { applied: {}, spent: 0, extra: 0, bound: false },
-  welcomed: false, gloamCombat: "", lightCombat: ""
+  welcomed: false, gloamCombat: "", lightCombat: "", sideWork: false
 };
 
 export function registerSettings({ onChange }) {
@@ -21,4 +21,5 @@ export function registerSettings({ onChange }) {
   world("welcomed", Boolean);
   world("gloamCombat", String);
   world("lightCombat", String);
+  world("sideWork", Boolean, { name: "Show side work in the Director", hint: "The broker's board and the outer Undercourses rat cull (optional).", config: true });
 }

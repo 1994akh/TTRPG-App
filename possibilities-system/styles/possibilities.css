@@ -1,0 +1,159 @@
+/* Possibilities: Dungeonpunk / Gaslit fantasy. Soot-dark paper, brass and verdigris, gaslight amber. */
+@font-face { font-family: "Poss Fell"; src: url("../fonts/IMFellEnglish-Regular.ttf") format("truetype"); font-style: normal; font-display: swap; }
+@font-face { font-family: "Poss Fell"; src: url("../fonts/IMFellEnglish-Italic.ttf") format("truetype"); font-style: italic; font-display: swap; }
+@font-face { font-family: "Poss Garamond"; src: url("../fonts/EBGaramond-Variable.ttf") format("truetype"); font-weight: 400 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Poss Garamond"; src: url("../fonts/EBGaramond-Italic-Variable.ttf") format("truetype"); font-weight: 400 800; font-style: italic; font-display: swap; }
+
+.possibilities, .poss-card, .poss-dialog {
+  --poss-paper: #ece3cf; --poss-paper-2: #e2d6bb; --poss-ink: #22190f; --poss-muted: #6b5a44; --poss-line: #b9a47f;
+  --poss-brass: #8a6420; --poss-brass-2: #b8892f; --poss-verdigris: #2f7a6b; --poss-amber: #c8781c; --poss-blood: #8c2a1c;
+  --poss-soot: #2a2420; --poss-on-brass: #fff7e6;
+  --poss-display: "Poss Fell", "IM Fell English", Georgia, serif;
+  --poss-body: "Poss Garamond", "EB Garamond", Georgia, serif;
+}
+.theme-dark .possibilities, .possibilities.theme-dark, .theme-dark .poss-card, .theme-dark .poss-dialog, body.theme-dark .poss-card {
+  --poss-paper: #1c1814; --poss-paper-2: #26201a; --poss-ink: #efe4cc; --poss-muted: #b4a284; --poss-line: #4a3e30;
+  --poss-brass: #d1a24a; --poss-brass-2: #e7bb62; --poss-verdigris: #5fbfa9; --poss-amber: #f0a040; --poss-blood: #e0705c;
+  --poss-soot: #0e0c0a; --poss-on-brass: #1c1814;
+}
+
+.possibilities.poss-sheet .window-content {
+  background: var(--poss-paper); color: var(--poss-ink); font-family: var(--poss-body); font-size: 15px; padding: 10px 12px;
+  background-image: radial-gradient(ellipse at top, rgba(200,120,28,.10), transparent 60%);
+}
+.possibilities h3 { font-family: var(--poss-display); font-weight: 400; font-size: 1.15rem; letter-spacing: .03em; color: var(--poss-brass);
+  border-bottom: 1px solid var(--poss-line); margin: 12px 0 6px; padding-bottom: 2px; display: flex; gap: 8px; align-items: center; }
+.possibilities h3 small { font-family: var(--poss-body); font-size: .8rem; color: var(--poss-muted); }
+.possibilities input, .possibilities select, .possibilities textarea { font-family: var(--poss-body); color: var(--poss-ink);
+  background: var(--poss-paper-2); border: 1px solid var(--poss-line); border-radius: 3px; min-height: 30px; }
+.possibilities input[type=number] { width: 4.2em; text-align: center; }
+.possibilities button { font-family: var(--poss-body); min-height: 32px; cursor: pointer; border: 1px solid var(--poss-brass);
+  background: var(--poss-paper-2); color: var(--poss-ink); border-radius: 4px; }
+.possibilities button:hover, .possibilities button:focus-visible { border-color: var(--poss-amber); box-shadow: 0 0 0 2px rgba(200,120,28,.3); }
+.possibilities .mini { min-height: 28px; padding: 0 8px; font-size: .85rem; width: auto; flex: 0 0 auto; }
+.possibilities .mini.on { background: var(--poss-verdigris); color: var(--poss-on-brass); border-color: var(--poss-verdigris); }
+.possibilities .hint, .possibilities .small, .possibilities .muted { color: var(--poss-muted); font-size: .88rem; }
+.possibilities .poss-warn { background: rgba(200,120,28,.15); border: 1px solid var(--poss-amber); padding: 6px 8px; border-radius: 4px; }
+.possibilities .poss-warn.block { background: rgba(140,42,28,.18); border-color: var(--poss-blood); }
+.possibilities .row, .possibilities .fields, .possibilities .training, .possibilities .override-grid { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.possibilities label { display: inline-flex; gap: 6px; align-items: center; }
+.possibilities label.wide { display: flex; width: 100%; } .possibilities label.wide input, .possibilities label.wide textarea { flex: 1; }
+
+/* Header */
+.poss-header { display: flex; gap: 12px; align-items: flex-start; }
+.poss-header .portrait { width: 96px; height: 96px; object-fit: cover; border: 2px solid var(--poss-brass); border-radius: 4px; background: var(--poss-soot); flex: 0 0 auto; }
+.poss-header .portrait.small { width: 56px; height: 56px; }
+.poss-header .identity { flex: 1; display: grid; gap: 6px; min-width: 0; }
+.poss-header .name { font-family: var(--poss-display); font-size: 1.7rem; border: none; background: transparent; border-bottom: 1px solid var(--poss-line); width: 100%; min-height: 38px; }
+.poss-header .subline { display: flex; flex-wrap: wrap; gap: 4px 12px; color: var(--poss-muted); margin: 0; }
+.poss-header .subline span + span::before { content: "·"; margin-right: 12px; color: var(--poss-brass); }
+.vitals { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: flex-end; }
+.vital { min-width: 170px; flex: 1; } .vital label, .stat label { font-family: var(--poss-display); color: var(--poss-brass); font-size: .9rem; }
+.vital .bar, .xp .bar { height: 8px; background: var(--poss-soot); border-radius: 4px; overflow: hidden; border: 1px solid var(--poss-line); }
+.vital .bar span, .xp .bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--poss-blood), var(--poss-amber)); }
+.vital.points .bar span { background: linear-gradient(90deg, var(--poss-verdigris), #7fd6c2); }
+.vital.resistance .bar span { background: linear-gradient(90deg, var(--poss-brass), var(--poss-brass-2)); }
+.vital .nums { display: flex; gap: 6px; align-items: center; margin-top: 3px; }
+.stat { display: grid; justify-items: center; min-width: 58px; } .stat b { font-size: 1.4rem; font-family: var(--poss-display); }
+.turnline, .clock { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.turnline .label, .clock .label { font-family: var(--poss-display); color: var(--poss-brass); }
+.pips { display: inline-flex; gap: 6px; }
+.possibilities button.pip, .pip { width: 26px; height: 26px; min-height: 26px; border-radius: 50%; padding: 0; border: 2px solid var(--poss-brass); background: transparent; display: inline-block; }
+.pip.on { background: radial-gradient(circle at 35% 35%, #ffd27a, var(--poss-amber) 60%, var(--poss-brass)); box-shadow: 0 0 6px rgba(240,160,64,.6); }
+.pip.skull { border-color: var(--poss-blood); } .pip.skull.on { background: var(--poss-blood); box-shadow: 0 0 6px rgba(224,112,92,.6); }
+.pip.clock { border-radius: 3px; } .pip.clock.on { background: var(--poss-amber); }
+.turnline .map, .turnline .aid, .turnline .wounded { font-size: .85rem; padding: 2px 8px; border-radius: 10px; border: 1px solid var(--poss-line); }
+.turnline .dying { display: inline-flex; gap: 6px; align-items: center; padding: 2px 8px; border: 1px solid var(--poss-blood); border-radius: 14px; }
+.turnline .dying.dead { background: rgba(140,42,28,.25); }
+
+/* Tabs */
+.poss-tabs { display: flex; gap: 4px; border-bottom: 2px solid var(--poss-brass); margin: 10px 0 6px; flex-wrap: wrap; }
+.poss-tab { font-family: var(--poss-display); font-size: 1.05rem; padding: 6px 14px; border: 1px solid transparent; border-bottom: none; border-radius: 4px 4px 0 0; color: var(--poss-muted); }
+.poss-tab.active { color: var(--poss-ink); background: var(--poss-paper-2); border-color: var(--poss-line); }
+.possibilities .tab { display: none; } .possibilities .tab.active { display: block; }
+
+/* Tracks */
+.tracks { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+.track { border: 1px solid var(--poss-line); border-top: 3px solid var(--poss-brass); padding: 6px 8px; border-radius: 4px; background: var(--poss-paper-2); display: grid; gap: 4px; align-content: start; }
+.track.class { border-top-color: var(--poss-blood); } .track.profession { border-top-color: var(--poss-verdigris); }
+.track h3 { margin: 0; border: none; } .track select { width: 100%; }
+.track .figure { margin: 0; } .track .figure b { font-family: var(--poss-display); font-size: 1.3rem; }
+.xp { display: flex; gap: 6px; align-items: center; } .xp .bar { flex: 1; } .xp .bar span { background: linear-gradient(90deg, var(--poss-brass), var(--poss-brass-2)); }
+
+.columns { display: grid; grid-template-columns: minmax(250px, 1fr) minmax(280px, 1.2fr); gap: 14px; }
+@media (max-width: 720px) { .columns { grid-template-columns: 1fr; } }
+.abilities table { width: 100%; border-collapse: collapse; }
+.abilities th, .abilities td { padding: 2px 4px; text-align: center; border-bottom: 1px dotted var(--poss-line); }
+.abilities th { font-family: var(--poss-display); color: var(--poss-brass); }
+.possibilities button.roll { min-width: 46px; font-weight: 600; }
+.derived-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 12px; margin-top: 8px; }
+.derived-list div { display: flex; justify-content: space-between; border-bottom: 1px dotted var(--poss-line); }
+.skill-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; }
+.skill-list li { display: flex; gap: 6px; align-items: center; }
+.skill-list li.untrained .skill { opacity: .78; }
+.skill-list .skill { flex: 1; display: flex; gap: 6px; align-items: baseline; text-align: left; padding: 2px 8px; }
+.skill-list .skill .n { flex: 1; } .skill-list select { width: 7.5em; }
+
+/* Actions */
+.action-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 6px; }
+.possibilities button.action { display: flex; gap: 8px; align-items: center; text-align: left; padding: 6px 8px; min-height: 48px; }
+.possibilities button.action img { width: 32px; height: 32px; border: none; }
+.possibilities button.action span { flex: 1; display: grid; } .possibilities button.action small { color: var(--poss-muted); }
+.possibilities button.action em { font-style: normal; font-family: var(--poss-display); width: 24px; height: 24px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--poss-brass); color: var(--poss-on-brass); }
+.ability-list, .item-list, .setbacks { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+.ability-list li, .item-list li, .setbacks li { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.ability-list .action.wide { flex: 1; }
+.item-list img { width: 28px; height: 28px; border: none; }
+.item-list .link, .possibilities button.link { border: none; background: transparent; text-align: left; flex: 1; font-weight: 600; min-height: 30px; }
+.item-list li.broken .link { text-decoration: line-through; opacity: .7; }
+.badge { font-size: .78rem; padding: 1px 7px; border-radius: 10px; border: 1px solid var(--poss-line); }
+.badge.loaned { border-color: var(--poss-amber); color: var(--poss-amber); }
+.badge.key { border-color: var(--poss-verdigris); color: var(--poss-verdigris); }
+.possibilities button.badge.cond { min-height: 26px; }
+.badge.cond.damaged { border-color: var(--poss-amber); background: rgba(200,120,28,.15); }
+.badge.cond.broken { border-color: var(--poss-blood); background: rgba(140,42,28,.2); }
+.empty { color: var(--poss-muted); font-style: italic; }
+.currency { display: flex; flex-wrap: wrap; gap: 10px; padding: 6px; border: 1px solid var(--poss-line); border-radius: 4px; background: var(--poss-paper-2); }
+.path { display: flex; flex-wrap: wrap; gap: 4px; list-style: none; padding: 0; }
+.path li { padding: 2px 10px; border-radius: 12px; border: 1px solid var(--poss-line); }
+.path li + li::before { content: "→ "; color: var(--poss-brass); }
+.path li.current { background: var(--poss-brass); color: var(--poss-on-brass); } .path li.future { opacity: .5; }
+.possibilities prose-mirror { min-height: 60px; border: 1px solid var(--poss-line); border-radius: 4px; background: var(--poss-paper-2); display: block; padding: 4px 8px; }
+
+/* Scenes */
+.approaches { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; counter-reset: ap; }
+.approach { border: 1px solid var(--poss-line); border-left: 4px solid var(--poss-brass); border-radius: 4px; padding: 6px 8px; background: var(--poss-paper-2); }
+.approach-heroes { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.possibilities button.attempt { display: inline-flex; gap: 8px; align-items: center; padding: 4px 10px; min-height: 40px; }
+.attempt .apt { font-size: .8rem; padding: 1px 6px; border-radius: 8px; color: var(--poss-on-brass); }
+.attempt.apt-full .apt { background: var(--poss-verdigris); } .attempt.apt-half .apt { background: var(--poss-amber); } .attempt.apt-none .apt { background: var(--poss-blood); }
+.attempt .mod { font-weight: 700; }
+.approach-edit { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; }
+.poss-obstacle.status-won .poss-header .name { color: var(--poss-verdigris); }
+.poss-obstacle.status-lost .poss-header .name { color: var(--poss-blood); }
+.possibilities .reference p { margin: 4px 0; }
+.possibilities .reference table { width: 100%; font-size: .85rem; }
+
+/* Chat cards */
+.poss-card { font-family: var(--poss-body); color: var(--poss-ink); background: var(--poss-paper); border: 1px solid var(--poss-line); border-left: 4px solid var(--poss-brass); border-radius: 4px; padding: 6px 8px; }
+.poss-card header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; border-bottom: 1px solid var(--poss-line); margin-bottom: 4px; }
+.poss-card h3 { font-family: var(--poss-display); font-weight: 400; font-size: 1.1rem; margin: 0; border: none; color: var(--poss-ink); }
+.poss-card .sub { color: var(--poss-muted); font-size: .85rem; }
+.poss-card .readout { font-size: 1.05rem; font-variant-numeric: tabular-nums; margin: 2px 0; }
+.poss-card .formula, .poss-card .note { color: var(--poss-muted); font-size: .85rem; }
+.poss-card.success { border-left-color: var(--poss-verdigris); } .poss-card.crit-success { border-left-color: var(--poss-verdigris); background-image: linear-gradient(90deg, rgba(47,122,107,.14), transparent); }
+.poss-card.fail { border-left-color: var(--poss-amber); } .poss-card.crit-fail { border-left-color: var(--poss-blood); background-image: linear-gradient(90deg, rgba(140,42,28,.14), transparent); }
+.poss-card.clock { border-left-color: var(--poss-amber); }
+.poss-card-buttons { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.poss-card-buttons button { flex: 1 1 auto; min-height: 32px; font-size: .85rem; }
+
+/* Dialogs */
+.poss-dialog { display: grid; gap: 8px; font-family: var(--poss-body); }
+.poss-dialog .info { margin: 0; font-size: .88rem; color: var(--poss-muted); }
+.poss-dialog .row { display: flex; gap: 10px; } .poss-dialog label { display: grid; gap: 2px; }
+.poss-skill-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 2px 8px; }
+.poss-dialog .poss-check, .poss-dialog .poss-choice { display: flex; gap: 6px; align-items: flex-start; min-height: 30px; }
+.poss-choice { padding: 4px; border-bottom: 1px dotted var(--poss-line); }
+.poss-bind { max-height: 480px; overflow-y: auto; }
+.poss-new-hero { flex: 1 1 100%; }

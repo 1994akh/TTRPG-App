@@ -21,7 +21,8 @@ const SETTINGS = {
   undertaking: { type: Boolean, default: false },
   guardBonus: { type: Number, default: DEFAULTS.guardBonus },
   creatorExtraSkills: { type: Number, default: 2 },
-  sceneAttemptCost: { type: Number, default: 1 }
+  sceneAttemptCost: { type: Number, default: 1 },
+  manualRolls: { type: Boolean, default: false }
 };
 
 Hooks.once("init", () => {

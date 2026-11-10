@@ -4,9 +4,9 @@
   <div class="action-grid">
     {{#each weapons}}
     <button type="button" class="action" data-action="strike" data-item-id="{{id}}">
-      <img src="{{img}}" alt=""><span><b>{{name}}</b><small>{{damage}} · {{localize (concat "POSS.Zone." system.range)}}{{#if system.loaned}} · {{localize "POSS.Loaned"}}{{/if}}</small></span><em>1</em></button>
+      <img src="{{img}}" alt=""><span><b>{{name}}</b><small>{{damage}}{{#if improv}} · {{improv}}{{/if}} · {{localize (concat "POSS.Zone." system.range)}}{{#if system.loaned}} · {{localize "POSS.Loaned"}}{{/if}}</small></span><em>1</em></button>
     {{/each}}
-    <button type="button" class="action" data-action="strike"><span><b>{{localize "POSS.Unarmed"}}</b><small>{{derived.damageFormula}}</small></span><em>1</em></button>
+    <button type="button" class="action" data-action="strike"><span><b>{{localize "POSS.Unarmed"}}</b><small>{{derived.unarmedFormula}}</small></span><em>1</em></button>
   </div>
   <h3>{{localize "POSS.BasicActions"}}</h3>
   <div class="action-grid">

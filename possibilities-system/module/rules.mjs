@@ -113,6 +113,20 @@ export function toFormula(sheetText, die) {
   return b === 0 ? dice : `${dice} ${b > 0 ? "+" : "-"} ${Math.abs(b)}`;
 }
 
+/**
+ * The die and attack modifier a weapon gives a hero. Improvised weapons: d4 at -2, unless the hero's profession uses
+ * the tool (then d6, no penalty).
+ * @param {{die:string, improvised?:boolean, tools?:string}} weapon
+ */
+export function weaponProfile(weapon, professionNode) {
+  if ( !weapon ) return { die: "d4", attackMod: 0, tool: false };
+  if ( !weapon.improvised ) return { die: weapon.die, attackMod: 0, tool: false };
+  const tools = String(weapon.tools ?? "").split(",").map(x => x.trim()).filter(Boolean);
+  const tool = !!professionNode && tools.includes(professionNode);
+  const imp = DEFAULTS.improvised;
+  return tool ? { die: imp.toolDie, attackMod: 0, tool } : { die: imp.die, attackMod: imp.penalty, tool };
+}
+
 /* -------------------------------------------- Checks -------------------------------------------- */
 
 /** Degree of success, 0 critical failure … 3 critical success. Natural 20 raises a step, natural 1 lowers one. */

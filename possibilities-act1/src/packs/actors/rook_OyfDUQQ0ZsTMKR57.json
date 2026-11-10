@@ -2,7 +2,7 @@
   "_id": "OyfDUQQ0ZsTMKR57",
   "name": "Rook",
   "type": "hero",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "modules/possibilities-act1/assets/portraits/protag2.webp",
   "system": {
     "race": "Corvine",
     "raceGrade": "F",
@@ -23,7 +23,7 @@
       "temp": 0
     },
     "points": {
-      "value": 0
+      "value": 3
     },
     "dying": {
       "value": 0,
@@ -107,7 +107,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "icons/svg/mystery-man.svg",
+      "src": "modules/possibilities-act1/assets/tokens/protag2.webp",
       "scaleX": 1,
       "scaleY": 1
     },

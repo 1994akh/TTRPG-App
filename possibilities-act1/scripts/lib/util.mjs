@@ -75,7 +75,7 @@ export async function ensureTokens(scene, actor, positions, { hidden=false }={})
   if ( !scene || !actor ) return [];
   const have = scene.tokens.filter(t => t.actorId === actor.id);
   const missing = positions.slice(have.length);
-  if ( !missing.length ) return have;
+  if ( !missing.length ) return have.slice(0, positions.length);
   const proto = (await actor.getTokenDocument?.()) ?? null;
   const base = proto?.toObject?.() ?? { ...actor.prototypeToken, actorId: actor.id };
   const created = await scene.createEmbeddedDocuments("Token", missing.map(p => ({ ...base, actorId: actor.id, x: p.x, y: p.y, hidden })));

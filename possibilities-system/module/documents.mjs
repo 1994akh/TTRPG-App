@@ -30,7 +30,8 @@ export class PossibilitiesActor extends Actor {
     const cost = DEFAULTS.costs[kind] ?? 1;
     await spendActions(this, cost, kind);
     const update = {};
-    let text = game.i18n.format(`POSS.Action.${kind}Text`, { name: this.name, ...extra });
+    const zone = extra.zone ? game.i18n.localize(`POSS.Zone.${extra.zone}`) : "";
+    const text = game.i18n.format(`POSS.Action.${kind}Text`, { name: this.name, ...extra, zone });
     if ( kind === "guard" ) update["system.turn.guard"] = true;
     if ( (kind === "stride") && extra.zone ) update["system.zone"] = extra.zone;
     if ( Object.keys(update).length ) await this.update(update);

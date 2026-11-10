@@ -49,14 +49,43 @@ async function post(actor, content, rolls=[], flags={}) {
 }
 
 /**
+ * Ask for the player's own roll when the "Enter my own rolls" world setting is on. Returns a number, or null to let
+ * Foundry roll ("Roll for me", or the setting is off).
+ */
+async function askOwnRoll(label, formula) {
+  if ( !setting("manualRolls", false) ) return null;
+  const DialogV2 = foundry.applications.api.DialogV2;
+  const v = await DialogV2.wait({
+    window: { title: label, icon: "fa-solid fa-dice-d20" },
+    content: `<div class="poss-dialog"><label>${esc(game.i18n.format("POSS.OwnRoll.Prompt", { formula }))}
+      <input type="number" name="value" autofocus inputmode="numeric"></label></div>`,
+    rejectClose: false,
+    buttons: [
+      { action: "mine", label: game.i18n.localize("POSS.OwnRoll.Use"), default: true,
+        callback: (e, b) => { const n = b.form.elements.value.valueAsNumber; return Number.isFinite(n) ? n : null; } },
+      { action: "auto", label: game.i18n.localize("POSS.OwnRoll.Auto"), callback: () => null }
+    ]
+  });
+  return typeof v === "number" ? v : null;
+}
+
+/** Roll a formula, or take the player's own total for it. */
+export async function rollFormula(formula, label="Roll") {
+  const own = await askOwnRoll(label, formula);
+  return new Roll(own === null ? formula : String(own)).evaluate();
+}
+
+/**
  * A check: d20 + mod (+ any Aid bonus waiting on the actor) against an optional DC.
  * @returns {Promise<{roll, natural, mod, total, dc, degree}>}
  */
 export async function rollCheck(actor, { label="Check", mod=0, dc=null, track="", subtitle="", against="DC", chat=true, extra="" }={}) {
   const aid = actor?.system?.turn?.aid ?? 0;
   const total = mod + aid;
-  const roll = await new Roll(`1d20 ${signed(total)}`).evaluate();
-  const natural = roll.dice[0]?.total ?? (roll.total - total);
+  const own = await askOwnRoll(label, "d20");
+  const nat = own === null ? null : Math.max(1, Math.min(20, Math.round(own)));
+  const roll = await new Roll(nat === null ? `1d20 ${signed(total)}` : `${nat} ${signed(total)}`).evaluate();
+  const natural = nat ?? roll.dice[0]?.total ?? (roll.total - total);
   const deg = (dc === null || dc === undefined) ? null : R.degree(roll.total, dc, natural, DEFAULTS.critMargin);
   if ( aid && actor?.isOwner ) await actor.update({ "system.turn.aid": 0 });
   const result = { roll, natural, mod: total, total: roll.total, dc, degree: deg };
@@ -108,17 +137,18 @@ export async function strike(actor, weapon=null, { target=null }={}) {
   await spendActions(actor, DEFAULTS.costs.strike, "Strike");
   if ( actor.isOwner ) await actor.update({ "system.turn.attacks": made + 1 });
   const name = weapon?.name ?? game.i18n.localize("POSS.Unarmed");
-  const subtitle = [map ? `MAP ${map}` : "", foe ? `vs ${foe.name}` : ""].filter(Boolean).join(" · ");
-  const res = await rollCheck(actor, { label: `Strike: ${name}`, mod: d.attack + map, dc: ac, against: "AC", subtitle, chat: false });
+  const subtitle = [map ? `MAP ${map}` : "", (actor.type === "hero" && d.weapons?.[weapon?.id]?.attackMod) ? "improvised −2" : "", foe ? `vs ${foe.name}` : ""].filter(Boolean).join(" · ");
+  const wmod = (actor.type === "hero") ? (d.weapons?.[weapon?.id]?.attackMod ?? 0) : 0;
+  const res = await rollCheck(actor, { label: `Strike: ${name}`, mod: d.attack + map + wmod, dc: ac, against: "AC", subtitle, chat: false });
   const formula = actor.type === "hero"
-    ? (d.weapons?.[weapon?.id]?.formula ?? d.damageFormula)
+    ? (weapon ? (d.weapons?.[weapon.id]?.formula ?? d.damageFormula) : d.unarmedFormula)
     : (weapon?.system?.damage || d.damageFormula);
   const hit = (res.degree === null) || (res.degree >= 2);
   const rolls = [res.roll];
   let body = `<p class="readout">${esc(readout({ ...res, deg: res.degree, against: "AC" }))}</p>`;
   let buttons = "";
   if ( hit ) {
-    const dmg = await new Roll(formula).evaluate();
+    const dmg = await rollFormula(formula, `${name}: damage`);
     rolls.push(dmg);
     const crit = res.degree === 3;
     const amount = crit ? R.critDamage(dmg.total) : dmg.total;
@@ -210,7 +240,7 @@ export async function rest(actor, kind="long", dice=null) {
   }
   const n = Math.max(0, Math.min(dice ?? d.hitDiceLeft, d.hitDiceLeft));
   if ( !n ) return ui.notifications?.info(game.i18n.format("POSS.Rest.NoDice", { name: actor.name }));
-  const roll = await new Roll(`${n}${d.hitDie} ${signed(n * d.mods.CON)}`).evaluate();
+  const roll = await rollFormula(`${n}${d.hitDie} ${signed(n * d.mods.CON)}`, game.i18n.localize("POSS.Rest.Short"));
   const heal = Math.max(0, roll.total);
   await actor.update({ "system.hitDiceUsed": sys.hitDiceUsed + n });
   await applyDamage(actor, -heal);
@@ -222,7 +252,7 @@ export async function rest(actor, kind="long", dice=null) {
 export function setting(key, fallback) {
   try {
     return game.settings.get(SYSTEM_ID, key) ?? fallback;
-  } catch ( err ) {
+  } catch {
     return fallback;
   }
 }
@@ -237,6 +267,13 @@ export function onRenderChatMessage(message, html) {
       if ( (mode === "target") && !list.length && target ) list = [actorOf(await fromUuid(target))].filter(Boolean);
       if ( !list.length ) return ui.notifications.warn(game.i18n.localize("POSS.Warn.NoRecipients"));
       for ( const a of list ) await applyDamage(a, Number(amount));
+    } else if ( possAction === "spell-attack" ) {
+      const item = await fromUuid(uuid);
+      const caster = item?.parent;
+      if ( !caster ) return;
+      const foe = firstTarget();
+      await rollCheck(caster, { label: `${item.name}: spell attack`, mod: caster.system.derived.spellAttack ?? 0,
+        dc: foe?.system?.derived?.ac ?? null, against: "AC", subtitle: foe ? `vs ${foe.name}` : "" });
     } else if ( possAction === "setback" ) {
       const a = actorOf(await fromUuid(uuid));
       const hero = target ? actorOf(await fromUuid(target)) : null;

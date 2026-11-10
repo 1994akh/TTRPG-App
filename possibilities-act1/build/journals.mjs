@@ -13,6 +13,14 @@ import { assetOr, esc, OWNERSHIP, readJSON, stats, SCOPE } from "./util.mjs";
 export const STEPS = readJSON("data/act1/steps.json").steps;
 export const HANDOUTS = readJSON("data/act1/handouts.json").handouts;
 const CONFIG = readJSON("data/act1/config.json");
+const PRIMER = readJSON("data/act1/primer.json");
+const WATCH = readJSON("data/act1/items.json").key.find(k => k.key === "pocket_watch");
+
+/** Young Enkrid's choices in the flashback (narration only, no dice). Draft by Claude. */
+const FLASHBACK_CHOICES = {
+  2: ["Young Enkrid stays down and waits for it to be over.", "Young Enkrid gets up anyway."],
+  9: ["Young Enkrid holds up his hands: look, they work.", "Young Enkrid says nothing, and stares at the chart case."]
+};
 
 const DRAFT = "<span class=\"pa1-badge pa1-draft\" data-tooltip=\"Draft by Claude: replace it with your own whenever you like\">Draft by Claude</span>";
 const WRITTEN = "<span class=\"pa1-badge pa1-written\">Your canon</span>";
@@ -32,8 +40,9 @@ export function journalForPage(key) {
 }
 
 /** The lore scene's script as a gaslit play script. Each line can be read to chat (double-click, GM). */
-export function scriptHTML(scene) {
+export function scriptHTML(scene, extraChoices={}) {
   const out = [];
+  let index = -1;
   let choices = [];
   const flushChoices = () => {
     if ( !choices.length ) return;
@@ -41,6 +50,7 @@ export function scriptHTML(scene) {
     choices = [];
   };
   for ( const line of scene.script ?? [] ) {
+    index++;
     if ( "choice" in line ) {
       choices.push(line.choice);
       continue;
@@ -51,6 +61,10 @@ export function scriptHTML(scene) {
       const who = speakerName(line.speaker);
       out.push(`<blockquote class="pa1-line pa1-readaloud" data-speaker="${esc(line.speaker)}">`
         + `<span class="pa1-speaker">${esc(who)}</span> ${esc(resolve(line.text))}</blockquote>`);
+    }
+    if ( extraChoices[index] ) {
+      out.push(`<div class="pa1-choices pa1-draftchoices"><p class="pa1-muted">${DRAFT} A choice for young Enkrid (no dice; it colours the telling):</p>`
+        + `<ul>${extraChoices[index].map(c => `<li>${esc(c)}</li>`).join("")}</ul></div>`);
     }
   }
   flushChoices();
@@ -100,15 +114,22 @@ function act1Journal(folder) {
       <li><strong>Make your character</strong> first (${run("makeCharacter", "Make your character")}). You pick race, profession, skills and looks. No class yet: everyone starts Unclassed, and the class is chosen at the Binding House.</li>
       <li><strong>Roll in the open.</strong> Every check is d20 + modifier against a DC, and the chat card says what it means. Let the dice surprise you; that is what makes it a story rather than an outline.</li>
       <li><strong>Write as you go.</strong> Each step has a page in <em>My Story</em> with a short prompt. "Write this beat" in the Director opens it. The <em>Session log</em> page collects what happened each time you stop (${run("sessionLog", "Write the session log")}).</li>
+      <li><strong>Ask the oracle</strong> when you don't know what the world would do (${run("oracle", "Ask the oracle")}): a yes/no question, likely / even / unlikely, and the answer comes back as Yes, and / Yes / Yes, but / No, but / No / No, and.</li>
       <li><strong>Change anything.</strong> Pages marked ${DRAFT} were drafted for you; your own canon is marked ${WRITTEN}. Edit freely: the story is yours.</li>
     </ol>
-    <p>Money: the party needs <strong>${purse.bindings} bindings at ${purse.bindingFeeGp} gp</strong> to be classed. The ${run("openPurse", "Purse")} tracks it.</p>`, { sort: next() }));
+    <p>Money: the party needs <strong>${purse.bindings} bindings at ${purse.bindingFeeGp} gold crowns (gp)</strong> to be classed. The ${run("openPurse", "Purse")} tracks it.</p>
+    <p>When you're done, ${run("copyStory", "Copy my story")} turns <em>My Story</em> into clean text you can paste into Word.</p>`, { sort: next() }));
   pages.push(textPage("act1", "glance", "The act at a glance", `
     <h2>Act 1: Ashford Roads</h2>
     <p>${esc(resolve(byId.places.ashford.text[0]))}</p>
     <p class="pa1-muted">From the story deck's events 01-05 ("But Then, Therefore"): the four meet at the broker, but they must be classed to join a ship; therefore the sewer job; they barely earn it; therefore they are bound, delayed, and miss the first ship.</p>
     <ol class="pa1-steps">${steps}</ol>
     <p>The heroes are <strong>Unclassed</strong> until step 11 (Combat EL 0, 6 hit points, only Strike, Aid, Stabilise and items; professions work in full). The act ends when the Gilded Tern leaves without them.</p>`, { sort: next() }));
+
+  pages.push(textPage("act1", "primer", "Setting primer", `
+    <h2>The Reach, for Act 1</h2>${draftNote(esc(PRIMER.note))}
+    ${PRIMER.sections.map(sec => `<h3>${esc(sec.title)}</h3>${sec.paragraphs.map(t => `<p>${esc(t)}</p>`).join("")}`).join("")}`,
+  { sort: next(), ownership: { default: OWNERSHIP.OBSERVER } }));
 
   for ( const step of STEPS ) {
     for ( const sceneId of step.scenes ) {
@@ -120,7 +141,7 @@ function act1Journal(folder) {
       const map = step.map && MAPS.includes(step.map) ? `@UUID[Scene.${IDS.scene(step.map)}]{${esc(titleCase(byId.places[step.map]?.name ?? step.map))} map}` : "";
       const family = { ch1_intro_founding: "Founding", ch1_intro_beastkin: "Beastkin", ch1_intro_fae: "Fae", ch1_intro_monsterkin: "Monsterkin" }[sceneId];
       const content = `
-        <header class="pa1-scenehead">${badge(s)} <span class="pa1-tag">Step ${step.n} · ${esc(s.fields.style)}</span>
+        <header class="pa1-scenehead">${badge(s)} <span class="pa1-tag">Step ${step.n} · day ${step.day} · ${esc(s.fields.style)}</span>
           ${where ? `<span class="pa1-tag">${esc(titleCase(where.name))}</span>` : ""}</header>
         <p class="pa1-beat"><strong>Beat.</strong> ${esc(resolve(s.fields.beat))}</p>
         ${family ? `<p class="pa1-muted">Play this intro if {pc} is of the ${family} family.</p>` : ""}
@@ -128,10 +149,14 @@ function act1Journal(folder) {
         ${map || actors ? `<p class="pa1-muted">${map}${map && actors ? " · " : ""}${actors}</p>` : ""}
         <h2>The scene</h2>
         ${(s.text ?? []).map(p).join("")}
-        ${isMenu ? `<p>The broker's answers are in @UUID[JournalEntry.${IDS.journal("questions")}]{Stupid, Basic, and Naive Questions}: show any of them to the table.</p>${sectionsHTML(s)}` : scriptHTML(s)}
+        ${sceneId === "ch1_prologue" ? `<p class="pa1-muted">The watch's engraving is yours to write: @UUID[Actor.${IDS.actor("enkrid")}]{edit the pocket watch on Enkrid}. ${esc(WATCH.engraving)}</p>` : ""}
+        ${isMenu ? `<p>The broker's answers are in @UUID[JournalEntry.${IDS.journal("questions")}]{Stupid, Basic, and Naive Questions}: show any of them to the table.</p>${sectionsHTML(s)}` : scriptHTML(s, sceneId === "ch1_prologue" ? FLASHBACK_CHOICES : {})}
+        ${step.gmNotes.length && (sceneId === step.scenes.at(-1)) ? `<h2>GM notes</h2>${draftNote("From your answers on the decisions page.")}<ul>${step.gmNotes.map(t => `<li>${esc(resolve(t))}</li>`).join("")}</ul>` : ""}
         <h2>Systems</h2>
         ${draftNote(esc(resolve(step.systems)))}`;
-      pages.push(textPage("act1", sceneId, `${step.n}. ${s.name}`, content, { sort: next(), flags: { step: step.key } }));
+      const page = textPage("act1", sceneId, `${step.n}. ${s.name}`, content, { sort: next(), flags: { step: step.key } });
+      if ( s.fields.style === "flashback" ) page.text.content = page.text.content.replace("<div class=\"pa1-page\">", "<div class=\"pa1-page pa1-sepia\">");
+      pages.push(page);
     }
   }
   return entry("act1", "Act 1: Ashford Roads", pages, folder);
@@ -196,9 +221,10 @@ function storyJournal(folder) {
     <h2>Act 1: Ashford Roads</h2>
     <p>This is your chronicle. Each beat has a page with one question to start from; write as much or as little as you like, in {pc}'s voice or your own.</p>
     <p>The <em>Session log</em> page is filled in for you: every time you press ${run("sessionLog", "Write the session log")}, the steps you played since last time are added with the date.</p>
+    <p>${run("copyStory", "Copy my story")} gives you all of it as clean text, ready to paste into Word.</p>
     ${draftNote("The prompts are suggestions.")}`, { sort: 0, ownership: { default: OWNERSHIP.OWNER } })];
   STEPS.forEach((s, i) => pages.push(textPage("story", `beat_${s.key}`, `${s.n}. ${s.title}`, `
-    <p class="pa1-prompt">${esc(resolve(s.prompt))}</p>
+    ${s.prompts.map(t => `<p class="pa1-prompt">${esc(resolve(t))}</p>`).join("")}
     <p class="pa1-muted">@UUID[${pageUuid("act1", s.scenes[0])}]{The scene} · ${DRAFT}</p>
     <hr><p></p>`, { sort: (i + 1) * 1000, ownership: { default: OWNERSHIP.OWNER }, flags: { step: s.key } })));
   pages.push(textPage("story", "log", "Session log", "<h2>Session log</h2><p class=\"pa1-muted\">Entries are added here by the module.</p>",
@@ -221,7 +247,7 @@ export const TOOL_LABELS = {
   giveLoaners: "Hand out the loaners", revealHandout: "Show a handout", startGnaw: "Start the Old Gnaw fight",
   startGloam: "Start the Gloam fight", gloamRebuff: "The Gloam throws them back", startLight: "Start the Scene",
   sunClock: "Advance the sun", openPurse: "Purse", keepLoaners: "The loaners are ours", bindAll: "Binding",
-  enkridCollapses: "Enkrid collapses", innRest: "Rest at the inn", endAct: "End of Act 1"
+  enkridCollapses: "Enkrid collapses", innRest: "Rest at the inn", endAct: "End of Act 1", milestone: "Apply the milestone"
 };
 
 export function buildJournals(folder) {

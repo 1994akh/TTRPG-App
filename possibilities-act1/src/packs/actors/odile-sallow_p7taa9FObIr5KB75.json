@@ -2,7 +2,7 @@
   "_id": "p7taa9FObIr5KB75",
   "name": "Odile Sallow",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "modules/possibilities-act1/assets/portraits/broker.webp",
   "system": {
     "el": 3,
     "grade": "F",
@@ -45,7 +45,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "icons/svg/mystery-man.svg",
+      "src": "modules/possibilities-act1/assets/tokens/broker.webp",
       "scaleX": 1,
       "scaleY": 1
     },

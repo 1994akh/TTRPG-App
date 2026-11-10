@@ -1,0 +1,38 @@
+{
+  "note": "The setting primer for Act 1. Draft by Claude, written from the user's answers on the Ashford Roads Decisions page (10 Nov 2026) and the lore. Replace any of it.",
+  "sections": [
+    { "title": "Two words: Dungeonpunk and gaslit", "paragraphs": [
+      "Dungeons in the Reach are made by industry: sewers, refinery works, flooded pump-halls, Compact-licensed ruins, wrecked brume engines. Delving is a trade, with brokers, permits, insurers and danger fees, and crews do it for the money.",
+      "It is a gaslamp-era society where the gas is refined brume: charge-lamps on every street, refinery smoke, licences and ledgers, top hats and soot, class lines you can see. Magic is an industry and a profession, not a mystery.",
+      "Grim streets, hopeful crew. The cruelty is systemic and the danger is real, but the story is about found family, wonder, and getting out. The banter stays: dry, quick, and never at the expense of a serious beat."
+    ] },
+    { "title": "Brume is the power", "paragraphs": [
+      "Brume is a grey fog of unfixed Possibility lying on the open sea, and every kind of power in the world comes from it.",
+      "Bound into a person, it becomes their class and their grade: that is binding, and it is why the Binding House charges what it does. Refined, it becomes charge, sealed in glass cells that light the lamps and run the lifts, pumps and engines. Drawn on by the bound, it becomes spells and signatures.",
+      "Breathed in deep water, it slowly unwrites anything that isn't bound. That is why the sea outside the Reach eats the unclassed, and why no insurer will cover them."
+    ] },
+    { "title": "Charge and sky ships", "paragraphs": [
+      "Charge cells are graded like everything else; a full F-grade cell costs about a day's wage. Night streets are pools of amber charge-light in grey fog.",
+      "Sky ships are new, about thirty years old, and rare because they take years to build. What makes them fly is the brume engine. Aurelio Fenn, the inventor, built the brume possibility engine; the legends' expedition was rumoured to fly on one. In Ashford a sky ship is a dream and a rumour: almost nobody has seen one."
+    ] },
+    { "title": "Who runs the Reach", "paragraphs": [
+      "The Compact is a chartered trading company that became a government in all but name: the refinery, the licences, the insurance, the Wardens, the debt. Polite, legal and merciless. In Act 1 it is everywhere and never the villain on screen.",
+      "The Bench is the courts and record-keepers: charts, deeds, inheritances and contracts. Bench families are old money that holds the maps, and a chart isn't true until the Bench stamps it.",
+      "The Wrights are a faith of makers who teach that the world was wrought and that fixing things is holy. Their chapels keep the clocks and the schools; tinkers are often Wright-raised.",
+      "On the streets there are two forces: the city Watch, underpaid and answering to the Bench, and the Compact Wardens, well paid and answering to the refinery. The monsterkin surety bond is Compact policy that the Watch enforces.",
+      "The Compact underwrites every voyage out of Ashford. No policy, no berth, and no harbour will take you. That is the real reason class is a gate."
+    ] },
+    { "title": "The edge of the map", "paragraphs": [
+      "Kelder's Wall is the edge of the charted Reach: a standing bank of brume that never lifts, graded far above anything in the Reach. Ships that go past it rarely come back. The legends went past it eight years ago."
+    ] },
+    { "title": "Peoples of Ashford", "paragraphs": [
+      "Mostly Founding peoples (humans, dwarves, half-orcs), a big beastkin quarter by the fish market, few fae, and monsterkin only on the quay.",
+      "Fae are distrusted, not hated: people think they leak Possibility and bring bad luck aboard. Polite avoidance, higher prices, captains who have no berths. Binding hits fae harder.",
+      "Monsterkin are second-class by law: surety bonds, one inn, lower wages, written policy. Plenty of ordinary people are kind one to one; the system isn't."
+    ] },
+    { "title": "Weather, light and coin", "paragraphs": [
+      "Fog rolls in off the brume every night and burns off by mid-morning everywhere except Refinery Row, which stays clear and warm.",
+      "The sheets count cp, sp, gp and pp; people in the Reach say copper bits, silver marks, gold crowns and platinum charters. Prices triple with every grade."
+    ] }
+  ]
+}

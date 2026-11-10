@@ -59,6 +59,20 @@ export async function startGnaw() {
   return true;
 }
 
+/** Side work (off by default): the outer Undercourses rat cull, one rat swarm. */
+export async function ratCull() {
+  if ( !requireGM() ) return false;
+  const scene = await showMap("undercourses");
+  if ( !scene ) return false;
+  const at = notePos(scene, "undercourses");
+  const party = await placeParty(scene, at.x - 200, at.y);
+  const swarm = await ensureTokens(scene, actorFor("rat_swarm"), [{ x: at.x + 100, y: at.y }]);
+  for ( const t of swarm ) if ( t.hidden ) await t.update({ hidden: false });
+  await startCombat(scene, [...party, ...swarm], "cull");
+  await postCard("Rat cull", "<p>The outer Undercourses: one rat swarm, for the broker's board. Pays 2 gold crowns (Draft).</p>");
+  return true;
+}
+
 /* -------------------------------------------- The Gloam -------------------------------------------- */
 
 export async function startGloam() {

@@ -41,7 +41,7 @@ export function buildItems() {
   const out = new Map();
   for ( const d of ITEMS.loaners ) out.set(d.key, itemDoc(d.key, d, { loaned: true, flags: { loaner: true, count: d.count } }));
   for ( const d of ITEMS.key ) {
-    const desc = d.lore ? (byId.terms[d.lore]?.text ?? []).join(" ") : d.description;
+    const desc = [d.lore ? (byId.terms[d.lore]?.text ?? []).join(" ") : d.description, d.engraving].filter(Boolean).join(" ");
     out.set(d.key, itemDoc(d.key, { ...d, description: desc }, { flags: { keyItem: true, holder: d.holder ?? null, handout: d.handout ?? null } }));
   }
   for ( const kit of ITEMS.kits ) {

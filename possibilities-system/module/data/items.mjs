@@ -19,6 +19,10 @@ export class WeaponData extends foundry.abstract.TypeDataModel {
       die: str("d6", { blank: false, choices: [...new Set(["d4", ...WEAPON_DICE])] }),
       range: str("engaged", { blank: false, choices: ["engaged", "near", "far"] }),
       traits: str(""), equipped: bool(false),
+      /** Improvised (a pry bar, a lamp): d4 at -2, unless the hero's profession is in `tools` (then d6, no penalty). */
+      improvised: bool(false),
+      /** Profession ids that use this as a tool, comma-separated ("Tinker, Miner"). */
+      tools: str(""),
       /** Optional damage formula; used by NPCs (blank = the NPC's benchmark damage). Heroes use the sheet formula. */
       damage: str(""),
       ...equipment()

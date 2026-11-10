@@ -51,5 +51,61 @@
     "Medium",
     "Theorist"
   ],
-  "fClassesNote": "Fallback list for the Binding when the system API is missing; read from the rules data at authoring time."
+  "fClassesNote": "Fallback list for the Binding when the system API is missing; read from the rules data at authoring time.",
+  "coin": {
+    "cp": "copper bits",
+    "sp": "silver marks",
+    "gp": "gold crowns",
+    "pp": "platinum charters"
+  },
+  "playlists": [
+    "Ashford",
+    "Sallow's Exchange",
+    "The Undercourses",
+    "The Gloam",
+    "The Binding House",
+    "The Lantern and Lee",
+    "The Long Quay"
+  ],
+  "oracle": {
+    "odds": {
+      "likely": 4,
+      "even": 0,
+      "unlikely": -4
+    },
+    "bands": [
+      [
+        3,
+        "No, and"
+      ],
+      [
+        7,
+        "No"
+      ],
+      [
+        10,
+        "No, but"
+      ],
+      [
+        13,
+        "Yes, but"
+      ],
+      [
+        17,
+        "Yes"
+      ],
+      [
+        99,
+        "Yes, and"
+      ]
+    ],
+    "note": "d20 + odds; at or under each band's number."
+  },
+  "milestone": {
+    "profession": "Apprentice",
+    "note": "Draft: the end-of-Act-1 milestone raises each hero's profession one rank (Novice to Apprentice)."
+  },
+  "sideWork": {
+    "default": false
+  }
 }

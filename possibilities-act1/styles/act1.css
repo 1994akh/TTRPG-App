@@ -80,3 +80,12 @@ blockquote.pa1-line { margin: .35em 0; padding: .35em .8em; border-left: 3px sol
 .pa1-entries li { display: flex; justify-content: space-between; align-items: center; }
 .pa1-entries .amt { font-variant-numeric: tabular-nums; }
 .pa1-verdict { font-style: italic; color: #f3c77a; }
+
+/* Answers of 10 Nov: sepia flashback, speaker posts with portraits, days */
+.pa1-sepia { background: #e9dcc0; color: #3b2b1a; padding: .6em 1em; border-radius: 4px; filter: sepia(.35); }
+.pa1-sepia blockquote.pa1-line { background: rgba(120, 80, 30, .08); }
+.pa1-says { display: flex; gap: .5em; align-items: flex-start; }
+.pa1-face { width: 40px; height: 40px; flex: 0 0 40px; object-fit: cover; border: 1px solid #b58a3c; border-radius: 4px; }
+.pa1-day { font: .72em system-ui, sans-serif; opacity: .7; margin-left: .3em; }
+.pa1-storytext { width: 100%; font-family: "PA1 Garamond", Georgia, serif; }
+.pa1-draftchoices { margin-left: 1.2em; }

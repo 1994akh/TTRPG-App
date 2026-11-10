@@ -1,90 +1,371 @@
 {
-  "note": "Act 1 in running order (Possibilities-Game docs/story/chapter-1-plan.md, steps 1-10, with the lore's 17 scenes). Draft by Claude: the step titles, 'systems' and 'prompt' lines. The scene scripts are the user's lore.",
+  "note": "Act 1 in running order (Possibilities-Game docs/story/chapter-1-plan.md, steps 1-10, with the lore's 17 scenes). Draft by Claude: the step titles, 'systems' and 'prompt' lines. The scene scripts are the user's lore. gmNotes come from the user's answers on the Ashford Roads Decisions page (10 Nov), worded by Claude.",
   "steps": [
     {
-      "key": "pc", "n": 1, "title": "Make your character, and the Coast Road",
-      "scenes": ["ch1_intro_founding", "ch1_intro_beastkin", "ch1_intro_fae", "ch1_intro_monsterkin"],
-      "map": "ashford", "actors": [], "tools": ["makeCharacter"],
+      "key": "pc",
+      "n": 1,
+      "title": "Make your character, and the Coast Road",
+      "scenes": [
+        "ch1_intro_founding",
+        "ch1_intro_beastkin",
+        "ch1_intro_fae",
+        "ch1_intro_monsterkin"
+      ],
+      "map": "ashford",
+      "actors": [],
+      "tools": [
+        "makeCharacter"
+      ],
       "systems": "The creator (race, profession, skills, looks, name; no class yet). One intro by race family, played on the Coast Road.",
-      "prompt": "Who is {pc}? Where did they come from, what did they leave behind, and what do they want from Ashford?"
+      "day": 1,
+      "prompts": [
+        "What did {pc} say when the gate let them through?",
+        "What does {pc} leave behind, and why do they need a ship?",
+        "A line to remember."
+      ],
+      "gmNotes": [
+        "Act 1 covers four days: day 1 arrive and take the job; day 2 the Undercourses, the Gloam at noon; day 3 paid and bound; day 4 morning, the missed ship.",
+        "Fog rolls in off the brume every night and burns off by mid-morning everywhere except Refinery Row, which stays clear and warm."
+      ]
     },
     {
-      "key": "broker", "n": 2, "title": "A hard time at the Exchange",
-      "scenes": ["ch1_broker"], "map": "sallows_exchange", "actors": ["broker", "protag2", "protag3", "enkrid"], "tools": ["addTrio"],
+      "key": "broker",
+      "n": 2,
+      "title": "A hard time at the Exchange",
+      "scenes": [
+        "ch1_broker"
+      ],
+      "map": "sallows_exchange",
+      "actors": [
+        "broker",
+        "protag2",
+        "protag3",
+        "enkrid"
+      ],
+      "tools": [
+        "addTrio"
+      ],
       "systems": "Dialogue with one choice. The trio join the party here.",
-      "prompt": "What did {pc} tell the broker they came for? What did they make of the other three?"
+      "day": 1,
+      "prompts": [
+        "What did {pc} tell the broker they came for?",
+        "What changed for {pc}, or between the four of them?",
+        "A line to remember."
+      ],
+      "gmNotes": []
     },
     {
-      "key": "questions", "n": 3, "title": "Stupid, basic, and naive questions",
-      "scenes": ["ch1_questions"], "map": "sallows_exchange", "actors": ["broker"], "tools": ["askBroker"],
+      "key": "questions",
+      "n": 3,
+      "title": "Stupid, basic, and naive questions",
+      "scenes": [
+        "ch1_questions"
+      ],
+      "map": "sallows_exchange",
+      "actors": [
+        "broker"
+      ],
+      "tools": [
+        "askBroker"
+      ],
       "systems": "The broker's question menu: show any answer to the table.",
-      "prompt": "Which question did {pc} ask first, and which answer stayed with them?"
+      "day": 1,
+      "prompts": [
+        "Which question did {pc} ask first?",
+        "What changed for {pc}, or between the four of them?",
+        "A line to remember."
+      ],
+      "gmNotes": []
     },
     {
-      "key": "commission", "n": 4, "title": "The commission",
-      "scenes": ["ch1_commission"], "map": "sallows_exchange", "actors": ["broker"], "tools": ["giveLoaners"],
+      "key": "commission",
+      "n": 4,
+      "title": "The commission",
+      "scenes": [
+        "ch1_commission"
+      ],
+      "map": "sallows_exchange",
+      "actors": [
+        "broker"
+      ],
+      "tools": [
+        "giveLoaners"
+      ],
       "systems": "Loaned gear (marked Loaned). The broker's board opens for filler after the act.",
-      "prompt": "What did the four of them say to each other on the Exchange steps?"
+      "day": 1,
+      "prompts": [
+        "What did {pc} say on the Exchange steps?",
+        "What changed for {pc}, or between the four of them?",
+        "A line to remember."
+      ],
+      "gmNotes": [
+        "Petra saw grey fog moving against the wind out of the street grates at night, and a light under the street where no one should be. That is why she went down.",
+        "The broker suspected from the sellswords' silence and Petra's story, and sent the cheapest crew she could find. Not evil, a broker."
+      ]
     },
     {
-      "key": "prologue", "n": 5, "title": "Prologue: the three legends (flashback)",
-      "scenes": ["ch1_prologue"], "map": "", "actors": ["dov", "captain", "first_mate", "inventor"], "tools": [],
+      "key": "prologue",
+      "n": 5,
+      "title": "Prologue: the three legends (flashback)",
+      "scenes": [
+        "ch1_prologue"
+      ],
+      "map": "",
+      "actors": [
+        "dov",
+        "captain",
+        "first_mate",
+        "inventor"
+      ],
+      "tools": [],
       "systems": "A flashback: read it aloud, or play young Enkrid. No saves, nothing at stake.",
-      "prompt": "What does the pocket watch's engraving say? How did {pc} react to Enkrid's story?"
+      "day": 1,
+      "prompts": [
+        "What did {pc} say to Enkrid after his story?",
+        "What changed for {pc}, or between the four of them?",
+        "A line to remember."
+      ],
+      "gmNotes": [
+        "Play it as narration on a sepia page, with one or two choices for young Enkrid and no dice, then go back to the steps."
+      ]
     },
     {
-      "key": "sewer", "n": 6, "title": "Into the Undercourses",
-      "scenes": ["ch1_sewer_enter"], "map": "undercourses", "actors": ["sellsword"], "tools": ["revealHandout"],
+      "key": "sewer",
+      "n": 6,
+      "title": "Into the Undercourses",
+      "scenes": [
+        "ch1_sewer_enter"
+      ],
+      "map": "undercourses",
+      "actors": [
+        "sellsword"
+      ],
+      "tools": [
+        "revealHandout"
+      ],
       "systems": "The first dungeon. The sellswords' journal is a clue item.",
-      "prompt": "What did {pc} notice first down there? What did the sellswords' journal make them think?"
+      "day": 2,
+      "prompts": [
+        "What did {pc} say over the sellswords' bodies?",
+        "What changed for {pc}, or between the four of them?",
+        "A line to remember."
+      ],
+      "gmNotes": [
+        "The three sellswords wear a Coldwater crew mark (a gull over a knotted net), so Coldwater can come back later. Their names are in the handout."
+      ]
     },
     {
-      "key": "gnaw", "n": 7, "title": "Old Gnaw",
-      "scenes": ["ch1_old_gnaw"], "map": "undercourses", "actors": ["old_gnaw", "rat", "rat_swarm"], "tools": ["startGnaw"],
+      "key": "gnaw",
+      "n": 7,
+      "title": "Old Gnaw",
+      "scenes": [
+        "ch1_old_gnaw"
+      ],
+      "map": "undercourses",
+      "actors": [
+        "old_gnaw",
+        "rat",
+        "rat_swarm"
+      ],
+      "tools": [
+        "startGnaw"
+      ],
       "systems": "The first real fight, Unclassed: Strike, Aid, Stabilise and items. Three actions a turn; -4 / -8 on the second and third Strike.",
-      "prompt": "How did the fight with Old Gnaw go for {pc}? Who stood beside whom?"
+      "day": 2,
+      "prompts": [
+        "What did {pc} shout in the fight with Old Gnaw?",
+        "What changed for {pc}, or between the four of them?",
+        "A line to remember."
+      ],
+      "gmNotes": [
+        "Fair but tense: Old Gnaw can drop one hero if the party is careless. Nobody dies in Act 1 unless the Undertaking setting is on."
+      ]
     },
     {
-      "key": "gloam", "n": 8, "title": "The thing in the dark",
-      "scenes": ["ch1_the_gloam"], "map": "grate_chamber", "actors": ["gloam", "petra"], "tools": ["startGloam", "gloamRebuff"],
+      "key": "gloam",
+      "n": 8,
+      "title": "The thing in the dark",
+      "scenes": [
+        "ch1_the_gloam"
+      ],
+      "map": "grate_chamber",
+      "actors": [
+        "gloam",
+        "petra"
+      ],
+      "tools": [
+        "startGloam",
+        "gloamRebuff"
+      ],
       "systems": "A fight they can't win: after two rounds the Gloam throws the party back to the doorway. Nobody dies.",
-      "prompt": "What did {pc} see when everything they hit 'just wasn't there'?"
+      "day": 2,
+      "prompts": [
+        "What did {pc} say when everything they hit 'just wasn't there'?",
+        "What changed for {pc}, or between the four of them?",
+        "A line to remember."
+      ],
+      "gmNotes": [
+        "What the Gloam is: brume run-off from the refinery that pooled in the dark for forty years until it started wanting. Sunlight fixes it and it falls apart. Nobody in Ashford wants that known.",
+        "Play it uncanny, not gory: it moves wrong, sounds are muffled near it, the lamps don't light it, and it is never seen clearly until the sun holds it."
+      ]
     },
     {
-      "key": "light", "n": 9, "title": "Into the light",
-      "scenes": ["ch1_into_the_light"], "map": "grate_chamber", "actors": ["into_the_light", "gloam", "petra"], "tools": ["startLight", "sunClock"],
+      "key": "light",
+      "n": 9,
+      "title": "Into the light",
+      "scenes": [
+        "ch1_into_the_light"
+      ],
+      "map": "grate_chamber",
+      "actors": [
+        "into_the_light",
+        "gloam",
+        "petra"
+      ],
+      "tools": [
+        "startLight",
+        "sunClock"
+      ],
       "systems": "A Scene: Resistance, approaches (Full / Half / None), Setbacks that damage the loaners, and the sun clock.",
-      "prompt": "Whose idea worked? What broke? What did {pc} say to Petra?"
+      "day": 2,
+      "prompts": [
+        "What did {pc} say to Petra?",
+        "What changed for {pc}, or between the four of them?",
+        "A line to remember."
+      ],
+      "gmNotes": [
+        "Setbacks hit on a critical failure always, on a failure when the approach says so, and once at the end of every round the sun clock moves.",
+        "Profession XP comes from Scenes: this one counts for every hero who made an attempt."
+      ]
     },
     {
-      "key": "fee", "n": 10, "title": "Paying for the loaners",
-      "scenes": ["ch1_danger_fee"], "map": "sallows_exchange", "actors": ["broker"], "tools": ["openPurse", "keepLoaners"],
+      "key": "fee",
+      "n": 10,
+      "title": "Paying for the loaners",
+      "scenes": [
+        "ch1_danger_fee"
+      ],
+      "map": "sallows_exchange",
+      "actors": [
+        "broker"
+      ],
+      "tools": [
+        "openPurse",
+        "keepLoaners"
+      ],
       "systems": "The purse: the reward, the bill for the loaners, the danger fee. The loaners become the party's own.",
-      "prompt": "Who pressed the broker hardest for the danger fee, and how?"
+      "day": 3,
+      "prompts": [
+        "What did {pc} say to press the broker for the danger fee?",
+        "What changed for {pc}, or between the four of them?",
+        "A line to remember."
+      ],
+      "gmNotes": [
+        "Hollis Tarrant pays in full and in public, so Refinery Row sees he is generous, and asks them never to mention where Petra was found."
+      ]
     },
     {
-      "key": "binding", "n": 11, "title": "Binding",
-      "scenes": ["ch1_binding"], "map": "binding_house", "actors": ["binder"], "tools": ["bindAll"],
+      "key": "binding",
+      "n": 11,
+      "title": "Binding",
+      "scenes": [
+        "ch1_binding"
+      ],
+      "map": "binding_house",
+      "actors": [
+        "binder"
+      ],
+      "tools": [
+        "bindAll"
+      ],
       "systems": "The PC picks one of the twelve F-grade classes; the trio take theirs from the story. Everyone becomes F-Novice.",
-      "prompt": "Which binding did {pc} choose, and why that one?"
+      "day": 3,
+      "prompts": [
+        "What did {pc} say when the binder asked them to choose?",
+        "What changed for {pc}, or between the four of them?",
+        "A line to remember."
+      ],
+      "gmNotes": [
+        "The brume goes in through the hands and chest; everything goes white and too-sharp for a moment; it leaves a faint grey vein mark, the binding mark, that darkens with each grade.",
+        "Binding hits fae harder: that is why Enkrid collapses."
+      ]
     },
     {
-      "key": "collapse", "n": 12, "title": "It hurts",
-      "scenes": ["ch1_collapse"], "map": "binding_house", "actors": ["binder"], "tools": ["enkridCollapses"],
+      "key": "collapse",
+      "n": 12,
+      "title": "It hurts",
+      "scenes": [
+        "ch1_collapse"
+      ],
+      "map": "binding_house",
+      "actors": [
+        "binder"
+      ],
+      "tools": [
+        "enkridCollapses"
+      ],
       "systems": "Enkrid is down (a story condition) until the inn.",
-      "prompt": "What did binding feel like for {pc}?"
+      "day": 3,
+      "prompts": [
+        "What did {pc} say while they carried Enkrid?",
+        "What changed for {pc}, or between the four of them?",
+        "A line to remember."
+      ],
+      "gmNotes": []
     },
     {
-      "key": "inn", "n": 13, "title": "A night at the Lantern and Lee",
-      "scenes": ["ch1_inn_night"], "map": "lantern_lee", "actors": ["innkeeper"], "tools": ["innRest"],
+      "key": "inn",
+      "n": 13,
+      "title": "A night at the Lantern and Lee",
+      "scenes": [
+        "ch1_inn_night"
+      ],
+      "map": "lantern_lee",
+      "actors": [
+        "innkeeper"
+      ],
+      "tools": [
+        "innRest",
+        "revealHandout"
+      ],
       "systems": "A long rest at the inn. Optional talks with each of the trio.",
-      "prompt": "Who did {pc} talk to before sleeping, and what did they learn about them?"
+      "day": 3,
+      "prompts": [
+        "What did {pc} say to each of the trio before sleeping?",
+        "What changed for {pc}, or between the four of them?",
+        "A line to remember."
+      ],
+      "gmNotes": [
+        "The legends' journal page 1 is here: Dunmore kept a page Captain Varr left with a bar tab. Show it with the Show a handout tool; you write its text."
+      ]
     },
     {
-      "key": "ship", "n": 14, "title": "The Gilded Tern leaves without them",
-      "scenes": ["ch1_missed_ship"], "map": "long_quay", "actors": ["rourke", "noble"], "tools": ["endAct"],
+      "key": "ship",
+      "n": 14,
+      "title": "The Gilded Tern leaves without them",
+      "scenes": [
+        "ch1_missed_ship"
+      ],
+      "map": "long_quay",
+      "actors": [
+        "rourke",
+        "noble"
+      ],
+      "tools": [
+        "endAct",
+        "milestone"
+      ],
       "systems": "The end of Act 1: the title card, then the session log.",
-      "prompt": "Watching the Gilded Tern go: what does {pc} want now?"
+      "day": 4,
+      "prompts": [
+        "What did {pc} say as the Gilded Tern slipped its lines?",
+        "Write the end of Act 1: where are the four of them now, and what do they want next?",
+        "A line to remember."
+      ],
+      "gmNotes": [
+        "Rourke is charming and reasonable on the quay. The one detail that sticks: his crew is armed like mercenaries, not sailors. It pays off on island 3.",
+        "After the last line: a scruffy captain on the next berth has been watching them. Then the title card, then the milestone."
+      ]
     }
   ]
 }

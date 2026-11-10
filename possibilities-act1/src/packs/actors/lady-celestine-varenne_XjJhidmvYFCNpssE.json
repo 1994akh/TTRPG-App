@@ -2,7 +2,7 @@
   "_id": "XjJhidmvYFCNpssE",
   "name": "Lady Celestine Varenne",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "modules/possibilities-act1/assets/portraits/noble.webp",
   "system": {
     "el": 2,
     "grade": "F",
@@ -45,7 +45,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "icons/svg/mystery-man.svg",
+      "src": "modules/possibilities-act1/assets/tokens/noble.webp",
       "scaleX": 1,
       "scaleY": 1
     },

@@ -1,7 +1,7 @@
 {
   "_id": "mBebFkndH8zefPBB",
   "name": "Loaned pry bar",
-  "type": "gear",
+  "type": "weapon",
   "img": "icons/tools/hand/pickaxe-steel-white.webp",
   "system": {
     "grade": "F",
@@ -12,8 +12,10 @@
     "loaned": true,
     "condition": "intact",
     "description": "<p>Iron, a yard long, bent at one end.</p>",
-    "quantity": 1,
-    "keyItem": false
+    "die": "d4",
+    "range": "engaged",
+    "traits": "improvised: d4 and -2 to hit, unless your profession uses the tool (a Tinker uses it at d6, no penalty)",
+    "equipped": false
   },
   "effects": [],
   "folder": null,

@@ -1,21 +1,74 @@
 {
   "note": "Handouts. 'lore' lines are the user's (quoted verbatim from the scene scripts); 'draft' paragraphs are Draft by Claude.",
   "handouts": [
-    { "key": "gate_notice", "title": "The notice on the gate", "step": "pc",
-      "lore": ["Crews wanted. Ask at {sallows_exchange}."],
-      "draft": ["Pinned over a dozen older notices just like it. Somebody has drawn a ship in the margin." ] },
-    { "key": "commission", "title": "The commission", "step": "commission",
+    {
+      "key": "gate_notice",
+      "title": "The notice on the gate",
+      "step": "pc",
+      "lore": [
+        "Crews wanted. Ask at {sallows_exchange}."
+      ],
+      "draft": [
+        "Pinned over a dozen older notices just like it. Somebody has drawn a ship in the margin."
+      ]
+    },
+    {
+      "key": "commission",
+      "title": "The commission",
+      "step": "commission",
       "lore": [],
-      "draft": ["COMMISSION, Sallow's Exchange, by order of {merchant}, {refinery_row}.", "Wanted: the safe return of {petra}, last seen entering {undercourses} by the Refinery Row culvert.", "Pay on delivery. One previous engagement unconcluded. Loaned gear to be returned whole or paid for."] },
-    { "key": "sellswords_journal", "title": "The sellswords' journal", "step": "sewer",
-      "lore": ["Something in the big cistern. Lamps don't scare it. Light does."],
-      "draft": ["(The last page. The earlier pages are tallies of pay and complaints about the smell.)"] },
-    { "key": "loaner_bill", "title": "The bill for the loaners", "step": "fee",
+      "draft": [
+        "COMMISSION, Sallow's Exchange, by order of {merchant}, {refinery_row}.",
+        "Wanted: the safe return of {petra}, last seen entering {undercourses} by the Refinery Row culvert.",
+        "Pay on delivery. One previous engagement unconcluded. Loaned gear to be returned whole or paid for."
+      ]
+    },
+    {
+      "key": "sellswords_journal",
+      "title": "The sellswords' journal",
+      "step": "sewer",
+      "lore": [
+        "Something in the big cistern. Lamps don't scare it. Light does."
+      ],
+      "draft": [
+        "Kept by Harl Venn, of the Coldwater crew the Knotted Gull (the mark on the cover: a gull over a knotted net). Crew: Harl Venn, Mags Orrin, Teague Pell.",
+        "(The last page. The earlier pages are tallies of pay and complaints about the smell.)"
+      ]
+    },
+    {
+      "key": "loaner_bill",
+      "title": "The bill for the loaners",
+      "step": "fee",
       "lore": [],
-      "draft": ["SALLOW'S EXCHANGE. Loaned and not returned whole:", "Four blades, bent and chipped: 20 gp.", "One charge lamp, mirror cracked: 6 gp.", "One pry bar, tooth marks: 4 gp.", "Total 30 gp. Paid. The goods are now the borrowers' own."] },
-    { "key": "binding_receipt", "title": "The binding receipt", "step": "binding",
+      "draft": [
+        "SALLOW'S EXCHANGE. Loaned and not returned whole:",
+        "Four blades, bent and chipped: 20 gold crowns.",
+        "One charge lamp, mirror cracked: 6 gold crowns.",
+        "One pry bar, tooth marks: 4 gold crowns.",
+        "Total 30 gold crowns. Paid. The goods are now the borrowers' own."
+      ]
+    },
+    {
+      "key": "binding_receipt",
+      "title": "The binding receipt",
+      "step": "binding",
       "lore": [],
-      "draft": ["THE COMPACT. Licensed Binding House, {ashford}.", "Bindings at F-grade: four. Paid in cash. No debt recorded.", "The Compact accepts no liability for discomfort, collapse, or what the bound do next."] }
+      "draft": [
+        "THE COMPACT. Licensed Binding House, {ashford}.",
+        "Bindings at F-grade: four. Paid in cash. No debt recorded.",
+        "The Compact accepts no liability for discomfort, collapse, or what the bound do next."
+      ]
+    },
+    {
+      "key": "legends_page_1",
+      "title": "The legends' journal, page 1",
+      "step": "inn",
+      "lore": [],
+      "draft": [
+        "A page in Captain Isolde Varr's hand, left with Old Dunmore against a bar tab eight years ago.",
+        "(Blank: this page is yours to write. Edit it here.)"
+      ]
+    }
   ],
   "board": {
     "name": "The broker's board (F-grade)",

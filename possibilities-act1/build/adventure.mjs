@@ -9,13 +9,22 @@ export function buildFolders() {
     _id: IDS.folder(type), name, type, description: "", folder: null, sorting: "m", sort: 0,
     color: "#7a4a1c", flags: {}, _stats: stats(null)
   });
-  const docs = ["Scene", "Actor", "Item", "JournalEntry", "RollTable"].map(t => make(t, FOLDER_NAME));
+  const docs = ["Scene", "Actor", "Item", "JournalEntry", "RollTable", "Playlist"].map(t => make(t, FOLDER_NAME));
   docs.push(make("Macro", "Act 1"));
   const ids = Object.fromEntries(docs.map(d => [d.type, d._id]));
   return { docs, ids };
 }
 
-export function buildAdventure({ scenes, actors, items, journals, tables, macros, folders }) {
+/** One empty playlist per location, for the user's own tracks. */
+export function buildPlaylists(names, folder) {
+  return names.map((name, i) => ({
+    _id: IDS.folder(`playlist:${name}`), name, description: "Empty: add your own tracks for this place.", sounds: [],
+    channel: "music", mode: 0, playing: false, fade: null, folder, sorting: "a", seed: null, sort: i * 1000,
+    ownership: { default: 0 }, flags: { [SCOPE]: { location: name } }, _stats: stats(null)
+  }));
+}
+
+export function buildAdventure({ scenes, actors, items, journals, tables, macros, folders, playlists=[] }) {
   const _id = IDS.adventure;
   return {
     _id, name: "Ashford Roads: Act 1",
@@ -27,7 +36,7 @@ export function buildAdventure({ scenes, actors, items, journals, tables, macros
       + "Coast Road to the day the Gilded Tern leaves without them. Seven maps, the Act 1 Director, the Purse, the Into the "
       + "light Scene with its sun clock, and <em>My Story</em>, a journal for writing it up as you play.</p>"
       + "<p><strong>Start with</strong> the <em>Act 1: Ashford Roads</em> journal, or the Act 1 Director (<kbd>Shift</kbd>+<kbd>A</kbd>).</p>",
-    scenes, actors, items, journal: journals, tables, macros, folders, cards: [], playlists: [], combats: [],
+    scenes, actors, items, journal: journals, tables, macros, folders, cards: [], playlists, combats: [],
     folder: null, sort: 0, flags: { [SCOPE]: { version: 1 } }, _stats: stats(), _key: `!adventures!${_id}`
   };
 }

@@ -8,13 +8,14 @@ import { bool, fields, gradeField, html, intField, rankField, setting, str, turn
 export function computeInput(system, items=[], { weaponDie }={}) {
   const armour = items.find(i => (i.type === "armour") && i.system.equipped);
   const weapon = items.find(i => (i.type === "weapon") && i.system.equipped);
+  const profile = weapon ? R.weaponProfile(weapon.system, system.profession.node) : null;
   return {
     race: system.race, race_grade: system.raceGrade,
     class_node: system.class.node || R.UNCLASSED, class_rank: system.class.rank,
     profession_node: system.profession.node, profession_rank: system.profession.rank,
     armour: armour?.system.armourType ?? "None", armour_rank: system.training.armour,
     weapon_rank: system.training.weapon, cast_ability: system.castAbility, spell_rank: system.training.spell,
-    base_speed: system.baseSpeed, weapon_die: weaponDie ?? weapon?.system.die ?? UNARMED_DIE,
+    base_speed: system.baseSpeed, weapon_die: weaponDie ?? profile?.die ?? UNARMED_DIE,
     gear_bonus: system.gearBonus + (armour?.system.bonus ?? 0),
     save_ranks: { ...system.training.saves }, skill_ranks: { ...system.training.skills }
   };
@@ -82,10 +83,13 @@ export default class HeroData extends foundry.abstract.TypeDataModel {
     }
     const weapons = {};
     for ( const w of items.filter(i => i.type === "weapon") ) {
-      const ws = R.compute(computeInput(this, items, { weaponDie: w.system.die }), RULES);
-      weapons[w.id] = { text: ws.damage, formula: R.toFormula(ws.damage, w.system.die), avg: ws.damage_avg };
+      const p = R.weaponProfile(w.system, this.profession.node);
+      const ws = R.compute(computeInput(this, items, { weaponDie: p.die }), RULES);
+      weapons[w.id] = { text: ws.damage, formula: R.toFormula(ws.damage, p.die), avg: ws.damage_avg, die: p.die,
+        attackMod: p.attackMod, attack: ws.attack + p.attackMod, tool: p.tool };
     }
     const die = input.weapon_die;
+    const unarmed = R.compute(computeInput(this, items, { weaponDie: UNARMED_DIE }), RULES);
     const guard = this.turn.guard ? setting("guardBonus", DEFAULTS.guardBonus) : 0;
     const cls = RULES.classes.find(cl => cl.id === this.class.node);
     this.derived = {
@@ -96,6 +100,7 @@ export default class HeroData extends foundry.abstract.TypeDataModel {
       hitDiceLeft: Math.max(DEFAULTS.minShortRestDice, s.combat_el) - this.hitDiceUsed,
       attack: s.attack, spellDC: s.spell_dc, spellAttack: s.spell_attack, passivePerception: s.passive_perception,
       carry: s.carry, damage: s.damage, damageFormula: R.toFormula(s.damage, die), damageAvg: s.damage_avg,
+      unarmedFormula: R.toFormula(unarmed.damage, UNARMED_DIE),
       craftEffort: s.craft_effort, craftEffortFormula: R.toFormula(s.craft_effort, die),
       divergence: s.divergence,
       divergenceCap: RULES.engine.constants.max_track_divergence_el.value,

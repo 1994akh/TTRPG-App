@@ -2,7 +2,7 @@
   "_id": "ZGm1dcO3TTuuRJlb",
   "name": "Captain Isolde Varr",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "modules/possibilities-act1/assets/portraits/captain.webp",
   "system": {
     "el": 24,
     "grade": "B",
@@ -45,7 +45,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "icons/svg/mystery-man.svg",
+      "src": "modules/possibilities-act1/assets/tokens/captain.webp",
       "scaleX": 1,
       "scaleY": 1
     },

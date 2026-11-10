@@ -8,10 +8,10 @@ import { buildJournals, registerActors } from "./journals.mjs";
 import { buildScenes } from "./scenes.mjs";
 import { buildMacros } from "./macros.mjs";
 import { buildTables } from "./tables.mjs";
-import { buildAdventure, buildFolders } from "./adventure.mjs";
+import { buildAdventure, buildFolders, buildPlaylists } from "./adventure.mjs";
 import { writeGenerated } from "./content.mjs";
 import { IDS } from "./keys.mjs";
-import { cleanSource, clone, ROOT, writeSource } from "./util.mjs";
+import { cleanSource, clone, readJSON, ROOT, writeSource } from "./util.mjs";
 
 const EMBEDDED = {
   actors: { items: "items", effects: "effects" },
@@ -41,6 +41,7 @@ const journals = buildJournals(folderIds.JournalEntry);
 const scenes = buildScenes({ actors, folder: folderIds.Scene });
 const macros = buildMacros(folderIds.Macro);
 const tables = buildTables(folderIds.RollTable);
+const playlists = buildPlaylists(readJSON("data/act1/config.json").playlists, folderIds.Playlist);
 writeGenerated({ actors, items, scenes });
 
 const worldActors = [...actors.values()].map(a => ({ ...clone(a), folder: folderIds.Actor }));
@@ -50,7 +51,7 @@ for ( const dir of ["adventure", "actors", "items", "macros"] ) cleanSource(dir)
 for ( const a of actors.values() ) writeSource("actors", addKeys({ ...clone(a), folder: null }, "actors"));
 for ( const i of items.values() ) writeSource("items", addKeys({ ...clone(i), folder: null }, "items"));
 for ( const m of macros ) writeSource("macros", addKeys({ ...clone(m), folder: null }, "macros"));
-const adventure = buildAdventure({ scenes: [...scenes.values()], actors: worldActors, items: worldItems, journals, tables, macros, folders });
+const adventure = buildAdventure({ scenes: [...scenes.values()], actors: worldActors, items: worldItems, journals, tables, macros, folders, playlists });
 writeSource("adventure", adventure);
 
 for ( const pack of ["adventure", "actors", "items", "macros"] ) {
@@ -62,6 +63,6 @@ for ( const pack of ["adventure", "actors", "items", "macros"] ) {
 const placeholders = [...scenes.values()].filter(s => s.flags["possibilities-act1"].placeholder).map(s => s.name);
 console.log([
   `Scenes: ${scenes.size}${placeholders.length ? ` (${placeholders.length} without map art yet: ${placeholders.join(", ")})` : ""}`,
-  `Actors: ${actors.size} · Items: ${items.size} · Journals: ${journals.length} (${journals.map(j => j.pages.length).join("/")} pages) · Macros: ${macros.length} · Tables: ${tables.length}`,
+  `Actors: ${actors.size} · Items: ${items.size} · Journals: ${journals.length} (${journals.map(j => j.pages.length).join("/")} pages) · Macros: ${macros.length} · Tables: ${tables.length} · Playlists: ${playlists.length}`,
   "Packs compiled: adventure, actors, items, macros"
 ].join("\n"));

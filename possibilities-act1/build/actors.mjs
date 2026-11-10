@@ -51,7 +51,7 @@ function heroFor(key) {
     class: { node: "", rank: "Novice" },
     profession: { node: b.profession, rank: "Novice" },
     xp: { class: 0, profession: 0 },
-    hp: { value: 6, temp: 0 }, points: { value: 0 },
+    hp: { value: 6, temp: 0 }, points: { value: 3 },
     dying: { value: 0, active: false, stable: false, wounded: 0 },
     turn: turn(), zone: ZONES[b.zone] ?? "near",
     training: {

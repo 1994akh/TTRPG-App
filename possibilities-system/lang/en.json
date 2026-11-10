@@ -1,0 +1,323 @@
+{
+  "POSS": {
+    "AC": "AC",
+    "Abilities": "Abilities",
+    "Actions": "Actions",
+    "ActionsHint": "Each button spends its cost from your three action pips. Spending more than you have only warns.",
+    "Age": "Age",
+    "Aided": "Aided",
+    "Appearance": "Appearance",
+    "ArmourTraining": "Armour",
+    "ArmourType": "Armour type",
+    "Attack": "Attack",
+    "Attacks": "Attacks",
+    "BaseSpeed": "Base speed",
+    "BasicActions": "Basic actions",
+    "Benchmarks": "Benchmarks and overrides",
+    "BenchmarksHint": "Blank fields use the Engine sheet's benchmark (in brackets). Type a number to override it.",
+    "Bestiary": "Bestiary",
+    "Biography": "Biography",
+    "Carry": "Carry",
+    "CastAbility": "Casting ability",
+    "Class": "Class",
+    "CombatEL": "Combat EL",
+    "ConfirmDelete": "Delete {name}?",
+    "Cost": "Cost",
+    "CraftEL": "Craft EL",
+    "CraftEffort": "Craft effort",
+    "Damage": "Damage",
+    "DamageOverride": "Damage formula (NPCs)",
+    "Delete": "Delete",
+    "Description": "Description",
+    "Die": "Weapon die",
+    "Divergence": "Track divergence (Combat EL vs Craft EL):",
+    "Done": "Done",
+    "Drive": "Drive",
+    "DropHint": "Drag this onto a hero sheet to set that track.",
+    "Edit": "Edit",
+    "Effect": "Effect",
+    "Equip": "Equip",
+    "Equipped": "Equipped",
+    "EvolvesFrom": "Evolves from",
+    "EvolvesInto": "Evolves into",
+    "Features": "Features",
+    "Gate": "Next grade",
+    "GearBonus": "Gear bonus",
+    "Grade": "Grade",
+    "Guarded": "Guarded",
+    "HP": "HP",
+    "HitDice": "Hit dice",
+    "HitDie": "Hit die",
+    "Improvised": "Improvised",
+    "Incomplete": "Choose a race and a profession the rules know; the sheet shows a Human Sailor until then.",
+    "Init": "Initiative",
+    "KeyItem": "Key item",
+    "Known": "Known",
+    "Line": "Line",
+    "Loaned": "Loaned",
+    "MAP": "MAP",
+    "Mod": "Mod",
+    "Name": "Name",
+    "NewItem": "New {type}",
+    "NewTurn": "New turn",
+    "NextAttack": "next attack",
+    "NoneYet": "None yet.",
+    "Notes": "Notes",
+    "PassivePerception": "Passive Perception",
+    "Path": "Set evolution path",
+    "Points": "Points",
+    "Price": "Price",
+    "Profession": "Profession",
+    "Pronouns": "Pronouns",
+    "Quantity": "Quantity",
+    "Race": "Race",
+    "Range": "Range",
+    "Rank": "Rank",
+    "Role": {
+      "label": "Role",
+      "minion": "Minion",
+      "standard": "Standard",
+      "elite": "Elite",
+      "boss": "Boss"
+    },
+    "RuleId": "Rules id",
+    "Save": "Save",
+    "Score": "Score",
+    "Signature": "Signature",
+    "Signatures": "Signatures",
+    "Skills": "Skills",
+    "Speed": "Speed",
+    "SpellDC": "Spell DC / attack",
+    "Spells": "Spells",
+    "Tactics": "Tactics (GM)",
+    "Temp": "temp",
+    "Tier": "Tier",
+    "Tool": "tool",
+    "ToolOf": "A tool for professions",
+    "Tradition": "Tradition",
+    "Training": "Training",
+    "Traits": "Traits",
+    "Unarmed": "Unarmed",
+    "Unclassed": "Unclassed",
+    "UnclassedHint": "Not yet bound: Combat EL 0, a d6 hit-point floor, Strike, Aid, Stabilise and items. Professions work in full.",
+    "UnknownRule": "This rules id isn't in the rules data.",
+    "Uses": "Uses",
+    "Weapons": "Weapons",
+    "Wounded": "Wounded",
+    "Action": {
+      "strike": "Strike",
+      "stride": "Stride",
+      "guard": "Raise Guard",
+      "aid": "Aid",
+      "stabilise": "Stabilise",
+      "recall": "Recall Knowledge",
+      "interact": "Interact",
+      "withdraw": "Withdraw",
+      "strideText": "{name} moves to {zone}.",
+      "guardText": "{name} raises their guard: +2 AC until their next turn.",
+      "interactText": "{name} interacts with something nearby.",
+      "withdrawText": "{name} withdraws from the fight.",
+      "recallText": "{name} tries to remember.",
+      "aidText": "{name} aids {ally}: +{bonus} to their next check.",
+      "stabiliseShort": "Engaged ally at 0 HP",
+      "recallShort": "vs target's DC"
+    },
+    "Aptness": {
+      "full": "Full",
+      "half": "Half",
+      "none": "None"
+    },
+    "Bind": {
+      "Button": "Bind (choose a class)",
+      "Confirm": "Bind",
+      "Done": "{name} is bound: {node}",
+      "Hint": "Choose the F-grade class {name} is bound into. The trio take theirs from their story.",
+      "Title": "Binding: {name}"
+    },
+    "Chat": {
+      "ApplyHalf": "Half to selected",
+      "ApplySelected": "Apply to selected",
+      "ApplyTarget": "Apply to target",
+      "Miss": "Miss."
+    },
+    "Coin": {
+      "cp": "Copper bits",
+      "sp": "Silver marks",
+      "gp": "Gold crowns",
+      "pp": "Platinum charters"
+    },
+    "Condition": {
+      "label": "Condition",
+      "intact": "Intact",
+      "damaged": "Damaged",
+      "broken": "Broken"
+    },
+    "Creator": {
+      "Button": "New hero",
+      "Create": "Create hero",
+      "Hint": "Race and profession now; the class comes when you pay for binding. Race and profession skills are trained automatically.",
+      "Skills": "Train {n} more skills (Humans: one extra)",
+      "Title": "Create a hero",
+      "Unnamed": "Unnamed hero"
+    },
+    "Dying": {
+      "Dead": "{name} dies.",
+      "Defeated": "{name} is Defeated: down until healed or rested.",
+      "Explain": "Each turn: a recovery check, d20 + CON save vs DC {dc}. {pips} failures and they fall. Stabilise or healing ends it.",
+      "Fallen": "Fallen",
+      "Label": "Dying",
+      "NotDying": "{name} isn't Dying.",
+      "Recovery": "Recovery check",
+      "Stabilised": "{name} stabilises {ally}.",
+      "Stable": "{name} is stable at 0 HP.",
+      "StableLabel": "Stable",
+      "Starts": "{name} is Dying",
+      "Worse": "{name} slips further: {n} of {pips}."
+    },
+    "OwnRoll": {
+      "Auto": "Roll for me",
+      "Prompt": "Enter your own roll ({formula})",
+      "Use": "Use my roll"
+    },
+    "Per": {
+      "label": "Per",
+      "scene": "Scene",
+      "rest": "Rest",
+      "day": "Day"
+    },
+    "Rest": {
+      "label": "Rest",
+      "HowMany": "Spend how many hit dice? ({left} × {die} left)",
+      "Long": "Long rest",
+      "LongDone": "{name} is fully rested.",
+      "NoDice": "{name} has no hit dice left today.",
+      "Short": "Short rest",
+      "ShortDone": "{name} spends {n} hit dice and heals {heal}."
+    },
+    "Scene": {
+      "AddApproach": "Add approach",
+      "AddSetback": "Add Setback",
+      "Approaches": "Approaches",
+      "Check": "Check",
+      "Clock": "Clock",
+      "ClockMax": "Clock length",
+      "ClockValue": "Clock now",
+      "CombatEffort": "Combat effort",
+      "CraftEffort": "Craft effort",
+      "DCHint": "(blank = standard DC from EL and grade)",
+      "Default": "Default aptness",
+      "GearDamage": "Damages loaned gear",
+      "GearDamaged": "{item} is now {condition}.",
+      "Kind": "Scene",
+      "Label": "Label",
+      "LoseText": "If it is lost",
+      "Lost": "The Scene is lost",
+      "NewApproach": "New approach",
+      "NewSetback": "New Setback",
+      "NoHeroes": "No heroes found. Heroes in the combat tracker, or heroes with a player owner, appear here.",
+      "Note": "Note",
+      "OnEnd": "When the clock runs out",
+      "Over": "{name} is already over.",
+      "Reset": "Reset the Scene",
+      "Resistance": "Resistance",
+      "SetbackOn": "Setbacks hit",
+      "SetbackOnFail": "A failure triggers a Setback",
+      "SetbackOnFailShort": "Setback on failure",
+      "Setbacks": "Setbacks",
+      "Text": "Text",
+      "Tick": "Tick",
+      "Trigger": "Trigger",
+      "WinText": "If it is won",
+      "Won": "The Scene is won",
+      "Status": {
+        "label": "Status",
+        "active": "Active",
+        "won": "Won",
+        "lost": "Lost"
+      }
+    },
+    "Setting": {
+      "pointsFormula": {
+        "name": "Points formula",
+        "hint": "The pool for signatures and spells. Variables: @combatEL, @craftEL, @castMod. Default 3 + @combatEL."
+      },
+      "recoveryDC": {
+        "name": "Recovery DC",
+        "hint": "The Dying recovery check: d20 + CON save vs this. Default 12."
+      },
+      "undertaking": {
+        "name": "Undertaking (permanent death)",
+        "hint": "On: a hero who fails three recovery checks dies. Off: they are Defeated, down until healed or rested."
+      },
+      "guardBonus": {
+        "name": "Raise Guard bonus",
+        "hint": "AC bonus from Raise Guard until your next turn. Default 2."
+      },
+      "creatorExtraSkills": {
+        "name": "Creator: extra skills",
+        "hint": "Skills a new hero trains beyond their race and profession skills (Humans get one more). Default 2."
+      },
+      "sceneAttemptCost": {
+        "name": "Scene attempt cost",
+        "hint": "Actions an attempt at a Scene approach spends. Default 1."
+      },
+      "manualRolls": {
+        "name": "Enter my own rolls",
+        "hint": "Every check, Strike, damage and effort roll asks for the number you rolled at the table, with a Roll for me button. Off: Foundry rolls."
+      }
+    },
+    "Sheet": {
+      "Hero": "Possibilities hero",
+      "Item": "Possibilities item",
+      "Npc": "Possibilities foe",
+      "Scene": "Possibilities Scene"
+    },
+    "StoryRole": {
+      "pc": "Player character",
+      "trio": "The trio",
+      "guest": "Story guest"
+    },
+    "Tab": {
+      "main": "Sheet",
+      "actions": "Actions",
+      "inventory": "Gear",
+      "story": "Story"
+    },
+    "Track": {
+      "Combat": "Combat skills",
+      "Craft": "Craft skills"
+    },
+    "Warn": {
+      "NoActions": "{name} has {have} actions left but {label} costs {n}.",
+      "NoAllies": "No other heroes to pick.",
+      "NoPoints": "{name} needs {need} points for {item} but has {have}.",
+      "NoRecipients": "Target or select a token first.",
+      "PickAlly": "Pick an ally."
+    },
+    "Zone": {
+      "label": "Zone",
+      "engaged": "Engaged",
+      "near": "Near",
+      "far": "Far",
+      "distant": "Distant"
+    }
+  },
+  "TYPES": {
+    "Actor": {
+      "hero": "Hero",
+      "npc": "Foe",
+      "obstacle": "Scene"
+    },
+    "Item": {
+      "weapon": "Weapon",
+      "armour": "Armour",
+      "gear": "Gear",
+      "signature": "Signature",
+      "spell": "Spell",
+      "feature": "Feature",
+      "race": "Race",
+      "class": "Class",
+      "profession": "Profession"
+    }
+  }
+}

@@ -116,7 +116,11 @@ class PossibilitiesActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     const by = type => doc.items.filter(i => i.type === type).sort((a, b) => (a.sort - b.sort) || a.name.localeCompare(b.name));
     const badge = i => ({ id: i.id, name: i.name, img: i.img, system: i.system, condLabel: loc(`POSS.Condition.${i.system.condition ?? "intact"}`) });
     return {
-      weapons: by("weapon").map(i => ({ ...badge(i), damage: doc.system.derived.weapons?.[i.id]?.formula ?? i.system.damage ?? doc.system.derived.damageFormula })),
+      weapons: by("weapon").map(i => {
+        const w = doc.system.derived.weapons?.[i.id];
+        const improv = w?.tool ? loc("POSS.Tool") : (w?.attackMod ? `${loc("POSS.Improvised")} ${w.attackMod}` : "");
+        return { ...badge(i), damage: w?.formula ?? (i.system.damage || doc.system.derived.damageFormula), improv };
+      }),
       armour: by("armour").map(badge), gear: by("gear").map(badge),
       signatures: by("signature").map(badge), spells: by("spell").map(badge), features: by("feature").map(badge)
     };
@@ -180,7 +184,7 @@ export class HeroSheet extends PossibilitiesActorSheet {
       nextAttack: signed(d.attack + map),
       strideZones: ZONES.filter(z => z !== s.zone).map(z => ({ z, label: loc(`POSS.Zone.${z}`) })),
       path: { class: path(s.story.path.class, s.class.node), profession: path(s.story.path.profession, s.profession.node) },
-      currencyList: DENOMINATIONS.map(k => ({ k, v: s.currency[k] })),
+      currencyList: DENOMINATIONS.map(k => ({ k, v: s.currency[k], label: loc(`POSS.Coin.${k}`) })),
       enriched: {
         appearance: await enrich(s.details.appearance, doc), biography: await enrich(s.details.biography, doc), notes: await enrich(s.details.notes, doc)
       },
@@ -341,7 +345,7 @@ export class PossibilitiesItemSheet extends HandlebarsApplicationMixin(ItemSheet
     ctx.reference = ["race", "class", "profession"].includes(doc.type);
     ctx.grades = choices(GRADES);
     ctx.conditions = choices(CONDITIONS, c => loc(`POSS.Condition.${c}`));
-    ctx.denoms = choices(DENOMINATIONS);
+    ctx.denoms = choices(DENOMINATIONS, k => loc(`POSS.Coin.${k}`));
     ctx.armourTypes = choices(ARMOUR_TYPES);
     ctx.dice = choices([...new Set(["d4", ...RULES.engine.weapon_dice.map(x => x.die)])]);
     ctx.ranges = choices(["engaged", "near", "far"], z => loc(`POSS.Zone.${z}`));

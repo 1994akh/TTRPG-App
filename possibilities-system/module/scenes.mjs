@@ -2,7 +2,7 @@
  * Possibilities Scenes (actor type `obstacle`): attempts against Resistance, Setbacks and the clock.
  */
 import { DEFAULTS } from "./config.mjs";
-import { button, card, esc, post, readout, rollCheck, spendActions, applyDamage } from "./dice.mjs";
+import { button, card, esc, post, readout, rollCheck, rollFormula, spendActions, applyDamage } from "./dice.mjs";
 import * as R from "./rules.mjs";
 
 /** The party a Scene sheet lists: heroes in the current combat if any, else every hero with a player owner, else all heroes. */
@@ -54,7 +54,7 @@ export async function attemptScene(hero, obstacle, index) {
   let effortTotal = 0;
   const rolls = [res.roll];
   if ( res.degree >= 2 ) {
-    const eroll = await new Roll(chk.effort).evaluate();
+    const eroll = await rollFormula(chk.effort, `${approach.label}: effort`);
     rolls.push(eroll);
     effortTotal = eroll.total;
   }
@@ -88,7 +88,7 @@ export async function triggerSetback(obstacle, hero=null, index=-1) {
   let body = `<p>${esc(sb.text)}</p>`;
   let buttons = "";
   if ( sb.damage ) {
-    const roll = await new Roll(sb.damage).evaluate();
+    const roll = await rollFormula(sb.damage, `${sb.label}: damage`);
     rolls.push(roll);
     body += `<p class="damage">Damage <b>${roll.total}</b> <span class="formula">(${esc(sb.damage)})</span></p>`;
     if ( hero ) await applyDamage(hero, roll.total);
@@ -125,6 +125,11 @@ export async function advanceClock(obstacle, by=1) {
   await obstacle.update({ "system.clock.value": value });
   await post(obstacle, card({ title: c.label || game.i18n.localize("POSS.Scene.Clock"), subtitle: obstacle.name, tone: "clock",
     body: `<p class="resistance">${value} / ${c.max}</p>` }));
+  if ( (value < c.max) && obstacle.system.setbacks.length ) {
+    const heroes = partyHeroes();
+    const hero = heroes.length ? heroes[Math.floor(Math.random() * heroes.length)] : null;
+    await triggerSetback(obstacle, hero);
+  }
   if ( value >= c.max ) {
     await obstacle.update({ "system.status": "lost" });
     await resolveScene(obstacle, false);
@@ -145,7 +150,7 @@ export async function resolveScene(obstacle, won) {
 function setting(key, fallback) {
   try {
     return game.settings.get("possibilities", key) ?? fallback;
-  } catch ( err ) {
+  } catch {
     return fallback;
   }
 }

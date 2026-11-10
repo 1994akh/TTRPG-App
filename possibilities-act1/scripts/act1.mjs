@@ -6,10 +6,10 @@
 import { registerSettings } from "./lib/settings.mjs";
 import {
   addTrio, askBroker, bindAll, brokerBoard, damageLoaner, endAct, enkridCollapses, giveLoaners, innRest, keepLoaners,
-  makeCharacter, openStory, readLine, readScene, resetAct, revealHandout, sessionLog, writeBeat
+  makeCharacter, milestone, openStory, oracle, copyStory, readLine, readScene, resetAct, revealHandout, sessionLog, writeBeat
 } from "./lib/story.mjs";
 import {
-  gloamRebuff, onCombatEnd, onCombatRound, onObstacleUpdate, onSetback, resolveLight, startGloam, startGnaw, startLight, sunClock
+  gloamRebuff, onCombatEnd, onCombatRound, onObstacleUpdate, onSetback, ratCull, resolveLight, startGloam, startGnaw, startLight, sunClock
 } from "./lib/fights.mjs";
 import { maybeWelcome, openDirector, openPurse, refreshApps, runFromButton } from "./lib/director.mjs";
 import { CONTENT, esc, MODULE_ID, openPage, pcName, sceneFor } from "./lib/util.mjs";
@@ -22,6 +22,12 @@ async function showMap(key) {
   return true;
 }
 
+/** Show or hide the Director's optional side work (off by default). */
+async function toggleSideWork() {
+  await game.settings.set(MODULE_ID, "sideWork", !game.settings.get(MODULE_ID, "sideWork"));
+  return true;
+}
+
 /** Open a step's first scene page. */
 function openStepPage(stepKey) {
   const s = CONTENT.steps.find(x => x.key === stepKey);
@@ -31,7 +37,8 @@ function openStepPage(stepKey) {
 export const api = {
   openDirector, openPurse, makeCharacter, addTrio, readScene, askBroker, revealHandout,
   giveLoaners, keepLoaners, damageLoaner, startGnaw, startGloam, gloamRebuff, startLight, sunClock, resolveLight,
-  bindAll, enkridCollapses, innRest, endAct, sessionLog, writeBeat, openStory, brokerBoard, resetAct, showMap, openStepPage
+  bindAll, enkridCollapses, innRest, endAct, milestone, sessionLog, writeBeat, openStory, copyStory, oracle, brokerBoard, ratCull,
+  toggleSideWork, resetAct, showMap, openStepPage
 };
 
 /** Text enrichers: {pc} → the player character's name; @Act1[fn:arg]{label} → a button into the API. */

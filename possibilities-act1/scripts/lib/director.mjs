@@ -9,17 +9,18 @@ const TOOL_LABELS = {
   makeCharacter: "Make your character", addTrio: "Add the trio", askBroker: "Ask a question", giveLoaners: "Hand out the loaners",
   revealHandout: "Show a handout", startGnaw: "Start the fight", startGloam: "Start the fight", gloamRebuff: "Throw them back",
   startLight: "Start the Scene", sunClock: "Advance the sun", openPurse: "Purse", keepLoaners: "The loaners are ours",
-  bindAll: "Binding", enkridCollapses: "Enkrid collapses", innRest: "Rest at the inn", endAct: "End of Act 1"
+  bindAll: "Binding", enkridCollapses: "Enkrid collapses", innRest: "Rest at the inn", endAct: "End of Act 1",
+  milestone: "Apply the milestone"
 };
 
 /** The Director's body. */
-export function directorHTML({ beats, purse, pcName: name, imported, light }) {
+export function directorHTML({ beats, purse, pcName: name, imported, light, sideWork=false }) {
   const now = currentStep(CONTENT.steps, beats);
   const sum = purseSummary(CONTENT.config.purse, purse);
   const btn = (fn, label, { arg=null, cls="" }={}) => `<button type="button" class="${cls}" data-action="run" data-fn="${fn}"${arg ? ` data-arg="${esc(arg)}"` : ""}>${esc(label)}</button>`;
   const status = [
     `<li><strong>${esc(name || "No player character yet")}</strong>${now ? ` · next: ${now.n}. ${esc(now.title)}` : " · Act 1 complete"}</li>`,
-    `<li>Purse: ${sum.total} gp of ${sum.needed} for ${sum.bindings} bindings${sum.bound ? " (bound)" : (sum.exact ? " (exactly enough)" : "")}</li>`,
+    `<li>Day ${now?.day ?? 4} · Purse: ${sum.total} gold crowns of ${sum.needed} for ${sum.bindings} bindings${sum.bound ? " (bound)" : (sum.exact ? " (exactly enough)" : "")}</li>`,
     light ? `<li>Into the light: Resistance ${light.resistance}/${light.max} · sun ${light.clock}/${light.clockMax}</li>` : ""
   ].join("");
   const rows = CONTENT.steps.map(s => {
@@ -29,15 +30,17 @@ export function directorHTML({ beats, purse, pcName: name, imported, light }) {
     return `<li class="pa1-step ${done ? "done" : ""} ${now?.key === s.key ? "now" : ""}" data-step="${s.key}">
       <button type="button" class="tick" data-action="toggle" data-step="${s.key}" aria-pressed="${done}" aria-label="${done ? "Done" : "Not yet"}">
         <i class="fa-solid ${done ? "fa-square-check" : "fa-square"}"></i></button>
-      <div class="body"><div class="title"><b>${s.n}.</b> ${esc(s.title)}</div>
+      <div class="body"><div class="title"><b>${s.n}.</b> ${esc(s.title)} <span class="pa1-day">day ${s.day}</span></div>
         <div class="row">${reads}${btn("openStepPage", "Page", { arg: s.key })}${s.map ? btn("showMap", "Map", { arg: s.map }) : ""}${btn("writeBeat", "Write this beat", { arg: s.key })}</div>
         ${tools ? `<div class="row tools">${tools}</div>` : ""}</div></li>`;
   }).join("");
-  const toolsRow = [["openPurse", "Purse"], ["revealHandout", "Show a handout"], ["sessionLog", "Write the session log"],
-    ["openStory", "My Story"], ["brokerBoard", "The broker's board"], ["resetAct", "Reset Act 1"]]
+  const toolsRow = [["oracle", "Ask the oracle"], ["openPurse", "Purse"], ["revealHandout", "Show a handout"],
+    ["sessionLog", "Write the session log"], ["openStory", "My Story"], ["copyStory", "Copy my story"],
+    ["toggleSideWork", sideWork ? "Hide side work" : "Show side work"], ["resetAct", "Reset Act 1"]]
     .map(([fn, label]) => btn(fn, label, { cls: fn === "resetAct" ? "danger" : "" })).join("");
+  const side = sideWork ? `<section class="pa1-tools"><h3>Side work (optional)</h3><div class="row">${btn("brokerBoard", "The broker's board")}${btn("ratCull", "Rat cull in the outer Undercourses")}</div></section>` : "";
   return `${imported ? "" : "<p class=\"pa1-warning\">Import the <strong>Ashford Roads: Act 1</strong> Adventure from the compendium first.</p>"}
-    <ul class="pa1-status">${status}</ul><ol class="pa1-steps">${rows}</ol><section class="pa1-tools"><h3>Tools</h3><div class="row">${toolsRow}</div></section>`;
+    <ul class="pa1-status">${status}</ul><ol class="pa1-steps">${rows}</ol>${side}<section class="pa1-tools"><h3>Tools</h3><div class="row">${toolsRow}</div></section>`;
 }
 
 /** The Purse panel's body. */
@@ -50,10 +53,10 @@ export function purseHTML(state) {
       <i class="fa-solid ${on ? "fa-square-check" : "fa-square"}"></i> ${esc(e.label)}</button>
       <span class="amt">${e.gp > 0 ? "+" : ""}${e.gp} gp</span></li>`;
   }).join("");
-  const verdict = sum.bound ? `Bound. ${sum.total} gp left over.`
+  const verdict = sum.bound ? `Bound. ${sum.total} gold crowns left over.`
     : (sum.exact ? "Just enough to bind four. Not a copper over."
-      : (sum.short > 0 ? `${sum.short} gp short of ${sum.bindings} bindings (${sum.affordable} affordable).` : `${sum.spare} gp to spare.`));
-  return `<p class="pa1-big">${sum.total} gp <span class="pa1-muted">of ${sum.needed} gp (${sum.bindings} × ${sum.fee} gp)</span></p>
+      : (sum.short > 0 ? `${sum.short} gold crowns short of ${sum.bindings} bindings (${sum.affordable} affordable).` : `${sum.spare} gold crowns to spare.`));
+  return `<p class="pa1-big">${sum.total} gold crowns <span class="pa1-muted">of ${sum.needed} gp (${sum.bindings} × ${sum.fee} gp)</span></p>
     <ul class="pa1-entries">${entries}</ul>
     <p class="pa1-verdict">${esc(verdict)}</p>
     <div class="row"><button type="button" data-action="adjust" data-gp="-1">−1 gp</button><button type="button" data-action="adjust" data-gp="1">+1 gp</button>
@@ -107,7 +110,7 @@ function appClass(kind) {
       async _renderHTML() {
         const div = document.createElement("div");
         div.innerHTML = directorHTML({ beats: getSetting("beats"), purse: getSetting("purse"), pcName: getSetting("pcName"),
-          imported: !!journalFor("act1"), light: lightState() });
+          imported: !!journalFor("act1"), light: lightState(), sideWork: getSetting("sideWork") });
         return div;
       }
 

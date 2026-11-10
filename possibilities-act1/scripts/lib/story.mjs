@@ -6,7 +6,7 @@ import {
   actorFor, CONTENT, esc, getSetting, heroKey, journalFor, MODULE_ID, openPage, pageFor, partyHeroes, pc, pcActor, pcName,
   postCard, requireGM, SCOPE, setSetting, sys, trio
 } from "./util.mjs";
-import { currentStep, introFor, loanerPlan, payBindings, purseSummary, sessionEntry, withPC } from "./logic.mjs";
+import { currentStep, introFor, loanerPlan, oracleAnswer, payBindings, purseSummary, sessionEntry, storyText, withPC } from "./logic.mjs";
 
 const DialogV2 = () => foundry.applications.api.DialogV2;
 const step = key => CONTENT.steps.find(s => s.key === key);
@@ -32,13 +32,35 @@ export function sceneCardHTML(sceneId) {
   }).join("");
 }
 
-/** Read a lore scene aloud: the whole script as one chat card. */
+/** The portrait for a speaker (lore character id), if their actor is in the world. */
+function speakerImg(id) {
+  if ( id === "narrator" ) return null;
+  return actorFor(id)?.img ?? null;
+}
+
+/** One read-aloud line as a chat message from its speaker, with their portrait. */
+export async function postLine(line) {
+  if ( line.note || line.choice ) {
+    const cls = line.note ? "pa1-note" : "pa1-choice";
+    return ChatMessage.implementation.create({ speaker: { alias: "Narrator" },
+      content: `<div class="pa1 pa1-card pa1-readaloud-card"><p class="${cls}">${line.choice ? "▸ " : ""}${pc(esc(line.note ?? line.choice))}</p></div>` });
+  }
+  const img = speakerImg(line.speaker);
+  return ChatMessage.implementation.create({
+    speaker: { alias: pc(line.name, { html: false }), actor: actorFor(line.speaker)?.id ?? null },
+    content: `<div class="pa1 pa1-card pa1-readaloud-card pa1-says">${img ? `<img class="pa1-face" src="${esc(img)}" alt="">` : ""}`
+      + `<p class="pa1-line">${pc(esc(line.text))}</p></div>`
+  });
+}
+
+/** Read a lore scene aloud: each line posted as its speaker, so the chat log becomes the story so far. */
 export async function readScene(sceneId) {
   if ( !requireGM() ) return false;
   const s = CONTENT.scripts[sceneId];
   if ( !s ) return false;
   if ( sceneId === "ch1_broker" ) await addTrio({ quiet: true });
-  await postCard(s.name, sceneCardHTML(sceneId), { css: "pa1-readaloud-card" });
+  await postCard(s.name, "", { css: "pa1-scenehead-card" });
+  for ( const line of s.lines ) await postLine(line);
   const st = CONTENT.steps.find(x => x.scenes.includes(sceneId));
   if ( st && ["broker", "prologue", "sewer"].includes(st.key) ) await tickStep(st.key);
   return true;
@@ -68,6 +90,13 @@ export async function makeCharacter() {
     actor?.sheet?.render({ force: true });
   }
   if ( !actor ) return false;
+  const why = await DialogV2().prompt({
+    window: { title: `${actor.name}: why I need a ship` },
+    content: "<label>One line, in their words. The journal prompts come back to it. <input type=\"text\" name=\"why\" autofocus></label>",
+    ok: { label: "Save", callback: (e, button) => button.form.elements.why.value.trim() },
+    rejectClose: false
+  });
+  if ( why ) await actor.update({ "system.details.drive": why });
   const start = CONTENT.config.pcStart;
   await actor.update({ [`flags.${SCOPE}.key`]: "pc", "system.story.role": "pc", "system.currency.gp": start.gp,
     "system.currency.sp": start.sp, "system.currency.cp": start.cp });
@@ -272,13 +301,66 @@ export async function innRest() {
 /** The end of Act 1: the title card, then the session log. */
 export async function endAct() {
   if ( !requireGM() ) return false;
+  await postLine({ note: "On the next berth, a scruffy captain with his boots on a crate has been watching the four of them the whole time." });
   await postCard("", `<div class="pa1-titlecard"><p class="pa1-tc-small">The first ship left without them.</p>
     <p class="pa1-tc-title">Possibilities</p><p class="pa1-tc-small">End of Act 1 · to be continued with the Second Captain</p></div>`,
   { css: "pa1-titlecard-card" });
   await tickStep("ship");
   await sessionLog();
+  await postCard("Milestone", `<p>The end of Act 1 is a milestone: ${esc(CONTENT.config.milestone.note.replace(/^Draft: /, ""))}</p>
+    <div class="pa1-buttons"><button type="button" data-pa1-fn="milestone">Apply the milestone</button>
+    <button type="button" data-pa1-fn="writeBeat" data-arg="ship">Write the end of Act 1</button></div>`, { gmOnly: true });
+  writeBeat("ship");
   return true;
 }
+
+/** The end-of-act milestone: each hero's profession goes up one rank (to the configured rank). */
+export async function milestone() {
+  if ( !requireGM() ) return false;
+  const rank = CONTENT.config.milestone.profession;
+  for ( const a of partyHeroes() ) if ( a.system?.profession?.rank === "Novice" ) await a.update({ "system.profession.rank": rank });
+  await postCard("Milestone", `<p>Every hero's profession is now ${esc(rank)}.</p>`);
+  return true;
+}
+
+/* -------------------------------------------- Solo play -------------------------------------------- */
+
+/** The oracle: a yes/no question, likely / even / unlikely. */
+export async function oracle() {
+  const cfg = CONTENT.config.oracle;
+  const asked = await DialogV2().wait({
+    window: { title: "Ask the oracle" },
+    content: "<label>Your question (optional) <input type=\"text\" name=\"q\"></label><p>How likely is it?</p>",
+    buttons: ["likely", "even", "unlikely"].map(o => ({ action: o, label: o[0].toUpperCase() + o.slice(1),
+      callback: (e, button) => ({ odds: o, q: button.form?.elements?.q?.value?.trim() ?? "" }) })),
+    rejectClose: false
+  });
+  if ( !asked ) return false;
+  const odds = typeof asked === "string" ? asked : asked.odds;
+  const roll = await new Roll("1d20").evaluate();
+  const { total, answer } = oracleAnswer(roll.total, odds, cfg);
+  await postCard("The oracle", `${asked.q ? `<p class="pa1-muted">${esc(asked.q)}</p>` : ""}<p class="pa1-big">${esc(answer)}</p>
+    <p class="pa1-muted">d20 ${roll.total} ${cfg.odds[odds] ? `${cfg.odds[odds] > 0 ? "+" : "−"} ${Math.abs(cfg.odds[odds])} ` : ""}= ${total} · ${esc(odds)}</p>`);
+  return answer;
+}
+
+/** Copy my story: My Story as clean text, to the clipboard and in a window to copy by hand. */
+export async function copyStory() {
+  const journal = journalFor("story");
+  if ( !journal ) return false;
+  const pages = [...journal.pages.contents].sort((a, b) => (a.sort ?? 0) - (b.sort ?? 0));
+  const text = storyText(pages, pcName());
+  try {
+    await navigator.clipboard?.writeText(text);
+    ui.notifications.info("My Story is on the clipboard: paste it into Word.");
+  } catch {
+    // Clipboard may be blocked; the window below still has it.
+  }
+  await DialogV2().prompt({ window: { title: "My Story as text" }, position: { width: 640 },
+    content: `<textarea class="pa1-storytext" rows="20" readonly>${esc(text)}</textarea>`, ok: { label: "Close" }, rejectClose: false });
+  return text;
+}
+
 
 /* -------------------------------------------- My Story -------------------------------------------- */
 
@@ -314,7 +396,7 @@ export async function sessionLog() {
   return true;
 }
 
-/** The broker's board: draw an F-grade commission. */
+/** The broker's board (side work): draw an F-grade commission. */
 export async function brokerBoard() {
   if ( !requireGM() ) return false;
   const table = game.tables.get(CONTENT.ids.table);
@@ -335,8 +417,9 @@ export async function resetAct({ confirm=true }={}) {
     if ( !ok ) return false;
   }
   for ( const a of trio() ) {
-    await a.update({ "system.class.node": "", "system.class.rank": "Novice", "system.hp.value": 6, "system.points.value": 0,
-      "system.dying": { value: 0, active: false, stable: false, wounded: 0 }, "system.turn": { actions: 3, attacks: 0, guard: false } });
+    await a.update({ "system.class.node": "", "system.class.rank": "Novice", "system.profession.rank": "Novice", "system.hp.value": 6,
+      "system.points.value": 3, "system.dying": { value: 0, active: false, stable: false, wounded: 0 },
+      "system.turn": { actions: 3, attacks: 0, guard: false } });
     const loaners = a.items.filter(isLoaner).map(i => i.id);
     if ( loaners.length ) await a.deleteEmbeddedDocuments("Item", loaners);
     if ( a.getFlag?.(MODULE_ID, "collapsed") ) await a.unsetFlag(MODULE_ID, "collapsed");

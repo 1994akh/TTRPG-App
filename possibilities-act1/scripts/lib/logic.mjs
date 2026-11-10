@@ -99,3 +99,38 @@ export function loanerPlan(heroes) {
 export function introFor(intros, family) {
   return intros[family] ?? intros.Founding;
 }
+
+/* -------------------------------------------- Oracle -------------------------------------------- */
+
+/**
+ * The solo oracle: d20 + the odds' modifier, read against the bands (at or under each band's number).
+ * @param {number} d20
+ * @param {"likely"|"even"|"unlikely"} odds
+ * @param {{odds: object, bands: Array<[number, string]>}} cfg
+ */
+export function oracleAnswer(d20, odds, cfg) {
+  const total = d20 + (cfg.odds[odds] ?? 0);
+  return { total, answer: cfg.bands.find(([max]) => total <= max)?.[1] ?? cfg.bands.at(-1)[1] };
+}
+
+/* -------------------------------------------- Copy my story -------------------------------------------- */
+
+/** Journal HTML → clean text for pasting into Word: paragraphs and headings kept, links reduced to their labels. */
+export function htmlToText(html, pcName) {
+  let t = String(html ?? "");
+  t = t.replace(/@UUID\[[^\]]+\]\{([^}]*)\}/g, "$1").replace(/@Act1\[[^\]]+\]\{([^}]*)\}/g, "");
+  t = t.replace(/<span class="pa1-badge[^>]*>[\s\S]*?<\/span>/g, "").replace(/<aside[\s\S]*?<\/aside>/g, "");
+  t = t.replace(/<(br|hr)\s*\/?>/gi, "\n").replace(/<\/(p|h[1-6]|li|blockquote|section|div)>/gi, "\n").replace(/<li[^>]*>/gi, "• ");
+  t = t.replace(/<[^>]+>/g, "");
+  t = t.replace(/&nbsp;/g, " ").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, "\"").replace(/&#39;/g, "'").replace(/&amp;/g, "&");
+  t = withPC(t, pcName);
+  return t.split("\n").map(l => l.trim()).filter((l, i, a) => l || (a[i - 1] ?? "")).join("\n").trim();
+}
+
+/** All of My Story as text: each page's title, then what was written (prompts kept as lead-ins). */
+export function storyText(pages, pcName) {
+  return pages.filter(p => p.text?.content).map(p => {
+    const body = htmlToText(p.text.content, pcName);
+    return `${withPC(p.name, pcName).toUpperCase()}\n\n${body}`;
+  }).join("\n\n\n");
+}

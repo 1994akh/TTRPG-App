@@ -2,7 +2,7 @@
   "_id": "ZdinBL8KoEyWutvs",
   "name": "Hollis Tarrant",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "modules/possibilities-act1/assets/portraits/merchant.webp",
   "system": {
     "el": 0,
     "grade": "F",
@@ -45,7 +45,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "icons/svg/mystery-man.svg",
+      "src": "modules/possibilities-act1/assets/tokens/merchant.webp",
       "scaleX": 1,
       "scaleY": 1
     },

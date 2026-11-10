@@ -2,7 +2,7 @@
   "_id": "eOm3P4aqvuUldHmj",
   "name": "Tova",
   "type": "hero",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "modules/possibilities-act1/assets/portraits/protag3.webp",
   "system": {
     "race": "Trollblood",
     "raceGrade": "F",
@@ -23,7 +23,7 @@
       "temp": 0
     },
     "points": {
-      "value": 0
+      "value": 3
     },
     "dying": {
       "value": 0,
@@ -107,7 +107,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "icons/svg/mystery-man.svg",
+      "src": "modules/possibilities-act1/assets/tokens/protag3.webp",
       "scaleX": 1,
       "scaleY": 1
     },

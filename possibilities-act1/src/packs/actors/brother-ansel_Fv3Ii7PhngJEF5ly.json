@@ -2,7 +2,7 @@
   "_id": "Fv3Ii7PhngJEF5ly",
   "name": "Brother Ansel",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "modules/possibilities-act1/assets/portraits/ansel.webp",
   "system": {
     "el": 1,
     "grade": "F",
@@ -45,7 +45,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "icons/svg/mystery-man.svg",
+      "src": "modules/possibilities-act1/assets/tokens/ansel.webp",
       "scaleX": 1,
       "scaleY": 1
     },

@@ -1,10 +1,9 @@
 /**
- * The "Rules of Possibilities" journal: what this system implements, page by page. Defaults the workbook does not
- * settle are marked "Default, pending your answer" (they are questions on the Possibilities Foundry decisions page).
+ * "Rules of Possibilities" journal: what this system implements, page by page. Where the workbook was silent,
+ * the rule is the one the user chose on the decisions page (10 Nov 2026).
  */
 import { DEFAULTS } from "../module/config.mjs";
 
-const PENDING = '<span class="poss-pending">Default, pending your answer</span>';
 
 export function rulesPages(c) {
   const k = c.engine.constants;
@@ -55,20 +54,22 @@ export function rulesPages(c) {
         <table><tr><th>Action</th><th>Cost</th><th>Effect</th></tr>
         <tr><td>Strike</td><td>${costs.strike}</td><td>Attack vs AC. 2nd attack in a turn −4, 3rd and later −8. Critical: damage × ${DEFAULTS.critDamageMultiplier}.</td></tr>
         <tr><td>Stride</td><td>${costs.stride}</td><td>Move one zone (Engaged, Near, Far, Distant).</td></tr>
-        <tr><td>Raise Guard</td><td>${costs.guard}</td><td>+${DEFAULTS.guardBonus} AC until your next turn. ${PENDING}</td></tr>
-        <tr><td>Aid</td><td>${costs.aid}</td><td>+${DEFAULTS.aidBonus} to one ally's next check. ${PENDING}</td></tr>
+        <tr><td>Raise Guard</td><td>${costs.guard}</td><td>+${DEFAULTS.guardBonus} AC until your next turn.</td></tr>
+        <tr><td>Aid</td><td>${costs.aid}</td><td>+${DEFAULTS.aidBonus} to the next check of one ally within Near.</td></tr>
         <tr><td>Stabilise</td><td>${costs.stabilise}</td><td>An Engaged ally at 0 HP stops Dying, no roll.</td></tr>
         <tr><td>Recall Knowledge</td><td>${costs.recall}</td><td>A check to learn about a foe.</td></tr>
         <tr><td>Interact</td><td>${costs.interact}</td><td>Draw, pick up, open, pull a lever.</td></tr>
         <tr><td>Withdraw</td><td>${costs.withdraw}</td><td>Leave the fight.</td></tr>
         <tr><td>Signatures and spells</td><td>as listed</td><td>Cost points: tier = points.</td></tr>
         </table>
-        <p>The points pool for signatures and spells is <b>${DEFAULTS.pointsFormula.replace("@combatEL", "Combat EL")}</b>, refilled by a long rest. ${PENDING}</p>`
+        <p>The points pool for signatures and spells is <b>${DEFAULTS.pointsFormula.replace("@combatEL", "Combat EL")}</b>, refilled by a long rest. Profession signatures can be used before binding, from the same pool.</p>
+        <p><b>Improvised weapons</b> (a pry bar, a lamp): d4 at −2, unless your profession uses the tool (a Tinker with a wrench), then d6 with no penalty. <b>Unarmed</b>: d4.</p>
+        <p><b>Your own dice:</b> turn on the <i>Enter my own rolls</i> world setting and every check, Strike, damage and effort roll asks for the number you rolled instead of rolling.</p>`
     },
     {
       name: "Dying",
       content: `<p>At 0 HP a hero gains <b>Dying</b>. At the start of each of their turns they make a recovery check: d20 + CON
-        save vs DC ${DEFAULTS.recoveryDC}. ${PENDING}</p>
+        save vs DC ${DEFAULTS.recoveryDC}.</p>
         <ul><li>Success: stable at 0 HP.</li><li>Failure: mark a pip. ${DEFAULTS.dyingPips} pips in one fight: dead.</li>
         <li>Stabilise (any ally, 1 action) or healing above 0 ends Dying.</li>
         <li>Each time a hero recovers they gain Wounded; Wounded adds failed pips when Dying starts again that day.</li></ul>
@@ -81,29 +82,30 @@ export function rulesPages(c) {
         "Scene") has <b>Resistance</b> (its hit points), a DC, and <b>approaches</b>. Each approach is <b>Full</b>,
         <b>Half</b> or <b>None</b> for a hero, by their class, profession or trained skills; the Scene sheet shows each
         hero's aptness before they try.</p>
-        <p>An attempt (1 action ${PENDING}) is the approach's skill check vs the Scene DC. On a success the hero's effort
+        <p>An attempt (1 action) is the approach's skill check vs the Scene DC. On a success the hero's effort
         (Craft effort for Craft skills, Strike damage for Combat skills) comes off Resistance: × 1 Full, × ½ Half, × 0 None,
         × ${DEFAULTS.critDamageMultiplier} on a critical. A failure triggers a <b>Setback</b> when the approach says so; a
-        critical failure always does. Setbacks can deal damage and damage loaned gear.</p>
+        critical failure always does. When the Scene's clock moves (once per round), one Setback also strikes a hero. Setbacks can deal damage and damage loaned gear.</p>
         <p>A Scene may have a <b>clock</b>, which ticks once per round when the Scene is in the combat tracker. When the
         clock runs out, the Scene is lost.</p>
+        <p>Profession XP comes from Scenes and story milestones.</p>
         <p>Fights can often be solved by a Scene instead, for the same reward.</p>`
     },
     {
       name: "Foes",
       content: `<p>NPC stats default to the Engine sheet's benchmarks and can be overridden on the sheet.</p>
         <ul><li>AC = ${k.enemy_ac_base.value} + EL + grade compensation. Attack = ${k.enemy_attack_base.value} + EL + grade compensation.</li>
-        <li>HP = (${k.enemy_hp_base.value} + ${k.enemy_hp_per_el.value} × EL) × RGM × role (minion ½, standard 1, elite 1½, boss 2½ ${PENDING}).</li>
+        <li>HP = (${k.enemy_hp_base.value} + ${k.enemy_hp_per_el.value} × EL) × RGM × role (minion ½, standard 1, elite 1½, boss 2½).</li>
         <li>Damage per round = ${k.enemy_damage_per_el.value} × EL × RGM (at least 1), shown as dice.</li></ul>`
     },
     {
       name: "Rest, money and gear",
-      content: `<p><b>Short rest:</b> spend hit dice (each heals hit die + CON); you have max(1, Combat EL) dice a day. ${PENDING}
+      content: `<p><b>Short rest:</b> spend hit dice (each heals hit die + CON); you have max(1, Combat EL) dice a day.
         <b>Long rest:</b> full HP and points; Dying and Wounded clear.</p>
-        <p><b>Money:</b> 10 cp = 1 sp, 10 sp = 1 gp, 10 gp = 1 pp. Prices and wages × ${k.grade_price_multiplier.value} per
+        <p><b>Money:</b> 10 copper bits = 1 silver mark, 10 silver marks = 1 gold crown, 10 gold crowns = 1 platinum charter (cp, sp, gp, pp). Prices and wages × ${k.grade_price_multiplier.value} per
         grade (a longsword is 15 gp at F, 45 gp at E).</p>
         <p><b>Loaned gear</b> carries a Loaned badge and a condition: intact, damaged or broken. Condition has no effect on
-        rolls yet. ${PENDING}</p>`
+        rolls.</p>`
     }
   ];
 }

@@ -2,7 +2,7 @@
   "_id": "BPsM8qRGzPdavixq",
   "name": "Old Gnaw",
   "type": "npc",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "modules/possibilities-act1/assets/portraits/old_gnaw.webp",
   "system": {
     "el": 0,
     "grade": "F",
@@ -118,7 +118,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "icons/svg/mystery-man.svg",
+      "src": "modules/possibilities-act1/assets/tokens/old_gnaw.webp",
       "scaleX": 1,
       "scaleY": 1
     },

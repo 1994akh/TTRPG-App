@@ -55,7 +55,7 @@ export function setting(key, fallback) {
   try {
     const v = game?.settings?.get("possibilities", key);
     return v ?? fallback;
-  } catch ( err ) {
+  } catch {
     return fallback;
   }
 }

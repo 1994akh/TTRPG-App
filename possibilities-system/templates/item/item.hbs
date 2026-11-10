@@ -34,6 +34,8 @@
     <label>{{localize "POSS.Die"}} <select name="system.die">{{selectOptions dice selected=system.die}}</select></label>
     <label>{{localize "POSS.Range"}} <select name="system.range">{{selectOptions ranges selected=system.range}}</select></label>
     <label>{{localize "POSS.Traits"}} <input type="text" name="system.traits" value="{{system.traits}}"></label>
+    <label class="inline"><input type="checkbox" name="system.improvised" {{checked system.improvised}}> {{localize "POSS.Improvised"}}</label>
+    <label>{{localize "POSS.ToolOf"}} <input type="text" name="system.tools" value="{{system.tools}}" placeholder="Tinker, Miner"></label>
     <label>{{localize "POSS.DamageOverride"}} <input type="text" name="system.damage" value="{{system.damage}}" placeholder="NPCs: 1d6 + 2"></label>
     <label class="inline"><input type="checkbox" name="system.equipped" {{checked system.equipped}}> {{localize "POSS.Equipped"}}</label>
   </div>

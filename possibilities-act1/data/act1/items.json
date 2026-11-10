@@ -1,51 +1,309 @@
 {
   "note": "Act 1's items. Draft by Claude: every price, die and description, except the pocket watch's lore text (Glossary). Prices are F-grade; they multiply by 3 per grade index.",
   "loaners": [
-    { "key": "loaner_blade", "type": "weapon", "name": "Loaned blade", "count": 4, "die": "d6", "range": "engaged", "traits": "basic", "price": { "value": 5, "denom": "gp" },
-      "description": "A plain short blade from the Exchange's back room, stamped SALLOW on the tang." },
-    { "key": "charge_lamp", "type": "gear", "name": "Loaned charge lamp (with mirror)", "count": 1, "price": { "value": 6, "denom": "gp" },
-      "description": "A brass charge-lamp with a hinged mirror hood for throwing the beam." },
-    { "key": "pry_bar", "type": "gear", "name": "Loaned pry bar", "count": 1, "price": { "value": 4, "denom": "gp" },
-      "description": "Iron, a yard long, bent at one end." }
+    {
+      "key": "loaner_blade",
+      "type": "weapon",
+      "name": "Loaned blade",
+      "count": 4,
+      "die": "d6",
+      "range": "engaged",
+      "traits": "basic",
+      "price": {
+        "value": 5,
+        "denom": "gp"
+      },
+      "description": "A plain short blade from the Exchange's back room, stamped SALLOW on the tang."
+    },
+    {
+      "key": "charge_lamp",
+      "type": "gear",
+      "name": "Loaned charge lamp (with mirror)",
+      "count": 1,
+      "price": {
+        "value": 6,
+        "denom": "gp"
+      },
+      "description": "A brass charge-lamp with a hinged mirror hood for throwing the beam."
+    },
+    {
+      "key": "pry_bar",
+      "type": "weapon",
+      "name": "Loaned pry bar",
+      "count": 1,
+      "price": {
+        "value": 4,
+        "denom": "gp"
+      },
+      "description": "Iron, a yard long, bent at one end.",
+      "die": "d4",
+      "range": "engaged",
+      "traits": "improvised: d4 and -2 to hit, unless your profession uses the tool (a Tinker uses it at d6, no penalty)"
+    }
   ],
   "key": [
-    { "key": "pocket_watch", "type": "gear", "name": "The inventor's pocket watch", "keyItem": true, "holder": "enkrid", "lore": "pocket_watch",
-      "description": "" },
-    { "key": "sellswords_journal", "type": "gear", "name": "The sellswords' journal", "keyItem": true, "handout": "sellswords_journal",
-      "description": "A Coldwater sellsword's pocket journal, found by the bodies in the Undercourses." }
+    {
+      "key": "pocket_watch",
+      "type": "gear",
+      "name": "The inventor's pocket watch",
+      "keyItem": true,
+      "holder": "enkrid",
+      "lore": "pocket_watch",
+      "description": "",
+      "engraving": "The engraving reads: ____________ (yours to write: edit this item's description once, and the flashback page points here)."
+    },
+    {
+      "key": "sellswords_journal",
+      "type": "gear",
+      "name": "The sellswords' journal",
+      "keyItem": true,
+      "handout": "sellswords_journal",
+      "description": "A Coldwater sellsword's pocket journal, found by the bodies in the Undercourses."
+    }
   ],
   "kits": [
-    { "key": "kit_deckhand", "name": "Deckhand's kit", "contents": [
-      { "type": "gear", "name": "Hemp rope (50 ft)", "price": { "value": 1, "denom": "gp" } },
-      { "type": "weapon", "name": "Deck knife", "die": "d4", "range": "engaged", "traits": "light", "price": { "value": 2, "denom": "gp" } },
-      { "type": "gear", "name": "Oilskin coat", "price": { "value": 2, "denom": "gp" } },
-      { "type": "gear", "name": "Hardtack ration", "quantity": 3, "price": { "value": 5, "denom": "sp" } }
-    ] },
-    { "key": "kit_scrivener", "name": "Scrivener's kit", "contents": [
-      { "type": "gear", "name": "Ink, pens and a chart roll", "price": { "value": 3, "denom": "gp" } },
-      { "type": "gear", "name": "Chalk and charcoal sticks", "quantity": 6, "price": { "value": 1, "denom": "sp" } },
-      { "type": "weapon", "name": "Walking staff", "die": "d6", "range": "engaged", "traits": "two-handed", "price": { "value": 1, "denom": "gp" } },
-      { "type": "gear", "name": "Hardtack ration", "quantity": 3, "price": { "value": 5, "denom": "sp" } }
-    ] },
-    { "key": "kit_tinker", "name": "Tinker's roll", "contents": [
-      { "type": "gear", "name": "Tinker's tools", "price": { "value": 5, "denom": "gp" } },
-      { "type": "gear", "name": "Spare charge cell", "quantity": 2, "price": { "value": 2, "denom": "gp" } },
-      { "type": "weapon", "name": "Spanner", "die": "d4", "range": "engaged", "traits": "light", "price": { "value": 1, "denom": "gp" } },
-      { "type": "gear", "name": "Hardtack ration", "quantity": 3, "price": { "value": 5, "denom": "sp" } }
-    ] }
+    {
+      "key": "kit_deckhand",
+      "name": "Deckhand's kit",
+      "contents": [
+        {
+          "type": "gear",
+          "name": "Hemp rope (50 ft)",
+          "price": {
+            "value": 1,
+            "denom": "gp"
+          }
+        },
+        {
+          "type": "weapon",
+          "name": "Deck knife",
+          "die": "d4",
+          "range": "engaged",
+          "traits": "light",
+          "price": {
+            "value": 2,
+            "denom": "gp"
+          }
+        },
+        {
+          "type": "gear",
+          "name": "Oilskin coat",
+          "price": {
+            "value": 2,
+            "denom": "gp"
+          }
+        },
+        {
+          "type": "gear",
+          "name": "Hardtack ration",
+          "quantity": 3,
+          "price": {
+            "value": 5,
+            "denom": "sp"
+          }
+        }
+      ]
+    },
+    {
+      "key": "kit_scrivener",
+      "name": "Scrivener's kit",
+      "contents": [
+        {
+          "type": "gear",
+          "name": "Ink, pens and a chart roll",
+          "price": {
+            "value": 3,
+            "denom": "gp"
+          }
+        },
+        {
+          "type": "gear",
+          "name": "Chalk and charcoal sticks",
+          "quantity": 6,
+          "price": {
+            "value": 1,
+            "denom": "sp"
+          }
+        },
+        {
+          "type": "weapon",
+          "name": "Walking staff",
+          "die": "d6",
+          "range": "engaged",
+          "traits": "two-handed",
+          "price": {
+            "value": 1,
+            "denom": "gp"
+          }
+        },
+        {
+          "type": "gear",
+          "name": "Hardtack ration",
+          "quantity": 3,
+          "price": {
+            "value": 5,
+            "denom": "sp"
+          }
+        }
+      ]
+    },
+    {
+      "key": "kit_tinker",
+      "name": "Tinker's roll",
+      "contents": [
+        {
+          "type": "gear",
+          "name": "Tinker's tools",
+          "price": {
+            "value": 5,
+            "denom": "gp"
+          }
+        },
+        {
+          "type": "gear",
+          "name": "Spare charge cell",
+          "quantity": 2,
+          "price": {
+            "value": 2,
+            "denom": "gp"
+          }
+        },
+        {
+          "type": "weapon",
+          "name": "Spanner",
+          "die": "d4",
+          "range": "engaged",
+          "traits": "light",
+          "price": {
+            "value": 1,
+            "denom": "gp"
+          }
+        },
+        {
+          "type": "gear",
+          "name": "Hardtack ration",
+          "quantity": 3,
+          "price": {
+            "value": 5,
+            "denom": "sp"
+          }
+        }
+      ]
+    }
   ],
   "shop": [
-    { "type": "weapon", "name": "Longsword", "die": "d8", "range": "engaged", "traits": "versatile", "price": { "value": 15, "denom": "gp" } },
-    { "type": "weapon", "name": "Boat hook", "die": "d6", "range": "engaged", "traits": "reach to Near", "price": { "value": 4, "denom": "gp" } },
-    { "type": "weapon", "name": "Hand crossbow", "die": "d6", "range": "far", "traits": "reload 1 action", "price": { "value": 25, "denom": "gp" } },
-    { "type": "weapon", "name": "Charge pistol", "die": "d8", "range": "far", "traits": "needs a charge cell per 6 shots", "price": { "value": 45, "denom": "gp" } },
-    { "type": "armour", "name": "Padded dock coat", "armourType": "Light", "bonus": 0, "price": { "value": 10, "denom": "gp" } },
-    { "type": "armour", "name": "Riveted brigandine", "armourType": "Medium", "bonus": 0, "price": { "value": 30, "denom": "gp" } },
-    { "type": "gear", "name": "Charge cell", "price": { "value": 2, "denom": "gp" } },
-    { "type": "gear", "name": "Hemp rope (50 ft)", "price": { "value": 1, "denom": "gp" } },
-    { "type": "gear", "name": "Lantern oil (flask)", "price": { "value": 1, "denom": "sp" } },
-    { "type": "gear", "name": "Physician's tonic", "price": { "value": 5, "denom": "gp" }, "description": "Drink (1 action): heal 1d6 + 1." },
-    { "type": "gear", "name": "Hardtack ration", "price": { "value": 5, "denom": "sp" } },
-    { "type": "gear", "name": "A night at the Lantern and Lee", "price": { "value": 5, "denom": "sp" } }
+    {
+      "type": "weapon",
+      "name": "Longsword",
+      "die": "d8",
+      "range": "engaged",
+      "traits": "versatile",
+      "price": {
+        "value": 15,
+        "denom": "gp"
+      }
+    },
+    {
+      "type": "weapon",
+      "name": "Boat hook",
+      "die": "d6",
+      "range": "engaged",
+      "traits": "reach to Near",
+      "price": {
+        "value": 4,
+        "denom": "gp"
+      }
+    },
+    {
+      "type": "weapon",
+      "name": "Hand crossbow",
+      "die": "d6",
+      "range": "far",
+      "traits": "reload 1 action",
+      "price": {
+        "value": 25,
+        "denom": "gp"
+      }
+    },
+    {
+      "type": "weapon",
+      "name": "Charge pistol",
+      "die": "d8",
+      "range": "far",
+      "traits": "needs a charge cell per 6 shots",
+      "price": {
+        "value": 45,
+        "denom": "gp"
+      }
+    },
+    {
+      "type": "armour",
+      "name": "Padded dock coat",
+      "armourType": "Light",
+      "bonus": 0,
+      "price": {
+        "value": 10,
+        "denom": "gp"
+      }
+    },
+    {
+      "type": "armour",
+      "name": "Riveted brigandine",
+      "armourType": "Medium",
+      "bonus": 0,
+      "price": {
+        "value": 30,
+        "denom": "gp"
+      }
+    },
+    {
+      "type": "gear",
+      "name": "Charge cell",
+      "price": {
+        "value": 2,
+        "denom": "gp"
+      }
+    },
+    {
+      "type": "gear",
+      "name": "Hemp rope (50 ft)",
+      "price": {
+        "value": 1,
+        "denom": "gp"
+      }
+    },
+    {
+      "type": "gear",
+      "name": "Lantern oil (flask)",
+      "price": {
+        "value": 1,
+        "denom": "sp"
+      }
+    },
+    {
+      "type": "gear",
+      "name": "Physician's tonic",
+      "price": {
+        "value": 5,
+        "denom": "gp"
+      },
+      "description": "Drink (1 action): heal 1d6 + 1."
+    },
+    {
+      "type": "gear",
+      "name": "Hardtack ration",
+      "price": {
+        "value": 5,
+        "denom": "sp"
+      }
+    },
+    {
+      "type": "gear",
+      "name": "A night at the Lantern and Lee",
+      "price": {
+        "value": 5,
+        "denom": "sp"
+      }
+    }
   ]
 }
