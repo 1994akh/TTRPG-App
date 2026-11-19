@@ -10,7 +10,32 @@ from the Ashford lore in `possibilities-act1/data/lore/` and the answers on the 
 (`possibilities-act1/docs/decisions/ANSWERS.md`). **Add your own Halcyra art research where it sharpens a prompt;
 keep the canon list below as it is.**
 
-## 1. What to make
+## Scope now: the map only
+
+The owner, 19 Nov 2026: "Just make the map then to reduce costs." Make only `city_map`, with no reference image (the
+style anchor only mattered for keeping a set alike). Cost: 8 drafts at 512 px (~208 neurons) and 2 finals at
+1920×1920 (~834), about **1,040 neurons, a tenth of one free day**. Everything below about the other images is kept
+for later and not run now.
+
+```bash
+node ashford-roads-city/generate.mjs city_map --dry-run --draft --candidates 8
+```
+
+```bash
+node ashford-roads-city/generate.mjs city_map --draft --candidates 8
+```
+
+Show the owner the 8 drafts. Make the finals from the 2 seeds they like (for example 1003 and 1006):
+
+```bash
+node ashford-roads-city/generate.mjs city_map --seeds 1003,1006
+```
+
+Copy the pick to `final/city_map.png`, note it in `final/CHOSEN.md`, and add the labels from section 6 in an editor.
+For D&D Beyond, save a JPG or WEBP under 10 MB (a 1920×1920 high-quality JPG is about 1-2 MB), and keep the
+unlabelled copy as the player version.
+
+## 1. What to make (later; only the map now)
 
 | # | Id | Image | Size (px) | Why |
 |---|---|---|---|---|

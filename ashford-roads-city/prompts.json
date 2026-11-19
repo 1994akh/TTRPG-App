@@ -103,9 +103,7 @@
    "group": "main",
    "width": 1920,
    "height": 1920,
-   "references": [
-    "final/style_anchor.png"
-   ],
+   "references": [],
    "scene": "Bird's-eye map of the harbour city of Ashford Roads on weathered ledger paper color #E6DCC3, ink and watercolour, an RPG sourcebook map. North up.",
    "subjects": [
     {
@@ -378,5 +376,6 @@
   "daily_cap": 9000,
   "_note": "Neurons per 512x512 tile (a part tile counts as one). Input images cost about 26 each, measured on the dashboard by the Gumbo run (the pricing page's 5.37 undercounts). FLUX.2 [dev] would cost 37.5 per output tile per step, about 9,000 for one 28-step banner, so it is not used."
  },
- "state_file": "~/.gumbo/cloudflare-neurons.json"
+ "state_file": "~/.gumbo/cloudflare-neurons.json",
+ "scope": "Map only (the owner, 19 Nov 2026: \"Just make the map then to reduce costs\"). The other images stay here for later; run only city_map."
 }
