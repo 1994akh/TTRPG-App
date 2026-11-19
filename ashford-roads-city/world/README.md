@@ -31,6 +31,6 @@ Labels are only places the lore names (`possibilities-act1/data/lore/`):
 Placement, confirmed by the owner on 19 Nov 2026 (the lore gives no directions): the mainland west, the Reach's
 islands east, Kelder's Wall beyond them; Coldwater close to Ashford, to the north-east, where the wind comes in; the
 islands of the Reach (the beastkin home rocks and the harbours of "every dock in the Reach") drawn without names.
-The shipping lanes, the one sky ship, and where the village sits on the plains are illustration, not lore.
+The shipping lanes, the charge-engine steamers, the lit charge beacons on some islands, the two sky ships and their route (sky ships are rare and new, so only two), and where the village sits on the plains are illustration, not lore.
 
 Not shown: book one's islands 1-5 (unnamed, and past the first ship's course, which the lore doesn't map).

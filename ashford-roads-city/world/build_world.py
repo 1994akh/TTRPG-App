@@ -22,7 +22,8 @@ FONTS = HERE.parents[1] / "ravenmoor-manor" / "assets" / "fonts"
 W, H = 3600, 2400
 PAPER, INK, SOOT, BRASS, VERD, AMBER, FIRE, BRUME = (
     "#E6DCC3", "#1E1B18", "#4A423A", "#B5893A", "#4E8C7D", "#F2A541", "#D9622B", "#9AA3A6")
-LAND, LAND2, SEA, SEA2, DEEP = "#d9ccaa", "#cbbd98", "#9fb0b3", "#8c9fa4", "#6f8288"
+LAND, LAND2, SEA, SEA2, DEEP = "#cdb487", "#bfa475", "#4f817a", "#3f6c67", "#2c4f4c"   # steampunk: sepia land, verdigris sea
+IRON, COPPER = "#3b3631", "#b0643a"
 
 ASHFORD = (780, 1290)
 COLDWATER = (1250, 980)
@@ -134,7 +135,7 @@ def build(labels: bool) -> str:
     land = mainland()
     defs = f"""<style>{font_face()}
 .lab{{font-family:"Fell",Georgia,serif;fill:{INK};paint-order:stroke;stroke:{PAPER};stroke-width:7px;stroke-linejoin:round}}
-.sea{{font-style:italic;fill:#33434a;stroke:#b8c4c6;letter-spacing:.14em}}
+.sea{{font-style:italic;fill:#f0dfb3;stroke:#24403d;letter-spacing:.14em}}
 .region{{letter-spacing:.3em;fill:#3a352e}}
 .it{{font-style:italic}}
 .fog{{font-style:italic;fill:#5b6569;stroke:#eef0ee;letter-spacing:.2em}}
@@ -151,7 +152,7 @@ def build(labels: bool) -> str:
  <path d="M8,22 l3,-8 M12,22 l0,-9 M16,22 l-3,-8 M28,10 l3,-7 M32,10 l0,-8 M36,10 l-3,-7" stroke="#8f8f62" stroke-width="1.6" fill="none"/></pattern>
 <pattern id="ash" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><rect width="16" height="16" fill="#c9c2b1"/>
  <line x1="0" y1="0" x2="0" y2="16" stroke="#9e9684" stroke-width="2"/></pattern>
-<pattern id="waves" width="90" height="46" patternUnits="userSpaceOnUse"><path d="M6,30 q10,-9 20,0 q10,9 20,0" fill="none" stroke="#dfe5e4" stroke-width="2" opacity=".55"/></pattern>
+<pattern id="waves" width="90" height="46" patternUnits="userSpaceOnUse"><path d="M6,30 q10,-9 20,0 q10,9 20,0" fill="none" stroke="#9cc4bb" stroke-width="2" opacity=".5"/></pattern>
 """
     # sea, then the paper texture over everything
     el.append(f'<rect width="{W}" height="{H}" fill="url(#sea)"/>')
@@ -252,46 +253,119 @@ def build(labels: bool) -> str:
     for i in range(10):
         x, y = rng.uniform(1700, WALL_X), rng.uniform(0, H)
         el.append(f'<ellipse cx="{x:.0f}" cy="{y:.0f}" rx="{rng.uniform(120,240):.0f}" ry="{rng.uniform(50,110):.0f}" fill="#eef0ee" opacity=".25" filter="url(#b60)"/>')
-    # paper over all, vignette
-    el.append(f'<rect width="{W}" height="{H}" fill="{PAPER}" opacity=".18"/>')
+    # paper grain and an engraved-brass tone over all, vignette
+    el.append(f'<rect width="{W}" height="{H}" fill="#b08a4a" opacity=".10"/>')
     el.append(f'<rect width="{W}" height="{H}" fill="{PAPER}" filter="url(#paper)"/>')
     el.append(f'<rect width="{W}" height="{H}" fill="url(#vig)"/>')
-    # frame: riveted brass with cogs
-    m = 34
-    el.append(f'<rect x="{m}" y="{m}" width="{W-2*m}" height="{H-2*m}" fill="none" stroke="{INK}" stroke-width="6"/>'
-              f'<rect x="{m+7}" y="{m+7}" width="{W-2*m-14}" height="{H-2*m-14}" fill="none" stroke="{BRASS}" stroke-width="10" opacity=".6"/>'
-              f'<rect x="{m+16}" y="{m+16}" width="{W-2*m-32}" height="{H-2*m-32}" fill="none" stroke="{BRASS}" stroke-width="3"/>')
-    for k in range(m + 60, max(W, H) - m - 40, 80):
-        for (x, y) in [(k, m + 7), (k, H - m - 7), (m + 7, k), (W - m - 7, k)]:
-            if x <= W - m and y <= H - m:
-                el.append(f'<circle cx="{x}" cy="{y}" r="3.2" fill="#e0c27a" stroke="{INK}" stroke-width="1.2"/>')
-    for (x, y) in [(m + 7, m + 7), (W - m - 7, m + 7), (m + 7, H - m - 7), (W - m - 7, H - m - 7)]:
-        el.append(cog(x, y, 48, 12))
-    # compass rose with cogs, in the Reach
-    cx, cy, r = 2020, 2040, 140
-    el.append(cog(cx + r, cy + r, 62, 14) + cog(cx, cy, r * 1.22, 26, fill="#c9a45a", hole=0.9))
-    rose = [f'<g transform="translate({cx},{cy})">', f'<circle r="{r*1.05}" fill="{PAPER}" opacity=".9"/>',
-            f'<circle r="{r}" fill="none" stroke="{INK}" stroke-width="3"/>', f'<circle r="{r*.82}" fill="none" stroke="{BRASS}" stroke-width="2"/>']
+
+    # ---- steampunk furniture -----------------------------------------------------------------------------------
+    def steamer(x, y, rot, scale=1.0):
+        return (f'<g transform="translate({x},{y}) rotate({rot}) scale({scale})">'
+                f'<path d="M-70,-3 Q-130,0 -70,3" fill="none" stroke="#cfe3dc" stroke-width="3" opacity=".7"/>'
+                f'<path d="M-62,-10 Q-170,0 -62,10" fill="none" stroke="#cfe3dc" stroke-width="2" opacity=".45"/>'
+                f'<path d="M-40,-11 L34,-11 Q52,0 34,11 L-40,11 Z" fill="{IRON}" stroke="{INK}" stroke-width="2"/>'
+                f'<rect x="-22" y="-7" width="34" height="14" fill="#6b4c2e" stroke="{INK}" stroke-width="1.5"/>'
+                f'<circle cx="-4" cy="0" r="6" fill="{COPPER}" stroke="{INK}" stroke-width="1.6"/>'
+                f'<circle cx="-30" cy="-14" r="5" fill="#7a6a58" stroke="{INK}" stroke-width="1.2"/><circle cx="-30" cy="14" r="5" fill="#7a6a58" stroke="{INK}" stroke-width="1.2"/>'
+                + "".join(f'<ellipse cx="{-14-j*30}" cy="{-6-j*5}" rx="{12+j*8}" ry="{8+j*4}" fill="#3d3a36" opacity="{.45-j*.08:.2f}" filter="url(#b6)"/>' for j in range(5))
+                + '</g>')
+
+    def beacon(x, y):
+        return (f'<circle cx="{x}" cy="{y-26}" r="26" fill="url(#glowA)"/>'
+                f'<path d="M{x-7},{y} L{x-4},{y-22} L{x+4},{y-22} L{x+7},{y} Z" fill="{BRASS}" stroke="{INK}" stroke-width="1.6"/>'
+                f'<rect x="{x-6}" y="{y-30}" width="12" height="8" fill="{AMBER}" stroke="{INK}" stroke-width="1.4"/>'
+                f'<path d="M{x-8},{y-30} L{x},{y-38} L{x+8},{y-30} Z" fill="{IRON}" stroke="{INK}" stroke-width="1.2"/>')
+
+    def gauge(cx, cy, r, ticks, needle_i, title=""):
+        g = [f'<circle cx="{cx}" cy="{cy}" r="{r+10}" fill="{BRASS}" stroke="{INK}" stroke-width="3"/>',
+             f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="#efe3c2" stroke="{INK}" stroke-width="2"/>']
+        n = len(ticks)
+        for i, t in enumerate(ticks):
+            a = math.radians(-225 + 270 * i / (n - 1))
+            g.append(f'<line x1="{cx+r*.78*math.cos(a):.1f}" y1="{cy+r*.78*math.sin(a):.1f}" x2="{cx+r*.95*math.cos(a):.1f}" y2="{cy+r*.95*math.sin(a):.1f}" stroke="{INK}" stroke-width="2.5"/>')
+            if labels and t:
+                g.append(f'<text x="{cx+r*.58*math.cos(a):.1f}" y="{cy+r*.58*math.sin(a)+8:.1f}" font-size="{r*.26:.0f}" text-anchor="middle" class="lab" style="stroke-width:0">{t}</text>')
+        a = math.radians(-225 + 270 * needle_i / (n - 1))
+        g.append(f'<line x1="{cx}" y1="{cy}" x2="{cx+r*.8*math.cos(a):.1f}" y2="{cy+r*.8*math.sin(a):.1f}" stroke="{FIRE}" stroke-width="4" stroke-linecap="round"/>'
+                 f'<circle cx="{cx}" cy="{cy}" r="7" fill="{IRON}" stroke="{INK}" stroke-width="2"/>')
+        if labels and title:
+            g.append(f'<text x="{cx}" y="{cy+r*.62:.0f}" font-size="{r*.17:.0f}" text-anchor="middle" class="lab it" style="stroke-width:0">{title}</text>')
+        return "".join(g)
+
+    defs_extra = (f'<radialGradient id="glowA"><stop offset="0%" stop-color="{AMBER}" stop-opacity=".95"/><stop offset="100%" stop-color="{AMBER}" stop-opacity="0"/></radialGradient>'
+                  f'<linearGradient id="ironband" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#5a524a"/><stop offset="50%" stop-color="{IRON}"/><stop offset="100%" stop-color="#24201c"/></linearGradient>'
+                  f'<linearGradient id="brassplate" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#d9b46a"/><stop offset="55%" stop-color="{BRASS}"/><stop offset="100%" stop-color="#7d5b22"/></linearGradient>')
+    globals()["_defs_extra"] = defs_extra
+
+    # charge beacons on some of the Reach's islands (lit towers, no names)
+    for (x, y, r) in placed[:46:5]:
+        el.append(beacon(x, y - r * .2))
+    el.append(beacon(COLDWATER[0] + 60, COLDWATER[1] - 30))
+    # charge-engine steamers working the lanes
+    for (x, y, rot) in [(1000, 1150, -40), (1650, 1335, -8), (2150, 1265, -6), (1280, 1640, 40), (1020, 1395, 60)]:
+        el.append(steamer(x, y, rot))
+    # two sky ships (rare and new): one over the Reach, one coming in to Ashford along a dashed sky-route
+    def skyship(sx, sy, rot, k=1.0):
+        return (f'<ellipse cx="{sx+40*k}" cy="{sy+70*k}" rx="{80*k}" ry="{24*k}" fill="{INK}" opacity=".18" filter="url(#b6)" transform="rotate({rot} {sx+40*k} {sy+70*k})"/>'
+                f'<g transform="translate({sx},{sy}) rotate({rot}) scale({k})"><ellipse cx="0" cy="0" rx="80" ry="25" fill="#d8c9a3" stroke="{INK}" stroke-width="2.4"/>'
+                + "".join(f'<line x1="{dx}" y1="{-23*math.sqrt(max(0,1-(dx/80)**2)):.1f}" x2="{dx}" y2="{23*math.sqrt(max(0,1-(dx/80)**2)):.1f}" stroke="{COPPER}" stroke-width="2"/>' for dx in range(-60, 70, 20))
+                + f'<line x1="-80" y1="0" x2="80" y2="0" stroke="{COPPER}" stroke-width="2"/>'
+                f'<rect x="-30" y="-8" width="60" height="16" rx="6" fill="#6b4c2e" stroke="{INK}" stroke-width="1.4"/>'
+                f'<circle cx="88" cy="0" r="9" fill="{AMBER}" stroke="{INK}" stroke-width="1.4"/><line x1="82" y1="-15" x2="94" y2="15" stroke="{INK}" stroke-width="2.4"/><line x1="82" y1="15" x2="94" y2="-15" stroke="{INK}" stroke-width="2.4"/>'
+                f'<path d="M-82,0 Q-150,-12 -230,4" fill="none" stroke="#f4f2ec" stroke-width="7" opacity=".5" filter="url(#b6)"/></g>')
+    el.append(f'<path d="M{ASHFORD[0]+40},{ASHFORD[1]-60} Q1200,700 1600,760 T2300,560" fill="none" stroke="{COPPER}" stroke-width="3" stroke-dasharray="4 14" stroke-linecap="round" opacity=".85"/>')
+    el.append(skyship(1600, 760, -12))
+    el.append(skyship(1420, 1080, 20, .8))
+
+    # frame: an iron band with rivets, a brass rail, pipes with valves, gear trains in the corners
+    m = 26
+    el.append(f'<rect x="{m}" y="{m}" width="{W-2*m}" height="{H-2*m}" fill="none" stroke="url(#ironband)" stroke-width="40"/>'
+              f'<rect x="{m-20}" y="{m-20}" width="{W-2*m+40}" height="{H-2*m+40}" fill="none" stroke="{INK}" stroke-width="4"/>'
+              f'<rect x="{m+20}" y="{m+20}" width="{W-2*m-40}" height="{H-2*m-40}" fill="none" stroke="{BRASS}" stroke-width="6"/>'
+              f'<rect x="{m+28}" y="{m+28}" width="{W-2*m-56}" height="{H-2*m-56}" fill="none" stroke="{INK}" stroke-width="2"/>')
+    for k in range(m + 70, W - m - 40, 70):
+        for y in (m, H - m):
+            el.append(f'<circle cx="{k}" cy="{y}" r="5" fill="#8f8577" stroke="{INK}" stroke-width="1.5"/><circle cx="{k-1.5}" cy="{y-1.5}" r="1.6" fill="#d6cdbf"/>')
+    for k in range(m + 70, H - m - 40, 70):
+        for x in (m, W - m):
+            el.append(f'<circle cx="{x}" cy="{k}" r="5" fill="#8f8577" stroke="{INK}" stroke-width="1.5"/><circle cx="{x-1.5}" cy="{k-1.5}" r="1.6" fill="#d6cdbf"/>')
+    for y in (H * .33, H * .66):                                                 # valves on the side pipes
+        for x in (m, W - m):
+            el.append(f'<rect x="{x-14}" y="{y-24:.0f}" width="28" height="48" rx="6" fill="{COPPER}" stroke="{INK}" stroke-width="2.4"/>'
+                      f'<circle cx="{x}" cy="{y:.0f}" r="18" fill="none" stroke="{BRASS}" stroke-width="5"/><line x1="{x-18}" y1="{y:.0f}" x2="{x+18}" y2="{y:.0f}" stroke="{BRASS}" stroke-width="4"/>')
+    for (x, y, sx_, sy_) in [(m, m, 1, 1), (W - m, m, -1, 1), (m, H - m, 1, -1), (W - m, H - m, -1, -1)]:
+        el.append(cog(x, y, 70, 14, fill="url(#brassplate)", sw=3) + cog(x + sx_ * 104, y + sy_ * 22, 40, 10, fill=COPPER, sw=2.4)
+                  + cog(x + sx_ * 22, y + sy_ * 104, 34, 9, fill=BRASS, sw=2.2))
+
+    # compass: a brass astrolabe with a degree ring, on gears
+    cx, cy, r = 2020, 2010, 150
+    el.append(cog(cx + r * 1.05, cy + r * .95, 66, 14, fill=COPPER) + cog(cx - r * 1.1, cy + r * .8, 46, 11)
+              + cog(cx, cy, r * 1.32, 30, fill="url(#brassplate)", hole=0.88))
+    rose = [f'<g transform="translate({cx},{cy})">', f'<circle r="{r*1.08}" fill="#efe3c2" stroke="{INK}" stroke-width="3"/>',
+            f'<circle r="{r}" fill="none" stroke="{INK}" stroke-width="2"/>', f'<circle r="{r*.84}" fill="none" stroke="{BRASS}" stroke-width="3"/>']
+    for d in range(0, 360, 5):
+        a = math.radians(d - 90)
+        L1 = r * (.9 if d % 30 else .84)
+        rose.append(f'<line x1="{L1*math.cos(a):.1f}" y1="{L1*math.sin(a):.1f}" x2="{r*math.cos(a):.1f}" y2="{r*math.sin(a):.1f}" stroke="{INK}" stroke-width="{2 if d % 30 == 0 else 1}"/>')
     for a in range(0, 360, 45):
-        L = r * (1 if a % 90 == 0 else .62)
+        L = r * (.82 if a % 90 == 0 else .55)
         ca, sa = math.cos(math.radians(a - 90)), math.sin(math.radians(a - 90))
         cl, sl = math.cos(math.radians(a)), math.sin(math.radians(a))
         w = 17 if a % 90 == 0 else 11
-        rose.append(f'<path d="M{ca*L:.1f},{sa*L:.1f} L{cl*w:.1f},{sl*w:.1f} L0,0Z" fill="{INK}"/><path d="M{ca*L:.1f},{sa*L:.1f} L{-cl*w:.1f},{-sl*w:.1f} L0,0Z" fill="{BRASS}"/>')
-    rose.append((text(0, -r - 16, "N", 48, "", 0, "middle", 'style="stroke-width:0"') if labels else "") + "</g>")
+        rose.append(f'<path d="M{ca*L:.1f},{sa*L:.1f} L{cl*w:.1f},{sl*w:.1f} L0,0Z" fill="{IRON}"/><path d="M{ca*L:.1f},{sa*L:.1f} L{-cl*w:.1f},{-sl*w:.1f} L0,0Z" fill="{BRASS}"/>')
+    rose.append(f'<circle r="12" fill="{COPPER}" stroke="{INK}" stroke-width="2"/>')
+    rose.append((text(0, -r * 1.42, "N", 50, "", 0, "middle", 'style="stroke-width:0"') if labels else "") + "</g>")
     el.append("".join(rose))
-    # one sky ship over the Reach (rare and new, so one)
-    sx, sy = 1600, 760
-    el.append(f'<ellipse cx="{sx+40}" cy="{sy+70}" rx="80" ry="24" fill="{INK}" opacity=".15" filter="url(#b6)" transform="rotate(-12 {sx+40} {sy+70})"/>'
-              f'<g transform="rotate(-12 {sx} {sy})"><ellipse cx="{sx}" cy="{sy}" rx="80" ry="25" fill="#d8cfb7" stroke="{INK}" stroke-width="2.4"/>'
-              + "".join(f'<line x1="{sx+dx}" y1="{sy-23*math.sqrt(max(0,1-(dx/80)**2)):.1f}" x2="{sx+dx}" y2="{sy+23*math.sqrt(max(0,1-(dx/80)**2)):.1f}" stroke="{BRASS}" stroke-width="2"/>' for dx in range(-60, 70, 20))
-              + f'<rect x="{sx-28}" y="{sy-7}" width="56" height="14" rx="6" fill="#6b4c2e" stroke="{INK}" stroke-width="1.4" opacity=".85"/>'
-              f'<circle cx="{sx+88}" cy="{sy}" r="8" fill="{AMBER}" stroke="{INK}" stroke-width="1.4"/></g>')
-    # cartouche
-    tx, ty, tw, th = 1080, 90, 1150, 250
-    el.append(f'<rect x="{tx}" y="{ty}" width="{tw}" height="{th}" fill="{PAPER}" stroke="{INK}" stroke-width="5"/>'
-              f'<rect x="{tx+14}" y="{ty+14}" width="{tw-28}" height="{th-28}" fill="none" stroke="{BRASS}" stroke-width="3"/>'
-              + cog(tx + tw, ty + th, 54, 12) + cog(tx + tw + 80, ty + th - 40, 32, 10, sw=2.4))
+
+    # title plate: riveted brass, with a grade gauge (F to S, the needle on F) and a brume gauge
+    tx, ty, tw, th = 1060, 80, 1190, 270
+    el.append(f'<rect x="{tx}" y="{ty}" width="{tw}" height="{th}" rx="10" fill="url(#brassplate)" stroke="{INK}" stroke-width="5"/>'
+              f'<rect x="{tx+22}" y="{ty+22}" width="{tw-44}" height="{th-44}" rx="6" fill="#efe3c2" stroke="{INK}" stroke-width="3"/>'
+              + "".join(f'<circle cx="{x}" cy="{y}" r="6" fill="#8f8577" stroke="{INK}" stroke-width="1.5"/>' for x in (tx + 11, tx + tw - 11) for y in (ty + 11, ty + th - 11))
+              + f'<path d="M{tx-70},{ty+th/2} H{tx}" stroke="{INK}" stroke-width="16"/><path d="M{tx-70},{ty+th/2} H{tx}" stroke="{COPPER}" stroke-width="10"/>'
+              f'<path d="M{tx+tw},{ty+th/2} H{tx+tw+70}" stroke="{INK}" stroke-width="16"/><path d="M{tx+tw},{ty+th/2} H{tx+tw+70}" stroke="{COPPER}" stroke-width="10"/>')
+    el.append(gauge(tx - 150, ty + th / 2, 92, ["F", "E", "D", "C", "B", "A", "S"], 0, "grade"))
+    el.append(gauge(tx + tw + 150, ty + th / 2, 92, ["", "", "", "", ""], 1, "brume"))
     if labels:
         el.append(text(tx + tw / 2, ty + 120, "The Known World", 104, "", 0, "middle", 'style="stroke-width:0"'))
         el.append(text(tx + tw / 2, ty + 185, "as charted from Ashford Roads", 40, "it", 0, "middle", 'style="stroke-width:0"'))
@@ -313,7 +387,7 @@ def build(labels: bool) -> str:
         for s, x, y, size, cls, rot in L:
             el.append(text(x, y, s, size, cls, rot))
         el.append(text(W - 80, H - 66, "Only places named in the lore are labelled. Islands of the Reach unnamed.", 20, "it", 0, "end", 'style="stroke-width:3px"'))
-    return f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}"><defs>{defs}{defs_land}</defs>{"".join(el)}</svg>'
+    return f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}"><defs>{defs}{defs_land}{globals().get("_defs_extra", "")}</defs>{"".join(el)}</svg>'
 
 
 def main() -> None:
