@@ -4,7 +4,8 @@ A brief for the session that has Cloudflare Workers AI connected (Halcrya Lead 2
 Beyond page about **Ashford Roads**, the home port of the owner's Wayfinder setting, drawn as a **D&D steampunk
 city**: the owner's words for the world are **Dungeonpunk** and **Gaslit fantasy**.
 
-Machine-readable prompts: [`prompts.json`](prompts.json). Runner: [`generate.mjs`](generate.mjs). Written 19 Nov 2026
+Machine-readable prompts: [`prompts.json`](prompts.json). Runner: [`generate.mjs`](generate.mjs). Written 19 Nov 2026,
+revised the same day after reading Game-Gumbo's tested Cloudflare skill (section 2a),
 from the Ashford lore in `possibilities-act1/data/lore/` and the answers on the Ashford Roads Decisions page
 (`possibilities-act1/docs/decisions/ANSWERS.md`). **Add your own Halcyra art research where it sharpens a prompt;
 keep the canon list below as it is.**
@@ -14,7 +15,7 @@ keep the canon list below as it is.**
 | # | Id | Image | Size (px) | Why |
 |---|---|---|---|---|
 | 0 | `style_anchor` | A style swatch: one painted vignette of a brass-and-soot Ashford street corner at dusk, with the palette shown as paint chips along the bottom | 1024×1024 | Reference image for every later call (downscaled to 512×512) |
-| 1 | `skyline_key_art` | Ashford from the harbour at dusk: refinery stacks, Long Quay, one airship, fog | 2048×1152 | Page banner / hero image |
+| 1 | `skyline_key_art` | Ashford from the harbour at dusk: refinery stacks, Long Quay, one airship, fog | 1920×1024 | Page banner / hero image |
 | 2 | `city_map` | Illustrated bird's-eye city map, no labels | 1920×1920 | The D&D Beyond map (labels added afterwards) |
 | 3 | `refinery_row` | District vignette | 1536×1024 | Section art |
 | 4 | `sallows_exchange` | Interior: the information broker's counting-room | 1536×1024 | Section art |
@@ -24,24 +25,52 @@ keep the canon list below as it is.**
 | 8 | `undercourses` | The sewers under Refinery Row (the dungeon) | 1536×1024 | Section art |
 | 9 | `coast_road_gate` | The Coast Road through the ash fields to the city gate | 1536×1024 | Section art |
 
-All sizes are multiples of 16 and at most 4 megapixels (FLUX.2's limit). Make them in this order: the anchor first,
+All sizes are multiples of 16, between 256 and 1920 px (klein 4B's range). Make them in this order: the anchor first,
 then the skyline, then the map, then the districts. Each later image takes the anchor (and, for the districts, the
 map) as reference images.
 
-## 2. Model and settings (Cloudflare Workers AI)
+## 2. Model, cost and limits (Cloudflare Workers AI, free allowance only)
 
-- **Model:** `@cf/black-forest-labs/flux-2-dev`. It takes structured JSON prompts and hex colours, and up to
-  4 reference images (`input_image_0` … `input_image_3`, 512×512 each), sent as multipart form data. Output is base64
-  in `image`, up to 4 MP.
-- **Settings to lock for the whole set:** `steps` 28, the same `width`/`height` per image type, and `guidance` and
-  `seed` **if your account accepts them**. Cloudflare's model page doesn't list `seed` or `guidance` for FLUX.2
-  [dev], so run `node generate.mjs --probe` first. It sends one small request with and without them and reports
-  which fields are accepted. If `seed` is refused, consistency comes from the reference images and the fixed style
-  block, and you pick the best of several runs.
-- **FLUX.2 has no negative prompt.** State what you want ("crisp ink linework, clean margins"), never "no blur".
-  Earlier words weigh more: subject first, then style, then context.
-- **Fast drafts:** `@cf/black-forest-labs/flux-2-klein-9b` (4 fixed steps) for composition tests only; final art on
-  `flux-2-dev`. FLUX.1 [schnell] is not used: it caps at 8 steps and handles hex palettes and references poorly.
+- **Model:** `@cf/black-forest-labs/flux-2-klein-4b`, the model Game-Gumbo tested on 19 Nov 2026. A multipart form
+  with `prompt`, `width`, `height`, `seed`, `guidance` and `input_image_0` … `input_image_3`; steps are fixed at 4 and
+  never sent. Prompts at most 2,048 characters; references under 512 px (511 at most); output 256-1920 px a side.
+- **Free allowance only** (the owner, 18 Nov 2026: "Cloudflare only"; Workers Paid is not on, so a call past the
+  allowance fails rather than bills). 10,000 neurons a day, reset 00:00 UTC; the runner stops at 9,000 by its own
+  count and shares the tally file with Gumbo's `cf_gen.py` (`~/.gumbo/cloudflare-neurons.json`), so the two never
+  overspend together. The dashboard holds the true count.
+- **Cost** (per 512×512 tile, a part tile counts as one): about 26 neurons an output tile, plus about 26 per reference
+  image (measured by the Gumbo run; Cloudflare's pricing page says 5.37, which undercounts).
+
+  | Image | Size | Refs | Each | Plan |
+  |---|---|---|---|---|
+  | style_anchor | 1024×1024 | 0 | ~104 | 8 drafts (208) + 4 finals (417) |
+  | skyline_key_art | 1920×1024 | 1 | ~234 | 8 drafts (416) + 4 finals (938) |
+  | city_map | 1920×1920 | 1 | ~443 | 8 drafts (416) + 4 finals (1,771) |
+  | 7 districts | 1536×1024 | 1-2 | ~182-208 | 3 drafts each (~1,100) + 3 finals each (4,063) |
+
+  **Two days:** day 1 the anchor, skyline and map (about 4,200); day 2 the districts (about 5,200). `--dry-run`
+  prints the plan and its neurons without a key and sends nothing.
+- **Why not FLUX.2 [dev]:** it costs 37.5 neurons per output tile *per step*: one 28-step 1920×1024 banner is about
+  8,400 neurons, the whole day. [klein] 9B prices by megapixel (about 1,364 for the first): also too dear.
+- **Drafts:** `--draft` makes the same prompt at 512 px on the long side (about 26-52 neurons) to choose a composition
+  and seed cheaply; the finals then reuse the winning seeds with `--seeds`.
+
+## 2a. What Game-Gumbo already learned (cf_gen.py and the ds_npc recipe, 19 Nov 2026)
+
+From `Game-Gumbo/.claude/skills/image-gen/` on `helper/claude-alt/cf-ds-npc-recipe` (the Cabbage Merchant run):
+- **Seeds work on klein 4B:** the same seed, prompt and references give the same picture. Keep the seed of every pick.
+- **Structured JSON prompts with hex colours per item** worked and kept a set consistent. The owner then: "copy or
+  model prompt structures to reduce our waste and keep consistency." The prompts here follow the same shape (a fixed
+  style block, named parts with hex colours, an `avoid` line).
+- **Output flag, error 3030:** franchise, show or character names, ages, and words like "old" or "elderly" set off
+  Cloudflare's output check. None are in these prompts ("the town", "weathered paper"). The flag rate was about 11%,
+  so plan for one candidate in eight to be skipped.
+- **Error 3036** (HTTP 429) means the day's free allowance is used: stop until 00:00 UTC.
+- **Reference order matters:** the image that sets the look goes first (`input_image_0`); a second image is read as a
+  layout or pose guide.
+- **The look test:** variants × seeds on one contact sheet for the owner to pick from; nothing is used until picked,
+  and every sidecar says `status: draft`.
+- **The token goes only to `https://api.cloudflare.com`**, with redirects refused, and is never printed or written.
 
 ## 3. Consistency rules
 
@@ -50,13 +79,13 @@ map) as reference images.
 2. **Hex colours tied to objects**, not "use these colours": FLUX.2 matches a hex code best when it's named next to
    the thing it colours ("charge-lamp glow color #F2A541").
 3. **Reference images:** after the anchor is chosen, every call sends it as `input_image_0` with the prompt line
-   "Match the painting style, brushwork and colour palette of image 0." The district calls also send the chosen
-   map, cropped to that district and downscaled, as `input_image_1` ("the layout and rooflines of image 1"). Keep
-   references at 512×512 or smaller.
+   "Match the painting style, brushwork and colour palette of image 0." The street-level districts (Refinery Row,
+   the Long Quay, the Coast Road gate) also send the chosen map as `input_image_1` ("follow the street layout and
+   rooflines of image 1"); crop it to that district first for a closer match. References at most 511 px a side.
 4. **Same settings per type:** all district vignettes 1536×1024, same steps, same seed range. One variable at a time.
-5. **Pick and log:** run 3-4 candidates per image (seeds `1001`-`1004`, or repeated runs). `generate.mjs` writes
-   `log.json` with the prompt, settings, seed and file of every run. The chosen one is copied to `final/`, so the
-   set can be redone exactly.
+5. **Draft, pick, then final:** 8 cheap 512 px drafts per main image (3 per district), pick the composition, then the
+   finals with those seeds (`--seeds 1003,1007`). `out/log.json` keeps the prompt, size, seed, guidance and references
+   of every picture; the chosen one goes to `final/` and a row in `final/CHOSEN.md`, so the set can be redone exactly.
 6. **Text:** AI lettering on maps is unreliable. The map is made **without labels**; labels go on afterwards in an
    editor from the list in section 6. The skyline may carry one title in quotes ("Ashford Roads") only if it comes
    out clean; otherwise add it in an editor too.
@@ -139,30 +168,45 @@ Labels to add afterwards (in this spelling): Ashford Roads · The Coast Road · 
 
 ## 7. Running it
 
-On a machine with Node 20+ and `CF_ACCOUNT_ID` and `CF_API_TOKEN` (Workers AI permission) set in the environment:
+Node 20+, with `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN` (Workers AI permission) set in the environment, the
+same names Gumbo's `cf_gen.py` uses.
+
+**Day 1**
 
 ```bash
-node ashford-roads-city/generate.mjs --probe
+node ashford-roads-city/generate.mjs style_anchor skyline_key_art city_map --dry-run
 ```
 
 ```bash
-node ashford-roads-city/generate.mjs style_anchor --candidates 4
+node ashford-roads-city/generate.mjs style_anchor --draft --candidates 8
 ```
 
-Pick the best anchor and copy it to `ashford-roads-city/final/style_anchor.png`, then:
+Show the owner the drafts, then make the finals with the chosen seeds:
 
 ```bash
-node ashford-roads-city/generate.mjs skyline_key_art city_map --candidates 4
+node ashford-roads-city/generate.mjs style_anchor --seeds 1003,1007
 ```
 
-Pick, copy to `final/`, then the districts (they read `final/style_anchor.png` and `final/city_map.png`):
+Copy the pick to `ashford-roads-city/final/style_anchor.png`, then do the same for `skyline_key_art` and `city_map`.
+Each sends the anchor as a reference; the runner shrinks it with `sharp` if installed, otherwise it prints a
+one-line Python (Pillow) command that makes the 511 px copy.
+
+**Day 2:** the districts, which read `final/style_anchor.png` and `final/city_map.png`:
 
 ```bash
-node ashford-roads-city/generate.mjs districts --candidates 3
+node ashford-roads-city/generate.mjs districts --draft --candidates 3
 ```
 
-Output goes to `ashford-roads-city/out/<id>/<seed>.png` with `out/log.json`. `out/` is gitignored; commit only
-`final/`.
+```bash
+node ashford-roads-city/generate.mjs districts --seeds 1001,1002,1003
+```
+
+```bash
+node ashford-roads-city/generate.mjs --tally
+```
+
+Output goes to `ashford-roads-city/out/<id>/<seed>[_draft].<ext>` with `out/log.json`; `out/` is gitignored.
+Commit only `final/`.
 
 ## 8. For D&D Beyond
 
