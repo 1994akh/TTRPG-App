@@ -2,6 +2,7 @@
 
 | Image | File | Seed / run | Notes |
 |---|---|---|---|
+| ashford_roads (the lore-exact map) | final/ashford_roads.jpg (3000x3000 JPEG, 1.8 MB, labelled) and final/ashford_roads_players.jpg (no labels) | Watabou seed 6631, drawn by watabou/build_map.py | Made 19 Nov 2026 after the owner chose "I build it from Watabou": lore accuracy first. See watabou/README.md. |
 | city_map | final/city_map.jpg (1920x1920 JPEG, 3.1 MB) | seed 1207, round 3, full size, layout reference refs/city_map_layout.png | Chosen by the owner, 18 Nov 2026 (ET): "23 and 20", then "Good enough for Ashford, you can stop". Round 3 draft #23, made at full size. |
 
 ## How the city map was made (18 Nov 2026, ET)
