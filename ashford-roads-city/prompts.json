@@ -1,0 +1,146 @@
+{
+ "model": "@cf/black-forest-labs/flux-2-dev",
+ "draftModel": "@cf/black-forest-labs/flux-2-klein-9b",
+ "steps": 28,
+ "guidance": 4,
+ "seeds": [1001, 1002, 1003, 1004],
+ "shared": {
+  "style": "Painterly gaslamp-fantasy illustration, Dungeonpunk: a soot-stained industrial harbour city of wet black stone, riveted brass and verdigris copper, lit by amber charge-lamps in drifting grey brume fog. Loose confident oil-paint brushwork over precise ink line, muted desaturated colours with warm light accents, atmospheric depth, high detail in the foreground, soft haze in the distance. A tabletop RPG sourcebook painting, grounded and lived-in.",
+  "color_palette": ["#1E1B18", "#B5893A", "#4E8C7D", "#F2A541", "#D9622B", "#9AA3A6", "#E6DCC3", "#8C2A1C"],
+  "palette_use": "Wet stone and shadows color #1E1B18; pipes, fittings and lamp housings color #B5893A; copper roofs and domes color #4E8C7D; every lamp, lit window and charge cell glows color #F2A541; furnace mouths and refinery light on the fog color #D9622B; fog and sea haze color #9AA3A6; paper, notices and sails color #E6DCC3; Compact banners and warning paint color #8C2A1C.",
+  "mood": "Grim streets, hopeful crews: hard industry and soot, with warm light in every window.",
+  "reference_line": "Match the painting style, brushwork and colour palette of image 0."
+ },
+ "images": [
+  {
+   "id": "style_anchor", "group": "anchor", "width": 1024, "height": 1024, "references": [],
+   "scene": "A single street corner of Ashford Roads at dusk, a gaslamp-fantasy harbour city, painted as a style study.",
+   "subjects": [
+    {"description": "A tall brass charge-lamp on an iron post, its glass cylinder glowing color #F2A541, fog curling around it", "position": "left third, foreground"},
+    {"description": "A narrow black-stone townhouse with a verdigris copper bay window, color #4E8C7D, and riveted brass drainpipes, color #B5893A", "position": "centre"},
+    {"description": "Pinned paper notices on a wet wall, color #E6DCC3, one stamped with a rust-red Compact seal, color #8C2A1C", "position": "right, eye level"},
+    {"description": "Two refinery stacks far behind the roofs, their mouths glowing color #D9622B into the grey fog, color #9AA3A6", "position": "background"}
+   ],
+   "composition": "Square vignette. Along the bottom edge, a neat row of eight painted paint chips in the palette colours, like a painter's swatch strip on the same canvas.",
+   "lighting": "Dusk: cool grey fog, warm amber lamp pools, orange refinery glow on the cloud base.",
+   "camera": {"angle": "eye level, slight low angle", "lens": "35mm", "depth_of_field": "deep focus with atmospheric haze"}
+  },
+  {
+   "id": "skyline_key_art", "group": "main", "width": 2048, "height": 1152, "references": ["final/style_anchor.png"],
+   "scene": "Ashford Roads seen from the harbour at dusk: a gaslit industrial port city of eleven thousand people, stacked up a hill from the water.",
+   "subjects": [
+    {"description": "The Compact refinery on the left: a walled complex of tall brick stacks and domed brume tanks, furnace mouths glowing color #D9622B, pipelines running down to its own pier", "position": "left third, midground"},
+    {"description": "The Long Quay: a long stone and timber pier with tall-masted sailing ships berthed along it, sails color #E6DCC3, crates, cranes and gangways, charge-lamps color #F2A541 along its length", "position": "right half, foreground to midground"},
+    {"description": "One sky ship: a wooden hull hanging under brass-ribbed lift envelopes, a glowing brume engine at its stern color #F2A541, moored to a tall iron mast at the end of the quay", "position": "upper right, small against the sky"},
+    {"description": "The old town climbing the hill: steep black-stone roofs, verdigris domes color #4E8C7D, a clock tower, hundreds of lit windows", "position": "centre, background"},
+    {"description": "Grey brume fog color #9AA3A6 rolling in across the dark harbour water and swallowing the lower streets", "position": "bottom and foreground"}
+   ],
+   "composition": "Wide cinematic panorama, horizon a third from the top, the quay leading the eye from bottom right into the city. Leave calm sky in the upper left for a title.",
+   "lighting": "Last light behind the city, amber lamps coming on, refinery glow reflecting orange on the water and the underside of the smoke.",
+   "camera": {"angle": "from a boat low on the water", "lens": "28mm", "depth_of_field": "deep focus, haze increasing with distance"}
+  },
+  {
+   "id": "city_map", "group": "main", "width": 1920, "height": 1920, "references": ["final/style_anchor.png"],
+   "scene": "An illustrated bird's-eye map of the whole harbour city of Ashford Roads, drawn on aged ledger paper color #E6DCC3 in ink and watercolour wash, like a map page from a tabletop RPG city sourcebook. North is up.",
+   "subjects": [
+    {"description": "West edge: the Coast Road, a pale dirt road coming in from the left edge across grey ash fields color #9AA3A6, to a gatehouse in a landward stone wall", "position": "left edge, middle"},
+    {"description": "North-west: the refinery, a walled complex of tall stacks and domed tanks with brass pipelines color #B5893A, its own small pier, a faint orange glow color #D9622B", "position": "top left quadrant"},
+    {"description": "Refinery Row: one wide straight street running east from the refinery gate, lined with large houses and gardens", "position": "top, left of centre"},
+    {"description": "The old town: dense steep roofs and narrow crooked lanes; a columned courthouse with a clock tower; a small chapel with a clock face; a white domed hall with brass coils on its roof", "position": "centre"},
+    {"description": "The harbour: a curved bay of dark water; the Long Quay, a long straight pier with tall ships moored along it and a tall iron mooring mast at its tip; a fish market on the waterfront; a quay-side inn", "position": "bottom right quadrant"},
+    {"description": "Sewer outfalls: arched culvert mouths in the harbour wall below the rich street", "position": "right edge of the old town, at the water"},
+    {"description": "Open sea fading into brume fog at the east and south edges of the map, color #9AA3A6", "position": "right and bottom edges"}
+   ],
+   "composition": "Top-down bird's-eye view with slight perspective on buildings, the whole city fits inside a decorative border. A compass rose in the bottom left sea. An empty decorative title cartouche at the top centre. Clean margins. The map has no lettering or labels anywhere.",
+   "lighting": "Even daylight, as on a printed map; buildings cast short soft shadows to the south-east.",
+   "camera": {"angle": "top-down bird's-eye", "lens": "orthographic", "depth_of_field": "everything in sharp focus"}
+  },
+  {
+   "id": "refinery_row", "group": "districts", "width": 1536, "height": 1024, "references": ["final/style_anchor.png", "final/city_map.png"],
+   "scene": "Refinery Row, Ashford's rich street, at night: the refinery's heat keeps the fog off this one street while it fills every lane around it.",
+   "subjects": [
+    {"description": "A wide clean cobbled avenue with tall townhouses, wrought-iron balconies, brass charge-lamps color #F2A541 every few paces", "position": "centre, receding to a vanishing point"},
+    {"description": "A sharp-edged wall of grey fog color #9AA3A6 standing at the mouth of each side lane, never crossing into the street", "position": "left and right side lanes"},
+    {"description": "The refinery gate and stacks at the end of the avenue, glowing color #D9622B", "position": "background, at the vanishing point"},
+    {"description": "A well-dressed couple passing a street grate in the cobbles; warm steam rising from the grate", "position": "foreground right"}
+   ],
+   "composition": "One-point perspective down the street.",
+   "lighting": "Bright amber lamps on the clear street, cold grey outside it, orange glow at the end.",
+   "camera": {"angle": "eye level", "lens": "35mm", "depth_of_field": "deep focus"}
+  },
+  {
+   "id": "sallows_exchange", "group": "districts", "width": 1536, "height": 1024, "references": ["final/style_anchor.png"],
+   "scene": "Inside Sallow's Exchange, the public information broker of Ashford Roads: a crowded counting-room where crews come to find work, ships and each other.",
+   "subjects": [
+    {"description": "Walls covered floor to ceiling in pinned paper notices and commissions, color #E6DCC3, some stamped with rust-red seals color #8C2A1C", "position": "left wall"},
+    {"description": "A tall dark-wood high desk with brass rails, ledgers and a small charge-lamp color #F2A541; behind it a sharp-dressed fox-kin woman broker in a waistcoat, quill raised", "position": "centre right"},
+    {"description": "A queue of would-be sailors of many peoples waiting on the worn floor, packs on their backs", "position": "foreground"}
+   ],
+   "composition": "Interior seen from the doorway, the high desk as the focal point.",
+   "lighting": "Grey daylight through tall grimy windows mixing with amber lamp light; dust in the air.",
+   "camera": {"angle": "eye level", "lens": "24mm", "depth_of_field": "deep focus"}
+  },
+  {
+   "id": "long_quay", "group": "districts", "width": 1536, "height": 1024, "references": ["final/style_anchor.png", "final/city_map.png"],
+   "scene": "The Long Quay of Ashford Roads in the morning as fog burns off: the pier where the outbound ships berth.",
+   "subjects": [
+    {"description": "A fast, handsome three-masted ship loading at a gangway, its sails color #E6DCC3, a gilded figurehead", "position": "left half"},
+    {"description": "Dock workers, crates, a steam crane with brass fittings color #B5893A, coiled ropes, gulls", "position": "foreground"},
+    {"description": "A tall iron mooring mast at the end of the quay with a sky ship tethered to it, its brume engine glowing color #F2A541", "position": "background right"}
+   ],
+   "composition": "The pier runs diagonally from bottom left into the distance.",
+   "lighting": "Low morning sun breaking through thinning grey fog color #9AA3A6.",
+   "camera": {"angle": "eye level", "lens": "28mm", "depth_of_field": "deep focus"}
+  },
+  {
+   "id": "binding_house", "group": "districts", "width": 1536, "height": 1024, "references": ["final/style_anchor.png"],
+   "scene": "Inside the Binding House, the Compact's licensed hall where brume possibility is bound into a person and they leave classed.",
+   "subjects": [
+    {"description": "A tall white hall with a ribbed dome, brass coils color #B5893A spiralling up the columns", "position": "whole frame"},
+    {"description": "Rows of tall glass cylinders filled with slowly swirling warm grey brume color #9AA3A6", "position": "left and right walls"},
+    {"description": "A stern dwarf binder in a leather apron beside a brass binding chair at the centre", "position": "centre"},
+    {"description": "A Compact banner color #8C2A1C hanging above a clerk's ledger desk", "position": "background"}
+   ],
+   "composition": "Symmetrical, the binding chair at the centre.",
+   "lighting": "Cold white light from the dome, a faint warm glow inside the cylinders.",
+   "camera": {"angle": "eye level", "lens": "24mm", "depth_of_field": "deep focus"}
+  },
+  {
+   "id": "lantern_lee", "group": "districts", "width": 1536, "height": 1024, "references": ["final/style_anchor.png"],
+   "scene": "Inside the Lantern and Lee, the one inn on Ashford's quay that takes monsterkin: cheap, loud and warm.",
+   "subjects": [
+    {"description": "A low-beamed common room packed with sailors of every people, including big monsterkin with horns and tusks, drinking and laughing", "position": "midground"},
+    {"description": "A broad half-orc innkeeper behind a scarred bar, polishing a tankard", "position": "right"},
+    {"description": "Ship lanterns color #F2A541 hanging from the beams, a fire in a stone hearth", "position": "top and left"}
+   ],
+   "composition": "Warm crowded interior, view from a corner table.",
+   "lighting": "Warm amber light, grey fog pressing at the dark windows.",
+   "camera": {"angle": "seated eye level", "lens": "28mm", "depth_of_field": "slightly soft background"}
+  },
+  {
+   "id": "undercourses", "group": "districts", "width": 1536, "height": 1024, "references": ["final/style_anchor.png"],
+   "scene": "The Undercourses, the sewers under Refinery Row: old stone culverts warm with refinery run-off, a Dungeonpunk dungeon.",
+   "subjects": [
+    {"description": "A vaulted brick and black-stone culvert with a channel of dark water and faintly glowing run-off color #D9622B", "position": "centre, receding"},
+    {"description": "Rusted brass pipes and valves color #B5893A along the walls, dripping", "position": "left and right walls"},
+    {"description": "Rats on a ledge; far ahead, one shaft of daylight falling through a street grate into a cistern", "position": "background"},
+    {"description": "A single adventurer's charge-lamp color #F2A541 lighting the foreground", "position": "foreground"}
+   ],
+   "composition": "One-point perspective down the tunnel toward the shaft of light.",
+   "lighting": "Darkness, warm steam, one amber lamp, a white shaft of sun far ahead.",
+   "camera": {"angle": "eye level", "lens": "24mm", "depth_of_field": "deep focus with steam haze"}
+  },
+  {
+   "id": "coast_road_gate", "group": "districts", "width": 1536, "height": 1024, "references": ["final/style_anchor.png", "final/city_map.png"],
+   "scene": "Dawn on the Coast Road: the way into Ashford from the mainland, through the refinery's grey ash fields, to the city gate.",
+   "subjects": [
+    {"description": "A dirt road through flat fields of grey ash color #9AA3A6, a lone carter's wagon", "position": "foreground to midground"},
+    {"description": "A stone gatehouse in the landward wall, notices pinned beside the arch color #E6DCC3, a guard with a ledger", "position": "midground"},
+    {"description": "The refinery stacks glowing color #D9622B above the walls", "position": "background"}
+   ],
+   "composition": "The road leads from the bottom edge to the gate.",
+   "lighting": "Cold dawn, pale sun through ash haze, orange glow from the stacks.",
+   "camera": {"angle": "eye level", "lens": "35mm", "depth_of_field": "deep focus"}
+  }
+ ]
+}
