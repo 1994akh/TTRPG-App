@@ -70,6 +70,20 @@ LABELS = [  # (text, x, y, size, rotation, style)
 ]
 
 
+
+def cog(cx, cy, r, teeth=12, fill="#B5893A", stroke="#1E1B18", sw=3.0, hole=0.42):
+    """A gear wheel in screen px."""
+    d = []
+    for i in range(teeth * 2):
+        a0 = math.pi * 2 * i / (teeth * 2)
+        a1 = math.pi * 2 * (i + 1) / (teeth * 2)
+        rr = r if i % 2 == 0 else r * 0.82
+        for a in (a0 + 0.08, a1 - 0.08):
+            d.append(f"{cx + rr * math.cos(a):.1f},{cy + rr * math.sin(a):.1f}")
+    return (f'<polygon points="{" ".join(d)}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}" stroke-linejoin="round"/>'
+            f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r*hole:.1f}" fill="#E6DCC3" stroke="{stroke}" stroke-width="{sw}"/>')
+
+
 def T(p):
     return ((p[0] - X0) * K, (Y1 - p[1]) * K)
 
@@ -200,7 +214,7 @@ def build(data: dict, labels: bool) -> str:
     el.append(line([(500, 900), (650, 880), (760, 830), (800, 805)], stroke=BRASS, stroke_width=f"{5*s:.1f}"))
     for (x, y, w, h) in [(450, 690, 90, 60), (560, 820, 120, 70), (460, 940, 110, 60), (690, 900, 70, 80)]:
         el.append(poly([(x, y), (x + w, y), (x + w, y + h), (x, y + h)], fill="#544a40", stroke=INK, stroke_width=f"{2*s:.1f}"))
-    for (x, y, r) in [(620, 700, 34), (700, 980, 30), (520, 820, 28)]:           # domed brume tanks
+    for (x, y, r) in [(620, 700, 46), (700, 980, 40), (520, 840, 36), (760, 700, 30)]:           # domed brume tanks
         cx, cy = T((x, y))
         el.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r*s:.1f}" fill="{BRUME}" stroke="{BRASS}" stroke-width="{5*s:.1f}"/>')
         el.append(f'<circle cx="{cx-r*s*.3:.1f}" cy="{cy-r*s*.3:.1f}" r="{r*s*.35:.1f}" fill="#d9dedc" opacity=".7"/>')
@@ -301,6 +315,68 @@ def build(data: dict, labels: bool) -> str:
             lx, ly = T((a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t))
             el.append(f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="{11*s:.1f}" fill="url(#lamp)" opacity=".7"/>')
             el.append(f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="{2.4*s:.1f}" fill="{AMBER}" stroke="{INK}" stroke-width="{.6*s:.1f}"/>')
+    # ---- steampunk: charge mains, lamps on every main road, chimney steam, cranes, tugs, a second sky ship -------
+    ring = F["walls"]["geometries"][0]["coordinates"][0]
+    def within_town(p):
+        return inside(p, ring) or math.dist(p, (0, 0)) < 900
+    for ri, r in enumerate(R):                                                    # brass charge mains along the main roads
+        cs = [p for p in r["coordinates"] if within_town(p)]
+        if len(cs) < 2 or ri == 3:
+            continue
+        off = [(x + 11, y + 9) for x, y in cs]
+        el.append(line(off, stroke=INK, stroke_width=f"{5.5*s:.1f}", stroke_linecap="round"))
+        el.append(line(off, stroke=BRASS, stroke_width=f"{3*s:.1f}", stroke_linecap="round"))
+        for a, b in zip(cs, cs[1:]):                                              # lamps every ~45 units
+            n = max(1, int(math.dist(a, b) // 45))
+            for i in range(n):
+                t = (i + .5) / n
+                lx, ly = T((a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t))
+                el.append(f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="{9*s:.1f}" fill="url(#lamp)" opacity=".55"/>'
+                          f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="{2*s:.1f}" fill="{AMBER}" stroke="{INK}" stroke-width="{.5*s:.1f}"/>')
+        gx, gy = T(off[len(off) // 2])                                            # a gauge ring on each main
+        el.append(f'<circle cx="{gx:.1f}" cy="{gy:.1f}" r="{7*s:.1f}" fill="{PAPER}" stroke="{BRASS}" stroke-width="{2.5*s:.1f}"/>'
+                  f'<line x1="{gx:.1f}" y1="{gy:.1f}" x2="{gx+5*s:.1f}" y2="{gy-3*s:.1f}" stroke="{INK}" stroke-width="{1.2*s:.1f}"/>')
+    # the main from the refinery splits at the square into the other mains
+    sq = T((0, 0))
+    el.append(cog(sq[0] + 70 * s, sq[1] - 60 * s, 13 * s, 10, sw=1.6 * s))
+    # chimney steam over the rooftops
+    for i, b in enumerate(F["buildings"]["coordinates"]):
+        if hashf(i * 7 + 3) < .045:
+            c = centre(b[0])
+            if inside(c, ref):
+                continue
+            px, py = T((c[0] + 14, c[1] + 10))
+            el.append(f'<ellipse cx="{px:.1f}" cy="{py:.1f}" rx="{16*s:.1f}" ry="{9*s:.1f}" fill="#f4f2ec" opacity=".55" filter="url(#blur8)"/>')
+    # iron cranes on the Long Quay and the refinery pier
+    def crane(x, y, rot):
+        cx, cy = T((x, y))
+        return (f'<g transform="translate({cx:.1f},{cy:.1f}) rotate({rot})"><rect x="{-6*s:.1f}" y="{-6*s:.1f}" width="{12*s:.1f}" height="{12*s:.1f}" fill="#3a342e" stroke="{INK}" stroke-width="{1.5*s:.1f}"/>'
+                f'<line x1="0" y1="0" x2="{46*s:.1f}" y2="0" stroke="{INK}" stroke-width="{4*s:.1f}"/><line x1="0" y1="0" x2="{46*s:.1f}" y2="0" stroke="#6b6156" stroke-width="{2*s:.1f}"/>'
+                + "".join(f'<line x1="{k*s:.1f}" y1="{-2*s:.1f}" x2="{(k+6)*s:.1f}" y2="{2*s:.1f}" stroke="{INK}" stroke-width="{.8*s:.1f}"/>' for k in range(4, 44, 8))
+                + f'<circle cx="{46*s:.1f}" cy="0" r="{3*s:.1f}" fill="{BRASS}" stroke="{INK}" stroke-width="{1*s:.1f}"/></g>')
+    for t, rot in [(.22, -70), (.42, 110), (.6, -70), (.78, 110)]:
+        el.append(crane(q0[0] + (q1[0] - q0[0]) * t, q0[1] + (q1[1] - q0[1]) * t, rot))
+    el.append(crane(880, 796, -80)); el.append(crane(960, 792, 100))
+    # charge-engined tugs with funnels and wakes
+    def tug(x, y, rot):
+        cx, cy = T((x, y))
+        return (f'<g transform="translate({cx:.1f},{cy:.1f}) rotate({rot})">'
+                f'<path d="M{-70*s:.1f},{-3*s:.1f} Q{-110*s:.1f},0 {-70*s:.1f},{3*s:.1f}" fill="none" stroke="#eef0ee" stroke-width="{3*s:.1f}" opacity=".7"/>'
+                f'<path d="M{-60*s:.1f},{-10*s:.1f} Q{-140*s:.1f},0 {-60*s:.1f},{10*s:.1f}" fill="none" stroke="#eef0ee" stroke-width="{2*s:.1f}" opacity=".45"/>'
+                f'<rect x="{-24*s:.1f}" y="{-8*s:.1f}" width="{48*s:.1f}" height="{16*s:.1f}" rx="{8*s:.1f}" fill="#3a342e" stroke="{INK}" stroke-width="{1.5*s:.1f}"/>'
+                f'<circle cx="{4*s:.1f}" cy="0" r="{5*s:.1f}" fill="{BRASS}" stroke="{INK}" stroke-width="{1.5*s:.1f}"/>'
+                f'<ellipse cx="{-26*s:.1f}" cy="{-4*s:.1f}" rx="{22*s:.1f}" ry="{9*s:.1f}" fill="#4e4943" opacity=".35" filter="url(#blur8)"/></g>')
+    el.append(tug(600, -130, -10)); el.append(tug(560, 330, 25))
+    # a second sky ship in flight over the old walls, with its shadow on the roofs
+    ax, ay = T((-260, 360))
+    el.append(f'<ellipse cx="{ax+60*s:.1f}" cy="{ay+80*s:.1f}" rx="{70*s:.1f}" ry="{22*s:.1f}" fill="#1E1B18" opacity=".18" filter="url(#blur8)" transform="rotate(20 {ax+60*s:.1f} {ay+80*s:.1f})"/>')
+    el.append(f'<g transform="translate({ax:.1f},{ay:.1f}) scale(1.45) translate({-ax:.1f},{-ay:.1f}) rotate(20 {ax:.1f} {ay:.1f})">'
+              f'<ellipse cx="{ax:.1f}" cy="{ay:.1f}" rx="{70*s:.1f}" ry="{22*s:.1f}" fill="#d8cfb7" stroke="{INK}" stroke-width="{2.2*s:.1f}"/>'
+              + "".join(f'<line x1="{ax+dx*s:.1f}" y1="{ay-20*s*math.sqrt(max(0,1-(dx/70)**2)):.1f}" x2="{ax+dx*s:.1f}" y2="{ay+20*s*math.sqrt(max(0,1-(dx/70)**2)):.1f}" stroke="{BRASS}" stroke-width="{1.6*s:.1f}"/>' for dx in range(-55, 60, 18))
+              + f'<line x1="{ax-70*s:.1f}" y1="{ay:.1f}" x2="{ax+70*s:.1f}" y2="{ay:.1f}" stroke="{BRASS}" stroke-width="{1.6*s:.1f}"/>'
+              f'<rect x="{ax-24*s:.1f}" y="{ay-6*s:.1f}" width="{48*s:.1f}" height="{12*s:.1f}" rx="{5*s:.1f}" fill="#6b4c2e" stroke="{INK}" stroke-width="{1.2*s:.1f}" opacity=".85"/>'
+              f'<circle cx="{ax-78*s:.1f}" cy="{ay:.1f}" r="{7*s:.1f}" fill="{AMBER}" stroke="{INK}" stroke-width="{1.2*s:.1f}"/>'
+              f'<path d="M{ax-86*s:.1f},{ay:.1f} Q{ax-150*s:.1f},{ay-10*s:.1f} {ax-210*s:.1f},{ay+4*s:.1f}" fill="none" stroke="#f4f2ec" stroke-width="{6*s:.1f}" opacity=".5" filter="url(#blur8)"/></g>')
     # ---- fog: off the sea and over the low streets, never on Refinery Row ----------------------------------------
     defs += f'<mask id="nofog"><rect width="{PX}" height="{PX}" fill="white"/>{line(row, stroke="black", stroke_width=f"{110*s:.1f}", stroke_linecap="round", filter="url(#blur24)")}<circle cx="{T((600,830))[0]:.1f}" cy="{T((600,830))[1]:.1f}" r="{260*s:.1f}" fill="black" filter="url(#blur60)"/></mask>'
     fog = []
@@ -315,9 +391,15 @@ def build(data: dict, labels: bool) -> str:
     m = 34
     el.append(f'<rect x="{m}" y="{m}" width="{PX-2*m}" height="{PX-2*m}" fill="none" stroke="{INK}" stroke-width="6"/>')
     el.append(f'<rect x="{m+14}" y="{m+14}" width="{PX-2*m-28}" height="{PX-2*m-28}" fill="none" stroke="{BRASS}" stroke-width="3"/>')
+    el.append(f'<rect x="{m+7}" y="{m+7}" width="{PX-2*m-14}" height="{PX-2*m-14}" fill="none" stroke="{BRASS}" stroke-width="10" opacity=".55"/>')
+    for k in range(m + 60, PX - m - 40, 80):                                     # rivets
+        for (x, y) in [(k, m + 7), (k, PX - m - 7), (m + 7, k), (PX - m - 7, k)]:
+            el.append(f'<circle cx="{x}" cy="{y}" r="3.2" fill="#e0c27a" stroke="{INK}" stroke-width="1.2"/>')
+    for (x, y) in [(m + 7, m + 7), (PX - m - 7, m + 7), (m + 7, PX - m - 7), (PX - m - 7, PX - m - 7)]:
+        el.append(cog(x, y, 46, 12, sw=3))
     # compass rose in the north-east sea
     cx, cy, r = PX - 300, 300, 130
-    rose = [f'<g transform="translate({cx},{cy})">', f'<circle r="{r*1.05}" fill="{PAPER}" opacity=".55"/>', f'<circle r="{r}" fill="none" stroke="{INK}" stroke-width="3"/>',
+    rose = [cog(cx + r * 0.95, cy + r * 0.95, 58, 14, sw=3), cog(cx, cy, r * 1.22, 24, fill="#c9a45a", sw=3, hole=0.9), f'<g transform="translate({cx},{cy})">', f'<circle r="{r*1.05}" fill="{PAPER}" opacity=".85"/>', f'<circle r="{r}" fill="none" stroke="{INK}" stroke-width="3"/>',
             f'<circle r="{r*.82}" fill="none" stroke="{BRASS}" stroke-width="2"/>']
     for a in range(0, 360, 45):
         L = r * (1 if a % 90 == 0 else .62)
@@ -341,6 +423,9 @@ def build(data: dict, labels: bool) -> str:
     tx, ty = 120, 120
     el.append(f'<rect x="{tx}" y="{ty}" width="900" height="240" fill="{PAPER}" stroke="{INK}" stroke-width="5"/>'
               f'<rect x="{tx+14}" y="{ty+14}" width="872" height="212" fill="none" stroke="{BRASS}" stroke-width="3"/>')
+    el.append(cog(tx + 900, ty + 240, 52, 12, sw=3) + cog(tx + 980, ty + 200, 32, 10, sw=2.4))
+    el.append(f'<path d="M{tx},{ty+240} H{tx+840}" stroke="{INK}" stroke-width="9"/><path d="M{tx},{ty+240} H{tx+840}" stroke="{BRASS}" stroke-width="5"/>'
+              + "".join(f'<rect x="{tx+60+i*130}" y="{ty+232}" width="14" height="16" fill="{BRASS}" stroke="{INK}" stroke-width="2"/>' for i in range(6)))
     if labels:
         el.append(f'<text x="{tx+450}" y="{ty+120}" text-anchor="middle" class="lab place" font-size="104" style="stroke-width:0">Ashford Roads</text>'
                   f'<text x="{tx+450}" y="{ty+180}" text-anchor="middle" class="lab street" font-size="38" style="stroke-width:0">the home port of the Reach · grade F</text>')

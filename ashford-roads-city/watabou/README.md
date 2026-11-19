@@ -40,3 +40,12 @@ Canon gives no compass directions, so the placements follow what the lore says a
 | The Harbour, the Reach, the brume | the bay, the open sea east fading into fog | "a deepwater harbour"; Ashford is in the Reach; the sea is covered in brume |
 
 Not placed, because the lore gives no direction for them: Coldwater, Kelder's Wall.
+
+## Steampunk detail (the owner, 19 Nov 2026: "Steampunk")
+
+Ambient detail, no new named places, all from what the lore says charge does (refined brume that lights lamps and
+runs lifts, pumps and engines) and the answered decisions (sky ships new and rare): brass charge mains along the main
+roads with gauges, charge-lamps on every main road (densest on Refinery Row), chimney steam over the roofs, iron cranes
+on the Long Quay and the refinery pier, two charge-engined tugs in the harbour, a second sky ship in flight over the
+walls (two in all, since they are rare), larger domed brume tanks at the refinery, and a riveted brass frame with
+cogs on the corners, the compass and the title.
