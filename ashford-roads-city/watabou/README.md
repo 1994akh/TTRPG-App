@@ -49,3 +49,10 @@ roads with gauges, charge-lamps on every main road (densest on Refinery Row), ch
 on the Long Quay and the refinery pier, two charge-engined tugs in the harbour, a second sky ship in flight over the
 walls (two in all, since they are rare), larger domed brume tanks at the refinery, and a riveted brass frame with
 cogs on the corners, the compass and the title.
+
+## Steampunk restyle (the owner, 19 Nov 2026: "Do it", to match the Known World chart)
+
+The same look as `world/`: a verdigris sea and sepia land, a riveted iron frame with copper pipes, valves and gear
+trains, a brass astrolabe compass on gears, a riveted brass title plate piped to a grade gauge (F to S, the needle on
+F) and a charge-mains pressure gauge, and a brass scale rule. The street plan, the placements and the labels are
+unchanged.

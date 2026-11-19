@@ -66,7 +66,7 @@ LABELS = [  # (text, x, y, size, rotation, style)
     ("Undercourses outfalls", 450, 330, 20, 0, "small"),
     ("The Harbour", 470, -170, 40, 0, "water"),
     ("The Reach", 1080, -420, 64, 0, "water"),
-    ("into the brume", 1180, -560, 28, 0, "water"),
+    ("into the brume", 1180, -560, 28, 0, "fogl"),
 ]
 
 
@@ -134,7 +134,8 @@ def build(data: dict, labels: bool) -> str:
     defs = f"""
 <style>{font_face()}
 .lab{{font-family:"Fell",Georgia,serif;fill:{INK};paint-order:stroke;stroke:{PAPER};stroke-width:{6*s:.1f}px;stroke-linejoin:round}}
-.water{{font-style:italic;fill:#3d4a4f;stroke:#b7c2c4;letter-spacing:.12em}}
+.water{{font-style:italic;fill:#f0dfb3;stroke:#24403d;letter-spacing:.12em}}
+.fogl{{font-style:italic;fill:#4b5559;stroke:#eef0ee;letter-spacing:.14em}}
 .region{{letter-spacing:.25em;fill:#3a352e}}
 .street{{font-style:italic}}
 .place{{letter-spacing:.06em}}
@@ -148,13 +149,13 @@ def build(data: dict, labels: bool) -> str:
 <radialGradient id="vignette" cx="50%" cy="50%" r="72%"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#3a2a14" stop-opacity=".45"/></radialGradient>
 <radialGradient id="glow"><stop offset="0%" stop-color="{FIRE}" stop-opacity=".9"/><stop offset="100%" stop-color="{FIRE}" stop-opacity="0"/></radialGradient>
 <radialGradient id="lamp"><stop offset="0%" stop-color="{AMBER}" stop-opacity="1"/><stop offset="100%" stop-color="{AMBER}" stop-opacity="0"/></radialGradient>
-<linearGradient id="sea" x1="0" x2="1" y1="0" y2="0"><stop offset="0%" stop-color="#7f9298"/><stop offset="70%" stop-color="#93a3a7"/><stop offset="100%" stop-color="#c4c9c6"/></linearGradient>
+<linearGradient id="sea" x1="0" x2="1" y1="0" y2="0"><stop offset="0%" stop-color="#4f817a"/><stop offset="65%" stop-color="#3f6c67"/><stop offset="100%" stop-color="#2c4f4c"/></linearGradient><linearGradient id="ironband" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#5a524a"/><stop offset="50%" stop-color="#3b3631"/><stop offset="100%" stop-color="#24201c"/></linearGradient><linearGradient id="brassplate" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#d9b46a"/><stop offset="55%" stop-color="#B5893A"/><stop offset="100%" stop-color="#7d5b22"/></linearGradient>
 <pattern id="brick" width="{18*s:.1f}" height="{9*s:.1f}" patternUnits="userSpaceOnUse"><rect width="100%" height="100%" fill="#5a3b2c"/><path d="M0,{4.5*s:.1f} H{18*s:.1f} M{9*s:.1f},0 V{4.5*s:.1f} M0,{4.5*s:.1f} V{9*s:.1f}" stroke="#2a1d16" stroke-width="{1*s:.1f}"/></pattern>
 <pattern id="ash" width="{14*s:.1f}" height="{14*s:.1f}" patternUnits="userSpaceOnUse" patternTransform="rotate(28)">
  <rect width="100%" height="100%" fill="#c9c2b1"/><line x1="0" y1="0" x2="0" y2="{14*s:.1f}" stroke="#a39b89" stroke-width="{1.6*s:.1f}"/></pattern>
 """
     # paper
-    el.append(f'<rect width="{PX}" height="{PX}" fill="{PAPER}"/>')
+    el.append(f'<rect width="{PX}" height="{PX}" fill="#d2ba8c"/>')
     el.append(f'<rect width="{PX}" height="{PX}" fill="{PAPER}" filter="url(#paper)"/>')
     # ash land west and south-west: everything west of the walls is ash-grey under the fields
     el.append(poly([(X0, Y0), (-420, Y0), (-560, -500), (-700, -150), (-720, 300), (-700, 700), (-900, Y1), (X0, Y1)],
@@ -166,7 +167,7 @@ def build(data: dict, labels: bool) -> str:
         el.append(poly(p[0], fill="url(#sea)"))
         el.append(poly(p[0], fill="none", stroke=INK, stroke_width=f"{3*s:.1f}"))
         for k, op in [(10, .35), (22, .2), (36, .12)]:     # ripple lines inside the shore
-            el.append(poly(p[0], fill="none", stroke="#e9ecea", stroke_width=f"{1.4*s:.1f}", opacity=op,
+            el.append(poly(p[0], fill="none", stroke="#9cc4bb", stroke_width=f"{1.4*s:.1f}", opacity=op,
                            transform=f"translate({k*s*0.7:.1f},0)"))
     # roads (outside)
     R = F["roads"]["geometries"]
@@ -386,46 +387,81 @@ def build(data: dict, labels: bool) -> str:
         fx, fy = T((x, y))
         fog.append(f'<ellipse cx="{fx:.1f}" cy="{fy:.1f}" rx="{rx*s:.1f}" ry="{ry*s:.1f}" fill="#eef0ee" opacity="{op}" filter="url(#blur60)"/>')
     el.append(f'<g mask="url(#nofog)">{"".join(fog)}</g>')
-    # ---- frame, title, compass, scale, credit --------------------------------------------------------------------
+    # ---- steampunk frame, astrolabe compass, brass title plate with gauges, scale -------------------------------
+    IRON, COPPER = "#3b3631", "#b0643a"
     el.append(f'<rect width="{PX}" height="{PX}" fill="url(#vignette)"/>')
-    m = 34
-    el.append(f'<rect x="{m}" y="{m}" width="{PX-2*m}" height="{PX-2*m}" fill="none" stroke="{INK}" stroke-width="6"/>')
-    el.append(f'<rect x="{m+14}" y="{m+14}" width="{PX-2*m-28}" height="{PX-2*m-28}" fill="none" stroke="{BRASS}" stroke-width="3"/>')
-    el.append(f'<rect x="{m+7}" y="{m+7}" width="{PX-2*m-14}" height="{PX-2*m-14}" fill="none" stroke="{BRASS}" stroke-width="10" opacity=".55"/>')
-    for k in range(m + 60, PX - m - 40, 80):                                     # rivets
-        for (x, y) in [(k, m + 7), (k, PX - m - 7), (m + 7, k), (PX - m - 7, k)]:
-            el.append(f'<circle cx="{x}" cy="{y}" r="3.2" fill="#e0c27a" stroke="{INK}" stroke-width="1.2"/>')
-    for (x, y) in [(m + 7, m + 7), (PX - m - 7, m + 7), (m + 7, PX - m - 7), (PX - m - 7, PX - m - 7)]:
-        el.append(cog(x, y, 46, 12, sw=3))
-    # compass rose in the north-east sea
-    cx, cy, r = PX - 300, 300, 130
-    rose = [cog(cx + r * 0.95, cy + r * 0.95, 58, 14, sw=3), cog(cx, cy, r * 1.22, 24, fill="#c9a45a", sw=3, hole=0.9), f'<g transform="translate({cx},{cy})">', f'<circle r="{r*1.05}" fill="{PAPER}" opacity=".85"/>', f'<circle r="{r}" fill="none" stroke="{INK}" stroke-width="3"/>',
-            f'<circle r="{r*.82}" fill="none" stroke="{BRASS}" stroke-width="2"/>']
+    m = 26
+    el.append(f'<rect x="{m}" y="{m}" width="{PX-2*m}" height="{PX-2*m}" fill="none" stroke="url(#ironband)" stroke-width="40"/>'
+              f'<rect x="{m-20}" y="{m-20}" width="{PX-2*m+40}" height="{PX-2*m+40}" fill="none" stroke="{INK}" stroke-width="4"/>'
+              f'<rect x="{m+20}" y="{m+20}" width="{PX-2*m-40}" height="{PX-2*m-40}" fill="none" stroke="{BRASS}" stroke-width="6"/>'
+              f'<rect x="{m+28}" y="{m+28}" width="{PX-2*m-56}" height="{PX-2*m-56}" fill="none" stroke="{INK}" stroke-width="2"/>')
+    for k in range(m + 70, PX - m - 40, 70):                                       # rivets
+        for (x, y) in [(k, m), (k, PX - m), (m, k), (PX - m, k)]:
+            el.append(f'<circle cx="{x}" cy="{y}" r="5" fill="#8f8577" stroke="{INK}" stroke-width="1.5"/><circle cx="{x-1.5}" cy="{y-1.5}" r="1.6" fill="#d6cdbf"/>')
+    for y in (PX * .33, PX * .66):                                                 # valves on the side pipes
+        for x in (m, PX - m):
+            el.append(f'<rect x="{x-14}" y="{y-24:.0f}" width="28" height="48" rx="6" fill="{COPPER}" stroke="{INK}" stroke-width="2.4"/>'
+                      f'<circle cx="{x}" cy="{y:.0f}" r="18" fill="none" stroke="{BRASS}" stroke-width="5"/><line x1="{x-18}" y1="{y:.0f}" x2="{x+18}" y2="{y:.0f}" stroke="{BRASS}" stroke-width="4"/>')
+    for (x, y, sx_, sy_) in [(m, m, 1, 1), (PX - m, m, -1, 1), (m, PX - m, 1, -1), (PX - m, PX - m, -1, -1)]:
+        el.append(cog(x, y, 70, 14, fill="url(#brassplate)", sw=3) + cog(x + sx_ * 104, y + sy_ * 22, 40, 10, fill=COPPER, sw=2.4)
+                  + cog(x + sx_ * 22, y + sy_ * 104, 34, 9, sw=2.2))
+    # astrolabe compass in the north-east sea
+    cx, cy, r = PX - 330, 380, 140
+    el.append(cog(cx + r * 1.05, cy + r * .95, 62, 14, fill=COPPER) + cog(cx - r * 1.1, cy + r * .8, 44, 11)
+              + cog(cx, cy, r * 1.32, 30, fill="url(#brassplate)", hole=0.88))
+    rose = [f'<g transform="translate({cx},{cy})">', f'<circle r="{r*1.08}" fill="#efe3c2" stroke="{INK}" stroke-width="3"/>',
+            f'<circle r="{r}" fill="none" stroke="{INK}" stroke-width="2"/>', f'<circle r="{r*.84}" fill="none" stroke="{BRASS}" stroke-width="3"/>']
+    for d in range(0, 360, 5):
+        a = math.radians(d - 90)
+        L1 = r * (.9 if d % 30 else .84)
+        rose.append(f'<line x1="{L1*math.cos(a):.1f}" y1="{L1*math.sin(a):.1f}" x2="{r*math.cos(a):.1f}" y2="{r*math.sin(a):.1f}" stroke="{INK}" stroke-width="{2 if d % 30 == 0 else 1}"/>')
     for a in range(0, 360, 45):
-        L = r * (1 if a % 90 == 0 else .62)
+        L = r * (.82 if a % 90 == 0 else .55)
         ca, sa = math.cos(math.radians(a - 90)), math.sin(math.radians(a - 90))
-        cl, sl = math.cos(math.radians(a - 90 + 90)), math.sin(math.radians(a - 90 + 90))
-        w = 16 if a % 90 == 0 else 10
-        rose.append(f'<path d="M{ca*L:.1f},{sa*L:.1f} L{cl*w:.1f},{sl*w:.1f} L0,0Z" fill="{INK}"/><path d="M{ca*L:.1f},{sa*L:.1f} L{-cl*w:.1f},{-sl*w:.1f} L0,0Z" fill="{BRASS}"/>')
-    rose.append(f'<text y="{-r-14}" text-anchor="middle" class="lab place" font-size="44">N</text></g>')
+        cl, sl = math.cos(math.radians(a)), math.sin(math.radians(a))
+        w = 17 if a % 90 == 0 else 11
+        rose.append(f'<path d="M{ca*L:.1f},{sa*L:.1f} L{cl*w:.1f},{sl*w:.1f} L0,0Z" fill="{IRON}"/><path d="M{ca*L:.1f},{sa*L:.1f} L{-cl*w:.1f},{-sl*w:.1f} L0,0Z" fill="{BRASS}"/>')
+    rose.append(f'<circle r="12" fill="{COPPER}" stroke="{INK}" stroke-width="2"/>')
+    rose.append((f'<text y="{-r*1.42:.0f}" text-anchor="middle" class="lab place" font-size="50" style="stroke-width:0">N</text>' if labels else "") + "</g>")
     el.append("".join(rose))
-    # scale bar: Watabou units are about a metre
+
+    def gauge(gx, gy, r, ticks, needle_i, title=""):
+        g = [f'<circle cx="{gx}" cy="{gy}" r="{r+10}" fill="{BRASS}" stroke="{INK}" stroke-width="3"/>',
+             f'<circle cx="{gx}" cy="{gy}" r="{r}" fill="#efe3c2" stroke="{INK}" stroke-width="2"/>']
+        n = len(ticks)
+        for i, t in enumerate(ticks):
+            a = math.radians(-225 + 270 * i / (n - 1))
+            g.append(f'<line x1="{gx+r*.78*math.cos(a):.1f}" y1="{gy+r*.78*math.sin(a):.1f}" x2="{gx+r*.95*math.cos(a):.1f}" y2="{gy+r*.95*math.sin(a):.1f}" stroke="{INK}" stroke-width="2.5"/>')
+            if labels and t:
+                g.append(f'<text x="{gx+r*.58*math.cos(a):.1f}" y="{gy+r*.58*math.sin(a)+8:.1f}" font-size="{r*.26:.0f}" text-anchor="middle" class="lab" style="stroke-width:0">{t}</text>')
+        a = math.radians(-225 + 270 * needle_i / (n - 1))
+        g.append(f'<line x1="{gx}" y1="{gy}" x2="{gx+r*.8*math.cos(a):.1f}" y2="{gy+r*.8*math.sin(a):.1f}" stroke="{FIRE}" stroke-width="4" stroke-linecap="round"/>'
+                 f'<circle cx="{gx}" cy="{gy}" r="7" fill="{IRON}" stroke="{INK}" stroke-width="2"/>')
+        if labels and title:
+            g.append(f'<text x="{gx}" y="{gy+r*.62:.0f}" font-size="{r*.17:.0f}" text-anchor="middle" class="lab street" style="stroke-width:0">{title}</text>')
+        return "".join(g)
+
+    # scale bar: Watabou units are about a metre; a riveted brass rule
     ft = 0.3048
-    bx0, by0 = 140, PX - 150
+    bx0, by0 = 150, PX - 170
     seg = 250 * ft * K
+    el.append(f'<rect x="{bx0-24}" y="{by0-52}" width="{4*seg+130:.0f}" height="96" rx="8" fill="url(#brassplate)" stroke="{INK}" stroke-width="3"/>')
     for i in range(4):
-        el.append(f'<rect x="{bx0+i*seg:.1f}" y="{by0}" width="{seg:.1f}" height="14" fill="{INK if i%2==0 else PAPER}" stroke="{INK}" stroke-width="2"/>')
+        el.append(f'<rect x="{bx0+i*seg:.1f}" y="{by0}" width="{seg:.1f}" height="16" fill="{IRON if i%2==0 else "#efe3c2"}" stroke="{INK}" stroke-width="2"/>')
     if labels:
         for i in range(5):
-            el.append(f'<text x="{bx0+i*seg:.1f}" y="{by0-12}" text-anchor="middle" class="lab small" font-size="26">{i*250}</text>')
-        el.append(f'<text x="{bx0+4*seg+18:.1f}" y="{by0+14}" class="lab small" font-size="26">feet</text>')
-    # cartouche
-    tx, ty = 120, 120
-    el.append(f'<rect x="{tx}" y="{ty}" width="900" height="240" fill="{PAPER}" stroke="{INK}" stroke-width="5"/>'
-              f'<rect x="{tx+14}" y="{ty+14}" width="872" height="212" fill="none" stroke="{BRASS}" stroke-width="3"/>')
-    el.append(cog(tx + 900, ty + 240, 52, 12, sw=3) + cog(tx + 980, ty + 200, 32, 10, sw=2.4))
-    el.append(f'<path d="M{tx},{ty+240} H{tx+840}" stroke="{INK}" stroke-width="9"/><path d="M{tx},{ty+240} H{tx+840}" stroke="{BRASS}" stroke-width="5"/>'
-              + "".join(f'<rect x="{tx+60+i*130}" y="{ty+232}" width="14" height="16" fill="{BRASS}" stroke="{INK}" stroke-width="2"/>' for i in range(6)))
+            el.append(f'<text x="{bx0+i*seg:.1f}" y="{by0-12}" text-anchor="middle" class="lab small" font-size="26" style="stroke-width:0">{i*250}</text>')
+        el.append(f'<text x="{bx0+4*seg+18:.1f}" y="{by0+15}" class="lab small" font-size="26" style="stroke-width:0">feet</text>')
+    # title plate: riveted brass, piped to a grade gauge (needle on F) and a pressure gauge for the charge mains
+    tx, ty = 280, 110
+    tw, th = 900, 250
+    el.append(f'<rect x="{tx}" y="{ty}" width="{tw}" height="{th}" rx="10" fill="url(#brassplate)" stroke="{INK}" stroke-width="5"/>'
+              f'<rect x="{tx+22}" y="{ty+22}" width="{tw-44}" height="{th-44}" rx="6" fill="#efe3c2" stroke="{INK}" stroke-width="3"/>'
+              + "".join(f'<circle cx="{x}" cy="{y}" r="6" fill="#8f8577" stroke="{INK}" stroke-width="1.5"/>' for x in (tx + 11, tx + tw - 11) for y in (ty + 11, ty + th - 11))
+              + f'<path d="M{tx-60},{ty+th/2} H{tx}" stroke="{INK}" stroke-width="16"/><path d="M{tx-60},{ty+th/2} H{tx}" stroke="{COPPER}" stroke-width="10"/>'
+              f'<path d="M{tx+tw},{ty+th/2} H{tx+tw+60}" stroke="{INK}" stroke-width="16"/><path d="M{tx+tw},{ty+th/2} H{tx+tw+60}" stroke="{COPPER}" stroke-width="10"/>')
+    el.append(gauge(tx - 130, ty + th / 2 + 20, 78, ["F", "E", "D", "C", "B", "A", "S"], 0, "grade"))
+    el.append(gauge(tx + tw + 130, ty + th / 2 + 20, 78, ["", "", "", "", ""], 3, "charge"))
     if labels:
         el.append(f'<text x="{tx+450}" y="{ty+120}" text-anchor="middle" class="lab place" font-size="104" style="stroke-width:0">Ashford Roads</text>'
                   f'<text x="{tx+450}" y="{ty+180}" text-anchor="middle" class="lab street" font-size="38" style="stroke-width:0">the home port of the Reach · grade F</text>')
