@@ -103,44 +103,58 @@
    "group": "main",
    "width": 1920,
    "height": 1920,
-   "references": [],
-   "scene": "Bird's-eye map of the harbour city of Ashford Roads on weathered ledger paper color #E6DCC3, ink and watercolour, an RPG sourcebook map. North up.",
+   "references": [
+    "refs/city_map_layout.png"
+   ],
+   "reference_line": "Image 0 is the layout: keep its coastline, walls, roads, refinery, pier and districts in place; restyle as steampunk.",
+   "scene": "Steampunk sky-port city map: big airships with gas envelopes and propellers over the harbour; brass pipes, steam plumes and iron cranes everywhere. Unlabelled near top-down map, north up; ink and flat watercolour on paper.",
    "subjects": [
     {
-     "description": "The Coast Road crossing grey ash fields to a gatehouse in the landward wall",
-     "position": "west edge, middle"
-    },
-    {
-     "description": "The refinery: walled stacks, domed tanks, brass pipelines, its own small pier, faint orange glow",
-     "position": "north-west"
-    },
-    {
-     "description": "One wide straight street of large houses and gardens running east from the refinery gate",
-     "position": "north, left of centre"
-    },
-    {
-     "description": "Dense steep roofs and lanes; a columned courthouse with a clock tower; a clock-faced chapel; a white domed hall with brass coils",
-     "position": "centre"
-    },
-    {
-     "description": "A curved bay; a long pier lined with tall ships, an iron mooring mast at its tip; a fish market; a quayside inn",
+     "description": "A large airship moored to an iron mast at the far end of the pier, east; tall ships and paddle steamers with funnels along the long pier; an inn on it",
      "position": "south-east"
     },
     {
-     "description": "Arched sewer outfalls in the harbour wall",
-     "position": "below the wide street, at the water"
+     "description": "Two more airships flying, steam trails",
+     "position": "over bay and centre"
     },
     {
-     "description": "Open sea fading into grey fog",
-     "position": "east and south edges"
+     "description": "Walled refinery: many smokestacks, domed tanks, brass pipelines color #B5893A to its own pier, furnace glow color #D9622B",
+     "position": "north-west"
+    },
+    {
+     "description": "Wide straight avenue of big houses with a tram line, clear of fog",
+     "position": "north, east from the refinery gate"
+    },
+    {
+     "description": "Road over grey ash fields to a gatehouse in the landward wall",
+     "position": "west edge"
+    },
+    {
+     "description": "Steep roofs venting steam, pipes over lanes; columned courthouse with clock tower, clock-faced chapel, white domed hall with brass roof coils",
+     "position": "centre"
+    },
+    {
+     "description": "Broker's hall at the pier's landward end; fish market, crowded quarter behind",
+     "position": "south-east shore"
+    },
+    {
+     "description": "Arched sewer outfalls in the harbour wall",
+     "position": "below the avenue"
+    },
+    {
+     "description": "Sea with ink waves fading into grey fog",
+     "position": "east edge"
     }
    ],
-   "composition": "Top-down view, slight perspective on buildings, decorative border, compass rose in the south-west sea, empty title cartouche top centre, no lettering.",
-   "lighting": "Even daylight, soft shadows.",
+   "style": "Hand-inked steampunk RPG city map, gaslamp fantasy, grimy industrial: soot, black stone, riveted iron, brass gears, verdigris copper.",
+   "color_palette": false,
+   "colors": "Paper color #E6DCC3; ink, iron, walls color #1E1B18; copper roofs color #4E8C7D; airships, pipes brass color #B5893A; sea and fog color #9AA3A6; furnace glow color #D9622B; flags color #8C2A1C.",
+   "lighting": "Even daylight; steam and smoke plumes from many roofs; fog only at sea edge.",
+   "composition": "Thin ink border. Airships drawn large. Plain star compass in north-east sea; blank cartouche top centre. Open water and fields left plain.",
    "camera": {
-    "angle": "top-down bird's-eye"
+    "angle": "near top-down, buildings slightly oblique"
    },
-   "colors": "Paper color #E6DCC3; ink lines color #1E1B18; copper roofs color #4E8C7D; brass pipelines color #B5893A; sea and fog color #9AA3A6; refinery glow color #D9622B."
+   "avoid": "text, letters, words, labels, compass letters, neon"
   },
   {
    "id": "refinery_row",

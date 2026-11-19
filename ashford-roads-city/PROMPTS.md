@@ -97,6 +97,89 @@ From `Game-Gumbo/.claude/skills/image-gen/` on `helper/claude-alt/cf-ds-npc-reci
   and every sidecar says `status: draft`.
 - **The token goes only to `https://api.cloudflare.com`**, with redirects refused, and is never printed or written.
 
+**Map prompt refinement, 18 Nov** (the owner: "Refine the prompts first, then proceed"; only `city_map` changed, the
+other nine prompts come out byte-for-byte as before). Folded in from our klein 4B runs and the BFL FLUX.2 guide:
+- **Most important first:** the `scene` now opens with what the picture is (an unlabelled top-down city map, north
+  up, land west, sea east) and the medium (bold ink line, flat watercolour wash, ledger paper), because earlier words
+  weigh more. Subjects run in map order, each with its compass position.
+- **A map style, not the street-painting style:** the shared block asks for oil paint, atmospheric depth and soft
+  haze, which blurs a map. The map has its own `style` (hand-inked, small hand-drawn buildings, pale roads, strong
+  land/water contrast) that keeps the shared words gaslamp fantasy, black stone, brass and verdigris; "Dungeonpunk"
+  is written as "grimy industrial" there, since "dungeon" is close to a franchise word that can trip flag 3030.
+  Critique pass: the compass rose moved from the south-west (land) to the north-east sea, the sky-ship mast is
+  pinned to the pier tip, the avenue is placed north, the sea no longer shares the ash fields' colour, and the
+  Compact banners are written as "banner flags" (no faction name in the prompt).
+  Fog is kept to the sea edge so districts stay readable at D&D Beyond display size.
+- **Hex only next to objects:** the bare eight-hex list is dropped for the map (`"color_palette": false`); every
+  hex sits in `colors` or a subject next to the thing it colours.
+- **No names in the prompt:** places are described, not named (no "Ashford Roads", no brand or franchise words),
+  since names invite garbled lettering and can trip flag 3030; no age words.
+- **Text:** the `avoid` line asks for no text, letters, numbers, labels, compass letters or cartouche writing (it
+  helps only a little; klein has no negative prompt), the compass is a plain star, the cartouche blank, and open
+  water, fields and plazas are left plain as space for the section 6 labels.
+- **Runner:** `generate.mjs` now lets an image override `style`, `mood` and `avoid` and drop the hex list; images
+  without those fields are unchanged. Prompt length 2,003 of 2,048 characters (`--dry-run --draft`).
+- **Canon:** every section 6 layout fact is still in the prompt (gate and ash fields west, refinery and its pier
+  north-west, the fog-free avenue east from its gate, courthouse with clock tower, clock chapel and white domed hall
+  in the centre, the long pier with tall ships, the inn, the mast and its sky ship south-east, the broker's hall at
+  the pier's landward end, the fish market and quarter, the outfalls below the avenue, sea into fog to the east).
+  Sections 4 and 6 are unchanged.
+
+**Map round 2, 18 Nov: steampunk and sky ships.** Round 1 (seeds 1001-1008, `out/city_map/drafts_contact.png`) came
+out as a pleasant inked watercolour harbour town, oblique bird's-eye, with garbled fake labels on most; the refinery's
+stacks were the only industrial part and the sky ship at the mast was tiny or missing. The owner looked and asked:
+"Where is the steam punk elements and sky ships." Round 2 changes only `city_map`:
+- **Steampunk and sky ships first:** the `scene` now opens "Steampunk sky-port city map: big airships with gas
+  envelopes and propellers over the harbour; brass pipes, steam plumes, clock towers and iron cranes
+  everywhere", then the map facts (unlabelled, near top-down, north up, land west, sea east, paper `#E6DCC3`).
+  Critique pass: "iron girder bridges" became "iron cranes" (the map has no river, so bridges could invent one), and
+  the white domed hall keeps its "brass roof coils" (canon: coils on the Binding House roof).
+- **Sky ships:** the first subject is now the canon mast at the pier tip with a *large* moored airship (it was "one
+  small sky ship"), and a second subject adds two airships in flight over the bay and the centre; the composition says
+  "Airships drawn large" so they read at map scale. Three in all, because section 4 has sky ships rare and watched.
+  The `colors` line ties the airships to brass `#B5893A`.
+- **Steampunk everywhere, not just the refinery:** iron paddle steamers with funnels berth beside the tall ships;
+  the centre's roofs vent steam with pipes over the lanes; the avenue gains a tram line; the refinery has "many
+  smokestacks"; the lighting asks for steam and smoke plumes from many roofs; the style adds "steampunk", riveted iron
+  and brass gears (still no "dungeon" word; "Dungeonpunk and Gaslit fantasy" stays as "grimy industrial, gaslamp
+  fantasy").
+- **More top-down:** camera "near top-down, buildings slightly oblique".
+- **Text:** `avoid` adds "words" (now: text, letters, words, numbers, labels, compass letters, cartouche writing,
+  neon); "castles", "cars" and "watermarks" were dropped for room.
+- **Canon kept:** every section 6 fact is still placed (ash-field road to the gatehouse west, walled refinery and its
+  pier north-west, fog-free avenue east from its gate, courthouse with clock tower, clock chapel and white domed hall
+  centre, long pier with tall ships, inn, mast and moored sky ship south-east, broker's hall at the pier's landward
+  end, fish market and quarter, outfalls below the avenue, sea into fog east). The extra airships, steamers, pipes,
+  tram and steam are ambient style, not new named places. Sections 4 and 6 are unchanged.
+- **Length and run:** 2,045 of 2,048 characters (`--dry-run --draft`). Round-2 drafts use seeds 1101-1108
+  (`--draft --seeds 1101,...,1108`, about 208 neurons) so round 1's files stay.
+
+**Map round 3, 18 Nov: round-1 layout as a reference.** Round 2 (seeds 1101-1108, `out/city_map/drafts_contact_r2.png`)
+had the steampunk and airships but the layouts drifted, and none had the moored airship at the mast, the compass or the
+cartouche. The owner said "Round 3": keep the round-2 prompt and give it round-1 #3 (seed 1003, the best canon layout:
+refinery north-west, avenue east from it, domed halls centre, long pier with tall ships south-east, lattice mast at
+the pier tip, walls, grey fields west) as a layout reference. Changes, `city_map` only:
+- **Reference:** `refs/city_map_layout.png`, 511 px (the `ref_max_px` limit), made from `out/city_map/1003_draft.jpg`
+  with its four fake labels inpainted out (OpenCV) so the reference does not teach lettering. Tracked name on purpose
+  (`*.512.png` is gitignored); `reference()` uses it directly because it is already within 511 px.
+- **Runner:** `generate.mjs` lets an image override `reference_line`; the shared line ("match the painting style ... of
+  image 0") is a style-anchor line and wrong for a layout image. The map's line: "Image 0 is the layout: keep its
+  coastline, walls, roads, refinery, pier and districts in place; restyle as steampunk."
+- **Mast airship explicit:** the first subject now opens "A large airship moored to an iron mast at the far end of the
+  pier, east".
+- **Trimmed for room (the reference now carries the layout):** "land west, sea east" and the paper hex in the scene
+  (the `colors` line keeps the hex); "clock towers" in the scene (the courthouse keeps its clock tower); "Small
+  buildings, pale roads, strong land/water contrast" in the style; "Square," in the composition; "stone" in the pier;
+  "numbers" and "cartouche writing" in `avoid` (now: text, letters, words, labels, compass letters, neon).
+- **Length and cost:** 2,043 of 2,048 characters; 52.05 neurons a draft (26 output + 26 reference), 416 for seeds
+  1201-1208; tally 3,225 to 3,641 of 9,000 (UTC 19 Nov).
+- **Result** (`out/city_map/drafts_contact_r3.png`, numbered 17-24; `compare_r1_r2_r3.png` against round-1 #3 and
+  round-2 #11, #16): the reference worked. All eight keep the round-1 #3 layout closely, and the steampunk carries over
+  (airships, steam plumes, brass pipelines). Still missing: no draft has an airship moored at the mast. The mast is
+  always drawn, but empty. A few drafts give a compass or a blank cartouche. Best two: **#20 (1204)**, with five airships, a
+  clock tower, a domed hall on the pier and the most steampunk, and **#24 (1208)**, with a blank cartouche, compass stars, three airships and
+  heavy smoke. For the next round, try a guidance raise, or put the moored airship in `composition`.
+
 ## 3. Consistency rules
 
 1. **One style block, verbatim, in every prompt** (the `style` and `color_palette` fields in `prompts.json`). Change

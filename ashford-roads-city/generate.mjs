@@ -52,20 +52,23 @@ function sizeOf(img) {
   return [fit(w), fit(h)];
 }
 
+// An image may override style, mood, avoid or reference_line (the map does: ink and wash, not oil paint, and its one
+// reference is a layout, not a style anchor), and may set
+// color_palette to false to drop the bare hex list when its `colors` line already ties every hex to an object.
 function promptFor(img) {
   const refs = img.references.length;
   return JSON.stringify({
     scene: img.scene,
-    references: refs ? S.reference_line + (refs > 1 ? S.layout_line : "") : undefined,
+    references: refs ? (img.reference_line ?? S.reference_line + (refs > 1 ? S.layout_line : "")) : undefined,
     subjects: img.subjects.map(s => `${s.description} (${s.position})`),
-    style: S.style,
-    color_palette: S.color_palette,
+    style: img.style ?? S.style,
+    color_palette: img.color_palette === false ? undefined : S.color_palette,
     colors: img.colors ?? S.palette_use,
     lighting: img.lighting,
-    mood: S.mood,
+    mood: img.mood ?? S.mood,
     composition: img.composition,
     camera: img.camera?.angle,
-    avoid: S.avoid,
+    avoid: img.avoid ?? S.avoid,
   });
 }
 
